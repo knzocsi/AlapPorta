@@ -154,6 +154,7 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id:Integer;
+  Merleg_tipus:String;
 
 
 implementation
@@ -457,6 +458,9 @@ begin
 
   nagykamera:=i.ReadBool('ALAP','nagy_kemera_kep',true);
   i.WriteBool('ALAP','nagy_kemera_kep',nagykamera);
+  Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
+  i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
+
 
   PLC_IP:=i.ReadString('PLC_USB','PLC_IP','Local');
   i.writeString('PLC_USB','PLC_IP',PLC_IP);
