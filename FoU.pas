@@ -360,6 +360,7 @@ begin
   begin
     //PLC_Ir(Merleg_Nullaz_Cim, 1);
     IO_Ir(IOmodul_regiszter_iras1,True);
+     { TODO : Hozzá kell adni egy idõzítést, egy típust (PLC vagy IO) és egy gomb szöveget }
   end;
 end;
 
