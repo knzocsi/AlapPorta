@@ -517,6 +517,7 @@ begin
 
  //stop;
 // FreeLibrary(vlclib);
+  programvege:=true;
   if UpperCase(ParamStr(1)) <> '/D' then
     PortF.portclose;
 end;

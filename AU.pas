@@ -149,7 +149,7 @@ var
   soapXML:string;
   lejatszas: Boolean;
   libre_mappa:string;
-  duplex_mjegy,automata_meres,nedvesseg_beolvasasa,automata_kezelo:Boolean;
+  duplex_mjegy,automata_meres,nedvesseg_beolvasasa,automata_kezelo,programvege:Boolean;
   IOmodul_van:boolean;
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
