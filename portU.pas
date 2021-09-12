@@ -630,18 +630,20 @@ begin
  try
    ComPort1.close;
  except
- end;  
+ end;
 end;
 
 procedure TPortF.portopen;
 begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
-    AssignFile(tf,'log.txt');
+    ForceDirectories(konyvtar+'\LOG');
+    AssignFile(tf,konyvtar+'\LOG\'+af.datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     Writeln(tf, konyvtar+'\srport.dat');
     Writeln(tf, Comport1.port+' OPEN');
     CloseFile(tf);
+
   end;
 
   ComPort1.LoadSettings(stIniFile, konyvtar+'\srport.dat' );

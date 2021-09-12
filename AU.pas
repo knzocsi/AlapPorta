@@ -128,6 +128,7 @@ type
     function kod_foglalt(ide:Integer;kodja,tbl:String):Boolean;
     function partner_kesz(tid,tarid, pid:Integer; tort:ShortInt):Extended;
     procedure rendszam_combok(combobox:TComboBox);
+    function datum_szoveg(datum:TDateTime;idokell:boolean):string;
 
     { Public declarations }
   end;
@@ -247,6 +248,15 @@ begin
    end }
 
 
+end;
+
+function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
+var ev,ho,nap,ora,perc,mp,szmp:word;
+begin
+  DecodeDate(datum,ev,ho,nap);
+  DecodeTime(datum,ora,perc,mp,szmp);
+  Result:=IntToStr(ev)+IntToStr(ho)+IntToStr(nap);
+  if idokell then Result:=Result+IntToStr(ora)+IntToStr(perc)+IntToStr(mp)+IntToStr(szmp);
 end;
 
 procedure TAF.felhasznalok_jogaijogChange(Sender: TField);
