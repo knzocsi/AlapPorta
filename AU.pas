@@ -154,8 +154,9 @@ var
   IOmodul_van:boolean;
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
-  bizkibocsajto_id:Integer;
-  Merleg_tipus:String;
+  bizkibocsajto_id,Elso_Gomb_Varakozas:Integer;
+  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus:String;
+
 
 
 implementation
