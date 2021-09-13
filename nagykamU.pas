@@ -18,6 +18,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormHide(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,19 +34,29 @@ implementation
 
 procedure TNagykamF.FormActivate(Sender: TObject);
 begin
-try
-FoF.play;
+//fof.play
+{try
+ try
+  FoF.stop;
+ finally
+  fof.play
+ end;
+
 application.processmessages;
 except
-Showmessage('Kamerakép betöltése sikertelen!');
+Showmessage('Kamerakép betöltése sikertelen!');}
 // Exit
-end;
-
 end;
 
 procedure TNagykamF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
- FoF.stop;
+ //FoF.stop;
+end;
+
+procedure TNagykamF.FormCreate(Sender: TObject);
+var i:Integer;
+begin
+ for i := 0 to 1 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'Cam_kepe' + i.ToString);
 end;
 
 procedure TNagykamF.FormHide(Sender: TObject);

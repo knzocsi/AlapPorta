@@ -39,9 +39,9 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNezetF, NezetF);
-  Application.CreateForm(TAF, AF);
   Application.CreateForm(TBelepF, BelepF);
   Application.CreateForm(TPortF, PortF);
   Application.CreateForm(TMeresF, MeresF);

@@ -14,6 +14,7 @@ object NagykamF: TNagykamF
   StyleElements = [seFont, seBorder]
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCreate = FormCreate
   OnHide = FormHide
   OnShow = FormShow
   PixelsPerInch = 96
@@ -23,7 +24,7 @@ object NagykamF: TNagykamF
     Top = 0
     Width = 1008
     Height = 730
-    ActivePage = cam0
+    ActivePage = cam1
     Align = alClient
     TabOrder = 0
     object cam0: TTabSheet
