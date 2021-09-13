@@ -75,7 +75,7 @@ type
     lblIrany: TLabel;
     KISorompnyitinfrahiba1: TMenuItem;
     IdIcmpClient1: TIdIcmpClient;
-    btnMerleg_Nullaz: TButton;
+    btnElso: TButton;
     pusok1: TMenuItem;
     rolk1: TMenuItem;
     Raktrkziszlltlevl1: TMenuItem;
@@ -139,7 +139,7 @@ type
       const ResponseBuffer: TModBusResponseBuffer);
     function Ping_teszt(tipus:string):boolean;
     procedure ledLampaDblClick(Sender: TObject);
-    procedure btnMerleg_NullazClick(Sender: TObject);
+    procedure btnElsoClick(Sender: TObject);
     procedure pusok1Click(Sender: TObject);
     procedure rolk1Click(Sender: TObject);
     procedure j1Click(Sender: TObject);
@@ -358,13 +358,21 @@ begin
   Rendszam_Lampa_Timer.Enabled := true;
 end;
 
-procedure TFoF.btnMerleg_NullazClick(Sender: TObject);
+procedure TFoF.btnElsoClick(Sender: TObject);
 begin
   if IOmodul_van then
   begin
     //PLC_Ir(Merleg_Nullaz_Cim, 1);
-    IO_Ir(IOmodul_regiszter_iras1,True);
-     { TODO : Hozzá kell adni egy idõzítést, egy típust (PLC vagy IO) és egy gomb szöveget }
+    if Elso_Gomb_Tipus='IO' then
+    begin
+      IO_Ir(IOmodul_regiszter_iras1,True);
+      if Elso_Gomb_Varakozas<>0 then
+      begin
+        Sleep(Elso_Gomb_Varakozas);
+        IO_Ir(IOmodul_regiszter_iras1,False);
+      end;
+    end;
+
   end;
 end;
 
@@ -429,6 +437,8 @@ begin
   onActivate := nil;
   lblRendszam_elso.Caption := '';
   lblRendszam_hatso.Caption := '';
+  btnElso.Visible:= Elso_Gomb_Szoveg<>'' ;
+  btnElso.Caption:=Elso_Gomb_Szoveg;
   if not automata_kezelo then
    begin
     if TryStrToInt(ParamStr(1),g) then
@@ -626,18 +636,12 @@ begin
   if not IOmodul_van then exit;
 
   mcIOmodul.Host := IOmodul_IP;
-  //if Ping_teszt('IO') then
-  if mctPLC.WriteCoil(cim+1,True) then
-    MessageDlg('PLC register write successful!', mtError, [mbOk], 0)
-  else
-    MessageDlg('PLC register write failed!', mtError, [mbOk], 0);
-  {
 
   begin
-    if mcIOmodul.WriteRegister(cim + 1, ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
+    if mcIOmodul.WriteCoil(cim , ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin
       Result := True;
-      StatusBar1.panels[3].text := 'Írt cím:' + Inttostr(cim) + ' Érték:' + Inttostr(ertek);
+      StatusBar1.panels[3].text := 'Írt cím:' + Inttostr(cim) + ' Érték:'+BoolToStr(ertek);
     end
     else
     begin
@@ -650,7 +654,7 @@ begin
     begin
       StatusBar1.panels[3].text := 'IO kapcsolati hiba!';
     end;
-  }
+   }
 end;
 
 procedure TFoF.j1Click(Sender: TObject);

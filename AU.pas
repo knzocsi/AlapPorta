@@ -528,6 +528,16 @@ begin
   IOmodul_regiszter_iras1:=i.ReadInteger('PLC_USB','IOmodul_regiszter_iras1',1);
   i.WriteInteger('PLC_USB','IOmodul_regiszter_iras1',IOmodul_regiszter_iras1);
 
+  Elso_gomb_tipus:=i.ReadString('PLC_USB','Elso_gomb_tipus','Local');
+  i.writeString('PLC_USB','Elso_gomb_tipus',Elso_gomb_tipus);
+
+  Elso_gomb_szoveg:=i.ReadString('PLC_USB','Elso_gomb_szoveg','');
+  i.writeString('PLC_USB','Elso_gomb_szoveg',Elso_gomb_szoveg);
+
+  Elso_Gomb_Varakozas:=i.ReadInteger('PLC_USB','Elso_Gomb_Varakozas',500);
+  i.WriteInteger('PLC_USB','Elso_Gomb_Varakozas',Elso_Gomb_Varakozas);
+
+
   utolso_sql:=i.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
   i.WriteInteger('MySql','Utolso_sql',utolso_sql);
 

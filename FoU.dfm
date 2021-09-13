@@ -308,7 +308,7 @@ object FoF: TFoF
         Caption = '-'
       end
       object Button2: TButton
-        Left = 157
+        Left = 21
         Top = 81
         Width = 75
         Height = 25
@@ -317,14 +317,15 @@ object FoF: TFoF
         Visible = False
         OnClick = Button2Click
       end
-      object btnMerleg_Nullaz: TButton
-        Left = 24
-        Top = 80
+      object btnElso: TButton
+        Left = 102
+        Top = 81
         Width = 89
         Height = 25
         Caption = 'Tov'#225'bbenged'#233's'
         TabOrder = 1
-        OnClick = btnMerleg_NullazClick
+        Visible = False
+        OnClick = btnElsoClick
       end
     end
     object pnlJobbFelso: TPanel

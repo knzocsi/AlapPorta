@@ -46,6 +46,7 @@ application.processmessages;
 except
 Showmessage('Kamerakép betöltése sikertelen!');}
 // Exit
+  campagc.ActivePage:=cam0;
 end;
 
 procedure TNagykamF.FormClose(Sender: TObject; var Action: TCloseAction);
