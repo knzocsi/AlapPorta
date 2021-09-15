@@ -238,7 +238,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44454.559024548600000000
+    ReportOptions.LastChange = 44454.721462465280000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -1420,6 +1420,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memelsoido.text]')
           ParentFont = False
         end
         object Memo39: TfrxMemoView
@@ -1450,6 +1452,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memmasodikido.text]')
           ParentFont = False
         end
         object Memo41: TfrxMemoView
@@ -1496,6 +1500,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memrendszamok.text]')
           ParentFont = False
         end
         object Memo44: TfrxMemoView
@@ -1526,6 +1532,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[membrutto.text]')
           ParentFont = False
         end
         object Memo46: TfrxMemoView
@@ -1556,6 +1564,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memtara.text]')
           ParentFont = False
         end
         object Memo48: TfrxMemoView
@@ -1586,6 +1596,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memnetto.text]')
           ParentFont = False
         end
         object Line8: TfrxLineView
@@ -1664,6 +1676,8 @@ object AF: TAF
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memirany.text]')
         end
         object Memo54: TfrxMemoView
           AllowVectorExport = True
@@ -1689,6 +1703,8 @@ object AF: TAF
           Height = 18.897650000000000000
           AutoWidth = True
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memmegjegy.text]')
         end
         object Memo56: TfrxMemoView
           AllowVectorExport = True
@@ -1718,6 +1734,8 @@ object AF: TAF
           Font.Name = 'Arial'
           Font.Style = []
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memtermkod.text]')
           ParentFont = False
         end
         object Memo58: TfrxMemoView
@@ -1743,6 +1761,8 @@ object AF: TAF
           Width = 245.669450000000000000
           Height = 18.897650000000000000
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memtermnev.text]')
         end
         object Memo60: TfrxMemoView
           AllowVectorExport = True
@@ -1767,6 +1787,8 @@ object AF: TAF
           Width = 253.228510000000000000
           Height = 18.897650000000000000
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[memszallev.text]')
         end
         object Memo62: TfrxMemoView
           AllowVectorExport = True
@@ -1804,6 +1826,8 @@ object AF: TAF
           Height = 18.897650000000000000
           Visible = False
           Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxekaer.text]')
         end
         object Memo65: TfrxMemoView
           AllowVectorExport = True
@@ -1883,7 +1907,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memalapnedv')
+            '[memalapnedv.text]')
           ParentFont = False
         end
         object Memo70: TfrxMemoView
@@ -1899,7 +1923,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memnedv')
+            '[memnedv.text]')
           ParentFont = False
         end
         object Memo71: TfrxMemoView
@@ -1915,7 +1939,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memtisztasag')
+            '[memtisztasag.text]')
           ParentFont = False
         end
         object Memo72: TfrxMemoView
@@ -1932,7 +1956,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memtort')
+            '[memtort.text]')
           ParentFont = False
         end
         object Memo73: TfrxMemoView
@@ -2028,7 +2052,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memnedvlevon')
+            '[memnedvlevon.text]')
           ParentFont = False
         end
         object Memo79: TfrxMemoView
@@ -2044,7 +2068,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memnedveszt')
+            '[memnedveszt.text]')
           ParentFont = False
         end
         object Memo80: TfrxMemoView
@@ -2060,7 +2084,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memszemetlevon')
+            '[memszemetlevon.text]')
           ParentFont = False
         end
         object Memo81: TfrxMemoView
@@ -2076,7 +2100,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memtorttomeg')
+            '[memtorttomeg.text]')
           ParentFont = False
         end
         object Memo82: TfrxMemoView
@@ -2092,7 +2116,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'memsznetto')
+            '[memsznetto.text]')
           ParentFont = False
         end
         object Memo83: TfrxMemoView
@@ -2124,7 +2148,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'memegysar')
+            '[memegysar.text]')
           ParentFont = False
         end
         object Line10: TfrxLineView
@@ -2218,7 +2242,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.754742951390000000
-    ReportOptions.LastChange = 44224.715725208330000000
+    ReportOptions.LastChange = 44454.729961631940000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2313,8 +2337,8 @@ object AF: TAF
         end
         object Memo3: TfrxMemoView
           AllowVectorExport = True
-          Left = 68.031540000000000000
-          Width = 75.590600000000000000
+          Left = 88.929190000000000000
+          Width = 71.811070000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2328,8 +2352,8 @@ object AF: TAF
         end
         object Memo4: TfrxMemoView
           AllowVectorExport = True
-          Left = 151.181200000000000000
-          Width = 98.267780000000000000
+          Left = 162.519790000000000000
+          Width = 86.929190000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2338,7 +2362,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'M'#225'sodik m'#233'r'#233's')
+            'M'#225'sodik m'#233'r.')
           ParentFont = False
         end
         object Memo5: TfrxMemoView
@@ -2475,8 +2499,9 @@ object AF: TAF
         object frxDBDataset1Sorszam: TfrxMemoView
           AllowVectorExport = True
           Left = 3.779530000000000000
-          Width = 60.472480000000000000
+          Width = 86.929190000000000000
           Height = 18.897650000000000000
+          StretchMode = smMaxHeight
           DataField = 'Sorszam'
           DataSet = DBFrxmjegyList
           DataSetName = 'frxDBDataset1'
@@ -2492,8 +2517,8 @@ object AF: TAF
         end
         object frxDBDataset1erkdatum: TfrxMemoView
           AllowVectorExport = True
-          Left = 64.252010000000000000
-          Width = 79.370130000000000000
+          Left = 90.708720000000000000
+          Width = 75.590600000000000000
           Height = 18.897650000000000000
           DataSet = DBFrxmjegyList
           DataSetName = 'frxDBDataset1'
@@ -2509,7 +2534,7 @@ object AF: TAF
         end
         object frxDBDataset1erkido: TfrxMemoView
           AllowVectorExport = True
-          Left = 68.031540000000000000
+          Left = 98.267780000000000000
           Top = 19.779530000000000000
           Width = 60.472480000000000000
           Height = 18.897650000000000000
@@ -2528,7 +2553,7 @@ object AF: TAF
         end
         object frxDBDataset1tavdatum: TfrxMemoView
           AllowVectorExport = True
-          Left = 147.401670000000000000
+          Left = 170.078850000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
           DataField = 'tavdatum'
@@ -2546,7 +2571,7 @@ object AF: TAF
         end
         object frxDBDataset1tavido: TfrxMemoView
           AllowVectorExport = True
-          Left = 147.401670000000000000
+          Left = 170.078850000000000000
           Top = 18.897650000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
