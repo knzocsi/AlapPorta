@@ -197,6 +197,15 @@ object MjegyekF: TMjegyekF
       TabOrder = 10
       OnChange = piKezdoDatumChange
     end
+    object chkstorno: TCheckBox
+      Left = 440
+      Top = 110
+      Width = 97
+      Height = 17
+      Caption = 'Storn'#243' is l'#225'tszik'
+      TabOrder = 11
+      OnClick = piKezdoDatumChange
+    end
   end
   object Panel2: TPanel
     Left = 0

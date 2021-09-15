@@ -160,7 +160,7 @@ var
 
 
 implementation
-uses my_sqlU,MjegyListaU,NezetU,Db_modU,SQL_text,LibreExcelU;
+uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 

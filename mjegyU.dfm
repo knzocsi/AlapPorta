@@ -17,18 +17,18 @@ object MjegyF: TMjegyF
   PixelsPerInch = 96
   TextHeight = 13
   object kep1: TImage
-    Left = 600
-    Top = 4
-    Width = 409
-    Height = 226
+    Left = 616
+    Top = 8
+    Width = 353
+    Height = 181
     Stretch = True
     OnClick = kep1Click
   end
   object kep2: TImage
-    Left = 600
-    Top = 240
-    Width = 409
-    Height = 221
+    Left = 616
+    Top = 192
+    Width = 353
+    Height = 181
     Stretch = True
     OnClick = kep1Click
   end
@@ -46,12 +46,18 @@ object MjegyF: TMjegyF
     Height = 13
     Caption = 'Nincs k'#233'p'
   end
+  object Label28: TLabel
+    Left = 16
+    Top = 31
+    Width = 40
+    Height = 13
+    Caption = 'Partner:'
+  end
   object JvDBUltimGrid1: TJvDBUltimGrid
     Left = 0
     Top = 0
     Width = 585
-    Height = 499
-    Align = alLeft
+    Height = 409
     DataSource = jvmemparosDs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     ReadOnly = True
@@ -135,12 +141,12 @@ object MjegyF: TMjegyF
   end
   object Panel1: TPanel
     Left = 0
-    Top = 499
+    Top = 424
     Width = 1025
-    Height = 281
+    Height = 356
     Align = alBottom
     TabOrder = 1
-    object Label5: TLabel
+    object lblpartner: TLabel
       Left = 8
       Top = 23
       Width = 40
@@ -163,7 +169,7 @@ object MjegyF: TMjegyF
     end
     object Label1: TLabel
       Left = 8
-      Top = 69
+      Top = 125
       Width = 39
       Height = 13
       Caption = 'Term'#233'k:'
@@ -184,21 +190,21 @@ object MjegyF: TMjegyF
     end
     object Label9: TLabel
       Left = 185
-      Top = 223
+      Top = 279
       Width = 34
       Height = 13
       Caption = 'Brutto:'
     end
     object Label10: TLabel
       Left = 308
-      Top = 223
+      Top = 279
       Width = 26
       Height = 13
       Caption = 'T'#225'ra:'
     end
     object Label11: TLabel
       Left = 434
-      Top = 223
+      Top = 279
       Width = 31
       Height = 13
       Caption = 'Nett'#243':'
@@ -283,7 +289,7 @@ object MjegyF: TMjegyF
     end
     object Label8: TLabel
       Left = 8
-      Top = 186
+      Top = 242
       Width = 61
       Height = 13
       Caption = 'Megjegyz'#233's:'
@@ -297,7 +303,7 @@ object MjegyF: TMjegyF
     end
     object Label16: TLabel
       Left = 8
-      Top = 223
+      Top = 279
       Width = 46
       Height = 13
       Caption = 'EAKAER: '
@@ -311,19 +317,27 @@ object MjegyF: TMjegyF
     end
     object lblsznetto: TLabel
       Left = 557
-      Top = 224
+      Top = 280
       Width = 46
       Height = 13
       Caption = 'Sz.Nett'#243':'
     end
+    object lblpartner2: TLabel
+      Left = 7
+      Top = 79
+      Width = 49
+      Height = 13
+      Caption = 'Partner 2:'
+    end
     object cbxirany: TComboBox
       Left = 696
-      Top = 39
+      Top = 42
       Width = 145
       Height = 22
       Style = csOwnerDrawFixed
       DropDownCount = 3
       TabOrder = 0
+      OnChange = cbxiranyChange
       Items.Strings = (
         '---Nincs megadva----'
         'Besz'#225'll'#237't'#225's'
@@ -348,9 +362,7 @@ object MjegyF: TMjegyF
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
       LookupField = 'ID'
-      LookupDisplay = 
-        'kod;Nev;Irsz;Telepules;kerulet;kozterulet;kozt_jelleg;hazszam;ku' +
-        'j;ktj;'
+      LookupDisplay = 'combo;cim;'
       LookupSource = PartnelistDs
       TabOrder = 2
       OnChange = partnerlookupChange
@@ -366,7 +378,7 @@ object MjegyF: TMjegyF
     end
     object spBrutto: TSpinEdit
       Left = 185
-      Top = 239
+      Top = 295
       Width = 100
       Height = 22
       MaxValue = 0
@@ -377,7 +389,7 @@ object MjegyF: TMjegyF
     end
     object sptara: TSpinEdit
       Left = 308
-      Top = 239
+      Top = 295
       Width = 100
       Height = 22
       MaxValue = 0
@@ -388,7 +400,7 @@ object MjegyF: TMjegyF
     end
     object spnetto: TSpinEdit
       Left = 434
-      Top = 239
+      Top = 295
       Width = 100
       Height = 22
       MaxValue = 0
@@ -399,7 +411,7 @@ object MjegyF: TMjegyF
     end
     object edmegjegy: TEdit
       Left = 8
-      Top = 201
+      Top = 257
       Width = 665
       Height = 21
       TabOrder = 8
@@ -416,7 +428,7 @@ object MjegyF: TMjegyF
     end
     object btn1: TButton
       Left = 536
-      Top = 106
+      Top = 162
       Width = 137
       Height = 17
       Caption = 'Term'#233'kek list'#225'ja'
@@ -470,7 +482,7 @@ object MjegyF: TMjegyF
     end
     object edekaer: TEdit
       Left = 8
-      Top = 238
+      Top = 294
       Width = 161
       Height = 21
       TabOrder = 15
@@ -516,7 +528,7 @@ object MjegyF: TMjegyF
     end
     object pnlmezgaz: TPanel
       Left = 8
-      Top = 123
+      Top = 179
       Width = 665
       Height = 63
       TabOrder = 20
@@ -755,7 +767,7 @@ object MjegyF: TMjegyF
     end
     object termeklookup: TJvDBLookupCombo
       Left = 7
-      Top = 85
+      Top = 141
       Width = 665
       Height = 21
       DisplayAllFields = True
@@ -769,7 +781,7 @@ object MjegyF: TMjegyF
     end
     object Spsznetto: TSpinEdit
       Left = 557
-      Top = 239
+      Top = 295
       Width = 100
       Height = 22
       MaxValue = 0
@@ -805,10 +817,35 @@ object MjegyF: TMjegyF
       Enabled = False
       TabOrder = 26
     end
+    object partnerlookup2: TJvDBLookupCombo
+      Left = 7
+      Top = 98
+      Width = 665
+      Height = 21
+      DropDownWidth = 1024
+      DisplayAllFields = True
+      DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+      EmptyValue = '!'
+      LookupField = 'ID'
+      LookupDisplay = 'combo;cim;'
+      LookupSource = Partnerlist2Ds
+      TabOrder = 27
+      OnChange = partnerlookup2Change
+    end
+    object chkpartnerekegy: TCheckBox
+      Left = 72
+      Top = 69
+      Width = 162
+      Height = 17
+      Caption = 'A k'#233't partner megegyez'#337':'
+      Checked = True
+      State = cbChecked
+      TabOrder = 28
+    end
   end
   object tulajlookup: TJvDBLookupCombo
-    Left = 599
-    Top = 470
+    Left = 608
+    Top = 388
     Width = 409
     Height = 21
     DisplayEmpty = '---V'#225'lasszon bizonylat kibocs'#225'jt'#243't---'
@@ -821,14 +858,14 @@ object MjegyF: TMjegyF
   object Partnelist: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
-      'SELECT * from partner ORDER BY Nev ASC;')
-    Left = 904
-    Top = 352
+      'SELECT * from partner_combo ORDER BY Nev ASC;')
+    Left = 352
+    Top = 464
   end
   object PartnelistDs: TDataSource
     DataSet = Partnelist
-    Left = 960
-    Top = 352
+    Left = 424
+    Top = 464
   end
   object termeklist: TFDQuery
     Connection = AF.Kapcs
@@ -1064,5 +1101,17 @@ object MjegyF: TMjegyF
     DataSet = tulajT
     Left = 720
     Top = 416
+  end
+  object Partnerlist2Ds: TDataSource
+    DataSet = Partnerlist2
+    Left = 424
+    Top = 520
+  end
+  object Partnerlist2: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner_combo ORDER BY Nev ASC;')
+    Left = 352
+    Top = 520
   end
 end

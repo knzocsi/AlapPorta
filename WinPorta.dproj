@@ -107,6 +107,7 @@
         <DCC_ExeOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_ExeOutput>
         <DCC_DcuOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcuOutput>
         <Icon_MainIcon>WinPorta_Icon.ico</Icon_MainIcon>
+        <Debugger_RunParams>/SC</Debugger_RunParams>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -174,7 +175,6 @@
             <Form>MerlegkezelokF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Db_modU.pas"/>
         <DCCReference Include="SQL_text.pas"/>
         <DCCReference Include="KeszletU.pas">
             <Form>keszletF</Form>

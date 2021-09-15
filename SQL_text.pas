@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=5;
+      maxSQL=6;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -443,7 +443,25 @@ interface
      'SET NEW.sorszam:=CONCAT(NEW.tul_elotag, CAST(YEAR(NEW.tavdatum) AS CHAR),''/'', LPAD(CAST(NEW.ev_ssz AS CHAR),6,''0''));'+ #13#10 +
      ' END //'+ #13#10+
      ' DELIMITER ;'+#13#10+
-     ' SET SQL_MODE=@OLDTMP_SQL_MODE;'
+     ' SET SQL_MODE=@OLDTMP_SQL_MODE;',
+     //mérlegjegy partner 2
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     //partner combo
+     // 'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
+      'ALTER ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,adoszam,kuj,ktj,' + #13#10 +
+      'CONCAT(kod,'' '',nev) As combo,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim' + #13#10 +
+      'from partner ;'
+
+
     );
 
 

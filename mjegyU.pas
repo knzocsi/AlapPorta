@@ -32,7 +32,7 @@ type
     jvmemparostomeg: TIntegerField;
     masolQ: TFDQuery;
     Panel1: TPanel;
-    Label5: TLabel;
+    lblpartner: TLabel;
     Label3: TLabel;
     Label4: TLabel;
     Label1: TLabel;
@@ -140,6 +140,12 @@ type
     tulajTktj: TWideStringField;
     tulajTElotag: TWideStringField;
     tulajDs: TDataSource;
+    Label28: TLabel;
+    partnerlookup2: TJvDBLookupCombo;
+    lblpartner2: TLabel;
+    chkpartnerekegy: TCheckBox;
+    Partnerlist2Ds: TDataSource;
+    Partnerlist2: TFDQuery;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -160,6 +166,8 @@ type
     procedure spnedvExit(Sender: TObject);
     procedure edSampleChange(Sender: TObject);
     procedure spnedvChange(Sender: TObject);
+    procedure cbxiranyChange(Sender: TObject);
+    procedure partnerlookup2Change(Sender: TObject);
 
 
   private
@@ -230,6 +238,32 @@ begin
    TarolokT.Close;
    TarolokT.Open();
  end;
+end;
+
+procedure TMjegyF.cbxiranyChange(Sender: TObject);
+begin
+case cbxirany.ItemIndex of
+ 0:begin //nincs kiválasztva
+    lblpartner.Caption:='Partner:';
+    partnerlookup.KeyValue:='!';
+    partnerlookup.Enabled:=false;
+    lblpartner2.Caption:='Partner 2:';
+    partnerlookup2.KeyValue:='!';
+    partnerlookup2.Enabled:=false;
+   end;
+ 1:begin //beszállítás
+    lblpartner.Caption:='Átadó:';
+    partnerlookup.Enabled:=True;
+    lblpartner2.Caption:='Átvevõ:';
+    partnerlookup2.Enabled:=true;
+   end;
+ 2:begin //kiszállítás
+    lblpartner.Caption:='Eladó:';
+    partnerlookup.Enabled:=true;
+    lblpartner2.Caption:='Vevõ:';
+    partnerlookup2.Enabled:=True;
+   end;
+end;
 end;
 
 procedure TMjegyF.cbxrendszam1Change(Sender: TObject);
@@ -320,7 +354,7 @@ begin
   lblMintaID.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Text:='';
-  magassagok;
+ // magassagok;
 end;
 
 procedure TMjegyF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -347,6 +381,8 @@ end;
 procedure TMjegyF.JvDBUltimGrid1Exit(Sender: TObject);
 var t1,t2,rc:Integer;
 begin
+  if jvmemparos.IsEmpty then exit;
+
   t1:=0;
   t2:=0;
   netto:=0;
@@ -357,6 +393,7 @@ begin
   lblmasdat.Caption:='';
   lblmasido.Caption:='';
   cbxirany.ItemIndex:=1;
+  cbxiranyChange(Self);
   chkelso_kezi.Checked:=false;
   chkmasodik_kezi.Checked:=False;
   if not chkrogzitett.Checked then
@@ -507,6 +544,7 @@ begin
     jvmemparos.First;
   end;
   Partnelist.Open;
+  Partnerlist2.Open;
   termeklist.Open;
   aF.merlegkezQ.Open;
   TarolokT.Open;
@@ -548,10 +586,14 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
          TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
          TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
-         TfrxMemoView(FindObject('memadosz')).Text:=tulajTadoszam.AsString;
-         TfrxMemoView(FindObject('mempartnerneve')).Text:=Partnelist.FieldByName('nev').AsString;
-         TfrxMemoView(FindObject('mempartnercime')).Text:=pcime;
          TfrxMemoView(FindObject('memtulajcime')).Text:=tulajTcim.AsString;
+         //TfrxMemoView(FindObject('memadosz')).Text:=tulajTadoszam.AsString;
+         TfrxMemoView(FindObject('mempartner')).Text:=lblpartner.Caption;
+         TfrxMemoView(FindObject('mempartnerneve')).Text:=Partnelist.FieldByName('nev').AsString;
+         TfrxMemoView(FindObject('mempartnercime')).Text:=Partnelist.FieldByName('cim').AsString;//pcime;
+         TfrxMemoView(FindObject('mempartner2')).Text:=lblpartner2.Caption;
+         TfrxMemoView(FindObject('mempartnerneve2')).Text:=Partnerlist2.FieldByName('nev').AsString;
+         TfrxMemoView(FindObject('mempartnercime2')).Text:=Partnerlist2.FieldByName('cim').AsString;
          TfrxMemoView(FindObject('memelsoido')).Text:=lblelsodat.Caption+' '+lblelsoido.Caption;
          if not chkrogzitett.checked then
           begin
@@ -571,10 +613,10 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('memtermkod')).Text:=termeklist.FieldByName('kod').AsString;
          TfrxMemoView(FindObject('memtermnev')).Text:=termeklist.FieldByName('nev').AsString;
          //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=aF.merlegkezQ.FieldByName('nev').AsString;
-         TfrxMemoView(FindObject('frxkuj')).Text:=tulajTkuj.AsString;
-         TfrxMemoView(FindObject('frxktj')).Text:=tulajTktj.AsString;
-         TfrxMemoView(FindObject('frxpartnerkuj')).Text:=Partnelist.FieldByName('kuj').AsString;
-         TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
+         //TfrxMemoView(FindObject('frxkuj')).Text:=tulajTkuj.AsString;
+         //TfrxMemoView(FindObject('frxktj')).Text:=tulajTktj.AsString;
+         //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=Partnelist.FieldByName('kuj').AsString;
+         //TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
          TfrxMemoView(FindObject('memszallev')).Text:=edszallev.Text;
         // TfrxMemoView(FindObject('memewc')).Text:='';
          TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
@@ -627,7 +669,12 @@ begin
   end;
  if partnerlookup.KeyValue='!' then
   begin
-    ShowMessage('A partnert meg kell adni!');
+    ShowMessage('A(z) '+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    exit
+  end;
+ if partnerlookup2.KeyValue='!' then
+  begin
+    ShowMessage('A(z) '+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+' meg kell adni!');
     exit
   end;
  if termeklookup.KeyValue='!' then
@@ -661,7 +708,7 @@ begin
     exit
   end;
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
-  pcime:=cim_2;
+ // pcime:=cim_2;
   //nyomtatva:=false;
   szazalek;
   if Sender=btnNyomtatas then
@@ -690,7 +737,8 @@ begin
       SQL.Add('alapnedv,nedv,tisztasag,tortszaz,feherje,olaj,esesszam,hekto,');
       SQL.Add('egysegtomeg,kerekites,kukorica,buzaminoseg,mennyiseg,tarolasi_dij, ');
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
-      SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag)');
+      SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
+      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj)  ');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -699,7 +747,8 @@ begin
       SQL.Add(':alapnedv,:nedv,:tisztasag,:tortszaz,:feherje,:olaj,:esesszam,:hekto,');
       SQL.Add(':egysegtomeg,:kerekites,:kukorica,:buzaminoseg,:mennyiseg,:tarolasi_dij, ');
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
-      SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag)');
+      SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
+      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -707,7 +756,7 @@ begin
       ParamByName('p_id').AsInteger:=Partnelist.FieldByName('id').AsInteger;
       ParamByName('p_kod').AsString:=Partnelist.FieldByName('kod').AsString;
       ParamByName('p_nev').AsString:=Partnelist.FieldByName('nev').AsString;
-      ParamByName('p_cim').AsString:=pcime;
+      ParamByName('p_cim').AsString:=Partnelist.FieldByName('cim').AsString;
       ParamByName('termek_id').AsInteger:=termeklist.Fields[0].AsInteger;
       ParamByName('termek_kod').AsString:=termeklist.Fields[1].AsString;
       ParamByName('termek_nev').AsString:=termeklist.Fields[2].AsString;
@@ -772,7 +821,7 @@ begin
       if chkkerekites.Checked then keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value)
       else keszmenny:=spszNetto.Value/spEgysegtomeg.Value;
 
-      ParamByName('mennyiseg').value:=keszmenny;
+      ParamByName('mennyiseg').AsFloat:=keszmenny;
       ParamByName('tarolasi_dij').value:=0;
       ParamByName('szaritasi_dij').value:=0;
       ParamByName('tisztitasi_dij').value:=0;
@@ -787,14 +836,20 @@ begin
       ParamByName('tul_kuj').Asstring:=tulajTkuj.AsString;
       ParamByName('tul_ktj').Asstring:=tulajTktj.AsString;
       ParamByName('tul_elotag').Asstring:=tulajTelotag.AsString;
+      ParamByName('p2_id').AsInteger:=Partnerlist2.FieldByName('id').AsInteger;
+      ParamByName('p2_kod').AsString:=Partnerlist2.FieldByName('kod').AsString;
+      ParamByName('p2_nev').AsString:=Partnerlist2.FieldByName('nev').AsString;
+      ParamByName('p2_cim').AsString:=Partnerlist2.FieldByName('cim').AsString;;
+      ParamByName('p2_kuj').AsString:=Partnerlist2.FieldByName('kuj').AsString;
+      ParamByName('p2_ktj').AsString:=Partnerlist2.FieldByName('ktj').AsString;
       ExecSQL;
       //keszletezes
       case cbxirany.Text[1] of
        'B':begin
-            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,0,keszmenny);
+            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,0,keszmenny);
             //tört szemek készletezése
             if sptort.Value>0 then
-            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,1,ttom);
+            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,1,ttom);
            end;
        'K':begin
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,0,-1* keszmenny);
@@ -847,57 +902,22 @@ nagykepF.imgnagy.Picture:=im.Picture;
 NagykepF.ShowModal;
 end;
 
+procedure TMjegyF.partnerlookup2Change(Sender: TObject);
+begin
+ if ActiveControl.Name='partnerlookup2' then
+ if chkpartnerekegy.Checked then partnerlookup.KeyValue:=partnerlookup2.KeyValue;
+end;
+
 procedure TMjegyF.partnerlookupChange(Sender: TObject);
 begin
-//
+ if ActiveControl.Name='partnerlookup' then
+ if chkpartnerekegy.Checked then partnerlookup2.KeyValue:=partnerlookup.KeyValue;
 end;
 
 procedure TMjegyF.rendszam_combok;
 begin
   af.rendszam_combok(cbxrendszam1);
   af.rendszam_combok(cbxrendszam2);
-
-  {
- cbxrendszam1.Clear;
- cbxrendszam2.Clear;
- with af.rszQ do
-  begin
-   Close;
-   SQL.Clear;
-   SQL.Add('SELECT distinct(rendszam) from merlegjegy where rendszam<>'+#39+''+#39+' ORDER BY rendszam ASC');
-   Open();
-   First;
-   DisableControls;
-   while not Eof do
-    begin
-      cbxrendszam1.Items.Add(Fields[0].AsString);
-      Next
-    end;
-
-   Close;
-   SQL.Clear;
-   SQL.Add('SELECT distinct(rendszam2) from merlegjegy where rendszam2<>'+#39+''+#39+' ORDER BY rendszam2 ASC');
-   Open();
-   First;
-   while not Eof do
-    begin
-      cbxrendszam2.Items.Add(Fields[0].AsString);
-      Next
-    end;
-    Close;
-   SQL.Clear;
-   SQL.Add('SELECT distinct(rendszam) from rendszam where rendszam<>'+#39+''+#39+' ORDER BY rendszam ASC');
-   Open();
-   First;
-   while not Eof do
-    begin
-      if cbxrendszam1.Items.Indexof(Fields[0].AsString)<0 then  cbxrendszam1.Items.Add(Fields[0].AsString);
-      if cbxrendszam2.Items.Indexof(Fields[0].AsString)<0 then cbxrendszam2.Items.Add(Fields[0].AsString);
-      Next
-    end;
-   EnableControls;
-  end;
-  }
 end;
 
 procedure TMjegyF.spnedvChange(Sender: TObject);
@@ -987,10 +1007,14 @@ end;
 
 procedure TMjegyF.uresre;
 begin
+  lblpartner.Caption:='Partner:';
   partnerlookup.KeyValue:='!';
+  lblpartner2.Caption:='Partner 2:';
+  partnerlookup2.KeyValue:='!';
   termeklookup.KeyValue:='!';
   termeklookupCloseUp(Self);
   cbxirany.ItemIndex:=0;
+  cbxiranyChange(Self);
   edszallev.Clear;
   cbxrendszam1.ItemIndex:=-1;
   cbxrendszam2.ItemIndex:=-1;

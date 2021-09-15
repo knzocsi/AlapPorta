@@ -322,7 +322,7 @@ object FoF: TFoF
         Top = 81
         Width = 89
         Height = 25
-        Caption = 'Tov'#225'bbenged'#233's'
+        Caption = 'Els'#337' gomb'
         TabOrder = 1
         Visible = False
         OnClick = btnElsoClick

@@ -18,7 +18,6 @@ uses
   mjegyU in 'mjegyU.pas' {MjegyF},
   MjegyListaU in 'MjegyListaU.pas' {MjegyekF},
   MerlegkezelokU in 'MerlegkezelokU.pas' {MerlegkezelokF},
-  Db_modU in 'Db_modU.pas',
   SQL_text in 'SQL_text.pas',
   KeszletU in 'KeszletU.pas' {keszletF},
   kezdokeszletU in 'kezdokeszletU.pas' {kezdokeszletF},
