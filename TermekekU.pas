@@ -59,7 +59,7 @@ type
     JvDBSpegystomeg: TJvDBSpinEdit;
     Label5: TLabel;
     JvDBSpinAlapnedv: TJvDBSpinEdit;
-    Label6: TLabel;
+    lblalapnedv: TLabel;
     dbchkkerekites: TDBCheckBox;
     DBChkKukorica: TDBCheckBox;
     DBChknedv: TDBCheckBox;
@@ -151,7 +151,8 @@ procedure TTermekekF.FormActivate(Sender: TObject);
     begin
      for i := 0 to ComponentCount-1 do
        if (Components[i] is TDBCheckBox) then (Components[i] as TDBCheckBox).Visible:=mezgaz;
-       JvDBSpinAlapnedv.Visible:=mezgaz
+       JvDBSpinAlapnedv.Visible:=mezgaz;
+       lblalapnedv.Visible:=mezgaz;
     end;
 
 begin

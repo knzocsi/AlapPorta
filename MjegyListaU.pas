@@ -93,12 +93,15 @@ begin
 end;
 
 procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
+
 begin
   if mjegyekQ.IsEmpty then exit;
   szazalek;
   nyomtat:=True;
+  af.merlegjegy_mezgaz;//mi latszon
   with aF.frxmerleg do
    begin
+
      if mjegyekQ.FieldByName('storno').AsString='STORNO' then TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy'
      else TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
      TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+1)+'. példány';
@@ -186,8 +189,10 @@ if MessageDlg('Biztosan stornozza ezt a mérlegjegyet?',mtConfirmation,mbYesNo,0)
     if mjegyekQ.IsEmpty then exit;
     szazalek;
     nyomtat:=True;
+     af.merlegjegy_mezgaz;//mi latszon
      with aF.frxmerleg do
        begin
+
          TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy';
          TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+1)+'. példány';
          TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;

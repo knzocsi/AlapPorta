@@ -46,7 +46,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -225,7 +225,7 @@
         Height = 13
         Caption = 'Egys'#233'g t'#246'meg:'
       end
-      object Label6: TLabel
+      object lblalapnedv: TLabel
         Left = 568
         Top = 96
         Width = 77

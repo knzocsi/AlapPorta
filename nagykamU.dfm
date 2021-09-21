@@ -14,6 +14,7 @@ object NagykamF: TNagykamF
   StyleElements = [seFont, seBorder]
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnHide = FormHide
   OnShow = FormShow

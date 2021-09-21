@@ -146,6 +146,7 @@ object MjegyF: TMjegyF
     Height = 356
     Align = alBottom
     TabOrder = 1
+    OnClick = Panel1Click
     object lblpartner: TLabel
       Left = 8
       Top = 23
@@ -301,12 +302,12 @@ object MjegyF: TMjegyF
       Height = 13
       Caption = 'M'#233'rlegkezel'#337
     end
-    object Label16: TLabel
+    object lblekaer: TLabel
       Left = 8
       Top = 279
-      Width = 46
+      Width = 39
       Height = 13
-      Caption = 'EAKAER: '
+      Caption = 'EK'#193'ER: '
     end
     object Label27: TLabel
       Left = 696
@@ -588,7 +589,7 @@ object MjegyF: TMjegyF
         Height = 13
         Caption = 'Es'#233'ssz'#225'm:'
       end
-      object Label25: TLabel
+      object lblegysegtomeg: TLabel
         Left = 11
         Top = 26
         Width = 72
@@ -841,6 +842,14 @@ object MjegyF: TMjegyF
       Checked = True
       State = cbChecked
       TabOrder = 28
+    end
+    object btnekaer: TButton
+      Left = 7
+      Top = 321
+      Width = 75
+      Height = 25
+      Caption = 'EK'#193'ER k'#233'r'#233's'
+      TabOrder = 29
     end
   end
   object tulajlookup: TJvDBLookupCombo

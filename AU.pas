@@ -129,7 +129,7 @@ type
     function partner_kesz(tid,tarid, pid:Integer; tort:ShortInt):Extended;
     procedure rendszam_combok(combobox:TComboBox);
     function datum_szoveg(datum:TDateTime;idokell:boolean):string;
-
+    procedure merlegjegy_mezgaz;
     { Public declarations }
   end;
 
@@ -154,8 +154,8 @@ var
   IOmodul_van:boolean;
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
-  bizkibocsajto_id,Elso_Gomb_Varakozas:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus:String;
+  bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany:Integer;
+  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa:String;
 
 
 
@@ -542,6 +542,9 @@ begin
   i.WriteInteger('MySql','Utolso_sql',utolso_sql);
 
 
+ // MW101	Bruttó tömeg felsõ két byte
+
+
 
   for k := 0 to 1 do
     begin
@@ -558,6 +561,8 @@ begin
   i.writeString('Mappak','kepek',kepmappa);
   libre_mappa:=i.ReadString('ALAP','Libre_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\Libre_export');
   i.writeString('ALAP','Libre_mappa',libre_mappa);
+  ekaer_mappa:=i.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
+  i.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
   mentesido:=i.ReadInteger('ALAP','Mentesido',20);
   i.WriteInteger('ALAP','Mentesido',mentesido);
   mezgaz:=i.Readbool('ALAP','Mezgaz',false);//mert az 1 a db letrehozas
@@ -568,14 +573,23 @@ begin
   i.WriteBool('ALAP','automata_meres',automata_meres);
   nedvesseg_beolvasasa:=i.ReadBool('ALAP','nedvesseg_beolvasasa',False);
   i.WriteBool('ALAP','nedvesseg_beolvasasa',nedvesseg_beolvasasa);
+  alap_tarolo:=i.ReadInteger('ALAP','alap_tarolo',0);
+  i.WriteInteger('ALAP','alap_tarolo',alap_tarolo);
+  alap_irany:=i.ReadInteger('ALAP','alap_irany',0);
+  i.WriteInteger('ALAP','alap_irany',alap_irany);
 
-
+  ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
+  i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
+  ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
+  i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
 
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
   ForceDirectories(pdfmappa);
   ForceDirectories(libre_mappa);
   libre_mappa:=libre_mappa+'\';
+  ForceDirectories(ekaer_mappa);
+  libre_mappa:=ekaer_mappa+'\';
   i.UpdateFile;
   i.Free;
 end;
@@ -716,6 +730,14 @@ Result:=true;
   end;
 end;
 
+procedure TAF.merlegjegy_mezgaz;
+var i:Integer;
+begin
+ with aF.frxmerleg do
+ for I := 0 to ComponentCount-1 do
+      if Components[i].Tag=1 then (Components[i] as TfrxMemoView).Visible:=mezgaz;
+end;
+
 procedure TAF.modok_vegrehajt;
 var i:Integer;
     k:Tinifile;
@@ -791,7 +813,7 @@ begin
   begin
     Close;
     SQL.Clear;
-    SQL.Add('SELECT IF(MAX(EV_SSZ)is NULL,1,MAX(EV_SSZ)+1) FROM '+kt+' WHERE YEAR(tavdatum)=YEAR(CURRENT_TIMESTAMP) ');
+    SQL.Add('SELECT IF(MAX(EV_SSZ)is NULL,1,MAX(EV_SSZ)+1) FROM '+kt+' WHERE YEAR(datum)=YEAR(CURRENT_TIMESTAMP) ');
     Open;
     s := Fields[0].AsInteger;
     Close

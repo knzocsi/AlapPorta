@@ -68,7 +68,7 @@ type
     Label15: TLabel;
     cbxktip: TComboBox;
     chknincspot: TCheckBox;
-    Label16: TLabel;
+    lblekaer: TLabel;
     edekaer: TEdit;
     cbxrendszam1: TComboBox;
     cbxrendszam2: TComboBox;
@@ -91,7 +91,7 @@ type
     Label21: TLabel;
     Label22: TLabel;
     Label23: TLabel;
-    Label25: TLabel;
+    lblegysegtomeg: TLabel;
     sptort: TJvSpinEdit;
     Label24: TLabel;
     spegysegtomeg: TJvSpinEdit;
@@ -146,6 +146,7 @@ type
     chkpartnerekegy: TCheckBox;
     Partnerlist2Ds: TDataSource;
     Partnerlist2: TFDQuery;
+    btnekaer: TButton;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -168,6 +169,7 @@ type
     procedure spnedvChange(Sender: TObject);
     procedure cbxiranyChange(Sender: TObject);
     procedure partnerlookup2Change(Sender: TObject);
+    procedure Panel1Click(Sender: TObject);
 
 
   private
@@ -317,7 +319,7 @@ procedure TMjegyF.FormActivate(Sender: TObject);
       begin
         label8.top:=186;
         edmegjegy.top:=201;
-        label16.Top:=223;
+        lblekaer.Top:=223;
         label9.Top:=223;
         label10.Top:=223;
         label11.Top:=223;
@@ -332,7 +334,7 @@ procedure TMjegyF.FormActivate(Sender: TObject);
       begin
         label8.top:=128;
         edmegjegy.top:=145;
-        label16.Top:=168;
+        lblekaer.Top:=168;
         label9.Top:=168;
         label10.Top:=168;
         label11.Top:=168;
@@ -354,6 +356,8 @@ begin
   lblMintaID.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Text:='';
+  lblekaer.Visible:=ekaer_felhasz<>'';
+  edekaer.Visible:=ekaer_felhasz<>'';
  // magassagok;
 end;
 
@@ -392,8 +396,8 @@ begin
   lblelsoido.Caption:='';
   lblmasdat.Caption:='';
   lblmasido.Caption:='';
-  cbxirany.ItemIndex:=1;
-  cbxiranyChange(Self);
+ // cbxirany.ItemIndex:=1;
+ // cbxiranyChange(Self);
   chkelso_kezi.Checked:=false;
   chkmasodik_kezi.Checked:=False;
   if not chkrogzitett.Checked then
@@ -555,33 +559,11 @@ procedure TMjegyF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi:String;
     ujid:integer;
     keszmenny:Extended;
- function cim_2: string;
-      var
-        c: string;
-      begin
-        c := '';
-        if Partnelist.FieldByName('irsz').AsString <> '' then
-          c := Partnelist.FieldByName('irsz').AsString;
-        if Partnelist.FieldByName('telepules').AsString <> '' then
-          c :=c + ' ' + Partnelist.FieldByName('telepules').AsString;
-        if Partnelist.FieldByName('kozterulet').AsString <> '' then
-          c := c + ' ' + Partnelist.FieldByName('kozterulet').AsString;
-        if Partnelist.FieldByName('kozt_jelleg').AsString <> '' then
-          c := c + ' ' + Partnelist.FieldByName('kozt_jelleg').AsString;
-        if Partnelist.FieldByName('hazszam').AsString <> '' then
-          c := c + ' ' + Partnelist.FieldByName('hazszam').AsString;
-        if Partnelist.FieldByName('lepcsohaz').AsString <> '' then
-          c := c + ' ' + Partnelist.FieldByName('lepcsohaz').AsString;
-        if Partnelist.FieldByName('emelet').AsString <>'' then
-          c := c + ' ' + Partnelist.FieldByName('emelet').AsString;
-        if Partnelist.FieldByName('ajto').AsString <> '' then
-          c := c + ' ' + Partnelist.FieldByName('ajto').AsString;
-        Result := c;
-      end;
-  procedure elokeszit;
+ procedure elokeszit;
    begin
       with aF.frxmerleg do
        begin
+
          TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
          TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
@@ -902,6 +884,11 @@ nagykepF.imgnagy.Picture:=im.Picture;
 NagykepF.ShowModal;
 end;
 
+procedure TMjegyF.Panel1Click(Sender: TObject);
+begin
+//
+end;
+
 procedure TMjegyF.partnerlookup2Change(Sender: TObject);
 begin
  if ActiveControl.Name='partnerlookup2' then
@@ -984,10 +971,14 @@ var i:Integer;
     begin
       for k := 0 to componentcount-1 do
        if (Components[k].Tag>0) then (Components[k] as Tcontrol).visible:=false;
-      spegysegtomeg.Value:=0;
+      spegysegtomeg.Value:=1;
+      spegysegtomeg.Visible:=spegysegtomeg.Value<>1;
+      lblegysegtomeg.Visible:=spegysegtomeg.Visible;
       spalapnedv.Value:=0;
       chkkuk.Checked:=False;
+      chkkuk.Visible:=chkkuk.Checked;
       chkkerekites.Checked:=False;
+      chkkerekites.Visible:=chkkerekites.Checked;
     end;
 
 begin
@@ -998,10 +989,14 @@ begin
   if (Components[i].Tag>0) then (Components[i] as Tcontrol).visible:=termeklist.Fields[Components[i].Tag].AsBoolean;
 
   spegysegtomeg.Value:=termeklistegysegtomeg.Value;
+  spegysegtomeg.Visible:=spegysegtomeg.Value<>1;
+  lblegysegtomeg.Visible:=spegysegtomeg.Visible;
   spalapnedv.Value:=termeklistalapnedv.Value;
   spnedv.Value:=termeklistalapnedv.Value;
   chkkuk.Checked:=termeklistkukorica.AsBoolean;
+  chkkuk.Visible:=chkkuk.Checked;
   chkkerekites.Checked:=termeklistkerekites.AsBoolean;
+  chkkerekites.Visible:=chkkerekites.Checked;
   szazalek
 end;
 
@@ -1013,7 +1008,8 @@ begin
   partnerlookup2.KeyValue:='!';
   termeklookup.KeyValue:='!';
   termeklookupCloseUp(Self);
-  cbxirany.ItemIndex:=0;
+  cbxirany.ItemIndex:=alap_irany;
+  taroloklookup.KeyValue:=alap_tarolo;
   cbxiranyChange(Self);
   edszallev.Clear;
   cbxrendszam1.ItemIndex:=-1;

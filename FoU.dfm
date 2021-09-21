@@ -471,6 +471,7 @@ object FoF: TFoF
       end
     end
     object Felhasznlvlts1: TMenuItem
+      Tag = 1
       Caption = 'Felhaszn'#225'l'#243' v'#225'lt'#225's'
       OnClick = Felhasznlvlts1Click
     end
