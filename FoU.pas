@@ -71,7 +71,6 @@ type
     Kszlet1: TMenuItem;
     Sorompnyitinfrahiba1: TMenuItem;
     kapcsfriss: TTimer;
-    Button2: TButton;
     lblIrany: TLabel;
     KISorompnyitinfrahiba1: TMenuItem;
     IdIcmpClient1: TIdIcmpClient;
@@ -85,6 +84,7 @@ type
     mcIOmodul: TIdModBusClient;
     alapbe_m: TMenuItem;
     tulaj_m: TMenuItem;
+    Button2: TButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -267,9 +267,13 @@ begin
 {nagykamera:=True;
 for i := 0 to 1 do Play_panel_letrehozasa('cam' + i.ToString, 'Cam_kepe' + i.ToString); }
  try
-  nagykamF.show;
+   try
+     FoF.stop(false);
+    finally
+     Fof.play(true);
+    end;
  finally
-   //
+  nagykamF.showmodal;
  end;
 end;
 
@@ -527,12 +531,28 @@ begin
     Lampakapcs(Hatso_lampa, Lampa_Zold);
   if UpperCase(ParamStr(1)) <> '/D' then PortF.portopen;
   end;
+  lbl1.Visible:=rendszamleker;
+  lbl2.Visible:=rendszamleker;
+  lbl3.Visible:=sorompo_vezerles;
+  ledLampa.Visible:=sorompo_vezerles;
+
   Tomeg_Timer.Enabled := true;
   Rendszam_Lampa_Timer.Enabled := True;
  finally
    button2.visible:=nagykamera;
 
-   if (nagykamera)and(lejatszas) then nagykamF.show
+   if (nagykamera)and(lejatszas) then
+   begin
+    try
+       try
+         FoF.stop(false);
+        finally
+         Fof.play(true);
+        end;
+     finally
+      nagykamF.showmodal;
+     end;
+   end;
  end;
 
 end;
@@ -900,27 +920,33 @@ begin
            try
             stop(nagy);
            finally
-            vlcInstance0 := libvlc_new(0, nil);
-            if teszt then
-            begin
-              vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-            end
-            else if rtspURLs[0] <> '' then
-              vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
-            vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
-            libvlc_media_release(vlcMedia0);
-            libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
-            libvlc_media_player_play(vlcMediaPlayer0);
+           if (not Assigned(vlcMediaPlayer0)) then
+              begin
+                vlcInstance0 := libvlc_new(0, nil);
+                if teszt then
+                begin
+                  vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+                end
+                else if rtspURLs[0] <> '' then
+                  vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
+                vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
+                libvlc_media_release(vlcMedia0);
+                libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
+                libvlc_media_player_play(vlcMediaPlayer0);
+              end;
              //cam1
-            vlcInstance1 := libvlc_new(0, nil);
-            if teszt then
-              vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-            else if rtspURLs[1] <> '' then
-              vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
-            vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
-            libvlc_media_release(vlcMedia1);
-            libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
-            libvlc_media_player_play(vlcMediaPlayer1);
+            if (not Assigned(vlcMediaPlayer1)) then
+              begin
+                vlcInstance1 := libvlc_new(0, nil);
+                if teszt then
+                  vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+                else if rtspURLs[1] <> '' then
+                  vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
+                vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
+                libvlc_media_release(vlcMedia1);
+                libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
+                libvlc_media_player_play(vlcMediaPlayer1);
+              end;
            end;
           end;
          //cam0  nagykam
@@ -928,7 +954,10 @@ begin
            begin
              try
                stop(not nagy);
+               //Application.ProcessMessages;
              finally
+              if (not Assigned(vlcMediaPlayer2)) then
+              begin
                vlcInstance2 := libvlc_new(0, nil);
                if teszt then vlcMedia2 := libvlc_media_new_path(vlcInstance2,PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
                else
@@ -937,7 +966,10 @@ begin
                libvlc_media_release(vlcMedia2);
                libvlc_media_player_set_hwnd(vlcMediaPlayer2, Pointer((panelek[2] as TPanel).Handle));
                libvlc_media_player_play(vlcMediaPlayer2);
+              end;
               //cam3
+              if (not Assigned(vlcMediaPlayer3)) then
+              begin
                vlcInstance3 := libvlc_new(0, nil);
                if teszt then vlcMedia3 := libvlc_media_new_path(vlcInstance3,PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
                else
@@ -946,6 +978,7 @@ begin
                libvlc_media_release(vlcMedia3);
                libvlc_media_player_set_hwnd(vlcMediaPlayer3, Pointer((panelek[3] as TPanel).Handle));
                libvlc_media_player_play(vlcMediaPlayer3);
+              end;
              end;
            end;
          except

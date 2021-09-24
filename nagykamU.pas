@@ -24,6 +24,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure fo;
   end;
 
 var
@@ -33,9 +34,18 @@ implementation
   uses fou,AU;
 {$R *.dfm}
 
+procedure TNagykamF.fo;
+begin
+ try
+  // fof.play(true);
+ finally
+  // Show
+ end;
+end;
+
 procedure TNagykamF.FormActivate(Sender: TObject);
 begin
-  fof.play(true);
+
   campagc.ActivePage:=cam0;
 end;
 
@@ -47,7 +57,15 @@ end;
 
 procedure TNagykamF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
- if (lejatszas) then Fof.play(False);
+ if (lejatszas) then
+  begin
+    try
+      FoF.stop(true);
+    finally
+      Fof.play(False);
+    end;
+  end;
+
  //Application.ProcessMessages
 end;
 

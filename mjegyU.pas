@@ -370,8 +370,8 @@ begin
   lblMintaID.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Text:='';
-  lblekaer.Visible:=ekaer_felhasz<>'';
-  edekaer.Visible:=ekaer_felhasz<>'';
+  //lblekaer.Visible:=ekaer_felhasz<>'';
+  //edekaer.Visible:=ekaer_felhasz<>'';
  // magassagok;
 end;
 
@@ -596,9 +596,9 @@ if tulajlookup.KeyValue='!' then
     ShowMessage('A mérés irányát meg kell adni!');
     exit
   end;
- if (cbxrendszam1.Text='')or(cbxrendszam2.Text='') then
+ if (cbxrendszam1.Text=''){or(cbxrendszam2.Text='')} then
   begin
-    ShowMessage('A rendszámokat meg kell adni!');
+    ShowMessage('A rendszámot meg kell adni!');
     exit
   end;
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
@@ -729,11 +729,17 @@ begin
     ShowMessage('A mérés irányát meg kell adni!');
     exit
   end;
- if (cbxrendszam1.Text='')or(cbxrendszam2.Text='') then
+ if (cbxrendszam1.Text='') then
   begin
-    ShowMessage('A rendszámokat meg kell adni!');
+    ShowMessage('A rendszámot meg kell adni!');
     exit
   end;
+ if (not chknincspot.Checked)and(cbxrendszam2.Text='') then
+  begin
+    ShowMessage('A rendszámot meg kell adni!');
+    exit
+  end;
+
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
   begin
     ShowMessage('Nincs kiválasztva 2 mérés vagy nincs tára rögzített mérésnél!');

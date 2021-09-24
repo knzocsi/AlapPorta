@@ -249,6 +249,7 @@ object FoF: TFoF
         Width = 72
         Height = 13
         Caption = 'Els'#337' rendsz'#225'm:'
+        Visible = False
       end
       object lbl2: TLabel
         Left = 336
@@ -256,6 +257,7 @@ object FoF: TFoF
         Width = 81
         Height = 13
         Caption = 'H'#225'ts'#243' rendsz'#225'm:'
+        Visible = False
       end
       object lblRendszam_elso: TLabel
         Left = 32
@@ -291,6 +293,7 @@ object FoF: TFoF
         LedSignal = lsConn
         Kind = lkRedLight
         State = lsOn
+        Visible = False
         OnDblClick = ledLampaDblClick
       end
       object lbl3: TLabel
@@ -299,6 +302,7 @@ object FoF: TFoF
         Width = 35
         Height = 13
         Caption = 'L'#225'mpa:'
+        Visible = False
       end
       object lblIrany: TLabel
         Left = 576
@@ -307,25 +311,24 @@ object FoF: TFoF
         Height = 13
         Caption = '-'
       end
-      object Button2: TButton
-        Left = 21
-        Top = 81
-        Width = 75
-        Height = 25
-        Caption = 'Kamera k'#233'p'
-        TabOrder = 0
-        Visible = False
-        OnClick = Button2Click
-      end
       object btnElso: TButton
         Left = 102
         Top = 81
         Width = 89
         Height = 25
         Caption = 'Els'#337' gomb'
-        TabOrder = 1
+        TabOrder = 0
         Visible = False
         OnClick = btnElsoClick
+      end
+      object Button2: TButton
+        Left = 16
+        Top = 80
+        Width = 75
+        Height = 25
+        Caption = 'Kamera k'#233'p'
+        TabOrder = 1
+        OnClick = Button2Click
       end
     end
     object pnlJobbFelso: TPanel

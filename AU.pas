@@ -15,7 +15,7 @@ uses
   FireDAC.Stan.Util, FireDAC.Comp.Script,System.hash, JvMemoryDataset,
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
-  Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog;
+  Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils;
 
 const
   joga: array [1..20] of string=
@@ -791,25 +791,26 @@ procedure TAF.AutomentesTimer(Sender: TObject);
 var searchResult: TSearchRec;
     fn:string;
 begin
-//Exit;
+
 Automentes.Enabled:=false;
-//ShowMessage('volt');
-//ShowMessage(libre_mappa+formatDatetime('YYYYMMDD_'+mentesido.ToString,Now)+'*');
-fn:=formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
-if FindFirst(libre_mappa+fn+'*', faAnyFile, searchResult)<>0 then
-with Q1 do
+if HourOfTheDay(Now)=mentesido then
  begin
-  close;
-  SQL.Clear;
-  SQL.Add('SELECT id,mjegy as Mérlegjegy,Datum as Dátum,ido as Idõ,tomeg as Tömeg,');
-  SQL.Add('rendszam as Rendszám, rendszam2 as Rendszám2  FROM forgalom ');
-  SQL.Add('WHERE (Datum>=:kdatum) and (Datum<=:bdatum)');
-  SQL.Add('ORDER BY Datum desc, Ido desc');
-  ParamByName('kdatum').AsDate:=Date;
-  ParamByName('bdatum').AsDate:=Date;
-  Open;
-  LibreExcelF.mezo_nevek(nil,Q1,True);
-  close;
+  fn:=formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
+  if FindFirst(libre_mappa+fn+'*', faAnyFile, searchResult)<>0 then
+  with Q1 do
+   begin
+    close;
+    SQL.Clear;
+    SQL.Add('SELECT id,mjegy as Mérlegjegy,Datum as Dátum,ido as Idõ,tomeg as Tömeg,');
+    SQL.Add('rendszam as Rendszám, rendszam2 as Rendszám2  FROM forgalom ');
+    SQL.Add('WHERE (Datum>=:kdatum) and (Datum<=:bdatum)');
+    SQL.Add('ORDER BY Datum desc, Ido desc');
+    ParamByName('kdatum').AsDate:=Date;
+    ParamByName('bdatum').AsDate:=Date;
+    Open;
+    LibreExcelF.mezo_nevek(nil,Q1,True);
+    close;
+   end;
  end;
 Automentes.Enabled:=true;
 end;
