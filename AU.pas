@@ -95,6 +95,8 @@ type
     rszQ: TFDQuery;
     Sample_Kapcs: TFDConnection;
     SampleQ1: TFDQuery;
+    ZarolQ: TFDQuery;
+    ZarolvaQ: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -130,6 +132,9 @@ type
     procedure rendszam_combok(combobox:TComboBox);
     function datum_szoveg(datum:TDateTime;idokell:boolean):string;
     procedure merlegjegy_mezgaz;
+    procedure tabla_zarol(tabla:string);
+    function tabla_zarolva(tabla:string):Integer;
+    procedure tabla_kizar(tabla:string);
     { Public declarations }
   end;
 
@@ -155,7 +160,7 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa:String;
+  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk:String;
 
 
 
@@ -582,6 +587,8 @@ begin
   i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
   ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
   i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
+  ekaer_csk:=i.ReadString('EKAER','ekaer_alakulcs','');
+  i.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
 
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -589,7 +596,9 @@ begin
   ForceDirectories(libre_mappa);
   libre_mappa:=libre_mappa+'\';
   ForceDirectories(ekaer_mappa);
-  libre_mappa:=ekaer_mappa+'\';
+  ekaer_mappa:=ekaer_mappa+'\';
+  ForceDirectories(ekaer_mappa+'\kuldes');
+  ForceDirectories(ekaer_mappa+'\valasz');
   i.UpdateFile;
   i.Free;
 end;
@@ -780,12 +789,14 @@ end;
 
 procedure TAF.AutomentesTimer(Sender: TObject);
 var searchResult: TSearchRec;
+    fn:string;
 begin
 //Exit;
 Automentes.Enabled:=false;
 //ShowMessage('volt');
 //ShowMessage(libre_mappa+formatDatetime('YYYYMMDD_'+mentesido.ToString,Now)+'*');
-if FindFirst(libre_mappa+formatDatetime('YYYYMMDD_'+mentesido.ToString,Now)+'*', faAnyFile, searchResult)<>0 then
+fn:=formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
+if FindFirst(libre_mappa+fn+'*', faAnyFile, searchResult)<>0 then
 with Q1 do
  begin
   close;
@@ -1037,6 +1048,41 @@ begin
  WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
  Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
+end;
+
+procedure TAF.tabla_kizar(tabla: string);
+begin
+  with ZarolQ do
+  begin
+    Close;
+    sql.Clear;
+    SQL.Add('UNLOCK TABLES');
+    ExecSQL;
+  end;
+end;
+
+procedure TAF.tabla_zarol(tabla: string);
+begin
+ with ZarolQ do
+  begin
+    Close;
+    sql.Clear;
+    SQL.Add('LOCK TABLE '+tabla+' READ NOWAIT');
+    ExecSQL;
+  end;
+end;
+
+function TAF.tabla_zarolva(tabla: string): Integer;
+begin
+  with ZarolvaQ do
+   begin
+     Close;
+     SQL.Clear;
+     SQL.Add('SHOW OPEN tables LIKE "'+tabla+'"');
+     open;
+     Result:=fieldbyName('In_use').AsInteger;
+     Close
+   end;
 end;
 
 function TAF.tara(rsz: string): Integer;

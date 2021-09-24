@@ -31,7 +31,8 @@ uses
   MeresU in 'MeresU.pas' {MeresF},
   NezetU in 'NezetU.pas' {NezetF},
   NyomtatokU in 'NyomtatokU.pas' {NyomtatokF},
-  Tulajok in 'Tulajok.pas' {TulajokF};
+  Tulajok in 'Tulajok.pas' {TulajokF},
+  EkaerU in 'EkaerU.pas' {EkaerF};
 
 {$R *.res}
 
@@ -66,5 +67,6 @@ begin
   Application.CreateForm(TMjegyekF, MjegyekF);
   Application.CreateForm(TNyomtatokF, NyomtatokF);
   Application.CreateForm(TTulajokF, TulajokF);
+  Application.CreateForm(TEkaerF, EkaerF);
   Application.Run;
 end.

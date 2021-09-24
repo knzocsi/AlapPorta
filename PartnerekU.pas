@@ -51,11 +51,23 @@ type
     Label2: TLabel;
     DBEdepulet: TDBEdit;
     Label3: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    dbedtemail: TDBEdit;
+    dbedttelefon: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    dbedthrsz: TDBEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);
     procedure PartnerTBeforeInsert(DataSet: TDataSet);
     procedure PartnerTAfterInsert(DataSet: TDataSet);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,6 +87,22 @@ uses
 procedure TPartnerekF.btnKilepesClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TPartnerekF.Button1Click(Sender: TObject);
+begin
+ af.tabla_zarol('partner')
+end;
+
+procedure TPartnerekF.Button2Click(Sender: TObject);
+begin
+ if af.tabla_zarolva('partner')=1 then ShowMessage('A tábla zárolva')
+ else ShowMessage('A tábla NINCS zárolva');
+end;
+
+procedure TPartnerekF.Button3Click(Sender: TObject);
+begin
+ af.tabla_kizar('partner')
 end;
 
 procedure TPartnerekF.FormActivate(Sender: TObject);

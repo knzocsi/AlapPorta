@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=6;
+      maxSQL=7;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -459,9 +459,66 @@ interface
       'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim' + #13#10 +
-      'from partner ;'
+      'from partner ;',
+      //7
+      //tulajok mod
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Irsz` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telepules` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kerulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozterulet` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hazszam` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Epulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Emelet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hrsz` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Ajto` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      //partner mod
+      ''+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS	`Hrsz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
 
-
+      //partner combo
+      ''+ #13#10 +
+      'ALTER ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,adoszam,kuj,ktj,' + #13#10 +
+      'irsz,telepules,kerulet,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,'+ #13#10 +
+      'email,telefon, CONCAT(kod,'' '',nev) As combo,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
+      'from partner ;'+ #13#10 +
+      ''+ #13#10 +
+      //felrakodasi cimek tabla
+      'CREATE TABLE IF NOT EXISTS `felrakodasi_cimek` (' + #13#10 +
+      '	`ID` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,' + #13#10 +
+      '	`Tul_id` INT(11) NOT NULL,' + #13#10 +
+      '	`Irsz` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Telepules` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Kozterulet` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Hazszam` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Epulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Emelet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Ajto` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Hrsz` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'');'+ #13#10 +
+      ''+ #13#10 +
+      //felrakodasi_cimek_nezet
+      ' CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `felrakodasi_cimek_nezet`'+ #13#10 +
+      ' AS SELECT id,tul_id,' + #13#10 +
+      'irsz,telepules,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,' + #13#10 +
+      'email,telefon,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
+      'from felrakodasi_cimek;'
     );
 
 

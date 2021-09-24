@@ -147,6 +147,16 @@ type
     Partnerlist2Ds: TDataSource;
     Partnerlist2: TFDQuery;
     btnekaer: TButton;
+    tulajTIrsz: TWideStringField;
+    tulajTTelepules: TWideStringField;
+    tulajTKerulet: TWideStringField;
+    tulajTKozterulet: TWideStringField;
+    tulajTKozt_Jelleg: TWideStringField;
+    tulajTHazszam: TWideStringField;
+    tulajTEpulet: TWideStringField;
+    tulajTLepcsohaz: TWideStringField;
+    tulajTEmelet: TWideStringField;
+    tulajTHrsz: TWideStringField;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -170,6 +180,7 @@ type
     procedure cbxiranyChange(Sender: TObject);
     procedure partnerlookup2Change(Sender: TObject);
     procedure Panel1Click(Sender: TObject);
+    procedure btnekaerClick(Sender: TObject);
 
 
   private
@@ -194,7 +205,7 @@ var
   ttom:Real;
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU;
+  tarolokU, EkaerU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -252,18 +263,21 @@ case cbxirany.ItemIndex of
     lblpartner2.Caption:='Partner 2:';
     partnerlookup2.KeyValue:='!';
     partnerlookup2.Enabled:=false;
+    btnekaer.Enabled:=false;
    end;
  1:begin //beszállítás
     lblpartner.Caption:='Átadó:';
     partnerlookup.Enabled:=True;
     lblpartner2.Caption:='Átvevõ:';
     partnerlookup2.Enabled:=true;
+    btnekaer.Enabled:=false;
    end;
  2:begin //kiszállítás
     lblpartner.Caption:='Eladó:';
     partnerlookup.Enabled:=true;
     lblpartner2.Caption:='Vevõ:';
     partnerlookup2.Enabled:=True;
+    btnekaer.Enabled:=true;
    end;
 end;
 end;
@@ -553,6 +567,11 @@ begin
   aF.merlegkezQ.Open;
   TarolokT.Open;
   uresre
+end;
+
+procedure TMjegyF.btnekaerClick(Sender: TObject);
+begin
+ EkaerF.fo;
 end;
 
 procedure TMjegyF.btnMentesClick(Sender: TObject);

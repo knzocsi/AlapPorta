@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
   FireDAC.Comp.Client,JvDBUltimGrid, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  JvExDBGrids, JvDBGrid, JvMemoryDataset,UHojaCalc;
+  JvExDBGrids, JvDBGrid, JvMemoryDataset,UHojaCalc,System.StrUtils;
 
 type
   TLibreExcelF = class(TForm)
@@ -58,7 +58,7 @@ begin
     SaveDialog.Execute;
     fn:=SaveDialog.FileName;
    end
-  else fn:=libre_mappa+formatDatetime('YYYYMMDD_HH_NN_SS',Now);
+  else fn:=formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
   if fn='' then exit;
 
   if ex then HCalc:= THojaCalc.create(thcExcel, False,false)//ha excel

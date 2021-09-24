@@ -217,12 +217,15 @@ object AF: TAF
       'CharacterSet=utf8'
       'User_Name=knz'
       'Port=3307'
-      'Database=rakamaz_uj')
+      'Database=alap')
     FetchOptions.AssignedValues = [evDetailCascade]
     FetchOptions.DetailCascade = True
     ResourceOptions.AssignedValues = [rvAutoConnect, rvSilentMode]
     ResourceOptions.SilentMode = True
     ResourceOptions.AutoConnect = False
+    UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
+    UpdateOptions.LockMode = lmOptimistic
+    Connected = True
     LoginPrompt = False
     OnLost = KapcsLost
     BeforeCommit = KapcsBeforeCommit
@@ -3746,5 +3749,22 @@ object AF: TAF
     ConnectionName = 'Sample_Kapcs'
     Left = 120
     Top = 392
+  end
+  object ZarolQ: TFDQuery
+    Connection = Kapcs
+    SQL.Strings = (
+      'LOCK TABLE :tabla READ NOWAIT')
+    Left = 824
+    Top = 344
+    ParamData = <
+      item
+        Name = 'TABLA'
+        ParamType = ptInput
+      end>
+  end
+  object ZarolvaQ: TFDQuery
+    Connection = Kapcs
+    Left = 824
+    Top = 400
   end
 end

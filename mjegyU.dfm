@@ -850,6 +850,7 @@ object MjegyF: TMjegyF
       Height = 25
       Caption = 'EK'#193'ER k'#233'r'#233's'
       TabOrder = 29
+      OnClick = btnekaerClick
     end
   end
   object tulajlookup: TJvDBLookupCombo
@@ -1104,6 +1105,66 @@ object MjegyF: TMjegyF
       FieldName = 'Elotag'
       Origin = 'Elotag'
       Size = 2
+    end
+    object tulajTIrsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Irsz'
+      Origin = 'Irsz'
+      Size = 10
+    end
+    object tulajTTelepules: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Telepules'
+      Origin = 'Telepules'
+      Size = 30
+    end
+    object tulajTKerulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kerulet'
+      Origin = 'Kerulet'
+      Size = 5
+    end
+    object tulajTKozterulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kozterulet'
+      Origin = 'Kozterulet'
+      Size = 30
+    end
+    object tulajTKozt_Jelleg: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kozt_Jelleg'
+      Origin = 'Kozt_Jelleg'
+      Size = 10
+    end
+    object tulajTHazszam: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Hazszam'
+      Origin = 'Hazszam'
+      Size = 5
+    end
+    object tulajTEpulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Epulet'
+      Origin = 'Epulet'
+      Size = 5
+    end
+    object tulajTLepcsohaz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Lepcsohaz'
+      Origin = 'Lepcsohaz'
+      Size = 5
+    end
+    object tulajTEmelet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Emelet'
+      Origin = 'Emelet'
+      Size = 5
+    end
+    object tulajTHrsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Hrsz'
+      Origin = 'Hrsz'
+      Size = 5
     end
   end
   object tulajDs: TDataSource

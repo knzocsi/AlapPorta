@@ -2,7 +2,7 @@ object PartnerekF: TPartnerekF
   Left = 0
   Top = 0
   Caption = 'Partnerek'
-  ClientHeight = 337
+  ClientHeight = 369
   ClientWidth = 770
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -31,22 +31,50 @@ object PartnerekF: TPartnerekF
       TabOrder = 0
       OnClick = btnKilepesClick
     end
+    object Button1: TButton
+      Left = 152
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'lez'#225'r'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 240
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Ellen'#337'rz'#233's'
+      TabOrder = 2
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 328
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'Kiz'#225'r'
+      TabOrder = 3
+      OnClick = Button3Click
+    end
   end
   object pcListaReszlet: TPageControl
     Left = 0
     Top = 41
     Width = 770
-    Height = 296
-    ActivePage = tbLista
+    Height = 328
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
+    ExplicitHeight = 296
     object tbLista: TTabSheet
       Caption = 'Lista'
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
         Width = 762
-        Height = 268
+        Height = 300
         Align = alClient
         DataSource = PartnerDS
         ReadOnly = True
@@ -63,109 +91,109 @@ object PartnerekF: TPartnerekF
       ImageIndex = 1
       object lbl1: TLabel
         Left = 32
-        Top = 16
-        Width = 18
+        Top = 19
+        Width = 22
         Height = 13
-        Caption = 'K'#243'd'
+        Caption = 'K'#243'd:'
         FocusControl = dbedtKod
       end
       object lbl2: TLabel
         Left = 32
-        Top = 64
-        Width = 19
+        Top = 67
+        Width = 23
         Height = 13
-        Caption = 'N'#233'v'
+        Caption = 'N'#233'v:'
         FocusControl = dbedtNev
       end
       object lbl3: TLabel
         Left = 32
-        Top = 112
-        Width = 18
+        Top = 115
+        Width = 66
         Height = 13
-        Caption = 'Irsz'
+        Caption = 'Ir'#225'ny'#237't'#243'sz'#225'm:'
         FocusControl = dbedtIrsz
       end
       object lbl4: TLabel
         Left = 184
-        Top = 109
-        Width = 45
+        Top = 115
+        Width = 49
         Height = 13
-        Caption = 'Telepules'
+        Caption = 'Telep'#252'l'#233's:'
         FocusControl = dbedtTelepules
       end
       object lbl5: TLabel
         Left = 32
-        Top = 160
-        Width = 34
+        Top = 163
+        Width = 38
         Height = 13
-        Caption = 'Ker'#252'let'
+        Caption = 'Ker'#252'let:'
         FocusControl = dbedtKerulet
       end
       object lbl6: TLabel
         Left = 120
-        Top = 160
-        Width = 49
+        Top = 163
+        Width = 80
         Height = 13
-        Caption = 'K'#246'zter'#252'let'
+        Caption = 'K'#246'zter'#252'let neve:'
         FocusControl = dbedtKozterulet
       end
       object lbl7: TLabel
         Left = 272
-        Top = 160
-        Width = 77
+        Top = 163
+        Width = 87
         Height = 13
-        Caption = 'K'#246'zter'#252'let jelleg'
+        Caption = 'K'#246'zter'#252'let jellege:'
         FocusControl = dbedtKozt_Jelleg
       end
       object lbl8: TLabel
         Left = 423
-        Top = 162
-        Width = 42
+        Top = 163
+        Width = 46
         Height = 13
-        Caption = 'H'#225'zsz'#225'm'
+        Caption = 'H'#225'zsz'#225'm:'
         FocusControl = dbedtHazszam
       end
       object lbl9: TLabel
         Left = 573
-        Top = 160
-        Width = 50
+        Top = 163
+        Width = 54
         Height = 13
-        Caption = 'L'#233'pcs'#337'h'#225'z'
+        Caption = 'L'#233'pcs'#337'h'#225'z:'
         FocusControl = dbedtLepcsohaz
       end
       object lbl10: TLabel
         Left = 656
-        Top = 160
-        Width = 32
+        Top = 163
+        Width = 36
         Height = 13
-        Caption = 'Emelet'
+        Caption = 'Emelet:'
         FocusControl = dbedtEmelet
       end
       object lbl11: TLabel
         Left = 32
-        Top = 205
-        Width = 20
+        Top = 211
+        Width = 24
         Height = 13
-        Caption = 'Ajt'#243
+        Caption = 'Ajt'#243':'
         FocusControl = dbedtAjto
       end
       object lbl12: TLabel
-        Left = 119
+        Left = 272
         Top = 211
-        Width = 43
+        Width = 47
         Height = 13
-        Caption = 'Ad'#243'sz'#225'm'
+        Caption = 'Ad'#243'sz'#225'm:'
         FocusControl = dbedtAdoszam
       end
       object Label1: TLabel
-        Left = 359
+        Left = 423
         Top = 211
         Width = 22
         Height = 13
         Caption = 'K'#220'J:'
       end
       object Label2: TLabel
-        Left = 511
+        Left = 575
         Top = 211
         Width = 21
         Height = 13
@@ -173,10 +201,31 @@ object PartnerekF: TPartnerekF
       end
       object Label3: TLabel
         Left = 504
-        Top = 160
+        Top = 163
         Width = 34
         Height = 13
         Caption = #201'p'#252'let:'
+      end
+      object Label4: TLabel
+        Left = 32
+        Top = 255
+        Width = 32
+        Height = 13
+        Caption = 'E-mail:'
+      end
+      object Label5: TLabel
+        Left = 168
+        Top = 255
+        Width = 40
+        Height = 13
+        Caption = 'Telefon:'
+      end
+      object Label6: TLabel
+        Left = 120
+        Top = 211
+        Width = 72
+        Height = 13
+        Caption = 'Helyrajzi sz'#225'm:'
       end
       object DBNavigator1: TDBNavigator
         Left = 409
@@ -287,16 +336,16 @@ object PartnerekF: TPartnerekF
         TabOrder = 11
       end
       object dbedtAdoszam: TDBEdit
-        Left = 119
-        Top = 227
-        Width = 217
+        Left = 272
+        Top = 224
+        Width = 134
         Height = 21
         DataField = 'Adoszam'
         DataSource = PartnerDS
         TabOrder = 12
       end
       object DBEdtkuj: TDBEdit
-        Left = 359
+        Left = 423
         Top = 224
         Width = 121
         Height = 21
@@ -306,7 +355,7 @@ object PartnerekF: TPartnerekF
         TabOrder = 13
       end
       object DBEdtktj: TDBEdit
-        Left = 510
+        Left = 574
         Top = 224
         Width = 121
         Height = 21
@@ -324,6 +373,35 @@ object PartnerekF: TPartnerekF
         DataSource = PartnerDS
         TabOrder = 15
       end
+      object dbedtemail: TDBEdit
+        Left = 32
+        Top = 268
+        Width = 121
+        Height = 21
+        DataField = 'email'
+        DataSource = PartnerDS
+        MaxLength = 20
+        TabOrder = 16
+      end
+      object dbedttelefon: TDBEdit
+        Left = 168
+        Top = 268
+        Width = 121
+        Height = 21
+        DataField = 'telefon'
+        DataSource = PartnerDS
+        MaxLength = 20
+        TabOrder = 17
+      end
+      object dbedthrsz: TDBEdit
+        Left = 120
+        Top = 225
+        Width = 129
+        Height = 21
+        DataField = 'hrsz'
+        DataSource = PartnerDS
+        TabOrder = 18
+      end
     end
   end
   object PartnerT: TFDTable
@@ -331,7 +409,7 @@ object PartnerekF: TPartnerekF
     AfterInsert = PartnerTAfterInsert
     BeforeDelete = PartnerTBeforeDelete
     IndexFieldNames = 'ID'
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     UpdateOptions.UpdateTableName = 'partner'
     TableName = 'partner'
     Left = 296
