@@ -58,7 +58,7 @@ begin
     SaveDialog.Execute;
     fn:=SaveDialog.FileName;
    end
-  else fn:=formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
+  else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
   if fn='' then exit;
 
   if ex then HCalc:= THojaCalc.create(thcExcel, False,false)//ha excel

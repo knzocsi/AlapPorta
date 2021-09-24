@@ -571,6 +571,42 @@ end;
 
 procedure TMjegyF.btnekaerClick(Sender: TObject);
 begin
+if tulajlookup.KeyValue='!' then
+  begin
+    ShowMessage('A bizonylat kibocsájtót meg kell adni!');
+    exit
+  end;
+ if partnerlookup.KeyValue='!' then
+  begin
+    ShowMessage('A(z) '+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    exit
+  end;
+ if partnerlookup2.KeyValue='!' then
+  begin
+    ShowMessage('A(z) '+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    exit
+  end;
+ if termeklookup.KeyValue='!' then
+  begin
+    ShowMessage('A terméket meg kell adni!');
+    exit
+  end;
+ if cbxirany.ItemIndex<1 then
+  begin
+    ShowMessage('A mérés irányát meg kell adni!');
+    exit
+  end;
+ if (cbxrendszam1.Text='')or(cbxrendszam2.Text='') then
+  begin
+    ShowMessage('A rendszámokat meg kell adni!');
+    exit
+  end;
+ if (spBrutto.Value<=0)or(sptara.Value<=0) then
+  begin
+    ShowMessage('Nincs kiválasztva 2 mérés vagy nincs tára rögzített mérésnél!');
+    exit
+  end;
+
  EkaerF.fo;
 end;
 
