@@ -518,7 +518,7 @@ begin
  // if (k1=jvmemparoskepnev1.AsString)and (k2=jvmemparoskepnev2.AsString) then exit;//ne olvassa be újra
   kep1.Picture:=nil;
   kep2.Picture:=nil;
-  if not jvmemparosparosit.AsBoolean then Exit;
+  //if not jvmemparosparosit.AsBoolean then Exit;
 
   k1:=jvmemparoskepnev1.AsString;
   k2:=jvmemparoskepnev2.AsString;

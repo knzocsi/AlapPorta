@@ -159,7 +159,7 @@ var
   IOmodul_van:boolean;
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
-  bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany:Integer;
+  bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk:String;
 
 
@@ -430,11 +430,13 @@ begin
   i.writeString('ALAP','Telephely',telephely);
   //rtspURL:=i.ReadString('ALAP','RtspURL','');
   //i.writeString('ALAP','RtspURL',rtspURL);
-  nyugvovarakozas:=i.ReadInteger('ALAP','nyugvovarakozas',10);
-  i.WriteInteger('ALAP','nyugvovarakozas',nyugvovarakozas);
+  nyugvovarakozas:=i.ReadInteger('ALAP','Nyugvovarakozas',10);
+  i.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
 
-  mintomeg:=i.ReadInteger('ALAP','mintomeg',500);
-  i.WriteInteger('ALAP','mintomeg',mintomeg);
+  mintomeg:=i.ReadInteger('ALAP','Mintomeg',500);
+  i.WriteInteger('ALAP','Mintomeg',mintomeg);
+
+
   tulajcime:=i.ReadString('ALAP','Cim','');
   i.writeString('ALAP','Cim',tulajcime);
 
@@ -466,14 +468,14 @@ begin
   lejatszas:=i.ReadBool('ALAP','Lejatszas',False);
   i.WriteBool('ALAP','Lejatszas',lejatszas);
 
-  vezerles_tipus:=UpperCase(i.ReadString('ALAP','vezerles_tipus(USB/PLC)','PLC'));
-  i.writeString('ALAP','vezerles_tipus(USB/PLC)',vezerles_tipus);
+  vezerles_tipus:=UpperCase(i.ReadString('ALAP','Vezerles_tipus(USB/PLC)','PLC'));
+  i.writeString('ALAP','Vezerles_tipus(USB/PLC)',vezerles_tipus);
 
   lehajtasivarakozas:=i.ReadInteger('ALAP','Lehajtasivarakozas',10);
   i.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
 
   nagykamera:=i.ReadBool('ALAP','nagy_kemera_kep',true);
-  i.WriteBool('ALAP','nagy_kemera_kep',nagykamera);
+  i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
   Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
   i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
 
@@ -532,7 +534,7 @@ begin
 
   IOmodul_regiszter_iras1:=i.ReadInteger('PLC_USB','IOmodul_regiszter_iras1',1);
   i.WriteInteger('PLC_USB','IOmodul_regiszter_iras1',IOmodul_regiszter_iras1);
-
+  //Az elsõ gomb a fõ formon. Tipusa PLC vagy IO
   Elso_gomb_tipus:=i.ReadString('PLC_USB','Elso_gomb_tipus','Local');
   i.writeString('PLC_USB','Elso_gomb_tipus',Elso_gomb_tipus);
 
@@ -542,6 +544,8 @@ begin
   Elso_Gomb_Varakozas:=i.ReadInteger('PLC_USB','Elso_Gomb_Varakozas',500);
   i.WriteInteger('PLC_USB','Elso_Gomb_Varakozas',Elso_Gomb_Varakozas);
 
+  Elso_Gomb_Meres_Utan:=i.ReadInteger('PLC_USB','Elso_Gomb_Meres_Utan',0);
+  i.WriteInteger('PLC_USB','Elso_Gomb_Meres_Utan',Elso_Gomb_Meres_Utan);
 
   utolso_sql:=i.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
   i.WriteInteger('MySql','Utolso_sql',utolso_sql);

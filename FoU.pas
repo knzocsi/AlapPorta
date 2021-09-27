@@ -1525,6 +1525,8 @@ var
       if rendszamleker then  iprendszamleker;
       rendszamvolt := true;
       mentes;
+      if Elso_Gomb_Meres_Utan=1 then btnElsoClick(Sender);
+
       //Felnyitja a soropmót a lehajtáshoz
       if meresirany='KI' then PLC_Ir(Sorompo_Nyit_Cim_BE, 1)
       else
