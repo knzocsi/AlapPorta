@@ -838,9 +838,7 @@ object MjegyF: TMjegyF
       Top = 69
       Width = 162
       Height = 17
-      Caption = 'A k'#233't partner megegyez'#337':'
-      Checked = True
-      State = cbChecked
+      Caption = 'A k'#233't partner megegyez'#337
       TabOrder = 28
     end
     object btnekaer: TButton

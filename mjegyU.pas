@@ -229,7 +229,8 @@ begin
  try
    PartnerekF.ShowModal
  finally
-   Partnelist.Refresh
+   Partnelist.Refresh;
+   Partnerlist2.Refresh;
  end;
 end;
 
@@ -393,6 +394,7 @@ end;
 procedure TMjegyF.JvDBUltimGrid1CellClick(Column: TColumn);
 begin
   jeloles;
+  //Application.ProcessMessages;
   kepek_betoltese;
 end;
 
@@ -621,7 +623,19 @@ var sorsz,pcime,egyedi:String;
 
          TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
-         TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
+         if edekaer.Text<>'' then
+          begin
+           TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
+           TfrxMemoView(FindObject('frxekaerlbl')).visible:=True;
+           TfrxMemoView(FindObject('frxekaer')).visible:=True;
+          end
+          else
+          begin
+           TfrxMemoView(FindObject('frxekaer')).Text:='';
+           TfrxMemoView(FindObject('frxekaerlbl')).visible:=False;
+           TfrxMemoView(FindObject('frxekaer')).visible:=false;
+          end;
+
          TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
          TfrxMemoView(FindObject('memtulajcime')).Text:=tulajTcim.AsString;
          //TfrxMemoView(FindObject('memadosz')).Text:=tulajTadoszam.AsString;

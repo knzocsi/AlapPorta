@@ -811,7 +811,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haRight
         end
-        object Memo20: TfrxMemoView
+        object frxekaerlbl: TfrxMemoView
           AllowVectorExport = True
           Left = 9.338590000000000000
           Top = 233.330860000000000000
