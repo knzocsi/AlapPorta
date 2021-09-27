@@ -197,7 +197,7 @@ implementation
 uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
-  tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok;
+  tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -1636,6 +1636,7 @@ end;
 function TFoF.Ping_teszt(tipus:string): boolean;
 var i:integer;
 begin
+   Result:=False;
   if tipus='PLC' then  IdIcmpClient1.host:= PLC_IP
   else
     if tipus='IO' then  IdIcmpClient1.host:= IOmodul_IP
@@ -1644,8 +1645,17 @@ begin
       Result:=false;
       exit;
     end;
+  for I := 1 to Ping_varakozas do
+    begin
+      if PingHost(PLC_IP) then
+       begin
+         Result:=true;
+         Break
+       end
+      else Sleep(100)
+    end;
   //IdIcmpClient1.PacketSize := 24;
-  IdIcmpClient1.ReceiveTimeout := 200;
+ { IdIcmpClient1.ReceiveTimeout := 200;
   IdIcmpClient1.Protocol := 1;
 
   IdIcmpClient1.Ping();
@@ -1659,7 +1669,7 @@ begin
   end;
 
   if IdIcmpClient1.ReplyStatus.BytesReceived>0 then  result:=True
-  else result:=false;
+  else result:=false;}
 end;
 
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;

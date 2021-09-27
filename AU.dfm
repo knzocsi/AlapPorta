@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44456.530479085600000000
+    ReportOptions.LastChange = 44466.488320995370000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -817,7 +817,6 @@ object AF: TAF
           Top = 233.330860000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
-          Visible = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -834,7 +833,6 @@ object AF: TAF
           Top = 233.330860000000000000
           Width = 177.637910000000000000
           Height = 18.897650000000000000
-          Visible = False
           Frame.Typ = []
         end
         object Memo21: TfrxMemoView
@@ -1825,7 +1823,6 @@ object AF: TAF
           Top = 230.212740000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
-          Visible = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -1833,7 +1830,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'EK'#193'ER:')
+            '[frxekaerlbl.text]')
           ParentFont = False
         end
         object Memo64: TfrxMemoView
@@ -1842,7 +1839,6 @@ object AF: TAF
           Top = 230.212740000000000000
           Width = 177.637910000000000000
           Height = 18.897650000000000000
-          Visible = False
           Frame.Typ = []
           Memo.UTF8W = (
             '[frxekaer.text]')

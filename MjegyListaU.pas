@@ -108,14 +108,13 @@ begin
      if mjegyekQ.FieldByName('ekaer').AsString<>'' then
       begin
        TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
-       TfrxMemoView(FindObject('frxekaerlbl')).visible:=True;
-       TfrxMemoView(FindObject('frxekaer')).visible:=True;
+       TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
+       //TfrxMemoView(FindObject('frxekaer')).visible:=True;
       end
       else
       begin
        TfrxMemoView(FindObject('frxekaer')).Text:='';
-       TfrxMemoView(FindObject('frxekaerlbl')).visible:=False;
-       TfrxMemoView(FindObject('frxekaer')).visible:=false;
+       TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
       end;
 
     // TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
@@ -211,14 +210,13 @@ if MessageDlg('Biztosan stornozza ezt a mérlegjegyet?',mtConfirmation,mbYesNo,0)
          if mjegyekQ.FieldByName('ekaer').AsString<>'' then
           begin
            TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
-           TfrxMemoView(FindObject('frxekaerlbl')).visible:=True;
-           TfrxMemoView(FindObject('frxekaer')).visible:=True;
+           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
+           //TfrxMemoView(FindObject('frxekaer')).visible:=True;
           end
           else
           begin
            TfrxMemoView(FindObject('frxekaer')).Text:='';
-           TfrxMemoView(FindObject('frxekaerlbl')).visible:=False;
-           TfrxMemoView(FindObject('frxekaer')).visible:=false;
+           TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
           end;
          TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;;
          TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;

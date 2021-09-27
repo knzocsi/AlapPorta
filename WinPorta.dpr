@@ -32,7 +32,8 @@ uses
   NezetU in 'NezetU.pas' {NezetF},
   NyomtatokU in 'NyomtatokU.pas' {NyomtatokF},
   Tulajok in 'Tulajok.pas' {TulajokF},
-  EkaerU in 'EkaerU.pas' {EkaerF};
+  EkaerU in 'EkaerU.pas' {EkaerF},
+  Ping2U in 'Ping2U.pas';
 
 {$R *.res}
 

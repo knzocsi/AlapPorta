@@ -626,14 +626,12 @@ var sorsz,pcime,egyedi:String;
          if edekaer.Text<>'' then
           begin
            TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
-           TfrxMemoView(FindObject('frxekaerlbl')).visible:=True;
-           TfrxMemoView(FindObject('frxekaer')).visible:=True;
+           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
           end
           else
           begin
            TfrxMemoView(FindObject('frxekaer')).Text:='';
-           TfrxMemoView(FindObject('frxekaerlbl')).visible:=False;
-           TfrxMemoView(FindObject('frxekaer')).visible:=false;
+           TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
           end;
 
          TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
