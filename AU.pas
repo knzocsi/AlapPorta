@@ -474,7 +474,7 @@ begin
   lehajtasivarakozas:=i.ReadInteger('ALAP','Lehajtasivarakozas',10);
   i.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
 
-  nagykamera:=i.ReadBool('ALAP','nagy_kemera_kep',true);
+  nagykamera:=i.ReadBool('ALAP','Nagy_kamera_kep',False);
   i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
   Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
   i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
