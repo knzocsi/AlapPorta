@@ -10,7 +10,7 @@ uses
   Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
-  Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin;
+  Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg;
 
 type
   TMjegyF = class(TForm)
@@ -513,14 +513,55 @@ begin
 end;
 
 procedure TMjegyF.kepek_betoltese;
+var     JPEGImg: TJPEGImage;
 begin
  // if (k1=jvmemparoskepnev1.AsString)and (k2=jvmemparoskepnev2.AsString) then exit;//ne olvassa be újra
   kep1.Picture:=nil;
   kep2.Picture:=nil;
+  if not jvmemparosparosit.AsBoolean then Exit;
+
   k1:=jvmemparoskepnev1.AsString;
   k2:=jvmemparoskepnev2.AsString;
-  if FileExists(k1) then kep1.Picture.LoadFromFile(k1);
-  if FileExists(k2) then kep2.Picture.LoadFromFile(k2);
+  if FileExists(k1) then
+   begin
+    JPEGImg := TJpegImage.Create;
+    try
+     JPEGImg.LoadFromFile(k1);
+     if JPEGImg.Width<500 then
+      JPEGImg.Scale:=jsFullSize
+     else
+      if JPEGImg.Width<1000 then
+       JPEGImg.Scale:=jsHalf
+      else
+       if JPEGImg.Width<2000 then
+        JPEGImg.Scale:=jsQuarter
+       else
+        JPEGImg.Scale:=jsEighth;
+    finally
+     kep1.Picture.Assign(JPEGImg);
+     JPEGImg.Free;
+    end;
+   end;
+if FileExists(k2) then
+   begin
+    JPEGImg := TJpegImage.Create;
+    try
+     JPEGImg.LoadFromFile(k2);
+     if JPEGImg.Width<500 then
+      JPEGImg.Scale:=jsFullSize
+     else
+      if JPEGImg.Width<1000 then
+       JPEGImg.Scale:=jsHalf
+      else
+       if JPEGImg.Width<2000 then
+        JPEGImg.Scale:=jsQuarter
+       else
+        JPEGImg.Scale:=jsEighth;
+    finally
+     kep2.Picture.Assign(JPEGImg);
+     JPEGImg.Free;
+    end;
+   end;
   Label14.Visible:=kep1.Picture=nil;
   Label15.Visible:=kep2.Picture=nil;
 end;

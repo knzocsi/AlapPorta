@@ -1637,23 +1637,47 @@ function TFoF.Ping_teszt(tipus:string): boolean;
 var i:integer;
 begin
    Result:=False;
-  if tipus='PLC' then  IdIcmpClient1.host:= PLC_IP
+ { if tipus='PLC' then  IdIcmpClient1.host:= PLC_IP
   else
     if tipus='IO' then  IdIcmpClient1.host:= IOmodul_IP
     else
     begin
       Result:=false;
       exit;
-    end;
-  for I := 1 to Ping_varakozas do
-    begin
-      if PingHost(PLC_IP) then
-       begin
-         Result:=true;
-         Break
-       end
-      else Sleep(100)
-    end;
+    end; }
+    StatusBar1.panels[3].text := 'Ping teszt';
+    Application.ProcessMessages;
+   if tipus='PLC' then
+      begin
+      for I := 1 to Ping_varakozas do
+        begin
+          if PingHost(PLC_IP) then
+           begin
+             Result:=true;
+             Break
+           end
+          else Sleep(100)
+          end;
+      end
+   else
+    if tipus='IO' then
+      begin
+        for I := 1 to Ping_varakozas do
+        begin
+          if PingHost(IOmodul_IP) then
+           begin
+             Result:=true;
+             Break
+           end
+          else Sleep(100)
+        end;
+      end
+    else
+     begin
+       Result:=False;
+       Exit;
+     end;
+
   //IdIcmpClient1.PacketSize := 24;
  { IdIcmpClient1.ReceiveTimeout := 200;
   IdIcmpClient1.Protocol := 1;
@@ -1669,7 +1693,7 @@ begin
   end;
 
   if IdIcmpClient1.ReplyStatus.BytesReceived>0 then  result:=True
-  else result:=false;}
+  else result:=false; }
 end;
 
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;

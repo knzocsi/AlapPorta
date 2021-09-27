@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.263,=N:\Delphi_10_4\Merleges\Alap\create_sample_resp.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.308,=N:\Delphi_10_4\Merleges\Alap\Ping2U.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.202,=N:\Delphi_10_4\Merleges\Alap\ekaermanagement.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.182,N:\Delphi_10_4\Merleges\Alap\Db_modU.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\EkaerU.dfm=N:\Delphi_10_4\Merleges\Alap\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\Unit1.dfm=N:\Delphi_10_4\Merleges\Alap\EkaerU.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.067,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\EkaerU.pas=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>2021.09.27 13:29:18.308,=N:\Delphi_10_4\Merleges\Alap\Ping2U.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\Unit1.pas=N:\Delphi_10_4\Merleges\Alap\EkaerU.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.263,=N:\Delphi_10_4\Merleges\Alap\create_sample_resp.pas</Transaction>
   </Transactions>
 </BorlandProject>
