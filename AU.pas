@@ -1,7 +1,11 @@
 unit AU;
 
 interface
-
+{
+Mérlegjegy típusok resorce-ban
+0-alap mérlegjegy,duplex
+1- SA-HO-KA
+}
 
 
 uses
@@ -233,7 +237,7 @@ begin
   jogmod:=False;
   Automentes.Enabled:=mentesido in [0..23];
   if (nedvesseg_beolvasasa) and (mezgaz) then Sample_Kapcs.Connected:=true;
-  merlegjegy_tipus_betoltese;//iniben kell megadni
+ // merlegjegy_tipus_betoltese;//iniben kell megadni-elõkészítés elõtt töltöm be
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;

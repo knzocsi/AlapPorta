@@ -138,7 +138,7 @@ type
     procedure KISorompnyitinfrahiba1Click(Sender: TObject);
     procedure mctPLCResponseError(const FunctionCode, ErrorCode: Byte;
       const ResponseBuffer: TModBusResponseBuffer);
-    function Ping_teszt(tipus:string):boolean;
+    function Ping_teszt(IP:string):boolean;
     procedure ledLampaDblClick(Sender: TObject);
     procedure btnElsoClick(Sender: TObject);
     procedure pusok1Click(Sender: TObject);
@@ -667,6 +667,7 @@ begin
   if not IOmodul_van then exit;
 
   mcIOmodul.Host := IOmodul_IP;
+  if Ping_teszt(mcIOmodul.Host) then
 
   begin
     if mcIOmodul.WriteCoil(cim , ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
@@ -1642,67 +1643,23 @@ begin
   van_cam := True;
 end;
 
-function TFoF.Ping_teszt(tipus:string): boolean;
+function TFoF.Ping_teszt(IP:string): boolean;
 var i:integer;
 begin
-   Result:=False;
- { if tipus='PLC' then  IdIcmpClient1.host:= PLC_IP
-  else
-    if tipus='IO' then  IdIcmpClient1.host:= IOmodul_IP
-    else
-    begin
-      Result:=false;
-      exit;
-    end; }
-    StatusBar1.panels[3].text := 'Ping teszt';
-    Application.ProcessMessages;
-   if tipus='PLC' then
-      begin
-      for I := 1 to Ping_varakozas do
-        begin
-          if PingHost(PLC_IP) then
-           begin
-             Result:=true;
-             Break
-           end
-          else Sleep(100)
-          end;
-      end
-   else
-    if tipus='IO' then
-      begin
-        for I := 1 to Ping_varakozas do
-        begin
-          if PingHost(IOmodul_IP) then
-           begin
-             Result:=true;
-             Break
-           end
-          else Sleep(100)
-        end;
-      end
-    else
-     begin
-       Result:=False;
-       Exit;
-     end;
-
-  //IdIcmpClient1.PacketSize := 24;
- { IdIcmpClient1.ReceiveTimeout := 200;
-  IdIcmpClient1.Protocol := 1;
-
-  IdIcmpClient1.Ping();
-  i:=1;
-  while (IdIcmpClient1.ReplyStatus.BytesReceived=0) and (i<Ping_varakozas*10) do
+  Result:=False;
+  if UpperCase(IP)='LOCAL' then exit;
+  StatusBar1.panels[3].text := 'Ping teszt';
+  Application.ProcessMessages;
+  for I := 1 to Ping_varakozas do
   begin
-    StatusBar1.panels[3].text := 'Ping teszt';
-    varakozas;
-    i:=i+1;
-    IdIcmpClient1.Ping();
+    if PingHost(IP) then
+    begin
+      Result:=true;
+      Break
+    end
+    else Sleep(100)
   end;
 
-  if IdIcmpClient1.ReplyStatus.BytesReceived>0 then  result:=True
-  else result:=false; }
 end;
 
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;
@@ -1711,7 +1668,7 @@ begin
   if (vezerles_tipus <> 'PLC') then exit;
 
   mctPLC.Host := PLC_IP;
-  if Ping_teszt('PLC') then
+  if Ping_teszt(mctPLC.Host) then
   begin
     if mctPLC.WriteRegister(cim + 1, ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin
@@ -1739,7 +1696,7 @@ var
 begin
   mctPLC.Host := PLC_IP;
   blokk := 1;
-  if Ping_teszt('IO') then
+  if Ping_teszt(mctPLC.Host) then
   begin
     if mctPLC.ReadHoldingRegisters(cim + 1, blokk, Data) then  //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin

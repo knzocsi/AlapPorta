@@ -659,11 +659,10 @@ var sorsz,pcime,egyedi:String;
     keszmenny:Extended;
  procedure elokeszit;
    begin
-     AF.merlegjegy_tipus_betoltese;
+     AF.merlegjegy_tipus_betoltese;//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
      af.merlegjegy_mezgaz;//mi latszon
       with aF.frxmerleg do
        begin
-         //TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
          if edekaer.Text<>'' then
           begin
