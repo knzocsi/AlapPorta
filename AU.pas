@@ -97,6 +97,7 @@ type
     SampleQ1: TFDQuery;
     ZarolQ: TFDQuery;
     ZarolvaQ: TFDQuery;
+    frxtesztrep: TfrxReport;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -108,6 +109,7 @@ type
     { Private declarations }
     procedure ini_kezel;
     procedure GetVerisonNumber(var Fover, Alver, Build: Integer; File_ut: Pchar);
+
   public
     function kepszures(im:TImage):string;
     function kepkeres(im:TImage):string;
@@ -135,6 +137,7 @@ type
     procedure tabla_zarol(tabla:string);
     function tabla_zarolva(tabla:string):Integer;
     procedure tabla_kizar(tabla:string);
+    procedure merlegjegy_tipus_betoltese;
     { Public declarations }
   end;
 
@@ -161,7 +164,7 @@ var
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk:String;
-
+  Merlegjegy_tipus:Integer;
 
 
 implementation
@@ -230,30 +233,7 @@ begin
   jogmod:=False;
   Automentes.Enabled:=mentesido in [0..23];
   if (nedvesseg_beolvasasa) and (mezgaz) then Sample_Kapcs.Connected:=true;
-  //ha ez a constans nem nulla a partner tablabol veszem ki a biz kibocsjtot
-  {bizkibocsajto_id:=2;
-  if bizkibocsajto_id<>0 then
-   begin
-    with Q1 do
-     begin
-       Close;
-       sql.Clear;
-       SQL.Add('select pc.nev,pc.cim,p.adoszam,p.kuj,p.ktj from partner_combo pc INNER JOIN partner p ON p.id=pc.id');
-       SQL.Add(' WHERE pc.id='+bizkibocsajto_id.ToString);
-       open;
-       if not eof then
-        begin
-         tulajneve:=FieldByName('nev').AsString;
-         tulajcime:=FieldByName('cim').AsString;
-         adosz:=FieldByName('adoszam').AsString;
-         kuj:=FieldByName('kuj').AsString;
-         ktj:=FieldByName('ktj').AsString;
-        end;
-       close
-     end;
-   end }
-
-
+  merlegjegy_tipus_betoltese;//iniben kell megadni
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -587,6 +567,10 @@ begin
   alap_irany:=i.ReadInteger('ALAP','alap_irany',0);
   i.WriteInteger('ALAP','alap_irany',alap_irany);
 
+
+  Merlegjegy_tipus:=i.ReadInteger('ALAP','Merlegjegy_tipus',0);
+  i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
+
   ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
   i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
   ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
@@ -749,6 +733,14 @@ begin
  with aF.frxmerleg do
  for I := 0 to ComponentCount-1 do
       if Components[i].Tag=1 then (Components[i] as TfrxMemoView).Visible:=mezgaz;
+end;
+
+procedure TAF.merlegjegy_tipus_betoltese;
+var Stream: TResourceStream;
+begin
+  Stream := TResourceStream.Create(HInstance, 'Rep_'+merlegjegy_tipus.ToString, RT_RCDATA);
+  frxmerleg.LoadFromStream(Stream);
+  Stream.Free
 end;
 
 procedure TAF.modok_vegrehajt;

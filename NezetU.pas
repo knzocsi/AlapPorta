@@ -105,6 +105,7 @@ end;
 
 procedure TNezetF.rep_valaszt(akt_rep: TFrxReport; psz: Integer);
 begin
+  nyomtatva:=False;
   valasztott:=akt_rep;
   valasztott.PrintOptions.Copies:=psz;
   valasztott.Preview:=frxNezet;

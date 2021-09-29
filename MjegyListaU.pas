@@ -69,6 +69,7 @@ type
     { Private declarations }
     procedure szures;
     procedure szazalek;
+    procedure elokeszit(stfelirat:String);
   public
     { Public declarations }
   end;
@@ -96,14 +97,104 @@ procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
 
 begin
   if mjegyekQ.IsEmpty then exit;
-  szazalek;
-  nyomtat:=True;
-  af.merlegjegy_mezgaz;//mi latszon
-  with aF.frxmerleg do
+   with NezetF do
    begin
+    elokeszit(mjegyekQ.FieldByName('storno').AsString);
+    if nyomtatva then
+     begin
+      valasztott.Print;
+      aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
+      mjegyekQ.Refresh
+     end;
+    valasztott.Preview:=nil;
+   end;
+   nyomtat:=false;
+end;
 
-     if mjegyekQ.FieldByName('storno').AsString='STORNO' then TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy'
-     else TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
+procedure TMjegyekF.btnListanyomtatasClick(Sender: TObject);
+begin
+  if mjegyekQ.IsEmpty then exit;
+  nyomtat:=True;
+   with NezetF do
+     begin
+      rep_valaszt(aF.FrxmjegyList,1);
+      if nyomtatva then valasztott.Print;
+      valasztott.Preview:=nil;
+     end;
+  nyomtat:=false;
+end;
+
+procedure TMjegyekF.Button3Click(Sender: TObject);
+begin
+if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
+   begin
+     with NezetF do
+     begin
+      elokeszit('Storno');
+      if nyomtatva then
+       begin
+        with aF.Q1 do
+         begin
+           Close;
+           SQL.Clear;
+           SQL.Add(' UPDATE merlegjegy SET Storno="Storno" where id='+mjegyekQ.FieldByName('ID').AsString);
+           ExecSQL
+         end;
+        valasztott.Print;
+        aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
+         case mjegyekQ.FieldByName('irany').AsString[1] of
+         'B':begin
+               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+               mjegyekQ.FieldByName('tarolo_id').AsInteger,
+               mjegyekQ.FieldByName('p2_id').AsInteger,0,-1*mjegyekQ.FieldByName('mennyiseg').value);
+               //tort szemek
+               if mjegyekQ.FieldByName('tortszaz').Value>0 then
+               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+               mjegyekQ.FieldByName('tarolo_id').AsInteger,
+               mjegyekQ.FieldByName('p_id2').AsInteger,1,-1*ttom);
+
+             end;
+         'K':begin
+              aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+               mjegyekQ.FieldByName('tarolo_id').AsInteger,
+               mjegyekQ.FieldByName('p_id').AsInteger,0,mjegyekQ.FieldByName('mennyiseg').value);
+              //tort szemek
+               if mjegyekQ.FieldByName('tortszaz').Value>0 then
+               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+               mjegyekQ.FieldByName('tarolo_id').AsInteger,
+               mjegyekQ.FieldByName('p_id').AsInteger,1,ttom);
+             end;
+         end;
+        szures
+       end;
+      valasztott.Preview:=nil;
+     end;
+   nyomtat:=false;
+   end;
+end;
+
+procedure TMjegyekF.Button4Click(Sender: TObject);
+begin
+LibreExcelF.mezo_nevek(JvDBUltimGrid1,nil);
+end;
+
+procedure TMjegyekF.cbxrendszChange(Sender: TObject);
+begin
+if rfelt then exit;
+szures
+end;
+
+procedure TMjegyekF.elokeszit(stfelirat: String);
+begin
+ if mjegyekQ.IsEmpty then exit;
+ AF.merlegjegy_tipus_betoltese;
+ szazalek;
+ nyomtat:=True;
+ af.merlegjegy_mezgaz;//mi latszon
+ with aF.frxmerleg do
+   begin
+     if stfelirat<>'' then TfrxMemoView(FindObject('memcim')).Text:=stfelirat+' '+LowerCase(TfrxMemoView(FindObject('memcim')).Text);
+     //else   TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy';
      TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+1)+'. példány';
      if mjegyekQ.FieldByName('ekaer').AsString<>'' then
       begin
@@ -116,8 +207,6 @@ begin
        TfrxMemoView(FindObject('frxekaer')).Text:='';
        TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
       end;
-
-    // TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
      TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;;
      TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;
      //TfrxMemoView(FindObject('memadosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;
@@ -141,18 +230,18 @@ begin
      TfrxMemoView(FindObject('memrendszamok')).Text:=mjegyekQ.FieldByName('rendszam').AsString+' '+mjegyekQ.FieldByName('rendszam2').AsString;;
      TfrxMemoView(FindObject('membrutto')).Text:=mjegyekQ.FieldByName('brutto').AsString+' kg';
      TfrxMemoView(FindObject('memtara')).Text:=mjegyekQ.FieldByName('tara').AsString+' kg';
-     TfrxMemoView(FindObject('memnetto')).Text:=mjegyekQ.FieldByName('netto').AsString+' kg';
+     TfrxMemoView(FindObject('memnetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
      TfrxMemoView(FindObject('memirany')).Text:=mjegyekQ.FieldByName('irany').AsString;
      TfrxMemoView(FindObject('memmegjegy')).Text:=mjegyekQ.FieldByName('megjegyzes').AsString;
      TfrxMemoView(FindObject('memtermkod')).Text:=mjegyekQ.FieldByName('termek_kod').AsString;
      TfrxMemoView(FindObject('memtermnev')).Text:=mjegyekQ.FieldByName('termek_nev').AsString;
-     //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=mjegyekQ.FieldByName('merlegelo').AsString;
-     //TfrxMemoView(FindObject('frxkuj')).Text:=mjegyekQ.FieldByName('tul_kuj').AsString;;
-     //TfrxMemoView(FindObject('frxktj')).Text:=mjegyekQ.FieldByName('tul_ktj').AsString;;
-     //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=mjegyekQ.FieldByName('kuj').AsString;
-     //TfrxMemoView(FindObject('frxpartnerktj')).Text:=mjegyekQ.FieldByName('ktj').AsString;
+    //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=mjegyekQ.FieldByName('merlegelo').AsString;
+    //TfrxMemoView(FindObject('frxkuj')).Text:=mjegyekQ.FieldByName('tul_kuj').AsString;;
+    //TfrxMemoView(FindObject('frxktj')).Text:=mjegyekQ.FieldByName('tul_ktj').AsString;;
+    //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=mjegyekQ.FieldByName('kuj').AsString;
+    //TfrxMemoView(FindObject('frxpartnerktj')).Text:=mjegyekQ.FieldByName('ktj').AsString;
      TfrxMemoView(FindObject('memszallev')).Text:=mjegyekQ.FieldByName('szallitolev').AsString;
-
+    // TfrxMemoView(FindObject('memewc')).Text:=mjegyekQ.FieldByName('ewc').AsString;
      TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
      TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
      TfrxMemoView(FindObject('memtisztasag')).Text:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
@@ -165,168 +254,15 @@ begin
      TfrxMemoView(FindObject('memsznetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
      TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
      TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
-     with NezetF do
-     begin
-      rep_valaszt(aF.frxmerleg,1);
-      if nyomtatva then
-       begin
-        valasztott.Print;
-        aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
-        mjegyekQ.Refresh
-       end;
-      valasztott.Preview:=nil;
-     end;
-     nyomtat:=false;
+
+     NezetF.rep_valaszt(aF.frxmerleg,1);
    end;
-end;
-
-procedure TMjegyekF.btnListanyomtatasClick(Sender: TObject);
-begin
- //aF.FrxmjegyList.PrepareReport(true);
-  if mjegyekQ.IsEmpty then exit;
-  nyomtat:=True;
-   with NezetF do
-     begin
-      rep_valaszt(aF.FrxmjegyList,1);
-      if nyomtatva then valasztott.Print;
-      valasztott.Preview:=nil;
-     end;
-  nyomtat:=false;
-end;
-
-procedure TMjegyekF.Button3Click(Sender: TObject);
-begin
-if MessageDlg('Biztosan stornozza ezt a mérlegjegyet?',mtConfirmation,mbYesNo,0)=6 then
-   begin
-    if mjegyekQ.IsEmpty then exit;
-    szazalek;
-    nyomtat:=True;
-     af.merlegjegy_mezgaz;//mi latszon
-     with aF.frxmerleg do
-       begin
-
-         TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy';
-         TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+1)+'. példány';
-         if mjegyekQ.FieldByName('ekaer').AsString<>'' then
-          begin
-           TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
-           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
-           //TfrxMemoView(FindObject('frxekaer')).visible:=True;
-          end
-          else
-          begin
-           TfrxMemoView(FindObject('frxekaer')).Text:='';
-           TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
-          end;
-         TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;;
-         TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;
-         //TfrxMemoView(FindObject('memadosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;
-         case mjegyekQ.FieldByName('irany').AsString[1] of
-         'B':begin
-              TfrxMemoView(FindObject('mempartner')).Text:='Átadó:';
-              TfrxMemoView(FindObject('mempartner2')).Text:='Átvevõ:';
-             end;
-         'K':begin
-              TfrxMemoView(FindObject('mempartner')).Text:='Eladó:';
-              TfrxMemoView(FindObject('mempartner2')).Text:='Vevõ:';
-             end;
-         end;
-         TfrxMemoView(FindObject('mempartnerneve')).Text:=mjegyekQ.FieldByName('p_nev').AsString;
-         TfrxMemoView(FindObject('mempartnercime')).Text:=mjegyekQ.FieldByName('p_cim').AsString;
-         TfrxMemoView(FindObject('mempartnerneve2')).Text:=mjegyekQ.FieldByName('p2_nev').AsString;
-         TfrxMemoView(FindObject('mempartnercime2')).Text:=mjegyekQ.FieldByName('p2_cim').AsString;
-         TfrxMemoView(FindObject('memelsoido')).Text:=mjegyekQ.FieldByName('erkdatum').AsString+' '+mjegyekQ.FieldByName('erkido').AsString;
-         TfrxMemoView(FindObject('memmasodikido')).Text:=mjegyekQ.FieldByName('tavdatum').AsString+' '+mjegyekQ.FieldByName('tavido').AsString;;
-         TfrxMemoView(FindObject('membizszam')).Text:=mjegyekQ.FieldByName('Sorszam').AsString;
-         TfrxMemoView(FindObject('memrendszamok')).Text:=mjegyekQ.FieldByName('rendszam').AsString+' '+mjegyekQ.FieldByName('rendszam2').AsString;;
-         TfrxMemoView(FindObject('membrutto')).Text:=mjegyekQ.FieldByName('brutto').AsString+' kg';
-         TfrxMemoView(FindObject('memtara')).Text:=mjegyekQ.FieldByName('tara').AsString+' kg';
-         TfrxMemoView(FindObject('memnetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
-         TfrxMemoView(FindObject('memirany')).Text:=mjegyekQ.FieldByName('irany').AsString;
-         TfrxMemoView(FindObject('memmegjegy')).Text:=mjegyekQ.FieldByName('megjegyzes').AsString;
-         TfrxMemoView(FindObject('memtermkod')).Text:=mjegyekQ.FieldByName('termek_kod').AsString;
-         TfrxMemoView(FindObject('memtermnev')).Text:=mjegyekQ.FieldByName('termek_nev').AsString;
-        //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=mjegyekQ.FieldByName('merlegelo').AsString;
-        //TfrxMemoView(FindObject('frxkuj')).Text:=mjegyekQ.FieldByName('tul_kuj').AsString;;
-        //TfrxMemoView(FindObject('frxktj')).Text:=mjegyekQ.FieldByName('tul_ktj').AsString;;
-        //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=mjegyekQ.FieldByName('kuj').AsString;
-        //TfrxMemoView(FindObject('frxpartnerktj')).Text:=mjegyekQ.FieldByName('ktj').AsString;
-         TfrxMemoView(FindObject('memszallev')).Text:=mjegyekQ.FieldByName('szallitolev').AsString;
-        // TfrxMemoView(FindObject('memewc')).Text:=mjegyekQ.FieldByName('ewc').AsString;
-         TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
-         TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
-         TfrxMemoView(FindObject('memtisztasag')).Text:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
-         TfrxMemoView(FindObject('memtort')).Text:=mjegyekQ.FieldByName('tortszaz').AsString+' %';
-
-         TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-         TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
-         TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
-         TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
-         TfrxMemoView(FindObject('memsznetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
-         TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
-             TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
-         with NezetF do
-         begin
-          rep_valaszt(aF.frxmerleg,1);
-          if nyomtatva then
-           begin
-            with aF.Q1 do
-             begin
-               Close;
-               SQL.Clear;
-               SQL.Add(' UPDATE merlegjegy SET Storno="STORNO" where id='+mjegyekQ.FieldByName('ID').AsString);
-               ExecSQL
-             end;
-            valasztott.Print;
-            aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
-             case mjegyekQ.FieldByName('irany').AsString[1] of
-             'B':begin
-                   aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-                   mjegyekQ.FieldByName('tarolo_id').AsInteger,
-                   mjegyekQ.FieldByName('p2_id').AsInteger,0,-1*mjegyekQ.FieldByName('mennyiseg').value);
-                   //tort szemek
-                   if mjegyekQ.FieldByName('tortszaz').Value>0 then
-                   aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-                   mjegyekQ.FieldByName('tarolo_id').AsInteger,
-                   mjegyekQ.FieldByName('p_id2').AsInteger,1,-1*ttom);
-
-                 end;
-             'K':begin
-                  aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-                   mjegyekQ.FieldByName('tarolo_id').AsInteger,
-                   mjegyekQ.FieldByName('p_id').AsInteger,0,mjegyekQ.FieldByName('mennyiseg').value);
-                  //tort szemek
-                   if mjegyekQ.FieldByName('tortszaz').Value>0 then
-                   aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-                   mjegyekQ.FieldByName('tarolo_id').AsInteger,
-                   mjegyekQ.FieldByName('p_id').AsInteger,1,ttom);
-                 end;
-             end;
-            szures
-            //mjegyekQ.Refresh
-           end;
-          valasztott.Preview:=nil;
-         end;
-       end;
-       nyomtat:=false;
-   end;
-end;
-
-procedure TMjegyekF.Button4Click(Sender: TObject);
-begin
-LibreExcelF.mezo_nevek(JvDBUltimGrid1,nil);
-end;
-
-procedure TMjegyekF.cbxrendszChange(Sender: TObject);
-begin
-if rfelt then exit;
-szures
 end;
 
 procedure TMjegyekF.FormActivate(Sender: TObject);
 begin
  if nyomtat then  exit;
-  
+
  termeklist.close;
  termeklist.Open();
  Partnelist.close;

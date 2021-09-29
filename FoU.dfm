@@ -465,6 +465,10 @@ object FoF: TFoF
           OnClick = tulaj_mClick
         end
       end
+      object eszt1: TMenuItem
+        Caption = 'Teszt'
+        OnClick = eszt1Click
+      end
     end
     object Kpek1: TMenuItem
       Caption = 'K'#233'pek'

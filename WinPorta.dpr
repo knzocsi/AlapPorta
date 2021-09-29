@@ -1,5 +1,9 @@
 program WinPorta;
 
+
+
+{$R *.dres}
+
 uses
   Vcl.Forms,
   FoU in 'FoU.pas' {FoF},
@@ -33,7 +37,8 @@ uses
   NyomtatokU in 'NyomtatokU.pas' {NyomtatokF},
   Tulajok in 'Tulajok.pas' {TulajokF},
   EkaerU in 'EkaerU.pas' {EkaerF},
-  Ping2U in 'Ping2U.pas';
+  Ping2U in 'Ping2U.pas',
+  tesztU in 'tesztU.pas' {tesztF};
 
 {$R *.res}
 
@@ -69,5 +74,6 @@ begin
   Application.CreateForm(TNyomtatokF, NyomtatokF);
   Application.CreateForm(TTulajokF, TulajokF);
   Application.CreateForm(TEkaerF, EkaerF);
+  Application.CreateForm(TtesztF, tesztF);
   Application.Run;
 end.

@@ -659,10 +659,11 @@ var sorsz,pcime,egyedi:String;
     keszmenny:Extended;
  procedure elokeszit;
    begin
+     AF.merlegjegy_tipus_betoltese;
+     af.merlegjegy_mezgaz;//mi latszon
       with aF.frxmerleg do
        begin
-
-         TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
+         //TfrxMemoView(FindObject('memcim')).Text:='Mérlegjegy';
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
          if edekaer.Text<>'' then
           begin
@@ -721,14 +722,8 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
          TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
          TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
-         with NezetF do
-           begin
-            rep_valaszt(aF.frxmerleg,1);
-           end;
-        { PrepareReport(true);
-         NezetF.valasztott:=aF.frxmerleg;
-         nezetF.Showmodal;}
-         //Report.Preview;
+
+         NezetF.rep_valaszt(aF.frxmerleg,1);
        end;
     end;
 
