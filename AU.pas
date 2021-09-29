@@ -19,7 +19,8 @@ uses
   FireDAC.Stan.Util, FireDAC.Comp.Script,System.hash, JvMemoryDataset,
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
-  Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils;
+  Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
+  Winapi.ShellAPI;
 
 const
   joga: array [1..20] of string=
@@ -113,7 +114,7 @@ type
     { Private declarations }
     procedure ini_kezel;
     procedure GetVerisonNumber(var Fover, Alver, Build: Integer; File_ut: Pchar);
-
+    procedure frissites;
   public
     function kepszures(im:TImage):string;
     function kepkeres(im:TImage):string;
@@ -150,7 +151,7 @@ var
   visszanap:integer;
   port,szerver,adatbazis,user,passwd,telephely,rtspURL,felhnev,PLC_IP,meresirany:string;
   f_ide,utolso_sql,mentesido:Integer;
-  jogmod,rendszamleker,nagykamera,mezgaz:Boolean;
+  jogmod,rendszamleker,nagykamera,mezgaz,kozponti_prg:Boolean;
   bit:integer;
   mertertek,konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
   nullszintvolt,rendszamvolt,sorompo_vezerles:boolean;
@@ -167,7 +168,7 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk:String;
+  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk,kpmappa:String;
   Merlegjegy_tipus:Integer;
 
 
@@ -183,6 +184,7 @@ procedure TAF.DataModuleCreate(Sender: TObject);
 begin
   bit:=9;
   ini_kezel;
+  frissites;
   user:='knz';
   passwd:='MaTt2019';
  { user:='knz';
@@ -354,6 +356,40 @@ begin
     end;
   end;
   Forgalom_Timer.Enabled:=True;
+end;
+
+procedure TAF.frissites;
+var  fover,alver,build,helyi_verzio,kp_verzio:Integer;
+     exe_neve,helyi_mappa:string;
+begin
+  if (Kozponti_prg)or(not DirectoryExists(kpmappa)) then Exit;
+
+  exe_neve:=TPath.GetFileName(Application.ExeName);
+  helyi_mappa:=ExtractFileDir(Application.ExeName);
+  //ha van elozo exe azt törlöm
+  DeleteFile(PChar(helyi_mappa+'\'+exe_neve+'.OLD'));
+  //kpver
+  GetVerisonNumber(Fover, Alver,Build,PChar((kpmappa+'\'+exe_neve)));
+  kp_verzio:= StrToInt(IntToStr(fover)+IntToStr(alver)+IntToStr(build));
+
+  //kliens ver
+  if not FileExists(kpmappa+'\'+exe_neve) then Exit;
+  GetVerisonNumber(Fover, Alver,Build,PChar(helyi_mappa+'\'+exe_neve));
+  helyi_verzio:= StrToInt(IntToStr(fover)+IntToStr(alver)+IntToStr(build));
+
+  if helyi_verzio<kp_verzio then //showmessage('frissites');
+   begin
+    //a kliens exe-t átírom
+    RenameFile(PChar(helyi_mappa+'\'+exe_neve),helyi_mappa+'\'+exe_neve+'.OLD');
+    //ha sikeres a másolás restart
+    if CopyFile(PChar(kpmappa+'\'+exe_neve),PChar(helyi_mappa+'\'+exe_neve),False) then
+     begin
+       ShowMessage('A program frissités miatt újraindul');
+       ShellExecute(Application.Handle,'open', PChar(Application.ExeName), nil, nil, SW_SHOWNORMAL) ;
+       Application.Terminate;
+     end //ha sikertelen a másolás vissza módosítom a nevét eredetire
+    else RenameFile(PChar(helyi_mappa+'\'+exe_neve+'.OLD'),PChar(kpmappa+'\'+exe_neve));
+   end;
 end;
 
 procedure TAF.frxmerlegAfterPrint(Sender: TfrxReportComponent);
@@ -574,6 +610,12 @@ begin
 
   Merlegjegy_tipus:=i.ReadInteger('ALAP','Merlegjegy_tipus',0);
   i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
+
+  Kozponti_prg:=i.ReadBool('ALAP','Kozponti_prg',False);
+  i.WriteBool('ALAP','Kozponti_prg',Kozponti_prg);
+
+  kpmappa:=i.ReadString('ALAP','kozponti_mappa','');
+  i.writeString('ALAP','kozponti_mappa',kpmappa);
 
   ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
   i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
