@@ -100,9 +100,9 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.50;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.51;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
-        <VerInfo_Build>50</VerInfo_Build>
+        <VerInfo_Build>51</VerInfo_Build>
         <DCC_DcpOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcpOutput>
         <DCC_ExeOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_ExeOutput>
         <DCC_DcuOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcuOutput>
@@ -234,6 +234,10 @@
         <DCCReference Include="Ping2U.pas"/>
         <DCCReference Include="tesztU.pas">
             <Form>tesztF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="levon_szovegekU.pas">
+            <Form>levon_szovegekF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <RcItem Include="Mjegy_sa_ho_ka.fr3">

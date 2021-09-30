@@ -143,6 +143,7 @@ type
     function tabla_zarolva(tabla:string):Integer;
     procedure tabla_kizar(tabla:string);
     procedure merlegjegy_tipus_betoltese;
+    procedure merlegjegy_tomeglevonas;
     { Public declarations }
   end;
 
@@ -163,7 +164,7 @@ var
   soapXML:string;
   lejatszas: Boolean;
   libre_mappa:string;
-  duplex_mjegy,automata_meres,nedvesseg_beolvasasa,automata_kezelo,programvege:Boolean;
+  duplex_mjegy,automata_meres,nedvesseg_beolvasasa,automata_kezelo,programvege,tomeg_levon:Boolean;
   IOmodul_van:boolean;
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
@@ -617,6 +618,9 @@ begin
   kpmappa:=i.ReadString('ALAP','kozponti_mappa','');
   i.writeString('ALAP','kozponti_mappa',kpmappa);
 
+  tomeg_levon:=i.ReadBool('ALAP','Tomeg_levon',False);
+  i.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
+
   ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
   i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
   ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
@@ -773,7 +777,7 @@ Result:=true;
   end;
 end;
 
-procedure TAF.merlegjegy_mezgaz;
+procedure TAF.merlegjegy_mezgaz; //mezõgazdesági programnál
 var i:Integer;
 begin
  with aF.frxmerleg do
@@ -787,6 +791,14 @@ begin
   Stream := TResourceStream.Create(HInstance, 'Rep_'+merlegjegy_tipus.ToString, RT_RCDATA);
   frxmerleg.LoadFromStream(Stream);
   Stream.Free
+end;
+
+procedure TAF.merlegjegy_tomeglevonas;
+var i:Integer;
+begin
+ with aF.frxmerleg do
+ for I := 0 to ComponentCount-1 do
+      if Components[i].Tag=2 then (Components[i] as TfrxMemoView).Visible:=tomeg_levon;
 end;
 
 procedure TAF.modok_vegrehajt;

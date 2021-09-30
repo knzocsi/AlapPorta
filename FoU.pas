@@ -85,7 +85,8 @@ type
     alapbe_m: TMenuItem;
     tulaj_m: TMenuItem;
     Button2: TButton;
-    eszt1: TMenuItem;
+    teszt_m: TMenuItem;
+    tomeg_levon_szovegek_m: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -149,7 +150,8 @@ type
     procedure mcIOmodulResponseError(const FunctionCode, ErrorCode: Byte;
       const ResponseBuffer: TModBusResponseBuffer);
     procedure tulaj_mClick(Sender: TObject);
-    procedure eszt1Click(Sender: TObject);
+    procedure teszt_mClick(Sender: TObject);
+    procedure tomeg_levon_szovegek_mClick(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -199,7 +201,8 @@ implementation
 uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
-  tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU;
+  tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
+  levon_szovegekU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -412,9 +415,14 @@ begin
   kepbetolt;
 end;
 
-procedure TFoF.eszt1Click(Sender: TObject);
+procedure TFoF.teszt_mClick(Sender: TObject);
 begin
 tesztF.showmodal;
+end;
+
+procedure TFoF.tomeg_levon_szovegek_mClick(Sender: TObject);
+begin
+ levon_szovegekF.ShowModal
 end;
 
 procedure TFoF.Felhasznlkkarbantartsa1Click(Sender: TObject);
@@ -479,7 +487,10 @@ begin
   for h := 0 to Items.Count-1 do
   if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
   aF.jogok_beolvasasa;
-  alapbe_m.Enabled:=felhnev='Programozó';
+  alapbe_m.visible:=felhnev='Programozó';
+  teszt_m.visible:=felhnev='Programozó';
+  tomeg_levon_szovegek_m.visible:=tomeg_levon;
+
   if rendszamleker then  socketconnect;
   piKezdoDatum.Date := date;
   piBefejezoDatum.Date := date;

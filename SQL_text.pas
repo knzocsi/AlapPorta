@@ -526,7 +526,7 @@ interface
      '	PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
      ');'+ #13#10 +
     ''+ #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `lovon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;'
     );
 

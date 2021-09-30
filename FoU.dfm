@@ -465,10 +465,14 @@ object FoF: TFoF
           OnClick = tulaj_mClick
         end
       end
-      object eszt1: TMenuItem
+      object teszt_m: TMenuItem
         Caption = 'Teszt'
         Visible = False
-        OnClick = eszt1Click
+        OnClick = teszt_mClick
+      end
+      object tomeg_levon_szovegek_m: TMenuItem
+        Caption = 'T'#246'meg levon'#225'si sz'#246'vegek'
+        OnClick = tomeg_levon_szovegek_mClick
       end
     end
     object Kpek1: TMenuItem

@@ -191,6 +191,7 @@ begin
  szazalek;
  nyomtat:=True;
  af.merlegjegy_mezgaz;//mi latszon
+ AF.merlegjegy_tomeglevonas;// tömeg levonás
  with aF.frxmerleg do
    begin
      if stfelirat<>'' then TfrxMemoView(FindObject('memcim')).Text:=stfelirat+' '+LowerCase(TfrxMemoView(FindObject('memcim')).Text);
@@ -253,6 +254,8 @@ begin
      TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
      TfrxMemoView(FindObject('memsznetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
      TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
+     TfrxMemoView(FindObject('memtomlevon')).Text:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
+     TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=mjegyekQ.FieldByName('levon_szoveg').AsString;
      TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
 
      NezetF.rep_valaszt(aF.frxmerleg,1);

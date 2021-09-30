@@ -31,70 +31,10 @@ type
     jvmemparosparosit: TBooleanField;
     jvmemparostomeg: TIntegerField;
     masolQ: TFDQuery;
-    Panel1: TPanel;
-    lblpartner: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label1: TLabel;
-    cbxirany: TComboBox;
-    btnMentes: TButton;
-    partnerlookup: TJvDBLookupCombo;
-    edszallev: TEdit;
-    termeklookup: TJvDBLookupCombo;
-    Label6: TLabel;
-    Label7: TLabel;
-    spBrutto: TSpinEdit;
-    sptara: TSpinEdit;
-    spnetto: TSpinEdit;
-    Label9: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
-    Label2: TLabel;
-    lblelsodat: TLabel;
-    Label12: TLabel;
-    lblmasdat: TLabel;
-    lblelsoido: TLabel;
-    lblmasido: TLabel;
-    edmegjegy: TEdit;
-    Label8: TLabel;
-    Button1: TButton;
-    btn1: TButton;
-    kezelolookup: TJvDBLookupCombo;
-    Label13: TLabel;
-    Button2: TButton;
     kep1: TImage;
     kep2: TImage;
     Label14: TLabel;
     Label15: TLabel;
-    cbxktip: TComboBox;
-    chknincspot: TCheckBox;
-    lblekaer: TLabel;
-    edekaer: TEdit;
-    cbxrendszam1: TComboBox;
-    cbxrendszam2: TComboBox;
-    chkrogzitett: TCheckBox;
-    btnTaramegadas: TButton;
-    pnlmezgaz: TPanel;
-    spalapnedv: TJvSpinEdit;
-    spnedv: TJvSpinEdit;
-    spolaj: TJvSpinEdit;
-    sptisztasag: TJvSpinEdit;
-    sphekto: TJvSpinEdit;
-    spfeherje: TJvSpinEdit;
-    speses: TJvSpinEdit;
-    chkkerekites: TCheckBox;
-    chkkuk: TCheckBox;
-    Label17: TLabel;
-    Label18: TLabel;
-    Label19: TLabel;
-    Label20: TLabel;
-    Label21: TLabel;
-    Label22: TLabel;
-    Label23: TLabel;
-    lblegysegtomeg: TLabel;
-    sptort: TJvSpinEdit;
-    Label24: TLabel;
-    spegysegtomeg: TJvSpinEdit;
     termeklistID: TFDAutoIncField;
     termeklistKod: TWideStringField;
     termeklistNev: TWideStringField;
@@ -115,21 +55,9 @@ type
     termeklistb_buzaminoseg: TBooleanField;
     termeklistb_hekto: TBooleanField;
     termeklisttipus_id: TIntegerField;
-    Label26: TLabel;
-    cbxbuzaminoseg: TComboBox;
-    taroloklookup: TJvDBLookupCombo;
-    Label27: TLabel;
-    Button3: TButton;
     TarolokT: TFDQuery;
     TarolokDs: TDataSource;
-    lblsznetto: TLabel;
-    Spsznetto: TSpinEdit;
-    edSample: TEdit;
-    lblMintaID: TLabel;
-    btnNyomtatas: TButton;
     jvmemparoskezi: TBooleanField;
-    chkelso_kezi: TCheckBox;
-    chkmasodik_kezi: TCheckBox;
     tulajlookup: TJvDBLookupCombo;
     tulajT: TFDTable;
     tulajTID: TFDAutoIncField;
@@ -140,13 +68,8 @@ type
     tulajTktj: TWideStringField;
     tulajTElotag: TWideStringField;
     tulajDs: TDataSource;
-    Label28: TLabel;
-    partnerlookup2: TJvDBLookupCombo;
-    lblpartner2: TLabel;
-    chkpartnerekegy: TCheckBox;
     Partnerlist2Ds: TDataSource;
     Partnerlist2: TFDQuery;
-    btnekaer: TButton;
     tulajTIrsz: TWideStringField;
     tulajTTelepules: TWideStringField;
     tulajTKerulet: TWideStringField;
@@ -157,6 +80,91 @@ type
     tulajTLepcsohaz: TWideStringField;
     tulajTEmelet: TWideStringField;
     tulajTHrsz: TWideStringField;
+    levon_szovegT: TFDTable;
+    levon_szovegTID: TFDAutoIncField;
+    levon_szovegTSzoveg: TWideStringField;
+    levon_szovegDs: TDataSource;
+    Panel1: TPanel;
+    lblpartner: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label1: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label2: TLabel;
+    lblelsodat: TLabel;
+    Label12: TLabel;
+    lblmasdat: TLabel;
+    lblelsoido: TLabel;
+    lblmasido: TLabel;
+    Label8: TLabel;
+    Label13: TLabel;
+    lblekaer: TLabel;
+    Label27: TLabel;
+    lblsznetto: TLabel;
+    lblpartner2: TLabel;
+    lbllevonszoveg: TLabel;
+    cbxirany: TComboBox;
+    btnMentes: TButton;
+    partnerlookup: TJvDBLookupCombo;
+    edszallev: TEdit;
+    spBrutto: TSpinEdit;
+    sptara: TSpinEdit;
+    spnetto: TSpinEdit;
+    edmegjegy: TEdit;
+    Button1: TButton;
+    btn1: TButton;
+    kezelolookup: TJvDBLookupCombo;
+    Button2: TButton;
+    cbxktip: TComboBox;
+    chknincspot: TCheckBox;
+    edekaer: TEdit;
+    cbxrendszam1: TComboBox;
+    cbxrendszam2: TComboBox;
+    chkrogzitett: TCheckBox;
+    btnTaramegadas: TButton;
+    pnlmezgaz: TPanel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    lblegysegtomeg: TLabel;
+    Label24: TLabel;
+    Label26: TLabel;
+    lblMintaID: TLabel;
+    spalapnedv: TJvSpinEdit;
+    spnedv: TJvSpinEdit;
+    spolaj: TJvSpinEdit;
+    sptisztasag: TJvSpinEdit;
+    sphekto: TJvSpinEdit;
+    spfeherje: TJvSpinEdit;
+    speses: TJvSpinEdit;
+    chkkerekites: TCheckBox;
+    chkkuk: TCheckBox;
+    sptort: TJvSpinEdit;
+    spegysegtomeg: TJvSpinEdit;
+    cbxbuzaminoseg: TComboBox;
+    edSample: TEdit;
+    taroloklookup: TJvDBLookupCombo;
+    Button3: TButton;
+    termeklookup: TJvDBLookupCombo;
+    Spsznetto: TSpinEdit;
+    btnNyomtatas: TButton;
+    chkelso_kezi: TCheckBox;
+    chkmasodik_kezi: TCheckBox;
+    partnerlookup2: TJvDBLookupCombo;
+    chkpartnerekegy: TCheckBox;
+    btnekaer: TButton;
+    levonlookup: TJvDBLookupCombo;
+    sp_tomeg_levon: TSpinEdit;
+    lbl_tomeg_levon: TLabel;
+    btnlevon_szoveg: TButton;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -181,6 +189,10 @@ type
     procedure partnerlookup2Change(Sender: TObject);
     procedure Panel1Click(Sender: TObject);
     procedure btnekaerClick(Sender: TObject);
+    procedure levonlookupChange(Sender: TObject);
+    procedure sp_tomeg_levonKeyPress(Sender: TObject; var Key: Char);
+    procedure btnlevon_szovegClick(Sender: TObject);
+    procedure sp_tomeg_levonExit(Sender: TObject);
 
 
   private
@@ -205,7 +217,7 @@ var
   ttom:Real;
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU;
+  tarolokU, EkaerU, levon_szovegekU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -366,11 +378,16 @@ begin
   kezelolookup.KeyValue:=aF.merlegkezQ.FieldByName('id').AsInteger;
   rendszam_combok;
   pnlmezgaz.Visible:=mezgaz;
-  lblsznetto.Visible:=mezgaz;
-  Spsznetto.Visible:=mezgaz;
+ // lblsznetto.Visible:=mezgaz;
+ // Spsznetto.Visible:=mezgaz;
   lblMintaID.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Visible:=(nedvesseg_beolvasasa) and (mezgaz);
   edSample.Text:='';
+  lbl_tomeg_levon.Visible:=tomeg_levon;
+  sp_tomeg_levon.Visible:=tomeg_levon;
+  lbllevonszoveg.Visible:=tomeg_levon;
+  levonlookup.Visible:=tomeg_levon;
+  btnlevon_szoveg.Visible:=tomeg_levon;
   //lblekaer.Visible:=ekaer_felhasz<>'';
   //edekaer.Visible:=ekaer_felhasz<>'';
  // magassagok;
@@ -382,6 +399,9 @@ begin
   termeklist.Close;
   aF.merlegkezQ.Close;
   tulajT.close;
+  Partnerlist2.close;
+  TarolokT.close;
+  levon_szovegT.close;
 end;
 
 procedure TMjegyF.jeloles;
@@ -389,6 +409,12 @@ begin
   jvmemparos.Edit;
   jvmemparosparosit.AsBoolean:=not jvmemparosparosit.AsBoolean;
   jvmemparos.Post;
+end;
+
+procedure TMjegyF.levonlookupChange(Sender: TObject);
+begin
+ sp_tomeg_levon.Enabled:=levonlookup.KeyValue<>'!';
+ if levonlookup.KeyValue='!' then sp_tomeg_levon.Value:=0;
 end;
 
 procedure TMjegyF.JvDBUltimGrid1CellClick(Column: TColumn);
@@ -609,6 +635,7 @@ begin
   termeklist.Open;
   aF.merlegkezQ.Open;
   TarolokT.Open;
+  levon_szovegT.Open;
   uresre
 end;
 
@@ -653,6 +680,16 @@ if tulajlookup.KeyValue='!' then
  EkaerF.fo;
 end;
 
+procedure TMjegyF.btnlevon_szovegClick(Sender: TObject);
+begin
+ try
+   levon_szovegekF.ShowModal
+ finally
+   levon_szovegT.Close;
+   levon_szovegT.open;
+ end;
+end;
+
 procedure TMjegyF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi:String;
     ujid:integer;
@@ -660,7 +697,8 @@ var sorsz,pcime,egyedi:String;
  procedure elokeszit;
    begin
      AF.merlegjegy_tipus_betoltese;//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
-     af.merlegjegy_mezgaz;//mi latszon
+     af.merlegjegy_mezgaz;//mezõgazdasági
+     AF.merlegjegy_tomeglevonas;// tömeg levonás
       with aF.frxmerleg do
        begin
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
@@ -720,6 +758,8 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
          TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
          TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
+         TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
+         TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
          TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
 
          NezetF.rep_valaszt(aF.frxmerleg,1);
@@ -797,6 +837,12 @@ begin
     ShowMessage('A tárolót meg kell adni!');
     exit
   end;
+  if levonlookup.KeyValue<>'!' then
+   if sp_tomeg_levon.Value<=0 then
+    begin
+     ShowMessage('Adja meg a levonandó tömeget!');
+     Exit
+    end;
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
  // pcime:=cim_2;
   //nyomtatva:=false;
@@ -828,7 +874,7 @@ begin
       SQL.Add('egysegtomeg,kerekites,kukorica,buzaminoseg,mennyiseg,tarolasi_dij, ');
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
-      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj)  ');
+      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg)  ');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -838,7 +884,7 @@ begin
       SQL.Add(':egysegtomeg,:kerekites,:kukorica,:buzaminoseg,:mennyiseg,:tarolasi_dij, ');
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
-      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj)  ');
+      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -932,6 +978,8 @@ begin
       ParamByName('p2_cim').AsString:=Partnerlist2.FieldByName('cim').AsString;;
       ParamByName('p2_kuj').AsString:=Partnerlist2.FieldByName('kuj').AsString;
       ParamByName('p2_ktj').AsString:=Partnerlist2.FieldByName('ktj').AsString;
+      ParamByName('levon_szoveg').AsString:=levonlookup.DisplayValue;
+      ParamByName('levon_tomeg').AsInteger:=sp_tomeg_levon.Value;
       ExecSQL;
       //keszletezes
       case cbxirany.Text[1] of
@@ -1030,6 +1078,16 @@ begin
   szazalek;
 end;
 
+procedure TMjegyF.sp_tomeg_levonExit(Sender: TObject);
+begin
+ szazalek
+end;
+
+procedure TMjegyF.sp_tomeg_levonKeyPress(Sender: TObject; var Key: Char);
+begin
+if Key=#13 then szazalek;
+end;
+
 procedure TMjegyF.szazalek;
 var tt,sze,szu,levsz,tsz:Extended;
 begin
@@ -1045,7 +1103,8 @@ begin
   ned := SpNedv.Value;
   tisz := Sptisztasag.Value;
   tsz:= Sptort.Value;
-
+  if sp_tomeg_levon.Text='' then sp_tomeg_levon.Value:=0;
+  
   nedvesseg := IntToStr(round((br-tr)*((ned-aned)/100.0)));
   tisztasag := IntToStr(round((br-tr)*((tisz)/100.0)));
   //tort szemek tomege
@@ -1058,12 +1117,12 @@ begin
   levsz:=sze/szu;
       if chkkuk.Checked then
        begin
-         Spsznetto.Value :=Round(levsz*tt);
+         Spsznetto.Value :=Round(levsz*tt)-sp_tomeg_levon.Value;
          nedvelvon:=FloatToStr(Round((1-levsz)*tt));
        end
       else
        begin
-         Spsznetto.Value := round(tt-(tt*(ned-aned))/100.0);
+         Spsznetto.Value := round(tt-(tt*(ned-aned))/100.0)-sp_tomeg_levon.Value;
          nedvelvon:=FloatToStr(Round((ned-aned)*tt/100));
        end;
 
@@ -1158,6 +1217,8 @@ begin
        tulajlookup.visible:=true;
       end;
   end;
+  levonlookup.KeyValue:='!';
+  levonlookupChange(self);
 end;
 
 end.

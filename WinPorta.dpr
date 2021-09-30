@@ -38,7 +38,8 @@ uses
   Tulajok in 'Tulajok.pas' {TulajokF},
   EkaerU in 'EkaerU.pas' {EkaerF},
   Ping2U in 'Ping2U.pas',
-  tesztU in 'tesztU.pas' {tesztF};
+  tesztU in 'tesztU.pas' {tesztF},
+  levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF};
 
 {$R *.res}
 
@@ -75,5 +76,6 @@ begin
   Application.CreateForm(TTulajokF, TulajokF);
   Application.CreateForm(TEkaerF, EkaerF);
   Application.CreateForm(TtesztF, tesztF);
+  Application.CreateForm(Tlevon_szovegekF, levon_szovegekF);
   Application.Run;
 end.

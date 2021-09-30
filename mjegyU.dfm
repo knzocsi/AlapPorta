@@ -46,13 +46,6 @@ object MjegyF: TMjegyF
     Height = 13
     Caption = 'Nincs k'#233'p'
   end
-  object Label28: TLabel
-    Left = 16
-    Top = 31
-    Width = 40
-    Height = 13
-    Caption = 'Partner:'
-  end
   object JvDBUltimGrid1: TJvDBUltimGrid
     Left = 0
     Top = 0
@@ -139,14 +132,27 @@ object MjegyF: TMjegyF
         Visible = True
       end>
   end
+  object tulajlookup: TJvDBLookupCombo
+    Left = 608
+    Top = 388
+    Width = 409
+    Height = 21
+    DisplayEmpty = '---V'#225'lasszon bizonylat kibocs'#225'jt'#243't---'
+    EmptyValue = '!'
+    LookupField = 'Id'
+    LookupDisplay = 'Nev'
+    LookupSource = tulajDs
+    TabOrder = 1
+  end
   object Panel1: TPanel
     Left = 0
     Top = 424
     Width = 1025
     Height = 356
     Align = alBottom
-    TabOrder = 1
+    TabOrder = 2
     OnClick = Panel1Click
+    ExplicitTop = 423
     object lblpartner: TLabel
       Left = 8
       Top = 23
@@ -197,14 +203,14 @@ object MjegyF: TMjegyF
       Caption = 'Brutto:'
     end
     object Label10: TLabel
-      Left = 308
+      Left = 293
       Top = 279
       Width = 26
       Height = 13
       Caption = 'T'#225'ra:'
     end
     object Label11: TLabel
-      Left = 434
+      Left = 401
       Top = 279
       Width = 31
       Height = 13
@@ -317,8 +323,8 @@ object MjegyF: TMjegyF
       Caption = 'Tarol'#243':'
     end
     object lblsznetto: TLabel
-      Left = 557
-      Top = 280
+      Left = 618
+      Top = 279
       Width = 46
       Height = 13
       Caption = 'Sz.Nett'#243':'
@@ -329,6 +335,20 @@ object MjegyF: TMjegyF
       Width = 49
       Height = 13
       Caption = 'Partner 2:'
+    end
+    object lbllevonszoveg: TLabel
+      Left = 696
+      Top = 242
+      Width = 115
+      Height = 13
+      Caption = 'T'#246'meg levon'#225'si sz'#246'veg:'
+    end
+    object lbl_tomeg_levon: TLabel
+      Left = 510
+      Top = 280
+      Width = 76
+      Height = 13
+      Caption = 'T'#246'meg levon'#225's:'
     end
     object cbxirany: TComboBox
       Left = 696
@@ -346,7 +366,7 @@ object MjegyF: TMjegyF
     end
     object btnMentes: TButton
       Left = 704
-      Top = 248
+      Top = 319
       Width = 137
       Height = 25
       Caption = 'Ment'#233's'
@@ -389,7 +409,7 @@ object MjegyF: TMjegyF
       Value = 0
     end
     object sptara: TSpinEdit
-      Left = 308
+      Left = 293
       Top = 295
       Width = 100
       Height = 22
@@ -400,7 +420,7 @@ object MjegyF: TMjegyF
       Value = 0
     end
     object spnetto: TSpinEdit
-      Left = 434
+      Left = 401
       Top = 295
       Width = 100
       Height = 22
@@ -521,7 +541,7 @@ object MjegyF: TMjegyF
     object btnTaramegadas: TButton
       Left = 760
       Top = 72
-      Width = 75
+      Width = 81
       Height = 17
       Caption = 'T'#225'ra megad'#225'sa'
       TabOrder = 19
@@ -781,8 +801,8 @@ object MjegyF: TMjegyF
       OnCloseUp = termeklookupCloseUp
     end
     object Spsznetto: TSpinEdit
-      Left = 557
-      Top = 295
+      Left = 618
+      Top = 293
       Width = 100
       Height = 22
       MaxValue = 0
@@ -793,7 +813,7 @@ object MjegyF: TMjegyF
     end
     object btnNyomtatas: TButton
       Left = 864
-      Top = 248
+      Top = 319
       Width = 137
       Height = 25
       Caption = 'Nyomtat'#225's'
@@ -850,18 +870,40 @@ object MjegyF: TMjegyF
       TabOrder = 29
       OnClick = btnekaerClick
     end
-  end
-  object tulajlookup: TJvDBLookupCombo
-    Left = 608
-    Top = 388
-    Width = 409
-    Height = 21
-    DisplayEmpty = '---V'#225'lasszon bizonylat kibocs'#225'jt'#243't---'
-    EmptyValue = '!'
-    LookupField = 'Id'
-    LookupDisplay = 'Nev'
-    LookupSource = tulajDs
-    TabOrder = 2
+    object levonlookup: TJvDBLookupCombo
+      Left = 696
+      Top = 257
+      Width = 305
+      Height = 21
+      DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+      EmptyValue = '!'
+      LookupField = 'id'
+      LookupDisplay = 'Szoveg'
+      LookupSource = levon_szovegDs
+      TabOrder = 30
+      OnChange = levonlookupChange
+    end
+    object sp_tomeg_levon: TSpinEdit
+      Left = 510
+      Top = 294
+      Width = 100
+      Height = 22
+      MaxValue = 0
+      MinValue = 0
+      TabOrder = 31
+      Value = 0
+      OnExit = sp_tomeg_levonExit
+      OnKeyPress = sp_tomeg_levonKeyPress
+    end
+    object btnlevon_szoveg: TButton
+      Left = 864
+      Top = 284
+      Width = 137
+      Height = 21
+      Caption = 'Levon'#225'si sz'#246'vegek'
+      TabOrder = 32
+      OnClick = btnlevon_szovegClick
+    end
   end
   object Partnelist: TFDQuery
     Connection = AF.Kapcs
@@ -1181,5 +1223,29 @@ object MjegyF: TMjegyF
       'SELECT * from partner_combo ORDER BY Nev ASC;')
     Left = 352
     Top = 520
+  end
+  object levon_szovegT: TFDTable
+    IndexFieldNames = 'ID'
+    Connection = AF.Kapcs
+    TableName = 'levonas_szovegek'
+    Left = 848
+    Top = 616
+    object levon_szovegTID: TFDAutoIncField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object levon_szovegTSzoveg: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Szoveg'
+      Origin = 'Szoveg'
+      Size = 100
+    end
+  end
+  object levon_szovegDs: TDataSource
+    DataSet = levon_szovegT
+    Left = 936
+    Top = 624
   end
 end
