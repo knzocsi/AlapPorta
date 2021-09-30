@@ -892,6 +892,7 @@ object MjegyF: TMjegyF
       MinValue = 0
       TabOrder = 31
       Value = 0
+      OnChange = sp_tomeg_levonChange
       OnExit = sp_tomeg_levonExit
       OnKeyPress = sp_tomeg_levonKeyPress
     end

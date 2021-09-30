@@ -193,6 +193,7 @@ type
     procedure sp_tomeg_levonKeyPress(Sender: TObject; var Key: Char);
     procedure btnlevon_szovegClick(Sender: TObject);
     procedure sp_tomeg_levonExit(Sender: TObject);
+    procedure sp_tomeg_levonChange(Sender: TObject);
 
 
   private
@@ -226,7 +227,8 @@ begin
  try
    TermekekF.ShowModal
  finally
-   termeklist.Refresh
+   termeklist.Refresh;
+   termeklookupCloseUp(self);
  end;
 end;
 
@@ -747,21 +749,54 @@ var sorsz,pcime,egyedi:String;
          //TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
          TfrxMemoView(FindObject('memszallev')).Text:=edszallev.Text;
         // TfrxMemoView(FindObject('memewc')).Text:='';
-         TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
-         TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
-         TfrxMemoView(FindObject('memtisztasag')).Text:=sptisztasag.Value.ToString+' %';
-         TfrxMemoView(FindObject('memtort')).Text:=sptort.Value.ToString+' %';
+        if spnedv.Visible then //nedvesseghez kapcsolodik
+         begin
+          TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
+          TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
+          TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
+          TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+         end
+        else
+         begin
+          TfrxMemoView(FindObject('memalapnedv')).Text:='';
+          TfrxMemoView(FindObject('memalapnedvlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedv')).Text:='';
+          TfrxMemoView(FindObject('memnedvlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedvlevon')).Text:='';
+          TfrxMemoView(FindObject('memnedvlevonlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
+         end;
+         if sptisztasag.Visible then //szemet
+          begin
+           TfrxMemoView(FindObject('memtisztasag')).Text:=sptisztasag.Value.ToString+' %';
+           TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
+          end
+         else
+          begin
+           TfrxMemoView(FindObject('memtisztasag')).Text:='';
+           TfrxMemoView(FindObject('memtisztasaglbl')).Text:='';
+           TfrxMemoView(FindObject('memszemetlevon')).Text:='';
+           TfrxMemoView(FindObject('memszemetlevonlbl')).Text:='';
+          end;
+         if sptort.Visible then //tort szemek
+          begin
+           TfrxMemoView(FindObject('memtort')).Text:=sptort.Value.ToString+' %';
+           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
+          end
+          else
+          begin
+           TfrxMemoView(FindObject('memtort')).Text:='';
+           TfrxMemoView(FindObject('memtortlbl')).Text:='';
+           TfrxMemoView(FindObject('memtorttomeg')).Text:='';
+           TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
+          end;
 
-         TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-         TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
-         TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
-         TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
          TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
          TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
          TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
          TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
          TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
-
          NezetF.rep_valaszt(aF.frxmerleg,1);
        end;
     end;
@@ -1078,14 +1113,19 @@ begin
   szazalek;
 end;
 
-procedure TMjegyF.sp_tomeg_levonExit(Sender: TObject);
+procedure TMjegyF.sp_tomeg_levonChange(Sender: TObject);
 begin
  szazalek
 end;
 
+procedure TMjegyF.sp_tomeg_levonExit(Sender: TObject);
+begin
+ //
+end;
+
 procedure TMjegyF.sp_tomeg_levonKeyPress(Sender: TObject; var Key: Char);
 begin
-if Key=#13 then szazalek;
+//if Key=#13 then szazalek;
 end;
 
 procedure TMjegyF.szazalek;

@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44469.497084537030000000
+    ReportOptions.LastChange = 44469.748952106480000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -835,7 +835,7 @@ object AF: TAF
           Height = 18.897650000000000000
           Frame.Typ = []
         end
-        object Memo21: TfrxMemoView
+        object memalapnedvlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 7.559060000000000000
@@ -852,7 +852,7 @@ object AF: TAF
             'Alap nedv.:')
           ParentFont = False
         end
-        object Memo22: TfrxMemoView
+        object memnedvlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 185.196970000000000000
@@ -869,7 +869,7 @@ object AF: TAF
             'Nedv.:')
           ParentFont = False
         end
-        object Memo23: TfrxMemoView
+        object memtisztasaglbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 359.055350000000000000
@@ -886,7 +886,7 @@ object AF: TAF
             'Tisztas'#225'g:')
           ParentFont = False
         end
-        object Memo24: TfrxMemoView
+        object memtortlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 532.913730000000000000
@@ -973,7 +973,7 @@ object AF: TAF
             'memtort')
           ParentFont = False
         end
-        object Memo25: TfrxMemoView
+        object memnedvlevonlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 7.559060000000000000
@@ -990,11 +990,11 @@ object AF: TAF
             'Nedvess'#233'glevon'#225's:')
           ParentFont = False
         end
-        object Memo26: TfrxMemoView
+        object memnedvesztlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 7.559060000000000000
-          Top = 412.748300000000000000
+          Top = 415.748300000000000000
           Width = 128.504020000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1007,7 +1007,7 @@ object AF: TAF
             'Nedvess'#233'gveszt'#233's:')
           ParentFont = False
         end
-        object Memo27: TfrxMemoView
+        object memszemetlevonlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 204.448980000000000000
@@ -1024,7 +1024,7 @@ object AF: TAF
             'Szem'#233'tlevon'#225's:')
           ParentFont = False
         end
-        object Memo28: TfrxMemoView
+        object memtorttomeglbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 377.086890000000000000
@@ -1247,9 +1247,9 @@ object AF: TAF
         object memtomlevonlbl: TfrxMemoView
           Tag = 2
           AllowVectorExport = True
-          Left = 532.913730000000000000
-          Top = 393.071120000000000000
-          Width = 94.488250000000000000
+          Left = 7.559060000000000000
+          Top = 370.393940000000000000
+          Width = 113.385900000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1258,14 +1258,15 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#246'meg levon.:')
+            'T'#246'meg levon'#225's:')
           ParentFont = False
         end
         object memtomlevon: TfrxMemoView
           Tag = 2
+          Align = baLeft
           AllowVectorExport = True
-          Left = 631.181510000000000000
-          Top = 393.071120000000000000
+          Left = 532.913730000000000000
+          Top = 370.393940000000000000
           Width = 60.472480000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1280,11 +1281,13 @@ object AF: TAF
         end
         object memtomlevon_szoveg: TfrxMemoView
           Tag = 2
+          Align = baLeft
           AllowVectorExport = True
-          Left = 7.559060000000000000
+          Left = 120.944960000000000000
           Top = 370.393940000000000000
-          Width = 684.094930000000000000
+          Width = 411.968770000000000000
           Height = 18.897650000000000000
+          AutoWidth = True
           Frame.Typ = []
           Memo.UTF8W = (
             'memtomlevon_szoveg')
@@ -1902,7 +1905,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Alap nedv.:')
+            '[memalapnedvlbl.text]')
           ParentFont = False
         end
         object Memo66: TfrxMemoView
@@ -1919,7 +1922,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Nedv.:')
+            '[memnedvlbl.text]')
           ParentFont = False
         end
         object Memo67: TfrxMemoView
@@ -1936,7 +1939,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Tisztas'#225'g:')
+            '[memtisztasaglbl.text]')
           ParentFont = False
         end
         object Memo68: TfrxMemoView
@@ -1954,7 +1957,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#246'rt szemek:')
+            '[memtortlbl.text]')
           ParentFont = False
         end
         object Memo69: TfrxMemoView
@@ -2030,7 +2033,7 @@ object AF: TAF
           Tag = 1
           AllowVectorExport = True
           Left = 11.338590000000000000
-          Top = 409.630180000000000000
+          Top = 412.630180000000000000
           Width = 128.504020000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2040,7 +2043,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Nedvess'#233'gveszt'#233's:')
+            '[memnedvesztlbl.text]')
           ParentFont = False
         end
         object Memo77: TfrxMemoView
@@ -2212,7 +2215,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Nedvess'#233'glevon'#225's:')
+            '[memnedvlevonlbl.text]')
           ParentFont = False
         end
         object Memo76: TfrxMemoView
@@ -2229,7 +2232,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Szem'#233'tlevon'#225's:')
+            '[memszemetlevonlbl.text]')
           ParentFont = False
         end
         object Memo78: TfrxMemoView
@@ -2246,7 +2249,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#246'rt szemek:')
+            '[memtorttomeglbl.text]')
           ParentFont = False
         end
         object Memo80: TfrxMemoView
@@ -2300,12 +2303,12 @@ object AF: TAF
             '[memtorttomeg.text]')
           ParentFont = False
         end
-        object Memo89: TfrxMemoView
+        object Memo73: TfrxMemoView
           Tag = 2
           AllowVectorExport = True
-          Left = 536.693260000000000000
-          Top = 389.291590000000000000
-          Width = 94.488250000000000000
+          Left = 11.338590000000000000
+          Top = 366.614410000000000000
+          Width = 113.385900000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2314,14 +2317,15 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#246'meg levon.:')
+            'T'#246'meg levon'#225's:')
           ParentFont = False
         end
-        object Memo90: TfrxMemoView
+        object Memo89: TfrxMemoView
           Tag = 2
+          Align = baLeft
           AllowVectorExport = True
-          Left = 634.961040000000000000
-          Top = 389.291590000000000000
+          Left = 532.913730000000000000
+          Top = 366.614410000000000000
           Width = 60.472480000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2334,13 +2338,15 @@ object AF: TAF
             '[memtomlevon.text]')
           ParentFont = False
         end
-        object Memo91: TfrxMemoView
+        object Memo90: TfrxMemoView
           Tag = 2
+          Align = baLeft
           AllowVectorExport = True
-          Left = 11.338590000000000000
+          Left = 124.724490000000000000
           Top = 366.614410000000000000
-          Width = 684.094930000000000000
+          Width = 408.189240000000000000
           Height = 18.897650000000000000
+          AutoWidth = True
           Frame.Typ = []
           Memo.UTF8W = (
             '[memtomlevon_szoveg.text]')
@@ -3861,7 +3867,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44469.675148078710000000
+    ReportOptions.LastChange = 44469.743575833330000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -4478,7 +4484,7 @@ object AF: TAF
           Height = 18.897650000000000000
           Frame.Typ = []
         end
-        object Memo21: TfrxMemoView
+        object memalapnedvlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 521.575140000000000000
@@ -4495,7 +4501,7 @@ object AF: TAF
             'Alap nedv.:')
           ParentFont = False
         end
-        object Memo22: TfrxMemoView
+        object memnedvlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 525.354670000000000000
@@ -4512,7 +4518,7 @@ object AF: TAF
             'Nedv.:')
           ParentFont = False
         end
-        object Memo23: TfrxMemoView
+        object memtisztasaglbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 525.354670000000000000
@@ -4529,7 +4535,7 @@ object AF: TAF
             'Tisztas'#225'g:')
           ParentFont = False
         end
-        object Memo24: TfrxMemoView
+        object memtortlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 525.354670000000000000
@@ -4616,7 +4622,7 @@ object AF: TAF
             'memtort')
           ParentFont = False
         end
-        object Memo25: TfrxMemoView
+        object memnedvlevonlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 476.220780000000000000
@@ -4633,7 +4639,7 @@ object AF: TAF
             'Nedvess'#233'glevon'#225's:')
           ParentFont = False
         end
-        object Memo26: TfrxMemoView
+        object memnedvesztlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 476.220780000000000000
@@ -4650,7 +4656,7 @@ object AF: TAF
             'Nedvess'#233'gveszt'#233's:')
           ParentFont = False
         end
-        object Memo27: TfrxMemoView
+        object memszemetlevonlbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 479.220780000000000000
@@ -4667,7 +4673,7 @@ object AF: TAF
             'Szem'#233'tlevon'#225's:')
           ParentFont = False
         end
-        object Memo28: TfrxMemoView
+        object memtorttomeglbl: TfrxMemoView
           Tag = 1
           AllowVectorExport = True
           Left = 476.220780000000000000
