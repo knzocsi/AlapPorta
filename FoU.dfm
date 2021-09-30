@@ -467,6 +467,7 @@ object FoF: TFoF
       end
       object eszt1: TMenuItem
         Caption = 'Teszt'
+        Visible = False
         OnClick = eszt1Click
       end
     end

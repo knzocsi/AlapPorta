@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=7;
+      maxSQL=8;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -518,7 +518,16 @@ interface
       'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
-      'from felrakodasi_cimek;'
+      'from felrakodasi_cimek;',
+
+      'CREATE TABLE IF NOT EXISTS `levonas_szovegek` (' + #13#10 +
+     '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+     '	`Szoveg` VARCHAR(100) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+     '	PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
+     ');'+ #13#10 +
+    ''+ #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `lovon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;'
     );
 
 
