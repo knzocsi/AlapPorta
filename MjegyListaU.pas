@@ -175,7 +175,7 @@ end;
 
 procedure TMjegyekF.Button4Click(Sender: TObject);
 begin
-LibreExcelF.mezo_nevek(JvDBUltimGrid1,nil);
+ LibreExcelF.mezo_nevek(JvDBUltimGrid1,nil);
 end;
 
 procedure TMjegyekF.cbxrendszChange(Sender: TObject);
@@ -185,6 +185,20 @@ szures
 end;
 
 procedure TMjegyekF.elokeszit(stfelirat: String);
+
+  function jegyen_latszik(mezo:string):Boolean;
+   begin
+     Result:=false;
+     with af.Q2 do
+       begin
+         Close;
+         SQL.Clear;
+         Open(' SELECT '+mezo+' from termek');
+         Result:=Fields[0].AsBoolean;
+         close
+       end;
+   end;
+
 begin
  if mjegyekQ.IsEmpty then exit;
  AF.merlegjegy_tipus_betoltese;
@@ -243,15 +257,49 @@ begin
     //TfrxMemoView(FindObject('frxpartnerktj')).Text:=mjegyekQ.FieldByName('ktj').AsString;
      TfrxMemoView(FindObject('memszallev')).Text:=mjegyekQ.FieldByName('szallitolev').AsString;
     // TfrxMemoView(FindObject('memewc')).Text:=mjegyekQ.FieldByName('ewc').AsString;
-     TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
-     TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
-     TfrxMemoView(FindObject('memtisztasag')).Text:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
-     TfrxMemoView(FindObject('memtort')).Text:=mjegyekQ.FieldByName('tortszaz').AsString+' %';
+        if jegyen_latszik('b_nedv') then //nedvesseghez kapcsolodik
+         begin
+          TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
+          TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
+          TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
+          TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+         end
+        else
+         begin
+          TfrxMemoView(FindObject('memalapnedv')).Text:='';
+          TfrxMemoView(FindObject('memalapnedvlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedv')).Text:='';
+          TfrxMemoView(FindObject('memnedvlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedvlevon')).Text:='';
+          TfrxMemoView(FindObject('memnedvlevonlbl')).Text:='';
+          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
+         end;
+         if jegyen_latszik('b_tisztasag') then //szemet
+          begin
+           TfrxMemoView(FindObject('memtisztasag')).Text:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
+           TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
+          end
+         else
+          begin
+           TfrxMemoView(FindObject('memtisztasag')).Text:='';
+           TfrxMemoView(FindObject('memtisztasaglbl')).Text:='';
+           TfrxMemoView(FindObject('memszemetlevon')).Text:='';
+           TfrxMemoView(FindObject('memszemetlevonlbl')).Text:='';
+          end;
+         if jegyen_latszik('b_tort') then //tort szemek
+          begin
+           TfrxMemoView(FindObject('memtort')).Text:=mjegyekQ.FieldByName('tortszaz').AsString+' %';
+           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
+          end
+          else
+          begin
+           TfrxMemoView(FindObject('memtort')).Text:='';
+           TfrxMemoView(FindObject('memtortlbl')).Text:='';
+           TfrxMemoView(FindObject('memtorttomeg')).Text:='';
+           TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
+          end;
 
-     TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-     TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
-     TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
-     TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
      TfrxMemoView(FindObject('memsznetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
      TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
      TfrxMemoView(FindObject('memtomlevon')).Text:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
