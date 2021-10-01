@@ -165,6 +165,7 @@ type
     sp_tomeg_levon: TSpinEdit;
     lbl_tomeg_levon: TLabel;
     btnlevon_szoveg: TButton;
+    termeklistewc: TWideStringField;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -748,7 +749,16 @@ var sorsz,pcime,egyedi:String;
          //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=Partnelist.FieldByName('kuj').AsString;
          //TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
          TfrxMemoView(FindObject('memszallev')).Text:=edszallev.Text;
-        // TfrxMemoView(FindObject('memewc')).Text:='';
+         //ewc
+         if termeklist.FieldByName('ewc').AsString<>'' then
+          begin
+           TfrxMemoView(FindObject('memewc')).Text:=termeklist.FieldByName('ewc').AsString;
+          end
+         else
+         begin
+           TfrxMemoView(FindObject('memewc')).Text:='';
+           TfrxMemoView(FindObject('memewclbl')).Text:='';
+         end;
         if spnedv.Visible then //nedvesseghez kapcsolodik
          begin
           TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
@@ -908,7 +918,7 @@ begin
       SQL.Add('egysegtomeg,kerekites,kukorica,buzaminoseg,mennyiseg,tarolasi_dij, ');
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
-      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg)  ');
+      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,ewc)  ');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -918,7 +928,7 @@ begin
       SQL.Add(':egysegtomeg,:kerekites,:kukorica,:buzaminoseg,:mennyiseg,:tarolasi_dij, ');
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
-      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg)  ');
+      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg,:ewc)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -1014,6 +1024,7 @@ begin
       ParamByName('p2_ktj').AsString:=Partnerlist2.FieldByName('ktj').AsString;
       ParamByName('levon_szoveg').AsString:=levonlookup.DisplayValue;
       ParamByName('levon_tomeg').AsInteger:=sp_tomeg_levon.Value;
+      ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ExecSQL;
       //keszletezes
       case cbxirany.Text[1] of

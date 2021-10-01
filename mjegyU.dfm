@@ -152,7 +152,6 @@ object MjegyF: TMjegyF
     Align = alBottom
     TabOrder = 2
     OnClick = Panel1Click
-    ExplicitTop = 423
     object lblpartner: TLabel
       Left = 8
       Top = 23
@@ -1034,6 +1033,9 @@ object MjegyF: TMjegyF
       AutoGenerateValue = arDefault
       FieldName = 'tipus_id'
       Origin = 'tipus_id'
+    end
+    object termeklistewc: TWideStringField
+      FieldName = 'ewc'
     end
   end
   object termeklistDs: TDataSource

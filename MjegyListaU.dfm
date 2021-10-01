@@ -137,6 +137,7 @@ object MjegyekF: TMjegyekF
       DisplayAllFields = True
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
+      ListStyle = lsDelimited
       LookupField = 'ID'
       LookupDisplay = 'kod;Nev;'
       LookupSource = termeklistDs

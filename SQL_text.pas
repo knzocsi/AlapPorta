@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=8;
+      maxSQL=9;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -527,7 +527,10 @@ interface
      ');'+ #13#10 +
     ''+ #13#10 +
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;'
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;',
+    //ewc
+    'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'
     );
 
 

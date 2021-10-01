@@ -46,7 +46,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -232,6 +232,13 @@
         Height = 13
         Caption = 'Alapnedvess'#233'g:'
       end
+      object Label6: TLabel
+        Left = 712
+        Top = 96
+        Width = 27
+        Height = 13
+        Caption = 'EWC:'
+      end
       object DBNavigator1: TDBNavigator
         Left = 409
         Top = 0
@@ -416,6 +423,16 @@
         DataSource = TermekDS
         TabOrder = 18
       end
+      object dedewc: TDBEdit
+        Left = 712
+        Top = 112
+        Width = 121
+        Height = 21
+        DataField = 'ewc'
+        DataSource = TermekDS
+        MaxLength = 20
+        TabOrder = 19
+      end
     end
   end
   object TermekT: TFDTable
@@ -558,6 +575,9 @@
       AutoGenerateValue = arDefault
       FieldName = 'tipus_id'
       Origin = 'tipus_id'
+    end
+    object TermekTewc: TWideStringField
+      FieldName = 'ewc'
     end
   end
   object TermekDS: TDataSource

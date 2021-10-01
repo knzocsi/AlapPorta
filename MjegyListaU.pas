@@ -274,7 +274,16 @@ begin
     //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=mjegyekQ.FieldByName('kuj').AsString;
     //TfrxMemoView(FindObject('frxpartnerktj')).Text:=mjegyekQ.FieldByName('ktj').AsString;
      TfrxMemoView(FindObject('memszallev')).Text:=mjegyekQ.FieldByName('szallitolev').AsString;
-    // TfrxMemoView(FindObject('memewc')).Text:=mjegyekQ.FieldByName('ewc').AsString;
+        //ewc
+         if mjegyekQ.FieldByName('ewc').AsString<>'' then
+          begin
+           TfrxMemoView(FindObject('memewc')).Text:=mjegyekQ.FieldByName('ewc').AsString;
+          end
+         else
+         begin
+           TfrxMemoView(FindObject('memewc')).Text:='';
+           TfrxMemoView(FindObject('memewclbl')).Text:='';
+         end;
         if jegyen_latszik('b_nedv') then //nedvesseghez kapcsolodik
          begin
           TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';

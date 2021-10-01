@@ -70,6 +70,9 @@ type
     DBChkolaj: TDBCheckBox;
     DBCheckBox3: TDBCheckBox;
     DBChkhekto: TDBCheckBox;
+    TermekTewc: TWideStringField;
+    Label6: TLabel;
+    dedewc: TDBEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);
