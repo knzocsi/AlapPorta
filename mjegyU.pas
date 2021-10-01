@@ -694,7 +694,7 @@ end;
 
 procedure TMjegyF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi:String;
-    ujid:integer;
+    ujid,p:integer;
     keszmenny:Extended;
  procedure elokeszit;
    begin
@@ -879,8 +879,7 @@ begin
      Exit
     end;
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
- // pcime:=cim_2;
-  //nyomtatva:=false;
+
   szazalek;
   if Sender=btnNyomtatas then
   begin
@@ -1037,12 +1036,17 @@ begin
         with NezetF.valasztott do//frissiti a bizszamot
          begin
             TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
-            PrepareReport(true);
+            for p := 1 to PrintOptions.Copies do
+             begin
+               TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+               PrepareReport(true);
+               Print;
+             end;
+             aF.psz_plusz(ujid,PrintOptions.Copies);
+             Preview:=nil;
          end;
        // aF.PDFExportmjegy.FileName:=pdfmappa+'\'+StringReplace(sorsz,'/','_',[rfReplaceAll]) +'.pdf';
        // aF.frxmerleg.Export(aF.PDFExportmjegy);
-        NezetF.valasztott.Print;
-        NezetF.valasztott.Preview:=nil;
       end;
     end;
     with jvmemparos do
@@ -1062,7 +1066,7 @@ begin
        end;
      end;
      //if cbxktip.ItemIndex=0 then aF.soapXML_letrehozasa(ujid);
-     aF.psz_plusz(ujid);
+
      aF.ForgalomQ.Refresh;
      masol(0,0,true);
      rendszam_combok;

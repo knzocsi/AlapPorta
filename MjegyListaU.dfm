@@ -103,7 +103,7 @@ object MjegyekF: TMjegyekF
     end
     object btnUjranyomtatas: TButton
       Left = 592
-      Top = 21
+      Top = 19
       Width = 121
       Height = 25
       Caption = #218'jranyomtat'#225's'

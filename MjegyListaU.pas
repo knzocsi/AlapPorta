@@ -94,19 +94,28 @@ begin
 end;
 
 procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
-
+var p:Integer;
 begin
   if mjegyekQ.IsEmpty then exit;
-   with NezetF do
+
+   elokeszit(mjegyekQ.FieldByName('storno').AsString);
+   if not NezetF.nyomtatva then
    begin
-    elokeszit(mjegyekQ.FieldByName('storno').AsString);
-    if nyomtatva then
+    nyomtat:=False;
+    exit;
+   end;
+
+   with NezetF.valasztott do
+   begin
+    for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
      begin
-      valasztott.Print;
-      aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
-      mjegyekQ.Refresh
+       TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+       PrepareReport(true);
+       Print;
      end;
-    valasztott.Preview:=nil;
+      aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger,PrintOptions.Copies);
+      mjegyekQ.Refresh;
+      Preview:=nil;
    end;
    nyomtat:=false;
 end;
@@ -125,23 +134,35 @@ begin
 end;
 
 procedure TMjegyekF.Button3Click(Sender: TObject);
+var p:Integer;
 begin
 if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
    begin
-     with NezetF do
+     elokeszit('Storno');
+     if not NezetF.nyomtatva then
+      begin
+       nyomtat:=false;
+       exit;
+      end;
+    with NezetF.valasztott do
      begin
-      elokeszit('Storno');
-      if nyomtatva then
-       begin
-        with aF.Q1 do
+        with aF.Q2 do
          begin
            Close;
            SQL.Clear;
            SQL.Add(' UPDATE merlegjegy SET Storno="Storno" where id='+mjegyekQ.FieldByName('ID').AsString);
            ExecSQL
          end;
-        valasztott.Print;
-        aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger);
+         for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
+         begin
+           TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+           PrepareReport(true);
+           Print;
+         end;
+          aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger,PrintOptions.Copies);
+          mjegyekQ.Refresh;
+          Preview:=nil;
+     end;
          case mjegyekQ.FieldByName('irany').AsString[1] of
          'B':begin
                aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
@@ -165,11 +186,8 @@ if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
                mjegyekQ.FieldByName('p_id').AsInteger,1,ttom);
              end;
          end;
-        szures
-       end;
-      valasztott.Preview:=nil;
-     end;
-   nyomtat:=false;
+     szures;
+     nyomtat:=false;
    end;
 end;
 

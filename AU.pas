@@ -130,7 +130,7 @@ type
     procedure soapXML_letrehozasa(id:Integer);
     procedure script_log(uzenet: string);
     procedure restart_log;
-    procedure psz_plusz(medi:Integer);
+    procedure psz_plusz(medi,mennyi:Integer);
     function tara(rsz:string):Integer;
     procedure soclog(S:string);
     function nev_foglalt(ide:Integer; neve, tbl: String): Boolean;
@@ -948,13 +948,14 @@ begin
   end;
 end;
 
-procedure TAF.psz_plusz(medi: Integer);
+procedure TAF.psz_plusz(medi,mennyi: Integer);
 begin
 with Q1 do
  begin
    Close;
    SQL.Clear;
-   SQL.add(' UPDATE merlegjegy SET psz=psz+1 WHERE id='+#39+medi.ToString+#39);
+   SQL.add(' UPDATE merlegjegy SET psz=psz+:p0 WHERE id='+#39+medi.ToString+#39);
+   Params[0].AsInteger:=mennyi;
    ExecSQL;
    Close;
  end;
