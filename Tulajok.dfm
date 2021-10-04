@@ -255,6 +255,13 @@ object TulajokF: TTulajokF
         Height = 13
         Caption = 'Telefon:'
       end
+      object Label22: TLabel
+        Left = 284
+        Top = 219
+        Width = 87
+        Height = 13
+        Caption = 'C'#233'gjegyz'#233'k sz'#225'm:'
+      end
       object DBNavigator1: TDBNavigator
         Left = 409
         Top = 0
@@ -425,7 +432,6 @@ object TulajokF: TTulajokF
         Height = 21
         DataField = 'email'
         DataSource = tulajDs
-        MaxLength = 20
         TabOrder = 18
       end
       object dbedttelefon: TDBEdit
@@ -435,8 +441,16 @@ object TulajokF: TTulajokF
         Height = 21
         DataField = 'telefon'
         DataSource = tulajDs
-        MaxLength = 20
         TabOrder = 19
+      end
+      object dbedcjsz: TDBEdit
+        Left = 284
+        Top = 232
+        Width = 121
+        Height = 21
+        DataField = 'cjsz'
+        DataSource = tulajDs
+        TabOrder = 20
       end
     end
     object pcFelrakcim: TTabSheet
@@ -801,6 +815,9 @@ object TulajokF: TTulajokF
     object tulajTAjto: TWideStringField
       FieldName = 'Ajto'
       Size = 5
+    end
+    object tulajTcjsz: TWideStringField
+      FieldName = 'cjsz'
     end
   end
   object tulajDs: TDataSource

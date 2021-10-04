@@ -166,6 +166,10 @@ type
     lbl_tomeg_levon: TLabel;
     btnlevon_szoveg: TButton;
     termeklistewc: TWideStringField;
+    tulajTEmail: TWideStringField;
+    tulajTTelefon: TWideStringField;
+    tulajTAjto: TWideStringField;
+    tulajTcjsz: TWideStringField;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -719,7 +723,9 @@ var sorsz,pcime,egyedi:String;
 
          TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
          TfrxMemoView(FindObject('memtulajcime')).Text:=tulajTcim.AsString;
-         //TfrxMemoView(FindObject('memadosz')).Text:=tulajTadoszam.AsString;
+         if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memtuladosz')).Text:=tulajTadoszam.AsString;
+         if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=tulajTcjsz.AsString;
+         if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=Merleg_neve;
          TfrxMemoView(FindObject('mempartner')).Text:=lblpartner.Caption;
          TfrxMemoView(FindObject('mempartnerneve')).Text:=Partnelist.FieldByName('nev').AsString;
          TfrxMemoView(FindObject('mempartnercime')).Text:=Partnelist.FieldByName('cim').AsString;//pcime;
@@ -808,7 +814,7 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
          TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
          //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
-         if duplex_mjegy then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+         if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
          NezetF.rep_valaszt(aF.frxmerleg,1);
        end;
     end;
@@ -920,7 +926,7 @@ begin
       SQL.Add('egysegtomeg,kerekites,kukorica,buzaminoseg,mennyiseg,tarolasi_dij, ');
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
-      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,ewc)  ');
+      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,ewc,tul_cjsz)  ');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -930,7 +936,7 @@ begin
       SQL.Add(':egysegtomeg,:kerekites,:kukorica,:buzaminoseg,:mennyiseg,:tarolasi_dij, ');
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
-      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg,:ewc)  ');
+      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg,:ewc,:tul_cjsz)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -1027,6 +1033,7 @@ begin
       ParamByName('levon_szoveg').AsString:=levonlookup.DisplayValue;
       ParamByName('levon_tomeg').AsInteger:=sp_tomeg_levon.Value;
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
+      ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
       ExecSQL;
       //keszletezes
       case cbxirany.Text[1] of
@@ -1238,6 +1245,14 @@ begin
   cbxirany.ItemIndex:=alap_irany;
   taroloklookup.KeyValue:=alap_tarolo;
   cbxiranyChange(Self);
+  case cbxirany.ItemIndex of
+   1:begin //beszállítás
+      if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
+     end;
+   2:begin //kiszállítás
+      if alap_elado<>0 then  partnerlookup.keyvalue:=alap_elado;
+     end;
+  end;
   edszallev.Clear;
   cbxrendszam1.ItemIndex:=-1;
   cbxrendszam2.ItemIndex:=-1;

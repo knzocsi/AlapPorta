@@ -112,6 +112,9 @@ type
     DBNavigator2: TDBNavigator;
     DBGrid2: TDBGrid;
     tulajTAjto: TWideStringField;
+    tulajTcjsz: TWideStringField;
+    dbedcjsz: TDBEdit;
+    Label22: TLabel;
     procedure btnkilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

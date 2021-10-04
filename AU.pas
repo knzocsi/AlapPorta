@@ -169,8 +169,9 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,ekaer_mappa,ekaer_csk,kpmappa:String;
-  Merlegjegy_tipus:Integer;
+  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
+  ekaer_mappa,ekaer_csk,kpmappa,merleg_neve:String;
+  Merlegjegy_tipus,alap_atvevo,alap_elado:Integer;
 
 
 implementation
@@ -597,20 +598,28 @@ begin
   i.WriteInteger('ALAP','Mentesido',mentesido);
   mezgaz:=i.Readbool('ALAP','Mezgaz',false);//mert az 1 a db letrehozas
   i.WriteBool('ALAP','Mezgaz',mezgaz);
-  duplex_mjegy:=i.Readbool('ALAP','duplex',false);//dupla mérlegjegy egy lapon
-  i.WriteBool('ALAP','duplex',duplex_mjegy);
-  automata_meres:=i.ReadBool('ALAP','automata_meres',False);
-  i.WriteBool('ALAP','automata_meres',automata_meres);
-  nedvesseg_beolvasasa:=i.ReadBool('ALAP','nedvesseg_beolvasasa',False);
-  i.WriteBool('ALAP','nedvesseg_beolvasasa',nedvesseg_beolvasasa);
-  alap_tarolo:=i.ReadInteger('ALAP','alap_tarolo',0);
-  i.WriteInteger('ALAP','alap_tarolo',alap_tarolo);
-  alap_irany:=i.ReadInteger('ALAP','alap_irany',0);
-  i.WriteInteger('ALAP','alap_irany',alap_irany);
+  duplex_mjegy:=i.Readbool('ALAP','Duplex',false);//dupla mérlegjegy egy lapon
+  i.WriteBool('ALAP','Duplex',duplex_mjegy);
+  automata_meres:=i.ReadBool('ALAP','Automata_meres',False);
+  i.WriteBool('ALAP','Automata_meres',automata_meres);
+  nedvesseg_beolvasasa:=i.ReadBool('ALAP','Nedvesseg_beolvasasa',False);
+  i.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
+  alap_tarolo:=i.ReadInteger('ALAP','Alap_tarolo',0);
+  i.WriteInteger('ALAP','Alap_tarolo',alap_tarolo);
+  alap_irany:=i.ReadInteger('ALAP','Alap_irany',0);
+  i.WriteInteger('ALAP','Alap_irany',alap_irany);
 
+  alap_atvevo:=i.ReadInteger('ALAP','Alap_atvevo',0);
+  i.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
+  alap_elado:=i.ReadInteger('ALAP','Alap_elado',0);
+  i.WriteInteger('ALAP','Alap_elado',alap_elado);
+ //alap_vevo,alap_elado
 
   Merlegjegy_tipus:=i.ReadInteger('ALAP','Merlegjegy_tipus',0);
   i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
+
+  merleg_neve:=i.ReadString('ALAP','Merleg_neve','');
+  i.writeString('ALAP','Merleg_neve',Merleg_neve);
 
   Kozponti_prg:=i.ReadBool('ALAP','Kozponti_prg',False);
   i.WriteBool('ALAP','Kozponti_prg',Kozponti_prg);

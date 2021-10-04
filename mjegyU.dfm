@@ -1212,6 +1212,23 @@ object MjegyF: TMjegyF
       Origin = 'Hrsz'
       Size = 5
     end
+    object tulajTEmail: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Email'
+      Origin = 'Email'
+    end
+    object tulajTTelefon: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Telefon'
+      Origin = 'Telefon'
+    end
+    object tulajTAjto: TWideStringField
+      FieldName = 'Ajto'
+      Size = 5
+    end
+    object tulajTcjsz: TWideStringField
+      FieldName = 'cjsz'
+    end
   end
   object tulajDs: TDataSource
     DataSet = tulajT

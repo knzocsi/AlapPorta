@@ -540,7 +540,10 @@ interface
       'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
-      'from partner ;'{+ #13#10 +}
+      'from partner ;'+ #13#10 +
+    //tulajok cegjegyzek szam
+    'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_cjsz` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';'{+ #13#10 +}
     );
 
 

@@ -246,9 +246,11 @@ begin
        TfrxMemoView(FindObject('frxekaer')).Text:='';
        TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
       end;
-     TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;;
+     TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;
      TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;
-     //TfrxMemoView(FindObject('memadosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;
+     if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memadosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;;
+     if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=mjegyekQ.FieldByName('tul_cjsz').AsString;
+     if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=Merleg_neve;
      case mjegyekQ.FieldByName('irany').AsString[1] of
      'B':begin
           TfrxMemoView(FindObject('mempartner')).Text:='Átadó:';
@@ -338,7 +340,7 @@ begin
      TfrxMemoView(FindObject('memtomlevon')).Text:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
      TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=mjegyekQ.FieldByName('levon_szoveg').AsString;
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
-     if duplex_mjegy then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+     if  TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
 
      NezetF.rep_valaszt(aF.frxmerleg,1);
    end;
