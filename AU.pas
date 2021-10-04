@@ -611,6 +611,7 @@ begin
 
   alap_atvevo:=i.ReadInteger('ALAP','Alap_atvevo',0);
   i.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
+
   alap_elado:=i.ReadInteger('ALAP','Alap_elado',0);
   i.WriteInteger('ALAP','Alap_elado',alap_elado);
  //alap_vevo,alap_elado

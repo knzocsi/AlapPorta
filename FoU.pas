@@ -823,6 +823,7 @@ begin
             try
               stop(nagy);
             finally
+
               vlcInstance0 := libvlc_new(0, nil);
               if teszt then
                 vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))

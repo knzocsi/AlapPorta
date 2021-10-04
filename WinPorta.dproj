@@ -240,6 +240,10 @@
             <Form>levon_szovegekF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="FelrakCimekU.pas">
+            <Form>felrakcimekF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <RcItem Include="Mjegy_sa_ho_ka.fr3">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>

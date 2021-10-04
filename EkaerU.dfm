@@ -341,7 +341,7 @@ object EkaerF: TEkaerF
   object lblekaer: TLabel
     Left = 512
     Top = 21
-    Width = 273
+    Width = 84
     Height = 25
     Caption = 'lblekaer'
     Font.Charset = DEFAULT_CHARSET
@@ -1496,7 +1496,6 @@ object EkaerF: TEkaerF
     ParentFont = False
     TabOrder = 47
     OnClick = btnkuldesClick
-    ExplicitTop = 520
   end
   object felcimlookup: TJvDBLookupCombo
     Left = 17
@@ -1530,6 +1529,15 @@ object EkaerF: TEkaerF
     TabOrder = 50
     Text = 'ed_vtsz'
   end
+  object Button2: TButton
+    Left = 694
+    Top = 202
+    Width = 91
+    Height = 25
+    Caption = 'Felrakod'#225'si c'#237'mek'
+    TabOrder = 51
+    OnClick = Button2Click
+  end
   object felcimekQ: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
@@ -1546,6 +1554,7 @@ object EkaerF: TEkaerF
     object felcimekQid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
+      ReadOnly = True
     end
     object felcimekQtul_id: TIntegerField
       FieldName = 'tul_id'

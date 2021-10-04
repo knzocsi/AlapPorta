@@ -40,6 +40,15 @@ object TulajokF: TTulajokF
       TabOrder = 1
       OnClick = Button1Click
     end
+    object Button2: TButton
+      Left = 664
+      Top = 9
+      Width = 91
+      Height = 25
+      Caption = 'Felrakod'#225'si c'#237'mek'
+      TabOrder = 2
+      OnClick = Button2Click
+    end
   end
   object pcListaReszlet: TPageControl
     Left = 0
@@ -453,250 +462,6 @@ object TulajokF: TTulajokF
         TabOrder = 20
       end
     end
-    object pcFelrakcim: TTabSheet
-      Caption = 'Felrakod'#225'si c'#237'mek'
-      ImageIndex = 2
-      OnShow = pcFelrakcimShow
-      object PageControl1: TPageControl
-        Left = 0
-        Top = 0
-        Width = 764
-        Height = 319
-        ActivePage = tsfelcimlist
-        Align = alClient
-        TabOrder = 0
-        object tsfelcimlist: TTabSheet
-          Caption = 'Felrakod'#225'si c'#237'mek'
-          object DBGrid2: TDBGrid
-            Left = 0
-            Top = 0
-            Width = 756
-            Height = 291
-            Align = alClient
-            DataSource = FelcimekDs
-            TabOrder = 0
-            TitleFont.Charset = DEFAULT_CHARSET
-            TitleFont.Color = clWindowText
-            TitleFont.Height = -11
-            TitleFont.Name = 'Tahoma'
-            TitleFont.Style = []
-          end
-        end
-        object tsfelrakreszlet: TTabSheet
-          Caption = 'Felrakod'#225'si c'#237'm r'#233'szletesen'
-          ImageIndex = 1
-          object Label10: TLabel
-            Left = 13
-            Top = 39
-            Width = 66
-            Height = 13
-            Caption = 'Ir'#225'ny'#237't'#243'sz'#225'm:'
-            FocusControl = DBEdit1
-          end
-          object Label11: TLabel
-            Left = 165
-            Top = 39
-            Width = 49
-            Height = 13
-            Caption = 'Telep'#252'l'#233's:'
-            FocusControl = DBEdit2
-          end
-          object Label12: TLabel
-            Left = 13
-            Top = 79
-            Width = 80
-            Height = 13
-            Caption = 'K'#246'zter'#252'let neve:'
-            FocusControl = DBEdit3
-          end
-          object Label13: TLabel
-            Left = 165
-            Top = 79
-            Width = 87
-            Height = 13
-            Caption = 'K'#246'zter'#252'let jellege:'
-            FocusControl = DBEdit4
-          end
-          object Label14: TLabel
-            Left = 316
-            Top = 79
-            Width = 46
-            Height = 13
-            Caption = 'H'#225'zsz'#225'm:'
-            FocusControl = DBEdit5
-          end
-          object Label15: TLabel
-            Left = 397
-            Top = 79
-            Width = 34
-            Height = 13
-            Caption = #201'p'#252'let:'
-          end
-          object Label16: TLabel
-            Left = 466
-            Top = 79
-            Width = 54
-            Height = 13
-            Caption = 'L'#233'pcs'#337'h'#225'z:'
-            FocusControl = DBEdit7
-          end
-          object Label17: TLabel
-            Left = 549
-            Top = 79
-            Width = 36
-            Height = 13
-            Caption = 'Emelet:'
-            FocusControl = DBEdit8
-          end
-          object Label18: TLabel
-            Left = 13
-            Top = 119
-            Width = 24
-            Height = 13
-            Caption = 'Ajt'#243':'
-            FocusControl = DBEdit9
-          end
-          object Label19: TLabel
-            Left = 101
-            Top = 119
-            Width = 72
-            Height = 13
-            Caption = 'Helyrajzi sz'#225'm:'
-          end
-          object Label20: TLabel
-            Left = 253
-            Top = 119
-            Width = 32
-            Height = 13
-            Caption = 'E-mail:'
-          end
-          object Label21: TLabel
-            Left = 389
-            Top = 119
-            Width = 40
-            Height = 13
-            Caption = 'Telefon:'
-          end
-          object DBEdit1: TDBEdit
-            Left = 13
-            Top = 52
-            Width = 134
-            Height = 21
-            DataField = 'Irsz'
-            DataSource = FelcimekDs
-            TabOrder = 0
-          end
-          object DBEdit2: TDBEdit
-            Left = 165
-            Top = 52
-            Width = 394
-            Height = 21
-            DataField = 'Telepules'
-            DataSource = FelcimekDs
-            TabOrder = 1
-          end
-          object DBEdit3: TDBEdit
-            Left = 13
-            Top = 92
-            Width = 129
-            Height = 21
-            DataField = 'Kozterulet'
-            DataSource = FelcimekDs
-            TabOrder = 2
-          end
-          object DBEdit4: TDBEdit
-            Left = 165
-            Top = 92
-            Width = 134
-            Height = 21
-            DataField = 'Kozt_Jelleg'
-            DataSource = FelcimekDs
-            TabOrder = 3
-          end
-          object DBEdit5: TDBEdit
-            Left = 316
-            Top = 92
-            Width = 69
-            Height = 21
-            DataField = 'Hazszam'
-            DataSource = FelcimekDs
-            TabOrder = 4
-          end
-          object DBEdit6: TDBEdit
-            Left = 398
-            Top = 92
-            Width = 56
-            Height = 21
-            DataField = 'epulet'
-            DataSource = FelcimekDs
-            TabOrder = 5
-          end
-          object DBEdit7: TDBEdit
-            Left = 466
-            Top = 92
-            Width = 69
-            Height = 21
-            DataField = 'Lepcsohaz'
-            DataSource = FelcimekDs
-            TabOrder = 6
-          end
-          object DBEdit8: TDBEdit
-            Left = 549
-            Top = 92
-            Width = 69
-            Height = 21
-            DataField = 'Emelet'
-            DataSource = FelcimekDs
-            TabOrder = 7
-          end
-          object DBEdit9: TDBEdit
-            Left = 13
-            Top = 132
-            Width = 69
-            Height = 21
-            DataField = 'Ajto'
-            DataSource = FelcimekDs
-            TabOrder = 8
-          end
-          object DBEdit10: TDBEdit
-            Left = 101
-            Top = 133
-            Width = 129
-            Height = 21
-            DataField = 'hrsz'
-            DataSource = FelcimekDs
-            TabOrder = 9
-          end
-          object DBEdit11: TDBEdit
-            Left = 253
-            Top = 132
-            Width = 121
-            Height = 21
-            DataField = 'email'
-            DataSource = FelcimekDs
-            TabOrder = 10
-          end
-          object DBEdit12: TDBEdit
-            Left = 389
-            Top = 132
-            Width = 121
-            Height = 21
-            DataField = 'telefon'
-            DataSource = FelcimekDs
-            TabOrder = 11
-          end
-          object DBNavigator2: TDBNavigator
-            Left = 417
-            Top = 8
-            Width = 215
-            Height = 25
-            DataSource = FelcimekDs
-            VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
-            TabOrder = 12
-          end
-        end
-      end
-    end
   end
   object tulajT: TFDTable
     IndexFieldNames = 'ID'
@@ -824,17 +589,5 @@ object TulajokF: TTulajokF
     DataSet = tulajT
     Left = 224
     Top = 24
-  end
-  object FelcimekT: TFDTable
-    BeforePost = FelcimekTBeforePost
-    Connection = AF.Kapcs
-    TableName = 'felrakodasi_cimek'
-    Left = 496
-    Top = 8
-  end
-  object FelcimekDs: TDataSource
-    DataSet = FelcimekT
-    Left = 560
-    Top = 16
   end
 end

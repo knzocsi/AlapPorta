@@ -130,12 +130,14 @@ type
     NetHTTPRequest1: TNetHTTPRequest;
     lblekaer: TLabel;
     ed_vtsz: TEdit;
+    Button2: TButton;
     procedure btnkuldesClick(Sender: TObject);
     procedure felcimlookupCloseUp(Sender: TObject);
     procedure btnkilepesClick(Sender: TObject);
     procedure btnkitoltClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
     function bekodol(s:string):string;
@@ -156,7 +158,7 @@ var
   KiXML,VaXML:TStringlist;
   ekaercim:String;
 implementation
-  uses au,mjegyU;
+  uses au,mjegyU, FelrakCimekU;
 {$R *.dfm}
 
 { TForm1 }
@@ -184,6 +186,16 @@ end;
 procedure TEkaerF.btnkuldesClick(Sender: TObject);
 begin
  kuldes
+end;
+
+procedure TEkaerF.Button2Click(Sender: TObject);
+begin
+ try
+   felrakcimekF.fo(MjegyF.tulajTID.AsInteger);
+ finally
+   felcimekQ.Close;
+   felcimekQ.Open
+ end;
 end;
 
 procedure TEkaerF.felcimlookupCloseUp(Sender: TObject);

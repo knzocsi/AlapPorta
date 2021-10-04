@@ -14,19 +14,6 @@ type
   TTulajokF = class(TForm)
     Panel1: TPanel;
     btnkilepes: TButton;
-    pcListaReszlet: TPageControl;
-    tbLista: TTabSheet;
-    DBGrid1: TDBGrid;
-    tbReszlet: TTabSheet;
-    lbl1: TLabel;
-    lbl2: TLabel;
-    Label1: TLabel;
-    Label2: TLabel;
-    DBNavigator1: TDBNavigator;
-    dedID: TDBEdit;
-    dedNev: TDBEdit;
-    dedcim: TDBEdit;
-    dedadoszam: TDBEdit;
     tulajT: TFDTable;
     tulajDs: TDataSource;
     tulajTID: TFDAutoIncField;
@@ -36,37 +23,7 @@ type
     tulajTkuj: TWideStringField;
     tulajTktj: TWideStringField;
     tulajTElotag: TWideStringField;
-    dedkuj: TDBEdit;
-    dedktj: TDBEdit;
-    dedelotag: TDBEdit;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
     Button1: TButton;
-    dbedtIrsz: TDBEdit;
-    lbl3: TLabel;
-    dbedtTelepules: TDBEdit;
-    lbl4: TLabel;
-    dbedtKozterulet: TDBEdit;
-    lbl6: TLabel;
-    dbedtKozt_Jelleg: TDBEdit;
-    lbl7: TLabel;
-    dbedtHazszam: TDBEdit;
-    lbl8: TLabel;
-    DBEdepulet: TDBEdit;
-    Label6: TLabel;
-    dbedtLepcsohaz: TDBEdit;
-    lbl9: TLabel;
-    dbedtEmelet: TDBEdit;
-    lbl10: TLabel;
-    dbedtAjto: TDBEdit;
-    lbl11: TLabel;
-    Label7: TLabel;
-    dbedthrsz: TDBEdit;
-    dbedtemail: TDBEdit;
-    Label8: TLabel;
-    dbedttelefon: TDBEdit;
-    Label9: TLabel;
     tulajTIrsz: TWideStringField;
     tulajTTelepules: TWideStringField;
     tulajTKerulet: TWideStringField;
@@ -79,51 +36,61 @@ type
     tulajTHrsz: TWideStringField;
     tulajTEmail: TWideStringField;
     tulajTTelefon: TWideStringField;
-    pcFelrakcim: TTabSheet;
-    PageControl1: TPageControl;
-    tsfelcimlist: TTabSheet;
-    tsfelrakreszlet: TTabSheet;
-    DBEdit1: TDBEdit;
-    Label10: TLabel;
-    DBEdit2: TDBEdit;
-    Label11: TLabel;
-    DBEdit3: TDBEdit;
-    Label12: TLabel;
-    DBEdit4: TDBEdit;
-    Label13: TLabel;
-    DBEdit5: TDBEdit;
-    Label14: TLabel;
-    DBEdit6: TDBEdit;
-    Label15: TLabel;
-    Label16: TLabel;
-    DBEdit7: TDBEdit;
-    DBEdit8: TDBEdit;
-    Label17: TLabel;
-    DBEdit9: TDBEdit;
-    Label18: TLabel;
-    DBEdit10: TDBEdit;
-    Label19: TLabel;
-    DBEdit11: TDBEdit;
-    Label20: TLabel;
-    DBEdit12: TDBEdit;
-    Label21: TLabel;
-    FelcimekT: TFDTable;
-    FelcimekDs: TDataSource;
-    DBNavigator2: TDBNavigator;
-    DBGrid2: TDBGrid;
     tulajTAjto: TWideStringField;
     tulajTcjsz: TWideStringField;
-    dbedcjsz: TDBEdit;
+    pcListaReszlet: TPageControl;
+    tbLista: TTabSheet;
+    DBGrid1: TDBGrid;
+    tbReszlet: TTabSheet;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    lbl3: TLabel;
+    lbl4: TLabel;
+    lbl6: TLabel;
+    lbl7: TLabel;
+    lbl8: TLabel;
+    Label6: TLabel;
+    lbl9: TLabel;
+    lbl10: TLabel;
+    lbl11: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
     Label22: TLabel;
+    DBNavigator1: TDBNavigator;
+    dedID: TDBEdit;
+    dedNev: TDBEdit;
+    dedcim: TDBEdit;
+    dedadoszam: TDBEdit;
+    dedkuj: TDBEdit;
+    dedktj: TDBEdit;
+    dedelotag: TDBEdit;
+    dbedtIrsz: TDBEdit;
+    dbedtTelepules: TDBEdit;
+    dbedtKozterulet: TDBEdit;
+    dbedtKozt_Jelleg: TDBEdit;
+    dbedtHazszam: TDBEdit;
+    DBEdepulet: TDBEdit;
+    dbedtLepcsohaz: TDBEdit;
+    dbedtEmelet: TDBEdit;
+    dbedtAjto: TDBEdit;
+    dbedthrsz: TDBEdit;
+    dbedtemail: TDBEdit;
+    dbedttelefon: TDBEdit;
+    dbedcjsz: TDBEdit;
+    Button2: TButton;
     procedure btnkilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);
-    procedure pcFelrakcimShow(Sender: TObject);
-    procedure FelcimekTBeforePost(DataSet: TDataSet);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
-    procedure felcimszur;
   public
     { Public declarations }
   end;
@@ -132,7 +99,7 @@ var
   TulajokF: TTulajokF;
 
 implementation
-  uses au;
+  uses au, FelrakCimekU;
 {$R *.dfm}
 
 procedure TTulajokF.btnkilepesClick(Sender: TObject);
@@ -160,37 +127,30 @@ begin
   end;
 end;
 
-procedure TTulajokF.FelcimekTBeforePost(DataSet: TDataSet);
+procedure TTulajokF.Button2Click(Sender: TObject);
 begin
- FelcimekT.FieldByName('tul_id').AsInteger:=tulajTID.AsInteger;
-end;
-
-procedure TTulajokF.felcimszur;
-begin
- with FelcimekT do
+ if tulajT.IsEmpty then
   begin
-    Filtered:=False;
-    filter:=' tul_id='+QuotedStr(tulajTID.AsString);
-    Filtered:=true;
+    ShowMessage('Válassz tulajdonost!');
+    Exit
   end;
+  if tulajT.RecNo=-1 then
+   begin
+    ShowMessage('Válassz tulajdonost!');
+    Exit
+   end;
+ felrakcimekF.fo(tulajTID.AsInteger);
 end;
 
 procedure TTulajokF.FormActivate(Sender: TObject);
 begin
  tulajT.Open;
- FelcimekT.Open;
+
 end;
 
 procedure TTulajokF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
  tulajT.Close;
- FelcimekT.Close;
-end;
-
-procedure TTulajokF.pcFelrakcimShow(Sender: TObject);
-begin
- DBNavigator2.Enabled:=not tulajT.IsEmpty;
- felcimszur
 end;
 
 end.

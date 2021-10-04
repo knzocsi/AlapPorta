@@ -39,7 +39,8 @@ uses
   EkaerU in 'EkaerU.pas' {EkaerF},
   Ping2U in 'Ping2U.pas',
   tesztU in 'tesztU.pas' {tesztF},
-  levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF};
+  levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF},
+  FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF};
 
 {$R *.res}
 
@@ -77,5 +78,6 @@ begin
   Application.CreateForm(TEkaerF, EkaerF);
   Application.CreateForm(TtesztF, tesztF);
   Application.CreateForm(Tlevon_szovegekF, levon_szovegekF);
+  Application.CreateForm(TfelrakcimekF, felrakcimekF);
   Application.Run;
 end.

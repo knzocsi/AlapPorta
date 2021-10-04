@@ -1109,12 +1109,14 @@ end;
 
 procedure TMjegyF.partnerlookup2Change(Sender: TObject);
 begin
+ if not Visible then exit;
  if ActiveControl.Name='partnerlookup2' then
  if chkpartnerekegy.Checked then partnerlookup.KeyValue:=partnerlookup2.KeyValue;
 end;
 
 procedure TMjegyF.partnerlookupChange(Sender: TObject);
 begin
+ if not Visible then exit;
  if ActiveControl.Name='partnerlookup' then
  if chkpartnerekegy.Checked then partnerlookup2.KeyValue:=partnerlookup.KeyValue;
 end;
