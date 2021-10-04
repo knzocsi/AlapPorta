@@ -94,7 +94,7 @@ begin
 end;
 
 procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
-var p:Integer;
+var p,psz:Integer;
 begin
   if mjegyekQ.IsEmpty then exit;
 
@@ -104,14 +104,16 @@ begin
     nyomtat:=False;
     exit;
    end;
-
+   psz:=0;
    with NezetF.valasztott do
    begin
     for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
      begin
-       TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+       TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
+       if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
        PrepareReport(true);
        Print;
+       if duplex_mjegy then Inc(psz)
      end;
       aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger,PrintOptions.Copies);
       mjegyekQ.Refresh;
@@ -134,7 +136,7 @@ begin
 end;
 
 procedure TMjegyekF.Button3Click(Sender: TObject);
-var p:Integer;
+var p,psz:Integer;
 begin
 if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
    begin
@@ -153,15 +155,18 @@ if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
            SQL.Add(' UPDATE merlegjegy SET Storno="Storno" where id='+mjegyekQ.FieldByName('ID').AsString);
            ExecSQL
          end;
-         for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
+        psz:=0;
+        for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
          begin
-           TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+           TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
+           if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
            PrepareReport(true);
            Print;
+           if duplex_mjegy then Inc(psz)
          end;
-          aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger,PrintOptions.Copies);
-          mjegyekQ.Refresh;
-          Preview:=nil;
+        aF.psz_plusz(mjegyekQ.FieldByName('id').AsInteger,PrintOptions.Copies);
+        mjegyekQ.Refresh;
+        Preview:=nil;
      end;
          case mjegyekQ.FieldByName('irany').AsString[1] of
          'B':begin
@@ -229,6 +234,7 @@ begin
      if stfelirat<>'' then TfrxMemoView(FindObject('memcim')).Text:=stfelirat+' '+LowerCase(TfrxMemoView(FindObject('memcim')).Text);
      //else   TfrxMemoView(FindObject('memcim')).Text:='Storno mérlegjegy';
      TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+1)+'. példány';
+     if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(mjegyekQ.FieldByName('psz').AsInteger+2)+'. példány';
      if mjegyekQ.FieldByName('ekaer').AsString<>'' then
       begin
        TfrxMemoView(FindObject('frxekaer')).Text:=mjegyekQ.FieldByName('ekaer').AsString;
@@ -331,7 +337,8 @@ begin
      TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
      TfrxMemoView(FindObject('memtomlevon')).Text:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
      TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=mjegyekQ.FieldByName('levon_szoveg').AsString;
-     TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+     //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
+     if duplex_mjegy then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
 
      NezetF.rep_valaszt(aF.frxmerleg,1);
    end;

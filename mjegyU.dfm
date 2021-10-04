@@ -381,6 +381,7 @@ object MjegyF: TMjegyF
       DisplayAllFields = True
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
+      ListStyle = lsDelimited
       LookupField = 'ID'
       LookupDisplay = 'combo;cim;'
       LookupSource = PartnelistDs
@@ -793,8 +794,9 @@ object MjegyF: TMjegyF
       DisplayAllFields = True
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
+      ListStyle = lsDelimited
       LookupField = 'ID'
-      LookupDisplay = 'kod;Nev;'
+      LookupDisplay = 'Nev;kod;'
       LookupSource = termeklistDs
       TabOrder = 4
       OnCloseUp = termeklookupCloseUp
@@ -846,6 +848,7 @@ object MjegyF: TMjegyF
       DisplayAllFields = True
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
+      ListStyle = lsDelimited
       LookupField = 'ID'
       LookupDisplay = 'combo;cim;'
       LookupSource = Partnerlist2Ds

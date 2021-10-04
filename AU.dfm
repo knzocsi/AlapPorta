@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44470.582972141200000000
+    ReportOptions.LastChange = 44473.437106944450000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -341,7 +341,7 @@ object AF: TAF
           AllowVectorExport = True
           Top = 60.472480000000000000
           Width = 102.047310000000000000
-          Height = 18.897650000000000000
+          Height = 34.015770000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -350,7 +350,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'M'#233'r'#233'st v'#233'gz'#337':')
+            'M'#233'rlegel'#233's helye:')
           ParentFont = False
         end
         object memtulaj: TfrxMemoView
@@ -1298,9 +1298,15 @@ object AF: TAF
           Top = 283.464750000000000000
           Width = 41.574830000000000000
           Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
             'EWC:')
+          ParentFont = False
         end
         object memewc: TfrxMemoView
           AllowVectorExport = True
@@ -1874,7 +1880,7 @@ object AF: TAF
           Memo.UTF8W = (
             '[memszallev.text]')
         end
-        object Memo62: TfrxMemoView
+        object frxpsz2: TfrxMemoView
           AllowVectorExport = True
           Left = 623.622450000000000000
           Top = 27.118120000000000000
@@ -1883,7 +1889,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haRight
           Memo.UTF8W = (
-            '[frxpsz.text]')
+            'frxpsz2')
         end
         object Memo63: TfrxMemoView
           AllowVectorExport = True
@@ -2377,9 +2383,15 @@ object AF: TAF
           Top = 277.905690000000000000
           Width = 41.574830000000000000
           Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
             '[memewclbl.text]')
+          ParentFont = False
         end
         object Memo92: TfrxMemoView
           AllowVectorExport = True
@@ -3907,7 +3919,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44470.583844745370000000
+    ReportOptions.LastChange = 44473.432999583330000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -4974,7 +4986,7 @@ object AF: TAF
             'memewc')
         end
       end
-      object ReportSummary1: TfrxReportSummary
+      object ReportSummary: TfrxReportSummary
         FillType = ftBrush
         Frame.Typ = [ftTop]
         Height = 154.960730000000000000

@@ -950,6 +950,8 @@ end;
 
 procedure TAF.psz_plusz(medi,mennyi: Integer);
 begin
+if duplex_mjegy then mennyi:=mennyi*2;//csak duplexnél duplán kell számolni a példányszámokat
+
 with Q1 do
  begin
    Close;

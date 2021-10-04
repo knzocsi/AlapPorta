@@ -283,6 +283,7 @@ for i := 0 to 1 do Play_panel_letrehozasa('cam' + i.ToString, 'Cam_kepe' + i.ToS
 end;
 
 procedure TFoF.btnMeresClick(Sender: TObject);
+var kepnev1,kepnev2:String;
 begin
   if not aF.van_joga('j6') then exit;
   Rendszam_Lampa_Timer.Enabled := false;
@@ -290,7 +291,8 @@ begin
   meresF.rendszam2:=lblRendszam_Hatso.Caption ;
   meresF.ShowModal;
   if not meresF.mentes then exit;
-
+  kepnev1 := snapshot('0');
+  kepnev2 := snapshot('1');
 
   with aF.Q1 do
   begin
@@ -308,8 +310,8 @@ begin
       ParamByName('Kod').AsString:='0';
       ParamByName('Szallitolev').AsString:='0';
       ParamByName('Tomeg').AsInteger := meresF.tomeg;
-      ParamByName('Kepnev1').AsString:='';
-      ParamByName('Kepnev2').AsString:='';
+      ParamByName('Kepnev1').AsString:=kepnev1;
+      ParamByName('Kepnev2').AsString:=kepnev2;
       ParamByName('Parositott').AsInteger:=0;
       ParamByName('Nem_Kell').AsInteger:=0;
       ParamByName('kezi').AsBoolean:=MeresF.chkkezi.Checked;
@@ -1512,6 +1514,7 @@ var
       ParamByName('Kepnev2').AsString := kepnev2;
       ParamByName('Parositott').AsInteger := 0;
       ParamByName('Nem_Kell').AsInteger := 0;
+      ParamByName('kezi').AsBoolean:=False;
       //showmessage(SQL.Text);
       ExecSQL;
       Close;

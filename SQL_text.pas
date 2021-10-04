@@ -529,8 +529,18 @@ interface
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;',
     //ewc
-    'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'
+    'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+    //partner combo
+      ''+ #13#10 +
+      'ALTER ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,adoszam,kuj,ktj,' + #13#10 +
+      'irsz,telepules,kerulet,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,'+ #13#10 +
+      'email,telefon, CONCAT(nev,'' |'',kod) As combo,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
+      'from partner ;'{+ #13#10 +}
     );
 
 

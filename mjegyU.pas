@@ -695,7 +695,7 @@ end;
 
 procedure TMjegyF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi:String;
-    ujid,p:integer;
+    ujid,p,psz:integer;
     keszmenny:Extended;
  procedure elokeszit;
    begin
@@ -705,6 +705,7 @@ var sorsz,pcime,egyedi:String;
       with aF.frxmerleg do
        begin
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
+         if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. példány';
          if edekaer.Text<>'' then
           begin
            TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
@@ -806,7 +807,8 @@ var sorsz,pcime,egyedi:String;
          TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
          TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
          TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
-         TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+         //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
+         if duplex_mjegy then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
          NezetF.rep_valaszt(aF.frxmerleg,1);
        end;
     end;
@@ -1044,14 +1046,17 @@ begin
       sorsz:=mentett_sorsz_lekerese(egyedi);
       if Sender=btnNyomtatas then
       begin
+        psz:=0;
         with NezetF.valasztott do//frissiti a bizszamot
          begin
             TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
             for p := 1 to PrintOptions.Copies do
              begin
-               TfrxMemoView(FindObject('frxpsz')).Text:=p.ToString+'. példány';
+               TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
+               if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
                PrepareReport(true);
                Print;
+               if duplex_mjegy then Inc(psz)
              end;
              aF.psz_plusz(ujid,PrintOptions.Copies);
              Preview:=nil;
