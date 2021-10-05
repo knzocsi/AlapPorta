@@ -144,6 +144,7 @@ type
     procedure tabla_kizar(tabla:string);
     procedure merlegjegy_tipus_betoltese;
     procedure merlegjegy_tomeglevonas;
+    procedure camlog(S:string);
     { Public declarations }
   end;
 
@@ -914,6 +915,20 @@ begin
 
 end;
 
+
+procedure TAF.camlog(S: string);
+ var tf : TextFile;
+    m:string;
+begin
+ m:=ExtractFileDir(application.exename);
+// ForceDirectories(m);
+ AssignFile(tf,m+'\cam_log.txt');
+ if not FileExists(m+'\cam_log.txt') then ReWrite(tf)
+ else Append(tf);
+ WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
+ Writeln(tf,'*****************************************************************************************************************');
+ CloseFile(tf);
+end;
 
 function TAF.partner_kesz(tid, tarid, pid: Integer; tort: ShortInt): Extended;
 begin

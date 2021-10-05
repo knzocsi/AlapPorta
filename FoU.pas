@@ -87,6 +87,7 @@ type
     Button2: TButton;
     teszt_m: TMenuItem;
     tomeg_levon_szovegek_m: TMenuItem;
+    elokep_timer: TTimer;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -152,6 +153,8 @@ type
     procedure tulaj_mClick(Sender: TObject);
     procedure teszt_mClick(Sender: TObject);
     procedure tomeg_levon_szovegek_mClick(Sender: TObject);
+    procedure lejatszas_ellenorzese;
+    procedure elokep_timerTimer(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -417,6 +420,41 @@ begin
   kepbetolt;
 end;
 
+procedure TFoF.elokep_timerTimer(Sender: TObject);
+begin
+ elokep_timer.Enabled:=false;
+ if (Assigned(vlcMediaPlayer0)) then
+  if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0) then
+   begin
+    StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
+    af.camlog('Élõkép(1) SZÜNETEL')
+   end
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
+ if (Assigned(vlcMediaPlayer1)) then
+  if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0) then
+   begin
+    StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
+    af.camlog('Élõkép(2) SZÜNETEL')
+   end
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
+ if (Assigned(vlcMediaPlayer2)) then
+  if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0) then
+   begin
+    StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
+    af.camlog('Élõkép(1) SZÜNETEL')
+   end
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
+if (Assigned(vlcMediaPlayer3)) then
+  if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 0) then
+   begin
+    StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
+    af.camlog('Élõkép(2) SZÜNETEL')
+   end
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
+ //Application.ProcessMessages;
+ elokep_timer.Enabled:=true;
+end;
+
 procedure TFoF.teszt_mClick(Sender: TObject);
 begin
 tesztF.showmodal;
@@ -574,6 +612,7 @@ begin
      end;
    end;
  end;
+ elokep_timer.Enabled:=lejatszas
 
 end;
 
@@ -591,6 +630,7 @@ begin
   begin
    if lejatszas then
     begin
+     elokep_timer.Enabled:=false;
      stop(False);
      CanClose := FreeLibrary(vlclib);
     end
@@ -1133,40 +1173,47 @@ var
   i: Integer;
 begin
   if (not van_plugin)or(not lejatszas) then exit;
-
-  FormatSettings.ShortDateFormat := 'yyyy.mm.dd';
-  fn := StringReplace(StringReplace(DateTimeToStr(Now), '.', '', [rfReplaceAll]), ':', '', [rfReplaceAll]);
-  fn := StringReplace(p + '_' + fn, ' ', '', [rfreplaceAll]);
- //insert('1',fn,8); //beszurom h a masodik fele mindig egyessel induljon
+  Result := 'Pillanat felvétel sikertelen';
   try
+   lejatszas_ellenorzese //ha hozzá van rendelve de nincs lejátszás újraindítja
+  finally
+    FormatSettings.ShortDateFormat := 'yyyy.mm.dd';
+    fn := StringReplace(StringReplace(DateTimeToStr(Now), '.', '', [rfReplaceAll]), ':', '', [rfReplaceAll]);
+    fn := StringReplace(p + '_' + fn, ' ', '', [rfreplaceAll]);
+   //insert('1',fn,8); //beszurom h a masodik fele mindig egyessel induljon
     try
-      case p[1] of
-        '0':
-          libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-        '1':
-          libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-   (*'3':libvlc_video_take_snapshot(vlcMediaPlayer2,0,PAnsiChar(AnsiString(mappa+fn+'.png')),0,0);
-   '4':libvlc_video_take_snapshot(vlcMediaPlayer3,0,PAnsiChar(AnsiString(mappa+fn+'.png')),0,0);*)
-      end;
-      for i := 0 to 9 do
-      begin
-        if fileExists(kepmappa + fn + '.png') then
+      try
+        case p[1] of
+          '0':begin
+               //kis camera pillanat felvétel
+               if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+               //nagy camera pillanat felvétel
+               if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+              end;
+          '1':begin
+               //kis camera pillanat felvétel
+               if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+               //nagy camera pillanat felvétel
+               if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+              end;
+        end;
+        for i := 0 to 9 do
         begin
-          kep_konvertalasa(kepmappa + fn + '.png');
-          break
-        end
-        else  sleep(100);
+          if fileExists(kepmappa + fn + '.png') then
+          begin
+            kep_konvertalasa(kepmappa + fn + '.png');
+            break
+          end
+          else  sleep(200);
+        end;
+      finally
+        if fileExists(kepmappa + fn + '.jpg') then result := kepmappa + fn + '.jpg'
+        else Result := 'Pillanat felvétel sikertelen';
       end;
-    finally
-      if fileExists(kepmappa + fn + '.jpg') then
-        result := kepmappa + fn + '.jpg'
-      else
-        Result := 'Pillanat felvétel sikertelen';
+    except
+      Result := 'Pillanat felvétel sikertelen';
     end;
-  except
-    Result := 'Pillanat felvétel sikertelen';
   end;
-
 end;
 
 procedure varakozas;
@@ -1388,6 +1435,38 @@ begin
   ShellExecute(Handle, nil, PChar(Application.ExeName), PChar(f_ide.ToString), nil, SW_SHOWNORMAL);
   af.restart_log;
   Application.Terminate;
+end;
+
+procedure TFoF.lejatszas_ellenorzese;
+begin
+  //kis kamera lejatszas van
+  elokep_timer.Enabled:=false;
+  if (Assigned(vlcMediaPlayer0))and (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0)
+     or (Assigned(vlcMediaPlayer1))and (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0)
+  then
+  begin
+     try
+       FoF.stop(false);
+     finally
+       Fof.play(false);
+     end;
+     af.camlog('Újraindítás kellett')
+  end
+  else af.camlog('NEM kellett újraindítás ');
+  //nagykamera lejátszás van
+  if (Assigned(vlcMediaPlayer2))and (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0)
+     or (Assigned(vlcMediaPlayer3))and (libvlc_media_player_is_playing(vlcMediaPlayer3) = 0)
+  then
+  begin
+     try
+       FoF.stop(true);
+     finally
+       Fof.play(true);
+     end;
+     af.camlog('Újraindítás kellett')
+  end
+  else af.camlog('NEM kellett újraindítás ');
+  elokep_timer.Enabled:=true;
 end;
 
 procedure TFoF.Lista1Click(Sender: TObject);

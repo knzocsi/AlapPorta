@@ -13,12 +13,19 @@ object tesztF: TtesztF
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 184
+    Top = 160
+    Width = 537
+    Height = 13
+    Caption = 'Label1'
+  end
   object Button1: TButton
     Left = 184
     Top = 88
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'stop'
     TabOrder = 0
     OnClick = Button1Click
   end
@@ -33,6 +40,24 @@ object tesztF: TtesztF
     Items.Strings = (
       'Report 1'
       'Report 2')
+  end
+  object Button2: TButton
+    Left = 288
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'play'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 392
+    Top = 88
+    Width = 75
+    Height = 25
+    Caption = 'snapshot'
+    TabOrder = 3
+    OnClick = Button3Click
   end
   object frxtesztrep: TfrxReport
     Version = '6.7'

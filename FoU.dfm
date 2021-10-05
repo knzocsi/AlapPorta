@@ -44,6 +44,14 @@ object FoF: TFoF
       item
         Text = 'T'#246'meg:'
         Width = 50
+      end
+      item
+        Text = #201'l'#337'k'#233'p(1):'
+        Width = 150
+      end
+      item
+        Text = #201'l'#337'k'#233'p(2):'
+        Width = 150
       end>
   end
   object pnlBaloldal: TPanel
@@ -548,6 +556,12 @@ object FoF: TFoF
     ConnectTimeout = 0
     OnResponseError = mcIOmodulResponseError
     Left = 705
+    Top = 192
+  end
+  object elokep_timer: TTimer
+    Enabled = False
+    OnTimer = elokep_timerTimer
+    Left = 953
     Top = 192
   end
 end
