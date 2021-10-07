@@ -205,7 +205,7 @@ uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
-  levon_szovegekU;
+  levon_szovegekU, demotomegU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -421,37 +421,67 @@ begin
 end;
 
 procedure TFoF.elokep_timerTimer(Sender: TObject);
+var kiskam1,kiskam2,nagykam1,nagykam2:Boolean;
 begin
  elokep_timer.Enabled:=false;
+ kiskam1:=False;
+ kiskam2:=false;
+ nagykam1:=false;
+ nagykam2:=False;
+
  if (Assigned(vlcMediaPlayer0)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0) then
    begin
     StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
-    af.camlog('Élõkép(1) SZÜNETEL')
+    af.camlog('Élõkép(1) SZÜNETEL');
+    kiskam1:=true;
    end
   else if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
  if (Assigned(vlcMediaPlayer1)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0) then
    begin
     StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
-    af.camlog('Élõkép(2) SZÜNETEL')
+    af.camlog('Élõkép(2) SZÜNETEL');
+    kiskam2:=true;
    end
   else if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
  if (Assigned(vlcMediaPlayer2)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0) then
    begin
     StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
-    af.camlog('Élõkép(1) SZÜNETEL')
+    af.camlog('Élõkép(1) SZÜNETEL');
+    nagykam1:=true;
    end
   else if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
 if (Assigned(vlcMediaPlayer3)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 0) then
    begin
     StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
-    af.camlog('Élõkép(2) SZÜNETEL')
+    af.camlog('Élõkép(2) SZÜNETEL');
+    nagykam2:=true;
    end
   else if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
  //Application.ProcessMessages;
+ //ha valamelyik true újra kell indítani, azért van így külön hogy csak egyszer indítsa újra
+ if kiskam1 or kiskam2 then
+  begin
+    try
+       FoF.stop(false);
+    finally
+       Fof.play(false);
+    end;
+    af.camlog('Újraindítás kellett')
+  end;
+  //nagy kamerák
+ if nagykam1 or nagykam2 then
+  begin
+    try
+       FoF.stop(true);
+    finally
+       Fof.play(true);
+    end;
+    af.camlog('Újraindítás kellett')
+  end;
  elokep_timer.Enabled:=true;
 end;
 
@@ -598,7 +628,9 @@ begin
   Rendszam_Lampa_Timer.Enabled := True;
  finally
    button2.visible:=nagykamera;
-
+   elokep_timer.Enabled:=lejatszas;
+   StatusBar1.panels[5].Text:='';
+   StatusBar1.panels[6].Text:='';
    if (nagykamera)and(lejatszas) then
    begin
     try
@@ -611,8 +643,8 @@ begin
       nagykamF.showmodal;
      end;
    end;
+   if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
  end;
- elokep_timer.Enabled:=lejatszas
 
 end;
 
@@ -1376,9 +1408,12 @@ begin
   if (StatusBar1.panels[4].text<>'') and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)]='g') then pont:='.';
 
   StatusBar1.panels[4].text := 'Tömeg: ' + mertertek + ' kg'+pont;
+
+
   lblIrany.caption:=meresirany;
   try
    tomeg:=strtoint(mertertek);
+   if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertek);
    {
    if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
    begin
@@ -1580,8 +1615,8 @@ var
       Close;
       SQL.Clear;
       SQL.Add('Insert into forgalom ');
-      SQL.Add('(Datum,Ido,Rendszam,Rendszam2,Irany,Kod,Szallitolev,Tomeg,Kepnev1,Kepnev2,Parositott,Nem_kell)');
-      SQL.Add(' VALUES(:Datum,:Ido,:Rendszam,:Rendszam2,:Irany,:Kod,:Szallitolev,:Tomeg,:Kepnev1,:Kepnev2,:Parositott,:Nem_Kell) ');
+      SQL.Add('(Datum,Ido,Rendszam,Rendszam2,Irany,Kod,Szallitolev,Tomeg,Kepnev1,Kepnev2,Parositott,Nem_kell,kezi)');
+      SQL.Add(' VALUES(:Datum,:Ido,:Rendszam,:Rendszam2,:Irany,:Kod,:Szallitolev,:Tomeg,:Kepnev1,:Kepnev2,:Parositott,:Nem_Kell,:kezi) ');
       ParamByName('Datum').AsDate := Date;
       ParamByName('Ido').AsTime := Time;
       ParamByName('Rendszam').AsString := lblRendszam_elso.Caption;
@@ -1598,7 +1633,6 @@ var
       //showmessage(SQL.Text);
       ExecSQL;
       Close;
-
     end;
   end;
 

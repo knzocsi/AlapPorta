@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.756,N:\Delphi_10_4\Merleges\Alap\Unit1.dfm=N:\Delphi_10_4\Merleges\Alap\tesztU.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.263,=N:\Delphi_10_4\Merleges\Alap\create_sample_resp.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\EkaerU.pas=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.571,=N:\Delphi_10_4\Merleges\Alap\Mjegy_sa_ho_ka.fr3</Transaction>
     <Transaction>1899.12.30 00:00:00.000.607,N:\Delphi_10_4\Merleges\Alap\Unit1.dfm=N:\Delphi_10_4\Merleges\Alap\levon_szovegekU.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.308,=N:\Delphi_10_4\Merleges\Alap\Ping2U.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.202,=N:\Delphi_10_4\Merleges\Alap\ekaermanagement.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.756,N:\Delphi_10_4\Merleges\Alap\Unit1.dfm=N:\Delphi_10_4\Merleges\Alap\tesztU.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.821,=N:\Delphi_10_4\Merleges\Alap\teszt2rep.fr3</Transaction>
     <Transaction>1899.12.30 00:00:00.000.532,N:\Delphi_10_4\Merleges\Alap\teszt2rep.fr3=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.504,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.099,N:\Delphi_10_4\Merleges\Alap\FelrakCimekU.pas=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.263,=N:\Delphi_10_4\Merleges\Alap\create_sample_resp.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,=N:\Delphi_10_4\Merleges\Alap\Mjegy_sa_ho_ka.fr3</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.308,=N:\Delphi_10_4\Merleges\Alap\Ping2U.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\EkaerU.pas=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.099,N:\Delphi_10_4\Merleges\Alap\FelrakCimekU.dfm=N:\Delphi_10_4\Merleges\Alap\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.202,=N:\Delphi_10_4\Merleges\Alap\ekaermanagement.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.182,N:\Delphi_10_4\Merleges\Alap\Db_modU.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.590,=N:\Delphi_10_4\Merleges\Alap\MjegyKUJ_nelkul.fr3</Transaction>
     <Transaction>1899.12.30 00:00:00.000.552,N:\Delphi_10_4\Merleges\Alap\teszt1rep.fr3=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.803,=N:\Delphi_10_4\Merleges\Alap\teszt1rep.fr3</Transaction>
     <Transaction>1899.12.30 00:00:00.000.768,N:\Delphi_10_4\Merleges\Alap\EkaerU.dfm=N:\Delphi_10_4\Merleges\Alap\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.182,N:\Delphi_10_4\Merleges\Alap\Db_modU.pas=</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.067,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.756,N:\Delphi_10_4\Merleges\Alap\Unit1.pas=N:\Delphi_10_4\Merleges\Alap\tesztU.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.918,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.607,N:\Delphi_10_4\Merleges\Alap\Unit1.pas=N:\Delphi_10_4\Merleges\Alap\levon_szovegekU.pas</Transaction>
-    <Transaction>2021.10.04 17:34:48.808,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>2021.10.04 17:46:29.099,N:\Delphi_10_4\Merleges\Alap\FelrakCimekU.pas=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
-    <Transaction>2021.10.04 17:46:29.099,N:\Delphi_10_4\Merleges\Alap\FelrakCimekU.dfm=N:\Delphi_10_4\Merleges\Alap\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.504,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.067,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.756,N:\Delphi_10_4\Merleges\Alap\Unit1.pas=N:\Delphi_10_4\Merleges\Alap\tesztU.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.808,=N:\Delphi_10_4\Merleges\Alap\Unit1.pas</Transaction>
+    <Transaction>2021.10.07 09:51:55.598,=N:\Delphi_10_4\Merleges\Alap\demotomegU.pas</Transaction>
   </Transactions>
 </BorlandProject>

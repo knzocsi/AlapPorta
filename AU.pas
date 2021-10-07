@@ -145,6 +145,7 @@ type
     procedure merlegjegy_tipus_betoltese;
     procedure merlegjegy_tomeglevonas;
     procedure camlog(S:string);
+    procedure tomeglog(S:string);
     { Public declarations }
   end;
 
@@ -172,7 +173,7 @@ var
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve:String;
-  Merlegjegy_tipus,alap_atvevo,alap_elado:Integer;
+  Merlegjegy_tipus,alap_atvevo,alap_elado,lado:Integer;
 
 
 implementation
@@ -499,9 +500,9 @@ begin
 
   nagykamera:=i.ReadBool('ALAP','Nagy_kamera_kep',False);
   i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
+
   Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
   i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
-
 
   PLC_IP:=i.ReadString('PLC_USB','PLC_IP','Local');
   i.writeString('PLC_USB','PLC_IP',PLC_IP);
@@ -638,6 +639,9 @@ begin
   i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
   ekaer_csk:=i.ReadString('EKAER','ekaer_alakulcs','');
   i.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
+
+  lado:=i.ReadInteger('ALAP','Lado',0);
+  i.WriteInteger('ALAP','Lado',lado);
 
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1177,6 +1181,20 @@ with taraQ do
    Open();
    Result:=Fields[0].AsInteger;
  end;
+end;
+
+procedure TAF.tomeglog(S: string);
+  var tf : TextFile;
+    m:string;
+begin
+ m:=ExtractFileDir(application.exename);
+// ForceDirectories(m);
+ AssignFile(tf,m+'\tomeg_log_'+formatDatetime('YYYYMMDD',Now)+'.txt');
+ if not FileExists(m+'\tomeg_log_'+formatDatetime('YYYYMMDD',Now)+'.txt') then ReWrite(tf)
+ else Append(tf);
+ WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
+ Writeln(tf,'*****************************************************************************************************************');
+ CloseFile(tf);
 end;
 
 function TAF.Transform(Value: String): String;

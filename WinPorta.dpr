@@ -40,7 +40,8 @@ uses
   Ping2U in 'Ping2U.pas',
   tesztU in 'tesztU.pas' {tesztF},
   levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF},
-  FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF};
+  FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF},
+  demotomegU in 'demotomegU.pas' {DemotomegF};
 
 {$R *.res}
 
@@ -79,5 +80,6 @@ begin
   Application.CreateForm(TtesztF, tesztF);
   Application.CreateForm(Tlevon_szovegekF, levon_szovegekF);
   Application.CreateForm(TfelrakcimekF, felrakcimekF);
+  Application.CreateForm(TDemotomegF, DemotomegF);
   Application.Run;
 end.

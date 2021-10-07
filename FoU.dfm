@@ -43,7 +43,7 @@ object FoF: TFoF
       end
       item
         Text = 'T'#246'meg:'
-        Width = 50
+        Width = 100
       end
       item
         Text = #201'l'#337'k'#233'p(1):'
