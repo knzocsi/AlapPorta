@@ -167,13 +167,12 @@ end;
 
 procedure TTermekekF.lbl1DblClick(Sender: TObject);
 begin
-if aF.van_joga('j7')then
-kezdokeszletF.showmodal
+  if aF.van_joga('j7')then kezdokeszletF.showmodal;
 end;
 
 procedure TTermekekF.TermekTAfterInsert(DataSet: TDataSet);
 begin
- TermekT.FieldByName('kod').AsString:=aF.kod(5,'0','termek');
+  TermekT.FieldByName('kod').AsString:=aF.kod(5,'0','termek');
 end;
 
 procedure TTermekekF.TermekTBeforeInsert(DataSet: TDataSet);
@@ -184,26 +183,26 @@ end;
 
 procedure TTermekekF.TermekTBeforePost(DataSet: TDataSet);
 begin
-if dedkod.Text='' then
- begin
-   ShowMessage('Adja meg a kódot');
-   if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
- end;
-if af.kod_foglalt(TermekTID.AsInteger,dedkod.Text,'termek') then
- begin
-   ShowMessage('Ez a kód már foglalt!');
-   if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
- end;
- if dednev.Text='' then
- begin
-   ShowMessage('Adja meg a nevet');
-   if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
- end;
-if af.nev_foglalt(TermekTID.AsInteger,dednev.Text,'termek') then
- begin
-   ShowMessage('Ez a név már foglalt!');
-   if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
- end;
+  if dedkod.Text='' then
+  begin
+    ShowMessage('Adja meg a kódot');
+    if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if af.kod_foglalt(TermekTID.AsInteger,dedkod.Text,'termek') then
+  begin
+    ShowMessage('Ez a kód már foglalt!');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if dednev.Text='' then
+  begin
+    ShowMessage('Adja meg a nevet');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if af.nev_foglalt(TermekTID.AsInteger,dednev.Text,'termek') then
+  begin
+    ShowMessage('Ez a név már foglalt!');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+   end;
 end;
 
 end.

@@ -613,6 +613,7 @@ begin
         PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
       end;
     end;
+  { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
   if Elso_lampa <> 0 then
     Lampakapcs(Elso_lampa, Lampa_Zold);
   if Hatso_lampa <> 0 then
@@ -631,6 +632,7 @@ begin
    elokep_timer.Enabled:=lejatszas;
    StatusBar1.panels[5].Text:='';
    StatusBar1.panels[6].Text:='';
+   if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
    if (nagykamera)and(lejatszas) then
    begin
     try
@@ -640,12 +642,10 @@ begin
          Fof.play(true);
         end;
      finally
-      nagykamF.showmodal;
+      nagykamF.show;
      end;
    end;
-   if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
  end;
-
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -1662,7 +1662,9 @@ var
       rendszamvolt := true;
       mentes;
       if Elso_Gomb_Meres_Utan=1 then btnElsoClick(Sender);
-
+      { TODO -oKNZ -c : Ide kell a lampa befelé fordulas 2021. 10. 19. 17:57:26 }
+      if Elso_lampa <> 0 then
+      Lampakapcs(Elso_lampa, Lampa_Zold);
       //Felnyitja a soropmót a lehajtáshoz
       if meresirany='KI' then PLC_Ir(Sorompo_Nyit_Cim_BE, 1)
       else
@@ -1718,6 +1720,7 @@ var
             PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
             PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
           end;
+      { TODO -oKNZ -c : Ide kell a lampa kifelefordulas 2021. 10. 19. 17:58:03 }
       if (not (ledLampa.Kind = lkGreenLight))  then
       begin
         Lampakapcs(Elso_lampa, Lampa_Zold);

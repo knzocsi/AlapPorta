@@ -1187,13 +1187,13 @@ procedure TAF.tomeglog(S: string);
   var tf : TextFile;
     m:string;
 begin
- m:=ExtractFileDir(application.exename);
-// ForceDirectories(m);
+ m:=ExtractFileDir(application.exename)+'\LOG';
+ ForceDirectories(m);
  AssignFile(tf,m+'\tomeg_log_'+formatDatetime('YYYYMMDD',Now)+'.txt');
  if not FileExists(m+'\tomeg_log_'+formatDatetime('YYYYMMDD',Now)+'.txt') then ReWrite(tf)
  else Append(tf);
- WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
- Writeln(tf,'*****************************************************************************************************************');
+ WriteLn(tf, Datetimetostr(Now)+' -'+s);
+ //Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
 end;
 
@@ -1208,7 +1208,7 @@ end;
 
 function TAF.van_joga(jogszam: string): Boolean;
 begin
-Result:=felhasznalok_jogai.Locate('f_id;jszam;jog',varArrayOf([f_ide,jogszam,True]),[]);
+  Result:=felhasznalok_jogai.Locate('f_id;jszam;jog',varArrayOf([f_ide,jogszam,True]),[]);
 end;
 
 end.

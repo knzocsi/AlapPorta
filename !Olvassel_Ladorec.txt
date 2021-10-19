@@ -1,0 +1,32 @@
+A mérlegjegy szerinti elrendezés alapján fentről lefelé haladva a következők lennének:
+ 
+1.)    Egy db A4-es oldalon szerepel a két mérlegjegy ahogy ezt korábban megbeszéltek szerint, de szeretnénk ha a példányszám úgy szerepelne, hogy a „felső” az 1.példány és az „alsó” a 2.példány.
+2.)    „Mérést végző” megnevezés helyett, ITM által meghatározott követelmények szerint: „Mérlegelés helye” szerepeljen! 
+Illetve ebben a mezőben látszódjon a cég teljes neve, címe, adószáma, cégjegyzékszáma. + Mérleg típusa(!)
+3.)    Átadó és Átvevő megnevezése: Feladó/Eladó és Átvevő/Vevő legyen!à és név, cím, adószám, KÜJ KTJ –vel szerepeljen.
+4.)    Én személy szerint a további soroknál az alábbi logikai sorrendet állítanám fel (ha megoldható):
+-          Szállítólevél
+-          Rendszámok / mérés iránya
+-          Első mérés időpontja / második mérés időpontja
+-          Megjegyzés
+-          Termék kód / Termék név / „EWC/HAK”àegységár helyett
+-          Bruttó (húzó)  / Bruttó (pót)
+-          Tára (húzó) / Tára (pót)          / Nettó (összesen)
+-          Tömeglevonás: Göngyöleg /  kilogrammban
+-          Nedvesség (% ) /  Nedvességlevonás: (kg)
+-          Szennyeződés (%) / Szennyeződés levonás (kg)
+-          Számított nettó tömeg: x kg
+-          Aláírások: Kiállító / Szállító megnevezéssel, de ez a legkevesebb.
++1  Alapnedvesség + nedvességvesztés + egységár nem kell a mérlegjegyre
+ 
+Egyéb észrevételek magához a program kezeléséhez/használatához:
+ 
+1.)    Partnertörzs/termékek begépeléssel kereshető legyen.
+2.)    Fotókat nem csinált egy ideje a program, nem tudom mi lehet az oka, illetve még ehhez tartozik, ha kamiont mérünk akkor 4 képet kellene rögzítenie (2-t bemérésnél, 2-t kimérésnél – húzóról és pótról)
+3.)    Szintén a kamion mérlegeléshez, amit beszéltünk, hogy valami alapján tudja a program összekapcsolni, hogy épp melyik részét mérjük (húzó vagy pót) és a megfelelő „helyre” írja a súlyokat.
+4.)    Van lehetőség kipipálni, hogy „Nincs pótkocsi” ezesetben kétszer hozza a rendszámot a Rendszám 1 és Rendszám 2 mezőbe. Nem lehetne, hogy csak az egyik mezőt töltöm vagy mindkettőt és kész? 
+5.)    Valamint megbeszéltük, hogy több minőséget mérni, azaz göngyölni a súlyokat, csak úgy van lehetőség, ha kézi méréssel hozzáadom az előző mérés táráját, jelenlegi bruttóként.
+Pl: Bruttó: 3200 kg ebből lejött 40 kg karton akkor a Tára: 3160 kg, ezeket párban kiválasztom, így ha levesszük róla képletesen a fólia hulladékot, ami 200 kg akkor a ténylegesen üres súlya: 2960 kg. 
+Ennek nem lesz meg a „bruttó párja”, de a 3160 kg-hoz már tartozik mérlegjegyszám, ezért kézzel újra hozzá kell adni, hogy tudjuk készíteni mérlegjegyet a fólia hulladékhoz is.
+6.)    A partnerhez hozzá tudnánk-e esetleg rendelni a hulladék eredetét? Ha van KÜJ/KTJ adott partnernek akkor „M” mint egyéb termelői, Ha nincs KÜJ/KTJ akkor „T” mint termelői települési, vagy „L” mint lakossági!
+7.)    Valamiért nagyon lassúak a gépeink mióta felkerült rá a mérlegprogram, ez befolyásolhatja?

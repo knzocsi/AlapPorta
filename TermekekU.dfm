@@ -430,7 +430,6 @@
         Height = 21
         DataField = 'ewc'
         DataSource = TermekDS
-        MaxLength = 20
         TabOrder = 19
       end
     end

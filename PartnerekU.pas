@@ -102,7 +102,7 @@ end;
 
 procedure TPartnerekF.Button3Click(Sender: TObject);
 begin
- af.tabla_kizar('partner')
+ af.tabla_kizar('partner');
 end;
 
 procedure TPartnerekF.FormActivate(Sender: TObject);
