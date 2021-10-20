@@ -513,6 +513,8 @@ begin
     with MainMenu1 do
     for h := 0 to Items.Count-1 do
     if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
+    alapbe_m.visible:=felhnev='Programozó';
+    teszt_m.visible:=felhnev='Programozó';
   end
 end;
 
