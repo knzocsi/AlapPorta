@@ -17,7 +17,7 @@ type
     pcListaReszlet: TPageControl;
     tbLista: TTabSheet;
     tbReszlet: TTabSheet;
-    DBGrid1: TDBGrid;
+    PartnerGrid: TDBGrid;
     DBNavigator1: TDBNavigator;
     PartnerT: TFDTable;
     lbl1: TLabel;
@@ -60,6 +60,10 @@ type
     Label5: TLabel;
     Label6: TLabel;
     dbedthrsz: TDBEdit;
+    Panel2: TPanel;
+    Label7: TLabel;
+    lblmire: TLabel;
+    edszures: TEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);
@@ -68,15 +72,20 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure PartnerGridMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure edszuresChange(Sender: TObject);
   private
     { Private declarations }
+    procedure szures;
   public
     { Public declarations }
   end;
 
 var
   PartnerekF: TPartnerekF;
-
+  col_neve,col_felirat:String;
 implementation
 
 uses
@@ -105,12 +114,41 @@ begin
  af.tabla_kizar('partner');
 end;
 
+procedure TPartnerekF.edszuresChange(Sender: TObject);
+begin
+ szures
+end;
+
 procedure TPartnerekF.FormActivate(Sender: TObject);
 begin
   OnActivate:=nil;
   pcListaReszlet.ActivePage:=TTabSheet(tbLista);
   PartnerT.Open();
 
+end;
+
+procedure TPartnerekF.FormCreate(Sender: TObject);
+begin
+ col_neve:='kod';
+ col_felirat:='Kód';
+end;
+
+procedure TPartnerekF.PartnerGridMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+try
+ if (button= mbRight) and (PartnerGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szűr
+  begin
+   Col_neve:=(Sender as TDBGrid).Columns[PartnerGrid.MouseCoord(X,Y).X-1].FieldName;
+   col_felirat:=(Sender as TDBGrid).Columns[PartnerGrid.MouseCoord(X,Y).X-1].Title.Caption;
+   lblmire.Caption:=col_felirat;
+   edszures.SetFocus;
+  end;
+if (button= mbleft) and (PartnerGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+    af.rendez(PartnerT,(Sender as TDBGrid).Columns[PartnerGrid.MouseCoord(X,Y).X-1].FieldName);
+except
+ //
+end;
 end;
 
 procedure TPartnerekF.PartnerTAfterInsert(DataSet: TDataSet);
@@ -145,6 +183,19 @@ end;
 procedure TPartnerekF.PartnerTBeforeInsert(DataSet: TDataSet);
 begin
 //
+end;
+
+procedure TPartnerekF.szures;
+var felt:string;
+begin
+  felt:='';
+  if edszures.Text<>'' then felt:=' UPPER('+col_neve+')LIKE UPPER('+#39+'%'+edszures.Text+'%'+#39+')';
+  with PartnerT do
+  begin
+    Filtered:=false;
+    filter:=felt;
+    Filtered:=true;
+  end;
 end;
 
 end.

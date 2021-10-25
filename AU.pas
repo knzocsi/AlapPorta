@@ -146,6 +146,7 @@ type
     procedure merlegjegy_tomeglevonas;
     procedure camlog(S:string);
     procedure tomeglog(S:string);
+    procedure rendez(ds: TFDDataSet; fname:string);
     { Public declarations }
   end;
 
@@ -990,6 +991,27 @@ with Q1 do
    ExecSQL;
    Close;
  end;
+end;
+
+procedure TAF.rendez(ds: TFDDataSet; fname: string);
+var aktindex,ujindex:string;
+begin
+  aktindex:='';
+  ujindex:='';
+ with ds do
+  begin
+   if indexfieldNames='' then IndexFieldNames:=fname+':A'
+   else
+   begin
+     aktindex:=IndexFieldNames;
+     IndexFieldNames.Empty;
+     if (fname=Copy(aktindex,0,Length(fname))) then
+     if (Pos(':A',aktindex)=0) then ujindex:=fname+':A' else ujindex:=fname+':D'
+     else ujindex:=fname+':A';
+     IndexFieldNames:=ujindex;
+   end;
+  { if (Pos(':A',ujindex)=0) then Last else} First
+  end;
 end;
 
 procedure TAF.rendszam_combok(combobox: TComboBox);

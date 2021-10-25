@@ -1158,46 +1158,46 @@ begin
 end;
 
 procedure TMjegyF.szazalek;
-var tt,sze,szu,levsz,tsz:Extended;
+var tisztitott_tomeg,sze,szu,levsz,tortszem_szazalek,tortszem_tomeg:Extended;
 begin
   nedvesseg:='0';
   tisztasag:='0';
   nedvelvon:='0';
 
-  br:=0;tr:=0;aned:=0;ned:=0;tisz:=0;tsz:=0;tt:=0;sze:=0;szu:=0;levsz:=0;
-  tsz:=0;nedvesseg:='';tisztasag:='';ttom:=0;
+  br:=0;tr:=0;aned:=0;ned:=0;tisz:=0;tortszem_szazalek:=0;tisztitott_tomeg:=0;sze:=0;szu:=0;levsz:=0;
+  nedvesseg:='';tisztasag:='';ttom:=0;
   br := SpBrutto.Value;
   tr := Sptara.value;
   aned := SpAlapnedv.Value;
   ned := SpNedv.Value;
   tisz := Sptisztasag.Value;
-  tsz:= Sptort.Value;
+  tortszem_szazalek:= Sptort.Value;
   if sp_tomeg_levon.Text='' then sp_tomeg_levon.Value:=0;
   
   nedvesseg := IntToStr(round((br-tr)*((ned-aned)/100.0)));
   tisztasag := IntToStr(round((br-tr)*((tisz)/100.0)));
   //tort szemek tomege
-  ttom:=(round((br-tr)*(tsz/100.0)));
+  tortszem_tomeg:=(round((br-tr)*(tortszem_szazalek/100.0)));
   //Öcsi
-  tt:=round((br-tr-(round((br-tr)*((tisz+tsz)/100.0)))));
+  tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tisztitott_tomeg)/100.0)))));
 
-  sze:=1-((tisz+tsz+ned)/100);
-  szu:=1-((tisz+tsz+aned)/100);
+  sze:=1-((tisz+tortszem_szazalek+ned)/100);
+  szu:=1-((tisz+tortszem_szazalek+aned)/100);
   levsz:=sze/szu;
-      if chkkuk.Checked then
-       begin
-         Spsznetto.Value :=Round(levsz*tt)-sp_tomeg_levon.Value;
-         nedvelvon:=FloatToStr(Round((1-levsz)*tt));
-       end
-      else
-       begin
-         Spsznetto.Value := round(tt-(tt*(ned-aned))/100.0)-sp_tomeg_levon.Value;
-         nedvelvon:=FloatToStr(Round((ned-aned)*tt/100));
-       end;
+  if chkkuk.Checked then
+  begin
+    Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
+    nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
+  end
+  else
+  begin
+    Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
+    nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
+  end;
 
-    if nedvesseg='' then nedvesseg:='0';
-    if nedvelvon='' then nedvelvon:='0';
-    if tisztasag='' then tisztasag:='0';
+  if nedvesseg='' then nedvesseg:='0';
+  if nedvelvon='' then nedvelvon:='0';
+  if tisztasag='' then tisztasag:='0';
 end;
 
 procedure TMjegyF.termeklookupCloseUp(Sender: TObject);

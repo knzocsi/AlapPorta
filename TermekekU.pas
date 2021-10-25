@@ -17,7 +17,7 @@ type
     btnKilepes: TButton;
     pcListaReszlet: TPageControl;
     tbLista: TTabSheet;
-    DBGrid1: TDBGrid;
+    termekgrid: TDBGrid;
     tbReszlet: TTabSheet;
     DBNavigator1: TDBNavigator;
     TermekT: TFDTable;
@@ -73,6 +73,10 @@ type
     TermekTewc: TWideStringField;
     Label6: TLabel;
     dedewc: TDBEdit;
+    Panel2: TPanel;
+    Label7: TLabel;
+    lblmire: TLabel;
+    edszures: TEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);
@@ -80,15 +84,20 @@ type
     procedure lbl1DblClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure TermekTBeforePost(DataSet: TDataSet);
+    procedure FormCreate(Sender: TObject);
+    procedure edszuresChange(Sender: TObject);
+    procedure termekgridMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
     { Private declarations }
+    procedure szures;
   public
     { Public declarations }
   end;
 
 var
   TermekekF: TTermekekF;
-
+  col_neve,col_felirat:String;
 implementation
 uses
   AU, kezdokeszletU;
@@ -147,6 +156,29 @@ begin
 end;
 
 
+procedure TTermekekF.termekgridMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+try
+ if (button= mbRight) and (termekGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szûr
+  begin
+   Col_neve:=(Sender as TDBGrid).Columns[termekGrid.MouseCoord(X,Y).X-1].FieldName;
+   col_felirat:=(Sender as TDBGrid).Columns[termekGrid.MouseCoord(X,Y).X-1].Title.Caption;
+   lblmire.Caption:=col_felirat;
+   edszures.SetFocus;
+  end;
+if (button= mbleft) and (termekGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+    af.rendez(TermekT,(Sender as TDBGrid).Columns[termekGrid.MouseCoord(X,Y).X-1].FieldName);
+except
+ //
+end;
+end;
+
+procedure TTermekekF.edszuresChange(Sender: TObject);
+begin
+ szures
+end;
+
 procedure TTermekekF.FormActivate(Sender: TObject);
 
    procedure checklatszik;
@@ -165,9 +197,28 @@ begin
   TermekT.Open();
 end;
 
+procedure TTermekekF.FormCreate(Sender: TObject);
+begin
+ col_neve:='kod';
+ col_felirat:='Kód';
+end;
+
 procedure TTermekekF.lbl1DblClick(Sender: TObject);
 begin
   if aF.van_joga('j7')then kezdokeszletF.showmodal;
+end;
+
+procedure TTermekekF.szures;
+var felt:string;
+begin
+  felt:='';
+  if edszures.Text<>'' then felt:=' UPPER('+col_neve+')LIKE UPPER('+#39+'%'+edszures.Text+'%'+#39+')';
+  with termekt do
+  begin
+    Filtered:=false;
+    filter:=felt;
+    Filtered:=true;
+  end;
 end;
 
 procedure TTermekekF.TermekTAfterInsert(DataSet: TDataSet);

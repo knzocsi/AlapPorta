@@ -13,6 +13,7 @@ object PartnerekF: TPartnerekF
   OldCreateOrder = False
   Position = poMainFormCenter
   OnActivate = FormActivate
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -64,18 +65,17 @@ object PartnerekF: TPartnerekF
     Top = 41
     Width = 770
     Height = 328
-    ActivePage = tbReszlet
+    ActivePage = tbLista
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 296
     object tbLista: TTabSheet
       Caption = 'Lista'
-      object DBGrid1: TDBGrid
+      object PartnerGrid: TDBGrid
         Left = 0
-        Top = 0
+        Top = 64
         Width = 762
-        Height = 300
-        Align = alClient
+        Height = 236
+        Align = alBottom
         DataSource = PartnerDS
         ReadOnly = True
         TabOrder = 0
@@ -84,6 +84,38 @@ object PartnerekF: TPartnerekF
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnMouseUp = PartnerGridMouseUp
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 0
+        Width = 762
+        Height = 57
+        Align = alTop
+        TabOrder = 1
+        ExplicitTop = 8
+        object Label7: TLabel
+          Left = 12
+          Top = 2
+          Width = 39
+          Height = 13
+          Caption = 'Sz'#369'r'#233's: '
+        end
+        object lblmire: TLabel
+          Left = 52
+          Top = 2
+          Width = 18
+          Height = 13
+          Caption = 'K'#243'd'
+        end
+        object edszures: TEdit
+          Left = 12
+          Top = 18
+          Width = 242
+          Height = 21
+          TabOrder = 0
+          OnChange = edszuresChange
+        end
       end
     end
     object tbReszlet: TTabSheet
