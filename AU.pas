@@ -174,7 +174,7 @@ var
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve:String;
-  Merlegjegy_tipus,alap_atvevo,alap_elado,lado:Integer;
+  Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
 
 
 implementation
@@ -439,11 +439,11 @@ begin
   szerver:=i.ReadString('ALAP','Szerver','localhost');
   i.writeString('ALAP','Szerver',szerver);
   adatbazis:=i.ReadString('ALAP','Adatbazis','');
- { if adatbazis='' then
+  {if adatbazis='' then
    begin
     ujdbnev:=InputBox('Adatbázis neve','Adatbázis','');
     adatbazis:=ujdbnev
-   end;  }
+   end;}
   i.writeString('ALAP','Adatbazis',adatbazis);
 
   port:=i.ReadString('ALAP','Port','3307');
@@ -461,7 +461,12 @@ begin
   mintomeg:=i.ReadInteger('ALAP','Mintomeg',500);
   i.WriteInteger('ALAP','Mintomeg',mintomeg);
 
+  pingproba:=i.ReadInteger('ALAP','Pingproba',3);
+  i.WriteInteger('ALAP','Pingproba',pingproba);
 
+  kamproba:=i.ReadInteger('ALAP','Kamproba',3);
+  i.WriteInteger('ALAP','Kamproba',kamproba);
+  (*
   tulajcime:=i.ReadString('ALAP','Cim','');
   i.writeString('ALAP','Cim',tulajcime);
 
@@ -477,7 +482,7 @@ begin
   ktj:=i.ReadString('ALAP','KTJ','');
   i.writeString('ALAP','KTJ',ktj);
 
-
+  *)
 
   j:=i.ReadInteger('ALAP','Automata_kezelo',0);
   i.WriteInteger('ALAP','Automata_kezelo',j);

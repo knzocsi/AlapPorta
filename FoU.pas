@@ -198,7 +198,7 @@ var
   teszt, van_cam: Boolean;
     // A VLC plugin maPPÁja iskell a dll/ek mellett!!!!
   vlcLib: integer;
-
+  pingprobak,kamprobak:Integer;
 implementation
 
 uses
@@ -423,7 +423,9 @@ end;
 procedure TFoF.elokep_timerTimer(Sender: TObject);
 var kiskam1,kiskam2,nagykam1,nagykam2:Boolean;
 begin
+ if kamprobak=kamproba then exit;
  elokep_timer.Enabled:=false;
+ Inc(kamprobak);
  kiskam1:=False;
  kiskam2:=false;
  nagykam1:=false;
@@ -534,6 +536,8 @@ begin
   meresirany:='-';
   elozotomeg := -1;
   onActivate := nil;
+  pingprobak:=1;
+  kamprobak:=1;
   lblRendszam_elso.Caption := '';
   lblRendszam_hatso.Caption := '';
   btnElso.Visible:= Elso_Gomb_Szoveg<>'' ;
@@ -907,6 +911,7 @@ begin
               libvlc_media_release(vlcMedia0);
               libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
               libvlc_media_player_play(vlcMediaPlayer0);
+              af.camlog('play próba cam0');
             end;
            end;
 
@@ -936,6 +941,7 @@ begin
               libvlc_media_release(vlcMedia0);
               libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
               libvlc_media_player_play(vlcMediaPlayer0);
+              //af.camlog('play próba cam0');
                //cam1
               vlcInstance1 := libvlc_new(0, nil);
               if teszt then
@@ -946,6 +952,7 @@ begin
               libvlc_media_release(vlcMedia1);
               libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
               libvlc_media_player_play(vlcMediaPlayer1);
+              //af.camlog('play próba cam1');
             end;
           end;
          //else ;
@@ -1460,10 +1467,17 @@ begin
            end;
     end;
   end
-  else if vezerles_tipus = 'PLC' then
-  begin
-    PLC_Ir(Melyik, Mire);
-  end;
+  else
+    if vezerles_tipus = 'PLC' then
+    begin
+      PLC_Ir(Melyik, Mire);
+    end
+    else
+      if vezerles_tipus = 'IO' then
+      begin
+        IO_Ir(IOmodul_regiszter_iras1,Mire=1);
+      end;
+
 
 end;
 
@@ -1781,6 +1795,12 @@ var i:integer;
 begin
   Result:=False;
   if UpperCase(IP)='LOCAL' then exit;
+  if pingprobak=pingproba then
+  begin
+   StatusBar1.panels[3].text := 'PLC ping hiba!';
+   Exit;
+  end;
+  Inc(pingprobak);
   StatusBar1.panels[3].text := 'Ping teszt';
   Application.ProcessMessages;
   for I := 1 to Ping_varakozas do

@@ -248,7 +248,7 @@ begin
       end;
      TfrxMemoView(FindObject('memtulaj')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;
      TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;
-     if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memadosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;;
+     if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memtuladosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;;
      if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=mjegyekQ.FieldByName('tul_cjsz').AsString;
      if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=Merleg_neve;
      case mjegyekQ.FieldByName('irany').AsString[1] of
@@ -297,7 +297,10 @@ begin
           TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
           TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
           TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-          TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+          //ezek nem kellenek
+         // TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
          end
         else
          begin

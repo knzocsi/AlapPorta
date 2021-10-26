@@ -107,7 +107,6 @@
         <DCC_ExeOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_ExeOutput>
         <DCC_DcuOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcuOutput>
         <Icon_MainIcon>WinPorta_Icon.ico</Icon_MainIcon>
-        <Debugger_RunParams>/D</Debugger_RunParams>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">

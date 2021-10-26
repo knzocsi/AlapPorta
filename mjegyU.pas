@@ -771,7 +771,10 @@ var sorsz,pcime,egyedi:String;
           TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
           TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
           TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-          TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+          //ezek nem kellenek
+          // TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
          end
         else
          begin
