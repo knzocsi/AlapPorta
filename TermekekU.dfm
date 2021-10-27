@@ -47,7 +47,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -178,7 +178,6 @@
         Height = 57
         Align = alTop
         TabOrder = 1
-        ExplicitTop = 8
         object Label7: TLabel
           Left = 12
           Top = 2
@@ -371,9 +370,12 @@
         Top = 160
         Width = 113
         Height = 17
+        Hint = 'Sznetto=nett'#243'*(1-Tisztas'#225'g)*(1-Nedvess'#233'g)/(1-Alapnedvess'#233'g)'
         Caption = 'Kukorica sz'#225'm'#237't'#225's'
         DataField = 'kukorica'
         DataSource = TermekDS
+        ParentShowHint = False
+        ShowHint = True
         TabOrder = 10
       end
       object DBChknedv: TDBCheckBox

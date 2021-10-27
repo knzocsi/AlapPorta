@@ -291,6 +291,8 @@ case cbxirany.ItemIndex of
     lblpartner2.Caption:='Átvevõ:';
     partnerlookup2.Enabled:=true;
     btnekaer.Enabled:=false;
+    partnerlookup.keyvalue:='!';
+    if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
    end;
  2:begin //kiszállítás
     lblpartner.Caption:='Eladó:';
@@ -298,6 +300,8 @@ case cbxirany.ItemIndex of
     lblpartner2.Caption:='Vevõ:';
     partnerlookup2.Enabled:=True;
     btnekaer.Enabled:=true;
+    partnerlookup2.keyvalue:='!';
+    if alap_elado<>0 then  partnerlookup.keyvalue:=alap_elado;
    end;
 end;
 end;
@@ -1182,15 +1186,20 @@ begin
   //tort szemek tomege
   tortszem_tomeg:=(round((br-tr)*(tortszem_szazalek/100.0)));
   //Öcsi
-  tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tisztitott_tomeg)/100.0)))));
+  tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tortszem_szazalek)/100.0)))));
 
   sze:=1-((tisz+tortszem_szazalek+ned)/100);
   szu:=1-((tisz+tortszem_szazalek+aned)/100);
   levsz:=sze/szu;
   if chkkuk.Checked then
   begin
-    Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
-    nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
+    //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)
+     spSznetto.Value :=Round(tisztitott_tomeg*(1-ned/100)/(1-aned/100))-sp_tomeg_levon.Value;
+     nedvelvon:=FloatToStr(Round(tisztitott_tomeg-spSznetto.Value));
+
+    //Sznetto=nettó*(1-Tisztaság)*(1-Tisztaság-Nedvesség)/(1-Tisztaság-Alapnedvesség)
+    //Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
+    //nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
   end
   else
   begin

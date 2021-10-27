@@ -720,7 +720,10 @@ object MjegyF: TMjegyF
         Top = 4
         Width = 187
         Height = 17
+        Hint = 'Sznetto=nett'#243'*(1-Tisztas'#225'g)*(1-Nedvess'#233'g)/(1-Alapnedvess'#233'g)'
         Caption = 'kukorica sz'#225'm'#237't'#225'sok alkalmaz'#225'sa'
+        ParentShowHint = False
+        ShowHint = True
         TabOrder = 8
       end
       object sptort: TJvSpinEdit
