@@ -387,6 +387,7 @@ begin
       if Elso_Gomb_Varakozas<>0 then
       begin
         Sleep(Elso_Gomb_Varakozas);
+        Application.ProcessMessages;
         IO_Ir(IOmodul_regiszter_iras1,False);
       end;
     end;
@@ -617,6 +618,11 @@ begin
         //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
         PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
         PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
+      end
+      else
+      begin
+        PLC_Ir(Infra_BE_Cim, 0);
+        PLC_Ir(Infra_KI_Cim, 0);
       end;
     end;
   { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
@@ -1712,7 +1718,15 @@ var
                 else if PLC_Olvas(Sorompo_Nyitas_Volt_Cim_KI)=1 then meresirany:='KI';
                 PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
                 PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
+              end
+              else
+              begin
+                if PLC_Olvas(Infra_BE_Cim)=1 then meresirany:='BE'
+                else if PLC_Olvas(Infra_KI_Cim)=1 then meresirany:='KI';
+                PLC_Ir(Infra_BE_Cim, 0);
+                PLC_Ir(Infra_KI_Cim, 0);
               end;
+
           end;
         end;
 
@@ -1735,6 +1749,11 @@ var
            //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
             PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
             PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
+          end
+          else
+          begin
+            PLC_Ir(Infra_BE_Cim, 0);
+            PLC_Ir(Infra_KI_Cim, 0);
           end;
       { TODO -oKNZ -c : Ide kell a lampa kifelefordulas 2021. 10. 19. 17:58:03 }
       if (not (ledLampa.Kind = lkGreenLight))  then
