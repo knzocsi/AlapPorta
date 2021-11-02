@@ -175,6 +175,8 @@ var
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
+  Infra_Figyeles:boolean;
+  Infra_BE_Cim,Infra_KI_Cim:integer;
 
 
 implementation
@@ -547,6 +549,17 @@ begin
   j:=i.ReadInteger('PLC_USB','Sorompo_vezerles',1);
   i.WriteInteger('PLC_USB','Sorompo_vezerles',j);
   Sorompo_vezerles:=j=1;
+
+
+  j:=i.ReadInteger('PLC_USB','Infra_Figyeles',0);
+  i.WriteInteger('PLC_USB','Infra_Figyeles',j);
+  Infra_Figyeles:=j=1;
+
+  Infra_BE_Cim:=i.ReadInteger('PLC_USB','Infra_BE_Cim',14);
+  i.WriteInteger('PLC_USB','Infra_BE_Cim',Infra_BE_Cim);
+
+  Infra_KI_Cim:=i.ReadInteger('PLC_USB','Infra_KI_Cim',15);
+  i.WriteInteger('PLC_USB','Infra_KI_Cim',Infra_KI_Cim);
 
   sorompo_infra_hibas_BE:=i.ReadInteger('PLC_USB','sorompo_infra_hibas_BE',0);
   i.WriteInteger('PLC_USB','sorompo_infra_hibas_BE',sorompo_infra_hibas_BE);

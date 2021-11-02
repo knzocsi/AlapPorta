@@ -34,11 +34,12 @@ object PartnerekF: TPartnerekF
     end
     object Button1: TButton
       Left = 152
-      Top = 8
+      Top = 10
       Width = 75
       Height = 25
-      Caption = 'lez'#225'r'
+      Caption = 'Lez'#225'r'
       TabOrder = 1
+      Visible = False
       OnClick = Button1Click
     end
     object Button2: TButton
@@ -48,6 +49,7 @@ object PartnerekF: TPartnerekF
       Height = 25
       Caption = 'Ellen'#337'rz'#233's'
       TabOrder = 2
+      Visible = False
       OnClick = Button2Click
     end
     object Button3: TButton
@@ -55,8 +57,9 @@ object PartnerekF: TPartnerekF
       Top = 8
       Width = 75
       Height = 25
-      Caption = 'Kiz'#225'r'
+      Caption = 'Felold'
       TabOrder = 3
+      Visible = False
       OnClick = Button3Click
     end
   end
@@ -93,7 +96,6 @@ object PartnerekF: TPartnerekF
         Height = 57
         Align = alTop
         TabOrder = 1
-        ExplicitTop = 8
         object Label7: TLabel
           Left = 12
           Top = 2

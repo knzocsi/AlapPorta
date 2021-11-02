@@ -167,7 +167,7 @@ try
    lblmire.Caption:=col_felirat;
    edszures.SetFocus;
   end;
-if (button= mbleft) and (termekGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+  if (button= mbleft) and (termekGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
     af.rendez(TermekT,(Sender as TDBGrid).Columns[termekGrid.MouseCoord(X,Y).X-1].FieldName);
 except
  //

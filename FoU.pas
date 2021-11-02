@@ -529,13 +529,13 @@ procedure TFoF.FormActivate(Sender: TObject);
 var
   CardAddr, h,g: integer;
 begin
-
+  onActivate := nil;
   nullszintvolt := true;
   rendszamvolt := false;
   nyugalmiszamlalo := 0;
   meresirany:='-';
   elozotomeg := -1;
-  onActivate := nil;
+
   pingprobak:=1;
   kamprobak:=1;
   lblRendszam_elso.Caption := '';
@@ -620,16 +620,14 @@ begin
       end;
     end;
   { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
-  if Elso_lampa <> 0 then
-    Lampakapcs(Elso_lampa, Lampa_Zold);
-  if Hatso_lampa <> 0 then
-    Lampakapcs(Hatso_lampa, Lampa_Zold);
-  if UpperCase(ParamStr(1)) <> '/D' then PortF.portopen;
+    if Elso_lampa <> 0 then Lampakapcs(Elso_lampa, Lampa_Zold);
+    if Hatso_lampa <> 0 then  Lampakapcs(Hatso_lampa, Lampa_Zold);
+    if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS') then PortF.portopen;
   end;
   lbl1.Visible:=rendszamleker;
   lbl2.Visible:=rendszamleker;
   lbl3.Visible:=sorompo_vezerles;
-  ledLampa.Visible:=sorompo_vezerles;
+  ledLampa.Visible:=(Elso_lampa <> 0) or (Hatso_lampa <> 0);
 
   Tomeg_Timer.Enabled := true;
   Rendszam_Lampa_Timer.Enabled := True;
@@ -657,8 +655,7 @@ end;
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   programvege:=true;
-  if UpperCase(ParamStr(1)) <> '/D' then
-    PortF.portclose;
+  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS') then   PortF.portclose;
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -1483,9 +1480,12 @@ end;
 
 procedure TFoF.ledLampaDblClick(Sender: TObject);
 begin
-  ShellExecute(Handle, nil, PChar(Application.ExeName), PChar(f_ide.ToString), nil, SW_SHOWNORMAL);
-  af.restart_log;
-  Application.Terminate;
+  if ledLampa.Kind = lkGreenLight then  Lampakapcs(Elso_lampa, Lampa_Piros)
+  else Lampakapcs(Elso_lampa, Lampa_Zold);
+
+  //ShellExecute(Handle, nil, PChar(Application.ExeName), PChar(f_ide.ToString), nil, SW_SHOWNORMAL);
+  //af.restart_log;
+  //Application.Terminate;
 end;
 
 procedure TFoF.lejatszas_ellenorzese;

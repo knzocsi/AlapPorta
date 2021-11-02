@@ -174,7 +174,7 @@ object MjegyF: TMjegyF
       Caption = 'Sz'#225'll'#237't'#243'lev'#233'l:'
     end
     object Label1: TLabel
-      Left = 8
+      Left = 9
       Top = 125
       Width = 39
       Height = 13
@@ -373,7 +373,7 @@ object MjegyF: TMjegyF
       OnClick = btnMentesClick
     end
     object partnerlookup: TJvDBLookupCombo
-      Left = 8
+      Left = 9
       Top = 42
       Width = 665
       Height = 21
@@ -465,7 +465,6 @@ object MjegyF: TMjegyF
       EmptyValue = '!'
       LookupField = 'id'
       LookupDisplay = 'nev;'
-      LookupSource = AF.merlegkezQDs
       TabOrder = 11
     end
     object Button2: TButton
@@ -927,8 +926,8 @@ object MjegyF: TMjegyF
     Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
-    Left = 760
-    Top = 344
+    Left = 352
+    Top = 568
     object termeklistID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -1046,8 +1045,8 @@ object MjegyF: TMjegyF
   end
   object termeklistDs: TDataSource
     DataSet = termeklist
-    Left = 848
-    Top = 352
+    Left = 424
+    Top = 560
   end
   object jvmemparos: TJvMemoryData
     FieldDefs = <>
