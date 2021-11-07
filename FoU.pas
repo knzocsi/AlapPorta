@@ -88,6 +88,7 @@ type
     teszt_m: TMenuItem;
     tomeg_levon_szovegek_m: TMenuItem;
     elokep_timer: TTimer;
+    memLog: TMemo;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -518,6 +519,7 @@ begin
     if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
     alapbe_m.visible:=felhnev='Programozó';
     teszt_m.visible:=felhnev='Programozó';
+    memLog.Visible:=felhnev='Programozó';
   end
 end;
 
@@ -566,6 +568,7 @@ begin
   aF.jogok_beolvasasa;
   alapbe_m.visible:=felhnev='Programozó';
   teszt_m.visible:=felhnev='Programozó';
+  memLog.Visible:=felhnev='Programozó';
   tomeg_levon_szovegek_m.visible:=tomeg_levon;
 
   if rendszamleker then  socketconnect;
@@ -1559,12 +1562,14 @@ procedure TFoF.mcIOmodulResponseError(const FunctionCode, ErrorCode: Byte;
   const ResponseBuffer: TModBusResponseBuffer);
 begin
   ShowMessage('IO kapcsolati hiba!');
+  memlog.Lines.Insert(0,'IO kapcsolati hiba!');
 end;
 
 procedure TFoF.mctPLCResponseError(const FunctionCode, ErrorCode: Byte;
   const ResponseBuffer: TModBusResponseBuffer);
 begin
-  ShowMessage('PLC kapcsolati hiba!');
+  ShowMessage('PLC kapcsolati hiba!(R)');
+  memlog.Lines.Insert(0,'PLC kapcsolati hiba!(R)');
 end;
 
 procedure TFoF.Mrlegjegyeklistja1Click(Sender: TObject);
@@ -1814,19 +1819,23 @@ var i:integer;
 begin
   Result:=False;
   if UpperCase(IP)='LOCAL' then exit;
+
   if pingprobak=pingproba then
   begin
-   StatusBar1.panels[3].text := 'PLC ping hiba!';
+   StatusBar1.panels[3].text := 'PLC ping hiba!(P)';
+   memlog.Lines.Insert(0,'PLC ping hiba!(P)');
    Exit;
   end;
   Inc(pingprobak);
   StatusBar1.panels[3].text := 'Ping teszt';
+  memlog.Lines.Insert(0,'PLC teszt');
   Application.ProcessMessages;
   for I := 1 to Ping_varakozas do
   begin
     if PingHost(IP) then
     begin
       Result:=true;
+      pingprobak:=1;
       Break
     end
     else Sleep(100)
@@ -1846,16 +1855,19 @@ begin
     begin
       Result := True;
       StatusBar1.panels[3].text := 'Írt cím:' + Inttostr(cim) + ' Érték:' + Inttostr(ertek);
+      memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end
     else
     begin
       Result := False;
-      StatusBar1.panels[3].text := 'PLC írási hiba!'
+      StatusBar1.panels[3].text := 'PLC írási hiba!';
+      memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end;
   end
   else
     begin
-      StatusBar1.panels[3].text := 'PLC kapcsolati hiba!';
+      StatusBar1.panels[3].text := 'PLC kapcsolati hiba!(I)';
+      memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end;
 end;
 
@@ -1877,6 +1889,7 @@ begin
       begin
         sLine := sLine + IntToHex(Data[i], 4);
         StatusBar1.panels[3].text := sLine;
+        memlog.Lines.Insert(0,StatusBar1.panels[3].text );
         Result := Data[i];
       end;
 
@@ -1884,12 +1897,14 @@ begin
     else
     begin
       StatusBar1.panels[3].text := 'PLC olvasási hiba!';
+      memlog.Lines.Insert(0,StatusBar1.panels[3].text );
       Result := -1;
     end;
   end
   else
     begin
-      StatusBar1.panels[3].text := 'PLC kapcsolati hiba!';
+      StatusBar1.panels[3].text := 'PLC kapcsolati hiba(O)!';
+      memlog.Lines.Insert(0,StatusBar1.panels[3].text );
       Result := -1;
     end;
 end;

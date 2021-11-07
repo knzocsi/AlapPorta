@@ -156,6 +156,8 @@ object FoF: TFoF
           ActivePage = cam0
           Align = alClient
           TabOrder = 0
+          ExplicitLeft = 0
+          ExplicitTop = -2
           object cam0: TTabSheet
             Caption = 'Kamera 1'
           end
@@ -361,6 +363,17 @@ object FoF: TFoF
           Height = 105
           Stretch = True
         end
+        object memLog: TMemo
+          Left = 501
+          Top = 1
+          Width = 185
+          Height = 259
+          Align = alRight
+          Lines.Strings = (
+            'memLog')
+          TabOrder = 0
+          Visible = False
+        end
       end
       object pnlAlsokep: TPanel
         Left = 1
@@ -549,7 +562,7 @@ object FoF: TFoF
     Protocol = 1
     ProtocolIPv6 = 58
     PacketSize = 64
-    Left = 865
+    Left = 825
     Top = 192
   end
   object mcIOmodul: TIdModBusClient
@@ -561,7 +574,7 @@ object FoF: TFoF
   object elokep_timer: TTimer
     Enabled = False
     OnTimer = elokep_timerTimer
-    Left = 953
+    Left = 865
     Top = 192
   end
 end

@@ -10,13 +10,13 @@ uses
   Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
-  Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg;
+  Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg,
+  Vcl.ComCtrls;
 
 type
   TMjegyF = class(TForm)
     Partnelist: TFDQuery;
     PartnelistDs: TDataSource;
-    JvDBUltimGrid1: TJvDBUltimGrid;
     termeklist: TFDQuery;
     termeklistDs: TDataSource;
     jvmemparos: TJvMemoryData;
@@ -31,10 +31,6 @@ type
     jvmemparosparosit: TBooleanField;
     jvmemparostomeg: TIntegerField;
     masolQ: TFDQuery;
-    kep1: TImage;
-    kep2: TImage;
-    Label14: TLabel;
-    Label15: TLabel;
     termeklistID: TFDAutoIncField;
     termeklistKod: TWideStringField;
     termeklistNev: TWideStringField;
@@ -58,7 +54,6 @@ type
     TarolokT: TFDQuery;
     TarolokDs: TDataSource;
     jvmemparoskezi: TBooleanField;
-    tulajlookup: TJvDBLookupCombo;
     tulajT: TFDTable;
     tulajTID: TFDAutoIncField;
     tulajTNev: TWideStringField;
@@ -84,7 +79,7 @@ type
     levon_szovegTID: TFDAutoIncField;
     levon_szovegTSzoveg: TWideStringField;
     levon_szovegDs: TDataSource;
-    Panel1: TPanel;
+    pnlAlso: TPanel;
     lblpartner: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -170,6 +165,18 @@ type
     tulajTTelefon: TWideStringField;
     tulajTAjto: TWideStringField;
     tulajTcjsz: TWideStringField;
+    pnlFelso: TPanel;
+    tulajlookup: TJvDBLookupCombo;
+    pnlFelsoBal: TPanel;
+    JvDBUltimGrid1: TJvDBUltimGrid;
+    pnlFelsoJobb: TPanel;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    kep1: TImage;
+    lblKep1: TLabel;
+    kep2: TImage;
+    lblKep2: TLabel;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -192,7 +199,7 @@ type
     procedure spnedvChange(Sender: TObject);
     procedure cbxiranyChange(Sender: TObject);
     procedure partnerlookup2Change(Sender: TObject);
-    procedure Panel1Click(Sender: TObject);
+    procedure pnlAlsoClick(Sender: TObject);
     procedure btnekaerClick(Sender: TObject);
     procedure levonlookupChange(Sender: TObject);
     procedure sp_tomeg_levonKeyPress(Sender: TObject; var Key: Char);
@@ -206,7 +213,6 @@ type
     procedure kepek_betoltese;
     procedure uresre;
     procedure jeloles;
-    procedure nagykep(im:TImage);
     procedure rendszam_combok;
     procedure szazalek;
   public
@@ -217,7 +223,7 @@ type
 var
   MjegyF: TMjegyF;
   brutto,tara,netto,sznetto:integer;
-  k1,k2:string;
+
   br,tr,aned,ned,tisz:single;
   nedvesseg,tisztasag,nedvelvon: string;
   ttom:Real;
@@ -366,7 +372,7 @@ procedure TMjegyF.FormActivate(Sender: TObject);
         sptara.top:=238;
         spnetto.top:=238;
         cbxktip.top:=238;
-        Panel1.Height:=280;
+        pnlAlso.Height:=280;
       end
       else
       begin
@@ -381,7 +387,7 @@ procedure TMjegyF.FormActivate(Sender: TObject);
         sptara.top:=189;
         spnetto.top:=189;
         cbxktip.top:=189;
-        Panel1.Height:=240;
+        pnlAlso.Height:=240;
       end;
    end;
 begin
@@ -454,62 +460,61 @@ begin
   chkelso_kezi.Checked:=false;
   chkmasodik_kezi.Checked:=False;
   if not chkrogzitett.Checked then
-   begin
-  with jvmemparos do
-   begin
-     DisableControls;
-     first;
-     while not Eof  do
-     begin
-     if FieldByName('parosit').AsBoolean=true then
-      begin
-        if (t1=0)and (t2=0) then
-         begin
-          t1:=FieldByName('tomeg').AsInteger;
-          rc:=RecNo;
-          lblelsodat.Caption:=FieldByName('datum').AsString;
-          lblelsoido.Caption:=FieldByName('ido').AsString;
-          chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
-         end;
-        if (t1<>0)and (t2=0)and (rc<>RecNo) then
-         begin
-          t2:=FieldByName('tomeg').AsInteger;
-          lblmasdat.Caption:=FieldByName('datum').AsString;
-          lblmasido.Caption:=FieldByName('ido').AsString;
-          chkmasodik_kezi.Checked:=FieldByName('kezi').AsBoolean;
-         end;
-        cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
-        cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
-      end;
-      next;
-     end;
-     EnableControls;
-   end;
-   if (t1<>0) and (t2<>0) then
+  begin
+    with jvmemparos do
     begin
-     if t1>t2 then
+      DisableControls;
+      first;
+      while not Eof  do
       begin
-       brutto:=t1;
-       tara:=t2
+        if FieldByName('parosit').AsBoolean=true then
+        begin
+          if (t1=0)and (t2=0) then
+           begin
+            t1:=FieldByName('tomeg').AsInteger;
+            rc:=RecNo;
+            lblelsodat.Caption:=FieldByName('datum').AsString;
+            lblelsoido.Caption:=FieldByName('ido').AsString;
+            chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
+           end;
+          if (t1<>0)and (t2=0)and (rc<>RecNo) then
+           begin
+            t2:=FieldByName('tomeg').AsInteger;
+            lblmasdat.Caption:=FieldByName('datum').AsString;
+            lblmasido.Caption:=FieldByName('ido').AsString;
+            chkmasodik_kezi.Checked:=FieldByName('kezi').AsBoolean;
+           end;
+          cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
+          cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
+        end;
+        next;
+      end;
+     EnableControls;
+    end;
+    if (t1<>0) and (t2<>0) then
+    begin
+      if t1>t2 then
+       begin
+         brutto:=t1;
+         tara:=t2
       end
       else
       begin
-       brutto:=t2;
-       tara:=t1
+        brutto:=t2;
+        tara:=t1
       end;
-     netto:=brutto-tara;
-
+      netto:=brutto-tara;
     end;
-   end
-   else
-   begin
+  end
+  else
+  begin
     with jvmemparos do
-     begin
-       DisableControls;
-       first;
-       while not Eof  do
-       begin
-       if FieldByName('parosit').AsBoolean=true then
+    begin
+      DisableControls;
+      first;
+      while not Eof  do
+      begin
+        if FieldByName('parosit').AsBoolean=true then
         begin
           if (t1=0) then
            begin
@@ -521,16 +526,16 @@ begin
            end;
         end;
         next
-       end;
-       EnableControls;
-     end;
-     if (t1<>0) then
+      end;
+      EnableControls;
+    end;
+    if (t1<>0) then
       begin
        brutto:=t1;
        tara:=sptara.Value;
        netto:=brutto-tara;
       end;
-   end;
+  end;
   spBrutto.Value:=brutto;
   spnetto.Value:=netto;
   sptara.Value:=tara;
@@ -546,7 +551,9 @@ end;
 
 procedure TMjegyF.kep1Click(Sender: TObject);
 begin
-  nagykep(Sender as TImage);
+  if Sender=kep1 then NagykepF.kepnev:=lblKep1.Caption
+  else NagykepF.kepnev:=lblKep2.Caption ;
+  NagykepF.Showmodal;
 end;
 
 procedure TMjegyF.kepek_betoltese;
@@ -557,13 +564,13 @@ begin
   kep2.Picture:=nil;
   //if not jvmemparosparosit.AsBoolean then Exit;
 
-  k1:=jvmemparoskepnev1.AsString;
-  k2:=jvmemparoskepnev2.AsString;
-  if FileExists(k1) then
+  lblKep1.Caption:=jvmemparoskepnev1.AsString;
+  lblKep2.Caption:=jvmemparoskepnev2.AsString;
+  if FileExists( lblKep1.Caption) then
    begin
     JPEGImg := TJpegImage.Create;
     try
-     JPEGImg.LoadFromFile(k1);
+     JPEGImg.LoadFromFile( lblKep1.Caption);
      if JPEGImg.Width<500 then
       JPEGImg.Scale:=jsFullSize
      else
@@ -579,11 +586,11 @@ begin
      JPEGImg.Free;
     end;
    end;
-if FileExists(k2) then
+   if FileExists(lblKep2.Caption) then
    begin
     JPEGImg := TJpegImage.Create;
     try
-     JPEGImg.LoadFromFile(k2);
+     JPEGImg.LoadFromFile(lblKep2.Caption);
      if JPEGImg.Width<500 then
       JPEGImg.Scale:=jsFullSize
      else
@@ -599,8 +606,8 @@ if FileExists(k2) then
      JPEGImg.Free;
     end;
    end;
-  Label14.Visible:=kep1.Picture=nil;
-  Label15.Visible:=kep2.Picture=nil;
+  lblKep1.Visible:=kep1.Picture=nil;
+  lblKep2.Visible:=kep2.Picture=nil;
 end;
 
 procedure TMjegyF.masol(kd, vd: TDate;friss:Boolean);
@@ -1103,13 +1110,9 @@ begin
      uresre;
 end;
 
-procedure TMjegyF.nagykep(im: Timage);
-begin
-nagykepF.imgnagy.Picture:=im.Picture;
-NagykepF.ShowModal;
-end;
 
-procedure TMjegyF.Panel1Click(Sender: TObject);
+
+procedure TMjegyF.pnlAlsoClick(Sender: TObject);
 begin
 //
 end;

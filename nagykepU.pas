@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,vcl.Imaging.jpeg;
 
 type
   TNagykepF = class(TForm)
@@ -12,9 +12,11 @@ type
     imgnagy: TImage;
     procedure Button1Click(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
+    kepnev:string;
     { Public declarations }
   end;
 
@@ -27,13 +29,18 @@ implementation
 
 procedure TNagykepF.Button1Click(Sender: TObject);
 begin
-close;
+  close;
+end;
+
+procedure TNagykepF.FormActivate(Sender: TObject);
+begin
+  imgnagy.Picture.LoadFromFile(kepnev);
 end;
 
 procedure TNagykepF.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-if Key=VK_ESCAPE then close
+  if Key=VK_ESCAPE then close
 end;
 
 end.
