@@ -51,7 +51,7 @@ object BelepF: TBelepF
       Font.Style = [fsBold]
       KeyField = 'id'
       ListField = 'nev'
-      ListSource = aF.FelhaszQDs
+      ListSource = AF.FelhaszQDs
       ParentFont = False
       TabOrder = 1
       OnClick = DBLookupListBox1Click

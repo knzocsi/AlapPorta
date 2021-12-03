@@ -24,7 +24,6 @@ object MjegyF: TMjegyF
     Align = alBottom
     TabOrder = 0
     OnClick = pnlAlsoClick
-    ExplicitLeft = 8
     object lblpartner: TLabel
       Left = 7
       Top = 69
@@ -803,9 +802,6 @@ object MjegyF: TMjegyF
     Height = 433
     Align = alClient
     TabOrder = 1
-    ExplicitTop = -3
-    ExplicitWidth = 1059
-    ExplicitHeight = 440
     object pnlFelsoBal: TPanel
       Left = 1
       Top = 1
@@ -910,10 +906,6 @@ object MjegyF: TMjegyF
       Height = 431
       Align = alClient
       TabOrder = 1
-      ExplicitLeft = 766
-      ExplicitTop = 144
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object PageControl1: TPageControl
         Left = 1
         Top = 1
@@ -922,8 +914,6 @@ object MjegyF: TMjegyF
         ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 554
-        ExplicitHeight = 436
         object TabSheet1: TTabSheet
           Caption = 'K'#233'p 1'
           DesignSize = (

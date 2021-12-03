@@ -156,8 +156,6 @@ object FoF: TFoF
           ActivePage = cam0
           Align = alClient
           TabOrder = 0
-          ExplicitLeft = 0
-          ExplicitTop = -2
           object cam0: TTabSheet
             Caption = 'Kamera 1'
           end
@@ -207,7 +205,7 @@ object FoF: TFoF
         Date = 43587.000000000000000000
         Time = 0.774182199071219700
         TabOrder = 1
-        OnChange = piKezdoDatumChange
+        OnChange = piBefejezoDatumChange
       end
       object Button1: TButton
         Left = 288
@@ -362,6 +360,7 @@ object FoF: TFoF
           Width = 105
           Height = 105
           Stretch = True
+          OnClick = imgFelsokepClick
         end
         object memLog: TMemo
           Left = 501
@@ -383,11 +382,12 @@ object FoF: TFoF
         Align = alBottom
         TabOrder = 1
         object imgAlsokep: TImage
-          Left = 0
-          Top = -1
+          Left = 3
+          Top = 0
           Width = 105
           Height = 105
           Stretch = True
+          OnClick = imgFelsokepClick
         end
       end
     end

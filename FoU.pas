@@ -156,6 +156,8 @@ type
     procedure tomeg_levon_szovegek_mClick(Sender: TObject);
     procedure lejatszas_ellenorzese;
     procedure elokep_timerTimer(Sender: TObject);
+    procedure piBefejezoDatumChange(Sender: TObject);
+    procedure imgFelsokepClick(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -206,7 +208,7 @@ uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
-  levon_szovegekU, demotomegU;
+  levon_szovegekU, demotomegU, nagykepU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -759,6 +761,15 @@ begin
 //  end;
 end;
 
+procedure TFoF.imgFelsokepClick(Sender: TObject);
+begin
+  if (Sender=imgFelsokep)and(FileExists(aF.ForgalomQ.FieldByName('Kepnev1').AsString)) then
+      NagykepF.kepnev:=aF.ForgalomQ.FieldByName('Kepnev1').AsString;
+  if (Sender=imgAlsokep)and(FileExists(aF.ForgalomQ.FieldByName('Kepnev2').AsString)) then
+      NagykepF.kepnev:=aF.ForgalomQ.FieldByName('Kepnev2').AsString;
+  NagykepF.Showmodal;
+end;
+
 function TFoF.IO_Ir(cim:integer; ertek: Boolean): boolean;
 begin
   if not IOmodul_van then exit;
@@ -883,6 +894,12 @@ end;
 procedure TFoF.Partnerek1Click(Sender: TObject);
 begin
   PartnerekF.showmodal;
+end;
+
+procedure TFoF.piBefejezoDatumChange(Sender: TObject);
+begin
+ if piBefejezoDatum.Date<piKezdoDatum.Date then piKezdoDatum.Date:=piBefejezoDatum.Date;
+ szures;
 end;
 
 procedure TFoF.piKezdoDatumChange(Sender: TObject);

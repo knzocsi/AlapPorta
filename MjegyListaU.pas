@@ -65,6 +65,7 @@ type
     procedure cbxrendszChange(Sender: TObject);
     procedure rendszamok_feloltese;
     procedure Button4Click(Sender: TObject);
+    procedure piBefejezoDatumChange(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -409,6 +410,12 @@ procedure TMjegyekF.rendszamok_feloltese;
          cbxrendsz.ItemIndex:=0;
        end;
     end;
+
+procedure TMjegyekF.piBefejezoDatumChange(Sender: TObject);
+begin
+if piBefejezoDatum.Date<piKezdoDatum.Date then piKezdoDatum.Date:=piBefejezoDatum.Date;
+ szures;
+end;
 
 procedure TMjegyekF.piKezdoDatumChange(Sender: TObject);
 begin

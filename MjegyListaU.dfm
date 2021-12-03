@@ -78,7 +78,7 @@ object MjegyekF: TMjegyekF
       Width = 113
       Height = 21
       Date = 43587.000000000000000000
-      Time = 0.773554583327495500
+      Time = 0.773554583327495600
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -90,7 +90,7 @@ object MjegyekF: TMjegyekF
       Date = 43587.000000000000000000
       Time = 0.774182199071219700
       TabOrder = 1
-      OnChange = piKezdoDatumChange
+      OnChange = piBefejezoDatumChange
     end
     object btnKilepes: TButton
       Left = 16

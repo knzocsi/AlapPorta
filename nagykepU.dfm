@@ -14,6 +14,7 @@ object NagykepF: TNagykepF
   OldCreateOrder = False
   WindowState = wsMaximized
   OnActivate = FormActivate
+  OnClose = FormClose
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96
   TextHeight = 13

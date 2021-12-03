@@ -571,10 +571,10 @@ begin
     JPEGImg := TJpegImage.Create;
     try
      JPEGImg.LoadFromFile( lblKep1.Caption);
-     if JPEGImg.Width<500 then
+     if JPEGImg.Width<600 then
       JPEGImg.Scale:=jsFullSize
      else
-      if JPEGImg.Width<1000 then
+      if JPEGImg.Width<1200 then
        JPEGImg.Scale:=jsHalf
       else
        if JPEGImg.Width<2000 then
@@ -591,10 +591,10 @@ begin
     JPEGImg := TJpegImage.Create;
     try
      JPEGImg.LoadFromFile(lblKep2.Caption);
-     if JPEGImg.Width<500 then
+     if JPEGImg.Width<600 then
       JPEGImg.Scale:=jsFullSize
      else
-      if JPEGImg.Width<1000 then
+      if JPEGImg.Width<1200 then
        JPEGImg.Scale:=jsHalf
       else
        if JPEGImg.Width<2000 then

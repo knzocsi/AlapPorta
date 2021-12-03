@@ -13,6 +13,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -35,6 +36,12 @@ end;
 procedure TNagykepF.FormActivate(Sender: TObject);
 begin
   imgnagy.Picture.LoadFromFile(kepnev);
+end;
+
+procedure TNagykepF.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ imgnagy.Picture:=nil;
+ kepnev:='';
 end;
 
 procedure TNagykepF.FormKeyDown(Sender: TObject; var Key: Word;
