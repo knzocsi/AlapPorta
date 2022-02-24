@@ -11,10 +11,10 @@ uses
   JvDBLookup, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls;
 
 type
-  TkeszletF = class(TForm)
+  TKeszletF = class(TForm)
     Panel1: TPanel;
-    Button1: TButton;
-    Button2: TButton;
+    btnKilepes: TButton;
+    btnNyomtatas: TButton;
     JvDBUltimGrid1: TJvDBUltimGrid;
     termeklookup: TJvDBLookupCombo;
     Label3: TLabel;
@@ -29,9 +29,9 @@ type
     PartnelistDs: TDataSource;
     Label1: TLabel;
     chktort: TCheckBox;
-    procedure Button1Click(Sender: TObject);
+    procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure btnNyomtatasClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure termeklookupChange(Sender: TObject);
   private
@@ -42,30 +42,30 @@ type
   end;
 
 var
-  keszletF: TkeszletF;
+  KeszletF: TKeszletF;
   nyomtat:Boolean=False;
 implementation
   uses AU,NezetU;
 {$R *.dfm}
 
-procedure TkeszletF.Button1Click(Sender: TObject);
+procedure TKeszletF.btnKilepesClick(Sender: TObject);
 begin
 Close
 end;
 
-procedure TkeszletF.Button2Click(Sender: TObject);
+procedure TKeszletF.btnNyomtatasClick(Sender: TObject);
 begin
-nyomtat:=True;
-with NezetF do
- begin
-  rep_valaszt(af.frxKeszlet,1);
-  if nyomtatva then valasztott.Print;
-  valasztott.Preview:=nil;
- end;
-nyomtat:=False
+  nyomtat:=True;
+  with NezetF do
+  begin
+    rep_valaszt(af.frxKeszlet,1);
+    if nyomtatva then valasztott.Print;
+    valasztott.Preview:=nil;
+  end;
+  nyomtat:=False
 end;
 
-procedure TkeszletF.FormActivate(Sender: TObject);
+procedure TKeszletF.FormActivate(Sender: TObject);
 begin
  if nyomtat then
   begin
@@ -78,7 +78,7 @@ begin
  szures;
 end;
 
-procedure TkeszletF.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TKeszletF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
  termeklist.close;
  Partnelist.close;
@@ -87,7 +87,7 @@ begin
 end;
 
 
-procedure TkeszletF.szures;
+procedure TKeszletF.szures;
 var felt:string;
 begin
  if nyomtat then Exit;
@@ -107,7 +107,7 @@ begin
   end;
 end;
 
-procedure TkeszletF.termeklookupChange(Sender: TObject);
+procedure TKeszletF.termeklookupChange(Sender: TObject);
 begin
  szures
 end;

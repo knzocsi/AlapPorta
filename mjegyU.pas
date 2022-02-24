@@ -717,7 +717,7 @@ var sorsz,pcime,egyedi:String;
      AF.merlegjegy_tipus_betoltese;//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
      af.merlegjegy_mezgaz;//mezõgazdasági
      AF.merlegjegy_tomeglevonas;// tömeg levonás
-      with aF.frxmerleg do
+     with aF.frxmerleg do
        begin
          TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
          if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. példány';

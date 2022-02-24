@@ -55,6 +55,10 @@ type
     tulajlookup: TJvDBLookupCombo;
     lblbizki: TLabel;
     chkstorno: TCheckBox;
+    partnerlookup2: TJvDBLookupCombo;
+    Label9: TLabel;
+    Partnelist2: TFDQuery;
+    Partnelist2Ds: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -71,6 +75,7 @@ type
     procedure szures;
     procedure szazalek;
     procedure elokeszit(stfelirat:String);
+    procedure partnerek_intervallomra;
   public
     { Public declarations }
   end;
@@ -411,6 +416,30 @@ procedure TMjegyekF.rendszamok_feloltese;
        end;
     end;
 
+procedure TMjegyekF.partnerek_intervallomra;
+begin
+ with Partnelist do
+  begin
+   Close;
+   sql.Clear;
+   SQL.Add(' select distinct(p_id) as id,p_kod as kod ,p_nev as nev from merlegjegy');
+   SQL.Add(' where Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1 ');
+   ParamByName('p0').AsDate:=piKezdoDatum.Date;
+   ParamByName('p1').AsDate:=piBefejezoDatum.Date;
+   Open();
+  end;
+ with Partnelist2 do
+  begin
+   Close;
+   sql.Clear;
+   SQL.Add(' select distinct(p2_id) as id,p2_kod as kod,p2_nev as nev from merlegjegy');
+   SQL.Add(' where Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1 ');
+   ParamByName('p0').AsDate:=piKezdoDatum.Date;
+   ParamByName('p1').AsDate:=piBefejezoDatum.Date;
+   Open();
+  end;
+end;
+
 procedure TMjegyekF.piBefejezoDatumChange(Sender: TObject);
 begin
 if piBefejezoDatum.Date<piKezdoDatum.Date then piKezdoDatum.Date:=piBefejezoDatum.Date;
@@ -421,6 +450,7 @@ procedure TMjegyekF.piKezdoDatumChange(Sender: TObject);
 begin
  rfelt:=True;
  rendszamok_feloltese;
+ partnerek_intervallomra;
  rfelt:=false;
  szures;
 end;
@@ -482,6 +512,7 @@ begin
     ParamByName('p2').AsInteger:=tulajlookup.KeyValue;
     if termeklookup.KeyValue<>'!' then SQL.Add(' and termek_kod='+#39+termeklist.FieldByName('kod').AsString+#39);
     if partnerlookup.KeyValue<>'!' then SQL.Add(' and p_kod='+#39+partnelist.FieldByName('kod').AsString+#39);
+    if partnerlookup2.KeyValue<>'!' then SQL.Add(' and p2_kod='+#39+partnelist2.FieldByName('kod').AsString+#39);
     if cbxirany.ItemIndex>0 then SQL.Add(' and irany='+#39+cbxirany.Text+#39);
     if cbxrendsz.ItemIndex<>0 then SQL.Add(' and rendszam='+#39+cbxrendsz.Text+#39);
     if not chkstorno.Checked then  SQL.Add(' and storno=""');

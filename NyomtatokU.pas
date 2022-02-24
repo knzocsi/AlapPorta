@@ -45,8 +45,8 @@ end;
 
 procedure TNyomtatokF.lbNyomtatokClick(Sender: TObject);
 begin
-aF.frxmerleg.PrintOptions.Printer:=lbNyomtatok.Items[lbNyomtatok.ItemIndex];
-close
+  aF.frxmerleg.PrintOptions.Printer:=lbNyomtatok.Items[lbNyomtatok.ItemIndex];
+  close
 end;
 
 end.

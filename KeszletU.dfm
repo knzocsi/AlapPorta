@@ -1,4 +1,4 @@
-object keszletF: TkeszletF
+object KeszletF: TKeszletF
   Left = 0
   Top = 0
   Caption = 'K'#233'szlet'
@@ -44,23 +44,23 @@ object keszletF: TkeszletF
       Height = 13
       Caption = 'T'#225'rol'#243':'
     end
-    object Button1: TButton
+    object btnKilepes: TButton
       Left = 16
       Top = 19
       Width = 75
       Height = 25
       Caption = 'Kil'#233'p'#233's'
       TabOrder = 0
-      OnClick = Button1Click
+      OnClick = btnKilepesClick
     end
-    object Button2: TButton
+    object btnNyomtatas: TButton
       Left = 855
       Top = 19
       Width = 75
       Height = 25
       Caption = 'Nyomtat'#225's'
       TabOrder = 1
-      OnClick = Button2Click
+      OnClick = btnNyomtatasClick
     end
     object termeklookup: TJvDBLookupCombo
       Left = 105
@@ -120,7 +120,7 @@ object keszletF: TkeszletF
     Width = 950
     Height = 457
     Align = alClient
-    DataSource = aF.KeszletQDs
+    DataSource = AF.KeszletQDs
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -140,80 +140,80 @@ object keszletF: TkeszletF
         Expanded = False
         FieldName = 'Tarolo_nev'
         Title.Caption = 'T'#225'rol'#243
-        Width = 128
+        Width = 121
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Term_kod'
         Title.Caption = 'Term.k'#243'd'
-        Width = 78
+        Width = 74
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Term_nev'
         Title.Caption = 'Term.n'#233'v'
-        Width = 256
+        Width = 242
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Partner_kod'
         Title.Caption = 'Part.k'#243'd'
-        Width = 39
+        Width = 37
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Partner_nev'
         Title.Caption = 'Part.n'#233'v'
-        Width = 205
+        Width = 194
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'menny'
         Title.Caption = 'Mennyis'#233'g'
-        Width = 28
+        Width = 77
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tort'
         Title.Caption = 'T'#246'rt szem'
-        Width = 16
+        Width = 15
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Felhasznalo_nev'
         Title.Caption = 'Felhaszn'#225'l'#243
-        Width = 128
+        Width = 121
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'modositva'
         Title.Caption = 'M'#243'dos'#237'tva'
-        Width = 47
+        Width = 44
         Visible = True
       end>
   end
   object TarolokT: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * FROM tarolok ORDER BY nev ASC')
-    Left = 678
+    Left = 574
     Top = 17
   end
   object TarolokDs: TDataSource
     DataSet = TarolokT
-    Left = 720
-    Top = 24
+    Left = 616
+    Top = 16
   end
   object termeklist: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
     Left = 248
@@ -225,7 +225,7 @@ object keszletF: TkeszletF
     Top = 16
   end
   object Partnelist: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner ORDER BY Nev ASC;')
     Left = 400

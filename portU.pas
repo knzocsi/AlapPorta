@@ -591,6 +591,7 @@ begin
   begin
     if ParamStr(1)='/CT2' then ShowMessage('4e:'+ertek);
     try
+      if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
       mert:=StrToFloat(ertek);
       ertek:=FloatToStr(mert);
     except
@@ -633,12 +634,21 @@ begin
  end;
 end;
 
+function datum_szoveg(datum: TDateTime; idokell: boolean): string;
+var ev,ho,nap,ora,perc,mp,szmp:word;
+begin
+  DecodeDate(datum,ev,ho,nap);
+  DecodeTime(datum,ora,perc,mp,szmp);
+  Result:=IntToStr(ev)+IntToStr(ho)+IntToStr(nap);
+  if idokell then Result:=Result+IntToStr(ora)+IntToStr(perc)+IntToStr(mp)+IntToStr(szmp);
+end;
+
 procedure TPortF.portopen;
 begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\'+af.datum_szoveg(Now,True)+'.txt');
+    AssignFile(tf,konyvtar+'\LOG\'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     Writeln(tf, konyvtar+'\srport.dat');
     Writeln(tf, Comport1.port+' OPEN');

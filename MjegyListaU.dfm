@@ -72,13 +72,20 @@ object MjegyekF: TMjegyekF
       Height = 13
       Caption = 'Bizonylat kibocs'#225'jt'#243':'
     end
+    object Label9: TLabel
+      Left = 440
+      Top = 96
+      Width = 49
+      Height = 13
+      Caption = 'Partner 2:'
+    end
     object piKezdoDatum: TDateTimePicker
       Left = 152
       Top = 22
       Width = 113
       Height = 21
       Date = 43587.000000000000000000
-      Time = 0.773554583327495600
+      Time = 0.773554583327495500
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -154,9 +161,7 @@ object MjegyekF: TMjegyekF
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
       LookupField = 'ID'
-      LookupDisplay = 
-        'kod;Nev;Irsz;Telepules;kerulet;kozterulet;kozt_jelleg;hazszam;ku' +
-        'j;ktj;'
+      LookupDisplay = 'kod;Nev;'
       LookupSource = PartnelistDs
       TabOrder = 7
       OnChange = cbxrendszChange
@@ -199,8 +204,8 @@ object MjegyekF: TMjegyekF
       OnChange = piKezdoDatumChange
     end
     object chkstorno: TCheckBox
-      Left = 440
-      Top = 110
+      Left = 918
+      Top = 95
       Width = 97
       Height = 17
       Caption = 'Storn'#243' is l'#225'tszik'
@@ -230,7 +235,7 @@ object MjegyekF: TMjegyekF
       Caption = 'Ki:'
     end
     object spinbe: TSpinEdit
-      Left = 42
+      Left = 46
       Top = 6
       Width = 100
       Height = 22
@@ -273,7 +278,6 @@ object MjegyekF: TMjegyekF
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    AutoSizeColumns = True
     SelectColumnsDialogStrings.Caption = 'Select columns'
     SelectColumnsDialogStrings.OK = '&OK'
     SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
@@ -284,46 +288,60 @@ object MjegyekF: TMjegyekF
       item
         Expanded = False
         FieldName = 'Sorszam'
-        Width = 45
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Storno'
-        Width = 15
+        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'rendszam'
         Title.Caption = 'Rendsz'#225'm'
-        Width = 47
+        Width = 60
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'rendszam2'
         Title.Caption = 'Rendsz'#225'm 2'
-        Width = 53
+        Width = 60
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'p_kod'
         Title.Caption = 'P.K'#243'd'
-        Width = 25
+        Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'p_nev'
         Title.Caption = 'Partner n'#233'v'
-        Width = 50
+        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'p_cim'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'p2_kod'
+        Title.Caption = 'P.k'#243'd 2'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'p2_nev'
+        Title.Caption = 'Partner n'#233'v 2'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'p2_cim'
+        Title.Caption = 'Partner cim 2'
         Visible = False
       end
       item
@@ -335,21 +353,21 @@ object MjegyekF: TMjegyekF
         Expanded = False
         FieldName = 'termek_kod'
         Title.Caption = 'T. k'#243'd'
-        Width = 26
+        Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'termek_nev'
         Title.Caption = 'T_n'#233'v'
-        Width = 50
+        Width = 80
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'szallitolev'
         Title.Caption = 'Sz'#225'll'#237't'#243'lev'#233'l'
-        Width = 46
+        Width = 80
         Visible = True
       end
       item
@@ -361,121 +379,142 @@ object MjegyekF: TMjegyekF
         Expanded = False
         FieldName = 'tomegbe'
         Title.Caption = 'Be'
-        Width = 29
+        Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tomegki'
         Title.Caption = 'Ki'
-        Width = 34
+        Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'brutto'
         Title.Caption = 'Brutt'#243
-        Width = 36
+        Width = 28
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tara'
         Title.Caption = 'T'#225'ra'
-        Width = 36
+        Width = 28
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Sznetto'
         Title.Caption = 'Sz.nett'#243
-        Width = 42
+        Width = 33
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'irany'
         Title.Caption = 'Ir'#225'ny'
-        Width = 25
+        Width = 20
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'elso_kezi'
         Title.Caption = 'E.k'#233'zi'
-        Width = 54
+        Width = 43
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'erkdatum'
         Title.Caption = 'E.D'#225'tum'
-        Width = 49
+        Width = 38
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'erkido'
         Title.Caption = 'E.Id'#337
-        Width = 30
+        Width = 23
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'masodik_kezi'
         Title.Caption = 'M.k'#233'zi'
-        Width = 59
+        Width = 47
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tavdatum'
         Title.Caption = 'M.D'#225'tum'
-        Width = 43
+        Width = 34
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tavido'
         Title.Caption = 'M.Id'#337
-        Width = 34
+        Width = 27
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'felhasznalo'
         Title.Caption = 'Dolgoz'#243
-        Width = 40
+        Width = 32
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'merlegelo'
         Title.Caption = 'M'#233'rlegkezel'#337
-        Width = 56
+        Width = 45
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ekaer'
         Title.Caption = 'EK'#193'ER'
-        Width = 29
+        Width = 22
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'kuj'
         Title.Caption = 'K'#220'J'
-        Width = 19
+        Width = 15
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ktj'
         Title.Caption = 'KTJ'
-        Width = 6
+        Width = 5
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Storno'
+        Width = 11
         Visible = True
       end>
+  end
+  object partnerlookup2: TJvDBLookupCombo
+    Left = 440
+    Top = 110
+    Width = 417
+    Height = 21
+    DropDownWidth = 1024
+    DisplayAllFields = True
+    DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+    EmptyValue = '!'
+    LookupField = 'ID'
+    LookupDisplay = 'kod;Nev;'
+    LookupSource = Partnelist2Ds
+    TabOrder = 3
+    OnChange = cbxrendszChange
   end
   object mjegyekQ: TFDQuery
     Connection = AF.Kapcs
@@ -491,24 +530,24 @@ object MjegyekF: TMjegyekF
     Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
-    Left = 264
-    Top = 224
+    Left = 272
+    Top = 226
   end
   object termeklistDs: TDataSource
     DataSet = termeklist
-    Left = 328
-    Top = 224
+    Left = 336
+    Top = 226
   end
   object Partnelist: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner ORDER BY Nev ASC;')
-    Left = 440
+    Left = 448
     Top = 224
   end
   object PartnelistDs: TDataSource
     DataSet = Partnelist
-    Left = 499
+    Left = 507
     Top = 224
   end
   object tulajT: TFDTable
@@ -561,5 +600,17 @@ object MjegyekF: TMjegyekF
     DataSet = tulajT
     Left = 480
     Top = 104
+  end
+  object Partnelist2: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner ORDER BY Nev ASC;')
+    Left = 448
+    Top = 280
+  end
+  object Partnelist2Ds: TDataSource
+    DataSet = Partnelist2
+    Left = 507
+    Top = 280
   end
 end

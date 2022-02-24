@@ -337,7 +337,6 @@ object MjegyF: TMjegyF
       EmptyValue = '!'
       LookupField = 'id'
       LookupDisplay = 'nev;'
-      LookupSource = AF.merlegkezQDs
       TabOrder = 11
     end
     object Button2: TButton
@@ -1307,7 +1306,7 @@ object MjegyF: TMjegyF
     Connection = AF.Kapcs
     TableName = 'levonas_szovegek'
     Left = 904
-    Top = 712
+    Top = 720
     object levon_szovegTID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -1323,7 +1322,7 @@ object MjegyF: TMjegyF
   end
   object levon_szovegDs: TDataSource
     DataSet = levon_szovegT
-    Left = 968
-    Top = 704
+    Left = 952
+    Top = 712
   end
 end
