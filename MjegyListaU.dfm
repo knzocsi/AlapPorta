@@ -199,7 +199,6 @@ object MjegyekF: TMjegyekF
       EmptyValue = '0'
       LookupField = 'Id'
       LookupDisplay = 'Nev'
-      LookupSource = tulajDs
       TabOrder = 10
       OnChange = piKezdoDatumChange
     end
@@ -550,12 +549,24 @@ object MjegyekF: TMjegyekF
     Left = 507
     Top = 224
   end
+  object Partnelist2: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner ORDER BY Nev ASC;')
+    Left = 448
+    Top = 280
+  end
+  object Partnelist2Ds: TDataSource
+    DataSet = Partnelist2
+    Left = 507
+    Top = 280
+  end
   object tulajT: TFDTable
     IndexFieldNames = 'ID'
     Connection = AF.Kapcs
     TableName = 'tulajok'
-    Left = 424
-    Top = 96
+    Left = 224
+    Top = 336
     object tulajTID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -595,22 +606,87 @@ object MjegyekF: TMjegyekF
       Origin = 'Elotag'
       Size = 2
     end
+    object tulajTIrsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Irsz'
+      Origin = 'Irsz'
+      Size = 10
+    end
+    object tulajTTelepules: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Telepules'
+      Origin = 'Telepules'
+      Size = 30
+    end
+    object tulajTKerulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kerulet'
+      Origin = 'Kerulet'
+      Size = 5
+    end
+    object tulajTKozterulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kozterulet'
+      Origin = 'Kozterulet'
+      Size = 30
+    end
+    object tulajTKozt_Jelleg: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Kozt_Jelleg'
+      Origin = 'Kozt_Jelleg'
+      Size = 10
+    end
+    object tulajTHazszam: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Hazszam'
+      Origin = 'Hazszam'
+      Size = 5
+    end
+    object tulajTEpulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Epulet'
+      Origin = 'Epulet'
+      Size = 5
+    end
+    object tulajTLepcsohaz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Lepcsohaz'
+      Origin = 'Lepcsohaz'
+      Size = 5
+    end
+    object tulajTEmelet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Emelet'
+      Origin = 'Emelet'
+      Size = 5
+    end
+    object tulajTHrsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Hrsz'
+      Origin = 'Hrsz'
+      Size = 5
+    end
+    object tulajTEmail: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Email'
+      Origin = 'Email'
+    end
+    object tulajTTelefon: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'Telefon'
+      Origin = 'Telefon'
+    end
+    object tulajTAjto: TWideStringField
+      FieldName = 'Ajto'
+      Size = 5
+    end
+    object tulajTcjsz: TWideStringField
+      FieldName = 'cjsz'
+    end
   end
   object tulajDs: TDataSource
     DataSet = tulajT
-    Left = 480
-    Top = 104
-  end
-  object Partnelist2: TFDQuery
-    Connection = AF.Kapcs
-    SQL.Strings = (
-      'SELECT * from partner ORDER BY Nev ASC;')
-    Left = 448
-    Top = 280
-  end
-  object Partnelist2Ds: TDataSource
-    DataSet = Partnelist2
-    Left = 507
-    Top = 280
+    Left = 264
+    Top = 336
   end
 end

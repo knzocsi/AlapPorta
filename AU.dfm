@@ -248,7 +248,7 @@ object AF: TAF
       'end.')
     OnAfterPrint = frxmerlegAfterPrint
     Left = 640
-    Top = 240
+    Top = 248
     Datasets = <>
     Variables = <>
     Style = <>

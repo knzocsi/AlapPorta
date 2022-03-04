@@ -43,6 +43,13 @@ type
     Label8: TLabel;
     cbxrendsz: TComboBox;
     Button4: TButton;
+    tulajlookup: TJvDBLookupCombo;
+    lblbizki: TLabel;
+    chkstorno: TCheckBox;
+    partnerlookup2: TJvDBLookupCombo;
+    Label9: TLabel;
+    Partnelist2: TFDQuery;
+    Partnelist2Ds: TDataSource;
     tulajT: TFDTable;
     tulajTID: TFDAutoIncField;
     tulajTNev: TWideStringField;
@@ -51,14 +58,21 @@ type
     tulajTkuj: TWideStringField;
     tulajTktj: TWideStringField;
     tulajTElotag: TWideStringField;
+    tulajTIrsz: TWideStringField;
+    tulajTTelepules: TWideStringField;
+    tulajTKerulet: TWideStringField;
+    tulajTKozterulet: TWideStringField;
+    tulajTKozt_Jelleg: TWideStringField;
+    tulajTHazszam: TWideStringField;
+    tulajTEpulet: TWideStringField;
+    tulajTLepcsohaz: TWideStringField;
+    tulajTEmelet: TWideStringField;
+    tulajTHrsz: TWideStringField;
+    tulajTEmail: TWideStringField;
+    tulajTTelefon: TWideStringField;
+    tulajTAjto: TWideStringField;
+    tulajTcjsz: TWideStringField;
     tulajDs: TDataSource;
-    tulajlookup: TJvDBLookupCombo;
-    lblbizki: TLabel;
-    chkstorno: TCheckBox;
-    partnerlookup2: TJvDBLookupCombo;
-    Label9: TLabel;
-    Partnelist2: TFDQuery;
-    Partnelist2Ds: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -256,7 +270,8 @@ begin
      TfrxMemoView(FindObject('memtulajcime')).Text:=mjegyekQ.FieldByName('tul_cim').AsString;
      if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memtuladosz')).Text:=mjegyekQ.FieldByName('tul_adoszam').AsString;;
      if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=mjegyekQ.FieldByName('tul_cjsz').AsString;
-     if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=Merleg_neve;
+     if TfrxMemoView(FindObject('memTelefon'))<>nil then TfrxMemoView(FindObject('memTelefon')).Text:=tulajTTelefon.AsString;
+     if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=merleg_neve;
      case mjegyekQ.FieldByName('irany').AsString[1] of
      'B':begin
           TfrxMemoView(FindObject('mempartner')).Text:='Átadó:';
