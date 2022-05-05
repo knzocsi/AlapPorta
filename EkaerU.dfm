@@ -2,7 +2,7 @@ object EkaerF: TEkaerF
   Left = 0
   Top = 0
   Caption = 'EK'#193'ER ig'#233'nyl'#233's'
-  ClientHeight = 543
+  ClientHeight = 546
   ClientWidth = 815
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -170,58 +170,16 @@ object EkaerF: TEkaerF
     Height = 13
     Caption = 'Orsz'#225'gk'#243'd:'
   end
-  object Label32: TLabel
-    Left = 393
-    Top = 268
-    Width = 60
-    Height = 13
-    Caption = 'Ir'#225'n'#237't'#243'sz'#225'm:'
-  end
-  object Label33: TLabel
-    Left = 466
-    Top = 268
-    Width = 49
-    Height = 13
-    Caption = 'Telep'#252'l'#233's:'
-  end
-  object Label34: TLabel
-    Left = 592
-    Top = 268
-    Width = 80
-    Height = 13
-    Caption = 'K'#246'zter'#252'let neve:'
-  end
-  object Label35: TLabel
-    Left = 16
-    Top = 313
-    Width = 87
-    Height = 13
-    Caption = 'K'#246'zter'#252'let jellege:'
-  end
-  object Label36: TLabel
-    Left = 152
-    Top = 313
-    Width = 46
-    Height = 13
-    Caption = 'Hazsz'#225'm:'
-  end
-  object Label37: TLabel
-    Left = 240
-    Top = 313
-    Width = 29
-    Height = 13
-    Caption = 'Hrsz.:'
-  end
   object Label38: TLabel
-    Left = 328
-    Top = 313
+    Left = 409
+    Top = 268
     Width = 64
     Height = 13
     Caption = 'Telefonsz'#225'm:'
   end
   object Label39: TLabel
-    Left = 464
-    Top = 313
+    Left = 545
+    Top = 268
     Width = 50
     Height = 13
     Caption = 'E-mail c'#237'm:'
@@ -350,6 +308,13 @@ object EkaerF: TEkaerF
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 16
+    Top = 306
+    Width = 86
+    Height = 13
+    Caption = 'Lelrakod'#225'si c'#237'mek:'
   end
   object btnkilepes: TButton
     Left = 16
@@ -696,68 +661,20 @@ object EkaerF: TEkaerF
       'SI'
       'SK')
   end
-  object ed_lecegirsz: TEdit
-    Left = 393
+  object ed_lecegtel: TEdit
+    Left = 409
     Top = 281
-    Width = 65
+    Width = 121
     Height = 21
     TabOrder = 23
-    Text = 'ed_lecegirsz'
-  end
-  object ed_lecegtelepules: TEdit
-    Left = 466
-    Top = 281
-    Width = 120
-    Height = 21
-    TabOrder = 24
-    Text = 'ed_lecegtelepules'
-  end
-  object ed_lecegkozterulet: TEdit
-    Left = 592
-    Top = 281
-    Width = 193
-    Height = 21
-    TabOrder = 25
-    Text = 'ed_lecegkozterulet'
-  end
-  object ed_lecegkoztjell: TEdit
-    Left = 17
-    Top = 326
-    Width = 121
-    Height = 21
-    TabOrder = 26
-    Text = 'ed_lecegkoztjell'
-  end
-  object ed_leceghazszam: TEdit
-    Left = 152
-    Top = 326
-    Width = 73
-    Height = 21
-    TabOrder = 27
-    Text = 'ed_leceghazszam'
-  end
-  object ed_leceghrsz: TEdit
-    Left = 240
-    Top = 326
-    Width = 73
-    Height = 21
-    TabOrder = 28
-    Text = 'ed_leceghrsz'
-  end
-  object ed_lecegtel: TEdit
-    Left = 328
-    Top = 326
-    Width = 121
-    Height = 21
-    TabOrder = 29
     Text = 'ed_lecegtel'
   end
   object ed_lecegemail: TEdit
-    Left = 464
-    Top = 326
+    Left = 545
+    Top = 281
     Width = 121
     Height = 21
-    TabOrder = 30
+    TabOrder = 24
     Text = 'ed_lecegemail'
   end
   object ed_vontato_rsz: TEdit
@@ -766,7 +683,7 @@ object EkaerF: TEkaerF
     Width = 121
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 31
+    TabOrder = 25
     Text = 'ED_VONTATO_RSZ'
   end
   object ed_vont1_rsz: TEdit
@@ -775,7 +692,7 @@ object EkaerF: TEkaerF
     Width = 121
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 32
+    TabOrder = 26
     Text = 'ED_VONT1_RSZ'
   end
   object ed_vont2_rsz: TEdit
@@ -784,7 +701,7 @@ object EkaerF: TEkaerF
     Width = 121
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 33
+    TabOrder = 27
     Text = 'ED_VONT2_RSZ'
   end
   object cbx_vontato_jel: TComboBox
@@ -793,7 +710,7 @@ object EkaerF: TEkaerF
     Width = 65
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 34
+    TabOrder = 28
     Text = 'CBX_VONTATO_JEL'
     Items.Strings = (
       '-'
@@ -994,7 +911,7 @@ object EkaerF: TEkaerF
     Width = 65
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 35
+    TabOrder = 29
     Text = 'CBX_VONT1_JEL'
     Items.Strings = (
       '-'
@@ -1195,7 +1112,7 @@ object EkaerF: TEkaerF
     Width = 65
     Height = 21
     CharCase = ecUpperCase
-    TabOrder = 36
+    TabOrder = 30
     Text = 'CBX_VONT2_JEL'
     Items.Strings = (
       '-'
@@ -1397,7 +1314,7 @@ object EkaerF: TEkaerF
     Height = 21
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
-    TabOrder = 37
+    TabOrder = 31
   end
   object le_datum: TDateTimePicker
     Left = 222
@@ -1406,7 +1323,7 @@ object EkaerF: TEkaerF
     Height = 21
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
-    TabOrder = 38
+    TabOrder = 32
   end
   object fel_ido: TDateTimePicker
     Left = 104
@@ -1416,7 +1333,7 @@ object EkaerF: TEkaerF
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
     Kind = dtkTime
-    TabOrder = 39
+    TabOrder = 33
   end
   object le_ido: TDateTimePicker
     Left = 309
@@ -1426,7 +1343,7 @@ object EkaerF: TEkaerF
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
     Kind = dtkTime
-    TabOrder = 40
+    TabOrder = 34
   end
   object cbx_fuvok: TComboBox
     Left = 17
@@ -1434,7 +1351,7 @@ object EkaerF: TEkaerF
     Width = 121
     Height = 22
     Style = csOwnerDrawFixed
-    TabOrder = 41
+    TabOrder = 35
     Items.Strings = (
       '(S) '#201'rt'#233'kes'#237't'#233's'
       '(A) Beszerz'#233's'
@@ -1446,7 +1363,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 42
+    TabOrder = 36
     Text = 'ed_termeknev'
   end
   object ed_adr: TEdit
@@ -1454,7 +1371,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 43
+    TabOrder = 37
     Text = 'ed_adr'
   end
   object ed_tomeg: TEdit
@@ -1462,7 +1379,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 69
     Height = 21
-    TabOrder = 44
+    TabOrder = 38
     Text = 'ed_tomeg'
   end
   object ed_ertek: TEdit
@@ -1470,7 +1387,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 45
+    TabOrder = 39
     Text = 'ed_ertek'
   end
   object ed_engedelyszam: TEdit
@@ -1478,12 +1395,12 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 46
+    TabOrder = 40
     Text = 'ed_engedelyszam'
   end
   object btnkuldes: TButton
     Left = 0
-    Top = 497
+    Top = 500
     Width = 815
     Height = 46
     Align = alBottom
@@ -1494,8 +1411,9 @@ object EkaerF: TEkaerF
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 47
+    TabOrder = 41
     OnClick = btnkuldesClick
+    ExplicitTop = 497
   end
   object felcimlookup: TJvDBLookupCombo
     Left = 17
@@ -1507,7 +1425,7 @@ object EkaerF: TEkaerF
     LookupField = 'id'
     LookupDisplay = 'cim'
     LookupSource = felcimekQDs
-    TabOrder = 48
+    TabOrder = 42
     OnCloseUp = felcimlookupCloseUp
   end
   object btnkitolt: TButton
@@ -1516,7 +1434,7 @@ object EkaerF: TEkaerF
     Width = 75
     Height = 25
     Caption = 'Kit'#246'lt'
-    TabOrder = 49
+    TabOrder = 43
     Visible = False
     OnClick = btnkitoltClick
   end
@@ -1526,7 +1444,7 @@ object EkaerF: TEkaerF
     Width = 81
     Height = 21
     MaxLength = 8
-    TabOrder = 50
+    TabOrder = 44
     Text = 'ed_vtsz'
   end
   object Button2: TButton
@@ -1535,8 +1453,30 @@ object EkaerF: TEkaerF
     Width = 91
     Height = 25
     Caption = 'Felrakod'#225'si c'#237'mek'
-    TabOrder = 51
+    TabOrder = 45
     OnClick = Button2Click
+  end
+  object lecimlookup: TJvDBLookupCombo
+    Left = 17
+    Top = 321
+    Width = 768
+    Height = 21
+    DisplayEmpty = '---V'#225'lasszon lerakod'#225'si c'#237'met----'
+    EmptyValue = '!'
+    LookupField = 'id'
+    LookupDisplay = 'cim'
+    LookupSource = lecimekQDs
+    TabOrder = 46
+    OnCloseUp = lecimlookupCloseUp
+  end
+  object Button1: TButton
+    Left = 694
+    Top = 290
+    Width = 91
+    Height = 25
+    Caption = 'Felrakod'#225'si c'#237'mek'
+    TabOrder = 47
+    OnClick = Button1Click
   end
   object felcimekQ: TFDQuery
     Connection = AF.Kapcs
@@ -1658,5 +1598,111 @@ object EkaerF: TEkaerF
     Client = NetHTTPClient1
     Left = 656
     Top = 88
+  end
+  object lecimekQ: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'select * from lerakodasi_cimek_nezet where tul_id=:t')
+    Left = 688
+    Top = 264
+    ParamData = <
+      item
+        Name = 'T'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = 1
+      end>
+    object lecimekQid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ReadOnly = True
+    end
+    object lecimekQtul_id: TIntegerField
+      FieldName = 'tul_id'
+      Origin = 'tul_id'
+      Required = True
+    end
+    object lecimekQirsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'irsz'
+      Origin = 'irsz'
+      Size = 10
+    end
+    object lecimekQtelepules: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'telepules'
+      Origin = 'telepules'
+      Size = 30
+    end
+    object lecimekQkozterulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'kozterulet'
+      Origin = 'kozterulet'
+      Size = 30
+    end
+    object lecimekQkozt_jelleg: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'kozt_jelleg'
+      Origin = 'kozt_jelleg'
+      Size = 10
+    end
+    object lecimekQhazszam: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'hazszam'
+      Origin = 'hazszam'
+      Size = 5
+    end
+    object lecimekQepulet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'epulet'
+      Origin = 'epulet'
+      Size = 5
+    end
+    object lecimekQlepcsohaz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'lepcsohaz'
+      Origin = 'lepcsohaz'
+      Size = 5
+    end
+    object lecimekQemelet: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'emelet'
+      Origin = 'emelet'
+      Size = 5
+    end
+    object lecimekQajto: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ajto'
+      Origin = 'ajto'
+      Size = 5
+    end
+    object lecimekQhrsz: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'hrsz'
+      Origin = 'hrsz'
+    end
+    object lecimekQemail: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'email'
+      Origin = 'email'
+    end
+    object lecimekQtelefon: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'telefon'
+      Origin = 'telefon'
+    end
+    object lecimekQcim: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'cim'
+      Origin = 'cim'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 134
+    end
+  end
+  object lecimekQDs: TDataSource
+    DataSet = lecimekQ
+    Left = 736
+    Top = 264
   end
 end

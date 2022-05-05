@@ -277,7 +277,7 @@ object AF: TAF
         Font.Style = []
         Height = 499.984540000000000000
         ParentFont = False
-        Top = 18.897650000000000000
+        Top = 16.000000000000000000
         Width = 718.110700000000000000
         object memcim: TfrxMemoView
           Align = baCenter
@@ -1410,7 +1410,7 @@ object AF: TAF
         FillType = ftBrush
         Frame.Typ = []
         Height = 506.457020000000000000
-        Top = 578.268090000000000000
+        Top = 576.000000000000000000
         Width = 718.110700000000000000
         PrintAtBottom = True
         object Memo30: TfrxMemoView

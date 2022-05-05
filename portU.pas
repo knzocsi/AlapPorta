@@ -605,7 +605,7 @@ begin
   //Fof.Label11.caption:= mertertek+' kg';
   if (Aktiv) and (chkMertertek.Checked) then
   begin
-    memEredmeny.Text:='Mért érték: '+mertertek+#13#10+memEredmeny.text;
+    memEredmeny.Text:='Mért érték: ('+Merleg_tipus+IntToStr(mtip)+')'+mertertek+#13#10+memEredmeny.text;
   end;
   if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
   Sleep(100);

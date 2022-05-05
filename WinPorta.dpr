@@ -41,7 +41,8 @@ uses
   tesztU in 'tesztU.pas' {tesztF},
   levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF},
   FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF},
-  demotomegU in 'demotomegU.pas' {DemotomegF};
+  demotomegU in 'demotomegU.pas' {DemotomegF},
+  LerakCimekU in 'LerakCimekU.pas' {LerakCimekF};
 
 {$R *.res}
 
@@ -81,5 +82,6 @@ begin
   Application.CreateForm(Tlevon_szovegekF, levon_szovegekF);
   Application.CreateForm(TfelrakcimekF, felrakcimekF);
   Application.CreateForm(TDemotomegF, DemotomegF);
+  Application.CreateForm(TLerakCimekF, LerakCimekF);
   Application.Run;
 end.

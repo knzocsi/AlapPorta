@@ -58,19 +58,8 @@ type
     Label30: TLabel;
     cbx_lecegojel: TComboBox;
     Label31: TLabel;
-    ed_lecegirsz: TEdit;
-    ed_lecegkozterulet: TEdit;
-    ed_lecegkoztjell: TEdit;
-    ed_leceghazszam: TEdit;
-    ed_leceghrsz: TEdit;
     ed_lecegtel: TEdit;
     ed_lecegemail: TEdit;
-    Label32: TLabel;
-    Label33: TLabel;
-    Label34: TLabel;
-    Label35: TLabel;
-    Label36: TLabel;
-    Label37: TLabel;
     Label38: TLabel;
     Label39: TLabel;
     ed_vontato_rsz: TEdit;
@@ -105,7 +94,6 @@ type
     Label53: TLabel;
     Label54: TLabel;
     btnkuldes: TButton;
-    ed_lecegtelepules: TEdit;
     felcimlookup: TJvDBLookupCombo;
     Label7: TLabel;
     felcimekQ: TFDQuery;
@@ -131,6 +119,26 @@ type
     lblekaer: TLabel;
     ed_vtsz: TEdit;
     Button2: TButton;
+    lecimekQ: TFDQuery;
+    lecimekQDs: TDataSource;
+    lecimlookup: TJvDBLookupCombo;
+    Label12: TLabel;
+    Button1: TButton;
+    lecimekQid: TFDAutoIncField;
+    lecimekQtul_id: TIntegerField;
+    lecimekQirsz: TWideStringField;
+    lecimekQtelepules: TWideStringField;
+    lecimekQkozterulet: TWideStringField;
+    lecimekQkozt_jelleg: TWideStringField;
+    lecimekQhazszam: TWideStringField;
+    lecimekQepulet: TWideStringField;
+    lecimekQlepcsohaz: TWideStringField;
+    lecimekQemelet: TWideStringField;
+    lecimekQajto: TWideStringField;
+    lecimekQhrsz: TWideStringField;
+    lecimekQemail: TWideStringField;
+    lecimekQtelefon: TWideStringField;
+    lecimekQcim: TWideStringField;
     procedure btnkuldesClick(Sender: TObject);
     procedure felcimlookupCloseUp(Sender: TObject);
     procedure btnkilepesClick(Sender: TObject);
@@ -138,6 +146,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button2Click(Sender: TObject);
+    procedure lecimlookupCloseUp(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
     function bekodol(s:string):string;
@@ -158,7 +168,7 @@ var
   KiXML,VaXML:TStringlist;
   ekaercim:String;
 implementation
-  uses au,mjegyU, FelrakCimekU;
+  uses au,mjegyU, FelrakCimekU,LerakCimekU;
 {$R *.dfm}
 
 { TForm1 }
@@ -186,6 +196,16 @@ end;
 procedure TEkaerF.btnkuldesClick(Sender: TObject);
 begin
  kuldes
+end;
+
+procedure TEkaerF.Button1Click(Sender: TObject);
+begin
+ try
+   lerakcimekF.fo(MjegyF.tulajTID.AsInteger);
+ finally
+   lecimekQ.Close;
+   lecimekQ.Open
+ end;
 end;
 
 procedure TEkaerF.Button2Click(Sender: TObject);
@@ -280,12 +300,7 @@ begin
  ed_lecegadosz.Text:=Copy(MjegyF.Partnerlist2.FieldByName('adoszam').AsString,1,8);
  Application.ProcessMessages;
  cbx_lecegojel.ItemIndex:=cbx_lecegojel.Items.IndexOf('HU');
- ed_lecegirsz.Text:=MjegyF.Partnerlist2.FieldByName('irsz').AsString;
- ed_lecegtelepules.Text:=MjegyF.Partnerlist2.FieldByName('telepules').AsString;
- ed_lecegkozterulet.Text:=MjegyF.Partnerlist2.FieldByName('kozterulet').AsString;
- ed_lecegkoztjell.Text:=MjegyF.Partnerlist2.FieldByName('kozt_jelleg').AsString;
- ed_leceghazszam.Text:=MjegyF.Partnerlist2.FieldByName('hazszam').AsString;
- ed_leceghrsz.Text:=MjegyF.Partnerlist2.FieldByName('hrsz').AsString;
+
 
  //jarmű
  ed_vontato_rsz.Text:=MjegyF.cbxrendszam1.Text;
@@ -475,12 +490,12 @@ var kifn,vfn:string;
               if ed_lecegtel.Text<>'' then KiXML.Add('<phone>'+ed_lecegtel.Text+'</phone>');
               if ed_lecegemail.Text<>'' then KiXML.Add('<email>'+ed_lecegemail.Text+'</email>');
               if cbx_lecegojel.Text<>'' then KiXML.Add('<country>'+cbx_lecegojel.Text+'</country>');
-              if ed_lecegirsz.Text<>'' then KiXML.Add('<zipCode>'+ed_lecegirsz.Text+'</zipCode>');
-              if ed_lecegtelepules.Text<>'' then KiXML.Add('<city>'+ed_lecegtelepules.Text+'</city>');
-              if ed_lecegkozterulet.Text<>'' then KiXML.Add('<street>'+ed_lecegkozterulet.Text+'</street>');
-              if ed_lecegkoztjell.Text<>'' then KiXML.Add('<streetType>'+ed_lecegkoztjell.Text+'</streetType>');
-              if ed_leceghazszam.Text<>'' then KiXML.Add('<streetNumber>'+ed_leceghazszam.Text+'</streetNumber>');
-              if ed_leceghrsz.Text<>'' then KiXML.Add('<lotNumber>'+ed_leceghrsz.Text+'</lotNumber>');
+              if lecimekQirsz.AsString<>'' then KiXML.Add('<zipCode>'+lecimekQirsz.AsString+'</zipCode>');
+              if lecimekQtelepules.AsString<>'' then KiXML.Add('<city>'+lecimekQtelepules.AsString+'</city>');
+              if lecimekQkozterulet.AsString<>'' then KiXML.Add('<street>'+lecimekQkozterulet.AsString+'</street>');
+              if lecimekQkozt_jelleg.AsString<>'' then KiXML.Add('<streetType>'+lecimekQkozt_jelleg.AsString+'</streetType>');
+              if lecimekQhazszam.AsString<>'' then KiXML.Add('<streetNumber>'+lecimekQhazszam.AsString+'</streetNumber>');
+              if lecimekQhrsz.AsString<>'' then KiXML.Add('<lotNumber>'+lecimekQhrsz.AsString+'</lotNumber>');
             KiXML.Add('</unloadLocation>');
 
              kixml.Add('<loadDate>'+dt(fel_datum.Date,fel_ido.Time)+'</loadDate>');
@@ -595,12 +610,12 @@ begin
      ShowMessage('Hibás a lerakodási ország!');
      exit;
    end;
-  if ed_lecegirsz.text='' then
+  if lecimekQirsz.AsString='' then
    begin
      ShowMessage('Hibás a lerakodási irányitószám!');
      exit;
    end;
-  if ed_lecegtelepules.text='' then
+  if lecimekQtelepules.AsString='' then
    begin
      ShowMessage('Hibás a lerakodási cég városa!');
      exit;
@@ -626,6 +641,20 @@ begin
  end;
  lblekaer.Caption:=eredmeny;
  if (Not (UpperCase(ParamStr(1))='/D'))and(Eredmeny<>'HIBA')  then close;
+end;
+
+procedure TEkaerF.lecimlookupCloseUp(Sender: TObject);
+begin
+ if lecimlookup.KeyValue<>'!' then
+  begin
+    ed_lecegtel.Text:=lecimekQtelefon.AsString;
+    ed_lecegemail.Text:=lecimekQemail.AsString;
+  end
+ else
+  begin
+    ed_lecegtel.Clear;
+    ed_lecegemail.Clear
+  end;
 end;
 
 function TEkaerF.SystemTimeToUTC(Sys: TDateTime): TDateTime;
@@ -663,6 +692,15 @@ begin
         if recordcount=1 then felcimlookup.KeyValue:=Fields[0].AsInteger
         else felcimlookup.KeyValue:='!';
         felcimlookupCloseUp(Self)
+      end;
+      with lecimekQ do
+      begin
+        Close;
+        ParamByName('t').AsInteger:=MjegyF.tulajTID.AsInteger;
+        Open;
+        if recordcount=1 then lecimlookup.KeyValue:=Fields[0].AsInteger
+        else lecimlookup.KeyValue:='!';
+        lecimlookupCloseUp(Self)
       end;
       lblekaer.Caption:='';
 end;

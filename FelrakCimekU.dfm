@@ -20,8 +20,6 @@ object felrakcimekF: TfelrakcimekF
     Height = 40
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = -137
-    ExplicitWidth = 772
     object lbltulid: TLabel
       Left = 136
       Top = 16
@@ -44,13 +42,9 @@ object felrakcimekF: TfelrakcimekF
     Top = 40
     Width = 635
     Height = 226
-    ActivePage = tsfelcimlist
+    ActivePage = tsfelrakreszlet
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 627
-    ExplicitHeight = 198
     object tsfelcimlist: TTabSheet
       Caption = 'Felrakod'#225'si c'#237'mek'
       object DBGrid2: TDBGrid
