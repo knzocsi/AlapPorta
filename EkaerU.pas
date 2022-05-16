@@ -9,7 +9,8 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, JvExControls, JvDBLookup,
-  System.Net.URLClient, System.Net.HttpClient, System.Net.HttpClientComponent;
+  System.Net.URLClient, System.Net.HttpClient, System.Net.HttpClientComponent,
+  System.DateUtils;
 
 type
   TEkaerF = class(TForm)
@@ -431,7 +432,8 @@ var kifn,vfn:string;
       KiXML.Add('<user>');
        KiXML.Add('<user>'+ekaer_felhasz+'</user>');
        KiXML.Add('<passwordHash>'+bekodol(ekaer_jsz)+'</passwordHash>');
-       KiXML.Add('<VATNumber>'+copy(MjegyF.tulajTAdoszam.AsString,1,8)+'</VATNumber>');
+
+       KiXML.Add('<VATNumber>'+{'57343381'}copy(MjegyF.tulajTAdoszam.AsString,1,8)+'</VATNumber>');
        KiXML.Add('<requestSignature>'+bekodol(rid+times+ekaer_csk)+'</requestSignature>');
       KiXML.Add('</user>');
        KiXML.Add('<tradeCardOperations>');
@@ -523,7 +525,7 @@ var kifn,vfn:string;
       result:=ekaer_mappa+'kuldes\'+edmegrend_azon.Text+'.xml';
     end;
 begin
- if (Length(ed_vtsz.text)<8)then
+ if (Length(ed_vtsz.text)<6)then
    begin
      ShowMessage('Hibás a termék VTSZ száma!');
      exit;
@@ -683,7 +685,7 @@ begin
      fel_datum.Date:=Date;
      fel_ido.Time:=Time;
      le_datum.Date:=Date;
-     le_ido.Time:=Time;
+     le_ido.Time:=IncMinute(Time,60);
      with felcimekQ do
       begin
         Close;

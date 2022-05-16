@@ -47,7 +47,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet

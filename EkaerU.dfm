@@ -1474,7 +1474,7 @@ object EkaerF: TEkaerF
     Top = 290
     Width = 91
     Height = 25
-    Caption = 'Felrakod'#225'si c'#237'mek'
+    Caption = 'Lerakod'#225'si c'#237'mek'
     TabOrder = 47
     OnClick = Button1Click
   end
