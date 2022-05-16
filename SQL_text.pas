@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=10;
+      maxSQL=11;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -573,6 +573,85 @@ interface
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
       'from lerakodasi_cimek;'
+      ,
+      //11
+      //nyitbe tábla
+      'CREATE TABLE IF NOT EXISTS `nyitbe` ('+#13#10+
+      '`ID` int(11) NOT NULL AUTO_INCREMENT,'+#13#10+
+      '`Sorszam` varchar(20) DEFAULT NULL,'+#13#10+
+      '`Ev_ssz` int(11) DEFAULT NULL,'+#13#10+
+      '`Eazon` varchar(30) DEFAULT NULL,'+#13#10+
+      '`Storno` varchar(15) DEFAULT NULL,'+#13#10+
+      '`Rendszam` varchar(20) DEFAULT NULL,'+#13#10+
+      '`Rendszam2` varchar(20) DEFAULT NULL,'+#13#10+
+      '`P_ID` int(11) DEFAULT NULL,'+#13#10+
+      '`P_Kod` varchar(15) DEFAULT NULL,'+#13#10+
+      '`P_Nev` varchar(80) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`P_Cim` varchar(100) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`Termek_ID` int(11) DEFAULT NULL,'+#13#10+
+      '`Termek_Kod` varchar(30) DEFAULT NULL,'+#13#10+
+      '`Termek_Nev` varchar(100) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`Termek_afa` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`termek_ar` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`Szallitolev` varchar(20) DEFAULT NULL,'+#13#10+
+      '`Megjegyzes` varchar(200) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`Tomegbe` int(11) DEFAULT NULL,'+#13#10+
+      '`Tomegki` int(11) DEFAULT NULL,'+#13#10+
+      '`Erkdatum` date DEFAULT NULL,'+#13#10+
+      '`Erkido` time DEFAULT NULL,'+#13#10+
+      '`Tavdatum` date DEFAULT NULL,'+#13#10+
+      '`Tavido` time DEFAULT NULL,'+#13#10+
+      '`Felhasznalo` varchar(50) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`irany` varchar(30) DEFAULT NULL,'+#13#10+
+      '`Brutto` int(11) DEFAULT NULL,'+#13#10+
+      '`Tara` int(11) DEFAULT NULL,'+#13#10+
+      '`Netto` int(11) DEFAULT NULL,'+#13#10+
+      '`SzNetto` int(11) DEFAULT NULL,'+#13#10+
+      '`merlegelo` varchar(50) DEFAULT NULL,'+#13#10+
+      '`kuj` varchar(30) NOT NULL DEFAULT '''','+#13#10+
+      '`ktj` varchar(30) NOT NULL DEFAULT '''','+#13#10+
+      '`ekaer` varchar(30) NOT NULL DEFAULT '''','+#13#10+
+      '`psz` int(11) DEFAULT 0,'+#13#10+
+      '`alapnedv` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`nedv` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`tisztasag` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`tortszaz` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`feherje` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`olaj` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`esesszam` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`hekto` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`egysegtomeg` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`kerekites` tinyint(1) DEFAULT 0,'+#13#10+
+      '`kukorica` tinyint(1) DEFAULT 0,'+#13#10+
+      '`buzaminoseg` varchar(50) DEFAULT '''','+#13#10+
+      '`mennyiseg` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`tarolasi_dij` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`szaritasi_dij` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`tisztitasi_dij` decimal(12,2) DEFAULT 0.00,'+#13#10+
+      '`tarolo_id` int(11) DEFAULT 0,'+#13#10+
+      '`tarolo` varchar(50) DEFAULT '''''''''''','+#13#10+
+      '`elso_kezi` tinyint(1) DEFAULT NULL,'+#13#10+
+      '`masodik_kezi` tinyint(1) DEFAULT NULL,'+#13#10+
+      '`tul_id` int(11) DEFAULT 0,'+#13#10+
+      '`tul_nev` varchar(80) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_cim` varchar(200) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_adoszam` varchar(20) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_kuj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_ktj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_elotag` varchar(2) NOT NULL DEFAULT '''','+#13#10+
+      '`P2_ID` int(11) DEFAULT 0,'+#13#10+
+      '`P2_Kod` varchar(15) DEFAULT NULL,'+#13#10+
+      '`P2_Nev` varchar(80) DEFAULT NULL,'+#13#10+
+      '`P2_Cim` varchar(100) DEFAULT NULL,'+#13#10+
+      '`P2_kuj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
+      '`P2_ktj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
+      '`levon_szoveg` varchar(100) DEFAULT NULL,'+#13#10+
+      '`levon_tomeg` int(11) DEFAULT 0,'+#13#10+
+      '`ewc` varchar(20) DEFAULT '''','+#13#10+
+      '`tul_cjsz` varchar(20) DEFAULT '''','+#13#10+
+      'PRIMARY KEY (`ID`)'+#13#10+
+      ') ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;'
+
     );
 
 
