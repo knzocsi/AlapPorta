@@ -14,10 +14,11 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
-    kepnev:string;
+    kepnev:string ;
     { Public declarations }
   end;
 
@@ -39,6 +40,12 @@ begin
 end;
 
 procedure TNagykepF.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ imgnagy.Picture:=nil;
+ kepnev:='';
+end;
+
+procedure TNagykepF.FormCreate(Sender: TObject);
 begin
  imgnagy.Picture:=nil;
  kepnev:='';

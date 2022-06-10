@@ -10387,4 +10387,165 @@ object AF: TAF
       end
     end
   end
+  object TermekT: TFDTable
+    IndexFieldNames = 'ID'
+    Connection = Kapcs
+    UpdateOptions.UpdateTableName = 'termek'
+    TableName = 'termek'
+    Left = 240
+    Top = 384
+    object TermekTID: TFDAutoIncField
+      Tag = 17
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object TermekTKod: TWideStringField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'Kod'
+      Origin = 'Kod'
+      Size = 30
+    end
+    object TermekTNev: TWideStringField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'Nev'
+      Origin = 'Nev'
+      Size = 100
+    end
+    object TermekTitj: TWideStringField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'itj'
+      Origin = 'itj'
+    end
+    object TermekTme: TWideStringField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'me'
+      Origin = 'me'
+    end
+    object TermekTar: TBCDField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'ar'
+      Origin = 'ar'
+      Precision = 12
+      Size = 2
+    end
+    object TermekTafa: TBCDField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'afa'
+      Origin = 'afa'
+      Precision = 12
+      Size = 2
+    end
+    object TermekTegysegtomeg: TBCDField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'egysegtomeg'
+      Origin = 'egysegtomeg'
+      Precision = 12
+      Size = 2
+    end
+    object TermekTalapnedv: TBCDField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'alapnedv'
+      Origin = 'alapnedv'
+      Precision = 12
+      Size = 2
+    end
+    object TermekTkerekites: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'kerekites'
+      Origin = 'kerekites'
+    end
+    object TermekTkukorica: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'kukorica'
+      Origin = 'kukorica'
+    end
+    object TermekTb_nedv: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_nedv'
+      Origin = 'b_nedv'
+    end
+    object TermekTb_feherje: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_feherje'
+      Origin = 'b_feherje'
+    end
+    object TermekTb_eses: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_eses'
+      Origin = 'b_eses'
+    end
+    object TermekTb_tisztasag: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_tisztasag'
+      Origin = 'b_tisztasag'
+    end
+    object TermekTb_tort: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_tort'
+      Origin = 'b_tort'
+    end
+    object TermekTb_olaj: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_olaj'
+      Origin = 'b_olaj'
+    end
+    object TermekTb_buzaminoseg: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_buzaminoseg'
+      Origin = 'b_buzaminoseg'
+    end
+    object TermekTb_hekto: TBooleanField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'b_hekto'
+      Origin = 'b_hekto'
+    end
+    object TermekTtipus_id: TIntegerField
+      Tag = 17
+      AutoGenerateValue = arDefault
+      FieldName = 'tipus_id'
+      Origin = 'tipus_id'
+    end
+    object TermekTewc: TWideStringField
+      FieldName = 'ewc'
+    end
+  end
+  object TermekDS: TDataSource
+    DataSet = TermekT
+    Left = 288
+    Top = 384
+  end
+  object PartnerT: TFDTable
+    Connection = Kapcs
+    UpdateOptions.AssignedValues = [uvAutoCommitUpdates]
+    UpdateOptions.AutoCommitUpdates = True
+    UpdateOptions.UpdateTableName = 'partner'
+    TableName = 'partner'
+    Left = 240
+    Top = 440
+  end
+  object PartnerDS: TDataSource
+    DataSet = PartnerT
+    Left = 288
+    Top = 440
+  end
 end

@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=11;
+      maxSQL=12;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -652,6 +652,10 @@ interface
       'PRIMARY KEY (`ID`)'+#13#10+
       ') ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;'
 
+      ,//12
+      'ALTER TABLE partner MODIFY email VARCHAR(50);'+#13#10+
+      'ALTER TABLE partner MODIFY kozterulet VARCHAR(150);'+#13#10+
+      'ALTER TABLE partner MODIFY nev VARCHAR(150);'//+#13#10+
     );
 
 

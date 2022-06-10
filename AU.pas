@@ -20,7 +20,7 @@ uses
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
-  Winapi.ShellAPI;
+  Winapi.ShellAPI,System.Types,System.Win.ComObj;
 
 const
   joga: array [1..20] of string=
@@ -103,6 +103,31 @@ type
     ZarolQ: TFDQuery;
     ZarolvaQ: TFDQuery;
     frxtesztrep: TfrxReport;
+    TermekT: TFDTable;
+    TermekTID: TFDAutoIncField;
+    TermekTKod: TWideStringField;
+    TermekTNev: TWideStringField;
+    TermekTitj: TWideStringField;
+    TermekTme: TWideStringField;
+    TermekTar: TBCDField;
+    TermekTafa: TBCDField;
+    TermekTegysegtomeg: TBCDField;
+    TermekTalapnedv: TBCDField;
+    TermekTkerekites: TBooleanField;
+    TermekTkukorica: TBooleanField;
+    TermekTb_nedv: TBooleanField;
+    TermekTb_feherje: TBooleanField;
+    TermekTb_eses: TBooleanField;
+    TermekTb_tisztasag: TBooleanField;
+    TermekTb_tort: TBooleanField;
+    TermekTb_olaj: TBooleanField;
+    TermekTb_buzaminoseg: TBooleanField;
+    TermekTb_hekto: TBooleanField;
+    TermekTtipus_id: TIntegerField;
+    TermekTewc: TWideStringField;
+    TermekDS: TDataSource;
+    PartnerT: TFDTable;
+    PartnerDS: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -147,6 +172,8 @@ type
     procedure camlog(S:string);
     procedure tomeglog(S:string);
     procedure rendez(ds: TFDDataSet; fname:string);
+    procedure torzs_import;
+    procedure import_log(S:string);
     { Public declarations }
   end;
 
@@ -173,9 +200,9 @@ var
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
-  ekaer_mappa,ekaer_csk,kpmappa,merleg_neve:String;
+  ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
-  Infra_Figyeles:boolean;
+  Infra_Figyeles,automata_torzsimport:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
 
 
@@ -429,6 +456,20 @@ begin
   FreeMem(VerInfo, VerInfoSize);
 end;
 
+procedure TAF.import_log(S: string);
+var tf : TextFile;
+    m:string;
+begin
+ m:=ExtractFileDir(application.exename);
+// ForceDirectories(m);
+ AssignFile(tf,m+'\import_log.txt');
+ if not FileExists(m+'\import_log.txt') then ReWrite(tf)
+ else Append(tf);
+ WriteLn(tf, s+ ' '+Datetimetostr(Now)+'');
+// Writeln(tf,'*****************************************************************************************************************');
+ CloseFile(tf);
+end;
+
 procedure TAF.ini_kezel;
 var i:Tinifile;
    fover,alver,build,j,k:Integer;
@@ -662,6 +703,11 @@ begin
   lado:=i.ReadInteger('ALAP','Lado',0);
   i.WriteInteger('ALAP','Lado',lado);
 
+  automata_torzsimport:=i.Readbool('ALAP','Automata_torzsimport',false);//automata törzsimport
+  i.WriteBool('ALAP','Automata_torzsimport',Automata_torzsimport);
+  torzs_import_mappa:=i.ReadString('Mappak','Torzs_import',ExtractFileDir(ExtractFilePath(application.exename))+'\Torzs_import');
+  i.writeString('Mappak','Torzs_import',torzs_import_mappa);
+
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
   ForceDirectories(pdfmappa);
@@ -671,6 +717,12 @@ begin
   ekaer_mappa:=ekaer_mappa+'\';
   ForceDirectories(ekaer_mappa+'\kuldes');
   ForceDirectories(ekaer_mappa+'\valasz');
+  if automata_torzsimport then
+   begin
+    ForceDirectories(torzs_import_mappa);
+    torzs_import_mappa:=torzs_import_mappa+'\';
+    ForceDirectories(torzs_import_mappa+'Importalva');
+   end;
   i.UpdateFile;
   i.Free;
 end;
@@ -1235,6 +1287,116 @@ begin
  WriteLn(tf, Datetimetostr(Now)+' -'+s);
  //Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
+end;
+
+procedure TAF.torzs_import;
+var XLSXlist: TStringDynArray;
+    i: Integer;
+
+  procedure termek_import(fn:string);
+  var  FExcel,FworkSheet: Variant;
+       s: integer;
+      begin
+        FExcel := CreateOleObject('Excel.Application');
+        FExcel.Visible:=False;
+        try
+         FExcel.Workbooks.Open(fn);
+         FWorkSheet:=FExcel.WorkBooks[1].sheets[1];
+        except
+        // ShowMessage('A fájl nem létezik');
+         FExcel.Quit;
+         aF.KillTask('EXCEL.EXE');
+         exit;
+        end;
+        s:=2;
+        TermekT.Open;
+        TermekT.DisableControls;
+        while FworkSheet.Cells[s,1].text<>'' do
+         begin
+           if not TermekT.Locate('kod',FworkSheet.cells[s,1],[]) then  TermekT.Append
+           else TermekT.edit;
+           termekt.FieldByName('kod').AsString:=FworkSheet.cells[s,1];
+           termekt.FieldByName('nev').AsString:=FworkSheet.cells[s,2];
+           termekt.FieldByName('itj').AsString:=FworkSheet.cells[s,3];
+           TermekT.Post;
+           inc(s);
+         end;
+        TermekT.EnableControls;
+        TermekT.Close;
+        FExcel.Quit;
+        aF.KillTask('EXCEL.EXE');
+      end;
+  procedure partner_import(fn:string);
+  var  FExcel,FworkSheet: Variant;
+       s: integer;
+      begin
+        FExcel := CreateOleObject('Excel.Application');
+        FExcel.Visible:=False;
+        try
+         FExcel.Workbooks.Open(fn);
+         FWorkSheet:=FExcel.WorkBooks[1].sheets[1];
+        except
+        // ShowMessage('A fájl nem létezik');
+         FExcel.Quit;
+         aF.KillTask('EXCEL.EXE');
+         exit;
+        end;
+        s:=2;
+        partnerT.Open;
+       // partnerT.DisableControls;
+        while  FworkSheet.Cells[s,1].text<>''{s<1000} do
+         begin
+          Try
+           if not partnerT.Locate('kod',FworkSheet.cells[s,2].text,[]) then  partnerT.Append
+           else partnerT.edit;
+           partnerT.FieldByName('kod').AsString:=FworkSheet.cells[s,2].text;
+           partnerT.FieldByName('nev').AsString:=FworkSheet.cells[s,4.].text;
+           partnerT.FieldByName('irsz').AsString:=FworkSheet.cells[s,5].text;
+           partnerT.FieldByName('Telepules').AsString:=FworkSheet.cells[s,6].text;
+           partnerT.FieldByName('kozterulet').AsString:=FworkSheet.cells[s,7].text;
+           partnerT.FieldByName('telefon').AsString:=FworkSheet.cells[s,8].text;
+           partnerT.FieldByName('email').AsString:=FworkSheet.cells[s,11].text;
+           partnerT.FieldByName('adoszam').AsString:=FworkSheet.cells[s,17].text;
+           PartnerT.Post;
+          except
+            import_log('Hibás sor '+S.ToString)
+          End;
+           inc(s);
+         end;
+       // partnerT.EnableControls;
+        partnerT.Close;
+        FExcel.Quit;
+        aF.KillTask('EXCEL.EXE');
+      end;
+begin
+ XLSXlist:=(TDirectory.GetFiles(torzs_import_mappa,'*.xlsx'));
+ for I := 0 to Length(XLSXlist) - 1 do
+  begin
+   if Pos('cikk',LowerCase(XLSXlist[i]))<>0 then
+    begin
+      try
+       try
+        termek_import(XLSXlist[i]);
+       finally
+        TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+       end;
+      except
+        //
+      end;
+    end;
+   if Pos('partner',LowerCase(XLSXlist[i]))<>0 then
+    begin
+      try
+       try
+        partner_import(XLSXlist[i]);
+       finally
+        TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+       end;
+      except
+        //
+      end;
+    end;
+  end;
 end;
 
 function TAF.Transform(Value: String): String;

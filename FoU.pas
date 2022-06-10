@@ -89,6 +89,7 @@ type
     tomeg_levon_szovegek_m: TMenuItem;
     elokep_timer: TTimer;
     memLog: TMemo;
+    Antheratrzsimport1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -158,6 +159,7 @@ type
     procedure elokep_timerTimer(Sender: TObject);
     procedure piBefejezoDatumChange(Sender: TObject);
     procedure imgFelsokepClick(Sender: TObject);
+    procedure Antheratrzsimport1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -191,7 +193,7 @@ var
 var
   FoF: TFoF;
   socketrendszam, socketkep: string;
-  kartyavan,van_plugin: boolean;
+  kartyavan,van_plugin,torzsiport_folyamatban: boolean;
  // RtspURLs: array [0..3] of string;
   Panelek: TObjectList;
   P: TPanel;
@@ -259,6 +261,25 @@ procedure SetCounterDebounceTime(CounterNr, DebounceTime: integer); stdcall; ext
 
 
 {$R *.dfm}
+
+procedure TFoF.Antheratrzsimport1Click(Sender: TObject);
+begin
+torzsiport_folyamatban:=True;
+Screen.Cursor:=crHourGlass;
+try
+ try
+  af.torzs_import
+ finally
+  ShowMessage('Importálás kész');
+  torzsiport_folyamatban:=False;
+  Screen.Cursor:=crDefault;
+ end;
+except
+ ShowMessage('Hiba történt');
+ torzsiport_folyamatban:=False;
+ Screen.Cursor:=crDefault;
+end;
+end;
 
 procedure TFoF.Anyagok1Click(Sender: TObject);
 begin
@@ -566,13 +587,17 @@ begin
    end;
   with MainMenu1 do
   for h := 0 to Items.Count-1 do
-  if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
+  begin
+   if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
+   //if Items[h].Tag=100 then items[h].visible:=automata_torzsimport;
+
+  end;
   aF.jogok_beolvasasa;
   alapbe_m.visible:=felhnev='Programozó';
   teszt_m.visible:=felhnev='Programozó';
   memLog.Visible:=felhnev='Programozó';
   tomeg_levon_szovegek_m.visible:=tomeg_levon;
-
+  Antheratrzsimport1.Visible:= automata_torzsimport;
   if rendszamleker then  socketconnect;
   piKezdoDatum.Date := date;
   piBefejezoDatum.Date := date;
@@ -671,16 +696,20 @@ end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-  if not van_plugin then CanClose:=True
+  if torzsiport_folyamatban then CanClose:=false
   else
   begin
-   if lejatszas then
+    if not van_plugin then CanClose:=True
+    else
     begin
-     elokep_timer.Enabled:=false;
-     stop(False);
-     CanClose := FreeLibrary(vlclib);
-    end
-   else CanClose:=true;
+     if lejatszas then
+      begin
+       elokep_timer.Enabled:=false;
+       stop(False);
+       CanClose := FreeLibrary(vlclib);
+      end
+     else CanClose:=true;
+    end;
   end;
 end;
 
@@ -763,6 +792,8 @@ end;
 
 procedure TFoF.imgFelsokepClick(Sender: TObject);
 begin
+  if (Sender=imgFelsokep)and (imgFelsokep.Picture.Graphic=nil) then exit;
+  if (Sender=imgAlsokep)and (imgAlsokep.Picture.Graphic=nil) then exit;
   if (Sender=imgFelsokep)and(FileExists(aF.ForgalomQ.FieldByName('Kepnev1').AsString)) then
       NagykepF.kepnev:=aF.ForgalomQ.FieldByName('Kepnev1').AsString;
   if (Sender=imgAlsokep)and(FileExists(aF.ForgalomQ.FieldByName('Kepnev2').AsString)) then
@@ -838,9 +869,11 @@ end;
 procedure TFoF.kepbetolt;
 begin
   if FileExists(aF.ForgalomQ.FieldByName('Kepnev1').AsString) then
-    imgFelsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev1').AsString);
+  imgFelsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev1').AsString)
+  else imgFelsokep.Picture:=nil;
   if FileExists(aF.ForgalomQ.FieldByName('Kepnev2').AsString) then
-    imgAlsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev2').AsString);
+  imgAlsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev2').AsString)
+  else imgAlsokep.Picture:=nil;
   kepatmeretez;
 end;
 

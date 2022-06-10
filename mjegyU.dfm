@@ -330,13 +330,14 @@ object MjegyF: TMjegyF
     end
     object kezelolookup: TJvDBLookupCombo
       Left = 696
-      Top = 181
+      Top = 177
       Width = 305
       Height = 21
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
       LookupField = 'id'
       LookupDisplay = 'nev;'
+      LookupSource = AF.merlegkezQDs
       TabOrder = 11
     end
     object Button2: TButton

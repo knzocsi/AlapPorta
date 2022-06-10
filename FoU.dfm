@@ -193,7 +193,7 @@ object FoF: TFoF
         Width = 113
         Height = 21
         Date = 43587.000000000000000000
-        Time = 0.773554583327495600
+        Time = 0.773554583327495500
         TabOrder = 0
         OnChange = piKezdoDatumChange
       end
@@ -393,6 +393,7 @@ object FoF: TFoF
     end
   end
   object MainMenu1: TMainMenu
+    Tag = 100
     Left = 432
     Top = 136
     object rzsadatok1: TMenuItem
@@ -417,6 +418,11 @@ object FoF: TFoF
       object rolk1: TMenuItem
         Caption = 'T'#225'rol'#243'k'
         OnClick = rolk1Click
+      end
+      object Antheratrzsimport1: TMenuItem
+        Tag = 100
+        Caption = 'Anthera t'#246'rzs import'
+        OnClick = Antheratrzsimport1Click
       end
     end
     object Listk1: TMenuItem
