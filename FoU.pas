@@ -90,6 +90,7 @@ type
     elokep_timer: TTimer;
     memLog: TMemo;
     Antheratrzsimport1: TMenuItem;
+    Szoftverbelltsok1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -160,6 +161,7 @@ type
     procedure piBefejezoDatumChange(Sender: TObject);
     procedure imgFelsokepClick(Sender: TObject);
     procedure Antheratrzsimport1Click(Sender: TObject);
+    procedure Szoftverbelltsok1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -193,7 +195,7 @@ var
 var
   FoF: TFoF;
   socketrendszam, socketkep: string;
-  kartyavan,van_plugin,torzsiport_folyamatban: boolean;
+  kartyavan,van_plugin: boolean;
  // RtspURLs: array [0..3] of string;
   Panelek: TObjectList;
   P: TPanel;
@@ -210,7 +212,7 @@ uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
-  levon_szovegekU, demotomegU, nagykepU;
+  levon_szovegekU, demotomegU, nagykepU, szoftver_alapU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -264,11 +266,14 @@ procedure SetCounterDebounceTime(CounterNr, DebounceTime: integer); stdcall; ext
 
 procedure TFoF.Antheratrzsimport1Click(Sender: TObject);
 begin
+if torzsiport_folyamatban then exit;
+af.autotorzs.Enabled:=False;
 torzsiport_folyamatban:=True;
 Screen.Cursor:=crHourGlass;
 try
  try
-  af.torzs_import
+  af.torzs_import_csv;
+  af.torzs_import_xlsx;
  finally
   ShowMessage('Importálás kész');
   torzsiport_folyamatban:=False;
@@ -279,6 +284,7 @@ except
  torzsiport_folyamatban:=False;
  Screen.Cursor:=crDefault;
 end;
+af.autotorzs.Enabled:=true;
 end;
 
 procedure TFoF.Anyagok1Click(Sender: TObject);
@@ -718,6 +724,7 @@ var
   i: Integer;
   sL: TStringList;
 begin
+
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo
   //showmessage(ExtractFileDir(ExtractFilePath(application.exename))+'\plugins');
@@ -745,6 +752,7 @@ begin
       sL.Free;
    end
   else ShowMessage('A plugin mappa hiányzik az IP kamerához!');
+
 end;
 
 procedure TFoF.FormResize(Sender: TObject);
@@ -1438,6 +1446,12 @@ begin
       end;
     end;
  // lejatszas:=False;
+end;
+
+procedure TFoF.Szoftverbelltsok1Click(Sender: TObject);
+begin
+ if InputBox('Adja meg jelszavat',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
+ szoftver_alapF.fo
 end;
 
 procedure TFoF.szures;

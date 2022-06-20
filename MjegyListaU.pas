@@ -22,7 +22,7 @@ type
     btnUjranyomtatas: TButton;
     btnListanyomtatas: TButton;
     Panel2: TPanel;
-    JvDBUltimGrid1: TJvDBUltimGrid;
+    mlistaGrid: TJvDBUltimGrid;
     mjegyekQ: TFDQuery;
     mjegyekQDs: TDataSource;
     Button3: TButton;
@@ -84,6 +84,8 @@ type
     procedure rendszamok_feloltese;
     procedure Button4Click(Sender: TObject);
     procedure piBefejezoDatumChange(Sender: TObject);
+    procedure mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
     { Private declarations }
     procedure szures;
@@ -218,7 +220,7 @@ end;
 
 procedure TMjegyekF.Button4Click(Sender: TObject);
 begin
- LibreExcelF.mezo_nevek(JvDBUltimGrid1,nil);
+ LibreExcelF.mezo_nevek(mlistaGrid,nil);
 end;
 
 procedure TMjegyekF.cbxrendszChange(Sender: TObject);
@@ -358,6 +360,21 @@ begin
            TfrxMemoView(FindObject('memtorttomeg')).Text:='';
            TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
           end;
+         if jegyen_latszik('b_hekto') then
+         begin
+         if TfrxMemoView(FindObject('memhekto'))<>nil then
+          begin
+           TfrxMemoView(FindObject('memhekto')).Text:=mjegyekQ.FieldByName('hekto').AsString;
+          end;
+         end
+         else
+         begin
+          if TfrxMemoView(FindObject('memhekto'))<>nil then
+          begin
+           TfrxMemoView(FindObject('memhekto')).Text:='';
+           TfrxMemoView(FindObject('memhektolbl')).Text:='';
+          end;
+         end;
 
      TfrxMemoView(FindObject('memsznetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
      TfrxMemoView(FindObject('memegysar')).Text:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
@@ -406,30 +423,48 @@ termeklist.close;
 Partnelist.close;
 end;
 
+procedure TMjegyekF.mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+try
+ if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szûr
+  begin
+    {Col_neve:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName;
+   col_felirat:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].Title.Caption;
+   lblmire.Caption:=col_felirat;
+   edszures.SetFocus; }
+  end;
+  if (button= mbleft) and (mlistaGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+    af.rendez(mjegyekQ,(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName);
+except
+ //
+end;
+end;
+
 procedure TMjegyekF.rendszamok_feloltese;
-    begin
-      with aF.Q1 do
-       begin
-         close;
-         SQL.Clear;
-         SQL.Add(' select distinct(rendszam) from merlegjegy');
-         SQL.Add(' where Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1 ');
-         ParamByName('p0').AsDate:=piKezdoDatum.Date;
-         ParamByName('p1').AsDate:=piBefejezoDatum.Date;
-         Open();
-         cbxrendsz.Clear;
-         cbxrendsz.Items.Add('*Nincs szûrve*');
-         First;
-         DisableControls;
-         while not eof do
-         begin
-          cbxrendsz.Items.Add(FieldByName('rendszam').AsString);
-          Next
-         end;
-         Close;
-         cbxrendsz.ItemIndex:=0;
-       end;
-    end;
+begin
+  with aF.Q1 do
+   begin
+     close;
+     SQL.Clear;
+     SQL.Add(' select distinct(rendszam) from merlegjegy');
+     SQL.Add(' where Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1 ');
+     ParamByName('p0').AsDate:=piKezdoDatum.Date;
+     ParamByName('p1').AsDate:=piBefejezoDatum.Date;
+     Open();
+     cbxrendsz.Clear;
+     cbxrendsz.Items.Add('*Nincs szûrve*');
+     First;
+     DisableControls;
+     while not eof do
+     begin
+      cbxrendsz.Items.Add(FieldByName('rendszam').AsString);
+      Next
+     end;
+     Close;
+     cbxrendsz.ItemIndex:=0;
+   end;
+end;
 
 procedure TMjegyekF.partnerek_intervallomra;
 begin
@@ -481,8 +516,16 @@ begin
   tsz:=0;nedvesseg:='';tisztasag:='';ttom:=0;
   br := mjegyekQ.FieldByName('Brutto').Value;
   tr := mjegyekQ.FieldByName('tara').Value;
-  aned := mjegyekQ.FieldByName('alapnedv').Value;
-  ned := mjegyekQ.FieldByName('nedv').Value;
+  if mjegyekQ.FieldByName('nedv').Value>mjegyekQ.FieldByName('alapnedv').Value then
+   begin
+    aned := mjegyekQ.FieldByName('alapnedv').Value;
+    ned := mjegyekQ.FieldByName('nedv').Value;
+   end
+  else
+   begin
+    aned := mjegyekQ.FieldByName('alapnedv').Value;
+    ned := mjegyekQ.FieldByName('alapnedv').Value;
+   end;
   tisz := mjegyekQ.FieldByName('tisztasag').Value;
   tsz:= mjegyekQ.FieldByName('tortszaz').Value;
 

@@ -75,10 +75,10 @@ object PartnerekF: TPartnerekF
       Caption = 'Lista'
       object PartnerGrid: TDBGrid
         Left = 0
-        Top = 64
+        Top = 57
         Width = 762
-        Height = 236
-        Align = alBottom
+        Height = 243
+        Align = alClient
         DataSource = PartnerDS
         ReadOnly = True
         TabOrder = 0

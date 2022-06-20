@@ -824,6 +824,21 @@ var sorsz,pcime,egyedi:String;
            TfrxMemoView(FindObject('memtorttomeg')).Text:='';
            TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
           end;
+         if sphekto.Visible then
+         begin
+         if TfrxMemoView(FindObject('memhekto'))<>nil then
+          begin
+           TfrxMemoView(FindObject('memhekto')).Text:=sphekto.Value.ToString;
+          end;
+         end
+         else
+         begin
+          if TfrxMemoView(FindObject('memhekto'))<>nil then
+          begin
+           TfrxMemoView(FindObject('memhekto')).Text:='';
+           TfrxMemoView(FindObject('memhektolbl')).Text:='';
+          end;
+         end;
 
          TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
          TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
@@ -1180,8 +1195,16 @@ begin
   nedvesseg:='';tisztasag:='';ttom:=0;
   br := SpBrutto.Value;
   tr := Sptara.value;
-  aned := SpAlapnedv.Value;
-  ned := SpNedv.Value;
+  if spnedv.Value>spalapnedv.Value then
+   begin
+    aned := SpAlapnedv.Value;
+    ned := SpNedv.Value;
+   end
+   else
+   begin
+    aned := SpAlapnedv.Value;
+    ned := SpAlapnedv.Value;
+   end;
   tisz := Sptisztasag.Value;
   tortszem_szazalek:= Sptort.Value;
   if sp_tomeg_levon.Text='' then sp_tomeg_levon.Value:=0;

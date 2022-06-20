@@ -193,7 +193,7 @@ object FoF: TFoF
         Width = 113
         Height = 21
         Date = 43587.000000000000000000
-        Time = 0.773554583327495500
+        Time = 0.773554583327495600
         TabOrder = 0
         OnChange = piKezdoDatumChange
       end
@@ -372,6 +372,8 @@ object FoF: TFoF
             'memLog')
           TabOrder = 0
           Visible = False
+          ExplicitLeft = 486
+          ExplicitTop = 4
         end
       end
       object pnlAlsokep: TPanel
@@ -491,6 +493,10 @@ object FoF: TFoF
           Caption = 'Tulajdonosok'
           OnClick = tulaj_mClick
         end
+        object Szoftverbelltsok1: TMenuItem
+          Caption = 'Szoftver be'#225'll'#237't'#225'sok'
+          OnClick = Szoftverbelltsok1Click
+        end
       end
       object teszt_m: TMenuItem
         Caption = 'Teszt'
@@ -580,7 +586,7 @@ object FoF: TFoF
   object elokep_timer: TTimer
     Enabled = False
     OnTimer = elokep_timerTimer
-    Left = 865
-    Top = 192
+    Left = 841
+    Top = 120
   end
 end

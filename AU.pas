@@ -20,7 +20,7 @@ uses
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
-  Winapi.ShellAPI,System.Types,System.Win.ComObj;
+  Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000;
 
 const
   joga: array [1..20] of string=
@@ -128,6 +128,9 @@ type
     TermekDS: TDataSource;
     PartnerT: TFDTable;
     PartnerDS: TDataSource;
+    autotorzs: TTimer;
+    CfgT: TFDTable;
+    CfgTDs: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -135,11 +138,24 @@ type
     procedure KapcsBeforeCommit(Sender: TObject);
     procedure KapcsLost(Sender: TObject);
     procedure AutomentesTimer(Sender: TObject);
+    procedure autotorzsTimer(Sender: TObject);
   private
     { Private declarations }
+    LCID: Cardinal;
+    FExcel: TExcelApplication;
+    FworkBook: TExcelWorkbook;
+    FworkSheet: TExcelWorksheet;
+
+    FExcel2: TExcelApplication;
+    FworkBook2: TExcelWorkbook;
+    FworkSheet2: TExcelWorksheet;
+
+
     procedure ini_kezel;
+    procedure kapcs_ini_kezel;
     procedure GetVerisonNumber(var Fover, Alver, Build: Integer; File_ut: Pchar);
     procedure frissites;
+
   public
     function kepszures(im:TImage):string;
     function kepkeres(im:TImage):string;
@@ -172,8 +188,11 @@ type
     procedure camlog(S:string);
     procedure tomeglog(S:string);
     procedure rendez(ds: TFDDataSet; fname:string);
-    procedure torzs_import;
+    procedure torzs_import_xlsx;
+    procedure torzs_import_csv;
     procedure import_log(S:string);
+    function cfg_kezel(csoport,tulajdonsag,tipus:String;ertek:Variant):Variant;
+
     { Public declarations }
   end;
 
@@ -204,10 +223,10 @@ var
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
   Infra_Figyeles,automata_torzsimport:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
-
+  torzsiport_folyamatban: Boolean=False;
 
 implementation
-uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU;
+uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -217,7 +236,7 @@ uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU;
 procedure TAF.DataModuleCreate(Sender: TObject);
 begin
   bit:=9;
-  ini_kezel;
+  kapcs_ini_kezel;
   frissites;
   user:='knz';
   passwd:='MaTt2019';
@@ -261,6 +280,7 @@ begin
       end;
     end;
   end;
+  ini_kezel;
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
   FormatSettings.DecimalSeparator:=',';
@@ -271,8 +291,10 @@ begin
 
   Kapcs.ResourceOptions.AutoReconnect:=True;
   jogmod:=False;
+  LCID := GetUserDefaultLCID;
   Automentes.Enabled:=mentesido in [0..23];
   if (nedvesseg_beolvasasa) and (mezgaz) then Sample_Kapcs.Connected:=true;
+  autotorzs.Enabled:=automata_torzsimport;
  // merlegjegy_tipus_betoltese;//iniben kell megadni-elõkészítés elõtt töltöm be
 end;
 
@@ -468,246 +490,219 @@ begin
  WriteLn(tf, s+ ' '+Datetimetostr(Now)+'');
 // Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
+ Application.ProcessMessages;
 end;
 
 procedure TAF.ini_kezel;
 var i:Tinifile;
-   fover,alver,build,j,k:Integer;
-   ujdbnev:string;
+    k: Integer;
+  // ujdbnev:string;
+
+
 begin
   i:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
-  GetVerisonNumber(Fover, Alver,Build,PChar(Application.ExeName));
-  verzio:='Ver.: '+IntToStr(fover)+'.'+IntToStr(alver)+'.'+IntToStr(build);
-  konyvtar:=ExtractFilePath(Application.ExeName);
-  szerver:=i.ReadString('ALAP','Szerver','localhost');
-  i.writeString('ALAP','Szerver',szerver);
-  adatbazis:=i.ReadString('ALAP','Adatbazis','');
-  {if adatbazis='' then
-   begin
-    ujdbnev:=InputBox('Adatbázis neve','Adatbázis','');
-    adatbazis:=ujdbnev
-   end;}
-  i.writeString('ALAP','Adatbazis',adatbazis);
-
-  port:=i.ReadString('ALAP','Port','3307');
-  i.writeString('ALAP','Port',port);
   visszanap:=i.ReadInteger('ALAP','Visszanap',5);
-  i.WriteInteger('ALAP','Visszanap',visszanap);
-
+  visszanap:=cfg_kezel('ALAP','Visszanap','Integer',5);
+ // ShowMessage(visszanap.ToString);
   telephely:=i.ReadString('ALAP','Telephely','Rakamaz');
-  i.writeString('ALAP','Telephely',telephely);
-  //rtspURL:=i.ReadString('ALAP','RtspURL','');
-  //i.writeString('ALAP','RtspURL',rtspURL);
+  telephely:=cfg_kezel('ALAP','Telephely','String',telephely);
+  //i.writeString('ALAP','Telephely',telephely);
   nyugvovarakozas:=i.ReadInteger('ALAP','Nyugvovarakozas',10);
-  i.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
-
+  nyugvovarakozas:=cfg_kezel('ALAP','Nyugvó várakozás','Integer',10);
+  //i.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
   mintomeg:=i.ReadInteger('ALAP','Mintomeg',500);
-  i.WriteInteger('ALAP','Mintomeg',mintomeg);
-
+  mintomeg:=cfg_kezel('ALAP','Minimum tömeg','Integer',mintomeg);
+  //i.WriteInteger('ALAP','Mintomeg',mintomeg);
   pingproba:=i.ReadInteger('ALAP','Pingproba',3);
-  i.WriteInteger('ALAP','Pingproba',pingproba);
-
+  pingproba:=cfg_kezel('ALAP','Ping próbák száma','Integer',pingproba);
+  //i.WriteInteger('ALAP','Pingproba',pingproba);
   kamproba:=i.ReadInteger('ALAP','Kamproba',3);
-  i.WriteInteger('ALAP','Kamproba',kamproba);
-  (*
-  tulajcime:=i.ReadString('ALAP','Cim','');
-  i.writeString('ALAP','Cim',tulajcime);
-
-  tulajneve:=i.ReadString('ALAP','Nev','');
-  i.writeString('ALAP','Nev',tulajneve);
-
-  adosz:=i.ReadString('ALAP','Adoszam','');
-  i.writeString('ALAP','Adoszam',adosz);
-
-  kuj:=i.ReadString('ALAP','KUJ','');
-  i.writeString('ALAP','KUJ',kuj);
-
-  ktj:=i.ReadString('ALAP','KTJ','');
-  i.writeString('ALAP','KTJ',ktj);
-
-  *)
-
-  j:=i.ReadInteger('ALAP','Automata_kezelo',0);
-  i.WriteInteger('ALAP','Automata_kezelo',j);
-  automata_kezelo:=j=1;
-
+  kamproba:=cfg_kezel('ALAP','Camera próbák száma','Integer',kamproba);
+  //i.WriteInteger('ALAP','Kamproba',kamproba);
+  //j:=i.ReadInteger('ALAP','Automata_kezelo',0);
+  automata_kezelo:=i.ReadBool('ALAP','Automata_kezelo',False);
+  automata_kezelo:=cfg_kezel('ALAP','Automata kezelõ','Boolean',False);
+  //i.WriteBool('ALAP','Automata_kezelo',automata_kezelo);
   pdfmappa:=i.ReadString('Mappak','Pdf',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
-  i.writeString('Mappak','pdf',pdfmappa);
-
-  j:=i.ReadInteger('ALAP','Rendszamleker',0);
-  i.WriteInteger('ALAP','Rendszamleker',j);
-  rendszamleker:=j=1;
-
+  pdfmappa:=cfg_kezel('MAPPAK','Pdf mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
+  //i.writeString('Mappak','pdf',pdfmappa);
+ // j:=i.ReadInteger('ALAP','Rendszamleker',0);
+  rendszamleker:=i.ReadBool('ALAP','Rendszamleker',False);
+  rendszamleker:=cfg_kezel('ALAP','Rendszám lekérése','Boolean',False);
+  //i.WriteBool('ALAP','Rendszamleker',rendszamleker);
   lejatszas:=i.ReadBool('ALAP','Lejatszas',False);
-  i.WriteBool('ALAP','Lejatszas',lejatszas);
-
+  lejatszas:=cfg_kezel('ALAP','Élõ ip camera lejátszás','Boolean',False);
+ // i.WriteBool('ALAP','Lejatszas',lejatszas);
   vezerles_tipus:=UpperCase(i.ReadString('ALAP','Vezerles_tipus(USB/PLC)','PLC'));
+ // vezerles_tipus:=cfg_kezel('ALAP','Vezérlés típus(USB/PLC)','String','PLC');
   i.writeString('ALAP','Vezerles_tipus(USB/PLC)',vezerles_tipus);
-
   lehajtasivarakozas:=i.ReadInteger('ALAP','Lehajtasivarakozas',10);
-  i.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
-
+  lehajtasivarakozas:=cfg_kezel('ALAP','Lehajtási várakozas','Integer',lehajtasivarakozas);
+  //i.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
   nagykamera:=i.ReadBool('ALAP','Nagy_kamera_kep',False);
-  i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
-
+  nagykamera:=cfg_kezel('ALAP','Nagy kamera kép','Boolean',nagykamera);
+  //i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
   Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
+  //Merleg_tipus:=cfg_kezel('ALAP','Mérleg típus','String',Merleg_tipus);
   i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
-
   PLC_IP:=i.ReadString('PLC_USB','PLC_IP','Local');
+  //PLC_IP:=cfg_kezel('PLC_USB','PLC_IP','String',PLC_IP);
   i.writeString('PLC_USB','PLC_IP',PLC_IP);
-
-
-
   Elso_lampa:=i.ReadInteger('PLC_USB','Elso_lampa',11);
+  //Elso_lampa:=cfg_kezel('PLC_USB','Elsõ lámpa','Integer',Elso_lampa);
   i.WriteInteger('PLC_USB','Elso_lampa',Elso_lampa);
-
-
-
   Hatso_lampa:=i.ReadInteger('PLC_USB','Hatso_lampa',21);
+  //Hatso_lampa:=cfg_kezel('PLC_USB','Hátsó lámpa','Integer',Hatso_lampa);
   i.WriteInteger('PLC_USB','Hatso_lampa',Hatso_lampa);
-
   Sorompo_nyit_cim_BE:=i.ReadInteger('PLC_USB','Sorompo_nyit_cim_BE',10);
+  //Sorompo_nyit_cim_BE:=cfg_kezel('PLC_USB','Sorompó nyit cím BE','Integer',Sorompo_nyit_cim_BE);
   i.WriteInteger('PLC_USB','Sorompo_nyit_cim_BE',Sorompo_nyit_cim_BE);
-
   Sorompo_nyit_cim_KI:=i.ReadInteger('PLC_USB','Sorompo_nyit_cim_KI',20);
+  //Sorompo_nyit_cim_KI:=cfg_kezel('PLC_USB','Sorompó nyit cím KI','Integer',Sorompo_nyit_cim_KI);
   i.WriteInteger('PLC_USB','Sorompo_nyit_cim_KI',Sorompo_nyit_cim_KI);
-
   Sorompo_Infra_Hiba_cim_BE:=i.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',12);
+  //Sorompo_Infra_Hiba_cim_BE:=cfg_kezel('PLC_USB','Sorompó infra hiba cím BE','Integer',Sorompo_Infra_Hiba_cim_BE);
   i.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',Sorompo_Infra_Hiba_cim_BE);
-
   Sorompo_Infra_Hiba_cim_KI:=i.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',22);
+  //Sorompo_Infra_Hiba_cim_KI:=cfg_kezel('PLC_USB','Sorompó infra hiba cím KI','Integer',Sorompo_Infra_Hiba_cim_KI);
   i.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',Sorompo_Infra_Hiba_cim_KI);
-
   Sorompo_Nyitas_Volt_Cim_BE:=i.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',13);
+  //Sorompo_Nyitas_Volt_Cim_BE:=cfg_kezel('PLC_USB','Sorompó nyitás volt cím BE','Integer',Sorompo_Nyitas_Volt_Cim_BE);
   i.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',Sorompo_Nyitas_Volt_Cim_BE);
-
   Sorompo_Nyitas_Volt_Cim_KI:=i.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',23);
+  //Sorompo_Nyitas_Volt_Cim_KI:=cfg_kezel('PLC_USB','Sorompó nyitás volt cím KI','Integer',Sorompo_Nyitas_Volt_Cim_KI);
   i.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',Sorompo_Nyitas_Volt_Cim_KI);
-
   Merleg_Nullaz_Cim:=i.ReadInteger('PLC_USB','Merleg_Nullaz_Cim',30);
+ // Merleg_Nullaz_Cim:=cfg_kezel('PLC_USB','Mérleg nulláz cím','Integer',Merleg_Nullaz_Cim);
   i.WriteInteger('PLC_USB','Merleg_Nullaz_Cim',Merleg_Nullaz_Cim);
-
-  j:=i.ReadInteger('PLC_USB','Sorompo_vezerles',1);
-  i.WriteInteger('PLC_USB','Sorompo_vezerles',j);
-  Sorompo_vezerles:=j=1;
-
-
-  j:=i.ReadInteger('PLC_USB','Infra_Figyeles',0);
-  i.WriteInteger('PLC_USB','Infra_Figyeles',j);
-  Infra_Figyeles:=j=1;
-
+ // j:=i.ReadInteger('PLC_USB','Sorompo_vezerles',1);
+  Sorompo_vezerles:=i.Readbool('PLC_USB','Sorompo_vezerles',true);
+  //Sorompo_vezerles:=cfg_kezel('PLC_USB','Sorompó vezérlés','Boolean',Sorompo_vezerles);
+  i.WriteBool('PLC_USB','Sorompo_vezerles',Sorompo_vezerles);
+ // j:=i.ReadInteger('PLC_USB','Infra_Figyeles',0);
+  Infra_Figyeles:=i.ReadBool('PLC_USB','Infra_Figyeles',False);
+  //Infra_Figyeles:=cfg_kezel('PLC_USB','Infra figyelés','Boolean',Infra_Figyeles);
+  i.Writebool('PLC_USB','Infra_Figyeles',Infra_Figyeles);
   Infra_BE_Cim:=i.ReadInteger('PLC_USB','Infra_BE_Cim',14);
+  //Infra_BE_Cim:=cfg_kezel('PLC_USB','Infra BE cím','Integer',Infra_BE_Cim);
   i.WriteInteger('PLC_USB','Infra_BE_Cim',Infra_BE_Cim);
-
   Infra_KI_Cim:=i.ReadInteger('PLC_USB','Infra_KI_Cim',15);
+  //Infra_KI_Cim:=cfg_kezel('PLC_USB','Infra KI cím','Integer',Infra_KI_Cim);
   i.WriteInteger('PLC_USB','Infra_KI_Cim',Infra_KI_Cim);
-
   sorompo_infra_hibas_BE:=i.ReadInteger('PLC_USB','sorompo_infra_hibas_BE',0);
+  //sorompo_infra_hibas_BE:=cfg_kezel('PLC_USB','Sorompo infra hibás BE','Integer',sorompo_infra_hibas_BE);
   i.WriteInteger('PLC_USB','sorompo_infra_hibas_BE',sorompo_infra_hibas_BE);
-
   sorompo_infra_hibas_KI:=i.ReadInteger('PLC_USB','sorompo_infra_hibas_KI',0);
+  //sorompo_infra_hibas_KI:=cfg_kezel('PLC_USB','Sorompo infra hibás KI','Integer',sorompo_infra_hibas_KI);
   i.WriteInteger('PLC_USB','sorompo_infra_hibas_KI',sorompo_infra_hibas_KI);
-
   Ping_varakozas:=i.ReadInteger('PLC_USB','Ping_varakozas(s)',10);
+  //Ping_varakozas:=cfg_kezel('PLC_USB','Ping várakozás(s)','Integer',Ping_varakozas);
   i.WriteInteger('PLC_USB','Ping_varakozas(s)',Ping_varakozas);
-
   IOmodul_IP:=i.ReadString('PLC_USB','IOmodul_IP','Local');
+  //IOmodul_IP:=cfg_kezel('PLC_USB','IOmodul IP cím','String',IOmodul_IP);
   i.writeString('PLC_USB','IOmodul_IP',IOmodul_IP);
   IOmodul_van:=UpperCase( IOmodul_IP )<>'LOCAL';
-
-
   IOmodul_regiszter_iras1:=i.ReadInteger('PLC_USB','IOmodul_regiszter_iras1',1);
+  //IOmodul_regiszter_iras1:=cfg_kezel('PLC_USB','IOmodul regiszter irás 1','Integer',IOmodul_regiszter_iras1);
   i.WriteInteger('PLC_USB','IOmodul_regiszter_iras1',IOmodul_regiszter_iras1);
   //Az elsõ gomb a fõ formon. Tipusa PLC vagy IO
   Elso_gomb_tipus:=i.ReadString('PLC_USB','Elso_gomb_tipus','Local');
+  //Elso_gomb_tipus:=cfg_kezel('PLC_USB','Elsõ gomb típus','String',Elso_gomb_tipus);
   i.writeString('PLC_USB','Elso_gomb_tipus',Elso_gomb_tipus);
-
   Elso_gomb_szoveg:=i.ReadString('PLC_USB','Elso_gomb_szoveg','');
-  i.writeString('PLC_USB','Elso_gomb_szoveg',Elso_gomb_szoveg);
-
+  Elso_gomb_szoveg:=cfg_kezel('PLC_USB','Elsõ gomb szöveg','String',Elso_gomb_szoveg);
+  //i.writeString('PLC_USB','Elso_gomb_szoveg',Elso_gomb_szoveg);
   Elso_Gomb_Varakozas:=i.ReadInteger('PLC_USB','Elso_Gomb_Varakozas',500);
+  //Elso_Gomb_Varakozas:=cfg_kezel('PLC_USB','Elsõ gomb várakozás','Integer',Elso_Gomb_Varakozas);
   i.WriteInteger('PLC_USB','Elso_Gomb_Varakozas',Elso_Gomb_Varakozas);
-
   Elso_Gomb_Meres_Utan:=i.ReadInteger('PLC_USB','Elso_Gomb_Meres_Utan',0);
+  //Elso_Gomb_Meres_Utan:=cfg_kezel('PLC_USB','Elsõ gomb mérés után','Integer',Elso_Gomb_Meres_Utan);
   i.WriteInteger('PLC_USB','Elso_Gomb_Meres_Utan',Elso_Gomb_Meres_Utan);
 
   utolso_sql:=i.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
-  i.WriteInteger('MySql','Utolso_sql',utolso_sql);
-
-
+  utolso_sql:=cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
+  //i.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
-
-
-
   for k := 0 to 1 do
     begin
      rtspurls[k]:=i.ReadString('Rtsp','URL Cam '+k.ToString,'');
+    // rtspurls[k]:=cfg_kezel('RTSP','URL Cam '+k.ToString,'String',rtspurls[k]);
      i.WriteString('Rtsp','URL Cam '+k.ToString,rtspurls[k]);
     // showmessage(rtspURLS[k]);
     end;
-
-
   soapXML:=i.ReadString('Mappak','SoapXML',ExtractFileDir(ExtractFilePath(application.exename))+'\SoapXML');
-  i.writeString('Mappak','SoapXML',SoapXML);
-  ForceDirectories(soapXML);
+  soapXML:=cfg_kezel('MAPPAK','SoapXML mappa','String',soapXML);
+  //i.writeString('Mappak','SoapXML',SoapXML);
   kepmappa:=i.ReadString('Mappak','kepek',ExtractFileDir(ExtractFilePath(application.exename))+'\Kepek');
-  i.writeString('Mappak','kepek',kepmappa);
+  kepmappa:=cfg_kezel('MAPPAK','Képek mappa','String',kepmappa);
+  //i.writeString('Mappak','kepek',kepmappa);
   libre_mappa:=i.ReadString('ALAP','Libre_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\Libre_export');
-  i.writeString('ALAP','Libre_mappa',libre_mappa);
+  libre_mappa:=cfg_kezel('MAPPAK','Libre mappa','String',Libre_mappa);
+  //  i.writeString('ALAP','Libre_mappa',libre_mappa);
   ekaer_mappa:=i.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
-  i.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
+  ekaer_mappa:=cfg_kezel('MAPPAK','Ekaer mappa','String',Ekaer_mappa);
+  //i.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
   mentesido:=i.ReadInteger('ALAP','Mentesido',20);
-  i.WriteInteger('ALAP','Mentesido',mentesido);
+  mentesido:=cfg_kezel('ALAP','Mentésidõ','Integer',Mentesido);
+  //i.WriteInteger('ALAP','Mentesido',mentesido);
   mezgaz:=i.Readbool('ALAP','Mezgaz',false);//mert az 1 a db letrehozas
-  i.WriteBool('ALAP','Mezgaz',mezgaz);
+  mezgaz:=cfg_kezel('ALAP','Mezgazõgazdasági program','Boolean',mezgaz);
+  //i.WriteBool('ALAP','Mezgaz',mezgaz);
   duplex_mjegy:=i.Readbool('ALAP','Duplex',false);//dupla mérlegjegy egy lapon
-  i.WriteBool('ALAP','Duplex',duplex_mjegy);
+  duplex_mjegy:=cfg_kezel('ALAP','Duplex','Boolean',duplex_mjegy);
+  //i.WriteBool('ALAP','Duplex',duplex_mjegy);
   automata_meres:=i.ReadBool('ALAP','Automata_meres',False);
+  //automata_meres:=cfg_kezel('ALAP','Automata mérés','Boolean',automata_meres);
   i.WriteBool('ALAP','Automata_meres',automata_meres);
+
   nedvesseg_beolvasasa:=i.ReadBool('ALAP','Nedvesseg_beolvasasa',False);
-  i.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
+  nedvesseg_beolvasasa:=cfg_kezel('ALAP','Nedvesség beolvasása','Boolean',Nedvesseg_beolvasasa);
+  //i.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
   alap_tarolo:=i.ReadInteger('ALAP','Alap_tarolo',0);
-  i.WriteInteger('ALAP','Alap_tarolo',alap_tarolo);
+  alap_tarolo:=cfg_kezel('ALAP','Alapértelmezett tároló','Integer',alap_tarolo);
+  //i.WriteInteger('ALAP','Alap_tarolo',alap_tarolo);
   alap_irany:=i.ReadInteger('ALAP','Alap_irany',0);
+  //alap_irany:=cfg_kezel('ALAP','Alapértelmezett irány','Integer',alap_irany);
   i.WriteInteger('ALAP','Alap_irany',alap_irany);
 
   alap_atvevo:=i.ReadInteger('ALAP','Alap_atvevo',0);
-  i.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
-
+  alap_atvevo:=cfg_kezel('ALAP','Alapértelmezett átvevõ','Integer',alap_atvevo);
+  //i.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
   alap_elado:=i.ReadInteger('ALAP','Alap_elado',0);
-  i.WriteInteger('ALAP','Alap_elado',alap_elado);
- //alap_vevo,alap_elado
-
+  alap_elado:=cfg_kezel('ALAP','Alapértelmezett eladó','Integer',alap_elado);
+  //i.WriteInteger('ALAP','Alap_elado',alap_elado);
   Merlegjegy_tipus:=i.ReadInteger('ALAP','Merlegjegy_tipus',0);
-  i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
-
+  Merlegjegy_tipus:=cfg_kezel('ALAP','Mérlegjegy típus','Integer',Merlegjegy_tipus);
+//  i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
   merleg_neve:=i.ReadString('ALAP','Merleg_neve','');
+ // merleg_neve:=cfg_kezel('ALAP','Mérleg neve','String',merleg_neve);
   i.writeString('ALAP','Merleg_neve',Merleg_neve);
 
-  Kozponti_prg:=i.ReadBool('ALAP','Kozponti_prg',False);
-  i.WriteBool('ALAP','Kozponti_prg',Kozponti_prg);
-
   kpmappa:=i.ReadString('ALAP','kozponti_mappa','');
-  i.writeString('ALAP','kozponti_mappa',kpmappa);
-
+  kpmappa:=cfg_kezel('MAPPAK','Központi mappa','String',kpmappa);
+ // i.writeString('ALAP','kozponti_mappa',kpmappa);
   tomeg_levon:=i.ReadBool('ALAP','Tomeg_levon',False);
-  i.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
-
+  tomeg_levon:=cfg_kezel('ALAP','Tömeg levonás','Boolean',Tomeg_levon);
+  //i.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
   ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
-  i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
+  ekaer_felhasz:=cfg_kezel('EKAER','Ekaer felhasználó','String',ekaer_felhasz);
+ // i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
   ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
-  i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
+  ekaer_jsz:=cfg_kezel('EKAER','Ekaer jelszó','String',ekaer_jsz);
+ // i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
   ekaer_csk:=i.ReadString('EKAER','ekaer_alakulcs','');
-  i.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
-
+  ekaer_csk:=cfg_kezel('EKAER','Ekaer kulcs','String',ekaer_csk);
+  //i.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
   lado:=i.ReadInteger('ALAP','Lado',0);
-  i.WriteInteger('ALAP','Lado',lado);
-
+  lado:=cfg_kezel('ALAP','Ladorec','Integer',lado);
+ // i.WriteInteger('ALAP','Lado',lado);
   automata_torzsimport:=i.Readbool('ALAP','Automata_torzsimport',false);//automata törzsimport
-  i.WriteBool('ALAP','Automata_torzsimport',Automata_torzsimport);
+  automata_torzsimport:=cfg_kezel('ALAP','Automata törzsimport','Boolean',automata_torzsimport);
+  //i.WriteBool('ALAP','Automata_torzsimport',Automata_torzsimport);
   torzs_import_mappa:=i.ReadString('Mappak','Torzs_import',ExtractFileDir(ExtractFilePath(application.exename))+'\Torzs_import');
-  i.writeString('Mappak','Torzs_import',torzs_import_mappa);
-
+  torzs_import_mappa:=cfg_kezel('MAPPÁK','Törzs import mappa','String',torzs_import_mappa);
+  //i.writeString('Mappak','Torzs_import',torzs_import_mappa);
+  ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
   ForceDirectories(pdfmappa);
@@ -771,6 +766,32 @@ end;
 procedure TAF.KapcsLost(Sender: TObject);
 begin
 Kapcs.Connected:=true
+end;
+
+procedure TAF.kapcs_ini_kezel;
+var i:TiniFile;
+    fover,alver,build,j,k:Integer;
+begin
+ i:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
+  GetVerisonNumber(Fover, Alver,Build,PChar(Application.ExeName));
+  verzio:='Ver.: '+IntToStr(fover)+'.'+IntToStr(alver)+'.'+IntToStr(build);
+  konyvtar:=ExtractFilePath(Application.ExeName);
+  szerver:=i.ReadString('ALAP','Szerver','localhost');
+  i.writeString('ALAP','Szerver',szerver);
+  adatbazis:=i.ReadString('ALAP','Adatbazis','');
+  {if adatbazis='' then
+   begin
+    ujdbnev:=InputBox('Adatbázis neve','Adatbázis','');
+    adatbazis:=ujdbnev
+   end;}
+  i.writeString('ALAP','Adatbazis',adatbazis);
+  port:=i.ReadString('ALAP','Port','3307');
+  i.writeString('ALAP','Port',port);
+  Kozponti_prg:=i.ReadBool('ALAP','Kozponti_prg',False);
+  i.WriteBool('ALAP','Kozponti_prg',Kozponti_prg);
+
+  i.UpdateFile;
+  i.Free;
 end;
 
 function TAF.kepkeres(im:TImage):string;
@@ -904,10 +925,11 @@ begin
     else aF.script_log('Script végrehajtása sikertelen :'+i.tostring);
   end;
  Kapcs.Connected:=true;
- k:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
- k.WriteInteger('MySql','Utolso_sql',maxSQL);
- k.UpdateFile;
- k.Free
+ cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',maxSQL);
+// k:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
+// k.WriteInteger('MySql','Utolso_sql',maxSQL);
+// k.UpdateFile;
+// k.Free
 end;
 
 function TAF.nev_foglalt(ide: Integer; neve, tbl: String): Boolean;
@@ -953,6 +975,28 @@ if HourOfTheDay(Now)=mentesido then
    end;
  end;
 Automentes.Enabled:=true;
+end;
+
+procedure TAF.autotorzsTimer(Sender: TObject);
+begin
+ autotorzs.Enabled:=False;
+ torzsiport_folyamatban:=True;
+// Screen.Cursor:=crHourGlass;
+try
+ try
+  af.torzs_import_csv;
+  af.torzs_import_xlsx;
+ finally
+ // ShowMessage('Importálás kész');
+  torzsiport_folyamatban:=False;
+  //Screen.Cursor:=crDefault;
+ end;
+except
+ //ShowMessage('Hiba történt');
+ torzsiport_folyamatban:=False;
+ //Screen.Cursor:=crDefault;
+end;
+ autotorzs.Enabled:=true;
 end;
 
 function TAF.bizszam(length: integer; pad: char;kt,etag:string;tulid:integer): string;
@@ -1003,6 +1047,36 @@ begin
  WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
  Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
+end;
+
+function TAF.cfg_kezel(csoport, tulajdonsag, tipus: String;
+  ertek: Variant): Variant;
+begin
+ with CfgT do
+  begin
+    open;
+    if Locate('csoport;tulajdonsag',VarArrayOf([csoport,tulajdonsag]),[] ) then
+     begin
+       case tipus[1] of
+        'S':Result:=CfgT.FieldByName('ertek') .AsString;
+        'I':Result:=CfgT.FieldByName('ertek') .AsInteger;
+        'B':Result:=CfgT.FieldByName('ertek') .AsBoolean;
+       end;
+     end
+    else
+     begin
+       edit;
+       Append;
+       FieldByName('csoport').AsString:=csoport;
+       FieldByName('tulajdonsag').AsString:=tulajdonsag;
+       FieldByName('tipus').AsString:=tipus;
+       FieldByName('ertek').AsString:=VarToStr(ertek);
+       post;
+       Result:=ertek;
+     end;
+     close
+  end;
+
 end;
 
 function TAF.partner_kesz(tid, tarid, pid: Integer; tort: ShortInt): Extended;
@@ -1289,87 +1363,284 @@ begin
  CloseFile(tf);
 end;
 
-procedure TAF.torzs_import;
+procedure TAF.torzs_import_xlsx;
 var XLSXlist: TStringDynArray;
     i: Integer;
+    import_kesz,p_import_kesz:Boolean;
+    searchResult : TSearchRec;
 
   procedure termek_import(fn:string);
-  var  FExcel,FworkSheet: Variant;
-       s: integer;
+  var s: integer;
       begin
-        FExcel := CreateOleObject('Excel.Application');
-        FExcel.Visible:=False;
+       import_kesz:=False;
+       //varF.Label1.Caption:='Termék törzs importálása...';
+      // varF.Label2.Caption:='Importálás indítása... ';
+       import_log('Termék import indítása ');
+      // Application.ProcessMessages;
+       //varf.Show;
+
         try
-         FExcel.Workbooks.Open(fn);
-         FWorkSheet:=FExcel.WorkBooks[1].sheets[1];
+         FExcel.Workbooks.Open(fn,EmptyParam , True , EmptyParam , EmptyParam ,
+         EmptyParam , EmptyParam , EmptyParam , EmptyParam ,
+         EmptyParam , EmptyParam , EmptyParam , EmptyParam , 0);
         except
-        // ShowMessage('A fájl nem létezik');
-         FExcel.Quit;
-         aF.KillTask('EXCEL.EXE');
+         import_log('Termék excel indítása sikertelen! ');
+         torzsiport_folyamatban:=false;
+         varf.Close;
+         import_kesz:=true;
          exit;
         end;
-        s:=2;
+        try
+          s:=2;
+          TermekT.Open;
+          TermekT.DisableControls;
+          while  FExcel.Cells.Item[s,1].text<>'' do//}s<300 do
+           begin
+             //varF.Label2.Caption:='Feldolgozás: '+FExcel.Cells.Item[s,2].text;
+             //Application.ProcessMessages;
+             if not TermekT.Locate('kod',FExcel.Cells.Item[s,1],[]) then  TermekT.Append
+             else TermekT.edit;
+             termekt.FieldByName('kod').AsString:=FExcel.Cells.Item[s,1].text;
+             termekt.FieldByName('nev').AsString:=FExcel.Cells.Item[s,2].text;
+             termekt.FieldByName('itj').AsString:=FExcel.Cells.Item[s,3].text;
+             TermekT.Post;
+             Inc(s)
+           end;
+          TermekT.EnableControls;
+          TermekT.Close;
+          import_log('Termék import kész ');
+          FworkBook.Close(False,fn);
+        finally
+         //varf.Close;
+
+         import_kesz:=True;
+        end;
+      end;
+  procedure partner_import(fn:string);
+  var s: integer;
+    begin
+       p_import_kesz:=False;
+      // varF.Label1.Caption:='Partner törzs importálása...';
+      // varF.Label2.Caption:='Importálás indítása... ';
+       import_log('Partner import indítása ');
+      // Application.ProcessMessages;
+     //  varf.Show;
+
+        try
+         FExcel2.Workbooks.Open(fn,EmptyParam , True , EmptyParam , EmptyParam ,
+         EmptyParam , EmptyParam , EmptyParam , EmptyParam ,
+         EmptyParam , EmptyParam , EmptyParam , EmptyParam , 0);
+        except
+         import_log('Partner excel indítása sikertelen! ');
+         torzsiport_folyamatban:=false;
+         varf.Close;
+         p_import_kesz:=true;
+         exit;
+        end;
+
+        try
+          s:=2;
+          partnerT.Open;
+          partnerT.DisableControls;
+          while  FExcel2.Cells.Item[s,1].text<>'' do//s<500 do
+           begin
+            // varF.Label2.Caption:='Feldolgozás: '+FExcel2.Cells.Item[s,4].text;
+            // Application.ProcessMessages;
+             if not partnerT.Locate('kod',FExcel2.Cells.Item[s,2].text,[]) then  partnerT.Append
+             else partnerT.edit;
+             partnerT.FieldByName('kod').AsString:=FExcel2.Cells.Item[s,2].text;
+             partnerT.FieldByName('nev').AsString:=FExcel2.Cells.Item[s,4].text;
+             partnerT.FieldByName('irsz').AsString:=FExcel2.Cells.Item[s,5].text;
+             partnerT.FieldByName('Telepules').AsString:=FExcel2.Cells.Item[s,6].text;
+             partnerT.FieldByName('kozterulet').AsString:=FExcel2.Cells.Item[s,7].text;
+             partnerT.FieldByName('telefon').AsString:=FExcel2.Cells.Item[s,8].text;
+             partnerT.FieldByName('email').AsString:=FExcel2.Cells.Item[s,11].text;
+             partnerT.FieldByName('adoszam').AsString:=FExcel2.Cells.Item[s,17].text;
+             PartnerT.Post;
+             Inc(s)
+           end;
+          partnerT.EnableControls;
+          partnerT.Close;
+          import_log('Partner import kész ');
+          FworkBook2.Close(False,fn);
+        finally
+        // varf.Close;
+
+         p_import_kesz:=True;
+        end;
+    end;
+begin
+ FOF.elokep_timer.Enabled:=false;
+ Automentes.Enabled:=False;
+ SetCurrentDir(torzs_import_mappa);
+ varf.Show;
+ if findfirst('cikk*', faAnyFile, searchResult) = 0 then
+ //ShowMessage(searchResult.Name);
+  begin
+   repeat
+   if FileExists(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+         TFile.Delete(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      TFile.Move(torzs_import_mappa+searchResult.Name,StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      FExcel:= TExcelApplication.Create(nil);
+      FExcel.Connect;
+      FExcel.Visible[LCID]:= false;
+     termek_import(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      // while not import_kesz do Sleep(100);
+       FExcel.Disconnect;
+       FExcel.Quit;
+       FreeAndNil(FExcel);
+    // import_log('Termék import kész ');
+   until FindNext(searchResult) <>0;
+   //FindClose(searchResult);
+  end;
+
+ if findfirst('partner*', faAnyFile, searchResult) = 0 then
+  //ShowMessage(searchResult.Name);
+  begin
+   //import_log('Partner import indítása ');
+   if FileExists(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+         TFile.Delete(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      TFile.Move(torzs_import_mappa+searchResult.Name,StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+
+      FExcel2:= TExcelApplication.Create(nil);
+      FExcel2.Connect;
+      FExcel2.Visible[LCID]:= false;
+     partner_import(StringReplace(torzs_import_mappa+searchResult.Name,torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      // while not p_import_kesz do Sleep(100);
+       FExcel2.Disconnect;
+       FExcel2.Quit;
+       FreeAndNil(FExcel2);
+    // import_log('Partner import kész ');
+  end;
+
+ //FindClose(searchResult);
+ //exit;
+ {XLSXlist:=(TDirectory.GetFiles(torzs_import_mappa,'*.xlsx'));
+
+ for I := 0 to Length(XLSXlist) - 1 do
+  begin
+   if Pos('cikk',LowerCase(XLSXlist[i]))<>0 then
+    begin
+      if FileExists(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+         TFile.Delete(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      FExcel:= TExcelApplication.Create(nil);
+      FExcel.Connect;
+      FExcel.Visible[LCID]:= false;
+     termek_import(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+       while not import_kesz do Sleep(1000);
+       FExcel.Disconnect;
+       FExcel.Quit;
+       FreeAndNil(FExcel);
+    end
+   else
+  if Pos('partner',LowerCase(XLSXlist[i]))<>0 then
+    begin
+      if FileExists(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+         TFile.Delete(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+      TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+
+      FExcel:= TExcelApplication.Create(nil);
+      FExcel.Connect;
+      FExcel.Visible[LCID]:= false;
+     partner_import(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
+       while not p_import_kesz do Sleep(1000);
+       FExcel.Disconnect;
+       FExcel.Quit;
+       FreeAndNil(FExcel);
+    end;
+  end; }
+ FOF.elokep_timer.Enabled:=true;
+ Automentes.Enabled:=mentesido in [0..23];
+ KillTask('EXCEL.EXE');
+ varF.Close;
+end;
+
+procedure TAF.torzs_import_csv;
+var XLSXlist: TStringDynArray;
+    i: Integer;
+    Splitted: TArray<String>;
+    tft,tfp:TextFile;
+
+  procedure termek_import(fn:string);
+     var tsor:string;
+      begin
+       if not FileExists(fn) then exit;
+       try
+        varF.Label1.Caption:='Termék törzs importálása...';
+        varF.Label2.Caption:='Importálás indítása... ';
+        varf.Show;
+        AssignFile(tft,fn);
+        Reset(tft);
+        Readln(tft,tsor);
+       // ShowMessage(Length(tsor).ToString);
         TermekT.Open;
         TermekT.DisableControls;
-        while FworkSheet.Cells[s,1].text<>'' do
+        while not Eof(tft) do
          begin
-           if not TermekT.Locate('kod',FworkSheet.cells[s,1],[]) then  TermekT.Append
+           Readln(tft,tsor);
+           Splitted:=tsor.Split([';']);
+           varF.Label2.Caption:='Feldolgozás: '+Splitted[1];
+           Application.ProcessMessages;
+           if not TermekT.Locate('kod',Splitted[0],[]) then  TermekT.Append
            else TermekT.edit;
-           termekt.FieldByName('kod').AsString:=FworkSheet.cells[s,1];
-           termekt.FieldByName('nev').AsString:=FworkSheet.cells[s,2];
-           termekt.FieldByName('itj').AsString:=FworkSheet.cells[s,3];
+           termekt.FieldByName('kod').AsString:=Splitted[0];
+           termekt.FieldByName('nev').AsString:=Splitted[1];
+           termekt.FieldByName('itj').AsString:=Splitted[2];
            TermekT.Post;
-           inc(s);
          end;
         TermekT.EnableControls;
         TermekT.Close;
-        FExcel.Quit;
-        aF.KillTask('EXCEL.EXE');
+       finally
+        CloseFile(tft);
+        varf.close;
+       end;
       end;
   procedure partner_import(fn:string);
-  var  FExcel,FworkSheet: Variant;
-       s: integer;
+  var  psor:string;
       begin
-        FExcel := CreateOleObject('Excel.Application');
-        FExcel.Visible:=False;
-        try
-         FExcel.Workbooks.Open(fn);
-         FWorkSheet:=FExcel.WorkBooks[1].sheets[1];
-        except
-        // ShowMessage('A fájl nem létezik');
-         FExcel.Quit;
-         aF.KillTask('EXCEL.EXE');
-         exit;
-        end;
-        s:=2;
+      if not FileExists(fn) then exit;
+       try
+        varF.Label1.Caption:='Partner törzs importálása...';
+        varF.Label2.Caption:='Importálás indítása... ';
+        varf.Show;
+        AssignFile(tfp,fn);
+        Reset(tfp);
+        Readln(tfp,psor);
+        //ShowMessage(Length(psor).ToString);
         partnerT.Open;
-       // partnerT.DisableControls;
-        while  FworkSheet.Cells[s,1].text<>''{s<1000} do
+        partnerT.DisableControls;
+        while  not Eof(tfp) do
          begin
+          Readln(tfp,psor);
+          Splitted:=psor.Split([';']);
+          varF.Label2.Caption:='Feldolgozás: '+Splitted[1];
+          Application.ProcessMessages;
           Try
-           if not partnerT.Locate('kod',FworkSheet.cells[s,2].text,[]) then  partnerT.Append
+           if not partnerT.Locate('kod',Splitted[4],[]) then  partnerT.Append
            else partnerT.edit;
-           partnerT.FieldByName('kod').AsString:=FworkSheet.cells[s,2].text;
-           partnerT.FieldByName('nev').AsString:=FworkSheet.cells[s,4.].text;
-           partnerT.FieldByName('irsz').AsString:=FworkSheet.cells[s,5].text;
-           partnerT.FieldByName('Telepules').AsString:=FworkSheet.cells[s,6].text;
-           partnerT.FieldByName('kozterulet').AsString:=FworkSheet.cells[s,7].text;
-           partnerT.FieldByName('telefon').AsString:=FworkSheet.cells[s,8].text;
-           partnerT.FieldByName('email').AsString:=FworkSheet.cells[s,11].text;
-           partnerT.FieldByName('adoszam').AsString:=FworkSheet.cells[s,17].text;
+           partnerT.FieldByName('kod').AsString:=Splitted[2];
+           partnerT.FieldByName('nev').AsString:=Splitted[4];
+           partnerT.FieldByName('irsz').AsString:=Splitted[5];
+           partnerT.FieldByName('Telepules').AsString:=Splitted[6];
+           partnerT.FieldByName('kozterulet').AsString:=Splitted[7];
+           partnerT.FieldByName('telefon').AsString:=Splitted[8];
+           partnerT.FieldByName('email').AsString:=Splitted[11];
+           partnerT.FieldByName('adoszam').AsString:=Splitted[17];
            PartnerT.Post;
           except
-            import_log('Hibás sor '+S.ToString)
+           import_log('Hibás sor ')
           End;
-           inc(s);
          end;
-       // partnerT.EnableControls;
+        partnerT.EnableControls;
         partnerT.Close;
-        FExcel.Quit;
-        aF.KillTask('EXCEL.EXE');
+       finally
+        CloseFile(tfp);
+        varf.close;
+       end;
       end;
 begin
- XLSXlist:=(TDirectory.GetFiles(torzs_import_mappa,'*.xlsx'));
+ XLSXlist:=(TDirectory.GetFiles(torzs_import_mappa,'*.csv'));
  for I := 0 to Length(XLSXlist) - 1 do
   begin
    if Pos('cikk',LowerCase(XLSXlist[i]))<>0 then
@@ -1378,10 +1649,12 @@ begin
        try
         termek_import(XLSXlist[i]);
        finally
+        if FileExists(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+           TFile.Delete(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
         TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
        end;
       except
-        //
+        import_log('Termék import sikertelen: '+XLSXlist[i])
       end;
     end;
    if Pos('partner',LowerCase(XLSXlist[i]))<>0 then
@@ -1390,10 +1663,12 @@ begin
        try
         partner_import(XLSXlist[i]);
        finally
+        if FileExists(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll])) then
+           TFile.Delete(StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
         TFile.Move(XLSXlist[i],StringReplace(XLSXlist[i],torzs_import_mappa,torzs_import_mappa+'Importalva\',[rfReplaceAll]));
        end;
       except
-        //
+       import_log('Partner import sikertelen: '+XLSXlist[i])
       end;
     end;
   end;

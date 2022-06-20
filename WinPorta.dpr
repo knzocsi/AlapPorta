@@ -42,7 +42,10 @@ uses
   levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF},
   FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF},
   demotomegU in 'demotomegU.pas' {DemotomegF},
-  LerakCimekU in 'LerakCimekU.pas' {LerakCimekF};
+  LerakCimekU in 'LerakCimekU.pas' {LerakCimekF},
+  VarakozasU in 'VarakozasU.pas' {VarF},
+  szoftver_alapU in 'szoftver_alapU.pas' {szoftver_alapF},
+  AlapbemodU in 'AlapbemodU.pas' {AlapbemodF};
 
 {$R *.res}
 
@@ -83,5 +86,8 @@ begin
   Application.CreateForm(TfelrakcimekF, felrakcimekF);
   Application.CreateForm(TDemotomegF, DemotomegF);
   Application.CreateForm(TLerakCimekF, LerakCimekF);
+  Application.CreateForm(TVarF, VarF);
+  Application.CreateForm(Tszoftver_alapF, szoftver_alapF);
+  Application.CreateForm(TAlapbemodF, AlapbemodF);
   Application.Run;
 end.

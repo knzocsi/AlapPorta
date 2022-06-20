@@ -100,9 +100,9 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.78;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.79;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
-        <VerInfo_Build>78</VerInfo_Build>
+        <VerInfo_Build>79</VerInfo_Build>
         <DCC_DcpOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcpOutput>
         <DCC_ExeOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_ExeOutput>
         <DCC_DcuOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcuOutput>
@@ -252,6 +252,18 @@
             <Form>LerakCimekF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="VarakozasU.pas">
+            <Form>VarF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="szoftver_alapU.pas">
+            <Form>szoftver_alapF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="AlapbemodU.pas">
+            <Form>AlapbemodF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <RcItem Include="Mjegy_sa_ho_ka.fr3">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>
@@ -266,6 +278,11 @@
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>Rep_2</ResourceId>
+        </RcItem>
+        <RcItem Include="Mjegy_Anthera.fr3">
+            <ContainerId>ResourceItem</ContainerId>
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>Rep_3</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
@@ -297,6 +314,12 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="3">
+                <DeployFile LocalName="Mjegy_Anthera.fr3" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="MjegyKUJ_nelkul.fr3" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>

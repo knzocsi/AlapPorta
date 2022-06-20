@@ -85,7 +85,7 @@ object MjegyekF: TMjegyekF
       Width = 113
       Height = 21
       Date = 43587.000000000000000000
-      Time = 0.773554583327495500
+      Time = 0.773554583327495600
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -263,7 +263,7 @@ object MjegyekF: TMjegyekF
       OnClick = Button4Click
     end
   end
-  object JvDBUltimGrid1: TJvDBUltimGrid
+  object mlistaGrid: TJvDBUltimGrid
     Left = 0
     Top = 137
     Width = 1020
@@ -277,6 +277,7 @@ object MjegyekF: TMjegyekF
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnMouseUp = mlistaGridMouseUp
     SelectColumnsDialogStrings.Caption = 'Select columns'
     SelectColumnsDialogStrings.OK = '&OK'
     SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
@@ -400,6 +401,12 @@ object MjegyekF: TMjegyekF
         FieldName = 'tara'
         Title.Caption = 'T'#225'ra'
         Width = 28
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'netto'
+        Title.Caption = 'Nett'#243
         Visible = True
       end
       item
