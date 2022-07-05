@@ -68,7 +68,7 @@ object PartnerekF: TPartnerekF
     Top = 41
     Width = 770
     Height = 328
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -296,6 +296,7 @@ object PartnerekF: TPartnerekF
         DataField = 'Irsz'
         DataSource = PartnerDS
         TabOrder = 3
+        OnChange = dbedtIrszChange
       end
       object dbedtTelepules: TDBEdit
         Left = 184
@@ -435,6 +436,20 @@ object PartnerekF: TPartnerekF
         DataField = 'hrsz'
         DataSource = PartnerDS
         TabOrder = 18
+      end
+      object Edit1: TEdit
+        Left = 408
+        Top = 48
+        Width = 121
+        Height = 21
+        TabOrder = 19
+      end
+      object Edit2: TEdit
+        Left = 574
+        Top = 48
+        Width = 121
+        Height = 21
+        TabOrder = 20
       end
     end
   end

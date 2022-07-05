@@ -57,14 +57,14 @@ object FoF: TFoF
   object pnlBaloldal: TPanel
     Left = 0
     Top = 0
-    Width = 401
+    Width = 800
     Height = 648
     Align = alLeft
     TabOrder = 1
     object DBGrid1: TDBGrid
       Left = 1
       Top = 81
-      Width = 399
+      Width = 798
       Height = 335
       Align = alClient
       DataSource = AF.ForgalomDS
@@ -136,26 +136,29 @@ object FoF: TFoF
     object pnlKiskep: TPanel
       Left = 1
       Top = 416
-      Width = 399
+      Width = 798
       Height = 231
       Align = alBottom
       TabOrder = 1
+      ExplicitWidth = 399
       object ipcamPanel: TPanel
         Left = 1
         Top = 1
-        Width = 397
+        Width = 796
         Height = 229
         Align = alClient
         Caption = 'Kamera nem el'#233'rhet'#337
         TabOrder = 0
+        ExplicitWidth = 397
         object campagc: TPageControl
           Left = 1
           Top = 1
-          Width = 395
+          Width = 794
           Height = 227
           ActivePage = cam0
-          Align = alClient
+          Align = alBottom
           TabOrder = 0
+          ExplicitWidth = 395
           object cam0: TTabSheet
             Caption = 'Kamera 1'
           end
@@ -169,10 +172,11 @@ object FoF: TFoF
     object Panel1: TPanel
       Left = 1
       Top = 1
-      Width = 399
+      Width = 798
       Height = 80
       Align = alTop
       TabOrder = 2
+      ExplicitWidth = 624
       object Label1: TLabel
         Left = 32
         Top = 8
@@ -237,20 +241,23 @@ object FoF: TFoF
     end
   end
   object pnlJobboldal: TPanel
-    Left = 401
+    Left = 800
     Top = 0
-    Width = 691
+    Width = 292
     Height = 648
     Align = alClient
     TabOrder = 2
+    ExplicitLeft = 401
+    ExplicitWidth = 691
     object pnlJobbAlso: TPanel
       Left = 1
       Top = 536
-      Width = 689
+      Width = 290
       Height = 111
       Align = alBottom
       TabOrder = 0
       OnClick = pnlJobbAlsoClick
+      ExplicitWidth = 689
       object lbl1: TLabel
         Left = 24
         Top = 24
@@ -342,18 +349,21 @@ object FoF: TFoF
     object pnlJobbFelso: TPanel
       Left = 1
       Top = 1
-      Width = 689
+      Width = 290
       Height = 535
       Align = alClient
       TabOrder = 1
+      ExplicitWidth = 689
       object pnlFelsokep: TPanel
         Left = 1
         Top = 1
-        Width = 687
-        Height = 261
+        Width = 288
+        Height = 255
         Align = alClient
         TabOrder = 0
         OnResize = pnlFelsokepResize
+        ExplicitWidth = 687
+        ExplicitHeight = 261
         object imgFelsokep: TImage
           Left = 0
           Top = 0
@@ -363,24 +373,24 @@ object FoF: TFoF
           OnClick = imgFelsokepClick
         end
         object memLog: TMemo
-          Left = 501
+          Left = 102
           Top = 1
           Width = 185
-          Height = 259
+          Height = 253
           Align = alRight
           Lines.Strings = (
             'memLog')
           TabOrder = 0
           Visible = False
-          ExplicitLeft = 486
-          ExplicitTop = 4
+          ExplicitLeft = 501
+          ExplicitHeight = 259
         end
       end
       object pnlAlsokep: TPanel
         Left = 1
-        Top = 262
-        Width = 687
-        Height = 272
+        Top = 256
+        Width = 288
+        Height = 278
         Align = alBottom
         TabOrder = 1
         object imgAlsokep: TImage

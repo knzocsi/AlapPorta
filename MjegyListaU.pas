@@ -73,6 +73,8 @@ type
     tulajTAjto: TWideStringField;
     tulajTcjsz: TWideStringField;
     tulajDs: TDataSource;
+    btnmodositas: TButton;
+    btnelozmenyek: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -86,6 +88,8 @@ type
     procedure piBefejezoDatumChange(Sender: TObject);
     procedure mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure btnmodositasClick(Sender: TObject);
+    procedure btnelozmenyekClick(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -105,10 +109,16 @@ var
   ttom:Real;
   nyomtat:Boolean;
 implementation
-  uses au, NezetU,LibreExcelU;
+  uses au, NezetU,LibreExcelU, MermodU, MermodlistU;
 {$R *.dfm}
 
 { TMjegyekF }
+
+procedure TMjegyekF.btnelozmenyekClick(Sender: TObject);
+begin
+if not aF.van_joga('j9') then exit;
+MermodlistF.fo(mjegyekQ.FieldByName('sorszam').AsString);
+end;
 
 procedure TMjegyekF.btnKilepesClick(Sender: TObject);
 begin
@@ -157,6 +167,16 @@ begin
   nyomtat:=false;
 end;
 
+procedure TMjegyekF.btnmodositasClick(Sender: TObject);
+begin
+if not aF.van_joga('j9') then exit;
+if mjegyekQ.IsEmpty then exit;
+try
+ MermodF.fo(mjegyekQ.fields[0].AsInteger);
+finally
+ mjegyekQ.Refresh
+end;
+end;
 procedure TMjegyekF.Button3Click(Sender: TObject);
 var p,psz:Integer;
 begin
@@ -294,7 +314,7 @@ begin
      TfrxMemoView(FindObject('memrendszamok')).Text:=mjegyekQ.FieldByName('rendszam').AsString+' '+mjegyekQ.FieldByName('rendszam2').AsString;;
      TfrxMemoView(FindObject('membrutto')).Text:=mjegyekQ.FieldByName('brutto').AsString+' kg';
      TfrxMemoView(FindObject('memtara')).Text:=mjegyekQ.FieldByName('tara').AsString+' kg';
-     TfrxMemoView(FindObject('memnetto')).Text:=mjegyekQ.FieldByName('sznetto').AsString+' kg';
+     TfrxMemoView(FindObject('memnetto')).Text:=mjegyekQ.FieldByName('netto').AsString+' kg';
      TfrxMemoView(FindObject('memirany')).Text:=mjegyekQ.FieldByName('irany').AsString;
      TfrxMemoView(FindObject('memmegjegy')).Text:=mjegyekQ.FieldByName('megjegyzes').AsString;
      TfrxMemoView(FindObject('memtermkod')).Text:=mjegyekQ.FieldByName('termek_kod').AsString;
@@ -414,6 +434,8 @@ begin
  rfelt:=True;
  rendszamok_feloltese;
  rfelt:=false;
+ btnmodositas.Visible:=merlegjegy_modositas;
+ btnelozmenyek.Visible:=merlegjegy_modositas;
  szures;
 end;
 
@@ -427,14 +449,14 @@ procedure TMjegyekF.mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
 try
- if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szûr
+ {if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szûr
   begin
     {Col_neve:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName;
    col_felirat:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].Title.Caption;
    lblmire.Caption:=col_felirat;
    edszures.SetFocus; }
-  end;
-  if (button= mbleft) and (mlistaGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+ // end;
+  if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
     af.rendez(mjegyekQ,(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName);
 except
  //

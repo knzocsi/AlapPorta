@@ -26,7 +26,7 @@ const
   joga: array [1..20] of string=
    ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés',
     'Mérlegelõk módosítása','Mérés','Kezdõ készlet felv.','Kézi mérés',
-    '','','','', '','','','','','','','');
+    'Mérlegjegy módosítás','','','', '','','','','','','','');
 
   Lampa_Zold=0;
   Lampa_Piros=1;
@@ -131,6 +131,8 @@ type
     autotorzs: TTimer;
     CfgT: TFDTable;
     CfgTDs: TDataSource;
+    IrszScript: TFDScript;
+    irszQ: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -224,7 +226,7 @@ var
   Infra_Figyeles,automata_torzsimport:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
-
+  merlegjegy_modositas: Boolean;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -234,6 +236,14 @@ uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
 
 procedure TAF.DataModuleCreate(Sender: TObject);
+
+ procedure irsz_feltoltes;
+  begin
+   irszQ.Params[0].AsString:='2000';
+   irszQ.Open;
+   if irszQ.IsEmpty then IrszScript.ExecuteAll;
+   irszQ.Close;
+  end;
 begin
   bit:=9;
   kapcs_ini_kezel;
@@ -288,7 +298,7 @@ begin
   if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
   else ModScript.ScriptDialog:=nil;
   modok_vegrehajt;//  SQL_text unitba kell
-
+  irsz_feltoltes;
   Kapcs.ResourceOptions.AutoReconnect:=True;
   jogmod:=False;
   LCID := GetUserDefaultLCID;
@@ -482,10 +492,10 @@ procedure TAF.import_log(S: string);
 var tf : TextFile;
     m:string;
 begin
- m:=ExtractFileDir(application.exename);
-// ForceDirectories(m);
- AssignFile(tf,m+'\import_log.txt');
- if not FileExists(m+'\import_log.txt') then ReWrite(tf)
+ m:=torzs_import_mappa+'log';
+ ForceDirectories(m);
+ AssignFile(tf,m+'\import_log_'+FormatDateTime('yyyymmdd',now)+' .txt');
+ if not FileExists(m+'\import_log'+FormatDateTime('yyyymmddhhnnss',now)+' .txt') then ReWrite(tf)
  else Append(tf);
  WriteLn(tf, s+ ' '+Datetimetostr(Now)+'');
 // Writeln(tf,'*****************************************************************************************************************');
@@ -497,9 +507,23 @@ procedure TAF.ini_kezel;
 var i:Tinifile;
     k: Integer;
   // ujdbnev:string;
-
-
 begin
+{ Kapcs.Connected:=False;
+  with ModScript do
+   begin
+     SQLScripts[0].SQL.text:='CREATE TABLE IF NOT EXISTS `cfg` (' + #13#10 +
+    '`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`csoport` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+    '`tulajdonsag` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+    '`tipus` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+    '`ertek` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+    '`magyarazat` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'','+#13#10+
+    'PRIMARY KEY (`ID`)'+#13#10+
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;';
+    ExecuteAll;
+   end;
+  Kapcs.Connected:=True; }
+
   i:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
   visszanap:=i.ReadInteger('ALAP','Visszanap',5);
   visszanap:=cfg_kezel('ALAP','Visszanap','Integer',5);
@@ -620,8 +644,8 @@ begin
   i.WriteInteger('PLC_USB','Elso_Gomb_Meres_Utan',Elso_Gomb_Meres_Utan);
 
   utolso_sql:=i.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
-  utolso_sql:=cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
-  //i.WriteInteger('MySql','Utolso_sql',utolso_sql);
+  //utolso_sql:=cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
+ // i.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
   for k := 0 to 1 do
     begin
@@ -702,6 +726,9 @@ begin
   torzs_import_mappa:=i.ReadString('Mappak','Torzs_import',ExtractFileDir(ExtractFilePath(application.exename))+'\Torzs_import');
   torzs_import_mappa:=cfg_kezel('MAPPÁK','Törzs import mappa','String',torzs_import_mappa);
   //i.writeString('Mappak','Torzs_import',torzs_import_mappa);
+  merlegjegy_modositas:=cfg_kezel('ALAP','Mérlegjegy módosítás','Boolean',merlegjegy_modositas);
+
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -925,11 +952,11 @@ begin
     else aF.script_log('Script végrehajtása sikertelen :'+i.tostring);
   end;
  Kapcs.Connected:=true;
- cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',maxSQL);
-// k:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
-// k.WriteInteger('MySql','Utolso_sql',maxSQL);
-// k.UpdateFile;
-// k.Free
+ //cfg_kezel('MYSQL','Utolsó SQL frissítés','Integer',maxSQL);
+ k:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
+ k.WriteInteger('MySql','Utolso_sql',maxSQL);
+ k.UpdateFile;
+ k.Free
 end;
 
 function TAF.nev_foglalt(ide: Integer; neve, tbl: String): Boolean;
@@ -1446,17 +1473,21 @@ var XLSXlist: TStringDynArray;
            begin
             // varF.Label2.Caption:='Feldolgozás: '+FExcel2.Cells.Item[s,4].text;
             // Application.ProcessMessages;
+            try
              if not partnerT.Locate('kod',FExcel2.Cells.Item[s,2].text,[]) then  partnerT.Append
              else partnerT.edit;
-             partnerT.FieldByName('kod').AsString:=FExcel2.Cells.Item[s,2].text;
-             partnerT.FieldByName('nev').AsString:=FExcel2.Cells.Item[s,4].text;
-             partnerT.FieldByName('irsz').AsString:=FExcel2.Cells.Item[s,5].text;
-             partnerT.FieldByName('Telepules').AsString:=FExcel2.Cells.Item[s,6].text;
-             partnerT.FieldByName('kozterulet').AsString:=FExcel2.Cells.Item[s,7].text;
-             partnerT.FieldByName('telefon').AsString:=FExcel2.Cells.Item[s,8].text;
-             partnerT.FieldByName('email').AsString:=FExcel2.Cells.Item[s,11].text;
-             partnerT.FieldByName('adoszam').AsString:=FExcel2.Cells.Item[s,17].text;
+             partnerT.FieldByName('kod').AsString:=Trim(Copy(FExcel2.Cells.Item[s,2].text,1,15));
+             partnerT.FieldByName('nev').AsString:=Trim(copy(FExcel2.Cells.Item[s,4].text,1,150));
+             partnerT.FieldByName('irsz').AsString:=Trim(Copy(FExcel2.Cells.Item[s,5].text,1,10));
+             partnerT.FieldByName('Telepules').AsString:=Trim(Copy(FExcel2.Cells.Item[s,6].text,1,3));
+             partnerT.FieldByName('kozterulet').AsString:=Trim(Copy(FExcel2.Cells.Item[s,7].text,1,150));
+             partnerT.FieldByName('telefon').AsString:=Trim(Copy(FExcel2.Cells.Item[s,8].text,1,20));
+             partnerT.FieldByName('email').AsString:=trim(Copy(FExcel2.Cells.Item[s,11].text,1,50));
+             partnerT.FieldByName('adoszam').AsString:=Trim(Copy(FExcel2.Cells.Item[s,17].text,1,20));
              PartnerT.Post;
+            except
+             import_log('Sikertelen import: '+FExcel2.Cells.Item[s,2].text+' '+FExcel2.Cells.Item[s,4].text);
+            end;
              Inc(s)
            end;
           partnerT.EnableControls;
@@ -1550,10 +1581,10 @@ begin
        FreeAndNil(FExcel);
     end;
   end; }
+ varF.Close;
  FOF.elokep_timer.Enabled:=true;
  Automentes.Enabled:=mentesido in [0..23];
  KillTask('EXCEL.EXE');
- varF.Close;
 end;
 
 procedure TAF.torzs_import_csv;

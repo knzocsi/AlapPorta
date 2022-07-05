@@ -1213,6 +1213,7 @@ begin
   tisztasag := IntToStr(round((br-tr)*((tisz)/100.0)));
   //tort szemek tomege
   tortszem_tomeg:=(round((br-tr)*(tortszem_szazalek/100.0)));
+  ttom:=tortszem_tomeg;//kell a mentésnél!
   //Öcsi
   tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tortszem_szazalek)/100.0)))));
 

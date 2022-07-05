@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=12;
+      maxSQL=14;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -19,7 +19,19 @@ interface
       'CREATE DATABASE IF NOT EXISTS `:adatbazis` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;' + #13#10 +
       'USE `:adatbazis`;' + #13#10 +
       '' + #13#10 +
-      'CREATE TABLE IF NOT EXISTS `felhasz` (' + #13#10 +
+    ''+#13#10+
+    'CREATE TABLE IF NOT EXISTS `cfg` (' + #13#10 +
+    '`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`csoport` VARCHAR(50) NOT NULL DEFAULT '''' ,' + #13#10 +
+    '`tulajdonsag` VARCHAR(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`tipus` VARCHAR(10) NOT NULL DEFAULT '''' ,' + #13#10 +
+    '`ertek` VARCHAR(200) NOT NULL DEFAULT '''' ,' + #13#10 +
+    '`magyarazat` VARCHAR(200) NOT NULL DEFAULT '''','+#13#10+
+    'PRIMARY KEY (`ID`)'+#13#10+
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
+    ''+#13#10+
+
+    'CREATE TABLE IF NOT EXISTS `felhasz` (' + #13#10 +
     '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`nev` varchar(50) DEFAULT NULL,' + #13#10 +
     '`jelszo` varchar(32) DEFAULT NULL,' + #13#10 +
@@ -90,6 +102,14 @@ interface
     '`menny` decimal(12,2) DEFAULT NULL,' + #13#10 +
     '`modositva` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT ''automatikusan beirja az időpontot updaten is '',' + #13#10 +
     '`tort` tinyint(1) DEFAULT 0,' + #13#10 +
+    'PRIMARY KEY (`id`)' + #13#10 +
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
+    '' + #13#10 +
+    'CREATE TABLE IF NOT EXISTS `irsz` (' + #13#10 +
+    '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`irsz` varchar(10) NOT NULL DEFAULT '''',' + #13#10 +
+    '`megye` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`varos` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
     'PRIMARY KEY (`id`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
@@ -192,6 +212,83 @@ interface
     'PRIMARY KEY (`ID`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
+     'CREATE TABLE IF NOT EXISTS `modositott_merlegjegyek` (' + #13#10 +
+    '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Ev_ssz` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Storno` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_afa` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`termek_ar` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Tomegbe` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Tomegki` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Erkdatum` DATE NULL DEFAULT NULL,' + #13#10 +
+    '	`Erkido` TIME NULL DEFAULT NULL,' + #13#10 +
+    '	`Tavdatum` DATE NULL DEFAULT NULL,' + #13#10 +
+    '	`Tavido` TIME NULL DEFAULT NULL,' + #13#10 +
+    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`irany` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Brutto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Tara` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Netto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`SzNetto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`psz` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`alapnedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`nedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tisztasag` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tortszaz` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`feherje` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`olaj` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`esesszam` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`hekto` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`egysegtomeg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`kerekites` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
+    '	`kukorica` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
+    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`mennyiseg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tarolasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`szaritasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tisztitasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tarolo_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`tarolo` VARCHAR(50) NULL DEFAULT ''\''\'''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`elso_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
+    '	`masodik_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
+    '	`tul_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_ID` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`levon_tomeg` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`ewc` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`mod_idobelyeg` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' + #13#10 +
+    'PRIMARY KEY (`ID`)'+#13#10+
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'+ #13#10 +
+    ''+ #13#10 +
     'CREATE TABLE IF NOT EXISTS `parositott` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`Erkdatum` date DEFAULT NULL,' + #13#10 +
@@ -656,6 +753,104 @@ interface
       'ALTER TABLE partner MODIFY email VARCHAR(50);'+#13#10+
       'ALTER TABLE partner MODIFY kozterulet VARCHAR(150);'+#13#10+
       'ALTER TABLE partner MODIFY nev VARCHAR(150);'//+#13#10+
+     ,
+      //13
+
+    'CREATE TABLE IF NOT EXISTS `modositott_merlegjegyek` (' + #13#10 +
+    '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Ev_ssz` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Storno` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_afa` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`termek_ar` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Tomegbe` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Tomegki` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Erkdatum` DATE NULL DEFAULT NULL,' + #13#10 +
+    '	`Erkido` TIME NULL DEFAULT NULL,' + #13#10 +
+    '	`Tavdatum` DATE NULL DEFAULT NULL,' + #13#10 +
+    '	`Tavido` TIME NULL DEFAULT NULL,' + #13#10 +
+    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`irany` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Brutto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Tara` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Netto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`SzNetto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`psz` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`alapnedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`nedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tisztasag` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tortszaz` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`feherje` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`olaj` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`esesszam` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`hekto` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`egysegtomeg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`kerekites` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
+    '	`kukorica` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
+    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`mennyiseg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tarolasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`szaritasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tisztitasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
+    '	`tarolo_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`tarolo` VARCHAR(50) NULL DEFAULT ''\''\'''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`elso_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
+    '	`masodik_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
+    '	`tul_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_ID` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`levon_tomeg` INT(11) NULL DEFAULT ''0'',' + #13#10 +
+    '	`ewc` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`mod_idobelyeg` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' + #13#10 +
+    'PRIMARY KEY (`ID`)'+#13#10+
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
+    ''+ #13#10 +
+    'CREATE TABLE IF NOT EXISTS `cfg` (' + #13#10 +
+    '`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`csoport` VARCHAR(50) NOT NULL DEFAULT '''' ,' + #13#10 +
+    '`tulajdonsag` VARCHAR(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`tipus` VARCHAR(10) NOT NULL DEFAULT '''',' + #13#10 +
+    '`ertek` VARCHAR(200) NOT NULL DEFAULT '''' ,' + #13#10 +
+    '`magyarazat` VARCHAR(200) NOT NULL DEFAULT '''' ,'+#13#10+
+    'PRIMARY KEY (`ID`)'+#13#10+
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'
+    ,
+    'CREATE TABLE IF NOT EXISTS `irsz` (' + #13#10 +
+    '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`irsz` varchar(10) NOT NULL DEFAULT '''',' + #13#10 +
+    '`megye` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`varos` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    'PRIMARY KEY (`id`)' + #13#10 +
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
+    '' //+ #13#10 +
     );
 
 

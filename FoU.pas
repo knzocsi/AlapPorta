@@ -269,20 +269,20 @@ begin
 if torzsiport_folyamatban then exit;
 af.autotorzs.Enabled:=False;
 torzsiport_folyamatban:=True;
-Screen.Cursor:=crHourGlass;
+//Screen.Cursor:=crHourGlass;
 try
  try
-  af.torzs_import_csv;
+  //af.torzs_import_csv;
   af.torzs_import_xlsx;
  finally
   ShowMessage('Importálás kész');
   torzsiport_folyamatban:=False;
-  Screen.Cursor:=crDefault;
+ // Screen.Cursor:=crDefault;
  end;
 except
- ShowMessage('Hiba történt');
+ af.import_log('Hiba történt ');// ShowMessage('Hiba történt');
  torzsiport_folyamatban:=False;
- Screen.Cursor:=crDefault;
+ //Screen.Cursor:=crDefault;
 end;
 af.autotorzs.Enabled:=true;
 end;
@@ -724,6 +724,8 @@ var
   i: Integer;
   sL: TStringList;
 begin
+ if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
+ else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
 
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo
@@ -757,6 +759,8 @@ end;
 
 procedure TFoF.FormResize(Sender: TObject);
 begin
+ if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
+ else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
   kepatmeretez;
 end;
 

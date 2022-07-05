@@ -45,7 +45,9 @@ uses
   LerakCimekU in 'LerakCimekU.pas' {LerakCimekF},
   VarakozasU in 'VarakozasU.pas' {VarF},
   szoftver_alapU in 'szoftver_alapU.pas' {szoftver_alapF},
-  AlapbemodU in 'AlapbemodU.pas' {AlapbemodF};
+  AlapbemodU in 'AlapbemodU.pas' {AlapbemodF},
+  MermodU in 'MermodU.pas' {MermodF},
+  MermodlistU in 'MermodlistU.pas' {MermodlistF};
 
 {$R *.res}
 
@@ -89,5 +91,7 @@ begin
   Application.CreateForm(TVarF, VarF);
   Application.CreateForm(Tszoftver_alapF, szoftver_alapF);
   Application.CreateForm(TAlapbemodF, AlapbemodF);
+  Application.CreateForm(TMermodF, MermodF);
+  Application.CreateForm(TMermodlistF, MermodlistF);
   Application.Run;
 end.

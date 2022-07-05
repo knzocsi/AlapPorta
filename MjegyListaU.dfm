@@ -109,9 +109,9 @@ object MjegyekF: TMjegyekF
       OnClick = btnKilepesClick
     end
     object btnUjranyomtatas: TButton
-      Left = 592
-      Top = 19
-      Width = 121
+      Left = 543
+      Top = 21
+      Width = 98
       Height = 25
       Caption = #218'jranyomtat'#225's'
       TabOrder = 3
@@ -120,7 +120,7 @@ object MjegyekF: TMjegyekF
     object btnListanyomtatas: TButton
       Left = 440
       Top = 21
-      Width = 121
+      Width = 97
       Height = 25
       Caption = 'Lista nyomtat'#225's'
       TabOrder = 4
@@ -128,7 +128,7 @@ object MjegyekF: TMjegyekF
     end
     object Button3: TButton
       Left = 784
-      Top = 19
+      Top = 21
       Width = 75
       Height = 25
       Caption = 'Storno'
@@ -211,6 +211,15 @@ object MjegyekF: TMjegyekF
       TabOrder = 11
       OnClick = piKezdoDatumChange
     end
+    object btnmodositas: TButton
+      Left = 656
+      Top = 21
+      Width = 75
+      Height = 25
+      Caption = 'M'#243'dos'#237't'#225's'
+      TabOrder = 12
+      OnClick = btnmodositasClick
+    end
   end
   object Panel2: TPanel
     Left = 0
@@ -262,15 +271,27 @@ object MjegyekF: TMjegyekF
       TabOrder = 2
       OnClick = Button4Click
     end
+    object btnelozmenyek: TButton
+      Left = 752
+      Top = 8
+      Width = 123
+      Height = 25
+      Caption = 'M'#233'rlegjegy el'#337'zm'#233'nyei'
+      TabOrder = 3
+      OnClick = btnelozmenyekClick
+    end
   end
   object mlistaGrid: TJvDBUltimGrid
     Left = 0
     Top = 137
     Width = 1020
     Height = 369
+    Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
     Align = alClient
     DataSource = mjegyekQDs
+    ParentShowHint = False
     ReadOnly = True
+    ShowHint = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

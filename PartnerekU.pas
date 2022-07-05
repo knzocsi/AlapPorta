@@ -64,6 +64,8 @@ type
     Label7: TLabel;
     lblmire: TLabel;
     edszures: TEdit;
+    Edit1: TEdit;
+    Edit2: TEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);
@@ -76,6 +78,7 @@ type
     procedure PartnerGridMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure edszuresChange(Sender: TObject);
+    procedure dbedtIrszChange(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -112,6 +115,25 @@ end;
 procedure TPartnerekF.Button3Click(Sender: TObject);
 begin
  af.tabla_kizar('partner');
+end;
+
+procedure TPartnerekF.dbedtIrszChange(Sender: TObject);
+begin
+if Length(dbEdtIrsz.Text)<>4 then Exit;
+if (PartnerT.state in [dsEdit,dsInsert]) then
+ with af.irszQ do
+  begin
+    Close;
+    Params[0].AsString:=dbEdtIrsz.Text;
+    Open;
+    if IsEmpty then dbedtTelepules.Clear
+    else
+     begin
+       dbedtTelepules.Text:=Fields[1].AsString;
+       if Visible then dbedtKozterulet.SetFocus;
+     end;
+    close
+  end;
 end;
 
 procedure TPartnerekF.edszuresChange(Sender: TObject);
