@@ -227,6 +227,8 @@ var
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
   merlegjegy_modositas: Boolean;
+  kijelzo_tipus:string;
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -569,6 +571,10 @@ begin
   Merleg_tipus:=i.ReadString('ALAP','Merleg_tipus','Dibal');
   //Merleg_tipus:=cfg_kezel('ALAP','Mérleg típus','String',Merleg_tipus);
   i.WriteString('ALAP','Merleg_tipus',Merleg_tipus);
+  Kijelzo_tipus:=i.ReadString('ALAP','Kijelzo_tipus','Nincs');
+  //Merleg_tipus:=cfg_kezel('ALAP','Mérleg típus','String',Merleg_tipus);
+  i.WriteString('ALAP','Kijelzo_tipus',Kijelzo_tipus);
+
   PLC_IP:=i.ReadString('PLC_USB','PLC_IP','Local');
   //PLC_IP:=cfg_kezel('PLC_USB','PLC_IP','String',PLC_IP);
   i.writeString('PLC_USB','PLC_IP',PLC_IP);

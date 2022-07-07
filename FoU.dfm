@@ -140,7 +140,6 @@ object FoF: TFoF
       Height = 231
       Align = alBottom
       TabOrder = 1
-      ExplicitWidth = 399
       object ipcamPanel: TPanel
         Left = 1
         Top = 1
@@ -149,7 +148,6 @@ object FoF: TFoF
         Align = alClient
         Caption = 'Kamera nem el'#233'rhet'#337
         TabOrder = 0
-        ExplicitWidth = 397
         object campagc: TPageControl
           Left = 1
           Top = 1
@@ -158,7 +156,6 @@ object FoF: TFoF
           ActivePage = cam0
           Align = alBottom
           TabOrder = 0
-          ExplicitWidth = 395
           object cam0: TTabSheet
             Caption = 'Kamera 1'
           end
@@ -176,7 +173,6 @@ object FoF: TFoF
       Height = 80
       Align = alTop
       TabOrder = 2
-      ExplicitWidth = 624
       object Label1: TLabel
         Left = 32
         Top = 8
@@ -197,7 +193,7 @@ object FoF: TFoF
         Width = 113
         Height = 21
         Date = 43587.000000000000000000
-        Time = 0.773554583327495600
+        Time = 0.773554583327495500
         TabOrder = 0
         OnChange = piKezdoDatumChange
       end
@@ -247,8 +243,6 @@ object FoF: TFoF
     Height = 648
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 401
-    ExplicitWidth = 691
     object pnlJobbAlso: TPanel
       Left = 1
       Top = 536
@@ -257,7 +251,6 @@ object FoF: TFoF
       Align = alBottom
       TabOrder = 0
       OnClick = pnlJobbAlsoClick
-      ExplicitWidth = 689
       object lbl1: TLabel
         Left = 24
         Top = 24
@@ -353,7 +346,6 @@ object FoF: TFoF
       Height = 535
       Align = alClient
       TabOrder = 1
-      ExplicitWidth = 689
       object pnlFelsokep: TPanel
         Left = 1
         Top = 1
@@ -362,8 +354,6 @@ object FoF: TFoF
         Align = alClient
         TabOrder = 0
         OnResize = pnlFelsokepResize
-        ExplicitWidth = 687
-        ExplicitHeight = 261
         object imgFelsokep: TImage
           Left = 0
           Top = 0
@@ -382,8 +372,6 @@ object FoF: TFoF
             'memLog')
           TabOrder = 0
           Visible = False
-          ExplicitLeft = 501
-          ExplicitHeight = 259
         end
       end
       object pnlAlsokep: TPanel
@@ -577,8 +565,8 @@ object FoF: TFoF
     Enabled = False
     Interval = 600000
     OnTimer = kapcsfrissTimer
-    Left = 763
-    Top = 186
+    Left = 347
+    Top = 194
   end
   object IdIcmpClient1: TIdIcmpClient
     Protocol = 1

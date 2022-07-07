@@ -25,6 +25,8 @@ type
     ComLed1: TComLed;
     ComLed2: TComLed;
     ComPort1: TComPort;
+    btnKijelzo_beallitas: TButton;
+    ComPort2: TComPort;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -34,6 +36,8 @@ type
     procedure chkKiirasClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure ComLed1DblClick(Sender: TObject);
+    procedure btnKijelzo_beallitasClick(Sender: TObject);
+
 
   private
     { Private declarations }
@@ -42,6 +46,7 @@ type
     procedure portopen;
     procedure portclose;
     procedure kuld(Sor:string);
+    procedure kijelzore_ir;
   end;
 
 var
@@ -669,7 +674,7 @@ begin
   Aktiv:=true;
   memTeszT.Text:='Soros teszt';
   memHexa.Text:='';
-
+  btnKijelzo_beallitas.Enabled:= kijelzo_tipus<>'Nincs';
 end;
 
 procedure TPortF.btnMemotorolClick(Sender: TObject);
@@ -684,6 +689,12 @@ begin
 
 end;
 
+procedure TPortF.btnKijelzo_beallitasClick(Sender: TObject);
+begin
+  ComPort2.ShowSetupDialog;
+  ComPort2.StoreSettings(stIniFile, konyvtar+'kijelzo.dat' );
+end;
+
 procedure TPortF.btnKilepesClick(Sender: TObject);
 begin
   close;
@@ -692,6 +703,17 @@ end;
 procedure TPortF.chkKiirasClick(Sender: TObject);
 begin
   Aktiv:=chkKiiras.Checked;
+end;
+
+procedure TPortF.kijelzore_ir;
+begin
+
+  PortF.ComPort2.LoadSettings(stIniFile, konyvtar+'kijelzo.dat' );
+
+  PortF.ComPort2.open;
+  if kijelzo_tipus='MS' then  PortF.ComPort2.WriteStr('AX/B='+mertertek+#13+#10);
+  Sleep(100);
+  PortF.ComPort2.Close;
 end;
 
 procedure TPortF.kuld(Sor:string);

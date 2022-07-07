@@ -25,8 +25,8 @@ object PortF: TPortF
     Align = alTop
     TabOrder = 0
     object ComLed1: TComLed
-      Left = 368
-      Top = 8
+      Left = 481
+      Top = 0
       Width = 25
       Height = 25
       ComPort = ComPort1
@@ -35,8 +35,8 @@ object PortF: TPortF
       OnDblClick = ComLed1DblClick
     end
     object ComLed2: TComLed
-      Left = 416
-      Top = 8
+      Left = 512
+      Top = 0
       Width = 25
       Height = 25
       ComPort = ComPort1
@@ -44,8 +44,8 @@ object PortF: TPortF
       Kind = lkRedLight
     end
     object btnKilepes: TButton
-      Left = 8
-      Top = 8
+      Left = 0
+      Top = 4
       Width = 75
       Height = 25
       Caption = 'Kil'#233'p'#233's'
@@ -54,7 +54,7 @@ object PortF: TPortF
     end
     object btnMemotorol: TButton
       Left = 160
-      Top = 8
+      Top = 4
       Width = 75
       Height = 25
       Caption = 'T'#246'r'#246'l'
@@ -73,13 +73,22 @@ object PortF: TPortF
       OnClick = chkKiirasClick
     end
     object Button1: TButton
-      Left = 256
-      Top = 8
+      Left = 253
+      Top = 4
       Width = 75
       Height = 25
       Caption = 'Be'#225'll'#237't'#225's'
       TabOrder = 3
       OnClick = Button1Click
+    end
+    object btnKijelzo_beallitas: TButton
+      Left = 367
+      Top = 4
+      Width = 75
+      Height = 25
+      Caption = 'Kijelz'#337' be'#225'll'#237't'#225's'
+      TabOrder = 4
+      OnClick = btnKijelzo_beallitasClick
     end
   end
   object memTeszt: TMemo
@@ -173,5 +182,23 @@ object PortF: TPortF
     OnRxChar = ComPort1RxChar
     Left = 168
     Top = 80
+  end
+  object ComPort2: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    Left = 168
+    Top = 152
   end
 end

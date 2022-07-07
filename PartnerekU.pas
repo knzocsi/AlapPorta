@@ -146,7 +146,6 @@ begin
   OnActivate:=nil;
   pcListaReszlet.ActivePage:=TTabSheet(tbLista);
   PartnerT.Open();
-
 end;
 
 procedure TPartnerekF.FormCreate(Sender: TObject);

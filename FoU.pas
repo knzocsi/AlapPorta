@@ -692,11 +692,15 @@ begin
      end;
    end;
  end;
+ if UpperCase(ParamStr(1)) = '/D' then
+   if (not FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then
+     ShowMessage('A kijelzõ port nincs beállítva!');
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   programvege:=true;
+  Tomeg_Timer.Enabled:=false;
   if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS') then   PortF.portclose;
 end;
 
@@ -1495,19 +1499,21 @@ begin
 
   lblIrany.caption:=meresirany;
   try
-   tomeg:=strtoint(mertertek);
-   if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertek);
-   {
-   if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
-   begin
-     PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
-     PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
-     nullszintvolt := true;
-     rendszamvolt := false;
-     lblRendszam_elso.Caption := '';
-     lblRendszam_hatso.Caption := '';
-   end;
-   }
+    tomeg:=strtoint(mertertek);
+    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertek);
+    {
+    if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
+    begin
+      PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
+      PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
+      nullszintvolt := true;
+      rendszamvolt := false;
+      lblRendszam_elso.Caption := '';
+      lblRendszam_hatso.Caption := '';
+    end;
+    }
+    if UpperCase(ParamStr(1)) <> '/D' then
+      if (FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then PortF.kijelzore_ir;
 
   except
   end;

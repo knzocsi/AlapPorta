@@ -30,12 +30,14 @@ procedure TDemotomegF.sltomegChange(Sender: TObject);
 begin
   spTomeg.AsInteger:=slTomeg.Value;
   mertertek:=IntToStr(spTomeg.AsInteger);
+  Application.ProcessMessages;
 end;
 
 procedure TDemotomegF.sptomegChange(Sender: TObject);
 begin
- Application.ProcessMessages;
+
  mertertek:=IntToStr(spTomeg.AsInteger);
+ Application.ProcessMessages;
 end;
 
 end.
