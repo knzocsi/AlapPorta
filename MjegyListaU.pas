@@ -75,6 +75,10 @@ type
     tulajDs: TDataSource;
     btnmodositas: TButton;
     btnelozmenyek: TButton;
+    TarolokT: TFDQuery;
+    TarolokDs: TDataSource;
+    taroloklookup: TJvDBLookupCombo;
+    Label27: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -251,14 +255,14 @@ end;
 
 procedure TMjegyekF.elokeszit(stfelirat: String);
 
-  function jegyen_latszik(mezo:string):Boolean;
+  function jegyen_latszik(tid:Integer; mezo:string):Boolean;
    begin
      Result:=false;
      with af.Q2 do
        begin
          Close;
          SQL.Clear;
-         Open(' SELECT '+mezo+' from termek');
+         Open(' SELECT '+mezo+' from termek WHERE id='+tid.ToString);
          Result:=Fields[0].AsBoolean;
          close
        end;
@@ -335,7 +339,7 @@ begin
            TfrxMemoView(FindObject('memewc')).Text:='';
            TfrxMemoView(FindObject('memewclbl')).Text:='';
          end;
-        if jegyen_latszik('b_nedv') then //nedvesseghez kapcsolodik
+        if jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger, 'b_nedv')=True then //nedvesseghez kapcsolodik
          begin
           TfrxMemoView(FindObject('memalapnedv')).Text:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
           TfrxMemoView(FindObject('memnedv')).Text:=mjegyekQ.FieldByName('nedv').AsString+' %';
@@ -356,7 +360,7 @@ begin
           TfrxMemoView(FindObject('memnedveszt')).Text:='';
           TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
          end;
-         if jegyen_latszik('b_tisztasag') then //szemet
+         if jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tisztasag') then //szemet
           begin
            TfrxMemoView(FindObject('memtisztasag')).Text:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
            TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
@@ -368,7 +372,7 @@ begin
            TfrxMemoView(FindObject('memszemetlevon')).Text:='';
            TfrxMemoView(FindObject('memszemetlevonlbl')).Text:='';
           end;
-         if jegyen_latszik('b_tort') then //tort szemek
+         if jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tort') then //tort szemek
           begin
            TfrxMemoView(FindObject('memtort')).Text:=mjegyekQ.FieldByName('tortszaz').AsString+' %';
            TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
@@ -380,7 +384,7 @@ begin
            TfrxMemoView(FindObject('memtorttomeg')).Text:='';
            TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
           end;
-         if jegyen_latszik('b_hekto') then
+         if jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_hekto') then
          begin
          if TfrxMemoView(FindObject('memhekto'))<>nil then
           begin
@@ -436,6 +440,8 @@ begin
  rfelt:=false;
  btnmodositas.Visible:=merlegjegy_modositas;
  btnelozmenyek.Visible:=merlegjegy_modositas;
+ TarolokT.close;
+ TarolokT.open;
  szures;
 end;
 
@@ -596,7 +602,7 @@ begin
     if cbxirany.ItemIndex>0 then SQL.Add(' and irany='+#39+cbxirany.Text+#39);
     if cbxrendsz.ItemIndex<>0 then SQL.Add(' and rendszam='+#39+cbxrendsz.Text+#39);
     if not chkstorno.Checked then  SQL.Add(' and storno=""');
-
+    if taroloklookup.KeyValue<>'!' then SQL.Add(' and tarolo_id='+#39+taroloklookup.KeyValue+#39);
     Open;
     if IsEmpty then Exit;
     DisableControls;

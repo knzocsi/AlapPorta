@@ -292,14 +292,13 @@ begin
       end;
     end;
   end;
+  if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
+  else ModScript.ScriptDialog:=nil;
+  modok_vegrehajt;//  SQL_text unitba kell
   ini_kezel;
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
   FormatSettings.DecimalSeparator:=',';
-
-  if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
-  else ModScript.ScriptDialog:=nil;
-  modok_vegrehajt;//  SQL_text unitba kell
   irsz_feltoltes;
   Kapcs.ResourceOptions.AutoReconnect:=True;
   jogmod:=False;

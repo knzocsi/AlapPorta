@@ -79,13 +79,20 @@ object MjegyekF: TMjegyekF
       Height = 13
       Caption = 'Partner 2:'
     end
+    object Label27: TLabel
+      Left = 918
+      Top = 96
+      Width = 34
+      Height = 13
+      Caption = 'T'#225'rol'#243':'
+    end
     object piKezdoDatum: TDateTimePicker
       Left = 152
       Top = 22
       Width = 113
       Height = 21
       Date = 43587.000000000000000000
-      Time = 0.773554583327495600
+      Time = 0.773554583327495500
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -127,7 +134,7 @@ object MjegyekF: TMjegyekF
       OnClick = btnListanyomtatasClick
     end
     object Button3: TButton
-      Left = 784
+      Left = 728
       Top = 21
       Width = 75
       Height = 25
@@ -146,7 +153,7 @@ object MjegyekF: TMjegyekF
       EmptyValue = '!'
       ListStyle = lsDelimited
       LookupField = 'ID'
-      LookupDisplay = 'kod;Nev;'
+      LookupDisplay = 'Nev;Kod;'
       LookupSource = termeklistDs
       TabOrder = 6
       OnChange = cbxrendszChange
@@ -161,7 +168,7 @@ object MjegyekF: TMjegyekF
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
       EmptyValue = '!'
       LookupField = 'ID'
-      LookupDisplay = 'kod;Nev;'
+      LookupDisplay = 'Nev;Kod;'
       LookupSource = PartnelistDs
       TabOrder = 7
       OnChange = cbxrendszChange
@@ -203,8 +210,8 @@ object MjegyekF: TMjegyekF
       OnChange = piKezdoDatumChange
     end
     object chkstorno: TCheckBox
-      Left = 918
-      Top = 95
+      Left = 809
+      Top = 25
       Width = 97
       Height = 17
       Caption = 'Storn'#243' is l'#225'tszik'
@@ -212,13 +219,26 @@ object MjegyekF: TMjegyekF
       OnClick = piKezdoDatumChange
     end
     object btnmodositas: TButton
-      Left = 656
+      Left = 647
       Top = 21
       Width = 75
       Height = 25
       Caption = 'M'#243'dos'#237't'#225's'
       TabOrder = 12
       OnClick = btnmodositasClick
+    end
+    object taroloklookup: TJvDBLookupCombo
+      Left = 917
+      Top = 110
+      Width = 96
+      Height = 21
+      DisplayEmpty = '**Nincs sz'#369'rve**'
+      EmptyValue = '!'
+      LookupField = 'id'
+      LookupDisplay = 'nev'
+      LookupSource = TarolokDs
+      TabOrder = 13
+      OnChange = cbxrendszChange
     end
   end
   object Panel2: TPanel
@@ -394,7 +414,7 @@ object MjegyekF: TMjegyekF
       item
         Expanded = False
         FieldName = 'megjegyzes'
-        Visible = False
+        Visible = True
       end
       item
         Expanded = False
@@ -538,7 +558,7 @@ object MjegyekF: TMjegyekF
     DisplayEmpty = '----Nincs kiv'#225'lasztva----'
     EmptyValue = '!'
     LookupField = 'ID'
-    LookupDisplay = 'kod;Nev;'
+    LookupDisplay = 'Nev;Kod;'
     LookupSource = Partnelist2Ds
     TabOrder = 3
     OnChange = cbxrendszChange
@@ -716,5 +736,17 @@ object MjegyekF: TMjegyekF
     DataSet = tulajT
     Left = 264
     Top = 336
+  end
+  object TarolokT: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * FROM tarolok ORDER BY nev ASC')
+    Left = 822
+    Top = 41
+  end
+  object TarolokDs: TDataSource
+    DataSet = TarolokT
+    Left = 880
+    Top = 40
   end
 end

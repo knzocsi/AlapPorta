@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44728.628347430550000000
+    ReportOptions.LastChange = 44750.421734421300000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -509,7 +509,7 @@ object AF: TAF
           AllowVectorExport = True
           Left = 7.779530000000000000
           Top = 300.685220000000000000
-          Width = 94.488250000000000000
+          Width = 90.708720000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -523,9 +523,9 @@ object AF: TAF
         end
         object memrendszamok: TfrxMemoView
           AllowVectorExport = True
-          Left = 104.826840000000000000
+          Left = 100.826840000000000000
           Top = 300.685220000000000000
-          Width = 117.165430000000000000
+          Width = 128.504020000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1439,20 +1439,6 @@ object AF: TAF
             'memhekto')
           ParentFont = False
         end
-        object TfrxMemoView
-          AllowVectorExport = True
-          Width = 45.354360000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'memegysar')
-          ParentFont = False
-        end
       end
       object ReportSummary1: TfrxReportSummary
         FillType = ftBrush
@@ -1652,7 +1638,7 @@ object AF: TAF
           AllowVectorExport = True
           Left = 11.559060000000000000
           Top = 277.669450000000000000
-          Width = 94.488250000000000000
+          Width = 90.708720000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -1666,9 +1652,9 @@ object AF: TAF
         end
         object Memo43: TfrxMemoView
           AllowVectorExport = True
-          Left = 106.826840000000000000
+          Left = 103.826840000000000000
           Top = 277.669450000000000000
-          Width = 117.165354330000000000
+          Width = 124.724414330000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack

@@ -227,6 +227,8 @@ var
   br,tr,aned,ned,tisz:single;
   nedvesseg,tisztasag,nedvelvon: string;
   ttom:Real;
+  r11,r12,r21,r22:String;
+
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
   tarolokU, EkaerU, levon_szovegekU;
@@ -444,6 +446,7 @@ end;
 
 procedure TMjegyF.JvDBUltimGrid1Exit(Sender: TObject);
 var t1,t2,rc:Integer;
+
 begin
   if jvmemparos.IsEmpty then exit;
 
@@ -460,6 +463,10 @@ begin
  // cbxiranyChange(Self);
   chkelso_kezi.Checked:=false;
   chkmasodik_kezi.Checked:=False;
+  r11:='';
+  r12:='';
+  r21:='';
+  r22:='';
   if not chkrogzitett.Checked then
   begin
     with jvmemparos do
@@ -477,6 +484,8 @@ begin
             lblelsodat.Caption:=FieldByName('datum').AsString;
             lblelsoido.Caption:=FieldByName('ido').AsString;
             chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
+            r11:=jvmemparos.FieldByName('rendszam').AsString;
+            r12:=jvmemparos.FieldByName('rendszam2').AsString;
            end;
           if (t1<>0)and (t2=0)and (rc<>RecNo) then
            begin
@@ -484,6 +493,8 @@ begin
             lblmasdat.Caption:=FieldByName('datum').AsString;
             lblmasido.Caption:=FieldByName('ido').AsString;
             chkmasodik_kezi.Checked:=FieldByName('kezi').AsBoolean;
+            r21:=jvmemparos.FieldByName('rendszam').AsString;
+            r22:=jvmemparos.FieldByName('rendszam2').AsString;
            end;
           cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
           cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
@@ -899,6 +910,11 @@ begin
   begin
     ShowMessage('A mérés irányát meg kell adni!');
     exit
+  end;
+ if not chkrogzitett.Checked then
+ if ((r11<>r21)and(r11<>r22))or((r12<>r21)and(r12<>r22)) then
+  begin
+    ShowMessage('A rendszámok nem megegyezõek');
   end;
  if (cbxrendszam1.Text='') then
   begin

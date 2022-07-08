@@ -686,7 +686,6 @@ end;
 procedure TPortF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Aktiv:=false;
-
 end;
 
 procedure TPortF.btnKijelzo_beallitasClick(Sender: TObject);
