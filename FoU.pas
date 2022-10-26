@@ -700,8 +700,10 @@ end;
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   programvege:=true;
+  StatusBar1.panels[1].Text:='Kilépés folyamatban...';
   Tomeg_Timer.Enabled:=false;
   if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS') then   PortF.portclose;
+
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -1512,7 +1514,7 @@ begin
       lblRendszam_hatso.Caption := '';
     end;
     }
-    if UpperCase(ParamStr(1)) <> '/D' then
+   if UpperCase(ParamStr(1)) <> '/D' then
       if (FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then PortF.kijelzore_ir;
 
   except

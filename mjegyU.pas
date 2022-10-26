@@ -914,7 +914,7 @@ begin
  if not chkrogzitett.Checked then
  if ((r11<>r21)and(r11<>r22))or((r12<>r21)and(r12<>r22)) then
   begin
-    ShowMessage('A rendszámok nem megegyezõek');
+    if MessageDlg('A rendszámok eltérnek. Folytatja?',mtConfirmation,mbYesNo,0)=7 then exit;
   end;
  if (cbxrendszam1.Text='') then
   begin

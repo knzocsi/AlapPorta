@@ -95,6 +95,7 @@ var kilep,kezd,jo:boolean;
 
 
 begin
+  ComPort1.OnRXChar:=nil;
   kilep:=FALSE;
   kezd:=false;
   ertek:=mertek;
@@ -613,8 +614,10 @@ begin
     memEredmeny.Text:='Mért érték: ('+Merleg_tipus+IntToStr(mtip)+')'+mertertek+#13#10+memEredmeny.text;
   end;
   if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
-  Sleep(100);
-  Application.ProcessMessages;
+
+  //Sleep(100);
+  //Application.ProcessMessages;
+  ComPort1.OnRXChar:= ComPort1RxChar ;
 end;
 
 procedure TPortF.FormCreate(Sender: TObject);
