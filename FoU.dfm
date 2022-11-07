@@ -43,7 +43,7 @@ object FoF: TFoF
       end
       item
         Text = 'T'#246'meg:'
-        Width = 100
+        Width = 200
       end
       item
         Text = #201'l'#337'k'#233'p(1):'
@@ -153,7 +153,7 @@ object FoF: TFoF
           Top = 1
           Width = 794
           Height = 227
-          ActivePage = cam0
+          ActivePage = cam3
           Align = alBottom
           TabOrder = 0
           object cam0: TTabSheet
@@ -162,6 +162,14 @@ object FoF: TFoF
           object cam1: TTabSheet
             Caption = 'Kamera 2'
             ImageIndex = 1
+          end
+          object cam2: TTabSheet
+            Caption = 'Kamera 3'
+            ImageIndex = 2
+          end
+          object cam3: TTabSheet
+            Caption = 'Kamera 4'
+            ImageIndex = 3
           end
         end
       end
@@ -193,7 +201,7 @@ object FoF: TFoF
         Width = 113
         Height = 21
         Date = 43587.000000000000000000
-        Time = 0.773554583327495600
+        Time = 0.773554583327495500
         TabOrder = 0
         OnChange = piKezdoDatumChange
       end
@@ -329,14 +337,14 @@ object FoF: TFoF
         Visible = False
         OnClick = btnElsoClick
       end
-      object Button2: TButton
+      object btnKamerakep: TButton
         Left = 16
         Top = 80
         Width = 75
         Height = 25
         Caption = 'Kamera k'#233'p'
         TabOrder = 1
-        OnClick = Button2Click
+        OnClick = btnKamerakepClick
       end
     end
     object pnlJobbFelso: TPanel

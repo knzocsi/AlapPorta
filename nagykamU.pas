@@ -10,10 +10,12 @@ uses
 type
   TNagykamF = class(TForm)
     campagc: TPageControl;
-    cam0: TTabSheet;
-    cam1: TTabSheet;
+    cam4: TTabSheet;
+    cam5: TTabSheet;
     JvAppIniFileStorage1: TJvAppIniFileStorage;
     JvFormStorage2: TJvFormStorage;
+    cam6: TTabSheet;
+    cam7: TTabSheet;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormHide(Sender: TObject);
@@ -45,8 +47,7 @@ end;
 
 procedure TNagykamF.FormActivate(Sender: TObject);
 begin
-
-  campagc.ActivePage:=cam0;
+  campagc.ActivePage:=cam4;
 end;
 
 procedure TNagykamF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -72,7 +73,8 @@ end;
 procedure TNagykamF.FormCreate(Sender: TObject);
 var i:Integer;
 begin
- for i := 0 to 1 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'Cam_kepe' + i.ToString);
+ //exit;
+ for i := 4 to 7 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
 end;
 
 procedure TNagykamF.FormHide(Sender: TObject);

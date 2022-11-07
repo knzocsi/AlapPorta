@@ -56,6 +56,7 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
+  Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TNezetF, NezetF);
   Application.CreateForm(TBelepF, BelepF);
   Application.CreateForm(TPortF, PortF);
@@ -73,7 +74,6 @@ begin
   Application.CreateForm(TkeszletF, keszletF);
   Application.CreateForm(TkezdokeszletF, kezdokeszletF);
   Application.CreateForm(TNagykepF, NagykepF);
-  Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TLibreExcelF, LibreExcelF);
   Application.CreateForm(TtipusokF, tipusokF);
   Application.CreateForm(TTarolokF, TarolokF);

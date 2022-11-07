@@ -17,17 +17,22 @@ type
     btnMentes: TButton;
     btnKilepes: TButton;
     chkkezi: TCheckBox;
+    btnMeres1: TButton;
+    btnMeres2: TButton;
+    btnMeres3: TButton;
+    btnMeres4: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure btnMentesClick(Sender: TObject);
     procedure spTomegEnter(Sender: TObject);
+    procedure btnMeres1Click(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
     mentes:boolean;
     rendszam1,rendszam2:string;
-    tomeg:integer;
+    tomeg,merleg:integer;
   end;
 
 var
@@ -52,16 +57,37 @@ begin
   close;
 end;
 
-procedure TMeresF.FormActivate(Sender: TObject);
-begin
+procedure TMeresF.btnMeres1Click(Sender: TObject);
 
+begin
+  if Sender=btnMeres1 then merleg:=1;
+  if Sender=btnMeres2 then merleg:=2;
+  if Sender=btnMeres3 then merleg:=3;
+  if Sender=btnMeres4 then merleg:=4;
+
+  try
+    tomeg :=StrToInt(mertertekek[merleg]);
+    if tomeg < 0 then
+      tomeg := 0;
+  except
+    tomeg := 0;
+  end;
+  spTomeg.Value:=tomeg;
+end;
+
+procedure TMeresF.FormActivate(Sender: TObject);
+var i:integer;
+begin
+  for i := 1 to 4 do TButton(FindComponent('btnMeres'+IntToStr(i))).Visible:=merlegek[i]<>'NINCS';
+
+  merleg:=0;
   mentes:=false;
   af.rendszam_combok(cbxrendszam1);
   af.rendszam_combok(cbxrendszam2);
   cbxrendszam1.Text:=rendszam1;
   cbxrendszam2.Text:=rendszam2;
   try
-    tomeg := StrToInt(mertertek);
+    tomeg :=0;// StrToInt(mertertekek[1]);
     if tomeg < 0 then
       tomeg := 0;
   except

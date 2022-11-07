@@ -2,8 +2,8 @@ object PortF: TPortF
   Left = 445
   Top = 180
   Caption = 'Port'
-  ClientHeight = 408
-  ClientWidth = 568
+  ClientHeight = 500
+  ClientWidth = 644
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,7 +20,7 @@ object PortF: TPortF
   object pnlFelso: TPanel
     Left = 0
     Top = 0
-    Width = 568
+    Width = 644
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -94,8 +94,8 @@ object PortF: TPortF
   object memTeszt: TMemo
     Left = 0
     Top = 41
-    Width = 328
-    Height = 291
+    Width = 404
+    Height = 383
     Align = alClient
     Lines.Strings = (
       'Soros teszt'
@@ -104,8 +104,8 @@ object PortF: TPortF
   end
   object memHexa: TMemo
     Left = 0
-    Top = 332
-    Width = 568
+    Top = 424
+    Width = 644
     Height = 76
     Align = alBottom
     Lines.Strings = (
@@ -113,17 +113,17 @@ object PortF: TPortF
     TabOrder = 3
   end
   object Panel1: TPanel
-    Left = 328
+    Left = 404
     Top = 41
     Width = 240
-    Height = 291
+    Height = 383
     Align = alRight
     TabOrder = 2
     object memEredmeny: TMemo
       Left = 1
-      Top = 81
+      Top = 137
       Width = 238
-      Height = 209
+      Height = 245
       Align = alClient
       Lines.Strings = (
         '')
@@ -133,9 +133,37 @@ object PortF: TPortF
       Left = 1
       Top = 1
       Width = 238
-      Height = 80
+      Height = 136
       Align = alTop
       TabOrder = 1
+      object lblTomeg1: TLabel
+        Left = 16
+        Top = 77
+        Width = 49
+        Height = 13
+        Caption = 'lblTomeg1'
+      end
+      object lblKapcsolat1: TLabel
+        Left = 120
+        Top = 77
+        Width = 63
+        Height = 13
+        Caption = 'lblKapcsolat1'
+      end
+      object lblTomeg2: TLabel
+        Left = 16
+        Top = 96
+        Width = 49
+        Height = 13
+        Caption = 'lblTomeg2'
+      end
+      object lblKapcsolat2: TLabel
+        Left = 120
+        Top = 96
+        Width = 63
+        Height = 13
+        Caption = 'lblKapcsolat2'
+      end
       object chkErtek_vj: TCheckBox
         Left = 16
         Top = 16
@@ -199,6 +227,38 @@ object PortF: TPortF
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     Left = 168
+    Top = 152
+  end
+  object IdTCPClient1: TIdTCPClient
+    OnDisconnected = IdTCPClient1Disconnected
+    OnConnected = IdTCPClient1Connected
+    ConnectTimeout = 0
+    Host = '127.0.0.1'
+    Port = 1001
+    ReadTimeout = -1
+    Left = 240
+    Top = 80
+  end
+  object IdTCPClient2: TIdTCPClient
+    OnDisconnected = IdTCPClient2Disconnected
+    OnConnected = IdTCPClient2Connected
+    ConnectTimeout = 0
+    Host = '127.0.0.1'
+    Port = 1001
+    ReadTimeout = -1
+    Left = 240
+    Top = 152
+  end
+  object Client_Timer1: TTimer
+    Interval = 500
+    OnTimer = Client_Timer1Timer
+    Left = 320
+    Top = 80
+  end
+  object Client_Timer2: TTimer
+    Interval = 500
+    OnTimer = Client_Timer2Timer
+    Left = 320
     Top = 152
   end
 end
