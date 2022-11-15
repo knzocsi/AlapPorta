@@ -6,7 +6,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   CPort, StdCtrls, ExtCtrls, CPortCtl, IdBaseComponent, IdComponent,
-  IdTCPConnection, IdTCPClient;
+  IdTCPConnection, System.inifiles,IdTCPClient;
 
 type
   TPortF = class(TForm)
@@ -54,6 +54,7 @@ type
     procedure IdTCPClient2Disconnected(Sender: TObject);
     procedure Client_Timer1Timer(Sender: TObject);
     procedure Client_Timer2Timer(Sender: TObject);
+    function datum_szoveg(datum:TDateTime;idokell:boolean):string;
 
 
   private
@@ -68,6 +69,8 @@ type
     procedure IP2_Start;
     function merleg_szam(merleg:string):integer;
   end;
+const
+  hibamaximum=5;
 
 var
   PortF: TPortF;
@@ -75,6 +78,10 @@ var
   sorosvetelben,Aktiv:boolean;
   mertdarab,mertek:string;
   tf:textfile;
+  merlegek,mertertekek,mertekek: array [1..4]of String;
+  elozotomeg,nyugalmiszamlalo:array [1..4]of integer;
+  nullszintvolt,rendszamvolt :array [1..4] of boolean;
+  hibaszamlalo:integer;
 
 
 
@@ -628,6 +635,7 @@ begin
        end;
   end;
 
+  //Mérlegek vége
 
   if (ertek<>'-0') and (ertek<>'') and (kilep) then
   begin
@@ -636,8 +644,9 @@ begin
       if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
       mert:=StrToFloat(ertek);
       ertek:=FloatToStr(mert);
-
+      hibaszamlalo:=0;
     except
+      hibaszamlalo:=hibaszamlalo+1;
       ertek:='-0'
     end;
     //if ERTEK<>'-0' THEN mertertek:=ertek;
@@ -645,6 +654,7 @@ begin
   end
   else
   begin
+    hibaszamlalo:=hibaszamlalo+1;
     if ParamStr(1)='/CT2' then ShowMessage('5e:'+ertek);
     ertek:='-4';
   end;
@@ -655,7 +665,8 @@ begin
     memEredmeny.Text:='Mért érték: ('+Merleg_tipus+IntToStr(mtip)+')'+ertek+#13#10+memEredmeny.text;
   end;
   if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
-  Result:=ertek;
+  if (hibaszamlalo=0) or (hibaszamlalo>hibamaximum) then Result:=ertek
+  else Result:=mertertekek[merlegszam];
 end;
 
 
@@ -700,12 +711,44 @@ begin
   ComPort1.OnRXChar:= ComPort1RxChar ;
 end;
 
+function TPortF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
+var ev,ho,nap,ora,perc,mp,szmp:word;
+begin
+  DecodeDate(datum,ev,ho,nap);
+  DecodeTime(datum,ora,perc,mp,szmp);
+  Result:=IntToStr(ev)+IntToStr(ho)+IntToStr(nap);
+  if idokell then Result:=Result+IntToStr(ora)+IntToStr(perc)+IntToStr(mp)+IntToStr(szmp);
+end;
+
+
 procedure TPortF.FormCreate(Sender: TObject);
+var k:integer;
+    inif:Tinifile;
 begin
   mertek:='';
   sorosvetelben:=false;
   Aktiv:=false;
   mertertek:='-5';
+  hibaszamlalo:=0;
+  inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
+  merlegek[1]:=inif.ReadString('Merleg','Merleg1','RS1');
+  inif.writeString('Merleg','Merleg1',merlegek[1]);
+  merlegek[2]:=inif.ReadString('Merleg','Merleg2','NINCS');
+  inif.writeString('Merleg','Merleg2',merlegek[2]);
+  merlegek[3]:=inif.ReadString('Merleg','Merleg3','NINCS');
+  inif.writeString('Merleg','Merleg3',merlegek[3]);
+  merlegek[4]:=inif.ReadString('Merleg','Merleg4','NINCS');
+  inif.writeString('Merleg','Merleg4',merlegek[4]);
+
+  for k:=1 to 4 do
+  begin
+    mertertekek[k]:='';
+    mertekek[k]:='';
+    elozotomeg[k] := -1;
+    nullszintvolt[k]  := true;
+    rendszamvolt [k] := false;
+    nyugalmiszamlalo [k] := 0;
+  end;
 end;
 
 procedure TPortF.IdTCPClient1Connected(Sender: TObject);
@@ -734,7 +777,7 @@ begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\1IP'+af.datum_szoveg(Now,True)+'.txt');
+    AssignFile(tf,konyvtar+'\LOG\1IP'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     CloseFile(tf);
   end;
@@ -752,7 +795,7 @@ begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\2IP'+af.datum_szoveg(Now,True)+'.txt');
+    AssignFile(tf,konyvtar+'\LOG\2IP'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     CloseFile(tf);
   end;
@@ -784,7 +827,7 @@ begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\'+af.datum_szoveg(Now,True)+'.txt');
+    AssignFile(tf,konyvtar+'\LOG\'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     Writeln(tf, konyvtar+'\srport.dat');
     Writeln(tf, Comport1.port+' OPEN');

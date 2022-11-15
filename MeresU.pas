@@ -39,7 +39,7 @@ var
   MeresF: TMeresF;
 
 implementation
-uses au;
+uses au,PortU;
 
 {$R *.dfm}
 

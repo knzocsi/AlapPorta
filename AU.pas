@@ -23,6 +23,7 @@ uses
   Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000;
 
 const
+  ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
    ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés',
     'Mérlegelõk módosítása','Mérés','Kezdõ készlet felv.','Kézi mérés',
@@ -229,9 +230,7 @@ var
   merlegjegy_modositas: Boolean;
   kijelzo_tipus,moxa_ip1,moxa_ip2:string;
   moxa_port:integer;
-  merlegek,mertertekek,mertekek: array [1..4]of String;
-  elozotomeg,nyugalmiszamlalo:array [1..4]of integer;
-  nullszintvolt,rendszamvolt :array [1..4] of boolean;
+
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
@@ -509,7 +508,7 @@ begin
 end;
 
 procedure TAF.ini_kezel;
-var i:Tinifile;
+var inif:Tinifile;
     k: Integer;
   // ujdbnev:string;
 begin
@@ -529,239 +528,226 @@ begin
    end;
   Kapcs.Connected:=True; }
 
-  i:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\porta_beallit.ini');
-  visszanap:=i.ReadInteger('ALAP','Visszanap',5);
+  inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
+  visszanap:=inif.ReadInteger('ALAP','Visszanap',5);
   visszanap:=cfg_kezel('','ALAP','Visszanap','Integer',5);
  // ShowMessage(visszanap.ToString);
-  telephely:=i.ReadString('ALAP','Telephely','Rakamaz');
+  telephely:=inif.ReadString('ALAP','Telephely','Rakamaz');
   telephely:=cfg_kezel('','ALAP','Telephely','String',telephely);
-  //i.writeString('ALAP','Telephely',telephely);
-  nyugvovarakozas:=i.ReadInteger('ALAP','Nyugvovarakozas',10);
+  //inif.writeString('ALAP','Telephely',telephely);
+  nyugvovarakozas:=inif.ReadInteger('ALAP','Nyugvovarakozas',10);
   nyugvovarakozas:=cfg_kezel('','ALAP','Nyugvó várakozás','Integer',10);
-  //i.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
-  mintomeg:=i.ReadInteger('ALAP','Mintomeg',500);
+  //inif.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
+  mintomeg:=inif.ReadInteger('ALAP','Mintomeg',500);
   mintomeg:=cfg_kezel('','ALAP','Minimum tömeg','Integer',mintomeg);
-  //i.WriteInteger('ALAP','Mintomeg',mintomeg);
-  pingproba:=i.ReadInteger('ALAP','Pingproba',3);
+  //inif.WriteInteger('ALAP','Mintomeg',mintomeg);
+  pingproba:=inif.ReadInteger('ALAP','Pingproba',3);
   pingproba:=cfg_kezel('','ALAP','Ping próbák száma','Integer',pingproba);
-  //i.WriteInteger('ALAP','Pingproba',pingproba);
-  kamproba:=i.ReadInteger('ALAP','Kamproba',3);
+  //inif.WriteInteger('ALAP','Pingproba',pingproba);
+  kamproba:=inif.ReadInteger('ALAP','Kamproba',3);
   kamproba:=cfg_kezel('','ALAP','Camera próbák száma','Integer',kamproba);
-  //i.WriteInteger('ALAP','Kamproba',kamproba);
-  //j:=i.ReadInteger('ALAP','Automata_kezelo',0);
-  automata_kezelo:=i.ReadBool('ALAP','Automata_kezelo',False);
+  //inif.WriteInteger('ALAP','Kamproba',kamproba);
+  //j:=inif.ReadInteger('ALAP','Automata_kezelo',0);
+  automata_kezelo:=inif.ReadBool('ALAP','Automata_kezelo',False);
   automata_kezelo:=cfg_kezel('','ALAP','Automata kezelõ','Boolean',False);
-  //i.WriteBool('ALAP','Automata_kezelo',automata_kezelo);
-  pdfmappa:=i.ReadString('Mappak','Pdf',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
+  //inif.WriteBool('ALAP','Automata_kezelo',automata_kezelo);
+  pdfmappa:=inif.ReadString('Mappak','Pdf',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
   pdfmappa:=cfg_kezel('','MAPPAK','Pdf mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
-  //i.writeString('Mappak','pdf',pdfmappa);
- // j:=i.ReadInteger('ALAP','Rendszamleker',0);
-  rendszamleker:=i.ReadBool('ALAP','Rendszamleker',False);
+  //inif.writeString('Mappak','pdf',pdfmappa);
+ // j:=inif.ReadInteger('ALAP','Rendszamleker',0);
+  rendszamleker:=inif.ReadBool('ALAP','Rendszamleker',False);
   rendszamleker:=cfg_kezel('','ALAP','Rendszám lekérése','Boolean',False);
-  //i.WriteBool('ALAP','Rendszamleker',rendszamleker);
- // lejatszas:=i.ReadBool('ALAP','Lejatszas',False);
+  //inif.WriteBool('ALAP','Rendszamleker',rendszamleker);
+ // lejatszas:=inif.ReadBool('ALAP','Lejatszas',False);
   lejatszas:=cfg_kezel('','ALAP','Élõ ip camera lejátszás','Boolean',False);
- // i.WriteBool('ALAP','Lejatszas',lejatszas);
-  vezerles_tipus:=UpperCase(i.ReadString('ALAP','Vezerles_tipus(USB/PLC)','PLC'));
+ // inif.WriteBool('ALAP','Lejatszas',lejatszas);
+  vezerles_tipus:=UpperCase(inif.ReadString('ALAP','Vezerles_tipus(USB/PLC)','PLC'));
  // vezerles_tipus:=cfg_kezel('','ALAP','Vezérlés típus(USB/PLC)','String','PLC');
-  i.writeString('ALAP','Vezerles_tipus(USB/PLC)',vezerles_tipus);
-  lehajtasivarakozas:=i.ReadInteger('ALAP','Lehajtasivarakozas',10);
+  inif.writeString('ALAP','Vezerles_tipus(USB/PLC)',vezerles_tipus);
+  lehajtasivarakozas:=inif.ReadInteger('ALAP','Lehajtasivarakozas',10);
   lehajtasivarakozas:=cfg_kezel('','ALAP','Lehajtási várakozas','Integer',lehajtasivarakozas);
-  //i.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
-  nagykamera:=i.ReadBool('ALAP','Nagy_kamera_kep',False);
+  //inif.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
+  nagykamera:=inif.ReadBool('ALAP','Nagy_kamera_kep',False);
   nagykamera:=cfg_kezel('','ALAP','Nagy kamera kép','Boolean',nagykamera);
-  //i.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
-  Merleg_tipus:=i.ReadString('Merleg','Merleg_tipus','Dibal');
+  //inif.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
+  Merleg_tipus:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
   //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
-  i.WriteString('Merleg','Merleg_tipus',Merleg_tipus);
-  Kijelzo_tipus:=i.ReadString('Merleg','Kijelzo_tipus','Nincs');
+  inif.WriteString('Merleg','Merleg_tipus',Merleg_tipus);
+  Kijelzo_tipus:=inif.ReadString('Merleg','Kijelzo_tipus','Nincs');
   //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
-  i.WriteString('Merleg','Kijelzo_tipus',Kijelzo_tipus);
+  inif.WriteString('Merleg','Kijelzo_tipus',Kijelzo_tipus);
 
-  PLC_IP:=i.ReadString('PLC_USB','PLC_IP','Local');
+  PLC_IP:=inif.ReadString('PLC_USB','PLC_IP','Local');
   //PLC_IP:=cfg_kezel('','PLC_USB','PLC_IP','String',PLC_IP);
-  i.writeString('PLC_USB','PLC_IP',PLC_IP);
-  Elso_lampa:=i.ReadInteger('PLC_USB','Elso_lampa',11);
+  inif.writeString('PLC_USB','PLC_IP',PLC_IP);
+  Elso_lampa:=inif.ReadInteger('PLC_USB','Elso_lampa',11);
   //Elso_lampa:=cfg_kezel('','PLC_USB','Elsõ lámpa','Integer',Elso_lampa);
-  i.WriteInteger('PLC_USB','Elso_lampa',Elso_lampa);
-  Hatso_lampa:=i.ReadInteger('PLC_USB','Hatso_lampa',21);
+  inif.WriteInteger('PLC_USB','Elso_lampa',Elso_lampa);
+  Hatso_lampa:=inif.ReadInteger('PLC_USB','Hatso_lampa',21);
   //Hatso_lampa:=cfg_kezel('','PLC_USB','Hátsó lámpa','Integer',Hatso_lampa);
-  i.WriteInteger('PLC_USB','Hatso_lampa',Hatso_lampa);
-  Sorompo_nyit_cim_BE:=i.ReadInteger('PLC_USB','Sorompo_nyit_cim_BE',10);
+  inif.WriteInteger('PLC_USB','Hatso_lampa',Hatso_lampa);
+  Sorompo_nyit_cim_BE:=inif.ReadInteger('PLC_USB','Sorompo_nyit_cim_BE',10);
   //Sorompo_nyit_cim_BE:=cfg_kezel('','PLC_USB','Sorompó nyit cím BE','Integer',Sorompo_nyit_cim_BE);
-  i.WriteInteger('PLC_USB','Sorompo_nyit_cim_BE',Sorompo_nyit_cim_BE);
-  Sorompo_nyit_cim_KI:=i.ReadInteger('PLC_USB','Sorompo_nyit_cim_KI',20);
+  inif.WriteInteger('PLC_USB','Sorompo_nyit_cim_BE',Sorompo_nyit_cim_BE);
+  Sorompo_nyit_cim_KI:=inif.ReadInteger('PLC_USB','Sorompo_nyit_cim_KI',20);
   //Sorompo_nyit_cim_KI:=cfg_kezel('','PLC_USB','Sorompó nyit cím KI','Integer',Sorompo_nyit_cim_KI);
-  i.WriteInteger('PLC_USB','Sorompo_nyit_cim_KI',Sorompo_nyit_cim_KI);
-  Sorompo_Infra_Hiba_cim_BE:=i.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',12);
+  inif.WriteInteger('PLC_USB','Sorompo_nyit_cim_KI',Sorompo_nyit_cim_KI);
+  Sorompo_Infra_Hiba_cim_BE:=inif.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',12);
   //Sorompo_Infra_Hiba_cim_BE:=cfg_kezel('','PLC_USB','Sorompó infra hiba cím BE','Integer',Sorompo_Infra_Hiba_cim_BE);
-  i.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',Sorompo_Infra_Hiba_cim_BE);
-  Sorompo_Infra_Hiba_cim_KI:=i.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',22);
+  inif.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_BE',Sorompo_Infra_Hiba_cim_BE);
+  Sorompo_Infra_Hiba_cim_KI:=inif.ReadInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',22);
   //Sorompo_Infra_Hiba_cim_KI:=cfg_kezel('','PLC_USB','Sorompó infra hiba cím KI','Integer',Sorompo_Infra_Hiba_cim_KI);
-  i.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',Sorompo_Infra_Hiba_cim_KI);
-  Sorompo_Nyitas_Volt_Cim_BE:=i.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',13);
+  inif.WriteInteger('PLC_USB','Sorompo_Infra_Hiba_cim_KI',Sorompo_Infra_Hiba_cim_KI);
+  Sorompo_Nyitas_Volt_Cim_BE:=inif.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',13);
   //Sorompo_Nyitas_Volt_Cim_BE:=cfg_kezel('','PLC_USB','Sorompó nyitás volt cím BE','Integer',Sorompo_Nyitas_Volt_Cim_BE);
-  i.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',Sorompo_Nyitas_Volt_Cim_BE);
-  Sorompo_Nyitas_Volt_Cim_KI:=i.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',23);
+  inif.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_BE',Sorompo_Nyitas_Volt_Cim_BE);
+  Sorompo_Nyitas_Volt_Cim_KI:=inif.ReadInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',23);
   //Sorompo_Nyitas_Volt_Cim_KI:=cfg_kezel('','PLC_USB','Sorompó nyitás volt cím KI','Integer',Sorompo_Nyitas_Volt_Cim_KI);
-  i.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',Sorompo_Nyitas_Volt_Cim_KI);
-  Merleg_Nullaz_Cim:=i.ReadInteger('PLC_USB','Merleg_Nullaz_Cim',30);
+  inif.WriteInteger('PLC_USB','Sorompo_Nyitas_Volt_Cim_KI',Sorompo_Nyitas_Volt_Cim_KI);
+  Merleg_Nullaz_Cim:=inif.ReadInteger('PLC_USB','Merleg_Nullaz_Cim',30);
  // Merleg_Nullaz_Cim:=cfg_kezel('','PLC_USB','Mérleg nulláz cím','Integer',Merleg_Nullaz_Cim);
-  i.WriteInteger('PLC_USB','Merleg_Nullaz_Cim',Merleg_Nullaz_Cim);
- // j:=i.ReadInteger('PLC_USB','Sorompo_vezerles',1);
-  Sorompo_vezerles:=i.Readbool('PLC_USB','Sorompo_vezerles',true);
+  inif.WriteInteger('PLC_USB','Merleg_Nullaz_Cim',Merleg_Nullaz_Cim);
+ // j:=inif.ReadInteger('PLC_USB','Sorompo_vezerles',1);
+  Sorompo_vezerles:=inif.Readbool('PLC_USB','Sorompo_vezerles',true);
   //Sorompo_vezerles:=cfg_kezel('','PLC_USB','Sorompó vezérlés','Boolean',Sorompo_vezerles);
-  i.WriteBool('PLC_USB','Sorompo_vezerles',Sorompo_vezerles);
- // j:=i.ReadInteger('PLC_USB','Infra_Figyeles',0);
-  Infra_Figyeles:=i.ReadBool('PLC_USB','Infra_Figyeles',False);
+  inif.WriteBool('PLC_USB','Sorompo_vezerles',Sorompo_vezerles);
+ // j:=inif.ReadInteger('PLC_USB','Infra_Figyeles',0);
+  Infra_Figyeles:=inif.ReadBool('PLC_USB','Infra_Figyeles',False);
   //Infra_Figyeles:=cfg_kezel('','PLC_USB','Infra figyelés','Boolean',Infra_Figyeles);
-  i.Writebool('PLC_USB','Infra_Figyeles',Infra_Figyeles);
-  Infra_BE_Cim:=i.ReadInteger('PLC_USB','Infra_BE_Cim',14);
+  inif.Writebool('PLC_USB','Infra_Figyeles',Infra_Figyeles);
+  Infra_BE_Cim:=inif.ReadInteger('PLC_USB','Infra_BE_Cim',14);
   //Infra_BE_Cim:=cfg_kezel('','PLC_USB','Infra BE cím','Integer',Infra_BE_Cim);
-  i.WriteInteger('PLC_USB','Infra_BE_Cim',Infra_BE_Cim);
-  Infra_KI_Cim:=i.ReadInteger('PLC_USB','Infra_KI_Cim',15);
+  inif.WriteInteger('PLC_USB','Infra_BE_Cim',Infra_BE_Cim);
+  Infra_KI_Cim:=inif.ReadInteger('PLC_USB','Infra_KI_Cim',15);
   //Infra_KI_Cim:=cfg_kezel('','PLC_USB','Infra KI cím','Integer',Infra_KI_Cim);
-  i.WriteInteger('PLC_USB','Infra_KI_Cim',Infra_KI_Cim);
-  sorompo_infra_hibas_BE:=i.ReadInteger('PLC_USB','sorompo_infra_hibas_BE',0);
+  inif.WriteInteger('PLC_USB','Infra_KI_Cim',Infra_KI_Cim);
+  sorompo_infra_hibas_BE:=inif.ReadInteger('PLC_USB','sorompo_infra_hibas_BE',0);
   //sorompo_infra_hibas_BE:=cfg_kezel('','PLC_USB','Sorompo infra hibás BE','Integer',sorompo_infra_hibas_BE);
-  i.WriteInteger('PLC_USB','sorompo_infra_hibas_BE',sorompo_infra_hibas_BE);
-  sorompo_infra_hibas_KI:=i.ReadInteger('PLC_USB','sorompo_infra_hibas_KI',0);
+  inif.WriteInteger('PLC_USB','sorompo_infra_hibas_BE',sorompo_infra_hibas_BE);
+  sorompo_infra_hibas_KI:=inif.ReadInteger('PLC_USB','sorompo_infra_hibas_KI',0);
   //sorompo_infra_hibas_KI:=cfg_kezel('','PLC_USB','Sorompo infra hibás KI','Integer',sorompo_infra_hibas_KI);
-  i.WriteInteger('PLC_USB','sorompo_infra_hibas_KI',sorompo_infra_hibas_KI);
-  Ping_varakozas:=i.ReadInteger('PLC_USB','Ping_varakozas(s)',10);
+  inif.WriteInteger('PLC_USB','sorompo_infra_hibas_KI',sorompo_infra_hibas_KI);
+  Ping_varakozas:=inif.ReadInteger('PLC_USB','Ping_varakozas(s)',10);
   //Ping_varakozas:=cfg_kezel('','PLC_USB','Ping várakozás(s)','Integer',Ping_varakozas);
-  i.WriteInteger('PLC_USB','Ping_varakozas(s)',Ping_varakozas);
-  IOmodul_IP:=i.ReadString('PLC_USB','IOmodul_IP','Local');
+  inif.WriteInteger('PLC_USB','Ping_varakozas(s)',Ping_varakozas);
+  IOmodul_IP:=inif.ReadString('PLC_USB','IOmodul_IP','Local');
   //IOmodul_IP:=cfg_kezel('','PLC_USB','IOmodul IP cím','String',IOmodul_IP);
-  i.writeString('PLC_USB','IOmodul_IP',IOmodul_IP);
+  inif.writeString('PLC_USB','IOmodul_IP',IOmodul_IP);
   IOmodul_van:=UpperCase( IOmodul_IP )<>'LOCAL';
-  IOmodul_regiszter_iras1:=i.ReadInteger('PLC_USB','IOmodul_regiszter_iras1',1);
+  IOmodul_regiszter_iras1:=inif.ReadInteger('PLC_USB','IOmodul_regiszter_iras1',1);
   //IOmodul_regiszter_iras1:=cfg_kezel('','PLC_USB','IOmodul regiszter irás 1','Integer',IOmodul_regiszter_iras1);
-  i.WriteInteger('PLC_USB','IOmodul_regiszter_iras1',IOmodul_regiszter_iras1);
+  inif.WriteInteger('PLC_USB','IOmodul_regiszter_iras1',IOmodul_regiszter_iras1);
   //Az elsõ gomb a fõ formon. Tipusa PLC vagy IO
-  Elso_gomb_tipus:=i.ReadString('PLC_USB','Elso_gomb_tipus','Local');
+  Elso_gomb_tipus:=inif.ReadString('PLC_USB','Elso_gomb_tipus','Local');
   //Elso_gomb_tipus:=cfg_kezel('','PLC_USB','Elsõ gomb típus','String',Elso_gomb_tipus);
-  i.writeString('PLC_USB','Elso_gomb_tipus',Elso_gomb_tipus);
-  Elso_gomb_szoveg:=i.ReadString('PLC_USB','Elso_gomb_szoveg','');
+  inif.writeString('PLC_USB','Elso_gomb_tipus',Elso_gomb_tipus);
+  Elso_gomb_szoveg:=inif.ReadString('PLC_USB','Elso_gomb_szoveg','');
   Elso_gomb_szoveg:=cfg_kezel('','PLC_USB','Elsõ gomb szöveg','String',Elso_gomb_szoveg);
-  //i.writeString('PLC_USB','Elso_gomb_szoveg',Elso_gomb_szoveg);
-  Elso_Gomb_Varakozas:=i.ReadInteger('PLC_USB','Elso_Gomb_Varakozas',500);
+  //inif.writeString('PLC_USB','Elso_gomb_szoveg',Elso_gomb_szoveg);
+  Elso_Gomb_Varakozas:=inif.ReadInteger('PLC_USB','Elso_Gomb_Varakozas',500);
   //Elso_Gomb_Varakozas:=cfg_kezel('','PLC_USB','Elsõ gomb várakozás','Integer',Elso_Gomb_Varakozas);
-  i.WriteInteger('PLC_USB','Elso_Gomb_Varakozas',Elso_Gomb_Varakozas);
-  Elso_Gomb_Meres_Utan:=i.ReadInteger('PLC_USB','Elso_Gomb_Meres_Utan',0);
+  inif.WriteInteger('PLC_USB','Elso_Gomb_Varakozas',Elso_Gomb_Varakozas);
+  Elso_Gomb_Meres_Utan:=inif.ReadInteger('PLC_USB','Elso_Gomb_Meres_Utan',0);
   //Elso_Gomb_Meres_Utan:=cfg_kezel('','PLC_USB','Elsõ gomb mérés után','Integer',Elso_Gomb_Meres_Utan);
-  i.WriteInteger('PLC_USB','Elso_Gomb_Meres_Utan',Elso_Gomb_Meres_Utan);
+  inif.WriteInteger('PLC_USB','Elso_Gomb_Meres_Utan',Elso_Gomb_Meres_Utan);
 
-  utolso_sql:=i.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
+  utolso_sql:=inif.ReadInteger('MySql','Utolso_sql',maxSQL);//mert az 1 a db letrehozas
   //utolso_sql:=cfg_kezel('','MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
- // i.WriteInteger('MySql','Utolso_sql',utolso_sql);
+ // inif.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
   for k := 0 to 3 do
     begin
-     rtspurls[k]:=i.ReadString('Rtsp','URL Cam '+k.ToString,'');
+     rtspurls[k]:=inif.ReadString('Rtsp','URL Cam '+k.ToString,'');
     // rtspurls[k]:=cfg_kezel('','RTSP','URL Cam '+k.ToString,'String',rtspurls[k]);
-     i.WriteString('Rtsp','URL Cam '+k.ToString,rtspurls[k]);
+     inif.WriteString('Rtsp','URL Cam '+k.ToString,rtspurls[k]);
     // showmessage(rtspURLS[k]);
     end;
-  soapXML:=i.ReadString('Mappak','SoapXML',ExtractFileDir(ExtractFilePath(application.exename))+'\SoapXML');
+  soapXML:=inif.ReadString('Mappak','SoapXML',ExtractFileDir(ExtractFilePath(application.exename))+'\SoapXML');
   soapXML:=cfg_kezel('','MAPPAK','SoapXML mappa','String',soapXML);
-  //i.writeString('Mappak','SoapXML',SoapXML);
-  kepmappa:=i.ReadString('Mappak','kepek',ExtractFileDir(ExtractFilePath(application.exename))+'\Kepek');
+  //inif.writeString('Mappak','SoapXML',SoapXML);
+  kepmappa:=inif.ReadString('Mappak','kepek',ExtractFileDir(ExtractFilePath(application.exename))+'\Kepek');
   kepmappa:=cfg_kezel('','MAPPAK','Képek mappa','String',kepmappa);
-  //i.writeString('Mappak','kepek',kepmappa);
-  libre_mappa:=i.ReadString('ALAP','Libre_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\Libre_export');
+  //inif.writeString('Mappak','kepek',kepmappa);
+  libre_mappa:=inif.ReadString('ALAP','Libre_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\Libre_export');
   libre_mappa:=cfg_kezel('','MAPPAK','Libre mappa','String',Libre_mappa);
-  //  i.writeString('ALAP','Libre_mappa',libre_mappa);
-  ekaer_mappa:=i.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
+  //  inif.writeString('ALAP','Libre_mappa',libre_mappa);
+  ekaer_mappa:=inif.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
   ekaer_mappa:=cfg_kezel('','MAPPAK','Ekaer mappa','String',Ekaer_mappa);
-  //i.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
-  mentesido:=i.ReadInteger('ALAP','Mentesido',20);
+  //inif.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
+  mentesido:=inif.ReadInteger('ALAP','Mentesido',20);
   mentesido:=cfg_kezel('','ALAP','Mentésidõ','Integer',Mentesido);
-  //i.WriteInteger('ALAP','Mentesido',mentesido);
-  mezgaz:=i.Readbool('ALAP','Mezgaz',false);//mert az 1 a db letrehozas
+  //inif.WriteInteger('ALAP','Mentesido',mentesido);
+  mezgaz:=inif.Readbool('ALAP','Mezgaz',false);//mert az 1 a db letrehozas
   mezgaz:=cfg_kezel('','ALAP','Mezgazõgazdasági program','Boolean',mezgaz);
-  //i.WriteBool('ALAP','Mezgaz',mezgaz);
-  duplex_mjegy:=i.Readbool('ALAP','Duplex',false);//dupla mérlegjegy egy lapon
+  //inif.WriteBool('ALAP','Mezgaz',mezgaz);
+  duplex_mjegy:=inif.Readbool('ALAP','Duplex',false);//dupla mérlegjegy egy lapon
   duplex_mjegy:=cfg_kezel('','ALAP','Duplex','Boolean',duplex_mjegy);
-  //i.WriteBool('ALAP','Duplex',duplex_mjegy);
-  automata_meres:=i.ReadBool('ALAP','Automata_meres',False);
+  //inif.WriteBool('ALAP','Duplex',duplex_mjegy);
+  automata_meres:=inif.ReadBool('ALAP','Automata_meres',False);
   //automata_meres:=cfg_kezel('','ALAP','Automata mérés','Boolean',automata_meres);
-  i.WriteBool('ALAP','Automata_meres',automata_meres);
+  inif.WriteBool('ALAP','Automata_meres',automata_meres);
 
-  nedvesseg_beolvasasa:=i.ReadBool('ALAP','Nedvesseg_beolvasasa',False);
+  nedvesseg_beolvasasa:=inif.ReadBool('ALAP','Nedvesseg_beolvasasa',False);
   nedvesseg_beolvasasa:=cfg_kezel('','ALAP','Nedvesség beolvasása','Boolean',Nedvesseg_beolvasasa);
-  //i.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
-  alap_tarolo:=i.ReadInteger('ALAP','Alap_tarolo',0);
+  //inif.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
+  alap_tarolo:=inif.ReadInteger('ALAP','Alap_tarolo',0);
   alap_tarolo:=cfg_kezel('','ALAP','Alapértelmezett tároló','Integer',alap_tarolo);
-  //i.WriteInteger('ALAP','Alap_tarolo',alap_tarolo);
-  alap_irany:=i.ReadInteger('ALAP','Alap_irany',0);
+  //inif.WriteInteger('ALAP','Alap_tarolo',alap_tarolo);
+  alap_irany:=inif.ReadInteger('ALAP','Alap_irany',0);
   //alap_irany:=cfg_kezel('','ALAP','Alapértelmezett irány','Integer',alap_irany);
-  i.WriteInteger('ALAP','Alap_irany',alap_irany);
+  inif.WriteInteger('ALAP','Alap_irany',alap_irany);
 
-  alap_atvevo:=i.ReadInteger('ALAP','Alap_atvevo',0);
+  alap_atvevo:=inif.ReadInteger('ALAP','Alap_atvevo',0);
   alap_atvevo:=cfg_kezel('','ALAP','Alapértelmezett átvevõ','Integer',alap_atvevo);
-  //i.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
-  alap_elado:=i.ReadInteger('ALAP','Alap_elado',0);
+  //inif.WriteInteger('ALAP','Alap_atvevo',alap_atvevo);
+  alap_elado:=inif.ReadInteger('ALAP','Alap_elado',0);
   alap_elado:=cfg_kezel('','ALAP','Alapértelmezett eladó','Integer',alap_elado);
-  //i.WriteInteger('ALAP','Alap_elado',alap_elado);
-  Merlegjegy_tipus:=i.ReadInteger('ALAP','Merlegjegy_tipus',0);
+  //inif.WriteInteger('ALAP','Alap_elado',alap_elado);
+  Merlegjegy_tipus:=inif.ReadInteger('ALAP','Merlegjegy_tipus',0);
   Merlegjegy_tipus:=cfg_kezel('','ALAP','Mérlegjegy típus','Integer',Merlegjegy_tipus);
-//  i.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
-  merleg_neve:=i.ReadString('ALAP','Merleg_neve','');
+//  inif.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
+  merleg_neve:=inif.ReadString('ALAP','Merleg_neve','');
  // merleg_neve:=cfg_kezel('','ALAP','Mérleg neve','String',merleg_neve);
-  i.writeString('ALAP','Merleg_neve',Merleg_neve);
+  inif.writeString('ALAP','Merleg_neve',Merleg_neve);
 
-  kpmappa:=i.ReadString('ALAP','kozponti_mappa','');
+  kpmappa:=inif.ReadString('ALAP','kozponti_mappa','');
   kpmappa:=cfg_kezel('','MAPPAK','Központi mappa','String',kpmappa);
- // i.writeString('ALAP','kozponti_mappa',kpmappa);
-  tomeg_levon:=i.ReadBool('ALAP','Tomeg_levon',False);
+ // inif.writeString('ALAP','kozponti_mappa',kpmappa);
+  tomeg_levon:=inif.ReadBool('ALAP','Tomeg_levon',False);
   tomeg_levon:=cfg_kezel('','ALAP','Tömeg levonás','Boolean',Tomeg_levon);
-  //i.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
-  ekaer_felhasz:=i.ReadString('EKAER','ekaer_felhasz','');
+  //inif.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
+  ekaer_felhasz:=inif.ReadString('EKAER','ekaer_felhasz','');
   ekaer_felhasz:=cfg_kezel('','EKAER','Ekaer felhasználó','String',ekaer_felhasz);
- // i.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
-  ekaer_jsz:=i.ReadString('EKAER','ekaer_jsz','');
+ // inif.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
+  ekaer_jsz:=inif.ReadString('EKAER','ekaer_jsz','');
   ekaer_jsz:=cfg_kezel('','EKAER','Ekaer jelszó','String',ekaer_jsz);
- // i.writeString('EKAER','ekaer_jsz',ekaer_jsz);
-  ekaer_csk:=i.ReadString('EKAER','ekaer_alakulcs','');
+ // inif.writeString('EKAER','ekaer_jsz',ekaer_jsz);
+  ekaer_csk:=inif.ReadString('EKAER','ekaer_alakulcs','');
   ekaer_csk:=cfg_kezel('','EKAER','Ekaer kulcs','String',ekaer_csk);
-  //i.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
-  lado:=i.ReadInteger('ALAP','Lado',0);
+  //inif.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
+  lado:=inif.ReadInteger('ALAP','Lado',0);
   lado:=cfg_kezel('Ha nagyobb mint egy, akkor logolja a mintomeg feletti értékeket','ALAP','Ladorec','Integer',lado);
- // i.WriteInteger('ALAP','Lado',lado);
-  automata_torzsimport:=i.Readbool('ALAP','Automata_torzsimport',false);//automata törzsimport
+ // inif.WriteInteger('ALAP','Lado',lado);
+  automata_torzsimport:=inif.Readbool('ALAP','Automata_torzsimport',false);//automata törzsimport
   automata_torzsimport:=cfg_kezel('','ALAP','Automata törzsimport','Boolean',automata_torzsimport);
-  //i.WriteBool('ALAP','Automata_torzsimport',Automata_torzsimport);
-  torzs_import_mappa:=i.ReadString('Mappak','Torzs_import',ExtractFileDir(ExtractFilePath(application.exename))+'\Torzs_import');
+  //inif.WriteBool('ALAP','Automata_torzsimport',Automata_torzsimport);
+  torzs_import_mappa:=inif.ReadString('Mappak','Torzs_import',ExtractFileDir(ExtractFilePath(application.exename))+'\Torzs_import');
   torzs_import_mappa:=cfg_kezel('','MAPPÁK','Törzs import mappa','String',torzs_import_mappa);
-  //i.writeString('Mappak','Torzs_import',torzs_import_mappa);
+  //inif.writeString('Mappak','Torzs_import',torzs_import_mappa);
   merlegjegy_modositas:=cfg_kezel('','ALAP','Mérlegjegy módosítás','Boolean',merlegjegy_modositas);
 
-  //moxa_ip1:=i.ReadString('ALAP','Moxa_ip1',ExtractFileDir(ExtractFilePath(application.exename))+'Local');
+  //moxa_ip1:=inif.ReadString('ALAP','Moxa_ip1',ExtractFileDir(ExtractFilePath(application.exename))+'Local');
  // moxa_ip1:='Local';
   moxa_ip1:=cfg_kezel('1.Moxa ETH-RS232 átalakító ip címe','ALAP','Moxa_ip1','String','Local');
   //moxa_ip2:='Local';
   moxa_ip2:=cfg_kezel('2.Moxa ETH-RS232 átalakító ip címe','ALAP','Moxa_ip2','String','Local');
   //moxa_port:=4001;
   moxa_port:=cfg_kezel('Moxa ETH-RS232 átalakítók portja','ALAP','Moxa_port','Integer',4001);
-  merlegek[1]:=i.ReadString('Merleg','Merleg1','RS1');
-  i.writeString('Merleg','Merleg1',merlegek[1]);
-  merlegek[2]:=i.ReadString('Merleg','Merleg2','NINCS');
-  i.writeString('Merleg','Merleg2',merlegek[2]);
-  merlegek[3]:=i.ReadString('Merleg','Merleg3','NINCS');
-  i.writeString('Merleg','Merleg3',merlegek[3]);
-  merlegek[4]:=i.ReadString('Merleg','Merleg4','NINCS');
-  i.writeString('Merleg','Merleg4',merlegek[4]);
 
-  for k:=1 to 4 do
-  begin
-    mertertekek[k]:='';
-    mertekek[k]:='';
-    elozotomeg[k] := -1;
-    nullszintvolt[k]  := true;
-    rendszamvolt [k] := false;
-    nyugalmiszamlalo [k] := 0;
-  end;
+  // A mérleges rész átkerül t az PortU-ba
+
+
+
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -779,8 +765,8 @@ begin
     torzs_import_mappa:=torzs_import_mappa+'\';
     ForceDirectories(torzs_import_mappa+'Importalva');
    end;
-  i.UpdateFile;
-  i.Free;
+  inif.UpdateFile;
+  inif.Free;
 end;
 
 procedure TAF.jogok_beolvasasa;

@@ -407,8 +407,8 @@ begin
   lbllevonszoveg.Visible:=tomeg_levon;
   levonlookup.Visible:=tomeg_levon;
   btnlevon_szoveg.Visible:=tomeg_levon;
-  lblekaer.Visible:=ekaer_felhasz<>'';
-  edekaer.Visible:=ekaer_felhasz<>'';
+  //lblekaer.Visible:=ekaer_felhasz<>'';
+  //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
  // magassagok;
 end;
