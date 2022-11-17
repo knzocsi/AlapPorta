@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44750.421734421300000000
+    ReportOptions.LastChange = 44750.421734421310000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'

@@ -13,11 +13,11 @@ File_10=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_
 File_11=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_benne_bizmod\DmU.pas',0,1,1876,16,1896,0,0,,
 
 [Modules]
-Module0=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
-Module2=N:\Delphi_10_4\Merleges\Alap\portU.pas
-Module3=N:\Delphi_10_4\Merleges\Alap\AU.pas
-Module4=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module0=N:\Delphi_10_4\Merleges\Alap\AU.pas
+Module1=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+Module2=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module3=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
+Module4=N:\Delphi_10_4\Merleges\Alap\portU.pas
 Module5=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 Module6=N:\Delphi_10_4\Merleges\Alap\nagykamU.pas
 Module7=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
@@ -28,19 +28,19 @@ Module11=default.htm
 Count=12
 EditWindowCount=1
 
+[N:\Delphi_10_4\Merleges\Alap\AU.pas]
+ModuleType=TSourceModule
+
 [N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\MeresU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\portU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\AU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\FoU.pas]
@@ -66,7 +66,7 @@ ModuleType=TURLModule
 
 [EditWindow0]
 ViewCount=12
-CurrentEditView=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+CurrentEditView=N:\Delphi_10_4\Merleges\Alap\AU.pas
 View0=0
 View1=1
 View2=2
@@ -139,7 +139,7 @@ CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\AU.pas
 CursorX=98
 CursorY=531
-TopLine=509
+TopLine=725
 LeftCol=1
 Elisions=
 Bookmarks={1,832,9}{2,746,1}{3,575,1}
@@ -377,11 +377,6 @@ LRDockWidth=1896
 Dockable=1
 StayOnTop=0
 SplitPos=111
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Text,
-ExpandedItems=Touch=0
 
 [frmDesignPreview]
 PercentageSizes=1

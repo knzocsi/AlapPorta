@@ -230,7 +230,8 @@ var
   merlegjegy_modositas: Boolean;
   kijelzo_tipus,moxa_ip1,moxa_ip2:string;
   moxa_port:integer;
-
+  tisztitasi_dij,szaritasi_dij,tarolasi_dij,be_tarolasi_dij,
+  ki_tarolasi_dij,szallitasi_dij:Extended;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
@@ -744,10 +745,15 @@ begin
   //moxa_port:=4001;
   moxa_port:=cfg_kezel('Moxa ETH-RS232 átalakítók portja','ALAP','Moxa_port','Integer',4001);
 
+  {tisztitasi_dij,szaritasi_dij,tarolasi_dij,be_tarolasi_dij,
+  ki_tarolasi_dij,szallitasi_dij:Extended;}
+  tisztitasi_dij:=cfg_kezel('','DÍJAK','Tisztítási díj','Float',0);
+  szaritasi_dij:=cfg_kezel('','DÍJAK','Szárítási díj','Float',0);
+  tarolasi_dij:=cfg_kezel('','DÍJAK','Tárolási díj','Float',0);
+  be_tarolasi_dij:=cfg_kezel('','DÍJAK','Betárolási díj','Float',0);
+  ki_tarolasi_dij:=cfg_kezel('','DÍJAK','Kitárolási díj','Float',0);
+  szallitasi_dij:=cfg_kezel('','DÍJAK','Szállítási díj','Float',0);
   // A mérleges rész átkerül t az PortU-ba
-
-
-
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -1108,6 +1114,7 @@ begin
         'S':Result:=CfgT.FieldByName('ertek') .AsString;
         'I':Result:=CfgT.FieldByName('ertek') .AsInteger;
         'B':Result:=CfgT.FieldByName('ertek') .AsBoolean;
+        'F':Result:=CfgT.FieldByName('ertek') .AsFloat;
        end;
      end
     else
