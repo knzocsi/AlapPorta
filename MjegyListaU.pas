@@ -9,7 +9,8 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
-  frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup;
+  frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup, JvMemoryDataset,
+  JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet;
 
 type
   TMjegyekF = class(TForm)
@@ -79,6 +80,34 @@ type
     TarolokDs: TDataSource;
     taroloklookup: TJvDBLookupCombo;
     Label27: TLabel;
+    memszamol: TJvMemoryData;
+    memszamolsorsz: TStringField;
+    memszamolp_nev: TStringField;
+    memszamolp_cim: TStringField;
+    memszamoltermek_nev: TStringField;
+    memszamolNetto: TFloatField;
+    memszamoltisztasag: TFloatField;
+    memszamolalapnedv: TFloatField;
+    memszamolnedv: TFloatField;
+    memszamoltortszaz: TFloatField;
+    memszamolszNetto: TFloatField;
+    memszamolnedvlevon: TFloatField;
+    memszamoltisztasaglevon: TFloatField;
+    memszamoltortlevon: TFloatField;
+    memszamoltavdat: TStringField;
+    termenyszaritasroll: TJvRollOut;
+    btntermenyszaritas: TButton;
+    Panel3: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    memszamolDs: TDataSource;
+    JvDBUltimGrid1: TJvDBUltimGrid;
+    memszamolszaritasra_kiad: TFloatField;
+    Button5: TButton;
+    Button6: TButton;
+    frxTerm_szaritas: TfrxReport;
+    memszamolszar_hofok: TFloatField;
+    memszamolszall_km: TFloatField;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -94,6 +123,11 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure btnmodositasClick(Sender: TObject);
     procedure btnelozmenyekClick(Sender: TObject);
+    procedure mlistaGridDblClick(Sender: TObject);
+    procedure btntermenyszaritasClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -181,6 +215,136 @@ finally
  mjegyekQ.Refresh
 end;
 end;
+procedure TMjegyekF.btntermenyszaritasClick(Sender: TObject);
+begin
+memszamol.Active:=False;
+memszamol.EmptyTable;
+memszamol.Active:=True;
+termenyszaritasroll.Visible:=True;
+termenyszaritasroll.collapsed:=false;
+end;
+
+procedure TMjegyekF.Button1Click(Sender: TObject);
+var o_netto,o_szem_szaz,o_szem_levon,o_tort_szaz,o_tort_levon,
+    o_szar_kiad,o_nedv,o_nedv_levon,o_szar_fok,o_szNetto,o_km:Extended;
+    atlag_szem_szaz,atlag_nedvesseg,atlag_tort_szaz,atlag_szar_fok,
+    atlag_szar_tartalom,alap_szar_tartalom,alap_nedv:Extended;
+    partner_neve,partner_cime,termeny,datumok,sorszok:string;
+    ossz_netto,afa_ossz,fizetendo:Extended;
+begin
+ if memszamol.IsEmpty then exit;
+ 
+ o_netto:=0;
+ o_szem_szaz:=0;
+ o_szem_levon:=0;
+ o_tort_szaz:=0;
+ o_tort_levon:=0;
+ o_szar_kiad:=0;
+ o_nedv:=0;
+ o_nedv_levon:=0;
+ o_szar_fok:=0;
+ o_Sznetto:=0;
+ o_km:=0;
+ atlag_szem_szaz:=0;
+ atlag_tort_szaz:=0;
+ atlag_szar_fok:=0;
+ atlag_nedvesseg:=0;
+ datumok:='';
+ sorszok:='';
+ with  memszamol do
+  begin
+    First;
+    while not eof do
+    begin
+      o_netto:=o_netto+fieldbyname('netto').AsFloat;
+      o_szem_szaz:=o_szem_szaz+fieldbyname('tisztasag').AsFloat;
+      o_szem_levon:=o_szem_levon+fieldbyname('tisztasaglevon').AsFloat;
+      o_tort_szaz:=o_tort_szaz+fieldbyname('tortszaz').AsFloat;
+      o_tort_levon:=o_tort_levon+fieldbyname('tortlevon').AsFloat;
+      o_szar_kiad:=o_szar_kiad+fieldbyname('szaritasra_kiad').AsFloat;
+      o_nedv:=o_nedv+fieldbyname('nedv').AsFloat;
+      o_nedv_levon:=o_nedv_levon+fieldbyname('nedvlevon').AsFloat;
+      o_szar_fok:=o_szar_fok+fieldbyname('szar_hofok').AsFloat;
+      o_szNetto:=o_szNetto+fieldbyname('szNetto').AsFloat;
+      o_km:=o_km+fieldbyname('szall_km').AsFloat;
+      if Pos(FieldByName('tavdat').AsString+'; ',datumok)=0 then
+         datumok:=datumok+FieldByName('tavdat').AsString+'; ';
+      sorszok:=sorszok+FieldByName('sorsz').AsString+'; ';
+      next;
+    end;
+    atlag_szem_szaz:=o_szem_szaz/recordcount;
+    atlag_tort_szaz:=o_tort_szaz/recordcount;
+    atlag_szar_fok:=o_szar_fok/recordcount;
+    atlag_nedvesseg:=o_nedv/recordcount;
+
+    alap_nedv:=fieldbyname('alapnedv').AsFloat;
+    alap_szar_tartalom:=100-fieldbyname('alapnedv').AsFloat;
+    partner_neve:=FieldByName('p_nev').AsString;
+    partner_cime:=FieldByName('p_cim').AsString;
+    termeny:=FieldByName('termek_nev').AsString;
+  end;
+  atlag_szar_tartalom:=100-atlag_nedvesseg;
+  nyomtat:=True;
+  ossz_netto:=0;
+ with frxTerm_szaritas do
+   begin
+     TfrxMemoView(FindObject('frxtulajdonos')).Text:=mjegyekQ.FieldByName('tul_nev').AsString;
+     TfrxMemoView(FindObject('frxpartnerneve')).Text:=partner_neve;
+     TfrxMemoView(FindObject('frxpartnercime')).Text:=partner_cime;
+     TfrxMemoView(FindObject('frxtermeny')).Text:=termeny;
+     TfrxMemoView(FindObject('frxidopontok')).Text:=datumok;
+     TfrxMemoView(FindObject('frxsorszok')).Text:=sorszok;
+     TfrxMemoView(FindObject('frxnetto')).Text:=IntToStr(Round(o_netto))+' kg';
+     TfrxMemoView(FindObject('frxszemet_szaz')).Text:=FormatFloat('0.##',atlag_szem_szaz)+' %';
+     TfrxMemoView(FindObject('frxszemet_levon')).Text:=IntToStr(Round(o_szem_levon))+' kg';
+     TfrxMemoView(FindObject('frxszar_kiad')).Text:=IntToStr(Round(o_szar_kiad))+' kg';
+     TfrxMemoView(FindObject('frxnedv')).Text:=FormatFloat('0.#',atlag_nedvesseg)+' %';
+     TfrxMemoView(FindObject('frxalapnedv')).Text:=FormatFloat('0.#',alap_nedv)+' %';
+     TfrxMemoView(FindObject('frxnettoxnettoszaraz')).Text:=IntToStr(Round(o_szar_kiad))+' kg x '+FormatFloat('0.#',atlag_szar_tartalom)+' %';
+     TfrxMemoView(FindObject('frxszarazszaraz')).Text:=FormatFloat('0.#',alap_szar_tartalom)+' %';
+     TfrxMemoView(FindObject('frxsznetto')).Text:=IntToStr(Round(o_szNetto))+' kg';
+     TfrxMemoView(FindObject('frxnedvelvon')).Text:=IntToStr(Round(o_nedv_levon))+' kg';
+     TfrxMemoView(FindObject('frxossz_tort_szaz')).Text:=FormatFloat('0.#',o_tort_szaz)+' %';
+     TfrxMemoView(FindObject('frxossz_tort')).Text:=IntToStr(Round(o_tort_levon))+' kg';
+     TfrxMemoView(FindObject('frxossz_szar_kiad')).Text:=IntToStr(Round(o_szNetto))+' kg';
+     TfrxMemoView(FindObject('frxnetto1')).Text:=FormatFloat('0.000',(o_netto/1000))+' to x';
+     TfrxMemoView(FindObject('frxtiszt_to')).Text:=FormatFloat('###,###,##0,- Ft/to', tisztitasi_dij);
+     TfrxMemoView(FindObject('frxtiszt_ar')).Text:=FormatFloat('###,###,##0,- Ft', (o_netto/1000)* tisztitasi_dij);
+     ossz_netto:=(o_netto/1000)* tisztitasi_dij;
+     TfrxMemoView(FindObject('frxszar_fok')).Text:=FormatFloat('0.000',atlag_szar_fok)+' '+#186;
+     TfrxMemoView(FindObject('frxnetto2')).Text:=FormatFloat('0.000',(o_szar_kiad/1000))+' to x';
+     TfrxMemoView(FindObject('frxszar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', szaritasi_dij);
+     TfrxMemoView(FindObject('frxszar_ar')).Text:=FormatFloat('###,###,##0,- Ft',atlag_szar_fok*(o_szar_kiad/1000)* szaritasi_dij);
+     ossz_netto:=ossz_netto+atlag_szar_fok*(o_szar_kiad/1000)* szaritasi_dij;
+     TfrxMemoView(FindObject('frxnetto3')).Text:=FormatFloat('0.000',(o_netto/1000))+' to x';
+     TfrxMemoView(FindObject('frxbetar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', be_tarolasi_dij);
+     TfrxMemoView(FindObject('frxbetar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_netto/1000)* be_tarolasi_dij);
+     ossz_netto:=ossz_netto+(o_netto/1000)* be_tarolasi_dij;
+     TfrxMemoView(FindObject('frxnetto4')).Text:=FormatFloat('0.000',(o_szNetto/1000))+' to x';
+     TfrxMemoView(FindObject('frxkitar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', ki_tarolasi_dij);
+     TfrxMemoView(FindObject('frxkitar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_szNetto/1000)* ki_tarolasi_dij);
+     ossz_netto:=ossz_netto+(o_szNetto/1000)* ki_tarolasi_dij;
+     TfrxMemoView(FindObject('frxkm')).Text:=FormatFloat('0.#',o_km)+' km';
+     TfrxMemoView(FindObject('frxnetto5')).Text:=FormatFloat('0.000',(o_Netto/1000))+' to x';
+     TfrxMemoView(FindObject('frxszall_to')).Text:=FormatFloat('###,###,##0,- Ft/to', szallitasi_dij);
+     TfrxMemoView(FindObject('frxszall_ar')).Text:=FormatFloat('###,###,##0,- Ft',o_km*(o_Netto/1000)* szallitasi_dij);
+     ossz_netto:=ossz_netto+o_km*(o_Netto/1000)* szallitasi_dij;
+     TfrxMemoView(FindObject('frxosszesen')).Text:=FormatFloat('###,###,##0,- Ft', ossz_netto);
+     fizetendo:=ossz_netto*(1+(27/100));
+     afa_ossz:=Round(fizetendo)-Round(ossz_netto);
+     TfrxMemoView(FindObject('frxafaosszege')).Text:=FormatFloat('###,###,##0,- Ft', afa_ossz);
+     TfrxMemoView(FindObject('frxfizetendo')).Text:=FormatFloat('###,###,##0,- Ft', fizetendo);
+     PrepareReport(true);
+     ShowReport(true);
+   end;
+end;   {'0.###'}
+
+procedure TMjegyekF.Button2Click(Sender: TObject);
+begin
+termenyszaritasroll.collapsed:=true;
+termenyszaritasroll.Visible:=false;
+end;
+
 procedure TMjegyekF.Button3Click(Sender: TObject);
 var p,psz:Integer;
 begin
@@ -245,6 +409,12 @@ end;
 procedure TMjegyekF.Button4Click(Sender: TObject);
 begin
  LibreExcelF.mezo_nevek(mlistaGrid,nil);
+end;
+
+procedure TMjegyekF.Button6Click(Sender: TObject);
+begin
+if MessageDlg('Biztosan törli az elszámolásból?',mtConfirmation,mbYesNo,0)=6 then
+   memszamol.Delete;
 end;
 
 procedure TMjegyekF.cbxrendszChange(Sender: TObject);
@@ -440,6 +610,8 @@ begin
  rfelt:=false;
  btnmodositas.Visible:=merlegjegy_modositas;
  btnelozmenyek.Visible:=merlegjegy_modositas;
+ btntermenyszaritas.Visible:=termenyszaritas_elszamolasa;
+ termenyszaritasroll.Visible:=false;
  TarolokT.close;
  TarolokT.open;
  szures;
@@ -449,6 +621,52 @@ procedure TMjegyekF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 termeklist.close;
 Partnelist.close;
+end;
+
+procedure TMjegyekF.mlistaGridDblClick(Sender: TObject);
+begin
+ if not termenyszaritas_elszamolasa then exit;
+ if mjegyekQ.FieldByName('storno').AsString<>'' then exit;
+
+ if not memszamol.IsEmpty then
+  begin
+    if memszamol.Locate('sorsz',mjegyekQ.FieldByName('sorszam').AsString,[]) then
+     begin
+       ShowMessage('Ez a mérlegjegy már szerepel ebben az elszámolásban!');
+       Exit;
+     end;
+    if not memszamol.Locate('p_nev',mjegyekQ.FieldByName('p_nev').AsString,[]) then
+     begin
+       ShowMessage('Egy elszámolásban csak egy partner szerepelhet!');
+       Exit;
+     end;
+    if not memszamol.Locate('termek_nev',mjegyekQ.FieldByName('termek_nev').AsString,[]) then
+     begin
+       ShowMessage('Egy elszámolásban csak egy termény szerepelhet!');
+       Exit;
+     end;
+  end;
+  szazalek;
+  memszamol.Edit;
+  memszamol.Append;
+  memszamolsorsz.AsString:=mjegyekQ.FieldByName('sorszam').AsString;
+  memszamolp_nev.AsString:=mjegyekQ.FieldByName('p_nev').AsString;
+  memszamolp_cim.AsString:=mjegyekQ.FieldByName('p_cim').AsString;
+  memszamoltermek_nev.AsString:=mjegyekQ.FieldByName('termek_nev').AsString;
+  memszamolnetto.value:=mjegyekQ.FieldByName('netto').value;
+  memszamolalapnedv.value:=mjegyekQ.FieldByName('alapnedv').value;
+  memszamolnedv.value:=mjegyekQ.FieldByName('nedv').value;
+  memszamolnedvlevon.value:=StrToFloat(nedvelvon);//számolni
+  memszamoltisztasag.value:=mjegyekQ.FieldByName('tisztasag').value;
+  memszamoltisztasaglevon.value:=StrToFloat(tisztasag);//számolni
+  memszamoltortszaz.value:=mjegyekQ.FieldByName('tortszaz').value;
+  memszamolszNetto.value:=mjegyekQ.FieldByName('szNetto').value;
+  memszamoltortlevon.value:=ttom;//tört szemek tömege számolni
+  memszamoltavdat.asString:=mjegyekQ.FieldByName('tavdatum').AsString;
+  memszamolszaritasra_kiad.value:=mjegyekQ.FieldByName('netto').value-StrToFloat(tisztasag);//netto-szemét tömeg számolni
+  memszamolszar_hofok.value:=0;
+  memszamolszall_km.value:=0;
+  memszamol.Post;
 end;
 
 procedure TMjegyekF.mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
@@ -564,8 +782,10 @@ begin
   //Öcsi
   tt:=round((br-tr-(round((br-tr)*((tisz+tsz)/100.0)))));
 
-  sze:=1-((tisz+tsz+ned)/100);
-  szu:=1-((tisz+tsz+aned)/100);
+ // sze:=1-((tisz+tsz+ned)/100);
+  //szu:=1-((tisz+tsz+aned)/100);
+  sze:=1-(ned/100);
+  szu:=1-(aned/100);
   levsz:=sze/szu;
       if mjegyekQ.FieldByName('kukorica').AsBoolean then
        begin

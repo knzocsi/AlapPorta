@@ -410,6 +410,7 @@ begin
   //lblekaer.Visible:=ekaer_felhasz<>'';
   //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
+
  // magassagok;
 end;
 
@@ -881,6 +882,7 @@ var sorsz,pcime,egyedi:String;
      end;
 
 begin
+
  if tulajlookup.KeyValue='!' then
   begin
     ShowMessage('A bizonylat kibocsájtót meg kell adni!');

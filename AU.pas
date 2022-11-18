@@ -224,7 +224,7 @@ var
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
-  Infra_Figyeles,automata_torzsimport:boolean;
+  Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
   merlegjegy_modositas: Boolean;
@@ -753,6 +753,8 @@ begin
   be_tarolasi_dij:=cfg_kezel('','DÍJAK','Betárolási díj','Float',0);
   ki_tarolasi_dij:=cfg_kezel('','DÍJAK','Kitárolási díj','Float',0);
   szallitasi_dij:=cfg_kezel('','DÍJAK','Szállítási díj','Float',0);
+
+  termenyszaritas_elszamolasa:=cfg_kezel('Terményszárítás elszámolása több mérlegjegy alapján is','ALAP','Terményszárítás elszámolása','Boolean',false);
   // A mérleges rész átkerül t az PortU-ba
 
   ForceDirectories(soapXML);
