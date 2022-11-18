@@ -55,15 +55,14 @@ object AlapbemodF: TAlapbemodF
     Left = 369
     Top = 8
     Width = 100
-    Height = 93
+    Height = 81
     Caption = 'T'#237'pus'
     Enabled = False
     ItemIndex = 0
     Items.Strings = (
       'Integer'
       'String'
-      'Boolean'
-      'Float')
+      'Boolean')
     TabOrder = 1
     OnClick = rgtipusClick
   end

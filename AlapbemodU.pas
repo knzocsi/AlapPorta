@@ -99,7 +99,6 @@ try
      'I':rgtipus.ItemIndex:=0;
      'S':rgtipus.ItemIndex:=1;
      'B':rgtipus.ItemIndex:=2;
-     'F':rgtipus.ItemIndex:=3;
     end;
     rgtipusClick(Self);
     chkigaz.Checked:=af.cfgT.FieldByName('ertek').AsString='True';
@@ -115,7 +114,7 @@ end;
 procedure TAlapbemodF.rgtipusClick(Sender: TObject);
 begin
  case rgtipus.ItemIndex of
- 0,3:begin
+  0:begin
       chkigaz.Visible:=false;
       edertek.NumbersOnly:=True;
       edertek.Visible:=true;
