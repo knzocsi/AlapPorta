@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=14;
+      maxSQL=15;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -851,6 +851,9 @@ interface
     'PRIMARY KEY (`id`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' //+ #13#10 +
+    ,
+    //szárított tört szemek tömege
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
     );
 
 

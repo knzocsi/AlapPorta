@@ -92,7 +92,7 @@ object MjegyekF: TMjegyekF
       Width = 113
       Height = 21
       Date = 43587.000000000000000000
-      Time = 0.773554583327495600
+      Time = 0.773554583327495500
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -249,7 +249,6 @@ object MjegyekF: TMjegyekF
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 506
     object Label4: TLabel
       Left = 24
       Top = 8
@@ -316,7 +315,7 @@ object MjegyekF: TMjegyekF
     Left = 0
     Top = 137
     Width = 1020
-    Height = 169
+    Height = 317
     Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
     Align = alClient
     DataSource = mjegyekQDs
@@ -421,11 +420,6 @@ object MjegyekF: TMjegyekF
         FieldName = 'szallitolev'
         Title.Caption = 'Sz'#225'll'#237't'#243'lev'#233'l'
         Width = 80
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'megjegyzes'
         Visible = True
       end
       item
@@ -555,6 +549,12 @@ object MjegyekF: TMjegyekF
       end
       item
         Expanded = False
+        FieldName = 'megjegyzes'
+        Title.Caption = 'Megjegyz'#233's'
+        Visible = True
+      end
+      item
+        Expanded = False
         FieldName = 'Storno'
         Width = 11
         Visible = True
@@ -577,11 +577,12 @@ object MjegyekF: TMjegyekF
   end
   object termenyszaritasroll: TJvRollOut
     Left = 0
-    Top = 306
+    Top = 454
     Width = 1020
-    Height = 170
+    Height = 22
     Align = alBottom
     Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
+    Collapsed = True
     TabOrder = 4
     FAWidth = 145
     FAHeight = 170
@@ -591,12 +592,10 @@ object MjegyekF: TMjegyekF
       Left = 834
       Top = 21
       Width = 185
-      Height = 148
+      Height = 0
       Align = alRight
       TabOrder = 0
-      ExplicitLeft = 56
-      ExplicitTop = 112
-      ExplicitHeight = 41
+      ExplicitHeight = 148
       object Button1: TButton
         Left = 48
         Top = 24
@@ -630,7 +629,7 @@ object MjegyekF: TMjegyekF
       Left = 1
       Top = 21
       Width = 833
-      Height = 148
+      Height = 0
       Align = alClient
       DataSource = memszamolDs
       TabOrder = 1
