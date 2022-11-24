@@ -949,7 +949,12 @@ begin
 
  try
   szazalek;
- finally
+ except
+  exit;
+ end;
+ //try
+ // szazalek;
+ //finally
   if Sender=btnNyomtatas then
   begin
     NezetF.nyomtatva:=false;
@@ -989,7 +994,7 @@ begin
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
       SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,');
-      SQL.Add(') :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek)  ');
+      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -1163,7 +1168,7 @@ begin
      masol(0,0,true);
      rendszam_combok;
      uresre;
-  end;
+//  end;
 end;
 
 

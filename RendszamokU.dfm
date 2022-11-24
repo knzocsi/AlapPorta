@@ -42,10 +42,6 @@ object RendszamokF: TRendszamokF
     TabOrder = 1
     object tbLista: TTabSheet
       Caption = 'Lista'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 654
-      ExplicitHeight = 0
       object DBGrid1: TDBGrid
         Left = 0
         Top = 0
@@ -158,7 +154,7 @@ object RendszamokF: TRendszamokF
   end
   object RendszamT: TFDTable
     IndexFieldNames = 'ID'
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     UpdateOptions.UpdateTableName = 'rendszam'
     TableName = 'rendszam'
     Left = 272
@@ -170,7 +166,7 @@ object RendszamokF: TRendszamokF
     Top = 72
   end
   object Partnelist: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner ORDER BY Nev ASC;')
     Left = 570

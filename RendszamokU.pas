@@ -47,7 +47,7 @@ var
 
 implementation
 uses
-  AU;
+  AU,portU;
 
 {$R *.dfm}
 
@@ -59,7 +59,7 @@ end;
 procedure TRendszamokF.btnMeresClick(Sender: TObject);
 begin
   try
-    dbspeTara.Value:=StrToInt(mertertek);
+    dbspeTara.Value:=StrToInt(mertertekek[1]);
   except
     dbspeTara.Value:=0;
   end;

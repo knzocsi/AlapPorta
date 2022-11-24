@@ -1698,8 +1698,8 @@ begin
 
   lblIrany.caption:=meresirany;
   try
-    tomeg:=strtoint(mertertek);
-    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertek);
+    tomeg:=strtoint(mertertekek[1]);
+    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertekek[1]);
     {
     if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
     begin

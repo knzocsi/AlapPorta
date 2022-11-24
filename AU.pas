@@ -208,7 +208,7 @@ var
   f_ide,utolso_sql,mentesido:Integer;
   jogmod,rendszamleker,nagykamera,mezgaz,kozponti_prg:Boolean;
   bit:integer;
-  mertertek,konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
+  konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
   sorompo_vezerles:boolean;
   nyugvovarakozas,Elso_lampa,Hatso_lampa,mintomeg:integer;
   Sorompo_nyit_cim_BE,Sorompo_Infra_Hiba_cim_BE,sorompo_infra_hibas_BE,Sorompo_Nyitas_Volt_Cim_BE:integer;
@@ -467,7 +467,7 @@ begin
 
  tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;
  tisztitott_nyers_netto_tomege:= nyers_netto_tomege-szemet_tomeg-nyers_tort_szemek_tomege;
-
+ szaritott_netto_tomege := tisztitott_nyers_netto_tomege;
  if kukorica then
   begin
     //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)

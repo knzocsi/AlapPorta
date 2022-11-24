@@ -588,40 +588,52 @@ begin
 
         end;
 
-     11: begin // Ohaus}
+     11: begin // S120
 
           si:=0;
-          if Active then
-          begin
-            memTeszt.Text:=sadat+memTeszt.text;
-            memHexa.Text:= memHexa.Text+hexaszov(sadat);
-          end;
-         repeat
+          bit:=8;
+          repeat
             si:=si+1;
+            if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
             adat:=sadat[si];
-            if (adat<>#3) or ((adat=#3) and (ertek=''))  then ertek:=adat+ertek
-            else
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertekek[merlegszam]:='';
-                kilep:=true;
-                try
-                  if ertek<>'' then
-                  begin
-                    tom:=StrToInt(ertek);
-                    ertek:=IntToStr(tom);
-                  end;
-                except
 
-                end;
+            if adat=#2 then kezd:=true
+                else
+                  if kezd then
+                    begin
+                      if (adat=#3) and (length(ertek)=bit) then
+                        begin
+                          if (Active) and (chkErtek_vj.Checked) then
+                          begin
+                            memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
+                          end;
 
-              end;
+                          mertekek[merlegszam]:='';
+                          kilep:=true ;
+                          ertek:=ertek_tisztitas(ertek);
+                          if ParamStr(1)='/CT3' then ShowMessage('3e:'+ertek);
+                        end
+                      else
+                      begin
+                        if (adat=#3) or (length(ertek)=bit)then
+                        begin
+                          //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
+                           if (Active) and (chkErtek_vj.Checked) then
+                          begin
+                            memEredmeny.Text:='Hibás érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
+                          end;
+                          ertek:='';
+                          db:=1;
+                        end
+                        else ertek:=adat+ertek;
+                      end;
+                    end;
 
-          until (kilep) or (si=Length(sadat)) ;
+          until (kilep) or (si=Length(sadat));
+          if Not(kilep) then mertekek[merlegszam]:=sadat;
 
+          if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
 
-
-          if Not(kilep) then mertekek[merlegszam]:=ertek;
 
           if kilep then
             try
@@ -728,7 +740,7 @@ begin
   mertek:='';
   sorosvetelben:=false;
   Aktiv:=false;
-  mertertek:='-5';
+  //mertertek:='-5';
   hibaszamlalo:=0;
   inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
   merlegek[1]:=inif.ReadString('Merleg','Merleg1','RS1');
@@ -884,7 +896,7 @@ begin
   PortF.ComPort2.LoadSettings(stIniFile, konyvtar+'kijelzo.dat' );
 
   PortF.ComPort2.open;
-  if kijelzo_tipus='MS' then  PortF.ComPort2.WriteStr('AX/B='+mertertek+#13+#10);
+  if kijelzo_tipus='MS' then  PortF.ComPort2.WriteStr('AX/B='+mertertekek[1]+#13+#10);
   Sleep(100);
   PortF.ComPort2.Close;
 end;

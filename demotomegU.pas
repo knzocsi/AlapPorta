@@ -23,20 +23,20 @@ var
   DemotomegF: TDemotomegF;
 
 implementation
-   uses AU;
+   uses AU,portU;
 {$R *.dfm}
 
 procedure TDemotomegF.sltomegChange(Sender: TObject);
 begin
   spTomeg.AsInteger:=slTomeg.Value;
-  mertertek:=IntToStr(spTomeg.AsInteger);
+  mertertekek[1]:=IntToStr(spTomeg.AsInteger);
   Application.ProcessMessages;
 end;
 
 procedure TDemotomegF.sptomegChange(Sender: TObject);
 begin
 
- mertertek:=IntToStr(spTomeg.AsInteger);
+ mertertekek[1]:=IntToStr(spTomeg.AsInteger);
  Application.ProcessMessages;
 end;
 

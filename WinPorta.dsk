@@ -1,55 +1,69 @@
 ﻿[Closed Files]
 File_0=TSourceModule,'C:\Kompon\Comport\Source\CPort.pas',0,1,1305,1,1318,0,0,,
-File_1=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SQL_text.pas',0,1,855,10,853,0,0,,
-File_2=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\NezetU.pas',0,1,3,1,1,0,0,,
-File_3=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\PartnerekU.pas',0,1,189,39,187,0,0,,
-File_4=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,55,1,55,0,0,,
-File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas',0,1,31,30,55,0,0,,
-File_6=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas',0,1,39,79,47,0,0,,
-File_7=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\__recovery\AU.pas',0,1,190,1,1,0,0,,
-File_8=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\source\rtl\win\Winapi.Windows.pas',0,1,39808,1,39832,0,0,,
-File_9=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\MermodU.pas',0,1,653,26,660,0,0,,
-File_10=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\MermodlistU.pas',0,1,61,22,69,0,0,,
-File_11=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_benne_bizmod\AeljarU.pas',0,1,1,51,19,0,0,,
-File_12=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\demotomegU.pas',0,1,29,31,33,0,0,,
-File_13=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\tesztU.pas',0,1,1,1,1,0,0,,
-File_14=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_benne_bizmod\PartnerekU.pas',0,1,559,22,581,0,0,,
+File_1=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\NezetU.pas',0,1,3,1,1,0,0,,
+File_2=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\PartnerekU.pas',0,1,189,39,187,0,0,,
+File_3=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,55,1,55,0,0,,
+File_4=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas',0,1,31,30,55,0,0,,
+File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas',0,1,39,79,47,0,0,,
+File_6=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\__recovery\AU.pas',0,1,190,1,1,0,0,,
+File_7=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\source\rtl\win\Winapi.Windows.pas',0,1,39808,1,39832,0,0,,
+File_8=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\MermodU.pas',0,1,653,26,660,0,0,,
+File_9=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\MermodlistU.pas',0,1,61,22,69,0,0,,
+File_10=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_benne_bizmod\AeljarU.pas',0,1,1,51,19,0,0,,
+File_11=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\tesztU.pas',0,1,1,1,1,0,0,,
+File_12=TSourceModule,'N:\Delphi_10_4\Szamlazo\ujszamlazo_husos_2\129_meg_nincs_benne_bizmod\PartnerekU.pas',0,1,559,22,581,0,0,,
 
 [Modules]
-Module0=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-Module2=N:\Delphi_10_4\Merleges\Alap\AU.pas
-Module3=N:\Delphi_10_4\Merleges\Alap\portU.pas
-Module4=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
-Module5=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-Module6=N:\Delphi_10_4\Merleges\Alap\nagykamU.pas
-Count=7
+Module0=N:\Delphi_10_4\Merleges\Alap\FoU.pas
+Module1=N:\Delphi_10_4\Merleges\Alap\portU.pas
+Module2=N:\Delphi_10_4\Merleges\Alap\demotomegU.pas
+Module3=N:\Delphi_10_4\Merleges\Alap\RendszamokU.pas
+Module4=N:\Delphi_10_4\Merleges\Alap\AU.pas
+Module5=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+Module6=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module7=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
+Module8=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
+Module9=N:\Delphi_10_4\Merleges\Alap\nagykamU.pas
+Module10=default.htm
+Count=11
 EditWindowCount=1
 
-[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\AU.pas]
+[N:\Delphi_10_4\Merleges\Alap\FoU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\portU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\MeresU.pas]
+[N:\Delphi_10_4\Merleges\Alap\demotomegU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\FoU.pas]
+[N:\Delphi_10_4\Merleges\Alap\RendszamokU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\AU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\SQL_text.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\MeresU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\nagykamU.pas]
 ModuleType=TSourceModule
 
+[default.htm]
+ModuleType=TURLModule
+
 [EditWindow0]
-ViewCount=7
-CurrentEditView=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+ViewCount=11
+CurrentEditView=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 View0=0
 View1=1
 View2=2
@@ -57,6 +71,10 @@ View3=3
 View4=4
 View5=5
 View6=6
+View7=7
+View8=8
+View9=9
+View10=10
 PercentageSizes=1
 Create=1
 Visible=1
@@ -75,7 +93,7 @@ BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
 LeftPanelSize=1896
 LeftPanelClients=PropertyInspector,DockSite3
-LeftPanelData=00000800010100000000690C00000000000001680700000000000001000000007204000009000000446F636B53697465330100000000A41800001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelData=00000800010100000000690C0000000000000168070000000000000100000000570E000009000000446F636B53697465330100000000A41800001100000050726F7065727479496E73706563746F72FFFFFFFF
 RightPanelSize=2000
 RightPanelClients=DockSite2,DockSite4
 RightPanelData=00000800010100000000690C00000000000001D00700000000000001000000004D12000009000000446F636B53697465320100000000A418000009000000446F636B5369746534FFFFFFFF
@@ -87,17 +105,21 @@ BottomMiddlePanelClients=DockSite0,GraphDrawingModel
 BottomMiddelPanelData=0000080001020200000009000000446F636B536974653010000000477261706844726177696E67566965779C1D00000000000002F306000000000000FFFFFFFF
 
 [View0]
+CustomEditViewType=TWelcomePageView
+WelcomePageURL=bds:/default.htm
+
+[View1]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 CursorX=1
-CursorY=1648
-TopLine=1643
+CursorY=639
+TopLine=623
 LeftCol=1
 Elisions=
 Bookmarks={2,1690,1}{3,1440,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 
-[View1]
+[View2]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\nagykamU.pas
 CursorX=27
@@ -108,40 +130,62 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\nagykamU.pas
 
-[View2]
+[View3]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\AU.pas
-CursorX=38
-CursorY=481
-TopLine=439
+CursorX=3
+CursorY=211
+TopLine=202
 LeftCol=1
 Elisions=
 Bookmarks={1,933,9}{2,840,1}{3,669,1}{4,522,1}
-EditViewName=Borland.FormDesignerView
+EditViewName=N:\Delphi_10_4\Merleges\Alap\AU.pas
 
-[View3]
+[View4]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\RendszamokU.pas
+CursorX=11
+CursorY=50
+TopLine=32
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\Merleges\Alap\RendszamokU.pas
+
+[View5]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
-CursorX=56
-CursorY=825
-TopLine=803
+CursorX=57
+CursorY=263
+TopLine=293
 LeftCol=1
 Elisions=
 Bookmarks={1,295,61}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
 
-[View4]
+[View6]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-CursorX=72
-CursorY=1244
-TopLine=1224
+CursorX=16
+CursorY=997
+TopLine=1042
 LeftCol=1
 Elisions=
-Bookmarks={1,573,1}{2,567,1}{3,731,1}{4,870,1}
+Bookmarks={1,573,1}{2,567,1}{3,730,1}{4,869,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 
-[View5]
+[View7]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
+CursorX=72
+CursorY=856
+TopLine=838
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
+
+[View8]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
 CursorX=14
@@ -152,16 +196,27 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
 
-[View6]
+[View9]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\portU.pas
-CursorX=40
-CursorY=669
-TopLine=638
+CursorX=22
+CursorY=757
+TopLine=730
 LeftCol=1
 Elisions=
-Bookmarks={1,601,1}{2,105,1}
+Bookmarks={1,635,62}{2,105,1}{3,591,5}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\portU.pas
+
+[View10]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\demotomegU.pas
+CursorX=17
+CursorY=26
+TopLine=17
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\Merleges\Alap\demotomegU.pas
 
 [Watches]
 Count=0
@@ -295,14 +350,14 @@ Visible=1
 Docked=1
 State=0
 Left=0
-Top=138
+Top=383
 Width=1896
-Height=5092
+Height=2449
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1896
-ClientHeight=5092
-TBDockHeight=5200
+ClientHeight=2449
+TBDockHeight=9008
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
@@ -310,8 +365,8 @@ SplitPos=111
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Name,Action
-ExpandedItems=Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,DataSource=0
+SelectedItem=Name,
+ExpandedItems="LiveBindings Designer=0"
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -629,32 +684,13 @@ State=0
 Left=0
 Top=0
 Width=1896
-Height=798
+Height=3441
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1896
-ClientHeight=798
+ClientHeight=3441
 TBDockHeight=3679
 LRDockWidth=1896
-Dockable=1
-StayOnTop=0
-
-[CnAsciiForm]
-PercentageSizes=1
-Create=1
-Visible=0
-Docked=0
-State=0
-Left=0
-Top=0
-Width=7677
-Height=8209
-MaxLeft=-5
-MaxTop=-11
-ClientWidth=7594
-ClientHeight=7789
-TBDockHeight=8209
-LRDockWidth=7677
 Dockable=1
 StayOnTop=0
 
@@ -763,7 +799,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
 ClientHeight=4498
-TBDockHeight=4595
+TBDockHeight=9008
 LRDockWidth=2000
 Dockable=1
 StayOnTop=0
@@ -782,12 +818,12 @@ State=0
 Left=0
 Top=28
 Width=1896
-Height=798
+Height=3441
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1896
-ClientHeight=798
-TBDockHeight=3549
+ClientHeight=3441
+TBDockHeight=9008
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
@@ -811,7 +847,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
 ClientHeight=1392
-TBDockHeight=4153
+TBDockHeight=9008
 LRDockWidth=2000
 Dockable=1
 StayOnTop=0

@@ -93,7 +93,7 @@ type
     memszamolszNetto: TFloatField;
     memszamolnedvlevon: TFloatField;
     memszamoltisztasaglevon: TFloatField;
-    memszamoltortlevon: TFloatField;
+    memszamolszart_tort: TFloatField;
     memszamoltavdat: TStringField;
     termenyszaritasroll: TJvRollOut;
     btntermenyszaritas: TButton;
@@ -260,7 +260,7 @@ begin
       o_szem_szaz:=o_szem_szaz+fieldbyname('tisztasag').AsFloat;
       o_szem_levon:=o_szem_levon+fieldbyname('tisztasaglevon').AsFloat;
       o_tort_szaz:=o_tort_szaz+fieldbyname('tortszaz').AsFloat;
-      o_tort_levon:=o_tort_levon+fieldbyname('tortlevon').AsFloat;
+      o_tort_levon:=o_tort_levon+fieldbyname('szart_tort').AsFloat;
       o_szar_kiad:=o_szar_kiad+fieldbyname('szaritasra_kiad').AsFloat;
       o_nedv:=o_nedv+fieldbyname('nedv').AsFloat;
       o_nedv_levon:=o_nedv_levon+fieldbyname('nedvlevon').AsFloat;
@@ -674,7 +674,7 @@ begin
     memszamoltisztasaglevon.value:=szemet_tomeg;//számolni
     memszamoltortszaz.value:=mjegyekQ.FieldByName('tortszaz').value;
     memszamolszNetto.value:=mjegyekQ.FieldByName('szNetto').value;
-    memszamoltortlevon.value:=szaritott_tort_szemek_tomege;//tört szemek tömege számolni
+    memszamolszart_tort.value:=szaritott_tort_szemek_tomege;//tört szemek tömege számolni
     memszamoltavdat.asString:=mjegyekQ.FieldByName('tavdatum').AsString;
     memszamolszaritasra_kiad.value:=tisztitott_nyers_netto_tomege;//mjegyekQ.FieldByName('netto').value-StrToFloat(tisztasag);//netto-szemét tömeg számolni
     memszamolszar_hofok.value:=0;

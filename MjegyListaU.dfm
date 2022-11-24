@@ -315,7 +315,7 @@ object MjegyekF: TMjegyekF
     Left = 0
     Top = 137
     Width = 1020
-    Height = 317
+    Height = 169
     Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
     Align = alClient
     DataSource = mjegyekQDs
@@ -577,12 +577,11 @@ object MjegyekF: TMjegyekF
   end
   object termenyszaritasroll: TJvRollOut
     Left = 0
-    Top = 454
+    Top = 306
     Width = 1020
-    Height = 22
+    Height = 170
     Align = alBottom
     Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
-    Collapsed = True
     TabOrder = 4
     FAWidth = 145
     FAHeight = 170
@@ -592,10 +591,9 @@ object MjegyekF: TMjegyekF
       Left = 834
       Top = 21
       Width = 185
-      Height = 0
+      Height = 148
       Align = alRight
       TabOrder = 0
-      ExplicitHeight = 148
       object Button1: TButton
         Left = 48
         Top = 24
@@ -629,7 +627,7 @@ object MjegyekF: TMjegyekF
       Left = 1
       Top = 21
       Width = 833
-      Height = 0
+      Height = 148
       Align = alClient
       DataSource = memszamolDs
       TabOrder = 1
@@ -999,8 +997,8 @@ object MjegyekF: TMjegyekF
     object memszamolszNetto: TFloatField
       FieldName = 'szNetto'
     end
-    object memszamoltortlevon: TFloatField
-      FieldName = 'tortlevon'
+    object memszamolszart_tort: TFloatField
+      FieldName = 'szart_tort'
     end
     object memszamoltavdat: TStringField
       FieldName = 'tavdat'
