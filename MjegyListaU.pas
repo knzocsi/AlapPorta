@@ -10,7 +10,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
   frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup, JvMemoryDataset,
-  JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet;
+  JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet, Vcl.Mask, JvExMask, JvSpin;
 
 type
   TMjegyekF = class(TForm)
@@ -103,11 +103,26 @@ type
     memszamolDs: TDataSource;
     JvDBUltimGrid1: TJvDBUltimGrid;
     memszamolszaritasra_kiad: TFloatField;
-    Button5: TButton;
     Button6: TButton;
     frxTerm_szaritas: TfrxReport;
     memszamolszar_hofok: TFloatField;
     memszamolszall_km: TFloatField;
+    spTisztitasi_dij: TJvSpinEdit;
+    spSzaritasi_dij: TJvSpinEdit;
+    spTarolasi_dij: TJvSpinEdit;
+    spBetarolasi_dij: TJvSpinEdit;
+    JvSpinEdit5: TJvSpinEdit;
+    JvSpinEdit6: TJvSpinEdit;
+    spKitarolasi_dij: TJvSpinEdit;
+    spSzallitasi_dij: TJvSpinEdit;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    edmegjegy: TEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -308,27 +323,27 @@ begin
      TfrxMemoView(FindObject('frxossz_tort')).Text:=IntToStr(Round(o_tort_levon))+' kg';
      TfrxMemoView(FindObject('frxossz_szar_kiad')).Text:=IntToStr(Round(o_szNetto))+' kg';
      TfrxMemoView(FindObject('frxnetto1')).Text:=FormatFloat('0.000',(o_netto/1000))+' to x';
-     TfrxMemoView(FindObject('frxtiszt_to')).Text:=FormatFloat('###,###,##0,- Ft/to', tisztitasi_dij);
-     TfrxMemoView(FindObject('frxtiszt_ar')).Text:=FormatFloat('###,###,##0,- Ft', (o_netto/1000)* tisztitasi_dij);
-     ossz_netto:=(o_netto/1000)* tisztitasi_dij;
+     TfrxMemoView(FindObject('frxtiszt_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spTisztitasi_dij.Value);
+     TfrxMemoView(FindObject('frxtiszt_ar')).Text:=FormatFloat('###,###,##0,- Ft', (o_netto/1000)* spTisztitasi_dij.Value);
+     ossz_netto:=(o_netto/1000)* spTisztitasi_dij.Value;
      TfrxMemoView(FindObject('frxszar_fok')).Text:=FormatFloat('0.000',atlag_szar_fok)+' °';
      TfrxMemoView(FindObject('frxnetto2')).Text:=FormatFloat('0.000',(o_szar_kiad/1000))+' to x';
-     TfrxMemoView(FindObject('frxszar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', szaritasi_dij);
+     TfrxMemoView(FindObject('frxszar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spSzaritasi_dij.Value);
      TfrxMemoView(FindObject('frxszar_ar')).Text:=FormatFloat('###,###,##0,- Ft',atlag_szar_fok*(o_szar_kiad/1000)* szaritasi_dij);
-     ossz_netto:=ossz_netto+atlag_szar_fok*(o_szar_kiad/1000)* szaritasi_dij;
+     ossz_netto:=ossz_netto+atlag_szar_fok*(o_szar_kiad/1000)* spSzaritasi_dij.Value;
      TfrxMemoView(FindObject('frxnetto3')).Text:=FormatFloat('0.000',(o_netto/1000))+' to x';
-     TfrxMemoView(FindObject('frxbetar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', be_tarolasi_dij);
-     TfrxMemoView(FindObject('frxbetar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_netto/1000)* be_tarolasi_dij);
-     ossz_netto:=ossz_netto+(o_netto/1000)* be_tarolasi_dij;
+     TfrxMemoView(FindObject('frxbetar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spBetarolasi_dij.Value);
+     TfrxMemoView(FindObject('frxbetar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_netto/1000)* spBetarolasi_dij.Value);
+     ossz_netto:=ossz_netto+(o_netto/1000)* spBetarolasi_dij.Value;
      TfrxMemoView(FindObject('frxnetto4')).Text:=FormatFloat('0.000',(o_szNetto/1000))+' to x';
-     TfrxMemoView(FindObject('frxkitar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', ki_tarolasi_dij);
-     TfrxMemoView(FindObject('frxkitar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_szNetto/1000)* ki_tarolasi_dij);
-     ossz_netto:=ossz_netto+(o_szNetto/1000)* ki_tarolasi_dij;
+     TfrxMemoView(FindObject('frxkitar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spKitarolasi_dij.Value);
+     TfrxMemoView(FindObject('frxkitar_ar')).Text:=FormatFloat('###,###,##0,- Ft',(o_szNetto/1000)* spKitarolasi_dij.Value);
+     ossz_netto:=ossz_netto+(o_szNetto/1000)* spKitarolasi_dij.Value;
      TfrxMemoView(FindObject('frxkm')).Text:=FormatFloat('0.#',o_km)+' km';
      TfrxMemoView(FindObject('frxnetto5')).Text:=FormatFloat('0.000',(o_Netto/1000))+' to x';
-     TfrxMemoView(FindObject('frxszall_to')).Text:=FormatFloat('###,###,##0,- Ft/to', szallitasi_dij);
-     TfrxMemoView(FindObject('frxszall_ar')).Text:=FormatFloat('###,###,##0,- Ft',o_km*(o_Netto/1000)* szallitasi_dij);
-     ossz_netto:=ossz_netto+o_km*(o_Netto/1000)* szallitasi_dij;
+     TfrxMemoView(FindObject('frxszall_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spSzallitasi_dij.Value);
+     TfrxMemoView(FindObject('frxszall_ar')).Text:=FormatFloat('###,###,##0,- Ft',o_km*(o_Netto/1000)* spSzallitasi_dij.Value);
+     ossz_netto:=ossz_netto+o_km*(o_Netto/1000)* spSzallitasi_dij.Value;
      TfrxMemoView(FindObject('frxosszesen')).Text:=FormatFloat('###,###,##0,- Ft', ossz_netto);
      fizetendo:=ossz_netto*(1+(27/100));
      afa_ossz:=Round(fizetendo)-Round(ossz_netto);
@@ -621,6 +636,13 @@ begin
  termenyszaritasroll.Visible:=false;
  TarolokT.close;
  TarolokT.open;
+ spTisztitasi_dij.Value:=tisztitasi_dij;
+ spSzaritasi_dij.Value:=szaritasi_dij;
+ spTarolasi_dij.Value:=tarolasi_dij;
+ spBetarolasi_dij.Value:=be_tarolasi_dij;
+ spKitarolasi_dij.Value:=ki_tarolasi_dij;
+ spSzallitasi_dij.Value:=szallitasi_dij;
+ edmegjegy.Clear;
  szures;
 end;
 
@@ -861,6 +883,7 @@ begin
     if cbxrendsz.ItemIndex<>0 then SQL.Add(' and rendszam='+#39+cbxrendsz.Text+#39);
     if not chkstorno.Checked then  SQL.Add(' and storno=""');
     if taroloklookup.KeyValue<>'!' then SQL.Add(' and tarolo_id='+#39+taroloklookup.KeyValue+#39);
+    if edmegjegy.Text<>'' then SQL.Add('AND UPPER(megjegyzes)LIKE UPPER('+#39+'%'+edmegjegy.Text+'%'+#39+')');
     Open;
     if IsEmpty then Exit;
     DisableControls;

@@ -2,8 +2,8 @@ object MjegyekF: TMjegyekF
   Left = 0
   Top = 0
   Caption = 'M'#233'rlegjegyek list'#225'ja'
-  ClientHeight = 517
-  ClientWidth = 1020
+  ClientHeight = 581
+  ClientWidth = 1284
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,10 +19,11 @@ object MjegyekF: TMjegyekF
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1020
+    Width = 1284
     Height = 137
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 1020
     object Label1: TLabel
       Left = 152
       Top = 8
@@ -52,15 +53,15 @@ object MjegyekF: TMjegyekF
       Caption = 'Partner:'
     end
     object Label7: TLabel
-      Left = 917
-      Top = 48
+      Left = 1174
+      Top = 47
       Width = 30
       Height = 13
       Caption = 'Ir'#225'ny:'
     end
     object Label8: TLabel
-      Left = 918
-      Top = 8
+      Left = 1175
+      Top = 7
       Width = 64
       Height = 13
       Caption = 'Rendsz'#225'mok:'
@@ -80,11 +81,18 @@ object MjegyekF: TMjegyekF
       Caption = 'Partner 2:'
     end
     object Label27: TLabel
-      Left = 918
-      Top = 96
+      Left = 1175
+      Top = 95
       Width = 34
       Height = 13
       Caption = 'T'#225'rol'#243':'
+    end
+    object Label16: TLabel
+      Left = 872
+      Top = 96
+      Width = 140
+      Height = 13
+      Caption = 'Megjegyz'#233's r'#233'szletre sz'#369'r'#233's:'
     end
     object piKezdoDatum: TDateTimePicker
       Left = 152
@@ -174,8 +182,8 @@ object MjegyekF: TMjegyekF
       OnChange = cbxrendszChange
     end
     object cbxirany: TComboBox
-      Left = 916
-      Top = 62
+      Left = 1173
+      Top = 61
       Width = 97
       Height = 22
       Style = csOwnerDrawFixed
@@ -189,8 +197,8 @@ object MjegyekF: TMjegyekF
         'Kisz'#225'll'#237't'#225's')
     end
     object cbxrendsz: TComboBox
-      Left = 917
-      Top = 24
+      Left = 1174
+      Top = 23
       Width = 96
       Height = 21
       TabOrder = 9
@@ -229,8 +237,8 @@ object MjegyekF: TMjegyekF
       OnClick = btnmodositasClick
     end
     object taroloklookup: TJvDBLookupCombo
-      Left = 917
-      Top = 110
+      Left = 1174
+      Top = 109
       Width = 96
       Height = 21
       DisplayEmpty = '**Nincs sz'#369'rve**'
@@ -241,14 +249,24 @@ object MjegyekF: TMjegyekF
       TabOrder = 13
       OnChange = cbxrendszChange
     end
+    object edmegjegy: TEdit
+      Left = 872
+      Top = 110
+      Width = 296
+      Height = 21
+      TabOrder = 14
+      OnChange = cbxrendszChange
+    end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 476
-    Width = 1020
+    Top = 540
+    Width = 1284
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 476
+    ExplicitWidth = 1020
     object Label4: TLabel
       Left = 24
       Top = 8
@@ -314,8 +332,8 @@ object MjegyekF: TMjegyekF
   object mlistaGrid: TJvDBUltimGrid
     Left = 0
     Top = 137
-    Width = 1020
-    Height = 169
+    Width = 1284
+    Height = 191
     Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
     Align = alClient
     DataSource = mjegyekQDs
@@ -577,36 +595,79 @@ object MjegyekF: TMjegyekF
   end
   object termenyszaritasroll: TJvRollOut
     Left = 0
-    Top = 306
-    Width = 1020
-    Height = 170
+    Top = 328
+    Width = 1284
+    Height = 212
     Align = alBottom
     Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
     TabOrder = 4
+    ExplicitWidth = 1020
     FAWidth = 145
-    FAHeight = 170
+    FAHeight = 212
     FCWidth = 22
     FCHeight = 22
     object Panel3: TPanel
-      Left = 834
+      Left = 1000
       Top = 21
-      Width = 185
-      Height = 148
+      Width = 283
+      Height = 190
       Align = alRight
       TabOrder = 0
+      object Label10: TLabel
+        Left = 24
+        Top = 3
+        Width = 59
+        Height = 13
+        Caption = 'Tiszt'#237't'#225'si d'#237'j:'
+      end
+      object Label11: TLabel
+        Left = 152
+        Top = 3
+        Width = 58
+        Height = 13
+        Caption = 'Sz'#225'r'#237't'#225'si d'#237'j:'
+      end
+      object Label12: TLabel
+        Left = 24
+        Top = 40
+        Width = 55
+        Height = 13
+        Caption = 'T'#225'rol'#225'si d'#237'j:'
+      end
+      object Label13: TLabel
+        Left = 152
+        Top = 40
+        Width = 65
+        Height = 13
+        Caption = 'Bet'#225'rol'#225'si d'#237'j:'
+      end
+      object Label14: TLabel
+        Left = 152
+        Top = 80
+        Width = 58
+        Height = 13
+        Caption = 'Sz'#225'll'#237't'#225'si d'#237'j:'
+      end
+      object Label15: TLabel
+        Left = 24
+        Top = 82
+        Width = 61
+        Height = 13
+        Caption = 'Kit'#225'rol'#225'si d'#237'j:'
+      end
       object Button1: TButton
-        Left = 48
-        Top = 24
-        Width = 97
-        Height = 41
+        Left = 14
+        Top = 134
+        Width = 147
+        Height = 25
         Caption = 'Elsz'#225'mol'#225's k'#233'sz'#237't'#233'se'
         TabOrder = 0
         WordWrap = True
         OnClick = Button1Click
       end
       object Button2: TButton
-        Left = 48
-        Top = 80
+        Left = 174
+        Top = 134
         Width = 97
         Height = 25
         Caption = 'M'#233'gsem'
@@ -614,20 +675,68 @@ object MjegyekF: TMjegyekF
         OnClick = Button2Click
       end
       object Button6: TButton
-        Left = 6
-        Top = 126
+        Left = 4
+        Top = 166
         Width = 179
         Height = 17
         Caption = 'M'#233'rlegjegy t'#246'rl'#233'se az elsz'#225'mol'#225'sb'#243'l'
         TabOrder = 2
         OnClick = Button6Click
       end
+      object spTisztitasi_dij: TJvSpinEdit
+        Left = 24
+        Top = 16
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 3
+      end
+      object spSzaritasi_dij: TJvSpinEdit
+        Left = 152
+        Top = 16
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 4
+      end
+      object spTarolasi_dij: TJvSpinEdit
+        Left = 24
+        Top = 56
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 5
+      end
+      object spBetarolasi_dij: TJvSpinEdit
+        Left = 152
+        Top = 53
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 6
+      end
+      object spKitarolasi_dij: TJvSpinEdit
+        Left = 24
+        Top = 93
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 7
+      end
+      object spSzallitasi_dij: TJvSpinEdit
+        Left = 152
+        Top = 93
+        Width = 97
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 8
+      end
     end
     object JvDBUltimGrid1: TJvDBUltimGrid
       Left = 1
       Top = 21
-      Width = 833
-      Height = 148
+      Width = 999
+      Height = 190
       Align = alClient
       DataSource = memszamolDs
       TabOrder = 1
@@ -738,35 +847,47 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'nedvlevon'
           ReadOnly = True
+          Title.Caption = 'Nedv.levon.'
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tortszaz'
           ReadOnly = True
+          Title.Caption = 'T'#246'rt.%'
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tortlevon'
           ReadOnly = True
+          Title.Caption = 'T'#246'rt.levon.'
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tavdat'
           ReadOnly = True
+          Title.Caption = 'D'#225'tum'
           Visible = True
         end>
     end
-    object Button5: TButton
-      Left = 1
-      Top = 147
-      Width = 75
-      Height = 17
-      Caption = 'Button5'
-      TabOrder = 2
-    end
+  end
+  object JvSpinEdit5: TJvSpinEdit
+    Left = 32
+    Top = 61
+    Width = 97
+    Height = 21
+    ValueType = vtFloat
+    TabOrder = 5
+  end
+  object JvSpinEdit6: TJvSpinEdit
+    Left = 160
+    Top = 61
+    Width = 97
+    Height = 21
+    ValueType = vtFloat
+    TabOrder = 6
   end
   object mjegyekQ: TFDQuery
     Connection = AF.Kapcs
@@ -946,12 +1067,12 @@ object MjegyekF: TMjegyekF
     Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * FROM tarolok ORDER BY nev ASC')
-    Left = 822
+    Left = 1174
     Top = 41
   end
   object TarolokDs: TDataSource
     DataSet = TarolokT
-    Left = 880
+    Left = 1232
     Top = 40
   end
   object memszamol: TJvMemoryData
