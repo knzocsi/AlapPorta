@@ -762,12 +762,13 @@ begin
  if (not rendszamleker)and(not lejatszas) then
  begin
    pnlBaloldal.Width:=Round(fof.Width*(0.7));
-   pnlKiskep.Visible:=false;
+   if not lejatszas then  pnlKiskep.Visible:=false;
  end
  else
  begin
    pnlBaloldal.Width:=Round(FoF.Width*(0.3));
    campagc.ActivePageIndex:=0;
+   if not lejatszas then  pnlKiskep.Visible:=false;
  end;
 
  //nagykamera:=True;
