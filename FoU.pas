@@ -761,7 +761,7 @@ var
 begin
  if (not rendszamleker)and(not lejatszas) then
  begin
-   pnlBaloldal.Width:=Round(fof.Width*(0.8));
+   pnlBaloldal.Width:=Round(fof.Width*(0.9));
    if not lejatszas then  pnlKiskep.Visible:=false;
  end
  else
