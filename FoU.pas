@@ -759,8 +759,16 @@ var
   i: Integer;
   sL: TStringList;
 begin
- if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
- else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+ if (not rendszamleker)and(not lejatszas) then
+ begin
+   pnlBaloldal.Width:=Round(fof.Width*(0.7));
+   pnlKiskep.Visible:=false;
+ end
+ else
+ begin
+   pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+   campagc.ActivePageIndex:=0;
+ end;
 
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo

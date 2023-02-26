@@ -23,7 +23,6 @@ object MjegyekF: TMjegyekF
     Height = 137
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 1020
     object Label1: TLabel
       Left = 152
       Top = 8
@@ -141,14 +140,14 @@ object MjegyekF: TMjegyekF
       TabOrder = 4
       OnClick = btnListanyomtatasClick
     end
-    object Button3: TButton
+    object btnStorno: TButton
       Left = 728
       Top = 21
       Width = 75
       Height = 25
       Caption = 'Storno'
       TabOrder = 5
-      OnClick = Button3Click
+      OnClick = btnStornoClick
     end
     object termeklookup: TJvDBLookupCombo
       Left = 16
@@ -227,14 +226,14 @@ object MjegyekF: TMjegyekF
       TabOrder = 11
       OnClick = piKezdoDatumChange
     end
-    object btnmodositas: TButton
+    object btnModositas: TButton
       Left = 647
       Top = 21
       Width = 75
       Height = 25
       Caption = 'M'#243'dos'#237't'#225's'
       TabOrder = 12
-      OnClick = btnmodositasClick
+      OnClick = btnModositasClick
     end
     object taroloklookup: TJvDBLookupCombo
       Left = 1174
@@ -265,8 +264,6 @@ object MjegyekF: TMjegyekF
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 476
-    ExplicitWidth = 1020
     object Label4: TLabel
       Left = 24
       Top = 8
@@ -601,7 +598,6 @@ object MjegyekF: TMjegyekF
     Align = alBottom
     Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
     TabOrder = 4
-    ExplicitWidth = 1020
     FAWidth = 145
     FAHeight = 212
     FCWidth = 22
@@ -872,22 +868,6 @@ object MjegyekF: TMjegyekF
           Visible = True
         end>
     end
-  end
-  object JvSpinEdit5: TJvSpinEdit
-    Left = 32
-    Top = 61
-    Width = 97
-    Height = 21
-    ValueType = vtFloat
-    TabOrder = 5
-  end
-  object JvSpinEdit6: TJvSpinEdit
-    Left = 160
-    Top = 61
-    Width = 97
-    Height = 21
-    ValueType = vtFloat
-    TabOrder = 6
   end
   object mjegyekQ: TFDQuery
     Connection = AF.Kapcs

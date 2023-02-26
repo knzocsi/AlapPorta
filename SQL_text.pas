@@ -5,7 +5,7 @@ interface
    uses AU;
 
     const
-      maxSQL=15;
+      maxSQL=16;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -854,6 +854,9 @@ interface
     ,
     //szárított tört szemek tömege
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
+    ,
+    //szárított tört szemek tömege a módosított mérlegjegyek táblába
+    'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
     );
 
 

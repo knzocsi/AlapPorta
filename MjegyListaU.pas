@@ -26,7 +26,7 @@ type
     mlistaGrid: TJvDBUltimGrid;
     mjegyekQ: TFDQuery;
     mjegyekQDs: TDataSource;
-    Button3: TButton;
+    btnStorno: TButton;
     Label3: TLabel;
     termeklookup: TJvDBLookupCombo;
     Label5: TLabel;
@@ -74,7 +74,7 @@ type
     tulajTAjto: TWideStringField;
     tulajTcjsz: TWideStringField;
     tulajDs: TDataSource;
-    btnmodositas: TButton;
+    btnModositas: TButton;
     btnelozmenyek: TButton;
     TarolokT: TFDQuery;
     TarolokDs: TDataSource;
@@ -111,8 +111,6 @@ type
     spSzaritasi_dij: TJvSpinEdit;
     spTarolasi_dij: TJvSpinEdit;
     spBetarolasi_dij: TJvSpinEdit;
-    JvSpinEdit5: TJvSpinEdit;
-    JvSpinEdit6: TJvSpinEdit;
     spKitarolasi_dij: TJvSpinEdit;
     spSzallitasi_dij: TJvSpinEdit;
     Label10: TLabel;
@@ -128,7 +126,7 @@ type
     procedure btnUjranyomtatasClick(Sender: TObject);
     procedure piKezdoDatumChange(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    procedure btnStornoClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure cbxrendszChange(Sender: TObject);
     procedure rendszamok_feloltese;
@@ -136,7 +134,7 @@ type
     procedure piBefejezoDatumChange(Sender: TObject);
     procedure mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure btnmodositasClick(Sender: TObject);
+    procedure btnModositasClick(Sender: TObject);
     procedure btnelozmenyekClick(Sender: TObject);
     procedure mlistaGridDblClick(Sender: TObject);
     procedure btntermenyszaritasClick(Sender: TObject);
@@ -220,7 +218,7 @@ begin
   nyomtat:=false;
 end;
 
-procedure TMjegyekF.btnmodositasClick(Sender: TObject);
+procedure TMjegyekF.btnModositasClick(Sender: TObject);
 begin
 if not aF.van_joga('j9') then exit;
 if mjegyekQ.IsEmpty then exit;
@@ -360,7 +358,7 @@ termenyszaritasroll.collapsed:=true;
 termenyszaritasroll.Visible:=false;
 end;
 
-procedure TMjegyekF.Button3Click(Sender: TObject);
+procedure TMjegyekF.btnStornoClick(Sender: TObject);
 var p,psz:Integer;
 begin
 if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then

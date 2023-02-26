@@ -163,7 +163,11 @@ begin
               else if Merleg_tipus='Bila' then mtip:=8
                 else if Merleg_tipus='D400' then mtip:=9
                    else if Merleg_tipus='EntechSartorius' then mtip:=10
-                      else if Merleg_tipus='S120' then mtip:=11;
+                      else if Merleg_tipus='S120' then mtip:=11
+                         else if Merleg_tipus='CZNEWTON' then mtip:=12;     //BW is   és T-Scale is
+
+
+
 
   case mtip of
     1 : begin            //Dibal, R420
@@ -645,6 +649,63 @@ begin
             end;
           if ertek='-1' then ertek:='-0';
        end;
+
+     12:  begin// CZNEWTON   BW és T-Scale
+          bit:=17;
+          si:=0;
+          repeat
+            si:=si+1;
+            if ParamStr(1)='/CT4' then ShowMessage('2s:'+sadat);
+            adat:=sadat[si];
+
+            if (adat<>#10) then ertek:=ertek+adat
+            else
+            begin
+              //if ParamStr(1)='/CT1' then ShowMessage('2e:'+inttostr(Length(ertek)));
+              if (Aktiv) and (chkErtek_vj.Checked) then
+              begin
+                memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
+              end;
+              if (Length(ertek)=bit) and (ertek[1] in ['S','U']) then
+              begin
+                if ParamStr(1)='/CT1' then ShowMessage('3e:'+ertek);
+                //stabil_tomeg:=Pos('S',ertek)=1;
+                ertek:=ertek_tisztitas(ertek);
+                if (Aktiv) and (chkErtek_feld.Checked) then
+                begin
+                  memEredmeny.Text:='Érték feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
+                end;
+
+                mertek:='';
+
+                kilep:=true;
+              end
+              else
+              begin
+                ertek:='';
+                if ParamStr(1)='/CT1' then ShowMessage('2e:'+inttostr(Length(ertek)))
+              end;
+
+            end;
+          until (kilep) or (si=Length(sadat));
+
+
+         // portolvasás vége
+          if Not(kilep) then mertek:=ertek;
+
+          if kilep then
+            try
+              if ertek='' then ertek:='-1';
+              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
+              StrToFloat(ertek);
+            except
+              ertek:='-2';
+            end;
+          if ertek='-1' then ertek:='-3';
+
+        end;
+
+
   end;
 
   //Mérlegek vége
