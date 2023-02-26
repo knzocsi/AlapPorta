@@ -759,8 +759,17 @@ var
   i: Integer;
   sL: TStringList;
 begin
- if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
- else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+ if (not rendszamleker)and(not lejatszas) then
+ begin
+   pnlBaloldal.Width:=Round(fof.Width*(0.7));
+   if not lejatszas then  pnlKiskep.Visible:=false;
+ end
+ else
+ begin
+   pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+   campagc.ActivePageIndex:=0;
+   if not lejatszas then  pnlKiskep.Visible:=false;
+ end;
 
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo
@@ -1698,8 +1707,8 @@ begin
 
   lblIrany.caption:=meresirany;
   try
-    tomeg:=strtoint(mertertek);
-    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertek);
+    tomeg:=strtoint(mertertekek[1]);
+    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertekek[1]);
     {
     if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
     begin

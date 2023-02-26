@@ -195,6 +195,8 @@ type
     procedure torzs_import_csv;
     procedure import_log(S:string);
     function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant):Variant;
+    procedure fo_szazalek(brutto,tara,szemet_szazalek,akt_nedvesseg_szazalek,alap_nedvesseg_szazalek,
+                          tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
 
     { Public declarations }
   end;
@@ -206,7 +208,7 @@ var
   f_ide,utolso_sql,mentesido:Integer;
   jogmod,rendszamleker,nagykamera,mezgaz,kozponti_prg:Boolean;
   bit:integer;
-  mertertek,konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
+  konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
   sorompo_vezerles:boolean;
   nyugvovarakozas,Elso_lampa,Hatso_lampa,mintomeg:integer;
   Sorompo_nyit_cim_BE,Sorompo_Infra_Hiba_cim_BE,sorompo_infra_hibas_BE,Sorompo_Nyitas_Volt_Cim_BE:integer;
@@ -224,14 +226,19 @@ var
   Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
-  Infra_Figyeles,automata_torzsimport:boolean;
+  Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
   merlegjegy_modositas: Boolean;
   kijelzo_tipus,moxa_ip1,moxa_ip2:string;
   moxa_port:integer;
-
-
+  tisztitasi_dij,szaritasi_dij,tarolasi_dij,be_tarolasi_dij,
+  ki_tarolasi_dij,szallitasi_dij:Extended;
+  //szazalekhoz
+  szemet_tomeg, nedvesseg_szazalek,nedvesseg_vesztes_tomege,
+  nyers_tort_szemek_tomege,tisztitott_nyers_netto_tomege,
+  tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
+  szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -426,6 +433,93 @@ begin
     end;
   end;
   Forgalom_Timer.Enabled:=True;
+end;
+
+procedure TAF.fo_szazalek(brutto, tara, szemet_szazalek,akt_nedvesseg_szazalek,
+  alap_nedvesseg_szazalek, tort_szemek_szazalek, levonando_tomeg: Extended;
+  kukorica: Boolean);
+Var  alap_nedv,akt_nedv:Extended;
+begin
+ szemet_tomeg:=0;
+ nedvesseg_szazalek:=0;
+ nedvesseg_vesztes_tomege:=0;
+ nyers_tort_szemek_tomege:=0;
+ tisztitott_nyers_netto_tomege_tortel:=0;
+ tisztitott_nyers_netto_tomege:=0;
+ nyers_netto_tomege:=0;
+ szaritott_tort_szemek_tomege:=0;
+ szaritott_netto_tomege:=0;
+
+ nyers_netto_tomege:=brutto-tara;
+
+ if akt_nedvesseg_szazalek>alap_nedvesseg_szazalek then
+ begin
+  alap_nedv:=alap_nedvesseg_szazalek;
+  akt_nedv:=akt_nedvesseg_szazalek
+ end
+ else
+ begin
+  alap_nedv:=alap_nedvesseg_szazalek;
+  akt_nedv:=alap_nedvesseg_szazalek
+ end;
+ szemet_tomeg:=(nyers_netto_tomege*(szemet_szazalek/100.0));
+ nyers_tort_szemek_tomege:=(nyers_netto_tomege*(tort_szemek_szazalek/100.0));
+
+ tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;
+ tisztitott_nyers_netto_tomege:= nyers_netto_tomege-szemet_tomeg-nyers_tort_szemek_tomege;
+ szaritott_netto_tomege := tisztitott_nyers_netto_tomege;
+ if kukorica then
+  begin
+    //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)
+    szaritott_netto_tomege :=Round(tisztitott_nyers_netto_tomege*(1-akt_nedv/100)/(1-alap_nedv/100))-levonando_tomeg;
+    nedvesseg_vesztes_tomege:=(Round(tisztitott_nyers_netto_tomege-szaritott_netto_tomege));
+    szaritott_tort_szemek_tomege:= Round(nyers_tort_szemek_tomege*(1-akt_nedv/100)/(1-alap_nedv/100));
+    //Sznetto=nettó*(1-Tisztaság)*(1-Tisztaság-Nedvesség)/(1-Tisztaság-Alapnedvesség)
+    //Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
+    //nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
+  end
+  else
+  begin //MÉG ÁT KELL ÍRNI
+   // Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
+   // nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
+  end;
+ // nyers_netto_tomege:
+  { tisz := Sptisztasag.Value;
+  tortszem_szazalek:= Sptort.Value;
+  if sp_tomeg_levon.Text='' then sp_tomeg_levon.Value:=0;
+
+  nedvesseg := IntToStr(round((br-tr)*((ned-aned)/100.0)));
+  tisztasag := IntToStr(round((br-tr)*((tisz)/100.0)));
+  //tort szemek tomege
+  tortszem_tomeg:=(round((br-tr)*(tortszem_szazalek/100.0)));
+  ttom:=tortszem_tomeg;//kell a mentésnél!
+  //Öcsi
+  tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tortszem_szazalek)/100.0)))));
+
+  sze:=1-((tisz+tortszem_szazalek+ned)/100);
+  szu:=1-((tisz+tortszem_szazalek+aned)/100);
+  levsz:=sze/szu;
+  if chkkuk.Checked then
+  begin
+    //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)
+     spSznetto.Value :=Round(tisztitott_tomeg*(1-ned/100)/(1-aned/100))-sp_tomeg_levon.Value;
+     nedvelvon:=FloatToStr(Round(tisztitott_tomeg-spSznetto.Value));
+
+    //Sznetto=nettó*(1-Tisztaság)*(1-Tisztaság-Nedvesség)/(1-Tisztaság-Alapnedvesség)
+    //Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
+    //nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
+  end
+  else
+  begin
+    Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
+    nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
+  end;
+
+  if nedvesseg='' then nedvesseg:='0';
+  if nedvelvon='' then nedvelvon:='0';
+  if tisztasag='' then tisztasag:='0';}
+
+
 end;
 
 procedure TAF.frissites;
@@ -744,10 +838,17 @@ begin
   //moxa_port:=4001;
   moxa_port:=cfg_kezel('Moxa ETH-RS232 átalakítók portja','ALAP','Moxa_port','Integer',4001);
 
+  {tisztitasi_dij,szaritasi_dij,tarolasi_dij,be_tarolasi_dij,
+  ki_tarolasi_dij,szallitasi_dij:Extended;}
+  tisztitasi_dij:=cfg_kezel('','DÍJAK','Tisztítási díj','Float',0);
+  szaritasi_dij:=cfg_kezel('','DÍJAK','Szárítási díj','Float',0);
+  tarolasi_dij:=cfg_kezel('','DÍJAK','Tárolási díj','Float',0);
+  be_tarolasi_dij:=cfg_kezel('','DÍJAK','Betárolási díj','Float',0);
+  ki_tarolasi_dij:=cfg_kezel('','DÍJAK','Kitárolási díj','Float',0);
+  szallitasi_dij:=cfg_kezel('','DÍJAK','Szállítási díj','Float',0);
+
+  termenyszaritas_elszamolasa:=cfg_kezel('Terményszárítás elszámolása több mérlegjegy alapján is','ALAP','Terményszárítás elszámolása','Boolean',false);
   // A mérleges rész átkerül t az PortU-ba
-
-
-
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -1108,6 +1209,7 @@ begin
         'S':Result:=CfgT.FieldByName('ertek') .AsString;
         'I':Result:=CfgT.FieldByName('ertek') .AsInteger;
         'B':Result:=CfgT.FieldByName('ertek') .AsBoolean;
+        'F':Result:=CfgT.FieldByName('ertek') .AsFloat;
        end;
      end
     else

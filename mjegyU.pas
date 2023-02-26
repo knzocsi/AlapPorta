@@ -723,7 +723,7 @@ end;
 procedure TMjegyF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi:String;
     ujid,p,psz:integer;
-    keszmenny:Extended;
+    keszmenny,tort_keszmenny:Extended;
  procedure elokeszit;
    begin
      AF.merlegjegy_tipus_betoltese;//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
@@ -794,7 +794,7 @@ var sorsz,pcime,egyedi:String;
          begin
           TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
           TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
-          TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
+          TfrxMemoView(FindObject('memnedvlevon')).Text:=IntToStr(Round(nedvesseg_vesztes_tomege))+' kg';
           //ezek nem kellenek
           // TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
           TfrxMemoView(FindObject('memnedveszt')).Text:='';
@@ -814,7 +814,7 @@ var sorsz,pcime,egyedi:String;
          if sptisztasag.Visible then //szemet
           begin
            TfrxMemoView(FindObject('memtisztasag')).Text:=sptisztasag.Value.ToString+' %';
-           TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
+           TfrxMemoView(FindObject('memszemetlevon')).Text:=IntToStr(Round(szemet_tomeg))+' kg';
           end
          else
           begin
@@ -826,7 +826,7 @@ var sorsz,pcime,egyedi:String;
          if sptort.Visible then //tort szemek
           begin
            TfrxMemoView(FindObject('memtort')).Text:=sptort.Value.ToString+' %';
-           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
+           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(nyers_tort_szemek_tomege))+' kg';
           end
           else
           begin
@@ -945,7 +945,14 @@ begin
     end;
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
 
+ try
   szazalek;
+ except
+  exit;
+ end;
+ //try
+ // szazalek;
+ //finally
   if Sender=btnNyomtatas then
   begin
     NezetF.nyomtatva:=false;
@@ -973,7 +980,8 @@ begin
       SQL.Add('egysegtomeg,kerekites,kukorica,buzaminoseg,mennyiseg,tarolasi_dij, ');
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
-      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,ewc,tul_cjsz)  ');
+      SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,');
+      SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek)  ');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -983,7 +991,8 @@ begin
       SQL.Add(':egysegtomeg,:kerekites,:kukorica,:buzaminoseg,:mennyiseg,:tarolasi_dij, ');
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
-      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,:levon_tomeg,:ewc,:tul_cjsz)  ');
+      SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,');
+      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek)  ');
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -1051,12 +1060,28 @@ begin
       ParamByName('buzaminoseg').AsString:=cbxbuzaminoseg.Text;
       //mennyiség kiszámitása még kell
       keszmenny:=0;
-      if spEgysegtomeg.Value=1 then keszmenny:=spsznetto.Value
+      tort_keszmenny:=0;
+      if spEgysegtomeg.Value=1 then
+       begin
+        keszmenny:=spsznetto.Value;
+        tort_keszmenny:=szaritott_tort_szemek_tomege;
+       end
       else
-      if chkkerekites.Checked then keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value)
-      else keszmenny:=spszNetto.Value/spEgysegtomeg.Value;
+       begin
+        if chkkerekites.Checked then
+         begin
+          keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value);
+          tort_keszmenny:=Round(szaritott_tort_szemek_tomege/spEgysegtomeg.Value);
+         end
+        else
+         begin
+          keszmenny:=spszNetto.Value/spEgysegtomeg.Value;
+          tort_keszmenny:=szaritott_tort_szemek_tomege/spEgysegtomeg.Value;
+         end;
+       end;
 
       ParamByName('mennyiseg').AsFloat:=keszmenny;
+      ParamByName('szaraz_tort_szemek').AsFloat:=tort_keszmenny;
       ParamByName('tarolasi_dij').value:=0;
       ParamByName('szaritasi_dij').value:=0;
       ParamByName('tisztitasi_dij').value:=0;
@@ -1088,13 +1113,13 @@ begin
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,0,keszmenny);
             //tört szemek készletezése
             if sptort.Value>0 then
-            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,1,ttom);
+            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,1,tort_keszmenny);
            end;
        'K':begin
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,0,-1* keszmenny);
             //tört szemek készletezése
             if sptort.Value>0 then
-            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,1,-1*ttom);
+            aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,1,-1*tort_keszmenny);
            end;
       end;
       sorsz:=mentett_sorsz_lekerese(egyedi);
@@ -1141,6 +1166,7 @@ begin
      masol(0,0,true);
      rendszam_combok;
      uresre;
+//  end;
 end;
 
 
@@ -1203,7 +1229,15 @@ end;
 procedure TMjegyF.szazalek;
 var tisztitott_tomeg,sze,szu,levsz,tortszem_szazalek,tortszem_tomeg:Extended;
 begin
-  nedvesseg:='0';
+ try
+  AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
+                 SpAlapnedv.Value, Sptort.Value,sp_tomeg_levon.Value,chkkuk.Checked);
+ finally
+  spSznetto.Value:=Round(szaritott_netto_tomege);
+ end;
+
+  exit;
+ { nedvesseg:='0';
   tisztasag:='0';
   nedvelvon:='0';
 
@@ -1254,7 +1288,7 @@ begin
 
   if nedvesseg='' then nedvesseg:='0';
   if nedvelvon='' then nedvelvon:='0';
-  if tisztasag='' then tisztasag:='0';
+  if tisztasag='' then tisztasag:='0';  }
 end;
 
 procedure TMjegyF.termeklookupCloseUp(Sender: TObject);

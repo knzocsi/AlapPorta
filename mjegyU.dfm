@@ -606,6 +606,8 @@ object MjegyF: TMjegyF
         Height = 21
         ValueType = vtFloat
         TabOrder = 9
+        OnChange = spnedvChange
+        OnExit = spnedvExit
       end
       object spegysegtomeg: TJvSpinEdit
         Left = 11

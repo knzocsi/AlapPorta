@@ -256,7 +256,7 @@ end;
 procedure TMermodF.btnMentesClick(Sender: TObject);
 var sorsz,pcime,egyedi,paramok:String;
     ujid,p,psz,j:integer;
-    keszmenny:Extended;
+    keszmenny,tort_keszmenny:Extended;
 
 procedure elokeszit;
    begin
@@ -509,15 +509,28 @@ begin
     elokeszit;
     if not NezetF.nyomtatva then  exit;
   end;
-  if spegysegtomeg.Value=0 then keszmenny:=spsznetto.Value
+  if spegysegtomeg.Value=0 then
+  begin
+    keszmenny:=spsznetto.Value;
+    tort_keszmenny:=szaritott_tort_szemek_tomege;
+  end
   else
-    if chkkerekites.Checked=True then keszmenny:=Round(spszNetto.Value/spegysegtomeg.Value)
-    else keszmenny:=spszNetto.Value/spegysegtomeg.Value;
+    if chkkerekites.Checked=True then
+    begin
+      keszmenny:=Round(spszNetto.Value/spegysegtomeg.Value);
+      tort_keszmenny:=Round(szaritott_tort_szemek_tomege/spEgysegtomeg.Value);
+    end
+    else
+    begin
+      keszmenny:=spszNetto.Value/spegysegtomeg.Value;
+      tort_keszmenny:=(szaritott_tort_szemek_tomege/spEgysegtomeg.Value);
+    end;
 
   egyedi:=TempQ.FieldByName('eazon').AsString;//nem kell
   with TempQ do //paraméterek
     for j := 1 to Fields.Count-3 do paramok:=paramok+fields[j].FieldName+'=:'+fields[j].FieldName+',';
-  paramok:=paramok+TempQ.fields[j].FieldName+'=:'+TempQ.fields[j].FieldName+','+TempQ.fields[j+1].FieldName+'=:'+TempQ.fields[j+1].FieldName;
+   paramok:=paramok+TempQ.fields[j].FieldName+'=:'+TempQ.fields[j].FieldName+','+TempQ.fields[j+1].FieldName+'=:'+TempQ.fields[j+1].FieldName;
+  //ShowMessage(paramok);
   with aF.Q2 do
     begin
       Close;
@@ -592,10 +605,25 @@ begin
       ParamByName('buzaminoseg').AsString:=cbxbuzaminoseg.Text;
       //mennyiség kiszámitása még kell
       keszmenny:=0;
-      if spEgysegtomeg.Value=1 then keszmenny:=spsznetto.Value
+      tort_keszmenny:=0;
+      if spEgysegtomeg.Value=1 then
+       begin
+        keszmenny:=spsznetto.Value;
+        tort_keszmenny:=szaritott_tort_szemek_tomege;
+       end
       else
-      if chkkerekites.Checked then keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value)
-      else keszmenny:=spszNetto.Value/spEgysegtomeg.Value;
+       begin
+        if chkkerekites.Checked then
+         begin
+          keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value);
+          tort_keszmenny:=Round(szaritott_tort_szemek_tomege/spEgysegtomeg.Value);
+         end
+        else
+         begin
+          keszmenny:=spszNetto.Value/spEgysegtomeg.Value;
+          tort_keszmenny:=szaritott_tort_szemek_tomege/spEgysegtomeg.Value;
+         end;
+       end;
 
       ParamByName('mennyiseg').AsFloat:=keszmenny;
       ParamByName('tarolasi_dij').value:=0;
@@ -622,6 +650,8 @@ begin
       ParamByName('levon_tomeg').AsInteger:=sp_tomeg_levon.Value;
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
+      ParamByName('szaraz_tort_szemek').AsInteger:=Round(tort_keszmenny);
+
      // SQL.SaveToFile(ExtractFileDir(ExtractFilePath(application.exename))+'\sqltext.txt');
       ExecSQL;
       //keszletezes
