@@ -344,6 +344,7 @@ object FoF: TFoF
         Height = 25
         Caption = 'Kamera k'#233'p'
         TabOrder = 1
+        Visible = False
         OnClick = btnKamerakepClick
       end
     end

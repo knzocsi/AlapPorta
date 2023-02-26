@@ -47,13 +47,16 @@ uses
   szoftver_alapU in 'szoftver_alapU.pas' {szoftver_alapF},
   AlapbemodU in 'AlapbemodU.pas' {AlapbemodF},
   MermodU in 'MermodU.pas' {MermodF},
-  MermodlistU in 'MermodlistU.pas' {MermodlistF};
+  MermodlistU in 'MermodlistU.pas' {MermodlistF},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Aqua Light Slate');
   Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
