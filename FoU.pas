@@ -164,6 +164,7 @@ type
     procedure imgFelsokepClick(Sender: TObject);
     procedure Antheratrzsimport1Click(Sender: TObject);
     procedure Szoftverbelltsok1Click(Sender: TObject);
+    procedure kepernyo_kezel;
   private
     { Private declarations }
     procedure socketconnect;
@@ -627,8 +628,8 @@ begin
   piBefejezoDatum.Date := date;
   StatusBar1.panels[0].text := verzio;
   StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
-  WindowState:=wsMaximized;
-  kepatmeretez;
+  //WindowState:=wsMaximized;
+   if ( rendszamleker)or (lejatszas) then   kepatmeretez;
  // vlc_betolt;
  // showmessage(teszt.ToString);
   szures;
@@ -759,17 +760,7 @@ var
   i: Integer;
   sL: TStringList;
 begin
- if (not rendszamleker)and(not lejatszas) then
- begin
-   pnlBaloldal.Width:=Round(fof.Width*(0.9));
-   if not lejatszas then  pnlKiskep.Visible:=false;
- end
- else
- begin
-   pnlBaloldal.Width:=Round(FoF.Width*(0.3));
-   campagc.ActivePageIndex:=0;
-   if not lejatszas then  pnlKiskep.Visible:=false;
- end;
+  kepernyo_kezel;
 
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo
@@ -803,8 +794,9 @@ end;
 
 procedure TFoF.FormResize(Sender: TObject);
 begin
- if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
- else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+  //if (not rendszamleker)and(not lejatszas) then pnlBaloldal.Width:=Round(fof.Width*(0.7))
+  //else  pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+  kepernyo_kezel;
   kepatmeretez;
 end;
 
@@ -931,6 +923,22 @@ begin
   imgAlsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev2').AsString)
   else imgAlsokep.Picture:=nil;
   kepatmeretez;
+end;
+
+procedure TFoF.kepernyo_kezel;
+begin
+  if (not rendszamleker)and(not lejatszas) then
+ begin
+   pnlJobboldal.Visible:=false;
+   pnlBaloldal.Align:=alClient;//Width:=Round(fof.Width*(0.9));
+   if not lejatszas then  pnlKiskep.Visible:=false;
+ end
+ else
+ begin
+   pnlBaloldal.Width:=Round(FoF.Width*(0.3));
+   campagc.ActivePageIndex:=0;
+   if not lejatszas then  pnlKiskep.Visible:=false;
+ end;
 end;
 
 procedure TFoF.Keress1Click(Sender: TObject);
@@ -1317,9 +1325,12 @@ end;
 
 procedure TFoF.pnlFelsokepResize(Sender: TObject);
 begin
-  pnlFelsokep.OnResize := nil;
-  pnlAlsokep.Height := Round((pnlJobboldal.Height - pnlJobbAlso.Height) / 2);
-  pnlFelsokep.OnResize := pnlFelsokepResize;
+  if ( rendszamleker)or (lejatszas) then
+  begin
+    pnlFelsokep.OnResize := nil;
+    pnlAlsokep.Height := Round((pnlJobboldal.Height - pnlJobbAlso.Height) / 2);
+    pnlFelsokep.OnResize := pnlFelsokepResize;
+  end;
 end;
 
 procedure TFoF.pnlJobbAlsoClick(Sender: TObject);
