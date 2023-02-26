@@ -568,9 +568,7 @@ begin
     with MainMenu1 do
     for h := 0 to Items.Count-1 do
     if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
-    alapbe_m.visible:=felhnev='Programozó';
-    teszt_m.visible:=felhnev='Programozó';
-    memLog.Visible:=felhnev='Programozó';
+    kepernyo_kezel;
   end
 end;
 
@@ -618,9 +616,6 @@ begin
 
   end;
   aF.jogok_beolvasasa;
-  alapbe_m.visible:=felhnev='Programozó';
-  teszt_m.visible:=felhnev='Programozó';
-  memLog.Visible:=felhnev='Programozó';
   tomeg_levon_szovegek_m.visible:=tomeg_levon;
   Antheratrzsimport1.Visible:= automata_torzsimport;
   if rendszamleker then  socketconnect;
@@ -929,8 +924,18 @@ procedure TFoF.kepernyo_kezel;
 begin
   if (not rendszamleker)and(not lejatszas) then
  begin
-   pnlJobboldal.Visible:=false;
-   pnlBaloldal.Align:=alClient;//Width:=Round(fof.Width*(0.9));
+   if felhnev='Programozó' then
+   begin
+     pnlBaloldal.Align:=alLeft;
+     pnlBaloldal.Width:=Round(fof.Width*(0.8));
+     pnlJobboldal.Visible:=True;
+
+   end
+   else
+   begin
+     pnlJobboldal.Visible:=false;
+     pnlBaloldal.Align:=alClient;//Width:=Round(fof.Width*(0.9));
+   end;
    if not lejatszas then  pnlKiskep.Visible:=false;
  end
  else
@@ -939,6 +944,9 @@ begin
    campagc.ActivePageIndex:=0;
    if not lejatszas then  pnlKiskep.Visible:=false;
  end;
+ alapbe_m.visible:=felhnev='Programozó';
+ teszt_m.visible:=felhnev='Programozó';
+ memLog.Visible:=felhnev='Programozó';
 end;
 
 procedure TFoF.Keress1Click(Sender: TObject);
