@@ -628,7 +628,7 @@ begin
   piBefejezoDatum.Date := date;
   StatusBar1.panels[0].text := verzio;
   StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
-  //WindowState:=wsMaximized;
+  WindowState:=wsMaximized;
    if ( rendszamleker)or (lejatszas) then   kepatmeretez;
  // vlc_betolt;
  // showmessage(teszt.ToString);
