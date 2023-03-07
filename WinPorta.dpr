@@ -49,7 +49,8 @@ uses
   MermodU in 'MermodU.pas' {MermodF},
   MermodlistU in 'MermodlistU.pas' {MermodlistF},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF};
 
 {$R *.res}
 
@@ -95,5 +96,6 @@ begin
   Application.CreateForm(TAlapbemodF, AlapbemodF);
   Application.CreateForm(TMermodF, MermodF);
   Application.CreateForm(TMermodlistF, MermodlistF);
+  Application.CreateForm(TMeres_MerlegjegyenF, Meres_MerlegjegyenF);
   Application.Run;
 end.

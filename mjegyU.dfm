@@ -14,6 +14,7 @@ object MjegyF: TMjegyF
   Position = poMainFormCenter
   OnActivate = FormActivate
   OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
   PixelsPerInch = 96
   TextHeight = 13
   object pnlAlso: TPanel
@@ -220,6 +221,48 @@ object MjegyF: TMjegyF
       Width = 76
       Height = 13
       Caption = 'T'#246'meg levon'#225's:'
+    end
+    object lblTomeg1: TLabel
+      Left = 155
+      Top = 65
+      Width = 12
+      Height = 23
+      Alignment = taRightJustify
+      Caption = '0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 173
+      Top = 73
+      Width = 11
+      Height = 13
+      Caption = 'kg'
+    end
+    object lblTomeg2: TLabel
+      Left = 411
+      Top = 65
+      Width = 12
+      Height = 23
+      Alignment = taRightJustify
+      Caption = '0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label15: TLabel
+      Left = 429
+      Top = 73
+      Width = 11
+      Height = 13
+      Caption = 'kg'
     end
     object cbxirany: TComboBox
       Left = 60
@@ -804,6 +847,15 @@ object MjegyF: TMjegyF
       Caption = 'Folytat'#225'sos ment'#233's'
       TabOrder = 34
       OnClick = btnMentesClick
+    end
+    object Button4: TButton
+      Left = 255
+      Top = 363
+      Width = 177
+      Height = 25
+      Caption = 'M'#233'r'#233's'
+      TabOrder = 35
+      OnClick = Button4Click
     end
   end
   object pnlFelso: TPanel

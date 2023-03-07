@@ -1,0 +1,9 @@
+{TODO -oKNZ : A mérés formon fel kell vinni a tomegeket az lblTomeg labelekre}
+{TODO -oKNZ : Felkell venni elsõ és második meres tomeget datumot idot és kezit}
+{TODO -oKNZ : Sorszám hívás}
+{TODO -oKNZ : Sorszám bekérés}
+{TODO -oKNZ : Mérés a mérlegjegy formon}
+{DONE -oKNZ : Kilépéskor ha nincs mentés, akkor kérdezzen rá}
+{DONE -oKNZ : Ha végleges mentés van, törölje a nyitbe táblából a mérést}
+{DONE -oKNZ : Kilépskor frissítse a NyitbeQ}
+{DONE -oKNZ : Mentéskor Ha folytatásos, akkor keressen rá a NyitbeQ eazon alapját a nyitbe táblában}

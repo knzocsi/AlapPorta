@@ -98,6 +98,7 @@ type
     pnlFelso_jobb: TPanel;
     sbtnUjmerlegjegy: TSpeedButton;
     dbgNyitbe: TDBGrid;
+    sbtnFolytatas: TSpeedButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -624,6 +625,8 @@ begin
   StatusBar1.panels[0].text := verzio;
   StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
   WindowState:=wsMaximized;
+  if ideiglenes_latszik then AF.NyitbeQ.open;
+
    if ( rendszamleker)or (lejatszas) then   kepatmeretez;
  // vlc_betolt;
  // showmessage(teszt.ToString);
@@ -1589,6 +1592,12 @@ end;
 procedure TFoF.sbtnUjmerlegjegyClick(Sender: TObject);
 begin
   if not aF.van_joga('j4') then   exit;
+  if sender=sbtnFolytatas then
+  begin
+    if af.NyitbeQ.IsEmpty then exit;
+    MjegyF.Folytatas:=true;
+  end
+  else MjegyF.Folytatas:=false;
   mjegyF.masol(piKezdoDatum.Date, piBefejezoDatum.Date, False);
   mjegyF.ShowModal;
 end;

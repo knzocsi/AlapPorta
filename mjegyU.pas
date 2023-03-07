@@ -178,6 +178,11 @@ type
     kep2: TImage;
     lblKep2: TLabel;
     btnFolytatasos_mentes: TButton;
+    Button4: TButton;
+    lblTomeg1: TLabel;
+    Label14: TLabel;
+    lblTomeg2: TLabel;
+    Label15: TLabel;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -207,6 +212,8 @@ type
     procedure btnlevon_szovegClick(Sender: TObject);
     procedure sp_tomeg_levonExit(Sender: TObject);
     procedure sp_tomeg_levonChange(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure Button4Click(Sender: TObject);
 
 
   private
@@ -218,21 +225,23 @@ type
     procedure szazalek;
   public
     { Public declarations }
+    Folytatas:boolean;
     procedure masol(kd,vd:TDate;friss:Boolean);
   end;
 
 var
   MjegyF: TMjegyF;
   brutto,tara,netto,sznetto:integer;
-
   br,tr,aned,ned,tisz:single;
   nedvesseg,tisztasag,nedvelvon: string;
   ttom:Real;
   r11,r12,r21,r22:String;
+  egyedi_azonosito:string;
+  mentes_volt:boolean;
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU;
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -249,7 +258,6 @@ end;
 procedure TMjegyF.btnTaramegadasClick(Sender: TObject);
 begin
   if not aF.van_joga('j10') then exit; //Taramegadas
-
   RendszamokF.ShowModal;
   rendszam_combok
 end;
@@ -282,6 +290,19 @@ begin
    TarolokT.Close;
    TarolokT.Open();
  end;
+end;
+
+procedure TMjegyF.Button4Click(Sender: TObject);
+begin
+  Meres_MerlegjegyenF.lblelsodat.Caption:=lblelsodat.Caption;
+  Meres_MerlegjegyenF.lblelsoido.Caption:=lblelsoido.Caption;
+  Meres_MerlegjegyenF.lblmasdat.Caption:=lblmasdat.Caption;
+  Meres_MerlegjegyenF.lblmasido.Caption:=lblmasido.Caption;
+  Meres_MerlegjegyenF.chkelso_kezi.Checked:=chkelso_kezi.Checked;
+  Meres_MerlegjegyenF.chkMasodik_kezi.Checked:=chkMasodik_kezi.Checked;
+  Meres_MerlegjegyenF.lblTomeg1.Caption:=lblTomeg1.Caption;
+  Meres_MerlegjegyenF.lblTomeg2.Caption:=lblTomeg2.Caption;
+  Meres_MerlegjegyenF.ShowModal;
 end;
 
 procedure TMjegyF.cbxiranyChange(Sender: TObject);
@@ -396,6 +417,7 @@ procedure TMjegyF.FormActivate(Sender: TObject);
       end;
    end;
 begin
+  mentes_volt:=false;
   pnlFelsoBal.Visible:=forgalom_latszik;
   pnlFelsoJobb.Visible:=( rendszamleker)or (lejatszas);
   pnlFelso.Visible:=pnlFelsoBal.Visible or pnlFelsoJobb.Visible;
@@ -427,7 +449,51 @@ begin
   //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
  // magassagok;
-end;
+  if Folytatas then
+  with af.NyitbeQ do
+  begin
+    tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
+    cbxirany.ItemIndex:=cbxirany.Items.IndexOf(FieldByName('irany').AsString);
+    cbxiranyChange(Sender);
+    chknincspot.Checked:=(FieldByName('rendszam').AsString=FieldByName('rendszam2').AsString)or (FieldByName('rendszam2').AsString='');
+    lblelsodat.Caption:=FieldByName('erkdatum').AsString;
+    lblelsoido.Caption:=FieldByName('erkido').AsString;
+    chkelso_kezi.Checked:=FieldByName('elso_kezi').AsBoolean;
+    lblmasdat.Caption:=FieldByName('tavdatum').AsString;
+    lblmasido.Caption:=FieldByName('tavido').AsString;
+    chkmasodik_kezi.Checked:=FieldByName('masodik_kezi').AsBoolean;
+    partnerlookup.KeyValue:=FieldByName('p_id').AsInteger;
+    partnerlookup2.KeyValue:=FieldByName('p2_id').AsInteger;
+    termeklookup.KeyValue:=FieldByName('termek_id').AsInteger;
+    termeklookupCloseUp(self);
+    chkkerekites.Checked:=FieldByName('kerekites').AsBoolean;
+    chkkuk.Checked:=FieldByName('kukorica').AsBoolean;
+    cbxbuzaminoseg.ItemIndex:=cbxbuzaminoseg.Items.IndexOf(FieldByName('buzaminoseg').AsString);
+    spegysegtomeg.Value:=FieldByName('egysegtomeg').Value;
+    spalapnedv.Value:=FieldByName('alapnedv').Value;
+    spnedv.Value:=FieldByName('nedv').Value;
+    spolaj.Value:=FieldByName('olaj').Value;
+    sptisztasag.Value:=FieldByName('tisztasag').Value;
+    sphekto.Value:=FieldByName('hekto').Value;
+    spfeherje.Value:=FieldByName('feherje').Value;
+    speses.Value:=FieldByName('esesszam').Value;
+    sptort.Value:=FieldByName('tortszaz').Value;
+    edmegjegy.text:=FieldByName('megjegyzes').AsString;
+    edekaer.Text:=FieldByName('ekaer').AsString;
+    spbrutto.Value:=FieldByName('brutto').Value;
+    sptara.Value:=FieldByName('tara').Value;
+    spnetto.Value:=FieldByName('netto').Value;
+    sp_tomeg_levon.Value:=FieldByName('levon_tomeg').Value;
+    spsznetto.Value:=FieldByName('sznetto').Value;
+    edszallev.text:=FieldByName('szallitolev').AsString;
+    cbxrendszam1.ItemIndex:=cbxrendszam1.Items.IndexOf(FieldByName('rendszam').AsString);
+    cbxrendszam2.ItemIndex:=cbxrendszam2.Items.IndexOf(FieldByName('rendszam2').AsString);
+    taroloklookup.KeyValue:=FieldByName('tarolo_id').AsInteger;
+    af.merlegkezQ.locate('nev',FieldByName('merlegelo').AsString,[]);
+    kezelolookup.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
+
+   end;
+ end;
 
 procedure TMjegyF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -438,6 +504,21 @@ begin
   Partnerlist2.close;
   TarolokT.close;
   levon_szovegT.close;
+  if Folytatas then
+  begin
+    Af.NyitbeQ.close;
+    Af.NyitbeQ.Open;
+    Af.NyitbeQ.locate('eazon',egyedi_azonosito,[]);
+  end;
+end;
+
+procedure TMjegyF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  if (not mentes_volt) then
+    CanClose:=  ( MessageDlg('Nem volt mentés! Biztos kilép?', mtConfirmation, [mbOK,mbCancel], 0) = mrOk)
+  else   CanClose:=True;
+
+
 end;
 
 procedure TMjegyF.jeloles;
@@ -737,7 +818,7 @@ begin
 end;
 
 procedure TMjegyF.btnMentesClick(Sender: TObject);
-var sorsz,pcime,egyedi,tablaneve:String;
+var sorsz,pcime,tablaneve:String;
     ujid,p,psz:integer;
     keszmenny,tort_keszmenny:Extended;
 
@@ -982,9 +1063,21 @@ begin
     if chkkerekites.Checked=True then keszmenny:=Round(spszNetto.Value/spegysegtomeg.Value)
     else keszmenny:=spszNetto.Value/spegysegtomeg.Value;
 
-  egyedi:=eazon_letrehozasa;//ez alapján kérem vissza mentés után a sorszámot
+  egyedi_azonosito:=eazon_letrehozasa;//ez alapján kérem vissza mentés után a sorszámot
   if (not (Sender = btnFolytatasos_mentes)) then tablaneve:='merlegjegy'
-  else  tablaneve:='nyitbe';
+  else
+  begin
+    tablaneve:='nyitbe';
+    if Folytatas then
+    with aF.Q2 do
+    begin
+      Close;
+      SQL.Clear;
+      SQL.Add('DELETE FROM '+tablaneve);
+      SQL.Add('WHERE eazon= '+#39+AF.NyitbeQ.FieldByName('Eazon').AsString+#39);
+      ExecSQL;
+    end;
+  end;
   with aF.Q2 do
     begin
       Close;
@@ -1080,7 +1173,7 @@ begin
       ParamByName('irany').AsString:=cbxirany.Text;
       ParamByName('kuj').AsString:=Partnelist.FieldByName('kuj').AsString;
       ParamByName('ktj').AsString:=Partnelist.FieldByName('ktj').AsString;
-      ParamByName('eazon').AsString:=egyedi;
+      ParamByName('eazon').AsString:=egyedi_azonosito;
       ParamByName('ekaer').AsString:=edekaer.Text;
       //ParamByName('ewc').AsString:='';
       ParamByName('alapnedv').value:=spalapnedv.Value;
@@ -1162,7 +1255,7 @@ begin
               aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,1,-1*tort_keszmenny);
              end;
         end;
-      sorsz:=mentett_sorsz_lekerese(egyedi);
+      sorsz:=mentett_sorsz_lekerese(egyedi_azonosito);
       if Sender=btnNyomtatas then
       begin
         psz:=0;
@@ -1207,6 +1300,7 @@ begin
      masol(0,0,true);
      rendszam_combok;
      uresre;
+     mentes_volt:=true;
 
 //  end;
 end;

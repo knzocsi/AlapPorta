@@ -225,6 +225,7 @@ object AF: TAF
     ResourceOptions.AutoConnect = False
     UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
     UpdateOptions.LockMode = lmOptimistic
+    Connected = True
     LoginPrompt = False
     OnLost = KapcsLost
     BeforeCommit = KapcsBeforeCommit
@@ -19859,7 +19860,7 @@ object AF: TAF
     SQL.Strings = (
       'SELECT *'
       'FROM nyitbe'
-      'ORDER BY Datum desc, Ido desc')
+      'ORDER BY ErkDatum desc, ErkIdo desc')
     Left = 432
     Top = 40
   end
