@@ -25,9 +25,10 @@ uses
 const
   ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
-   ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés',
-    'Mérlegelõk módosítása','Mérés','Kezdõ készlet felv.','Kézi mérés',
-    'Mérlegjegy módosítás','','','', '','','','','','','','');
+   ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés','Mérlegelõk módosítása',
+   'Mérés','Kezdõ készlet felv.','Kézi mérés','Mérlegjegy módosítás','Táramegadás',
+   '','', '','','',
+   '','','','','');
 
   Lampa_Zold=0;
   Lampa_Piros=1;
@@ -134,6 +135,8 @@ type
     CfgTDs: TDataSource;
     IrszScript: TFDScript;
     irszQ: TFDQuery;
+    NyitbeQ: TFDQuery;
+    NyitbeDS: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -239,6 +242,7 @@ var
   nyers_tort_szemek_tomege,tisztitott_nyers_netto_tomege,
   tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
   szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
+  ideiglenes_latszik,forgalom_latszik,taramegadas:boolean;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -849,6 +853,10 @@ begin
 
   termenyszaritas_elszamolasa:=cfg_kezel('Terményszárítás elszámolása több mérlegjegy alapján is','ALAP','Terményszárítás elszámolása','Boolean',false);
   // A mérleges rész átkerül t az PortU-ba
+
+  ideiglenes_latszik:=cfg_kezel('Az ideiglenes fül láthatósága a fõ formon','ALAP','Ideigenes látszik','Boolean',False);
+  Forgalom_latszik:=cfg_kezel('A forgalom fül láthatósága a fõ formon','ALAP','Forgalom látszik','Boolean',True);
+  taramegadas:=cfg_kezel('A jármûvek táramegadására legyen lehetõség, jog is van hozzá ','ALAP','Táramegadás','Boolean',False);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -1624,7 +1632,7 @@ var XLSXlist: TStringDynArray;
         end;
     end;
 begin
- FOF.elokep_timer.Enabled:=false;
+ FOF.tmrElokep.Enabled:=false;
  Automentes.Enabled:=False;
  SetCurrentDir(torzs_import_mappa);
  varf.Show;
@@ -1705,7 +1713,7 @@ begin
     end;
   end; }
  varF.Close;
- FOF.elokep_timer.Enabled:=true;
+ FOF.tmrElokep.Enabled:=true;
  Automentes.Enabled:=mentesido in [0..23];
  KillTask('EXCEL.EXE');
 end;

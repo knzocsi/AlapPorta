@@ -12,7 +12,7 @@ uses
   Vcl.DBCtrls, System.Win.ScktComp, CPortCtl, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdModBusClient, vcl.imaging.jpeg,
   Vcl.Imaging.pngimage, System.inifiles,System.Contnrs,Winapi.ShellAPI,
-  ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient;
+  ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons;
 
 type
   TFoF = class(TForm)
@@ -31,14 +31,8 @@ type
     Keress1: TMenuItem;
     Rendszam_Lampa_Timer: TTimer;
     pnlBaloldal: TPanel;
-    DBGrid1: TDBGrid;
     pnlKiskep: TPanel;
     ipcamPanel: TPanel;
-    Panel1: TPanel;
-    Label1: TLabel;
-    Label2: TLabel;
-    piKezdoDatum: TDateTimePicker;
-    piBefejezoDatum: TDateTimePicker;
     ClientSocket: TClientSocket;
     ServerSocket: TServerSocket;
     Felhasznlk1: TMenuItem;
@@ -60,10 +54,8 @@ type
     pnlJobbFelso: TPanel;
     ledLampa: TComLed;
     lbl3: TLabel;
-    Button1: TButton;
     Mrlegjegyeklistja1: TMenuItem;
     Mrlegkezelk1: TMenuItem;
-    btnMeresmodositas: TButton;
     mctPLC: TIdModBusClient;
     campagc: TPageControl;
     cam0: TTabSheet;
@@ -80,19 +72,32 @@ type
     Raktrkziszlltlevl1: TMenuItem;
     j1: TMenuItem;
     Lista1: TMenuItem;
-    btnMeres: TButton;
     mcIOmodul: TIdModBusClient;
     alapbe_m: TMenuItem;
     tulaj_m: TMenuItem;
     btnKamerakep: TButton;
     teszt_m: TMenuItem;
     tomeg_levon_szovegek_m: TMenuItem;
-    elokep_timer: TTimer;
+    tmrElokep: TTimer;
     memLog: TMemo;
     Antheratrzsimport1: TMenuItem;
     Szoftverbelltsok1: TMenuItem;
     cam2: TTabSheet;
     cam3: TTabSheet;
+    pcTablak: TPageControl;
+    tbForgalom: TTabSheet;
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    piKezdoDatum: TDateTimePicker;
+    piBefejezoDatum: TDateTimePicker;
+    btnMeresmodositas: TButton;
+    btnMeres: TButton;
+    DBGrid1: TDBGrid;
+    tbIdeiglenes: TTabSheet;
+    pnlFelso_jobb: TPanel;
+    sbtnUjmerlegjegy: TSpeedButton;
+    dbgNyitbe: TDBGrid;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -125,7 +130,6 @@ type
     procedure DBGrid1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure DBGrid1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure DBGrid1MouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
-    procedure Button1Click(Sender: TObject);
     procedure Mrlegjegyeklistja1Click(Sender: TObject);
     procedure Mrlegkezelk1Click(Sender: TObject);
     procedure btnMeresmodositasClick(Sender: TObject);
@@ -159,12 +163,13 @@ type
     procedure teszt_mClick(Sender: TObject);
     procedure tomeg_levon_szovegek_mClick(Sender: TObject);
     procedure lejatszas_ellenorzese;
-    procedure elokep_timerTimer(Sender: TObject);
+    procedure tmrElokepTimer(Sender: TObject);
     procedure piBefejezoDatumChange(Sender: TObject);
     procedure imgFelsokepClick(Sender: TObject);
     procedure Antheratrzsimport1Click(Sender: TObject);
     procedure Szoftverbelltsok1Click(Sender: TObject);
     procedure kepernyo_kezel;
+    procedure sbtnUjmerlegjegyClick(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -303,13 +308,6 @@ begin
   TermekekF.ShowModal;
 end;
 
-procedure TFoF.Button1Click(Sender: TObject);
-begin
-  if not aF.van_joga('j4') then   exit;
-  mjegyF.masol(piKezdoDatum.Date, piBefejezoDatum.Date, False);
-  mjegyF.ShowModal;
-end;
-
 procedure TFoF.btnKamerakepClick(Sender: TObject);
 var i:Integer;
 begin
@@ -329,7 +327,7 @@ end;
 procedure TFoF.btnMeresClick(Sender: TObject);
 var kepnev1,kepnev2:String;
 begin
-  if not aF.van_joga('j6') then exit;
+  if not aF.van_joga('j6') then exit;     //Meres
   Rendszam_Lampa_Timer.Enabled := false;
   meresF.rendszam1:=lblRendszam_elso.Caption ;
   meresF.rendszam2:=lblRendszam_Hatso.Caption ;
@@ -473,11 +471,11 @@ begin
   kepbetolt;
 end;
 
-procedure TFoF.elokep_timerTimer(Sender: TObject);
+procedure TFoF.tmrElokepTimer(Sender: TObject);
 var kiskam1,kiskam2,nagykam1,nagykam2:Boolean;
 begin
  if kamprobak=kamproba then exit;
- elokep_timer.Enabled:=false;
+ tmrElokep.Enabled:=false;
  Inc(kamprobak);
  kiskam1:=False;
  kiskam2:=false;
@@ -537,7 +535,7 @@ if (Assigned(vlcMediaPlayer3)) then
     end;
     af.camlog('Újraindítás kellett')
   end;
- elokep_timer.Enabled:=true;
+ tmrElokep.Enabled:=true;
 end;
 
 procedure TFoF.teszt_mClick(Sender: TObject);
@@ -591,6 +589,8 @@ begin
   lblRendszam_hatso.Caption := '';
   btnElso.Visible:= Elso_Gomb_Szoveg<>'' ;
   btnElso.Caption:=Elso_Gomb_Szoveg;
+  tbIdeiglenes.TabVisible:=ideiglenes_latszik;
+  tbForgalom.TabVisible:=forgalom_latszik;
   if not automata_kezelo then
    begin
     if TryStrToInt(ParamStr(1),g) then
@@ -699,7 +699,7 @@ begin
   Rendszam_Lampa_Timer.Enabled := True;
  finally
    btnKamerakep.visible:=nagykamera;
-  // elokep_timer.Enabled:=lejatszas;
+  // tmrElokep.Enabled:=lejatszas;
    StatusBar1.panels[5].Text:='';
    StatusBar1.panels[6].Text:='';
    if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
@@ -741,7 +741,7 @@ begin
     begin
      if lejatszas then
       begin
-       elokep_timer.Enabled:=false;
+       tmrElokep.Enabled:=false;
        stop(False);
        CanClose := FreeLibrary(vlclib);
       end
@@ -1586,6 +1586,13 @@ begin
   end;
 end;
 
+procedure TFoF.sbtnUjmerlegjegyClick(Sender: TObject);
+begin
+  if not aF.van_joga('j4') then   exit;
+  mjegyF.masol(piKezdoDatum.Date, piBefejezoDatum.Date, False);
+  mjegyF.ShowModal;
+end;
+
 procedure TFoF.stop(nagy:Boolean);
 begin
  { if (not Assigned(vlcMediaPlayer0)) then
@@ -1801,7 +1808,7 @@ end;
 procedure TFoF.lejatszas_ellenorzese;
 begin
   //kis kamera lejatszas van
-  elokep_timer.Enabled:=false;
+  tmrElokep.Enabled:=false;
   if (Assigned(vlcMediaPlayer0))and (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0)
      or (Assigned(vlcMediaPlayer1))and (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0)
      or (Assigned(vlcMediaPlayer2))and (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0)
@@ -1831,7 +1838,7 @@ begin
      af.camlog('Újraindítás kellett')
   end
   else af.camlog('NEM kellett újraindítás ');
-  elokep_timer.Enabled:=true;
+  tmrElokep.Enabled:=true;
 end;
 
 procedure TFoF.Lista1Click(Sender: TObject);

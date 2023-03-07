@@ -41,9 +41,9 @@ object MjegyF: TMjegyF
     object Label4: TLabel
       Left = 696
       Top = 66
-      Width = 59
+      Width = 96
       Height = 13
-      Caption = 'Sz'#225'll'#237't'#243'lev'#233'l:'
+      Caption = 'Sz'#225'll'#237't'#243'lev'#233'l/Sz'#225'mla:'
     end
     object Label1: TLabel
       Left = 9
@@ -103,9 +103,9 @@ object MjegyF: TMjegyF
     object lblelsodat: TLabel
       Left = 91
       Top = 34
-      Width = 62
+      Width = 61
       Height = 16
-      Caption = 'lblelsodat'
+      Caption = 'lblElsodat'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -131,7 +131,7 @@ object MjegyF: TMjegyF
       Top = 33
       Width = 62
       Height = 16
-      Caption = 'lblmasdat'
+      Caption = 'lblMasdat'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -142,9 +142,9 @@ object MjegyF: TMjegyF
     object lblelsoido: TLabel
       Left = 91
       Top = 52
-      Width = 59
+      Width = 58
       Height = 16
-      Caption = 'lblelsoido'
+      Caption = 'lblElsoido'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -154,10 +154,10 @@ object MjegyF: TMjegyF
     end
     object lblmasido: TLabel
       Left = 334
-      Top = 56
+      Top = 55
       Width = 59
       Height = 16
-      Caption = 'lblmasido'
+      Caption = 'lblMasido'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -240,7 +240,7 @@ object MjegyF: TMjegyF
       Top = 359
       Width = 137
       Height = 25
-      Caption = 'Ment'#233's'
+      Caption = 'Ment'#233's '#233's lez'#225'r'#225's'
       TabOrder = 1
       OnClick = btnMentesClick
     end
@@ -402,7 +402,7 @@ object MjegyF: TMjegyF
       TabOrder = 17
       Text = 'CBXRENDSZAM2'
     end
-    object chkrogzitett: TCheckBox
+    object chkRogzitett: TCheckBox
       Left = 353
       Top = 7
       Width = 97
@@ -796,6 +796,15 @@ object MjegyF: TMjegyF
       LookupSource = tulajDs
       TabOrder = 33
     end
+    object btnFolytatasos_mentes: TButton
+      Left = 555
+      Top = 361
+      Width = 121
+      Height = 25
+      Caption = 'Folytat'#225'sos ment'#233's'
+      TabOrder = 34
+      OnClick = btnMentesClick
+    end
   end
   object pnlFelso: TPanel
     Left = 0
@@ -982,7 +991,7 @@ object MjegyF: TMjegyF
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
     Left = 360
-    Top = 624
+    Top = 608
     object termeklistID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'

@@ -5,7 +5,8 @@ interface
    uses AU;
 
     const
-      maxSQL=16;
+      // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
+      maxSQL=17;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -857,6 +858,12 @@ interface
     ,
     //szárított tört szemek tömege a módosított mérlegjegyek táblába
     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
+    ,
+     //szárított tört szemek tömege a nyitbe táblába
+    'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;' + #13#10 +
+     //Sorszam a nyitbe tablaba, a kamionok hívása miatt kell
+    'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS Hivo_sorszam INT(11) DEFAULT 0;'
+
     );
 
 

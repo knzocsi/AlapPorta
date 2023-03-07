@@ -206,7 +206,7 @@ object AF: TAF
   object felhasznalok_jogaiDs: TDataSource
     DataSet = felhasznalok_jogai
     Left = 96
-    Top = 256
+    Top = 264
   end
   object Kapcs: TFDConnection
     ConnectionName = 'Kapcs'
@@ -247,8 +247,8 @@ object AF: TAF
       ''
       'end.')
     OnAfterPrint = frxmerlegAfterPrint
-    Left = 640
-    Top = 248
+    Left = 608
+    Top = 240
     Datasets = <>
     Variables = <>
     Style = <>
@@ -3230,8 +3230,8 @@ object AF: TAF
     PdfA = False
     PDFStandard = psNone
     PDFVersion = pv17
-    Left = 640
-    Top = 184
+    Left = 472
+    Top = 248
   end
   object merlegkezQ: TFDQuery
     Connection = Kapcs
@@ -3265,26 +3265,26 @@ object AF: TAF
     ResourceOptions.AssignedValues = [rvMacroCreate, rvMacroExpand, rvDirectExecute, rvPersistent]
     ResourceOptions.MacroCreate = False
     ResourceOptions.DirectExecute = True
-    Left = 624
-    Top = 48
+    Left = 808
+    Top = 56
   end
   object ModScriptDialog: TFDGUIxScriptDialog
     Provider = 'Forms'
     Options = [ssCallstack, ssConsole]
-    Left = 624
-    Top = 96
+    Left = 808
+    Top = 104
   end
   object KeszletQDs: TDataSource
     DataSet = KeszletQ
     Left = 184
-    Top = 248
+    Top = 272
   end
   object KeszletQ: TFDQuery
     Connection = Kapcs
     SQL.Strings = (
       'select * from keszlet_nezet')
     Left = 184
-    Top = 200
+    Top = 208
     object KeszletQTerm_id: TLongWordField
       AutoGenerateValue = arDefault
       FieldName = 'Term_id'
@@ -3723,8 +3723,8 @@ object AF: TAF
       'tort=tort')
     DataSource = rktetmDs
     BCDToCurrency = False
-    Left = 736
-    Top = 96
+    Left = 720
+    Top = 192
   end
   object frxrakszall: TfrxReport
     Version = '6.7'
@@ -3741,8 +3741,8 @@ object AF: TAF
       'begin'
       ''
       'end.')
-    Left = 736
-    Top = 40
+    Left = 720
+    Top = 240
     Datasets = <
       item
         DataSet = frxDBDrakszall
@@ -4060,7 +4060,7 @@ object AF: TAF
   end
   object rszQ: TFDQuery
     Connection = Kapcs
-    Left = 53
+    Left = 61
     Top = 325
   end
   object Sample_Kapcs: TFDConnection
@@ -4121,7 +4121,7 @@ object AF: TAF
       'begin'
       ''
       'end.')
-    Left = 736
+    Left = 664
     Top = 240
     Datasets = <>
     Variables = <>
@@ -19837,8 +19837,8 @@ object AF: TAF
     Connection = Kapcs
     Params = <>
     Macros = <>
-    Left = 16
-    Top = 272
+    Left = 8
+    Top = 320
   end
   object irszQ: TFDQuery
     Connection = Kapcs
@@ -19853,5 +19853,19 @@ object AF: TAF
         ParamType = ptInput
         Value = Null
       end>
+  end
+  object NyitbeQ: TFDQuery
+    Connection = Kapcs
+    SQL.Strings = (
+      'SELECT *'
+      'FROM nyitbe'
+      'ORDER BY Datum desc, Ido desc')
+    Left = 432
+    Top = 40
+  end
+  object NyitbeDS: TDataSource
+    DataSet = NyitbeQ
+    Left = 429
+    Top = 103
   end
 end
