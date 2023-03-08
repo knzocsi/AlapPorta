@@ -1,4 +1,4 @@
-object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
+﻿object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   Left = 0
   Top = 0
   Caption = 'M'#233'r'#233's a m'#233'rlegjegyen'
@@ -11,6 +11,8 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poMainFormCenter
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
@@ -135,14 +137,14 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   end
   object Label6: TLabel
     Left = 258
-    Top = 85
+    Top = 69
     Width = 36
     Height = 13
     Caption = 'T'#246'meg:'
   end
-  object RadioGroup1: TRadioGroup
+  object rgMeresszama: TRadioGroup
     Left = 11
-    Top = 104
+    Top = 88
     Width = 89
     Height = 49
     Caption = 'M'#233'r'#233's sz'#225'ma'
@@ -171,41 +173,60 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   end
   object rgMerlegszama: TRadioGroup
     Left = 128
-    Top = 104
+    Top = 91
     Width = 108
-    Height = 65
+    Height = 49
     Caption = 'M'#233'rleg sz'#225'ma'
     Items.Strings = (
-      'K'#233'zi m'#233'r'#233's'
       '1. m'#233'rleg'
       '2. m'#233'rleg')
     TabOrder = 3
   end
   object btnMeres: TButton
     Left = 258
-    Top = 144
+    Top = 128
     Width = 88
     Height = 25
     Caption = 'M'#233'r'#233's'
     TabOrder = 4
+    OnClick = btnMeresClick
   end
   object spTomeg: TSpinEdit
     Left = 258
-    Top = 104
+    Top = 88
     Width = 117
     Height = 22
     MaxValue = 0
     MinValue = 0
-    ReadOnly = True
     TabOrder = 5
     Value = 0
   end
-  object btnMegsem: TButton
-    Left = 161
-    Top = 199
+  object btnKilepes: TButton
+    Left = 258
+    Top = 201
     Width = 88
     Height = 25
-    Caption = 'M'#233'gsem'
+    Hint = 'Close'
+    Caption = 'Kil'#233'p'#233's'
     TabOrder = 6
+    OnClick = btnKilepesClick
+  end
+  object chkKezimeres: TCheckBox
+    Left = 128
+    Top = 146
+    Width = 97
+    Height = 17
+    Caption = 'K'#233'zi m'#233'r'#233's'
+    TabOrder = 7
+    OnClick = chkKezimeresClick
+  end
+  object Elfogadás: TButton
+    Left = 91
+    Top = 201
+    Width = 75
+    Height = 25
+    Caption = 'Elfogad'#225's'
+    TabOrder = 8
+    OnClick = ElfogadásClick
   end
 end

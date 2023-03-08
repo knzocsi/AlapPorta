@@ -20,7 +20,8 @@ uses
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
-  Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000;
+  Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000, System.Actions,
+  Vcl.ActnList, Vcl.StdActns;
 
 const
   ini_nev='porta_beallit.ini';
@@ -137,6 +138,8 @@ type
     irszQ: TFDQuery;
     NyitbeQ: TFDQuery;
     NyitbeDS: TDataSource;
+    ActionList1: TActionList;
+    WindowClose1: TWindowClose;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

@@ -264,7 +264,7 @@ object MjegyF: TMjegyF
       Height = 13
       Caption = 'kg'
     end
-    object cbxirany: TComboBox
+    object cbxIrany: TComboBox
       Left = 60
       Top = 6
       Width = 145
@@ -272,7 +272,7 @@ object MjegyF: TMjegyF
       Style = csOwnerDrawFixed
       DropDownCount = 3
       TabOrder = 0
-      OnChange = cbxiranyChange
+      OnChange = cbxIranyChange
       Items.Strings = (
         '---Nincs megadva----'
         'Besz'#225'll'#237't'#225's'
@@ -591,6 +591,7 @@ object MjegyF: TMjegyF
         Width = 65
         Height = 21
         ValueType = vtFloat
+        Value = 2.000000000000000000
         TabOrder = 3
         OnChange = sptisztasagChange
         OnExit = spnedvExit
@@ -848,14 +849,14 @@ object MjegyF: TMjegyF
       TabOrder = 34
       OnClick = btnMentesClick
     end
-    object Button4: TButton
+    object btnMeres: TButton
       Left = 255
       Top = 363
       Width = 177
       Height = 25
       Caption = 'M'#233'r'#233's'
       TabOrder = 35
-      OnClick = Button4Click
+      OnClick = btnMeresClick
     end
   end
   object pnlFelso: TPanel

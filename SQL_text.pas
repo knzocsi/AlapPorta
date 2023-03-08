@@ -864,6 +864,7 @@ interface
      //Sorszam a nyitbe tablaba, a kamionok hívása miatt kell
     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS Hivo_sorszam INT(11) DEFAULT 0;'
 
+
     );
 
 

@@ -19869,4 +19869,14 @@ object AF: TAF
     Left = 429
     Top = 103
   end
+  object ActionList1: TActionList
+    Left = 576
+    Top = 40
+    object WindowClose1: TWindowClose
+      Category = 'Window'
+      Caption = 'C&lose'
+      Enabled = False
+      Hint = 'Close'
+    end
+  end
 end
