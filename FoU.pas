@@ -367,7 +367,7 @@ begin
       ParamByName('Kepnev2').AsString:=kepnev2;
       ParamByName('Parositott').AsInteger:=0;
       ParamByName('Nem_Kell').AsInteger:=0;
-      { TODO -oKNZ -c : Át lehet verni a porgramot, ha mentés elõtt kiveszik a pipát 2022. 10. 27. 23:27:14 }
+      { DONE -oKNZ -c : Át lehet verni a porgramot, ha mentés elõtt kiveszik a pipát 2022. 10. 27. 23:27:14 }
       ParamByName('kezi').AsBoolean:=MeresF.chkkezi.Checked;
       //showmessage(SQL.Text);
     ExecSQL;

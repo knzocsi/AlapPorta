@@ -26,6 +26,7 @@ type
     procedure btnMentesClick(Sender: TObject);
     procedure spTomegEnter(Sender: TObject);
     procedure btnMeres1Click(Sender: TObject);
+    procedure chkkeziClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,6 +74,11 @@ begin
     tomeg := 0;
   end;
   spTomeg.Value:=tomeg;
+end;
+
+procedure TMeresF.chkkeziClick(Sender: TObject);
+begin
+  spTomeg.value:=0;
 end;
 
 procedure TMeresF.FormActivate(Sender: TObject);

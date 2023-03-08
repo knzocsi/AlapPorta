@@ -93,6 +93,7 @@ object MeresF: TMeresF
     Height = 17
     Caption = 'K'#233'zi m'#233'r'#233's'
     TabOrder = 5
+    OnClick = chkkeziClick
   end
   object btnMeres1: TButton
     Left = 41

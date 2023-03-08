@@ -1,9 +1,12 @@
-{TODO -oKNZ : OK Cancel eltüntetése}
+{TODO 1 -oKNZ : Törlés a nyitbebõl záráskor és Formbezárás}
+{DONE -oKNZ : Típus a termékekhez}
+{TODO 1 -oKNZ : Típus a termékekhez}
+{TODO 4 -oKNZ : OK Cancel eltüntetése}
 {DONE -oKNZ : A mérés formon fel kell vinni a tomegeket az lblTomeg labelekre}
-{TODO -oKNZ : Felkell venni elsõ és második meres tomeget datumot idot és kezit}
-{TODO -oKNZ : Sorszám hívás}
-{TODO -oKNZ : Sorszám bekérés}
-{TODO -oKNZ : Mérés a mérlegjegy formon}
+{DONE -oKNZ : Felkell venni elsõ és második meres tomeget datumot idot és kezit}
+{TODO 3 -oKNZ : Sorszám hívás}
+{TODO 2 -oKNZ : Sorszám bekérés}
+{DONE -oKNZ : Mérés a mérlegjegy formon}
 {DONE -oKNZ : Kilépéskor ha nincs mentés, akkor kérdezzen rá}
 {DONE -oKNZ : Ha végleges mentés van, törölje a nyitbe táblából a mérést}
 {DONE -oKNZ : Kilépskor frissítse a NyitbeQ}

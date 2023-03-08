@@ -1071,16 +1071,19 @@ begin
   else
   begin
     tablaneve:='nyitbe';
-    if Folytatas then
+
+  end;
+
+  if Folytatas then
     with aF.Q2 do
     begin
       Close;
       SQL.Clear;
-      SQL.Add('DELETE FROM '+tablaneve);
+      SQL.Add('DELETE FROM nyitbe');
       SQL.Add('WHERE eazon= '+#39+AF.NyitbeQ.FieldByName('Eazon').AsString+#39);
       ExecSQL;
     end;
-  end;
+
   with aF.Q2 do
     begin
       Close;
@@ -1304,8 +1307,8 @@ begin
      rendszam_combok;
      uresre;
      mentes_volt:=true;
+     if ideiglenes_latszik then close;
 
-//  end;
 end;
 
 
