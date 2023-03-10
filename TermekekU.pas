@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Vcl.Mask, FireDAC.Comp.DataSet, FireDAC.Comp.Client,System.Win.ComObj,
-  JvExMask, JvSpin, JvDBSpinEdit;
+  JvExMask, JvSpin, JvDBSpinEdit, JvExControls, JvDBLookup;
 
 type
   TTermekekF = class(TForm)
@@ -26,7 +26,7 @@ type
     dedKod: TDBEdit;
     lbl2: TLabel;
     dedNev: TDBEdit;
-    Button1: TButton;
+    btnImport: TButton;
     excelO: TOpenDialog;
     TermekTID: TFDAutoIncField;
     TermekTKod: TWideStringField;
@@ -77,17 +77,23 @@ type
     Label7: TLabel;
     lblmire: TLabel;
     edszures: TEdit;
+    lucTipus: TJvDBLookupCombo;
+    Label8: TLabel;
+    edTipus_id: TDBEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);
     procedure TermekTBeforeInsert(DataSet: TDataSet);
     procedure lbl1DblClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnImportClick(Sender: TObject);
     procedure TermekTBeforePost(DataSet: TDataSet);
     procedure FormCreate(Sender: TObject);
     procedure edszuresChange(Sender: TObject);
     procedure termekgridMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure lucTipusChange(Sender: TObject);
+    procedure pcListaReszletChange(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -109,7 +115,7 @@ begin
   close;
 end;
 
-procedure TTermekekF.Button1Click(Sender: TObject);
+procedure TTermekekF.btnImportClick(Sender: TObject);
 var fn:string;
     FExcel,FworkSheet: Variant;
     s, o: integer;
@@ -195,6 +201,12 @@ begin
   pcListaReszlet.ActivePage:=TTabSheet(tbLista);
   checklatszik;
   TermekT.Open();
+  af.TipusQ.open;
+end;
+
+procedure TTermekekF.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  af.TipusQ.close;
 end;
 
 procedure TTermekekF.FormCreate(Sender: TObject);
@@ -206,6 +218,25 @@ end;
 procedure TTermekekF.lbl1DblClick(Sender: TObject);
 begin
   if aF.van_joga('j7')then kezdokeszletF.showmodal;
+end;
+
+procedure TTermekekF.lucTipusChange(Sender: TObject);
+begin
+  if lucTipus.KeyValue<>'!' then
+  begin
+     TermekT.Edit;
+     edTipus_id.Text:=lucTipus.KeyValue;
+  end
+  else
+  begin
+    TermekT.Edit;
+    edTipus_id.Text:='0';
+  end;
+end;
+
+procedure TTermekekF.pcListaReszletChange(Sender: TObject);
+begin
+  lucTipus.KeyValue:=edTipus_id.Text;
 end;
 
 procedure TTermekekF.szures;

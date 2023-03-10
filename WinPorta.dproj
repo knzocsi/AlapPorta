@@ -197,7 +197,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="tipusokU.pas">
-            <Form>tipusokF</Form>
+            <Form>TipusokF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="tarolokU.pas">

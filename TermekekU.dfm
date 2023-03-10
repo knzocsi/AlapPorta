@@ -13,6 +13,7 @@
   OldCreateOrder = False
   Position = poMainFormCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -32,14 +33,14 @@
       TabOrder = 0
       OnClick = btnKilepesClick
     end
-    object Button1: TButton
+    object btnImport: TButton
       Left = 672
       Top = 8
       Width = 75
       Height = 25
       Caption = 'Import'
       TabOrder = 1
-      OnClick = Button1Click
+      OnClick = btnImportClick
     end
   end
   object pcListaReszlet: TPageControl
@@ -47,9 +48,10 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
+    OnChange = pcListaReszletChange
     object tbLista: TTabSheet
       Caption = 'Lista'
       object termekgrid: TDBGrid
@@ -271,6 +273,13 @@
         Height = 13
         Caption = 'EWC:'
       end
+      object Label8: TLabel
+        Left = 3
+        Top = 3
+        Width = 29
+        Height = 13
+        Caption = 'Tipus:'
+      end
       object DBNavigator1: TDBNavigator
         Left = 409
         Top = 0
@@ -466,6 +475,31 @@
         DataField = 'ewc'
         DataSource = TermekDS
         TabOrder = 19
+      end
+      object lucTipus: TJvDBLookupCombo
+        Left = 3
+        Top = 21
+        Width = 195
+        Height = 21
+        DropDownWidth = 1024
+        DisplayAllFields = True
+        DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+        EmptyValue = '!'
+        ListStyle = lsDelimited
+        LookupField = 'ID'
+        LookupDisplay = 'nev'
+        LookupSource = AF.tipusQDs
+        TabOrder = 20
+        OnChange = lucTipusChange
+      end
+      object edTipus_id: TDBEdit
+        Left = 204
+        Top = 21
+        Width = 45
+        Height = 21
+        DataField = 'tipus_id'
+        DataSource = TermekDS
+        TabOrder = 21
       end
     end
   end

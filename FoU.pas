@@ -1367,7 +1367,7 @@ end;
 
 procedure TFoF.rolk1Click(Sender: TObject);
 begin
- tarolokF.ShowModal
+  tarolokF.ShowModal
 end;
 
 procedure TFoF.Sajtjelszmdostsa1Click(Sender: TObject);

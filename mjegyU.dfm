@@ -47,7 +47,7 @@ object MjegyF: TMjegyF
       Caption = 'Sz'#225'll'#237't'#243'lev'#233'l/Sz'#225'mla:'
     end
     object Label1: TLabel
-      Left = 9
+      Left = 173
       Top = 165
       Width = 39
       Height = 13
@@ -263,6 +263,13 @@ object MjegyF: TMjegyF
       Width = 11
       Height = 13
       Caption = 'kg'
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 165
+      Width = 29
+      Height = 13
+      Caption = 'Tipus:'
     end
     object cbxIrany: TComboBox
       Left = 60
@@ -708,9 +715,9 @@ object MjegyF: TMjegyF
       OnClick = Button3Click
     end
     object termeklookup: TJvDBLookupCombo
-      Left = 7
-      Top = 181
-      Width = 665
+      Left = 176
+      Top = 184
+      Width = 499
       Height = 21
       DisplayAllFields = True
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
@@ -857,6 +864,22 @@ object MjegyF: TMjegyF
       Caption = 'M'#233'r'#233's'
       TabOrder = 35
       OnClick = btnMeresClick
+    end
+    object lucTipus: TJvDBLookupCombo
+      Left = 8
+      Top = 184
+      Width = 156
+      Height = 21
+      DropDownWidth = 1024
+      DisplayAllFields = True
+      DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+      EmptyValue = '!'
+      ListStyle = lsDelimited
+      LookupField = 'ID'
+      LookupDisplay = 'nev'
+      LookupSource = AF.tipusQDs
+      TabOrder = 36
+      OnChange = lucTipusChange
     end
   end
   object pnlFelso: TPanel

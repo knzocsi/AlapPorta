@@ -744,8 +744,8 @@ object FoF: TFoF
   end
   object MainMenu1: TMainMenu
     Tag = 100
-    Left = 432
-    Top = 136
+    Left = 408
+    Top = 128
     object rzsadatok1: TMenuItem
       Caption = 'T'#246'rzsadatok'
       object Anyagok1: TMenuItem
@@ -762,7 +762,6 @@ object FoF: TFoF
       end
       object pusok1: TMenuItem
         Caption = 'T'#237'pusok'
-        Visible = False
         OnClick = pusok1Click
       end
       object rolk1: TMenuItem

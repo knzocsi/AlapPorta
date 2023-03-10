@@ -138,8 +138,10 @@ type
     irszQ: TFDQuery;
     NyitbeQ: TFDQuery;
     NyitbeDS: TDataSource;
-    ActionList1: TActionList;
-    WindowClose1: TWindowClose;
+    tipusQDs: TDataSource;
+    tipusQ: TFDQuery;
+    tipusQid: TAutoIncField;
+    tipusQnev: TWideStringField;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

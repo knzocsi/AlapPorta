@@ -183,6 +183,8 @@ type
     Label14: TLabel;
     lblTomeg2: TLabel;
     Label15: TLabel;
+    lucTipus: TJvDBLookupCombo;
+    Label5: TLabel;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -214,6 +216,7 @@ type
     procedure sp_tomeg_levonChange(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure btnMeresClick(Sender: TObject);
+    procedure lucTipusChange(Sender: TObject);
 
 
   private
@@ -438,6 +441,12 @@ begin
   //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
  // magassagok;
+  af.tipusQ.Open;
+  lucTipus.KeyValue:='!';
+  termeklist.close;
+  termeklist.sql.Clear;
+  termeklist.sql.Add('select * from termek ORDER By NEV ASC;');
+  termeklist.open;
   if Folytatas then
   with af.NyitbeQ do
   begin
@@ -505,6 +514,7 @@ begin
   Partnerlist2.close;
   TarolokT.close;
   levon_szovegT.close;
+  Af.tipusQ.Close;
   if Folytatas then
   begin
     Af.NyitbeQ.close;
@@ -533,6 +543,23 @@ procedure TMjegyF.levonlookupChange(Sender: TObject);
 begin
  sp_tomeg_levon.Enabled:=levonlookup.KeyValue<>'!';
  if levonlookup.KeyValue='!' then sp_tomeg_levon.Value:=0;
+end;
+
+procedure TMjegyF.lucTipusChange(Sender: TObject);
+begin
+  termeklist.close;
+  if lucTipus.KeyValue='!' then
+  begin
+    termeklist.sql.Clear;
+    termeklist.sql.Add('select * from termek ORDER By NEV ASC;');
+  end
+  else
+  begin
+    termeklist.sql.Clear;
+    termeklist.sql.Add('select * from termek WHERE Tipus_ID='+IntToStr( lucTipus.KeyValue)+' ORDER By NEV ASC;');
+  end;
+  termeklist.open;
+
 end;
 
 procedure TMjegyF.JvDBUltimGrid1CellClick(Column: TColumn);
@@ -1307,7 +1334,11 @@ begin
      rendszam_combok;
      uresre;
      mentes_volt:=true;
-     if ideiglenes_latszik then close;
+     if ideiglenes_latszik then
+     begin
+       Af.NyitbeQ.Refresh;
+       Close;
+     end;
 
 end;
 

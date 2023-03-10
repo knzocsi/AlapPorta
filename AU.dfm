@@ -3608,8 +3608,8 @@ object AF: TAF
   object Automentes: TTimer
     Enabled = False
     OnTimer = AutomentesTimer
-    Left = 376
-    Top = 352
+    Left = 528
+    Top = 384
   end
   object FoglaltQ: TFDQuery
     Connection = Kapcs
@@ -6578,8 +6578,8 @@ object AF: TAF
     Enabled = False
     Interval = 1800000
     OnTimer = autotorzsTimer
-    Left = 376
-    Top = 424
+    Left = 528
+    Top = 456
   end
   object CfgT: TFDTable
     IndexFieldNames = 'csoport:A'
@@ -19869,14 +19869,23 @@ object AF: TAF
     Left = 429
     Top = 103
   end
-  object ActionList1: TActionList
-    Left = 576
-    Top = 40
-    object WindowClose1: TWindowClose
-      Category = 'Window'
-      Caption = 'C&lose'
-      Enabled = False
-      Hint = 'Close'
+  object tipusQDs: TDataSource
+    DataSet = tipusQ
+    Left = 340
+    Top = 440
+  end
+  object tipusQ: TFDQuery
+    Connection = Kapcs
+    SQL.Strings = (
+      'select * from tipus')
+    Left = 340
+    Top = 384
+    object tipusQid: TAutoIncField
+      FieldName = 'id'
+    end
+    object tipusQnev: TWideStringField
+      FieldName = 'nev'
+      Size = 50
     end
   end
 end

@@ -1,4 +1,4 @@
-object tipusokF: TtipusokF
+object TipusokF: TTipusokF
   Left = 0
   Top = 0
   Caption = 'Tipusok'
@@ -32,7 +32,7 @@ object tipusokF: TtipusokF
         Width = 546
         Height = 228
         Align = alClient
-        DataSource = tipusQDs
+        DataSource = AF.tipusQDs
         ReadOnly = True
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
@@ -63,7 +63,7 @@ object tipusokF: TtipusokF
         Top = 16
         Width = 225
         Height = 25
-        DataSource = tipusQDs
+        DataSource = AF.tipusQDs
         VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
         TabOrder = 0
       end
@@ -73,29 +73,9 @@ object tipusokF: TtipusokF
         Width = 273
         Height = 21
         DataField = 'nev'
-        DataSource = tipusQDs
+        DataSource = AF.tipusQDs
         TabOrder = 1
       end
     end
-  end
-  object tipusQ: TFDQuery
-    BeforePost = tipusQBeforePost
-    Connection = aF.Kapcs
-    SQL.Strings = (
-      'select * from tipus')
-    Left = 316
-    Top = 56
-    object tipusQid: TAutoIncField
-      FieldName = 'id'
-    end
-    object tipusQnev: TWideStringField
-      FieldName = 'nev'
-      Size = 50
-    end
-  end
-  object tipusQDs: TDataSource
-    DataSet = tipusQ
-    Left = 340
-    Top = 120
   end
 end

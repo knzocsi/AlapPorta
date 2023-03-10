@@ -1,6 +1,7 @@
-{TODO 1 -oKNZ : Törlés a nyitbebõl záráskor és Formbezárás}
+{TODO 1 -oKNZ : Tipus a merlegjegy formon}
+{DONE 1 -oKNZ : Törlés a nyitbebõl záráskor és Formbezárás}
 {DONE -oKNZ : Típus a termékekhez}
-{TODO 1 -oKNZ : Típus a termékekhez}
+{DONE 1 -oKNZ : Típus a termékekhez}
 {TODO 4 -oKNZ : OK Cancel eltüntetése}
 {DONE -oKNZ : A mérés formon fel kell vinni a tomegeket az lblTomeg labelekre}
 {DONE -oKNZ : Felkell venni elsõ és második meres tomeget datumot idot és kezit}

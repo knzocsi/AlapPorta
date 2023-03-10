@@ -28,7 +28,7 @@ uses
   nagykepU in 'nagykepU.pas' {NagykepF},
   nagykamU in 'nagykamU.pas' {NagykamF},
   LibreExcelU in 'LibreExcelU.pas' {LibreExcelF},
-  tipusokU in 'tipusokU.pas' {tipusokF},
+  tipusokU in 'tipusokU.pas' {TipusokF},
   tarolokU in 'tarolokU.pas' {TarolokF},
   Rak_szallU in 'Rak_szallU.pas' {Rak_szallF},
   rak_szall_listU in 'rak_szall_listU.pas' {rak_szall_listF},
@@ -78,7 +78,7 @@ begin
   Application.CreateForm(TkezdokeszletF, kezdokeszletF);
   Application.CreateForm(TNagykepF, NagykepF);
   Application.CreateForm(TLibreExcelF, LibreExcelF);
-  Application.CreateForm(TtipusokF, tipusokF);
+  Application.CreateForm(TTipusokF, TipusokF);
   Application.CreateForm(TTarolokF, TarolokF);
   Application.CreateForm(TRak_szallF, Rak_szallF);
   Application.CreateForm(Trak_szall_listF, rak_szall_listF);
