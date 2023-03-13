@@ -117,8 +117,8 @@ type
     cbxktip: TComboBox;
     chknincspot: TCheckBox;
     edekaer: TEdit;
-    cbxrendszam1: TComboBox;
-    cbxrendszam2: TComboBox;
+    cbxRendszam1: TComboBox;
+    cbxRendszam2: TComboBox;
     chkRogzitett: TCheckBox;
     btnTaramegadas: TButton;
     pnlmezgaz: TPanel;
@@ -185,6 +185,8 @@ type
     Label15: TLabel;
     lucTipus: TJvDBLookupCombo;
     Label5: TLabel;
+    speSorszam: TJvSpinEdit;
+    lblSorszam: TLabel;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -440,6 +442,9 @@ begin
   //lblekaer.Visible:=ekaer_felhasz<>'';
   //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
+  lblSorszam.Visible:=Hivoszamhasznalat;
+  speSorszam.Visible:=Hivoszamhasznalat;
+  speSorszam.Value:=0;
  // magassagok;
   af.tipusQ.Open;
   lucTipus.KeyValue:='!';
@@ -484,11 +489,12 @@ begin
     sp_tomeg_levon.Value:=FieldByName('levon_tomeg').Value;
     spsznetto.Value:=FieldByName('sznetto').Value;
     edszallev.text:=FieldByName('szallitolev').AsString;
-    cbxrendszam1.ItemIndex:=cbxrendszam1.Items.IndexOf(FieldByName('rendszam').AsString);
-    cbxrendszam2.ItemIndex:=cbxrendszam2.Items.IndexOf(FieldByName('rendszam2').AsString);
+    cbxRendszam1.Text:=FieldByName('rendszam').AsString;
+    cbxRendszam2.Text:=FieldByName('rendszam2').AsString;
     taroloklookup.KeyValue:=FieldByName('tarolo_id').AsInteger;
     af.merlegkezQ.locate('nev',FieldByName('merlegelo').AsString,[]);
     kezelolookup.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
+    speSorszam.Value:=FieldByName('Hivo_sorszam').AsInteger;
     case cbxIrany.Itemindex of
       1 :
         begin
@@ -1013,31 +1019,37 @@ begin
   if tulajlookup.KeyValue='!' then
   begin
     ShowMessage('A bizonylat kibocsájtót meg kell adni!');
+    tulajlookup.SetFocus;
     exit
   end;
   if (partnerlookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
     ShowMessage('A(z) '+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    partnerlookup.SetFocus;
     exit
   end;
   if (partnerlookup2.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
     ShowMessage('A(z) '+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    partnerlookup2.SetFocus;
     exit
   end;
   if (termeklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes))  then
   begin
     ShowMessage('A terméket meg kell adni!');
+    termeklookup.SetFocus;
     exit
   end;
   if (kezelolookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
     ShowMessage('A mérlegkezelõt meg kell adni!');
+    kezelolookup.SetFocus;
     exit
   end;
   if (cbxirany.ItemIndex<1) and (not (Sender = btnFolytatasos_mentes)) then
   begin
     ShowMessage('A mérés irányát meg kell adni!');
+    cbxirany.SetFocus;
     exit
   end;
   if (not chkrogzitett.Checked) and (not (Sender = btnFolytatasos_mentes)) then
@@ -1048,11 +1060,13 @@ begin
   if (cbxrendszam1.Text='') then
   begin
     ShowMessage('A rendszámot meg kell adni!');
+    cbxrendszam1.SetFocus;
     exit
   end;
-  if (not chknincspot.Checked)and(cbxrendszam2.Text='') then
+  if (not chknincspot.Checked) and (cbxrendszam2.Text='') then
   begin
-    ShowMessage('A rendszámot meg kell adni!');
+    ShowMessage('A pótkocsi rendszámot meg kell adni!');
+    cbxrendszam2.SetFocus;
     exit
   end;
 
@@ -1064,14 +1078,26 @@ begin
   if (taroloklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
     ShowMessage('A tárolót meg kell adni!');
+    taroloklookup.SetFocus;
+    exit
+  end;
+
+  if (speSorszam.Value=0) and (Hivoszamhasznalat)  then
+  begin
+    ShowMessage('A sorszám nem lehet nulla!');
+    speSorszam.SetFocus;
+    speSorszam.SelectAll;
     exit
   end;
   if levonlookup.KeyValue<>'!' then
   if sp_tomeg_levon.Value<=0 then
   begin
     ShowMessage('Adja meg a levonandó tömeget!');
+    sp_tomeg_levon.SetFocus;
     Exit
   end;
+
+
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
 
   try
@@ -1126,7 +1152,9 @@ begin
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
       SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,');
-      SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek)  ');
+      SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek  ');
+      if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
+      SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
       SQL.Add(':szallitolev,:megjegyzes,:tomegbe,');
@@ -1137,7 +1165,15 @@ begin
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
       SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,');
-      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek)  ');
+      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek ');
+      if (Hivoszamhasznalat) and (tablaneve='nyitbe') then
+      begin
+        SQL.Add(',:Hivo_sorszam ');
+        ParamByName('Hivo_sorszam').AsString:=speSorszam.Text;
+      end;
+
+      SQL.Add(');');
+      //ShowMessage(sql.Text);
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
       ParamByName('rendszam').AsString:=cbxrendszam1.Text;
@@ -1154,6 +1190,7 @@ begin
       ParamByName('szallitolev').AsString:=edszallev.Text;
       ParamByName('megjegyzes').AsString:=edmegjegy.Text;
       ParamByName('merlegelo').AsString:=aF.merlegkezQ.FieldByName('nev').AsString;
+
 
       case cbxirany.Text[1] of
        'B':begin

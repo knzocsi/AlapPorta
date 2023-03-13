@@ -247,7 +247,7 @@ var
   nyers_tort_szemek_tomege,tisztitott_nyers_netto_tomege,
   tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
   szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
-  ideiglenes_latszik,forgalom_latszik,taramegadas:boolean;
+  ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -862,7 +862,9 @@ begin
   ideiglenes_latszik:=cfg_kezel('Az ideiglenes fül láthatósága a fõ formon','ALAP','Ideigenes látszik','Boolean',False);
   Forgalom_latszik:=cfg_kezel('A forgalom fül láthatósága a fõ formon','ALAP','Forgalom látszik','Boolean',True);
   taramegadas:=cfg_kezel('A jármûvek táramegadására legyen lehetõség, jog is van hozzá ','ALAP','Táramegadás','Boolean',False);
-
+  //A kisteleki kábelgyárban sorszámmal hívják a kamionokat a mérlegre
+  Hivoszamhasznalat:=inif.Readbool('ALAP','Hivoszamhasznalat',false);
+  inif.WriteBool('ALAP','Hivoszamhasznalat',Hivoszamhasznalat);
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';

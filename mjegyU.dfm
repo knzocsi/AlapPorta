@@ -271,6 +271,13 @@ object MjegyF: TMjegyF
       Height = 13
       Caption = 'Tipus:'
     end
+    object lblSorszam: TLabel
+      Left = 480
+      Top = 8
+      Width = 44
+      Height = 13
+      Caption = 'Sorsz'#225'm:'
+    end
     object cbxIrany: TComboBox
       Left = 60
       Top = 6
@@ -431,7 +438,7 @@ object MjegyF: TMjegyF
       TabOrder = 15
       Text = 'EdEkaer'
     end
-    object cbxrendszam1: TComboBox
+    object cbxRendszam1: TComboBox
       Left = 696
       Top = 136
       Width = 145
@@ -440,9 +447,9 @@ object MjegyF: TMjegyF
       Sorted = True
       TabOrder = 16
       Text = 'CBXRENDSZAM1'
-      OnChange = cbxrendszam1Change
+      OnChange = cbxRendszam1Change
     end
-    object cbxrendszam2: TComboBox
+    object cbxRendszam2: TComboBox
       Left = 880
       Top = 139
       Width = 121
@@ -880,6 +887,19 @@ object MjegyF: TMjegyF
       LookupSource = AF.tipusQDs
       TabOrder = 36
       OnChange = lucTipusChange
+    end
+    object speSorszam: TJvSpinEdit
+      Left = 480
+      Top = 27
+      Width = 95
+      Height = 37
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 37
     end
   end
   object pnlFelso: TPanel
