@@ -3,7 +3,7 @@ object PortF: TPortF
   Top = 180
   Caption = 'Port'
   ClientHeight = 500
-  ClientWidth = 644
+  ClientWidth = 770
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,12 +20,13 @@ object PortF: TPortF
   object pnlFelso: TPanel
     Left = 0
     Top = 0
-    Width = 644
+    Width = 770
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 644
     object ComLed1: TComLed
-      Left = 481
+      Left = 705
       Top = 0
       Width = 25
       Height = 25
@@ -35,7 +36,7 @@ object PortF: TPortF
       OnDblClick = ComLed1DblClick
     end
     object ComLed2: TComLed
-      Left = 512
+      Left = 736
       Top = 0
       Width = 25
       Height = 25
@@ -82,43 +83,56 @@ object PortF: TPortF
       OnClick = Button1Click
     end
     object btnKijelzo_beallitas: TButton
-      Left = 367
+      Left = 334
       Top = 4
-      Width = 75
+      Width = 130
       Height = 25
-      Caption = 'Kijelz'#337' be'#225'll'#237't'#225's'
+      Caption = 'M'#225'sodkijelz'#337' be'#225'll'#237't'#225's'
       TabOrder = 4
       OnClick = btnKijelzo_beallitasClick
+    end
+    object btnHivoszamkijezobeallitas: TButton
+      Left = 480
+      Top = 4
+      Width = 153
+      Height = 25
+      Caption = 'H'#237'v'#243'sz'#225'mkijelz'#337' be'#225'll'#237't'#225's'
+      TabOrder = 5
+      OnClick = btnHivoszamkijezobeallitasClick
     end
   end
   object memTeszt: TMemo
     Left = 0
     Top = 41
-    Width = 404
+    Width = 530
     Height = 383
     Align = alClient
     Lines.Strings = (
       'Soros teszt'
       '')
     TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 35
   end
   object memHexa: TMemo
     Left = 0
     Top = 424
-    Width = 644
+    Width = 770
     Height = 76
     Align = alBottom
     Lines.Strings = (
       '')
     TabOrder = 3
+    ExplicitWidth = 644
   end
   object Panel1: TPanel
-    Left = 404
+    Left = 530
     Top = 41
     Width = 240
     Height = 383
     Align = alRight
     TabOrder = 2
+    ExplicitLeft = 404
     object memEredmeny: TMemo
       Left = 1
       Top = 137
@@ -211,7 +225,7 @@ object PortF: TPortF
     Left = 168
     Top = 80
   end
-  object ComPort2: TComPort
+  object comKijelzo: TComPort
     BaudRate = br9600
     Port = 'COM1'
     Parity.Bits = prNone
@@ -226,8 +240,8 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
-    Left = 168
-    Top = 152
+    Left = 160
+    Top = 226
   end
   object IdTCPClient1: TIdTCPClient
     OnDisconnected = IdTCPClient1Disconnected
@@ -260,5 +274,41 @@ object PortF: TPortF
     OnTimer = Client_Timer2Timer
     Left = 320
     Top = 152
+  end
+  object ComPort2: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    Left = 168
+    Top = 152
+  end
+  object comHivoszamkijelzo: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    Left = 240
+    Top = 224
   end
 end

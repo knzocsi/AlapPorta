@@ -27,7 +27,7 @@ type
     ComLed2: TComLed;
     ComPort1: TComPort;
     btnKijelzo_beallitas: TButton;
-    ComPort2: TComPort;
+    comKijelzo: TComPort;
     IdTCPClient1: TIdTCPClient;
     IdTCPClient2: TIdTCPClient;
     lblTomeg1: TLabel;
@@ -36,6 +36,9 @@ type
     lblKapcsolat2: TLabel;
     Client_Timer1: TTimer;
     Client_Timer2: TTimer;
+    btnHivoszamkijezobeallitas: TButton;
+    ComPort2: TComPort;
+    comHivoszamkijelzo: TComPort;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -55,6 +58,7 @@ type
     procedure Client_Timer1Timer(Sender: TObject);
     procedure Client_Timer2Timer(Sender: TObject);
     function datum_szoveg(datum:TDateTime;idokell:boolean):string;
+    procedure btnHivoszamkijezobeallitasClick(Sender: TObject);
 
 
   private
@@ -65,6 +69,7 @@ type
     procedure portclose;
     procedure kuld(Sor:string);
     procedure kijelzore_ir;
+    procedure hivoszamkijelzore_ir(szam:string);
     procedure IP1_Start;
     procedure IP2_Start;
     function merleg_szam(merleg:string):integer;
@@ -183,7 +188,7 @@ begin
                     begin
                       if (adat=#3) and (length(ertek)=bit) then
                         begin
-                          {comport2.writestring(#6);}
+
                           if (Active) and (chkErtek_vj.Checked) then
                           begin
                             memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
@@ -475,7 +480,7 @@ begin
                     begin
                       if (adat=#13) and (length(ertek)=bit) then
                         begin
-                          {comport2.writestring(#6);}
+
                           if (Active) and (chkErtek_vj.Checked) then
                           begin
                             memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
@@ -521,7 +526,7 @@ begin
                     begin
                       if (adat=#10) and (length(ertek)=bit) then
                         begin
-                          {comport2.writestring(#6);}
+
                           if (Active) and (chkErtek_vj.Checked) then
                           begin
                             memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
@@ -822,6 +827,24 @@ begin
     rendszamvolt [k] := false;
     nyugalmiszamlalo [k] := 0;
   end;
+  btnHivoszamkijezobeallitas.Visible:=Hivoszamhasznalat;
+end;
+
+procedure TPortF.hivoszamkijelzore_ir(szam:string);
+var i:integer;
+begin
+  PortF.comHivoszamKijelzo.LoadSettings(stIniFile, konyvtar+'hivoszamkijelzo.dat' );
+  PortF.comHivoszamKijelzo.open;
+  for i := Length(szam) to 5 do szam:=' '+szam;
+
+  for I := 1 to 5 do
+  begin
+    //ShowMessage(szam);
+    PortF.comHivoszamKijelzo.WriteStr('AX/B='+szam+#13+#10);
+    Sleep(100);
+    Application.ProcessMessages;
+  end;
+  PortF.comHivoszamKijelzo.Close;
 end;
 
 procedure TPortF.IdTCPClient1Connected(Sender: TObject);
@@ -935,10 +958,16 @@ begin
   Aktiv:=false;
 end;
 
+procedure TPortF.btnHivoszamkijezobeallitasClick(Sender: TObject);
+begin
+  comHivoszamKijelzo.ShowSetupDialog;
+  comHivoszamKijelzo.StoreSettings(stIniFile, konyvtar+'hivoszamkijelzo.dat' );
+end;
+
 procedure TPortF.btnKijelzo_beallitasClick(Sender: TObject);
 begin
-  ComPort2.ShowSetupDialog;
-  ComPort2.StoreSettings(stIniFile, konyvtar+'kijelzo.dat' );
+  comKijelzo.ShowSetupDialog;
+  comKijelzo.StoreSettings(stIniFile, konyvtar+'kijelzo.dat' );
 end;
 
 procedure TPortF.btnKilepesClick(Sender: TObject);
@@ -953,13 +982,11 @@ end;
 
 procedure TPortF.kijelzore_ir;
 begin
-
-  PortF.ComPort2.LoadSettings(stIniFile, konyvtar+'kijelzo.dat' );
-
-  PortF.ComPort2.open;
-  if kijelzo_tipus='MS' then  PortF.ComPort2.WriteStr('AX/B='+mertertekek[1]+#13+#10);
+  PortF.comKijelzo.LoadSettings(stIniFile, konyvtar+'kijelzo.dat' );
+  PortF.comKijelzo.open;
+  if kijelzo_tipus='MS' then  PortF.comKijelzo.WriteStr('AX/B='+mertertekek[1]+#13+#10);
   Sleep(100);
-  PortF.ComPort2.Close;
+  PortF.comKijelzo.Close;
 end;
 
 procedure TPortF.kuld(Sor:string);

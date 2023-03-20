@@ -444,6 +444,7 @@ begin
   btnekaer.visible:=ekaer_felhasz<>'';
   lblSorszam.Visible:=Hivoszamhasznalat;
   speSorszam.Visible:=Hivoszamhasznalat;
+  speSorszam.Enabled:=Not Folytatas;
   speSorszam.Value:=0;
  // magassagok;
   af.tipusQ.Open;
@@ -1014,6 +1015,8 @@ var sorsz,pcime,tablaneve:String;
         end;
      end;
 
+
+
 begin
 
   if tulajlookup.KeyValue='!' then
@@ -1089,6 +1092,15 @@ begin
     speSorszam.SelectAll;
     exit
   end;
+
+  if (Not Folytatas) and (Hivoszamhasznalat) and (af.NyitbeQ.locate('Hivo_sorszam',speSorszam.Value,[])) then
+  begin
+    ShowMessage('Ilyen sorszám már van!');
+    speSorszam.SetFocus;
+    speSorszam.SelectAll;
+    exit
+  end;
+
   if levonlookup.KeyValue<>'!' then
   if sp_tomeg_levon.Value<=0 then
   begin

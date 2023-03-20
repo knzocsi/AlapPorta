@@ -99,6 +99,7 @@ type
     sbtnUjmerlegjegy: TSpeedButton;
     dbgNyitbe: TDBGrid;
     sbtnFolytatas: TSpeedButton;
+    sbtnSorszamhivas: TSpeedButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -171,6 +172,8 @@ type
     procedure Szoftverbelltsok1Click(Sender: TObject);
     procedure kepernyo_kezel;
     procedure sbtnUjmerlegjegyClick(Sender: TObject);
+    procedure dbgNyitbeCellClick(Column: TColumn);
+    procedure sbtnSorszamhivasClick(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -457,6 +460,12 @@ begin
   ErrorCode := 0;
 end;
 
+procedure TFoF.dbgNyitbeCellClick(Column: TColumn);
+begin
+  if not af.NyitbeQ.Eof then sbtnSorszamhivas.Caption:=af.NyitbeQ.fieldbyname('Hivo_sorszam').AsString;
+
+end;
+
 procedure TFoF.DBGrid1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 begin
   kepbetolt;
@@ -581,9 +590,7 @@ var
   CardAddr, h,g,i: integer;
 begin
   onActivate := nil;
-  
   meresirany:='-';
-
   pingprobak:=5;
   kamprobak:=5;
   lblRendszam_elso.Caption := '';
@@ -593,16 +600,16 @@ begin
   tbIdeiglenes.TabVisible:=ideiglenes_latszik;
   tbForgalom.TabVisible:=forgalom_latszik;
   if not automata_kezelo then
-   begin
-    if TryStrToInt(ParamStr(1),g) then
     begin
-      if aF.FelhaszQ.Locate('id',g,[])then
-       begin
-         f_ide:=aF.FelhaszQ.FieldByName('id').AsInteger;
-         felhnev:=aF.FelhaszQ.FieldByName('nev').AsString;
-       end;
-    end
-    else  belepF.ShowModal;
+      if TryStrToInt(ParamStr(1),g) then
+      begin
+        if aF.FelhaszQ.Locate('id',g,[])then
+         begin
+           f_ide:=aF.FelhaszQ.FieldByName('id').AsInteger;
+           felhnev:=aF.FelhaszQ.FieldByName('nev').AsString;
+         end;
+      end
+      else  belepF.ShowModal;
    end
    else
    begin
@@ -610,12 +617,12 @@ begin
      felhnev:='Automata';
    end;
   with MainMenu1 do
-  for h := 0 to Items.Count-1 do
-  begin
-   if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
-   //if Items[h].Tag=100 then items[h].visible:=automata_torzsimport;
+    for h := 0 to Items.Count-1 do
+    begin
+     if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
+     //if Items[h].Tag=100 then items[h].visible:=automata_torzsimport;
 
-  end;
+    end;
   aF.jogok_beolvasasa;
   tomeg_levon_szovegek_m.visible:=tomeg_levon;
   Antheratrzsimport1.Visible:= automata_torzsimport;
@@ -627,9 +634,9 @@ begin
   WindowState:=wsMaximized;
   if ideiglenes_latszik then AF.NyitbeQ.open;
 
-   if ( rendszamleker)or (lejatszas) then   kepatmeretez;
- // vlc_betolt;
- // showmessage(teszt.ToString);
+  if ( rendszamleker)or (lejatszas) then   kepatmeretez;
+  // vlc_betolt;
+  // showmessage(teszt.ToString);
   szures;
   //teszt:=True;
 
@@ -640,89 +647,92 @@ begin
     Showmessage('Kamerakép betöltése sikertelen!');
   // Exit
   end;
- try
-  if UpperCase(ParamStr(1)) <> '/D' then
-  begin
-    if vezerles_tipus = 'USB' then
+  try
+    if UpperCase(ParamStr(1)) <> '/D' then
     begin
-      CardAddr := 0; //3-(integer(sk5.Checked) + integer(sk6.Checked) * 2);
-     // h := OpenDevice(CardAddr);
-      case h of
-        0..3:
-          begin
-            StatusBar1.panels[3].text := 'Kártya ' + inttostr(h) + ' csatlakozva';
-            kartyavan := true;
-          end;
-        -1:
-          begin
-            StatusBar1.panels[3].text := 'Kártya ' + inttostr(CardAddr) + ' nem található';
-            ;
-          end;
-      end;
-    end
-    else if vezerles_tipus = 'PLC' then
-    begin
-      if sorompo_vezerles then
+      if vezerles_tipus = 'USB' then
       begin
-        PLC_Ir(Sorompo_Infra_Hiba_cim_BE, sorompo_infra_hibas_BE);
-        PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
-        PLC_Ir(Sorompo_Infra_Hiba_cim_KI, sorompo_infra_hibas_KI);
-        PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
-        //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
-        PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
-        PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
-      end
-      else
-      begin
-        PLC_Ir(Infra_BE_Cim, 0);
-        PLC_Ir(Infra_KI_Cim, 0);
-      end;
-    end
-    else StatusBar1.panels[3].text := '';
-  { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
-    if Elso_lampa <> 0 then Lampakapcs(Elso_lampa, Lampa_Zold);
-    if Hatso_lampa <> 0 then  Lampakapcs(Hatso_lampa, Lampa_Zold);
-
-    //Mérlegek
-    if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-       and (PortF.merleg_szam('RS1')<>0) then PortF.portopen;
-    if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-       and (PortF.merleg_szam('IP1')<>0) and (moxa_ip1<>'Local') then PortF.IP1_Start;
-     if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-       and (PortF.merleg_szam('IP2')<>0) and (moxa_ip2<>'Local') then PortF.IP2_Start;
-
-
-  end;
-  lbl1.Visible:=rendszamleker;
-  lbl2.Visible:=rendszamleker;
-  lbl3.Visible:=sorompo_vezerles;
-  ledLampa.Visible:=(Elso_lampa <> 0) or (Hatso_lampa <> 0);
-
-  Tomeg_Timer.Enabled := true;
-  Rendszam_Lampa_Timer.Enabled := True;
- finally
-   btnKamerakep.visible:=nagykamera;
-  // tmrElokep.Enabled:=lejatszas;
-   StatusBar1.panels[5].Text:='';
-   StatusBar1.panels[6].Text:='';
-   if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
-   if (nagykamera)and(lejatszas) then
-   begin
-    try
-    // NagykamF:=TNagykamF.Create(Self);
-       try
-         FoF.stop(false);
-        finally
-         Fof.play(true);
+        CardAddr := 0; //3-(integer(sk5.Checked) + integer(sk6.Checked) * 2);
+       // h := OpenDevice(CardAddr);
+        case h of
+          0..3:
+            begin
+              StatusBar1.panels[3].text := 'Kártya ' + inttostr(h) + ' csatlakozva';
+              kartyavan := true;
+            end;
+          -1:
+            begin
+              StatusBar1.panels[3].text := 'Kártya ' + inttostr(CardAddr) + ' nem található';
+              ;
+            end;
         end;
-     finally
-      nagykamF.show;
-     end;
-   end;
- end;
- if UpperCase(ParamStr(1)) = '/D' then
-   if (not FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then
-     ShowMessage('A kijelzõ port nincs beállítva!');
+      end
+      else if vezerles_tipus = 'PLC' then
+      begin
+        if sorompo_vezerles then
+        begin
+          PLC_Ir(Sorompo_Infra_Hiba_cim_BE, sorompo_infra_hibas_BE);
+          PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
+          PLC_Ir(Sorompo_Infra_Hiba_cim_KI, sorompo_infra_hibas_KI);
+          PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
+          //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
+          PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
+          PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
+        end
+        else
+        begin
+          PLC_Ir(Infra_BE_Cim, 0);
+          PLC_Ir(Infra_KI_Cim, 0);
+        end;
+      end
+      else StatusBar1.panels[3].text := '';
+    { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
+      if Elso_lampa <> 0 then Lampakapcs(Elso_lampa, Lampa_Zold);
+      if Hatso_lampa <> 0 then  Lampakapcs(Hatso_lampa, Lampa_Zold);
+
+      //Mérlegek
+      if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+         and (PortF.merleg_szam('RS1')<>0) then PortF.portopen;
+      if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+         and (PortF.merleg_szam('IP1')<>0) and (moxa_ip1<>'Local') then PortF.IP1_Start;
+       if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+         and (PortF.merleg_szam('IP2')<>0) and (moxa_ip2<>'Local') then PortF.IP2_Start;
+
+
+    end;
+    lbl1.Visible:=rendszamleker;
+    lbl2.Visible:=rendszamleker;
+    lbl3.Visible:=sorompo_vezerles;
+    ledLampa.Visible:=(Elso_lampa <> 0) or (Hatso_lampa <> 0);
+
+    Tomeg_Timer.Enabled := true;
+    Rendszam_Lampa_Timer.Enabled := True;
+  finally
+    btnKamerakep.visible:=nagykamera;
+    // tmrElokep.Enabled:=lejatszas;
+    StatusBar1.panels[5].Text:='';
+    StatusBar1.panels[6].Text:='';
+    if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
+    if (nagykamera)and(lejatszas) then
+    begin
+      try
+       // NagykamF:=TNagykamF.Create(Self);
+        try
+          FoF.stop(false);
+        finally
+          Fof.play(true);
+        end;
+      finally
+        nagykamF.show;
+      end;
+    end;
+  end;
+  if (not FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then
+      ShowMessage('A kijelzõ port nincs beállítva!');
+
+  if (not FileExists(konyvtar+'hivoszamkijelzo.dat')) and (Hivoszamhasznalat)  then
+      ShowMessage('A hívószám kijelzõ port nincs beállítva!');
+
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -1587,6 +1597,12 @@ begin
     if UpperCase(ParamStr(1)) <> '/D' then
       PortF.ShowModal;
   end;
+end;
+
+procedure TFoF.sbtnSorszamhivasClick(Sender: TObject);
+begin
+  if sbtnSorszamhivas.Caption<>'0' then
+    PortF.hivoszamkijelzore_ir(sbtnSorszamhivas.Caption);
 end;
 
 procedure TFoF.sbtnUjmerlegjegyClick(Sender: TObject);

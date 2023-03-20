@@ -1,3 +1,6 @@
+{TODO 1 : Második port mérleg beallitasai}
+{DONE 1 : Hivoszamkijelzo port beallításai}
+{TODO 1 : Rákeresni, hogy van e olyan sorszám amit beadtak a mérlegjegyen}
 {DONE 1 -oKNZ : Tipus a merlegjegy formon}
 {DONE 1 -oKNZ : Törlés a nyitbebõl záráskor és Formbezárás}
 {DONE -oKNZ : Típus a termékekhez}
@@ -6,7 +9,7 @@
 {DONE -oKNZ : A mérés formon fel kell vinni a tomegeket az lblTomeg labelekre}
 {DONE -oKNZ : Felkell venni elsõ és második meres tomeget datumot idot és kezit}
 {TODO 3 -oKNZ : Sorszám hívás}
-{TODO 2 -oKNZ : Sorszám bekérés}
+{DONE 2 -oKNZ : Sorszám bekérés}
 {DONE -oKNZ : Mérés a mérlegjegy formon}
 {DONE -oKNZ : Kilépéskor ha nincs mentés, akkor kérdezzen rá}
 {DONE -oKNZ : Ha végleges mentés van, törölje a nyitbe táblából a mérést}
