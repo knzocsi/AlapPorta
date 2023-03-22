@@ -277,6 +277,10 @@
             <Form>Meres_MerlegjegyenF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Hardver_beallU.pas">
+            <Form>Hardver_beallF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <RcItem Include="Mjegy_sa_ho_ka.fr3">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>

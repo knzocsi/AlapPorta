@@ -6585,8 +6585,8 @@ object AF: TAF
     IndexFieldNames = 'csoport:A'
     Connection = Kapcs
     TableName = 'cfg'
-    Left = 16
-    Top = 152
+    Left = 616
+    Top = 48
   end
   object CfgTDs: TDataSource
     DataSet = CfgT
@@ -19887,5 +19887,19 @@ object AF: TAF
       FieldName = 'nev'
       Size = 50
     end
+  end
+  object HardverQ: TFDQuery
+    Active = True
+    Connection = Kapcs
+    SQL.Strings = (
+      'Select *'
+      'From hardver_beallitasok')
+    Left = 656
+    Top = 48
+  end
+  object HardverDS: TDataSource
+    DataSet = HardverQ
+    Left = 653
+    Top = 103
   end
 end

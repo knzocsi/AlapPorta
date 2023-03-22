@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, frxClass;
 
 type
-  TtesztF = class(TForm)
+  TTesztF = class(TForm)
     frxtesztrep: TfrxReport;
     Button1: TButton;
     cbxrepval: TComboBox;
@@ -24,13 +24,13 @@ type
   end;
 
 var
-  tesztF: TtesztF;
+  TesztF: TTesztF;
 
 implementation
    uses FoU;
 {$R *.dfm}
 
-procedure TtesztF.Button1Click(Sender: TObject);
+procedure TTesztF.Button1Click(Sender: TObject);
 //var Stream: TResourceStream;
 begin
 {  Stream := TResourceStream.Create(HInstance, 'Rep_'+IntToStr(cbxrepval.ItemIndex+1), RT_RCDATA);
@@ -40,12 +40,12 @@ begin
   FoF.stop(false);
 end;
 
-procedure TtesztF.Button2Click(Sender: TObject);
+procedure TTesztF.Button2Click(Sender: TObject);
 begin
 Fof.play(False);
 end;
 
-procedure TtesztF.Button3Click(Sender: TObject);
+procedure TTesztF.Button3Click(Sender: TObject);
 begin
 //Label1.Caption:='nincs kep';
   try

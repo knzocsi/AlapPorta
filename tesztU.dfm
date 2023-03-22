@@ -1,4 +1,4 @@
-object tesztF: TtesztF
+object TesztF: TTesztF
   Left = 0
   Top = 0
   Caption = 'Teszt'
@@ -16,7 +16,7 @@ object tesztF: TtesztF
   object Label1: TLabel
     Left = 184
     Top = 160
-    Width = 537
+    Width = 31
     Height = 13
     Caption = 'Label1'
   end

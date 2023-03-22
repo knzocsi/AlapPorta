@@ -1,4 +1,4 @@
-object felrakcimekF: TfelrakcimekF
+object FelrakcimekF: TFelrakcimekF
   Left = 0
   Top = 0
   Caption = 'Felrakod'#225'si c'#237'mek'

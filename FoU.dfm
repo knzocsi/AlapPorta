@@ -991,6 +991,10 @@ object FoF: TFoF
           OnClick = Szoftverbelltsok1Click
         end
       end
+      object Hardverbelltsok1: TMenuItem
+        Caption = 'Hardver be'#225'll'#237't'#225'sok'
+        OnClick = Hardverbelltsok1Click
+      end
       object teszt_m: TMenuItem
         Caption = 'Teszt'
         Visible = False

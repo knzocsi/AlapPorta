@@ -100,6 +100,7 @@ type
     dbgNyitbe: TDBGrid;
     sbtnFolytatas: TSpeedButton;
     sbtnSorszamhivas: TSpeedButton;
+    Hardverbelltsok1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -174,6 +175,7 @@ type
     procedure sbtnUjmerlegjegyClick(Sender: TObject);
     procedure dbgNyitbeCellClick(Column: TColumn);
     procedure sbtnSorszamhivasClick(Sender: TObject);
+    procedure Hardverbelltsok1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -232,7 +234,7 @@ uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
-  levon_szovegekU, demotomegU, nagykepU, szoftver_alapU;
+  levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -844,6 +846,12 @@ begin
  // showmessage(result);
   Result := string(PChar(Result));
 //  end;
+end;
+
+procedure TFoF.Hardverbelltsok1Click(Sender: TObject);
+begin
+  if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK' then exit;
+  Hardver_beallF.ShowModal;
 end;
 
 procedure TFoF.imgFelsokepClick(Sender: TObject);
@@ -1705,7 +1713,7 @@ end;
 
 procedure TFoF.Szoftverbelltsok1Click(Sender: TObject);
 begin
- if InputBox('Adja meg jelszavat',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
+ if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
  szoftver_alapF.fo
 end;
 
@@ -1780,7 +1788,7 @@ end;
 
 procedure TFoF.tulaj_mClick(Sender: TObject);
 begin
- if InputBox('Adja meg jelszavat',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
+ if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
  TulajokF.ShowModal
 end;
 

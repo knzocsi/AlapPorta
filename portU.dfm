@@ -111,8 +111,6 @@ object PortF: TPortF
       'Soros teszt'
       '')
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 35
   end
   object memHexa: TMemo
     Left = 0
@@ -123,7 +121,6 @@ object PortF: TPortF
     Lines.Strings = (
       '')
     TabOrder = 3
-    ExplicitWidth = 644
   end
   object Panel1: TPanel
     Left = 530

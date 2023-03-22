@@ -142,6 +142,8 @@ type
     tipusQ: TFDQuery;
     tipusQid: TAutoIncField;
     tipusQnev: TWideStringField;
+    HardverQ: TFDQuery;
+    HardverDS: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -314,6 +316,7 @@ begin
   if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
   else ModScript.ScriptDialog:=nil;
   modok_vegrehajt;//  SQL_text unitba kell
+  if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
   ini_kezel;
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
@@ -758,6 +761,8 @@ begin
   //utolso_sql:=cfg_kezel('','MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
  // inif.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
+
+  { TODO -oKNZ -c : Az Rtspket itt kell betölteni 2023. 03. 21. 17:55:47 }
   for k := 0 to 3 do
     begin
      rtspurls[k]:=inif.ReadString('Rtsp','URL Cam '+k.ToString,'');

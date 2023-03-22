@@ -158,7 +158,7 @@ begin
   sadat:=ertek+sadat;
   ertek:='';
   //Merleg_tipus:='DMI610';
-  if Merleg_tipus='Dibal' then mtip:=1        //R420 is
+  if (Merleg_tipus='Dibal') or (Merleg_tipus='R420') then mtip:=1        //R420 is
   else if Merleg_tipus='DMI610' then mtip:=2
     else if Merleg_tipus='MS' then mtip:=3
       else if Merleg_tipus='Excell' then mtip:=4
@@ -169,7 +169,7 @@ begin
                 else if Merleg_tipus='D400' then mtip:=9
                    else if Merleg_tipus='EntechSartorius' then mtip:=10
                       else if Merleg_tipus='S120' then mtip:=11
-                         else if Merleg_tipus='CZNEWTON' then mtip:=12;     //BW is   és T-Scale is
+                         else if (Merleg_tipus='CZNEWTON') or (Merleg_tipus='BW') or (Merleg_tipus='TScale') then mtip:=12;     //BW is   és T-Scale is
 
 
 

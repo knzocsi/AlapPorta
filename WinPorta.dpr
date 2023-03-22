@@ -50,7 +50,8 @@ uses
   MermodlistU in 'MermodlistU.pas' {MermodlistF},
   Vcl.Themes,
   Vcl.Styles,
-  Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF};
+  Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF},
+  Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF};
 
 {$R *.res}
 
@@ -97,5 +98,6 @@ begin
   Application.CreateForm(TMermodF, MermodF);
   Application.CreateForm(TMermodlistF, MermodlistF);
   Application.CreateForm(TMeres_MerlegjegyenF, Meres_MerlegjegyenF);
+  Application.CreateForm(THardver_beallF, Hardver_beallF);
   Application.Run;
 end.
