@@ -38,9 +38,10 @@ object Hardver_beallF: THardver_beallF
     Top = 41
     Width = 1112
     Height = 433
-    ActivePage = tbSegitseg
+    ActivePage = tsReszletek
     Align = alClient
     TabOrder = 1
+    OnChange = pcAdatokChange
     ExplicitWidth = 1077
     ExplicitHeight = 432
     object tsLista: TTabSheet
@@ -51,6 +52,7 @@ object Hardver_beallF: THardver_beallF
         Width = 1104
         Height = 405
         Align = alClient
+        DataSource = AF.HardverDS
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -107,9 +109,9 @@ object Hardver_beallF: THardver_beallF
       object Label5: TLabel
         Left = 428
         Top = 125
-        Width = 142
+        Width = 83
         Height = 13
-        Caption = 'ComPort (1 v. 2) vagy IP c'#237'm:'
+        Caption = 'Com vagy IP c'#237'm:'
       end
       object Label7: TLabel
         Left = 640
@@ -272,12 +274,12 @@ object Hardver_beallF: THardver_beallF
           'TScale')
         TabOrder = 9
       end
-      object DBComboBox2: TDBComboBox
+      object dcbMerleg: TDBComboBox
         Left = 640
         Top = 88
         Width = 141
         Height = 21
-        DataField = 'Eszkoznev'
+        DataField = 'Merleg'
         DataSource = AF.HardverDS
         Items.Strings = (
           '- Nincs megadva -'
@@ -320,36 +322,6 @@ object Hardver_beallF: THardver_beallF
         DataField = 'Kikapcs_Kimenet_szam'
         DataSource = AF.HardverDS
         TabOrder = 13
-      end
-      object dchkAktiv: TDBCheckBox
-        Left = 32
-        Top = 16
-        Width = 65
-        Height = 17
-        Caption = 'Akt'#237'v'
-        DataField = 'Aktiv'
-        DataSource = AF.HardverDS
-        TabOrder = 1
-      end
-      object dchkHibas: TDBCheckBox
-        Left = 96
-        Top = 16
-        Width = 55
-        Height = 17
-        Caption = 'Hib'#225's'
-        DataField = 'Hibas'
-        DataSource = AF.HardverDS
-        TabOrder = 2
-      end
-      object dchkAlaphelyzet: TDBCheckBox
-        Left = 157
-        Top = 16
-        Width = 97
-        Height = 17
-        Caption = 'Alaphelyzet'
-        DataField = 'Alaphelyzet'
-        DataSource = AF.HardverDS
-        TabOrder = 3
       end
       object dbeGombszoveg: TDBEdit
         Left = 32
@@ -404,6 +376,42 @@ object Hardver_beallF: THardver_beallF
         DataField = 'Rtsp'
         DataSource = AF.HardverDS
         TabOrder = 19
+      end
+      object dchkAktiv: TDBCheckBox
+        Left = 42
+        Top = 16
+        Width = 58
+        Height = 17
+        Caption = 'Akt'#237'v'
+        DataField = 'Aktiv'
+        DataSource = AF.HardverDS
+        TabOrder = 1
+        ValueChecked = '1'
+        ValueUnchecked = '0'
+      end
+      object dchkHibas: TDBCheckBox
+        Left = 130
+        Top = 16
+        Width = 58
+        Height = 17
+        Caption = 'Hib'#225's'
+        DataField = 'Hibas'
+        DataSource = AF.HardverDS
+        TabOrder = 2
+        ValueChecked = '1'
+        ValueUnchecked = '0'
+      end
+      object dchkAlaphelyzet: TDBCheckBox
+        Left = 218
+        Top = 16
+        Width = 79
+        Height = 17
+        Caption = 'Alaphelyzet'
+        DataField = 'Alaphelyzet'
+        DataSource = AF.HardverDS
+        TabOrder = 3
+        ValueChecked = '1'
+        ValueUnchecked = '0'
       end
     end
     object tbSegitseg: TTabSheet

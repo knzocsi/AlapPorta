@@ -250,6 +250,8 @@ var
   tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
   szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
   ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
+  Regi_hardver_beallitas:boolean;
+  PC_Szam:string;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 
@@ -635,10 +637,15 @@ begin
   Kapcs.Connected:=True; }
 
   inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
+  Regi_hardver_beallitas:=inif.ReadBool('ALAP','Regi_hardver_beallitas',True);
+  Regi_hardver_beallitas:=cfg_kezel('Régi esetén az inibõl és a cfgbõl veszi a hardver adatokat. Újnál a hardver táblábõl','ALAP','Regi_hardver_beallitas','Boolean',True);
+
+  PC_Szam:=Uppercase(inif.ReadString('ALAP','PC_Szam','PC01'));
+  inif.writeString('ALAP','PC_Szam',PC_Szam);
   visszanap:=inif.ReadInteger('ALAP','Visszanap',5);
   visszanap:=cfg_kezel('','ALAP','Visszanap','Integer',5);
  // ShowMessage(visszanap.ToString);
-  telephely:=inif.ReadString('ALAP','Telephely','Rakamaz');
+  telephely:=inif.ReadString('ALAP','Telephely','Telephely');
   telephely:=cfg_kezel('','ALAP','Telephely','String',telephely);
   //inif.writeString('ALAP','Telephely',telephely);
   nyugvovarakozas:=inif.ReadInteger('ALAP','Nyugvovarakozas',10);

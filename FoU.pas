@@ -228,6 +228,7 @@ var
     // A VLC plugin maPPÁja iskell a dll/ek mellett!!!!
   vlcLib: integer;
   pingprobak,kamprobak:Integer;
+
 implementation
 
 uses
@@ -592,6 +593,7 @@ var
   CardAddr, h,g,i: integer;
 begin
   onActivate := nil;
+  if not Regi_hardver_beallitas then af.HardverQ.Open;
   meresirany:='-';
   pingprobak:=5;
   kamprobak:=5;
@@ -693,20 +695,36 @@ begin
       if Hatso_lampa <> 0 then  Lampakapcs(Hatso_lampa, Lampa_Zold);
 
       //Mérlegek
-      if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-         and (PortF.merleg_szam('RS1')<>0) then PortF.portopen;
-      if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-         and (PortF.merleg_szam('IP1')<>0) and (moxa_ip1<>'Local') then PortF.IP1_Start;
-       if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
-         and (PortF.merleg_szam('IP2')<>0) and (moxa_ip2<>'Local') then PortF.IP2_Start;
-
+      if Regi_hardver_beallitas then
+      begin
+        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+           and (PortF.merleg_szam('RS1')<>0) then PortF.portopen;
+        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+           and (PortF.merleg_szam('IP1')<>0) and (moxa_ip1<>'Local') then PortF.IP1_Start;
+         if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+           and (PortF.merleg_szam('IP2')<>0) and (moxa_ip2<>'Local') then PortF.IP2_Start;
+      end
+      else
+      begin
+        if (UpperCase(ParamStr(1)) <> '/D') then
+        begin
+          if (af.HardverQ.locate('merleg','MERLEG1',[])) and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) then
+          begin
+            if af.HardverQ.FieldbyName('Tipus').AsString='SOROS_ADAT' then
+            begin
+              Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
+              PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+              PortF.portopen;
+            end;
+          end;
+        end;
+      end;
 
     end;
     lbl1.Visible:=rendszamleker;
     lbl2.Visible:=rendszamleker;
     lbl3.Visible:=sorompo_vezerles;
     ledLampa.Visible:=(Elso_lampa <> 0) or (Hatso_lampa <> 0);
-
     Tomeg_Timer.Enabled := true;
     Rendszam_Lampa_Timer.Enabled := True;
   finally
