@@ -591,6 +591,40 @@ end;
 procedure TFoF.FormActivate(Sender: TObject);
 var
   CardAddr, h,g,i: integer;
+
+  procedure Merleg(merlegszam:Integer);
+  begin
+     if (af.HardverQ.locate('Eszkoznev','MERLEG1',[])) and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) then
+          begin
+            if af.HardverQ.FieldbyName('Tipus').AsString='SOROS_ADAT' then
+            begin
+              Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
+              merlegek[merlegszam]:='RS'+merlegszam.ToString; // a régivel való kompatibilitás megörzése miatt kell
+              PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+              PortF.portopen;
+            end
+            else
+               if af.HardverQ.FieldbyName('Tipus').AsString='IP_ADAT' then
+               begin
+                 Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
+                 merlegek[merlegszam]:='IP'+merlegszam.ToString; // a régivel való kompatibilitás megörzése miatt kell
+                 case merlegszam of
+                   1 :  begin
+                          moxa_ip1:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+                          moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          PortF.IP1_Start;
+                        end;
+                   2 :  begin
+                          moxa_ip2:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+                          moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          PortF.IP2_Start;
+                        end;
+                 end;
+
+               end;
+          end;
+  end;
+
 begin
   onActivate := nil;
   if not Regi_hardver_beallitas then af.HardverQ.Open;
@@ -707,17 +741,8 @@ begin
       else
       begin
         if (UpperCase(ParamStr(1)) <> '/D') then
-        begin
-          if (af.HardverQ.locate('merleg','MERLEG1',[])) and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) then
-          begin
-            if af.HardverQ.FieldbyName('Tipus').AsString='SOROS_ADAT' then
-            begin
-              Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
-              PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-              PortF.portopen;
-            end;
-          end;
-        end;
+          for i :=1  to 4 do  Merleg(i);
+
       end;
 
     end;

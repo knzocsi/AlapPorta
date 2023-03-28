@@ -15,23 +15,27 @@ File_12=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\AU.pas',0,1,441,58,470,0,0,,
 File_13=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\FoU.pas',0,1,775,31,783,0,0,,{2
 
 [Modules]
-Module0=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
-Module1=N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas
-Module2=N:\Delphi_10_4\KNZ\Porta_alap\AU.pas
-Module3=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
-Module4=N:\Delphi_10_4\KNZ\Porta_alap\TermekekU.pas
-Module5=N:\Delphi_10_4\KNZ\Porta_alap\tipusokU.pas
-Module6=N:\Delphi_10_4\KNZ\Porta_alap\SQL_text.pas
-Count=7
+Module0=N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas
+Module1=N:\Delphi_10_4\KNZ\Porta_alap\AU.pas
+Module2=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
+Module3=N:\Delphi_10_4\KNZ\Porta_alap\tipusokU.pas
+Module4=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
+Module5=N:\Delphi_10_4\KNZ\Porta_alap\TermekekU.pas
+Module6=N:\Delphi_10_4\KNZ\Porta_alap\Hardver_beallU.pas
+Module7=N:\Delphi_10_4\KNZ\Porta_alap\SQL_text.pas
+Count=8
 EditWindowCount=1
-
-[N:\Delphi_10_4\KNZ\Porta_alap\portU.pas]
-ModuleType=TSourceModule
 
 [N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\KNZ\Porta_alap\AU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\KNZ\Porta_alap\portU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\KNZ\Porta_alap\tipusokU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas]
@@ -40,15 +44,15 @@ ModuleType=TSourceModule
 [N:\Delphi_10_4\KNZ\Porta_alap\TermekekU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\KNZ\Porta_alap\tipusokU.pas]
+[N:\Delphi_10_4\KNZ\Porta_alap\Hardver_beallU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\KNZ\Porta_alap\SQL_text.pas]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=7
-CurrentEditView=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
+ViewCount=8
+CurrentEditView=N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas
 View0=0
 View1=1
 View2=2
@@ -56,6 +60,7 @@ View3=3
 View4=4
 View5=5
 View6=6
+View7=7
 PercentageSizes=1
 Create=1
 Visible=1
@@ -88,75 +93,86 @@ BottomMiddelPanelData=0000080001000100000010000000477261706844726177696E67566965
 [View0]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas
-CursorX=3
-CursorY=1605
-TopLine=1602
+CursorX=27
+CursorY=605
+TopLine=592
 LeftCol=1
 Elisions=
-Bookmarks={1,782,1}
+Bookmarks={1,745,1}
 EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\FoU.pas
 
 [View1]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\KNZ\Porta_alap\AU.pas
-CursorX=68
-CursorY=250
-TopLine=235
+CursorX=55
+CursorY=638
+TopLine=624
 LeftCol=1
 Elisions=
-Bookmarks={1,863,120}{2,250,68}
+Bookmarks={1,872,47}{2,251,65}{3,641,1}
 EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\AU.pas
 
 [View2]
 CustomEditViewType=TEditView
-Module=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
-CursorX=23
-CursorY=445
-TopLine=429
+Module=N:\Delphi_10_4\KNZ\Porta_alap\Hardver_beallU.pas
+CursorX=34
+CursorY=135
+TopLine=110
 LeftCol=1
 Elisions=
-Bookmarks={1,1088,10}{2,447,1}{3,377,1}{4,852,24}{5,1186,1}{6,1273,43}{7,298,1}{8,577,1}{9,447,1}
-EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
+Bookmarks=
+EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\Hardver_beallU.pas
 
 [View3]
 CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
+CursorX=23
+CursorY=445
+TopLine=447
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\mjegyU.pas
+
+[View4]
+CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\KNZ\Porta_alap\SQL_text.pas
-CursorX=39
-CursorY=457
-TopLine=429
+CursorX=24
+CursorY=879
+TopLine=870
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\SQL_text.pas
 
-[View4]
+[View5]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\KNZ\Porta_alap\TermekekU.pas
 CursorX=38
 CursorY=239
-TopLine=237
+TopLine=241
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View5]
-CustomEditViewType=TEditView
-Module=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
-CursorX=14
-CursorY=847
-TopLine=827
-LeftCol=1
-Elisions=
-Bookmarks={1,986,1}{2,847,34}
-EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
+EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\TermekekU.pas
 
 [View6]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
+CursorX=1
+CursorY=871
+TopLine=869
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\KNZ\Porta_alap\portU.pas
+
+[View7]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\KNZ\Porta_alap\tipusokU.pas
 CursorX=57
 CursorY=47
-TopLine=25
+TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -336,11 +352,6 @@ LRDockWidth=1896
 Dockable=1
 StayOnTop=0
 SplitPos=111
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Action,OnClick
-ExpandedItems=Events=0,FlowControl=0,"LiveBindings Designer=0",Parity=0,Anchors=0,Constraints=0,LiveBindings=0
 
 [frmDesignPreview]
 PercentageSizes=1

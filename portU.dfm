@@ -24,7 +24,6 @@ object PortF: TPortF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 644
     object ComLed1: TComLed
       Left = 705
       Top = 0
@@ -129,7 +128,6 @@ object PortF: TPortF
     Height = 383
     Align = alRight
     TabOrder = 2
-    ExplicitLeft = 404
     object memEredmeny: TMemo
       Left = 1
       Top = 137

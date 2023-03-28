@@ -808,6 +808,7 @@ begin
   Aktiv:=false;
   //mertertek:='-5';
   hibaszamlalo:=0;
+
   inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
   merlegek[1]:=inif.ReadString('Merleg','Merleg1','RS1');
   inif.writeString('Merleg','Merleg1',merlegek[1]);
