@@ -35,6 +35,9 @@ const
   Lampa_Piros=1;
 
 
+  Maxinfra=4; // ha változás van, akkor a hardver_beall formon az eszkoz kombóban is kell változtatmi
+
+
 
 type
   TAF = class(TDataModule)

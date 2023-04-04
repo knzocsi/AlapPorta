@@ -51,7 +51,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF},
-  Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF};
+  Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF},
+  PLC_COMU in 'PLC_COMU.pas' {PLC_COMF};
 
 {$R *.res}
 
@@ -99,5 +100,6 @@ begin
   Application.CreateForm(TMermodlistF, MermodlistF);
   Application.CreateForm(TMeres_MerlegjegyenF, Meres_MerlegjegyenF);
   Application.CreateForm(THardver_beallF, Hardver_beallF);
+  Application.CreateForm(TPLC_COMF, PLC_COMF);
   Application.Run;
 end.

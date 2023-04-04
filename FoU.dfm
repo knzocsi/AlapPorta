@@ -919,6 +919,10 @@ object FoF: TFoF
         Caption = 'Anthera t'#246'rzs import'
         OnClick = Antheratrzsimport1Click
       end
+      object tomeg_levon_szovegek_m: TMenuItem
+        Caption = 'T'#246'meg levon'#225'si sz'#246'vegek'
+        OnClick = tomeg_levon_szovegek_mClick
+      end
     end
     object Listk1: TMenuItem
       Caption = 'List'#225'k'
@@ -968,18 +972,6 @@ object FoF: TFoF
         Caption = 'M'#233'rlegkezel'#337'k'
         OnClick = Mrlegkezelk1Click
       end
-      object Sorosportbellts1: TMenuItem
-        Caption = 'Soros port be'#225'll'#237't'#225's'
-        OnClick = Sorosportbellts1Click
-      end
-      object Sorompnyitinfrahiba1: TMenuItem
-        Caption = 'BE Soromp'#243' nyit'#243' infra hiba'
-        OnClick = Sorompnyitinfrahiba1Click
-      end
-      object KISorompnyitinfrahiba1: TMenuItem
-        Caption = 'KI Soromp'#243' nyit'#243' infra hiba'
-        OnClick = KISorompnyitinfrahiba1Click
-      end
       object alapbe_m: TMenuItem
         Caption = 'Alap be'#225'll'#237't'#225'sok'
         object tulaj_m: TMenuItem
@@ -993,16 +985,31 @@ object FoF: TFoF
       end
       object Hardverbelltsok1: TMenuItem
         Caption = 'Hardver be'#225'll'#237't'#225'sok'
-        OnClick = Hardverbelltsok1Click
+        object Alaphardveresbelltsok1: TMenuItem
+          Caption = 'Alap hardveres be'#225'll'#237't'#225'sok'
+          OnClick = Alaphardveresbelltsok1Click
+        end
+        object Sorosportbellts1: TMenuItem
+          Caption = 'Soros port be'#225'll'#237't'#225's'
+          OnClick = Sorosportbellts1Click
+        end
+        object PLCsorosportbellts1: TMenuItem
+          Caption = 'PLC soros port be'#225'll'#237't'#225's'
+          OnClick = PLCsorosportbellts1Click
+        end
+      end
+      object Sorompnyitinfrahiba1: TMenuItem
+        Caption = 'BE Soromp'#243' nyit'#243' infra hiba'
+        OnClick = Sorompnyitinfrahiba1Click
+      end
+      object KISorompnyitinfrahiba1: TMenuItem
+        Caption = 'KI Soromp'#243' nyit'#243' infra hiba'
+        OnClick = KISorompnyitinfrahiba1Click
       end
       object teszt_m: TMenuItem
         Caption = 'Teszt'
         Visible = False
         OnClick = teszt_mClick
-      end
-      object tomeg_levon_szovegek_m: TMenuItem
-        Caption = 'T'#246'meg levon'#225'si sz'#246'vegek'
-        OnClick = tomeg_levon_szovegek_mClick
       end
     end
     object Kpek1: TMenuItem

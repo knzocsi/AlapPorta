@@ -54,6 +54,8 @@ type
     dchkAktiv: TDBCheckBox;
     dchkHibas: TDBCheckBox;
     dchkAlaphelyzet: TDBCheckBox;
+    Label17: TLabel;
+    dbeHiba_kimenet: TDBEdit;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);

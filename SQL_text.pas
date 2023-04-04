@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=18;
+      maxSQL=19;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -892,7 +892,9 @@ interface
     ' `Varakozas_ms` int(11) DEFAULT 0,' + #13#10 +
     '	`Rtsp` VARCHAR(180) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'' ' +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10
-
+    ,
+     //Ha a PLC program használja, hogy hibás, erre a címre kell írni (Regi sorompo hiba)
+    'ALTER TABLE hardver_beallitasok ADD COLUMN IF NOT EXISTS Hiba_kimenet_szam INT(11) DEFAULT 0;'
 
     );
 

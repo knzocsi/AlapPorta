@@ -76,6 +76,7 @@ type
   end;
 const
   hibamaximum=5;
+  Maxmerleg=4;  // ha változás van, akkor a hardver_beall formon az merleg kombóban is kell változtatmi
 
 var
   PortF: TPortF;
@@ -83,9 +84,9 @@ var
   sorosvetelben,Aktiv:boolean;
   mertdarab,mertek:string;
   tf:textfile;
-  merlegek,mertertekek,mertekek: array [1..4]of String;
-  elozotomeg,nyugalmiszamlalo:array [1..4]of integer;
-  nullszintvolt,rendszamvolt :array [1..4] of boolean;
+  merlegek,mertertekek,mertekek: array [1..maxmerleg]of String;
+  elozotomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
+  nullszintvolt,rendszamvolt :array [1..maxmerleg] of boolean;
   hibaszamlalo:integer;
 
 
@@ -293,6 +294,7 @@ begin
 
           until (kilep) or (si=Length(sadat));
           if (adat<>#10) then mertdarab:=sadat;
+          if Not(kilep) then mertekek[merlegszam]:=sadat;
         end;
 
 
@@ -681,7 +683,7 @@ begin
                   memEredmeny.Text:='Érték feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                 end;
 
-                mertek:='';
+                mertekek[merlegszam]:='';
 
                 kilep:=true;
               end
@@ -696,7 +698,7 @@ begin
 
 
          // portolvasás vége
-          if Not(kilep) then mertek:=ertek;
+          if Not(kilep) then mertekek[merlegszam]:=sadat;
 
           if kilep then
             try

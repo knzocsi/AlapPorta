@@ -22,7 +22,6 @@ object Hardver_beallF: THardver_beallF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 809
     object btnKilepes: TButton
       Left = 80
       Top = 66
@@ -42,8 +41,6 @@ object Hardver_beallF: THardver_beallF
     Align = alClient
     TabOrder = 1
     OnChange = pcAdatokChange
-    ExplicitWidth = 1077
-    ExplicitHeight = 432
     object tsLista: TTabSheet
       Caption = 'Lista'
       object DBGrid1: TDBGrid
@@ -176,6 +173,13 @@ object Hardver_beallF: THardver_beallF
         Height = 13
         Caption = 'Rtsp el'#233'r'#233's:'
       end
+      object Label17: TLabel
+        Left = 989
+        Top = 125
+        Width = 65
+        Height = 13
+        Caption = 'Hiba kimenet:'
+      end
       object dbeLeiras: TDBEdit
         Left = 32
         Top = 88
@@ -284,7 +288,9 @@ object Hardver_beallF: THardver_beallF
         Items.Strings = (
           '- Nincs megadva -'
           'M1'
-          'M2')
+          'M2'
+          'M3'
+          'M4')
         TabOrder = 6
       end
       object dbeComport_v_IP_cim: TDBEdit
@@ -330,7 +336,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Gomb_szoveg'
         DataSource = AF.HardverDS
-        TabOrder = 14
+        TabOrder = 15
       end
       object dbeGombszam: TDBEdit
         Left = 248
@@ -339,7 +345,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Gomb_szam'
         DataSource = AF.HardverDS
-        TabOrder = 15
+        TabOrder = 16
       end
       object dbeLabelszoveg: TDBEdit
         Left = 344
@@ -348,7 +354,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Label_szoveg'
         DataSource = AF.HardverDS
-        TabOrder = 16
+        TabOrder = 17
       end
       object dbeLabelszam: TDBEdit
         Left = 553
@@ -357,7 +363,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Label_szam'
         DataSource = AF.HardverDS
-        TabOrder = 17
+        TabOrder = 18
       end
       object dbeVarakozas: TDBEdit
         Left = 656
@@ -366,7 +372,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Varakozas_ms'
         DataSource = AF.HardverDS
-        TabOrder = 18
+        TabOrder = 19
       end
       object dbeRtsp: TDBEdit
         Left = 32
@@ -375,7 +381,7 @@ object Hardver_beallF: THardver_beallF
         Height = 21
         DataField = 'Rtsp'
         DataSource = AF.HardverDS
-        TabOrder = 19
+        TabOrder = 20
       end
       object dchkAktiv: TDBCheckBox
         Left = 42
@@ -412,6 +418,15 @@ object Hardver_beallF: THardver_beallF
         TabOrder = 3
         ValueChecked = '1'
         ValueUnchecked = '0'
+      end
+      object dbeHiba_kimenet: TDBEdit
+        Left = 989
+        Top = 144
+        Width = 65
+        Height = 21
+        DataField = 'Hiba_kimenet_szam'
+        DataSource = AF.HardverDS
+        TabOrder = 14
       end
     end
     object tbSegitseg: TTabSheet

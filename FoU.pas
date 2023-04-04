@@ -101,6 +101,8 @@ type
     sbtnFolytatas: TSpeedButton;
     sbtnSorszamhivas: TSpeedButton;
     Hardverbelltsok1: TMenuItem;
+    Alaphardveresbelltsok1: TMenuItem;
+    PLCsorosportbellts1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -175,7 +177,8 @@ type
     procedure sbtnUjmerlegjegyClick(Sender: TObject);
     procedure dbgNyitbeCellClick(Column: TColumn);
     procedure sbtnSorszamhivasClick(Sender: TObject);
-    procedure Hardverbelltsok1Click(Sender: TObject);
+    procedure Alaphardveresbelltsok1Click(Sender: TObject);
+    procedure PLCsorosportbellts1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -235,7 +238,8 @@ uses
   au, PartnerekU, TermekekU, RendszamokU, ForgalomU, ParositottU, KepekU, BelepU,
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
-  levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU;
+  levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
+  PLC_COMU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -286,6 +290,12 @@ procedure SetCounterDebounceTime(CounterNr, DebounceTime: integer); stdcall; ext
 
 
 {$R *.dfm}
+
+procedure TFoF.Alaphardveresbelltsok1Click(Sender: TObject);
+begin
+   if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK' then exit;
+  Hardver_beallF.ShowModal;
+end;
 
 procedure TFoF.Antheratrzsimport1Click(Sender: TObject);
 begin
@@ -553,7 +563,7 @@ end;
 
 procedure TFoF.teszt_mClick(Sender: TObject);
 begin
-tesztF.showmodal;
+  tesztF.showmodal;
 end;
 
 procedure TFoF.tomeg_levon_szovegek_mClick(Sender: TObject);
@@ -592,9 +602,14 @@ procedure TFoF.FormActivate(Sender: TObject);
 var
   CardAddr, h,g,i: integer;
 
-  procedure Merleg(merlegszam:Integer);
+  procedure Merleg;
+  var merlegszam:integer;
   begin
-     if (af.HardverQ.locate('Eszkoznev','MERLEG1',[])) and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) then
+    for merlegszam := 1 to Maxmerleg do
+
+     if (af.HardverQ.locate('Eszkoznev','MERLEG'+merlegszam.ToString,[]))
+       and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+       and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)        then
           begin
             if af.HardverQ.FieldbyName('Tipus').AsString='SOROS_ADAT' then
             begin
@@ -623,6 +638,26 @@ var
 
                end;
           end;
+  end;
+
+  procedure Infrak;
+  var merlegszam,infraszam:integer;
+  begin
+    for merlegszam :=1 to Maxmerleg do
+      for infraszam := 1 to Maxinfra do
+      begin
+        if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['INFRA'+infraszam.ToString,'M'+merlegszam.ToString]),[]))
+            and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+            and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)        then
+          { TODO -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
+          if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
+          begin
+            PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            PLC_Ir(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger);
+          end;
+
+
+      end;
   end;
 
 begin
@@ -688,42 +723,51 @@ begin
   try
     if UpperCase(ParamStr(1)) <> '/D' then
     begin
-      if vezerles_tipus = 'USB' then
+      if Regi_hardver_beallitas then
       begin
-        CardAddr := 0; //3-(integer(sk5.Checked) + integer(sk6.Checked) * 2);
-       // h := OpenDevice(CardAddr);
-        case h of
-          0..3:
-            begin
-              StatusBar1.panels[3].text := 'Kártya ' + inttostr(h) + ' csatlakozva';
-              kartyavan := true;
-            end;
-          -1:
-            begin
-              StatusBar1.panels[3].text := 'Kártya ' + inttostr(CardAddr) + ' nem található';
-              ;
-            end;
-        end;
-      end
-      else if vezerles_tipus = 'PLC' then
-      begin
-        if sorompo_vezerles then
+        if vezerles_tipus = 'USB' then
         begin
-          PLC_Ir(Sorompo_Infra_Hiba_cim_BE, sorompo_infra_hibas_BE);
-          PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
-          PLC_Ir(Sorompo_Infra_Hiba_cim_KI, sorompo_infra_hibas_KI);
-          PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
-          //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
-          PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
-          PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
+          CardAddr := 0; //3-(integer(sk5.Checked) + integer(sk6.Checked) * 2);
+         // h := OpenDevice(CardAddr);
+          case h of
+            0..3:
+              begin
+                StatusBar1.panels[3].text := 'Kártya ' + inttostr(h) + ' csatlakozva';
+                kartyavan := true;
+              end;
+            -1:
+              begin
+                StatusBar1.panels[3].text := 'Kártya ' + inttostr(CardAddr) + ' nem található';
+
+              end;
+          end;
         end
         else
-        begin
-          PLC_Ir(Infra_BE_Cim, 0);
-          PLC_Ir(Infra_KI_Cim, 0);
-        end;
+          if vezerles_tipus = 'PLC' then
+          begin
+            if sorompo_vezerles then
+            begin
+              PLC_Ir(Sorompo_Infra_Hiba_cim_BE, sorompo_infra_hibas_BE);
+              PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
+              PLC_Ir(Sorompo_Infra_Hiba_cim_KI, sorompo_infra_hibas_KI);
+              PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
+              //Ki kell nullázni, mert ha bentragad nem nyílik a sorompó
+              PLC_Ir(Sorompo_Nyit_Cim_BE, 0);
+              PLC_Ir(Sorompo_Nyit_Cim_KI, 0);
+            end
+            else
+            begin
+              PLC_Ir(Infra_BE_Cim, 0);
+              PLC_Ir(Infra_KI_Cim, 0);
+            end;
+          end
+          else StatusBar1.panels[3].text := '';
       end
-      else StatusBar1.panels[3].text := '';
+      else
+      //Új hardver beállítésok esetén
+      begin
+        infrak;
+      end;
     { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
       if Elso_lampa <> 0 then Lampakapcs(Elso_lampa, Lampa_Zold);
       if Hatso_lampa <> 0 then  Lampakapcs(Hatso_lampa, Lampa_Zold);
@@ -740,9 +784,7 @@ begin
       end
       else
       begin
-        if (UpperCase(ParamStr(1)) <> '/D') then
-          for i :=1  to 4 do  Merleg(i);
-
+        if (UpperCase(ParamStr(1)) <> '/D') then   Merleg;
       end;
 
     end;
@@ -889,12 +931,6 @@ begin
  // showmessage(result);
   Result := string(PChar(Result));
 //  end;
-end;
-
-procedure TFoF.Hardverbelltsok1Click(Sender: TObject);
-begin
-  if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK' then exit;
-  Hardver_beallF.ShowModal;
 end;
 
 procedure TFoF.imgFelsokepClick(Sender: TObject);
@@ -2243,6 +2279,11 @@ begin
     else Sleep(100)
   end;
 
+end;
+
+procedure TFoF.PLCsorosportbellts1Click(Sender: TObject);
+begin
+  PLC_COMF.showmodal;
 end;
 
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;
