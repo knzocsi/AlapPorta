@@ -144,12 +144,12 @@ begin
 
   if Active then
   begin
-    memTeszt.Text:=ertek+memTeszt.text;
-    memHexa.Text:= memHexa.Text+hexaszov(ertek);
+    memTeszt.Text:=sadat+memTeszt.text;
+    memHexa.Text:= memHexa.Text+hexaszov(sadat);
   end;
 
-  if uppercase( ParamStr(1))='/LOG'then  Writeln(tf,sadat);
-  if ParamStr(1)='/CT2' then ShowMessage('1s:'+ERTEK);
+  if uppercase( ParamStr(1))='/LOG'then  Writeln(tf,ERTEK+'+'+sadat);
+  if ParamStr(1)='/CT5' then ShowMessage('1s:'+ERTEK+'+'+sadat);
   sadat:=ertek+sadat;
   ertek:='';
   //Merleg_tipus:='DMI610';
@@ -288,6 +288,7 @@ begin
 
           until (kilep) or (si=Length(sadat));
           if (adat<>#10) then mertdarab:=sadat;
+          if Not(kilep) then mertekek[merlegszam]:=sadat;
         end;
 
 
@@ -676,7 +677,7 @@ begin
                   memEredmeny.Text:='Érték feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                 end;
 
-                mertek:='';
+                mertekek[merlegszam]:='';
 
                 kilep:=true;
               end
@@ -691,7 +692,7 @@ begin
 
 
          // portolvasás vége
-          if Not(kilep) then mertek:=ertek;
+         if Not(kilep) then mertekek[merlegszam]:=sadat;
 
           if kilep then
             try

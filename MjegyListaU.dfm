@@ -871,6 +871,8 @@ object MjegyekF: TMjegyekF
   end
   object mjegyekQ: TFDQuery
     Connection = AF.Kapcs
+    SQL.Strings = (
+      '')
     Left = 640
     Top = 224
   end
