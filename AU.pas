@@ -318,6 +318,7 @@ begin
       end;
     end;
   end;
+
   if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
   else ModScript.ScriptDialog:=nil;
   modok_vegrehajt;//  SQL_text unitba kell

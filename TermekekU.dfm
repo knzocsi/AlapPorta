@@ -40,6 +40,7 @@
       Height = 25
       Caption = 'Import'
       TabOrder = 1
+      Visible = False
       OnClick = btnImportClick
     end
   end

@@ -192,7 +192,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -981,6 +981,10 @@ object FoF: TFoF
         object Szoftverbelltsok1: TMenuItem
           Caption = 'Szoftver be'#225'll'#237't'#225'sok'
           OnClick = Szoftverbelltsok1Click
+        end
+        object Import1: TMenuItem
+          Caption = 'Import'
+          OnClick = Import1Click
         end
       end
       object Hardverbelltsok1: TMenuItem

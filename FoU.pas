@@ -103,6 +103,7 @@ type
     Hardverbelltsok1: TMenuItem;
     Alaphardveresbelltsok1: TMenuItem;
     PLCsorosportbellts1: TMenuItem;
+    Import1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -179,6 +180,7 @@ type
     procedure sbtnSorszamhivasClick(Sender: TObject);
     procedure Alaphardveresbelltsok1Click(Sender: TObject);
     procedure PLCsorosportbellts1Click(Sender: TObject);
+    procedure Import1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -239,7 +241,7 @@ uses
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
-  PLC_COMU;
+  PLC_COMU, ImportU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -662,6 +664,7 @@ var
 
 begin
   onActivate := nil;
+
   if not Regi_hardver_beallitas then af.HardverQ.Open;
   meresirany:='-';
   pingprobak:=5;
@@ -942,6 +945,13 @@ begin
   if (Sender=imgAlsokep)and(FileExists(aF.ForgalomQ.FieldByName('Kepnev2').AsString)) then
       NagykepF.kepnev:=aF.ForgalomQ.FieldByName('Kepnev2').AsString;
   NagykepF.Showmodal;
+end;
+
+procedure TFoF.Import1Click(Sender: TObject);
+begin
+  ImportF.Kapcs.Close;
+  ImportF.Kapcs.Params:=Af.Kapcs.Params;
+  ImportF.ShowModal;
 end;
 
 function TFoF.IO_Ir(cim:integer; ertek: Boolean): boolean;

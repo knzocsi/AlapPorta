@@ -225,7 +225,6 @@ object AF: TAF
     ResourceOptions.AutoConnect = False
     UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
     UpdateOptions.LockMode = lmOptimistic
-    Connected = True
     LoginPrompt = False
     OnLost = KapcsLost
     BeforeCommit = KapcsBeforeCommit
@@ -2593,7 +2592,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.754742951390000000
-    ReportOptions.LastChange = 44883.572169629630000000
+    ReportOptions.LastChange = 45029.411294386580000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2809,7 +2808,7 @@ object AF: TAF
         object Memo11: TfrxMemoView
           AllowVectorExport = True
           Left = 733.228820000000000000
-          Width = 94.488250000000000000
+          Width = 113.385900000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2818,7 +2817,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Partner')
+            'Partner/Partner2')
           ParentFont = False
         end
         object Memo12: TfrxMemoView
@@ -3094,6 +3093,19 @@ object AF: TAF
           Memo.UTF8W = (
             '[frxDBDataset1."megjegyzes"]')
         end
+        object Memo18: TfrxMemoView
+          AllowVectorExport = True
+          Left = 733.228820000000000000
+          Top = 22.677180000000000000
+          Width = 204.094620000000000000
+          Height = 18.897650000000000000
+          StretchMode = smMaxHeight
+          DataSet = DBFrxmjegyList
+          DataSetName = 'frxDBDataset1'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDataset1."p2_nev"]')
+        end
       end
       object ReportSummary1: TfrxReportSummary
         FillType = ftBrush
@@ -3176,30 +3188,77 @@ object AF: TAF
     FieldAliases.Strings = (
       'ID=ID'
       'Sorszam=Sorszam'
+      'Ev_ssz=Ev_ssz'
+      'Eazon=Eazon'
       'Storno=Storno'
-      'rendszam=rendszam'
-      'rendszam2=rendszam2'
-      'P_id=P_id'
-      'p_kod=p_kod'
-      'p_nev=p_nev'
-      'p_cim=p_cim'
-      'termek_id=termek_id'
-      'termek_kod=termek_kod'
-      'termek_nev=termek_nev'
-      'szallitolev=szallitolev'
-      'megjegyzes=megjegyzes'
-      'tomegbe=tomegbe'
-      'tomegki=tomegki'
-      'brutto=brutto'
-      'tara=tara'
-      'netto=netto'
-      'sznetto=sznetto'
-      'erkdatum=erkdatum'
-      'erkido=erkido'
-      'tavdatum=tavdatum'
-      'tavido=tavido'
-      'felhasznalo=felhasznalo'
-      'irany=irany')
+      'Rendszam=rendszam'
+      'Rendszam2=rendszam2'
+      'P_ID=P_id'
+      'P_Kod=p_kod'
+      'P_Nev=p_nev'
+      'P_Cim=p_cim'
+      'Termek_ID=termek_id'
+      'Termek_Kod=termek_kod'
+      'Termek_Nev=termek_nev'
+      'Termek_afa=Termek_afa'
+      'termek_ar=termek_ar'
+      'Szallitolev=szallitolev'
+      'Megjegyzes=megjegyzes'
+      'Tomegbe=tomegbe'
+      'Tomegki=tomegki'
+      'Erkdatum=erkdatum'
+      'Erkido=erkido'
+      'Tavdatum=tavdatum'
+      'Tavido=tavido'
+      'Felhasznalo=felhasznalo'
+      'irany=irany'
+      'Brutto=brutto'
+      'Tara=tara'
+      'Netto=netto'
+      'SzNetto=sznetto'
+      'merlegelo=merlegelo'
+      'kuj=kuj'
+      'ktj=ktj'
+      'ekaer=ekaer'
+      'psz=psz'
+      'alapnedv=alapnedv'
+      'nedv=nedv'
+      'tisztasag=tisztasag'
+      'tortszaz=tortszaz'
+      'feherje=feherje'
+      'olaj=olaj'
+      'esesszam=esesszam'
+      'hekto=hekto'
+      'egysegtomeg=egysegtomeg'
+      'kerekites=kerekites'
+      'kukorica=kukorica'
+      'buzaminoseg=buzaminoseg'
+      'mennyiseg=mennyiseg'
+      'tarolasi_dij=tarolasi_dij'
+      'szaritasi_dij=szaritasi_dij'
+      'tisztitasi_dij=tisztitasi_dij'
+      'tarolo_id=tarolo_id'
+      'tarolo=tarolo'
+      'elso_kezi=elso_kezi'
+      'masodik_kezi=masodik_kezi'
+      'tul_id=tul_id'
+      'tul_nev=tul_nev'
+      'tul_cim=tul_cim'
+      'tul_adoszam=tul_adoszam'
+      'tul_kuj=tul_kuj'
+      'tul_ktj=tul_ktj'
+      'tul_elotag=tul_elotag'
+      'P2_ID=P2_ID'
+      'P2_Kod=P2_Kod'
+      'P2_Nev=P2_Nev'
+      'P2_Cim=P2_Cim'
+      'P2_kuj=P2_kuj'
+      'P2_ktj=P2_ktj'
+      'levon_szoveg=levon_szoveg'
+      'levon_tomeg=levon_tomeg'
+      'ewc=ewc'
+      'tul_cjsz=tul_cjsz'
+      'szaraz_tort_szemek=szaraz_tort_szemek')
     DataSource = MjegyekF.mjegyekQDs
     BCDToCurrency = False
     Left = 640
@@ -19889,7 +19948,6 @@ object AF: TAF
     end
   end
   object HardverQ: TFDQuery
-    Active = True
     Connection = Kapcs
     SQL.Strings = (
       'Select *'
