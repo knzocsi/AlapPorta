@@ -8,6 +8,14 @@ uses
   Vcl.ExtCtrls,Cport;
 
 type
+  ThLekerdezes  = class(TThread)
+     procedure kijelez;
+  protected
+    procedure Execute; override;
+  public
+    port:string;
+  end;
+
   TPLC_COMF = class(TForm)
     Panel1: TPanel;
     Label1: TLabel;
@@ -35,11 +43,16 @@ type
     procedure FormActivate(Sender: TObject);
     procedure tmrModbusTimeoutTimer(Sender: TObject);
     procedure Label3Click(Sender: TObject);
+    procedure Label2Click(Sender: TObject);
 
   private
     { Private declarations }
   public
-    function ModBusOlvasBit(coil,db:Integer):integer;
+    Lekerdezett_Valasz:Integer;
+    function ModBusOlvasBit(port:string;coil,db:Integer):integer;
+    function ModBusIrBit(port:string;coil,ertek:Integer):integer;
+    function portOpen(port:string):integer;
+    procedure threadrun(port:string);
     { Public declarations }
   end;
 
@@ -55,11 +68,34 @@ var
   crcKey:integer;
   ModBus_Valasz:String;
 
+  LekerdezesTh:ThLekerdezes;
+
 implementation
 
 {$R *.dfm}
 
 Uses au;
+
+procedure ThLekerdezes.kijelez;
+begin
+  PLC_COMF.lblKommunikacio.Caption:=IntToStr(PLC_COMF.Lekerdezett_Valasz);
+end;
+
+procedure ThLekerdezes.execute;
+var i:integer;
+begin
+   repeat
+     PLC_COMF.Lekerdezett_Valasz:= PLC_COMF.ModBusOlvasBit(port,0,16);
+     for i:=1 to 25 do
+     begin
+       Sleep(20);
+       Application.ProcessMessages;
+     end;
+     Synchronize(kijelez);
+   until programvege;
+end;
+
+
 
 {
 fungsi : ubah ascii ke hex
@@ -312,11 +348,14 @@ var adat:string;
 begin
   try
     Comport_RTU.ReadStr(adat,count);
+    Modbus_valasz:=Modbus_valasz+adat;
     for i:=1 to count  do
     begin
         dt_modbus_rx:=adat[i];
         if Active then memoLogModbus.Text:=memoLogModbus.Text+ascii2hex(dt_modbus_rx[1],' ');
+
     end;
+
     exit;
     begin
 
@@ -471,29 +510,61 @@ end;
 procedure TPLC_COMF.FormActivate(Sender: TObject);
 begin
   OnActivate:=nil;
-  ComPort_RTU.LoadSettings(stIniFile,konyvtar+'plc_port.dat');
-  modbus_is_start_data:=false;
-  modbus_is_id:=false;
-  modbus_is_len:=false;
-  modbus_is_data:=false;
-  modbus_is_crc:=false;
-  modbus_cnt_dt:=0;
-  modbus_state_id:=0;
-  spModbusSlaveID:=1;
-  crcKey:= 40961;
-  lblKommunikacio.Caption:='';
+  portOpen('0');
+end;
+
+procedure TPLC_COMF.Label2Click(Sender: TObject);
+begin
+  ModBusIrBit('0',1,1);
 end;
 
 procedure TPLC_COMF.Label3Click(Sender: TObject);
 begin
-  ModBusOlvasBit(0,1);
+  ModBusOlvasBit('0',0,1);
 end;
 
-function TPLC_COMF.ModBusOlvasBit(coil, db:Integer): Integer;
+function TPLC_COMF.ModBusIrBit(port:string;coil, ertek: Integer): integer;
 var  str_modbus:string;
-     i:integer;
+     i,szam:integer;
+
+
 begin
   try
+    portOpen(port);
+    if ertek=0 then  szam:=0
+    else szam:=65280;
+    str_modbus:=modbus_format2rtu(spModbusSlaveID,5,coil,szam,crcKey);
+    if Active then memoLogModbus.Lines.Add(formatdatetime('dd/mm/yyyy hh:nn:ss:zzz',now)+' : [TX] '+ascii2hex(str_modbus,' '));
+    ComPort_RTU.WriteStr(str_modbus);
+    i:=0;
+    ModBus_Valasz:='';
+    while (i<10) and (ModBus_Valasz='') do
+    begin
+      Application.ProcessMessages;
+      Sleep(10);
+      i:=i+1;
+    end;
+    if ModBus_Valasz<>'' then
+    begin
+      Sleep(100);
+      Application.ProcessMessages;
+
+      Result:=1;
+    end;
+    ComPort_RTU.Close;
+  except
+    Result:=-1;
+  end;
+
+end;
+
+function TPLC_COMF.ModBusOlvasBit(port:string;coil, db:Integer): Integer;
+var  str_modbus:string;
+     i:integer;
+
+begin
+  try
+    portOpen(port);
     str_modbus:=modbus_format2rtu(spModbusSlaveID,1,coil,db,crcKey);
     if Active then memoLogModbus.Lines.Add(formatdatetime('dd/mm/yyyy hh:nn:ss:zzz',now)+' : [TX] '+ascii2hex(str_modbus,' '));
     ComPort_RTU.WriteStr(str_modbus);
@@ -509,16 +580,37 @@ begin
     begin
       Sleep(100);
       Application.ProcessMessages;
-      ShowMessage(ascii2hex(ModBus_Valasz,' '));
-      Result:=1;
+      Result:=Ord(ModBus_Valasz[4]);
     end;
-
-
-
+    ComPort_RTU.Close;
   except
     Result:=-1;
   end;
 
+end;
+
+function TPLC_COMF.portOpen(port:string): integer;
+begin
+  ComPort_RTU.LoadSettings(stIniFile,konyvtar+'plc_port.dat');
+  if port <>'0' then  ComPort_RTU.Port:=port;
+  modbus_is_start_data:=false;
+  modbus_is_id:=false;
+  modbus_is_len:=false;
+  modbus_is_data:=false;
+  modbus_is_crc:=false;
+  modbus_cnt_dt:=0;
+  modbus_state_id:=0;
+  spModbusSlaveID:=1;
+  crcKey:= 40961;
+  lblKommunikacio.Caption:='';
+  if port <>'0' then ComPort_RTU.open;
+end;
+
+procedure TPLC_COMF.threadrun(port:string);
+begin
+  LekerdezesTh:=ThLekerdezes.Create(True);
+  LekerdezesTh.port:=port;
+  LekerdezesTh.Resume;
 end;
 
 procedure TPLC_COMF.tmrModbusTimeoutTimer(Sender: TObject);

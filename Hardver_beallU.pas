@@ -42,9 +42,9 @@ type
     Label12: TLabel;
     dbeGombszam: TDBEdit;
     Label13: TLabel;
-    dbeLabelszoveg: TDBEdit;
+    dbeFeliratszoveg: TDBEdit;
     Label14: TLabel;
-    dbeLabelszam: TDBEdit;
+    dbeFeliratszam: TDBEdit;
     Label15: TLabel;
     dbeVarakozas: TDBEdit;
     Label16: TLabel;
@@ -90,8 +90,6 @@ begin
     dbeSzamitogep.Text:='PC01';
     dcbEgyedi.ItemIndex:=0;
     tsLista.Enabled:=false;
-
-
   end;
   if Button=nbPost then
   begin

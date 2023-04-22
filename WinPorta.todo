@@ -1,4 +1,6 @@
-{TODO : Import gomb a termékeknél nem kell}
+{TODO : Kisteleknél a tipus imoortot ellenõrízni kell}
+{TODO : Eszköz jellemzõt nem vogadta el, ha nincs volt megadva}
+{DONE : Import gomb a termékeknél nem kell}
 {TODO : Az elrontott oszlopneveket lehessen törölni}
 {TODO 2 -oKNZ : Status bar beállítások}
 {TODO 2 -oKNZ : Képek menüpont eltüntetése}

@@ -514,9 +514,10 @@ begin
           if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
         end;
 
-    9:  begin  //D400}       //Bilanchia
+    9:  begin  //D400 DD700       //Bilanchia
           si:=0;
           bit:=29;
+          kezd:=false;
           repeat
             si:=si+1;
             if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);

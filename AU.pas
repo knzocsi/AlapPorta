@@ -255,6 +255,8 @@ var
   ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
   Regi_hardver_beallitas:boolean;
   PC_Szam:string;
+  aktualis_merlegszam:integer;
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
 

@@ -887,8 +887,8 @@ interface
     ' `Alaphelyzet` int(11) DEFAULT 0,' + #13#10 +
     '	`Gomb_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
     ' `Gomb_szam` int(11) DEFAULT 0,' + #13#10 +
-    '	`Label_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    ' `Label_szam` int(11) DEFAULT 0,' + #13#10 +
+    '	`Felirat_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    ' `Felirat_szam` int(11) DEFAULT 0,' + #13#10 +
     ' `Varakozas_ms` int(11) DEFAULT 0,' + #13#10 +
     '	`Rtsp` VARCHAR(180) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'' ' +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10

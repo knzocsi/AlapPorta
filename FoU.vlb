@@ -1,9 +1,6 @@
 ﻿[pnlJobbFelso]
 Coordinates=687,744,91,58
 
-[ipcamPanel]
-Coordinates=73,608,82,58
-
 [MjegyF.Partnelist]
 Coordinates=1165,540,114,58
 
@@ -40,14 +37,8 @@ Coordinates=948,1981,62,36
 [piBefejezoDatum]
 Coordinates=1375,676,112,58
 
-[cam3]
-Coordinates=297,812,46,36
-
 [Felhasznlkkarbantartsa1]
 Coordinates=1137,1,155,36
-
-[campagc]
-Coordinates=221,812,66,36
 
 [piKezdoDatum]
 Coordinates=524,676,99,58
@@ -114,9 +105,6 @@ Coordinates=632,2298,108,36
 
 [ServerSocket]
 Coordinates=533,2298,92,36
-
-[cam2]
-Coordinates=84,812,46,36
 
 [MjegyF.termeklistDs]
 Coordinates=282,1644,131,36
@@ -214,14 +202,8 @@ Coordinates=1137,166,60,36
 [tmrElokep]
 Coordinates=1137,221,72,36
 
-[pnlKiskep]
-Coordinates=827,540,70,58
-
 [MjegyF.Partnerlist2Ds]
 Coordinates=754,1211,141,36
-
-[cam1]
-Coordinates=1431,744,46,36
 
 [lbl3]
 Coordinates=165,608,49,58
@@ -285,9 +267,6 @@ Coordinates=1137,606,118,36
 
 [MjegyF.tulajDs]
 Coordinates=123,1,100,36
-
-[cam0]
-Coordinates=1375,744,46,36
 
 [rzsadatok1]
 Coordinates=1137,716,77,36
@@ -434,5 +413,5 @@ Coordinates=1137,1706,76,36
 Coordinates=1289,540,128,58
 
 []
-Coordinates=1137,1761,91,36
+Coordinates=827,540,70,58
 

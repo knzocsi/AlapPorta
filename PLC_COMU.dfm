@@ -19,22 +19,23 @@ object PLC_COMF: TPLC_COMF
     Left = 0
     Top = 0
     Width = 951
-    Height = 81
+    Height = 97
     Align = alTop
     TabOrder = 0
     object Label1: TLabel
       Left = 256
-      Top = 13
+      Top = 16
       Width = 40
       Height = 13
       Caption = 'Funkci'#243':'
     end
     object Label2: TLabel
       Left = 528
-      Top = 12
+      Top = 16
       Width = 48
       Height = 13
       Caption = 'Kezd'#337'c'#237'm:'
+      OnClick = Label2Click
     end
     object Label3: TLabel
       Left = 616
@@ -131,9 +132,9 @@ object PLC_COMF: TPLC_COMF
   end
   object memoLogModbus: TMemo
     Left = 0
-    Top = 81
+    Top = 97
     Width = 951
-    Height = 345
+    Height = 329
     Align = alClient
     Lines.Strings = (
       'memoLogModbus')
@@ -180,7 +181,7 @@ object PLC_COMF: TPLC_COMF
   object tmrModbusTimeout: TTimer
     Enabled = False
     OnTimer = tmrModbusTimeoutTimer
-    Left = 349
+    Left = 357
     Top = 104
   end
 end

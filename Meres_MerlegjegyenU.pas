@@ -95,8 +95,10 @@ begin
   else
   begin
     rgMeresszama.ItemIndex:=1;
-    rgMerlegszama.ItemIndex:=1;
+    if aktualis_merlegszam>1 then rgMerlegszama.ItemIndex:=1
+    else  rgMerlegszama.ItemIndex:=0;
   end;
+  rgMerlegszama.Visible:=aktualis_merlegszam>1;
   chkKezimeres.Checked:=false;
   chkKezimeres.Enabled:=  aF.van_joga('j8') ;  //kezi meres
   spTomeg.Enabled:=chkKezimeres.Checked;

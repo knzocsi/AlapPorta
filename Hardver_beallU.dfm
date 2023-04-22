@@ -200,6 +200,10 @@ object Hardver_beallF: THardver_beallF
           '- Nincs megadva -'
           'MERLEG1'
           'MERLEG2'
+          'SOROMPO1_NYITAS'
+          'SOROMPO1_ZARAS'
+          'SOROMPO2_NYITAS'
+          'SOROMPO2_ZARAS'
           'LAMPA1'
           'LAMPA2'
           'LAMPA3'
@@ -216,8 +220,8 @@ object Hardver_beallF: THardver_beallF
         TabOrder = 5
       end
       object DBNavigator1: TDBNavigator
-        Left = 373
-        Top = 11
+        Left = 406
+        Top = 3
         Width = 215
         Height = 25
         DataSource = AF.HardverDS
@@ -347,21 +351,21 @@ object Hardver_beallF: THardver_beallF
         DataSource = AF.HardverDS
         TabOrder = 16
       end
-      object dbeLabelszoveg: TDBEdit
+      object dbeFeliratszoveg: TDBEdit
         Left = 344
         Top = 208
         Width = 193
         Height = 21
-        DataField = 'Label_szoveg'
+        DataField = 'Felirat_szoveg'
         DataSource = AF.HardverDS
         TabOrder = 17
       end
-      object dbeLabelszam: TDBEdit
+      object dbeFeliratszam: TDBEdit
         Left = 553
         Top = 208
         Width = 68
         Height = 21
-        DataField = 'Label_szam'
+        DataField = 'Felirat_szam'
         DataSource = AF.HardverDS
         TabOrder = 18
       end
@@ -410,9 +414,9 @@ object Hardver_beallF: THardver_beallF
       object dchkAlaphelyzet: TDBCheckBox
         Left = 218
         Top = 16
-        Width = 79
+        Width = 149
         Height = 17
-        Caption = 'Alaphelyzet'
+        Caption = 'Alaphelyzetben kapcsolva'
         DataField = 'Alaphelyzet'
         DataSource = AF.HardverDS
         TabOrder = 3
