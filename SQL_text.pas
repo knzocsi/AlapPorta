@@ -5,7 +5,8 @@ interface
    uses AU;
 
     const
-      maxSQL=16;
+      // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
+      maxSQL=19;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -852,11 +853,49 @@ interface
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' //+ #13#10 +
     ,
+    //14
     //szárított tört szemek tömege
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
     ,
+    //15
     //szárított tört szemek tömege a módosított mérlegjegyek táblába
     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;'
+    ,
+     //16
+     //szárított tört szemek tömege a nyitbe táblába
+    'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS szaraz_tort_szemek INT(11) DEFAULT 0;' + #13#10 +
+     //17
+     //Sorszam a nyitbe tablaba, a kamionok hívása miatt kell
+    'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS Hivo_sorszam INT(11) DEFAULT 0;'
+    ,
+     //18
+      //Hardver beallitasok
+    'CREATE TABLE IF NOT EXISTS `hardver_beallitasok` (' + #13#10 +
+    '	`ID` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,' + #13#10 +
+    '	`Leiras` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Eszkoznev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Merleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Szamitogep` VARCHAR(40) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Tipus` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Egyedi_azon` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Port_v_IP_Cim` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`IP_port` INT(11) DEFAULT 0,' + #13#10 +
+    '	`Bekapcs_Kimenet_szam` INT(11) DEFAULT 0,' + #13#10 +
+    '	`Kikapcs_Kimenet_szam` INT(11) DEFAULT 0,' + #13#10 +
+    ' `Aktiv` int(11) DEFAULT 0,' + #13#10 +
+    ' `Hibas` int(11) DEFAULT 0,' + #13#10 +
+    ' `Alaphelyzet` int(11) DEFAULT 0,' + #13#10 +
+    '	`Gomb_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    ' `Gomb_szam` int(11) DEFAULT 0,' + #13#10 +
+    '	`Felirat_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    ' `Felirat_szam` int(11) DEFAULT 0,' + #13#10 +
+    ' `Varakozas_ms` int(11) DEFAULT 0,' + #13#10 +
+    '	`Rtsp` VARCHAR(180) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'' ' +
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10
+    ,
+     //Ha a PLC program használja, hogy hibás, erre a címre kell írni (Regi sorompo hiba)
+    'ALTER TABLE hardver_beallitasok ADD COLUMN IF NOT EXISTS Hiba_kimenet_szam INT(11) DEFAULT 0;'
+
     );
 
 

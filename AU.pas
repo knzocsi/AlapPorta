@@ -20,17 +20,22 @@ uses
   System.variants,System.inifiles,Winapi.Windows, frxClass, frxDBSet,
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
-  Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000;
+  Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000, System.Actions,
+  Vcl.ActnList, Vcl.StdActns;
 
 const
   ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
-   ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés',
-    'Mérlegelõk módosítása','Mérés','Kezdõ készlet felv.','Kézi mérés',
-    'Mérlegjegy módosítás','','','', '','','','','','','','');
+   ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés','Mérlegelõk módosítása',
+   'Mérés','Kezdõ készlet felv.','Kézi mérés','Mérlegjegy módosítás','Táramegadás',
+   '','', '','','',
+   '','','','','');
 
   Lampa_Zold=0;
   Lampa_Piros=1;
+
+
+  Maxinfra=4; // ha változás van, akkor a hardver_beall formon az eszkoz kombóban is kell változtatmi
 
 
 
@@ -134,6 +139,14 @@ type
     CfgTDs: TDataSource;
     IrszScript: TFDScript;
     irszQ: TFDQuery;
+    NyitbeQ: TFDQuery;
+    NyitbeDS: TDataSource;
+    tipusQDs: TDataSource;
+    tipusQ: TFDQuery;
+    tipusQid: TAutoIncField;
+    tipusQnev: TWideStringField;
+    HardverQ: TFDQuery;
+    HardverDS: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -223,7 +236,7 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
+  Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
   Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa:boolean;
@@ -239,8 +252,13 @@ var
   nyers_tort_szemek_tomege,tisztitott_nyers_netto_tomege,
   tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
   szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
+  ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
+  Regi_hardver_beallitas:boolean;
+  PC_Szam:string;
+  aktualis_merlegszam,kepernyo_meretarany:integer;
+
 implementation
-uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
+uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -302,9 +320,11 @@ begin
       end;
     end;
   end;
+
   if ParamStr(1)='/SC' then ModScript.ScriptDialog:=ModScriptDialog
   else ModScript.ScriptDialog:=nil;
   modok_vegrehajt;//  SQL_text unitba kell
+  if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
   ini_kezel;
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
@@ -626,10 +646,15 @@ begin
   Kapcs.Connected:=True; }
 
   inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
+  Regi_hardver_beallitas:=inif.ReadBool('ALAP','Regi_hardver_beallitas',True);
+  Regi_hardver_beallitas:=cfg_kezel('Régi esetén az inibõl és a cfgbõl veszi a hardver adatokat. Újnál a hardver táblábõl','ALAP','Regi_hardver_beallitas','Boolean',True);
+
+  PC_Szam:=Uppercase(inif.ReadString('ALAP','PC_Szam','PC01'));
+  inif.writeString('ALAP','PC_Szam',PC_Szam);
   visszanap:=inif.ReadInteger('ALAP','Visszanap',5);
   visszanap:=cfg_kezel('','ALAP','Visszanap','Integer',5);
  // ShowMessage(visszanap.ToString);
-  telephely:=inif.ReadString('ALAP','Telephely','Rakamaz');
+  telephely:=inif.ReadString('ALAP','Telephely','Telephely');
   telephely:=cfg_kezel('','ALAP','Telephely','String',telephely);
   //inif.writeString('ALAP','Telephely',telephely);
   nyugvovarakozas:=inif.ReadInteger('ALAP','Nyugvovarakozas',10);
@@ -637,7 +662,9 @@ begin
   //inif.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
   mintomeg:=inif.ReadInteger('ALAP','Mintomeg',500);
   mintomeg:=cfg_kezel('','ALAP','Minimum tömeg','Integer',mintomeg);
-  //inif.WriteInteger('ALAP','Mintomeg',mintomeg);
+
+  kepernyo_meretarany:=inif.ReadInteger('ALAP','kepernyo_meretarany',100);
+  inif.WriteInteger('ALAP','kepernyo_meretarany',kepernyo_meretarany);
   pingproba:=inif.ReadInteger('ALAP','Pingproba',3);
   pingproba:=cfg_kezel('','ALAP','Ping próbák száma','Integer',pingproba);
   //inif.WriteInteger('ALAP','Pingproba',pingproba);
@@ -667,9 +694,9 @@ begin
   nagykamera:=inif.ReadBool('ALAP','Nagy_kamera_kep',False);
   nagykamera:=cfg_kezel('','ALAP','Nagy kamera kép','Boolean',nagykamera);
   //inif.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
-  Merleg_tipus:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
-  //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
-  inif.WriteString('Merleg','Merleg_tipus',Merleg_tipus);
+  Merleg_tipus[1]:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
+  //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus[1]);
+  inif.WriteString('Merleg','Merleg_tipus',Merleg_tipus[1]);
   Kijelzo_tipus:=inif.ReadString('Merleg','Kijelzo_tipus','Nincs');
   //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
   inif.WriteString('Merleg','Kijelzo_tipus',Kijelzo_tipus);
@@ -752,6 +779,8 @@ begin
   //utolso_sql:=cfg_kezel('','MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
  // inif.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
+
+  { TODO -oKNZ -c : Az Rtspket itt kell betölteni 2023. 03. 21. 17:55:47 }
   for k := 0 to 3 do
     begin
      rtspurls[k]:=inif.ReadString('Rtsp','URL Cam '+k.ToString,'');
@@ -853,6 +882,12 @@ begin
   termenyszaritas_elszamolasa:=cfg_kezel('Terményszárítás elszámolása több mérlegjegy alapján is','ALAP','Terményszárítás elszámolása','Boolean',false);
   // A mérleges rész átkerül t az PortU-ba
 
+  ideiglenes_latszik:=cfg_kezel('Az ideiglenes fül láthatósága a fõ formon','ALAP','Ideigenes látszik','Boolean',False);
+  Forgalom_latszik:=cfg_kezel('A forgalom fül láthatósága a fõ formon','ALAP','Forgalom látszik','Boolean',True);
+  taramegadas:=cfg_kezel('A jármûvek táramegadására legyen lehetõség, jog is van hozzá ','ALAP','Táramegadás','Boolean',False);
+  //A kisteleki kábelgyárban sorszámmal hívják a kamionokat a mérlegre
+  Hivoszamhasznalat:=inif.Readbool('ALAP','Hivoszamhasznalat',false);
+  inif.WriteBool('ALAP','Hivoszamhasznalat',Hivoszamhasznalat);
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1627,7 +1662,7 @@ var XLSXlist: TStringDynArray;
         end;
     end;
 begin
- FOF.elokep_timer.Enabled:=false;
+ FOF.tmrElokep.Enabled:=false;
  Automentes.Enabled:=False;
  SetCurrentDir(torzs_import_mappa);
  varf.Show;
@@ -1708,7 +1743,7 @@ begin
     end;
   end; }
  varF.Close;
- FOF.elokep_timer.Enabled:=true;
+ FOF.tmrElokep.Enabled:=true;
  Automentes.Enabled:=mentesido in [0..23];
  KillTask('EXCEL.EXE');
 end;

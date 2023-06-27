@@ -11,15 +11,11 @@ uses
   Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TtipusokF = class(TForm)
+  TTipusokF = class(TForm)
     PageControl1: TPageControl;
     listatab: TTabSheet;
     reszletektab: TTabSheet;
-    tipusQ: TFDQuery;
-    tipusQDs: TDataSource;
     DBGrid1: TDBGrid;
-    tipusQid: TAutoIncField;
-    tipusQnev: TWideStringField;
     DBNavigator1: TDBNavigator;
     DBEdnev: TDBEdit;
     procedure FormActivate(Sender: TObject);
@@ -32,30 +28,30 @@ type
   end;
 
 var
-  tipusokF: TtipusokF;
+  TipusokF: TTipusokF;
 
 implementation
   uses AU;
 {$R *.dfm}
 
-procedure TtipusokF.FormActivate(Sender: TObject);
+procedure TTipusokF.FormActivate(Sender: TObject);
 begin
- tipusQ.Open();
+ Af.tipusQ.Open();
 end;
 
-procedure TtipusokF.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TTipusokF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
- tipusQ.close
+ Af.tipusQ.close
 end;
 
-procedure TtipusokF.tipusQBeforePost(DataSet: TDataSet);
+procedure TTipusokF.tipusQBeforePost(DataSet: TDataSet);
 begin
 if dbednev.Text='' then
  begin
    ShowMessage('Adja meg a nevet');
    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
  end;
-  if af.nev_foglalt(tipusqid.AsInteger,dbednev.Text,'tipus') then
+  if af.nev_foglalt(af.tipusqid.AsInteger,dbednev.Text,'tipus') then
   begin
      ShowMessage('Ez a név már foglalt!');
      if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;

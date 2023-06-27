@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TfelrakcimekF = class(TForm)
+  TFelrakcimekF = class(TForm)
     Panel1: TPanel;
     btnkilepes: TButton;
     PageControl1: TPageControl;
@@ -55,7 +55,7 @@ type
   end;
 
 var
-  felrakcimekF: TfelrakcimekF;
+  FelrakcimekF: TFelrakcimekF;
 
 implementation
 
@@ -63,12 +63,12 @@ implementation
 
 { TForm1 }
 
-procedure TfelrakcimekF.FelcimekTBeforePost(DataSet: TDataSet);
+procedure TFelrakcimekF.FelcimekTBeforePost(DataSet: TDataSet);
 begin
  FelcimekT.FieldByName('tul_id').AsInteger:=strtoInt(lbltulid.Caption);
 end;
 
-procedure TfelrakcimekF.fo(tulid: Integer);
+procedure TFelrakcimekF.fo(tulid: Integer);
 begin
   lbltulid.Caption:=tulid.ToString;
   try

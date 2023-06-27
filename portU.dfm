@@ -3,7 +3,7 @@ object PortF: TPortF
   Top = 180
   Caption = 'Port'
   ClientHeight = 500
-  ClientWidth = 644
+  ClientWidth = 908
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,12 +20,12 @@ object PortF: TPortF
   object pnlFelso: TPanel
     Left = 0
     Top = 0
-    Width = 644
+    Width = 908
     Height = 41
     Align = alTop
     TabOrder = 0
     object ComLed1: TComLed
-      Left = 481
+      Left = 817
       Top = 0
       Width = 25
       Height = 25
@@ -35,7 +35,7 @@ object PortF: TPortF
       OnDblClick = ComLed1DblClick
     end
     object ComLed2: TComLed
-      Left = 512
+      Left = 848
       Top = 0
       Width = 25
       Height = 25
@@ -75,26 +75,44 @@ object PortF: TPortF
     object Button1: TButton
       Left = 253
       Top = 4
-      Width = 75
+      Width = 100
       Height = 25
-      Caption = 'Be'#225'll'#237't'#225's'
+      Caption = '1. port be'#225'll'#237't'#225's'
       TabOrder = 3
       OnClick = Button1Click
     end
     object btnKijelzo_beallitas: TButton
-      Left = 367
+      Left = 494
       Top = 4
-      Width = 75
+      Width = 130
       Height = 25
-      Caption = 'Kijelz'#337' be'#225'll'#237't'#225's'
+      Caption = 'M'#225'sodkijelz'#337' be'#225'll'#237't'#225's'
       TabOrder = 4
       OnClick = btnKijelzo_beallitasClick
+    end
+    object btnHivoszamkijezobeallitas: TButton
+      Left = 640
+      Top = 4
+      Width = 153
+      Height = 25
+      Caption = 'H'#237'v'#243'sz'#225'mkijelz'#337' be'#225'll'#237't'#225's'
+      TabOrder = 5
+      OnClick = btnHivoszamkijezobeallitasClick
+    end
+    object Button2: TButton
+      Left = 359
+      Top = 4
+      Width = 114
+      Height = 25
+      Caption = '2. port be'#225'll'#237't'#225's'
+      TabOrder = 6
+      OnClick = Button2Click
     end
   end
   object memTeszt: TMemo
     Left = 0
     Top = 41
-    Width = 404
+    Width = 668
     Height = 383
     Align = alClient
     Lines.Strings = (
@@ -105,7 +123,7 @@ object PortF: TPortF
   object memHexa: TMemo
     Left = 0
     Top = 424
-    Width = 644
+    Width = 908
     Height = 76
     Align = alBottom
     Lines.Strings = (
@@ -113,7 +131,7 @@ object PortF: TPortF
     TabOrder = 3
   end
   object Panel1: TPanel
-    Left = 404
+    Left = 668
     Top = 41
     Width = 240
     Height = 383
@@ -211,7 +229,7 @@ object PortF: TPortF
     Left = 168
     Top = 80
   end
-  object ComPort2: TComPort
+  object comKijelzo: TComPort
     BaudRate = br9600
     Port = 'COM1'
     Parity.Bits = prNone
@@ -226,8 +244,8 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
-    Left = 168
-    Top = 152
+    Left = 160
+    Top = 226
   end
   object IdTCPClient1: TIdTCPClient
     OnDisconnected = IdTCPClient1Disconnected
@@ -260,5 +278,42 @@ object PortF: TPortF
     OnTimer = Client_Timer2Timer
     Left = 320
     Top = 152
+  end
+  object ComPort2: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    OnRxChar = ComPort2RxChar
+    Left = 168
+    Top = 152
+  end
+  object comHivoszamkijelzo: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    Left = 256
+    Top = 224
   end
 end

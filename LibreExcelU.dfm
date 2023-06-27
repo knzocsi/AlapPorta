@@ -44,7 +44,6 @@ object LibreExcelF: TLibreExcelF
       Height = 35
       Caption = 'T'#237'pus'
       Columns = 2
-      Enabled = False
       ItemIndex = 0
       Items.Strings = (
         'Libre Calc'

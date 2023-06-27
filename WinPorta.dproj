@@ -101,12 +101,12 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.96;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=KNZ Soft Kft.;FileDescription=$(MSBuildProjectName);FileVersion=1.1.0.95;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
-        <VerInfo_Build>96</VerInfo_Build>
-        <DCC_DcpOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcpOutput>
-        <DCC_ExeOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_ExeOutput>
-        <DCC_DcuOutput>N:\Delphi_10_4\Merleges\Alap\Win32\</DCC_DcuOutput>
+        <VerInfo_Build>95</VerInfo_Build>
+        <DCC_DcpOutput>N:\Delphi_10_4\KNZ\Porta_alap\Win32\</DCC_DcpOutput>
+        <DCC_ExeOutput>N:\Delphi_10_4\KNZ\Porta_alap\Win32\</DCC_ExeOutput>
+        <DCC_DcuOutput>N:\Delphi_10_4\KNZ\Porta_alap\Win32\Debug\</DCC_DcuOutput>
         <Icon_MainIcon>WinPorta_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
     <ItemGroup>
@@ -197,7 +197,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="tipusokU.pas">
-            <Form>tipusokF</Form>
+            <Form>TipusokF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="tarolokU.pas">
@@ -273,6 +273,22 @@
             <Form>MermodlistF</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Meres_MerlegjegyenU.pas">
+            <Form>Meres_MerlegjegyenF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Hardver_beallU.pas">
+            <Form>Hardver_beallF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="PLC_COMU.pas">
+            <Form>PLC_COMF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ImportU.pas">
+            <Form>ImportF</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <RcItem Include="Mjegy_sa_ho_ka.fr3">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>
@@ -293,6 +309,7 @@
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>Rep_3</ResourceId>
         </RcItem>
+        <None Include="WinPorta.todo"/>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -348,6 +365,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="Mjegy_sa_ho_ka.fr3" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="WinPorta.todo" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>

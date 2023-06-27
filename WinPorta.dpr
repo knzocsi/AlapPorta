@@ -28,7 +28,7 @@ uses
   nagykepU in 'nagykepU.pas' {NagykepF},
   nagykamU in 'nagykamU.pas' {NagykamF},
   LibreExcelU in 'LibreExcelU.pas' {LibreExcelF},
-  tipusokU in 'tipusokU.pas' {tipusokF},
+  tipusokU in 'tipusokU.pas' {TipusokF},
   tarolokU in 'tarolokU.pas' {TarolokF},
   Rak_szallU in 'Rak_szallU.pas' {Rak_szallF},
   rak_szall_listU in 'rak_szall_listU.pas' {rak_szall_listF},
@@ -49,7 +49,11 @@ uses
   MermodU in 'MermodU.pas' {MermodF},
   MermodlistU in 'MermodlistU.pas' {MermodlistF},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF},
+  Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF},
+  PLC_COMU in 'PLC_COMU.pas' {PLC_COMF},
+  ImportU in 'ImportU.pas' {ImportF};
 
 {$R *.res}
 
@@ -77,7 +81,7 @@ begin
   Application.CreateForm(TkezdokeszletF, kezdokeszletF);
   Application.CreateForm(TNagykepF, NagykepF);
   Application.CreateForm(TLibreExcelF, LibreExcelF);
-  Application.CreateForm(TtipusokF, tipusokF);
+  Application.CreateForm(TTipusokF, TipusokF);
   Application.CreateForm(TTarolokF, TarolokF);
   Application.CreateForm(TRak_szallF, Rak_szallF);
   Application.CreateForm(Trak_szall_listF, rak_szall_listF);
@@ -95,5 +99,9 @@ begin
   Application.CreateForm(TAlapbemodF, AlapbemodF);
   Application.CreateForm(TMermodF, MermodF);
   Application.CreateForm(TMermodlistF, MermodlistF);
+  Application.CreateForm(TMeres_MerlegjegyenF, Meres_MerlegjegyenF);
+  Application.CreateForm(THardver_beallF, Hardver_beallF);
+  Application.CreateForm(TPLC_COMF, PLC_COMF);
+  Application.CreateForm(TImportF, ImportF);
   Application.Run;
 end.
