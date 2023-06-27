@@ -517,6 +517,7 @@ object MjegyF: TMjegyF
         Top = 38
         Width = 65
         Height = 21
+        CheckOptions = [coCheckOnExit]
         ValueType = vtFloat
         ReadOnly = True
         TabOrder = 0
@@ -527,6 +528,7 @@ object MjegyF: TMjegyF
         Top = 38
         Width = 65
         Height = 21
+        CheckOptions = [coCheckOnExit]
         ValueType = vtFloat
         TabOrder = 1
         OnChange = spnedvChange

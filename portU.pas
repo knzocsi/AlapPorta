@@ -81,7 +81,7 @@ var
   merlegek,mertertekek,mertekek: array [1..4]of String;
   elozotomeg,nyugalmiszamlalo:array [1..4]of integer;
   nullszintvolt,rendszamvolt :array [1..4] of boolean;
-  hibaszamlalo:integer;
+  hibaszamlalo,bit:integer;
 
 
 

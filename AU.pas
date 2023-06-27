@@ -480,6 +480,9 @@ begin
   end
   else
   begin //MÉG ÁT KELL ÍRNI
+   szaritott_netto_tomege :=Round(tisztitott_nyers_netto_tomege-(tisztitott_nyers_netto_tomege*(akt_nedv-alap_nedv))/100.0)-levonando_tomeg;//*(1-akt_nedv/100)/(1-alap_nedv/100))-levonando_tomeg;
+    nedvesseg_vesztes_tomege:=(Round(tisztitott_nyers_netto_tomege-szaritott_netto_tomege));
+    szaritott_tort_szemek_tomege:= Round(nyers_tort_szemek_tomege*(1-akt_nedv/100)/(1-alap_nedv/100));
    // Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
    // nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
   end;
