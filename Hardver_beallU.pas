@@ -84,7 +84,7 @@ procedure THardver_beallF.DBNavigator1Click(Sender: TObject;
 begin
   if Button=nbInsert then
   begin
-    { TODO 1 -oKNZ -c : Itt lesz a combok alaphelyzetbe állítása 2023. 03. 22. 17:13:30 }
+    { DONE 1 -oKNZ -c : Itt lesz a combok alaphelyzetbe állítása 2023. 03. 22. 17:13:30 }
     dcbEszkoz.ItemIndex:=0;
     dcbMerleg.ItemIndex:=0;
     dbeSzamitogep.Text:='PC01';
@@ -93,7 +93,7 @@ begin
   end;
   if Button=nbPost then
   begin
-    { TODO 1 -oKNZ -c : Itt kell figyelni a hibás értékeket 2023. 03. 22. 16:47:08 }
+    { DONE 1 -oKNZ -c : Itt kell figyelni a hibás értékeket 2023. 03. 22. 16:47:08 }
     if dcbEszkoz.ItemIndex=0 then
     begin
       ShowMessage('Az eszköz nevét meg kell adni!');

@@ -3,7 +3,7 @@ object PortF: TPortF
   Top = 180
   Caption = 'Port'
   ClientHeight = 500
-  ClientWidth = 770
+  ClientWidth = 908
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,12 +20,12 @@ object PortF: TPortF
   object pnlFelso: TPanel
     Left = 0
     Top = 0
-    Width = 770
+    Width = 908
     Height = 41
     Align = alTop
     TabOrder = 0
     object ComLed1: TComLed
-      Left = 705
+      Left = 817
       Top = 0
       Width = 25
       Height = 25
@@ -35,7 +35,7 @@ object PortF: TPortF
       OnDblClick = ComLed1DblClick
     end
     object ComLed2: TComLed
-      Left = 736
+      Left = 848
       Top = 0
       Width = 25
       Height = 25
@@ -75,14 +75,14 @@ object PortF: TPortF
     object Button1: TButton
       Left = 253
       Top = 4
-      Width = 75
+      Width = 100
       Height = 25
-      Caption = 'Be'#225'll'#237't'#225's'
+      Caption = '1. port be'#225'll'#237't'#225's'
       TabOrder = 3
       OnClick = Button1Click
     end
     object btnKijelzo_beallitas: TButton
-      Left = 334
+      Left = 494
       Top = 4
       Width = 130
       Height = 25
@@ -91,7 +91,7 @@ object PortF: TPortF
       OnClick = btnKijelzo_beallitasClick
     end
     object btnHivoszamkijezobeallitas: TButton
-      Left = 480
+      Left = 640
       Top = 4
       Width = 153
       Height = 25
@@ -99,11 +99,20 @@ object PortF: TPortF
       TabOrder = 5
       OnClick = btnHivoszamkijezobeallitasClick
     end
+    object Button2: TButton
+      Left = 359
+      Top = 4
+      Width = 114
+      Height = 25
+      Caption = '2. port be'#225'll'#237't'#225's'
+      TabOrder = 6
+      OnClick = Button2Click
+    end
   end
   object memTeszt: TMemo
     Left = 0
     Top = 41
-    Width = 530
+    Width = 668
     Height = 383
     Align = alClient
     Lines.Strings = (
@@ -114,7 +123,7 @@ object PortF: TPortF
   object memHexa: TMemo
     Left = 0
     Top = 424
-    Width = 770
+    Width = 908
     Height = 76
     Align = alBottom
     Lines.Strings = (
@@ -122,7 +131,7 @@ object PortF: TPortF
     TabOrder = 3
   end
   object Panel1: TPanel
-    Left = 530
+    Left = 668
     Top = 41
     Width = 240
     Height = 383
@@ -285,6 +294,7 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
+    OnRxChar = ComPort2RxChar
     Left = 168
     Top = 152
   end
@@ -303,7 +313,7 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
-    Left = 240
+    Left = 256
     Top = 224
   end
 end

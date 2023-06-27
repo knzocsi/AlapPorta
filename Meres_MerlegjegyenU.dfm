@@ -184,20 +184,32 @@
   end
   object btnMeres: TButton
     Left = 258
-    Top = 128
+    Top = 142
     Width = 88
     Height = 25
     Caption = 'M'#233'r'#233's'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
     OnClick = btnMeresClick
   end
   object spTomeg: TSpinEdit
     Left = 258
     Top = 88
-    Width = 117
-    Height = 22
+    Width = 151
+    Height = 43
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = []
     MaxValue = 0
     MinValue = 0
+    ParentFont = False
     TabOrder = 5
     Value = 0
   end

@@ -79,7 +79,11 @@ object FoF: TFoF
           Width = 790
           Height = 297
           Align = alClient
+          Color = clDefault
           DataSource = AF.NyitbeDS
+          FixedColor = clSilver
+          GradientEndColor = clSilver
+          GradientStartColor = clSilver
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
@@ -89,35 +93,52 @@ object FoF: TFoF
           OnCellClick = dbgNyitbeCellClick
           Columns = <
             item
+              Color = clLime
               Expanded = False
               FieldName = 'Hivo_sorszam'
               Visible = True
             end
             item
+              Color = clLime
               Expanded = False
               FieldName = 'Rendszam'
               Visible = True
             end
             item
+              Color = clLime
               Expanded = False
               FieldName = 'Erkdatum'
               Visible = True
             end
             item
+              Color = clLime
+              Expanded = False
+              FieldName = 'Netto'
+              Visible = True
+            end
+            item
+              Color = clLime
               Expanded = False
               FieldName = 'irany'
               Visible = True
             end
             item
+              Color = clLime
               Expanded = False
               FieldName = 'P_Nev'
               Width = 252
               Visible = True
             end
             item
+              Color = clLime
               Expanded = False
               FieldName = 'P2_Nev'
               Width = 185
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Megjegyzes'
               Visible = True
             end>
         end
@@ -784,9 +805,9 @@ object FoF: TFoF
       Align = alBottom
       TabOrder = 0
       object JvLED1: TJvLED
-        Left = 37
+        Left = 32
         Top = 6
-        Width = 25
+        Width = 30
         Height = 25
         Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
         Status = False
@@ -1201,6 +1222,10 @@ object FoF: TFoF
         Caption = 'T'#225'rol'#243'k'
         OnClick = rolk1Click
       end
+      object Mrlegkezelk1: TMenuItem
+        Caption = 'M'#233'rlegkezel'#337'k'
+        OnClick = Mrlegkezelk1Click
+      end
       object Antheratrzsimport1: TMenuItem
         Tag = 100
         Caption = 'Anthera t'#246'rzs import'
@@ -1255,10 +1280,6 @@ object FoF: TFoF
           OnClick = Sajtjelszmdostsa1Click
         end
       end
-      object Mrlegkezelk1: TMenuItem
-        Caption = 'M'#233'rlegkezel'#337'k'
-        OnClick = Mrlegkezelk1Click
-      end
       object alapbe_m: TMenuItem
         Caption = 'Alap be'#225'll'#237't'#225'sok'
         object tulaj_m: TMenuItem
@@ -1305,6 +1326,7 @@ object FoF: TFoF
     end
     object Kpek1: TMenuItem
       Caption = 'K'#233'pek'
+      Visible = False
       object Keress1: TMenuItem
         Caption = 'Keres'#233's'
         OnClick = Keress1Click

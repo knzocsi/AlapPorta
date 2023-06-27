@@ -1,13 +1,18 @@
-{TODO : Kisteleknél a tipus imoortot ellenõrízni kell}
-{TODO : Eszköz jellemzõt nem vogadta el, ha nincs volt megadva}
+{TODO : A másodi soros port teszt elkészítése}
+{DONE 2 : Képernyõ nagyítás miallt nem látszik a mérlegjegy form alja}
+{TODO 2 : Kilépéskor a megfelelõ portot bezárni}
+{TODO 2 : A port formmon az ips labelek ne legyenek alapból láthatóak}
+{TODO : Mérlegjegy mdosítás 2-szer szerepel}
+{DONE : Kisteleknél a tipus imoortot ellenõrízni kell}
+{TODO : Eszköz jellemzõt nem fogadta el, ha nincs volt megadva}
 {DONE : Import gomb a termékeknél nem kell}
 {TODO : Az elrontott oszlopneveket lehessen törölni}
 {TODO 2 -oKNZ : Status bar beállítások}
-{TODO 2 -oKNZ : Képek menüpont eltüntetése}
+{DONE 2 -oKNZ : Képek menüpont eltüntetése}
 {TODO 1 -oKNZ : Harver beállításokat jogokhoz kötni}
 {TODO 1 : Új konfig esetén törölni a szükségtelen cfg sorokat}
-{TODO 1 : Régi konfig az inibe, ha új, akkor a tábláz}
-{TODO 1 : Második port mérleg beallitasai}
+{DONE 1 : Régi konfig az inibe, ha új, akkor a tábláz}
+{DONE 1 : Második port mérleg beallitasai}
 {DONE 1 : Hivoszamkijelzo port beallításai}
 {DONE 1 : Rákeresni, hogy van e olyan sorszám amit beadtak a mérlegjegyen}
 {DONE 1 -oKNZ : Tipus a merlegjegy formon}

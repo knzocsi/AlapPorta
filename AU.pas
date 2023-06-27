@@ -236,7 +236,7 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
-  Merleg_tipus,Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
+  Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
   Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa:boolean;
@@ -255,10 +255,10 @@ var
   ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
   Regi_hardver_beallitas:boolean;
   PC_Szam:string;
-  aktualis_merlegszam:integer;
+  aktualis_merlegszam,kepernyo_meretarany:integer;
 
 implementation
-uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU;
+uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -659,7 +659,9 @@ begin
   //inif.WriteInteger('ALAP','Nyugvovarakozas',nyugvovarakozas);
   mintomeg:=inif.ReadInteger('ALAP','Mintomeg',500);
   mintomeg:=cfg_kezel('','ALAP','Minimum tömeg','Integer',mintomeg);
-  //inif.WriteInteger('ALAP','Mintomeg',mintomeg);
+
+  kepernyo_meretarany:=inif.ReadInteger('ALAP','kepernyo_meretarany',100);
+  inif.WriteInteger('ALAP','kepernyo_meretarany',kepernyo_meretarany);
   pingproba:=inif.ReadInteger('ALAP','Pingproba',3);
   pingproba:=cfg_kezel('','ALAP','Ping próbák száma','Integer',pingproba);
   //inif.WriteInteger('ALAP','Pingproba',pingproba);
@@ -689,9 +691,9 @@ begin
   nagykamera:=inif.ReadBool('ALAP','Nagy_kamera_kep',False);
   nagykamera:=cfg_kezel('','ALAP','Nagy kamera kép','Boolean',nagykamera);
   //inif.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
-  Merleg_tipus:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
-  //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
-  inif.WriteString('Merleg','Merleg_tipus',Merleg_tipus);
+  Merleg_tipus[1]:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
+  //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus[1]);
+  inif.WriteString('Merleg','Merleg_tipus',Merleg_tipus[1]);
   Kijelzo_tipus:=inif.ReadString('Merleg','Kijelzo_tipus','Nincs');
   //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus);
   inif.WriteString('Merleg','Kijelzo_tipus',Kijelzo_tipus);

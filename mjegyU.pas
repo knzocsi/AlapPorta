@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
   Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg,
-  Vcl.ComCtrls;
+  Vcl.ComCtrls, Vcl.Buttons;
 
 type
   TMjegyF = class(TForm)
@@ -177,7 +177,6 @@ type
     lblKep1: TLabel;
     kep2: TImage;
     lblKep2: TLabel;
-    btnFolytatasos_mentes: TButton;
     btnMeres: TButton;
     lblTomeg1: TLabel;
     Label14: TLabel;
@@ -187,6 +186,7 @@ type
     Label5: TLabel;
     speSorszam: TJvSpinEdit;
     lblSorszam: TLabel;
+    btnFolytatasos_mentes: TSpeedButton;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -418,7 +418,7 @@ begin
   if pnlFelsoBal.Visible or pnlFelsoJobb.Visible then pnlAlso.Align:=alBottom
   else
   begin
-    Height:=500;
+    Height:=round(500*kepernyo_meretarany/100);
     pnlAlso.Align:=alClient;
   end;
   btnFolytatasos_mentes.Visible:=ideiglenes_latszik;
@@ -453,6 +453,8 @@ begin
   termeklist.sql.Clear;
   termeklist.sql.Add('select * from termek ORDER By NEV ASC;');
   termeklist.open;
+  lblTomeg1.Caption:='0';
+  lblTomeg2.Caption:='0';
   if Folytatas then
   with af.NyitbeQ do
   begin
@@ -1414,7 +1416,9 @@ begin
             lblelsodat.Caption:=DateToStr(Date);
             lblelsoido.Caption:=TimeToStr(Time);
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
-            spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+            if cbxirany.ItemIndex=1 then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
+              else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+
             if chkRogzitett.Checked then spTara.Value:=af.tara(cbxrendszam1.text);
 
           end;
@@ -1425,7 +1429,8 @@ begin
             lblmasdat.Caption:=DateToStr(Date);
             lblmasido.Caption:=TimeToStr(Time);
             chkmasodik_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
-            spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+            if cbxirany.ItemIndex=1 then spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny
+            else if cbxirany.ItemIndex=2 then  spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
           end;
     end;
     spnetto.Value:=spBrutto.Value-spTara.Value;

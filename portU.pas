@@ -39,6 +39,7 @@ type
     btnHivoszamkijezobeallitas: TButton;
     ComPort2: TComPort;
     comHivoszamkijelzo: TComPort;
+    Button2: TButton;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -59,6 +60,8 @@ type
     procedure Client_Timer2Timer(Sender: TObject);
     function datum_szoveg(datum:TDateTime;idokell:boolean):string;
     procedure btnHivoszamkijezobeallitasClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure ComPort2RxChar(Sender: TObject; Count: Integer);
 
 
   private
@@ -67,6 +70,8 @@ type
     { Public declarations }
     procedure portopen;
     procedure portclose;
+    procedure port2open;
+    procedure port2close;
     procedure kuld(Sor:string);
     procedure kijelzore_ir;
     procedure hivoszamkijelzore_ir(szam:string);
@@ -84,7 +89,7 @@ var
   sorosvetelben,Aktiv:boolean;
   mertdarab,mertek:string;
   tf:textfile;
-  merlegek,mertertekek,mertekek: array [1..maxmerleg]of String;
+  merlegek,mertertekek,mertekek,merleg_tipus: array [1..maxmerleg]of String;
   elozotomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
   nullszintvolt,rendszamvolt :array [1..maxmerleg] of boolean;
   hibaszamlalo:integer;
@@ -159,18 +164,18 @@ begin
   sadat:=ertek+sadat;
   ertek:='';
   //Merleg_tipus:='DMI610';
-  if (Merleg_tipus='Dibal') or (Merleg_tipus='R420') then mtip:=1        //R420 is
-  else if Merleg_tipus='DMI610' then mtip:=2
-    else if Merleg_tipus='MS' then mtip:=3
-      else if Merleg_tipus='Excell' then mtip:=4
-        else if Merleg_tipus='EntechVibra' then mtip:=5
-          else if Merleg_tipus='Senso' then mtip:=6
-            else if Merleg_tipus='Ohaus' then mtip:=7
-              else if Merleg_tipus='Bila' then mtip:=8
-                else if Merleg_tipus='D400' then mtip:=9
-                   else if Merleg_tipus='EntechSartorius' then mtip:=10
-                      else if Merleg_tipus='S120' then mtip:=11
-                         else if (Merleg_tipus='CZNEWTON') or (Merleg_tipus='BW') or (Merleg_tipus='TScale') then mtip:=12;     //BW is   és T-Scale is
+  if (Merleg_tipus[merlegszam]='Dibal') or (Merleg_tipus[merlegszam]='R420') then mtip:=1        //R420 is
+  else if Merleg_tipus[merlegszam]='DMI610' then mtip:=2
+    else if Merleg_tipus[merlegszam]='MS' then mtip:=3
+      else if Merleg_tipus[merlegszam]='Excell' then mtip:=4
+        else if Merleg_tipus[merlegszam]='EntechVibra' then mtip:=5
+          else if Merleg_tipus[merlegszam]='Senso' then mtip:=6
+            else if Merleg_tipus[merlegszam]='Ohaus' then mtip:=7
+              else if Merleg_tipus[merlegszam]='Bila' then mtip:=8
+                else if Merleg_tipus[merlegszam]='D400' then mtip:=9
+                   else if Merleg_tipus[merlegszam]='EntechSartorius' then mtip:=10
+                      else if Merleg_tipus[merlegszam]='S120' then mtip:=11
+                         else if (Merleg_tipus[merlegszam]='CZNEWTON') or (Merleg_tipus[merlegszam]='BW') or (Merleg_tipus[merlegszam]='TScale') then mtip:=12;     //BW is   és T-Scale is
 
 
 
@@ -189,7 +194,6 @@ begin
                     begin
                       if (adat=#3) and (length(ertek)=bit) then
                         begin
-
                           if (Active) and (chkErtek_vj.Checked) then
                           begin
                             memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
@@ -619,7 +623,6 @@ begin
                           begin
                             memEredmeny.Text:='Érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                           end;
-
                           mertekek[merlegszam]:='';
                           kilep:=true ;
                           ertek:=ertek_tisztitas(ertek);
@@ -630,7 +633,7 @@ begin
                         if (adat=#3) or (length(ertek)=bit)then
                         begin
                           //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
-                           if (Active) and (chkErtek_vj.Checked) then
+                          if (Active) and (chkErtek_vj.Checked) then
                           begin
                             memEredmeny.Text:='Hibás érték vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                           end;
@@ -743,7 +746,7 @@ begin
   //Fof.Label11.caption:= mertertek+' kg';
   if (Active) and (chkMertertek.Checked) then
   begin
-    memEredmeny.Text:='Mért érték: ('+Merleg_tipus+IntToStr(mtip)+')'+ertek+#13#10+memEredmeny.text;
+    memEredmeny.Text:='Mért érték: ('+Merleg_tipus[merlegszam]+IntToStr(mtip)+')'+ertek+#13#10+memEredmeny.text;
   end;
   if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
   if (hibaszamlalo=0) or (hibaszamlalo>hibamaximum) then Result:=ertek
@@ -752,45 +755,29 @@ end;
 
 
 
+
 procedure TPortF.ComPort1RxChar(Sender: TObject; Count: Integer);
-var kilep,kezd,jo:boolean;
-    adat,tp,s1,sadat:string;
-    db,v,i,t,j,si,tom,mtip,Merlegadathossz:integer;
-    e:extended;
-    mert:extended;
-
-    ertek:string;
-
-    function hexaszov(asciiszov:string):string;
-    var i:integer;
-        keszszov:string;
-    begin
-      keszszov:='';
-      for i:=1 to Length(asciiszov) do keszszov:=keszszov+IntToHex(ord(asciiszov[i]),2)+' ';
-      Result:=keszszov;
-    end;
-
-    function ertek_tisztitas(ert:string):string;
-    begin
-      i:=1;
-      s1:='';
-      while (length(ert)>i)  do
-      begin
-        i:=i+1;
-        if ert[i] in ['0'..'9','.','-'] then s1:=s1+ert[i];
-      end;
-      Result:=s1;
-    end;
-
+var sadat:string;
 begin
   ComPort1.OnRXChar:=nil;
   sadat:='';
   Sleep(10);
   comport1.readstr(sadat,Count);
   mertertekek[merleg_szam('RS1')]:=merleg_kiolvasas(sadat,merleg_szam('RS1'));
-
   ComPort1.OnRXChar:= ComPort1RxChar ;
+
 end;
+
+procedure TPortF.ComPort2RxChar(Sender: TObject; Count: Integer);
+var sadat:string;
+begin
+  ComPort2.OnRXChar:=nil;
+  sadat:='';
+  Sleep(10);
+  comport2.readstr(sadat,Count);
+  mertertekek[merleg_szam('RS2')]:=merleg_kiolvasas(sadat,merleg_szam('RS2'));
+  ComPort2.OnRXChar:= ComPort2RxChar ;
+ end;
 
 function TPortF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
 var ev,ho,nap,ora,perc,mp,szmp:word;
@@ -837,14 +824,15 @@ end;
 procedure TPortF.hivoszamkijelzore_ir(szam:string);
 var i:integer;
 begin
+  if PortF.comHivoszamKijelzo.Connected then exit;
   PortF.comHivoszamKijelzo.LoadSettings(stIniFile, konyvtar+'hivoszamkijelzo.dat' );
   PortF.comHivoszamKijelzo.open;
-  for i := Length(szam) to 5 do szam:=' '+szam;
+  while  Length(szam)<3 do szam:='0'+szam;
 
-  for I := 1 to 5 do
+  for I := 1 to 3 do
   begin
     //ShowMessage(szam);
-    PortF.comHivoszamKijelzo.WriteStr('AX/B='+szam+#13+#10);
+    PortF.comHivoszamKijelzo.WriteStr('AX/B='+szam+'  2');
     Sleep(100);
     Application.ProcessMessages;
   end;
@@ -876,8 +864,8 @@ begin
   Client_Timer1.Enabled:=False;
   if uppercase( ParamStr(1))='/LOG' then
   begin
-    ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\1IP'+datum_szoveg(Now,True)+'.txt');
+    ForceDirectories(konyvtar+'LOG');
+    AssignFile(tf,konyvtar+'LOG\1IP'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     CloseFile(tf);
   end;
@@ -895,7 +883,7 @@ begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\2IP'+datum_szoveg(Now,True)+'.txt');
+    AssignFile(tf,konyvtar+'LOG\2IP'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
     CloseFile(tf);
   end;
@@ -907,6 +895,40 @@ begin
   Client_Timer2.Enabled:=True;
 end;
 
+procedure TPortF.port2close;
+begin
+   ComPort2.OnRxChar:=nil;
+ while  sorosvetelben do
+ begin
+   Sleep(10);
+   Application.ProcessMessages;
+ end;
+ try
+   if ComPort2.Connected then  ComPort2.close;
+ except
+ end;
+end;
+
+procedure TPortF.port2open;
+begin
+   if uppercase( ParamStr(1))='/LOG' then
+  begin
+    ForceDirectories(konyvtar+'\LOG');
+    AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');
+    Rewrite(tf);
+    Writeln(tf, konyvtar+'srport2.dat');
+    Writeln(tf, Comport2.port+' OPEN');
+    CloseFile(tf);
+
+  end;
+
+  ComPort2.LoadSettings(stIniFile, konyvtar+'\srport2.dat' );
+// portolvasás
+  ComPort2.open;
+  ComPort2.ClearBuffer(true,true);
+  //ComPort1.WriteStr('XA/B?'+#13+#10);
+end;
+
 procedure TPortF.portclose;
 begin
  ComPort1.OnRxChar:=nil;
@@ -916,7 +938,7 @@ begin
    Application.ProcessMessages;
  end;
  try
-   ComPort1.close;
+   if ComPort1.Connected then ComPort1.close;
  except
  end;
 end;
@@ -926,16 +948,16 @@ procedure TPortF.portopen;
 begin
   if uppercase( ParamStr(1))='/LOG' then
   begin
-    ForceDirectories(konyvtar+'\LOG');
-    AssignFile(tf,konyvtar+'\LOG\'+datum_szoveg(Now,True)+'.txt');
+    ForceDirectories(konyvtar+'LOG');
+    AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');
     Rewrite(tf);
-    Writeln(tf, konyvtar+'\srport.dat');
+    Writeln(tf, konyvtar+'srport.dat');
     Writeln(tf, Comport1.port+' OPEN');
     CloseFile(tf);
 
   end;
 
-  ComPort1.LoadSettings(stIniFile, konyvtar+'\srport.dat' );
+  ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
 // portolvasás
   ComPort1.open;
   ComPort1.ClearBuffer(true,true);
@@ -1005,7 +1027,13 @@ end;
 procedure TPortF.Button1Click(Sender: TObject);
 begin
   ComPort1.ShowSetupDialog;
-  ComPort1.StoreSettings(stIniFile, konyvtar+'\srport.dat' );
+  ComPort1.StoreSettings(stIniFile, konyvtar+'srport.dat' );
+end;
+
+procedure TPortF.Button2Click(Sender: TObject);
+begin
+  ComPort2.ShowSetupDialog;
+  ComPort2.StoreSettings(stIniFile, konyvtar+'srport2.dat' );
 end;
 
 procedure TPortF.Client_Timer1Timer(Sender: TObject);

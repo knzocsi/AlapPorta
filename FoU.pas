@@ -319,7 +319,7 @@ procedure SetCounterDebounceTime(CounterNr, DebounceTime: integer); stdcall; ext
 
 procedure TFoF.Alaphardveresbelltsok1Click(Sender: TObject);
 begin
-   if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK' then exit;
+   if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK2023' then exit;
   Tomeg_Timer.Enabled:=false;
   Hardver_beallF.ShowModal;
   Tomeg_Timer.Enabled:=true;
@@ -642,6 +642,7 @@ begin
   finally
     StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
     alapbe_m.Enabled:=felhnev='Programozó';
+    Hardverbelltsok1.Visible:=felhnev='Programozó';
     with MainMenu1 do
     for h := 0 to Items.Count-1 do
     if items[h].Tag=0 then items[h].Enabled:=f_ide<>0;
@@ -671,15 +672,29 @@ var
             aktualis_merlegszam:=aktualis_merlegszam+1;
             if af.HardverQ.FieldbyName('Tipus').AsString='SOROS_ADAT' then
             begin
-              Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
+              Merleg_tipus[merlegszam]:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
               merlegek[merlegszam]:='RS'+merlegszam.ToString; // a régivel való kompatibilitás megörzése miatt kell
-              PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-              PortF.portopen;
+              case merlegszam of
+                1 : begin
+                      PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+                      PortF.portopen;
+                      if PortF.Comport1.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
+                        ShowMessage('Az 1. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
+
+                    end;
+                2 : begin
+                      PortF.Comport2.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+                      PortF.port2open;
+                      if PortF.Comport2.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
+                        ShowMessage('Az 2. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
+                    end;
+              end;
+
             end
             else
                if af.HardverQ.FieldbyName('Tipus').AsString='IP_ADAT' then
                begin
-                 Merleg_tipus:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
+                 Merleg_tipus[merlegszam]:=af.HardverQ.FieldbyName('Egyedi_azon').AsString;
                  merlegek[merlegszam]:='IP'+merlegszam.ToString; // a régivel való kompatibilitás megörzése miatt kell
                  case merlegszam of
                    1 :  begin
@@ -713,8 +728,6 @@ var
             PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
             PLC_Ir(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger);
           end;
-
-
       end;
   end;
 
@@ -910,11 +923,11 @@ begin
       //Mérlegek
       if Regi_hardver_beallitas then
       begin
-        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS')
            and (PortF.merleg_szam('RS1')<>0) then PortF.portopen;
-        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+        if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS')
            and (PortF.merleg_szam('IP1')<>0) and (moxa_ip1<>'Local') then PortF.IP1_Start;
-         if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS')
+         if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS')
            and (PortF.merleg_szam('IP2')<>0) and (moxa_ip2<>'Local') then PortF.IP2_Start;
       end
       else
@@ -962,7 +975,11 @@ begin
   programvege:=true;
   StatusBar1.panels[1].Text:='Kilépés folyamatban...';
   Tomeg_Timer.Enabled:=false;
-  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus)<>'NINCS') then   PortF.portclose;
+  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS') and (felhnev<>'') then
+  begin
+   PortF.portclose;
+   PortF.port2close;
+  end;
 
 end;
 
@@ -1226,6 +1243,7 @@ begin
    if not lejatszas then  pnlKiskep.Visible:=false;
  end;
  alapbe_m.visible:=felhnev='Programozó';
+ Hardverbelltsok1.visible:=felhnev='Programozó';
  teszt_m.visible:=felhnev='Programozó';
  memLog.Visible:=felhnev='Programozó';
 end;
@@ -1860,7 +1878,7 @@ end;
 procedure TFoF.Sorosportbellts1Click(Sender: TObject);
 begin
   kodF.ShowModal;
-  if kodF.Kode.text = 'OK' then
+  if kodF.Kode.text = 'OK2023' then
   begin
     if UpperCase(ParamStr(1)) <> '/D' then
       PortF.ShowModal;
@@ -2018,11 +2036,9 @@ var tomeg,i:integer;
     pont:char;
     tomeg_szoveg:string;
 begin
-
   Tomeg_Timer.Enabled:=false;
   pont:=' ';
   if (StatusBar1.panels[4].text<>'') and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)]=' ') then pont:='.';
-
   tomeg_szoveg:='';
   for i := 1 to 4 do
   begin
@@ -2493,7 +2509,11 @@ end;
 
 procedure TFoF.PLCsorosportbellts1Click(Sender: TObject);
 begin
-  PLC_COMF.showmodal;
+  kodF.ShowModal;
+  if kodF.Kode.text = 'OK2023' then
+  begin
+    PLC_COMF.showmodal;
+  end;
 end;
 
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;

@@ -877,7 +877,7 @@ interface
     '	`Merleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
     '	`Szamitogep` VARCHAR(40) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
     '	`Tipus` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Egyedi_azon` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Egyedi_azon` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
     '	`Port_v_IP_Cim` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
     '	`IP_port` INT(11) DEFAULT 0,' + #13#10 +
     '	`Bekapcs_Kimenet_szam` INT(11) DEFAULT 0,' + #13#10 +
