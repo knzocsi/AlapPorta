@@ -105,7 +105,6 @@ type
     cbxIrany: TComboBox;
     btnMentes: TButton;
     partnerlookup: TJvDBLookupCombo;
-    edszallev: TEdit;
     spBrutto: TSpinEdit;
     sptara: TSpinEdit;
     spnetto: TSpinEdit;
@@ -187,6 +186,7 @@ type
     speSorszam: TJvSpinEdit;
     lblSorszam: TLabel;
     btnFolytatasos_mentes: TSpeedButton;
+    edszallev: TMemo;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);

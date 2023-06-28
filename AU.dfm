@@ -240,7 +240,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44883.607137731480000000
+    ReportOptions.LastChange = 45105.863830787040000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -785,7 +785,7 @@ object AF: TAF
         end
         object Memo19: TfrxMemoView
           AllowVectorExport = True
-          Left = 362.834880000000000000
+          Left = 294.803340000000000000
           Top = 215.653680000000000000
           Width = 90.708720000000000000
           Height = 18.897650000000000000
@@ -801,11 +801,17 @@ object AF: TAF
         end
         object memszallev: TfrxMemoView
           AllowVectorExport = True
-          Left = 457.323130000000000000
+          Left = 393.071120000000000000
           Top = 215.653680000000000000
-          Width = 253.228510000000000000
+          Width = 317.480520000000000000
           Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -8
+          Font.Name = 'Arial'
+          Font.Style = []
           Frame.Typ = []
+          ParentFont = False
         end
         object frxpsz: TfrxMemoView
           AllowVectorExport = True
@@ -1896,7 +1902,7 @@ object AF: TAF
         end
         object Memo60: TfrxMemoView
           AllowVectorExport = True
-          Left = 366.614410000000000000
+          Left = 287.244280000000000000
           Top = 211.535560000000000000
           Width = 90.708720000000000000
           Height = 18.897650000000000000
@@ -1912,13 +1918,19 @@ object AF: TAF
         end
         object Memo61: TfrxMemoView
           AllowVectorExport = True
-          Left = 461.102660000000000000
+          Left = 385.512060000000000000
           Top = 211.535560000000000000
-          Width = 253.228510000000000000
+          Width = 328.819110000000000000
           Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -8
+          Font.Name = 'Arial'
+          Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
             '[memszallev.text]')
+          ParentFont = False
         end
         object frxpsz2: TfrxMemoView
           AllowVectorExport = True

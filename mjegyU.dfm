@@ -25,7 +25,6 @@ object MjegyF: TMjegyF
     Align = alBottom
     TabOrder = 0
     OnClick = pnlAlsoClick
-    ExplicitTop = 433
     object lblpartner: TLabel
       Left = 7
       Top = 69
@@ -42,7 +41,7 @@ object MjegyF: TMjegyF
     end
     object Label4: TLabel
       Left = 696
-      Top = 66
+      Top = 33
       Width = 96
       Height = 13
       Caption = 'Sz'#225'll'#237't'#243'lev'#233'l/Sz'#225'mla:'
@@ -492,15 +491,6 @@ object MjegyF: TMjegyF
       TabOrder = 2
       OnChange = partnerlookupChange
     end
-    object edszallev: TEdit
-      Left = 696
-      Top = 85
-      Width = 145
-      Height = 21
-      MaxLength = 20
-      TabOrder = 3
-      Text = 'edszallev'
-    end
     object spBrutto: TSpinEdit
       Left = 185
       Top = 335
@@ -509,7 +499,7 @@ object MjegyF: TMjegyF
       MaxValue = 0
       MinValue = 0
       ReadOnly = True
-      TabOrder = 5
+      TabOrder = 4
       Value = 0
     end
     object sptara: TSpinEdit
@@ -520,7 +510,7 @@ object MjegyF: TMjegyF
       MaxValue = 0
       MinValue = 0
       ReadOnly = True
-      TabOrder = 6
+      TabOrder = 5
       Value = 0
     end
     object spnetto: TSpinEdit
@@ -531,7 +521,7 @@ object MjegyF: TMjegyF
       MaxValue = 0
       MinValue = 0
       ReadOnly = True
-      TabOrder = 7
+      TabOrder = 6
       Value = 0
     end
     object edmegjegy: TEdit
@@ -539,7 +529,7 @@ object MjegyF: TMjegyF
       Top = 297
       Width = 665
       Height = 21
-      TabOrder = 8
+      TabOrder = 7
       Text = 'edmegjegy'
     end
     object Button1: TButton
@@ -548,7 +538,7 @@ object MjegyF: TMjegyF
       Width = 139
       Height = 17
       Caption = 'Partnerek list'#225'ja'
-      TabOrder = 9
+      TabOrder = 8
       OnClick = Button1Click
     end
     object btn1: TButton
@@ -557,7 +547,7 @@ object MjegyF: TMjegyF
       Width = 137
       Height = 17
       Caption = 'Term'#233'kek list'#225'ja'
-      TabOrder = 10
+      TabOrder = 9
       OnClick = btn1Click
     end
     object kezelolookup: TJvDBLookupCombo
@@ -570,7 +560,7 @@ object MjegyF: TMjegyF
       LookupField = 'id'
       LookupDisplay = 'nev;'
       LookupSource = AF.merlegkezQDs
-      TabOrder = 11
+      TabOrder = 10
     end
     object Button2: TButton
       Left = 864
@@ -578,7 +568,7 @@ object MjegyF: TMjegyF
       Width = 137
       Height = 20
       Caption = 'M'#233'rlegkezel'#337'k list'#225'ja'
-      TabOrder = 12
+      TabOrder = 11
       OnClick = Button2Click
     end
     object cbxktip: TComboBox
@@ -588,7 +578,7 @@ object MjegyF: TMjegyF
       Height = 22
       Style = csOwnerDrawFixed
       ItemIndex = 0
-      TabOrder = 13
+      TabOrder = 12
       Text = 'a'
       Visible = False
       Items.Strings = (
@@ -603,14 +593,14 @@ object MjegyF: TMjegyF
       Caption = 'Nincs p'#243'tkocsi'
       Checked = True
       State = cbChecked
-      TabOrder = 14
+      TabOrder = 13
     end
     object edekaer: TEdit
       Left = 8
       Top = 334
       Width = 161
       Height = 21
-      TabOrder = 15
+      TabOrder = 14
       Text = 'EdEkaer'
     end
     object cbxRendszam1: TComboBox
@@ -620,7 +610,7 @@ object MjegyF: TMjegyF
       Height = 21
       CharCase = ecUpperCase
       Sorted = True
-      TabOrder = 16
+      TabOrder = 15
       Text = 'CBXRENDSZAM1'
       OnChange = cbxRendszam1Change
     end
@@ -631,7 +621,7 @@ object MjegyF: TMjegyF
       Height = 21
       CharCase = ecUpperCase
       Sorted = True
-      TabOrder = 17
+      TabOrder = 16
       Text = 'CBXRENDSZAM2'
     end
     object chkRogzitett: TCheckBox
@@ -640,7 +630,7 @@ object MjegyF: TMjegyF
       Width = 97
       Height = 17
       Caption = 'R'#246'gz'#237'tett t'#225'r'#225's'
-      TabOrder = 18
+      TabOrder = 17
     end
     object btnTaramegadas: TButton
       Left = 760
@@ -648,7 +638,7 @@ object MjegyF: TMjegyF
       Width = 81
       Height = 17
       Caption = 'T'#225'ra megad'#225'sa'
-      TabOrder = 19
+      TabOrder = 18
       OnClick = btnTaramegadasClick
     end
     object pnlmezgaz: TPanel
@@ -656,7 +646,7 @@ object MjegyF: TMjegyF
       Top = 219
       Width = 665
       Height = 63
-      TabOrder = 20
+      TabOrder = 19
       object Label17: TLabel
         Tag = 11
         Left = 88
@@ -887,7 +877,7 @@ object MjegyF: TMjegyF
       LookupField = 'id'
       LookupDisplay = 'nev'
       LookupSource = TarolokDs
-      TabOrder = 21
+      TabOrder = 20
     end
     object Button3: TButton
       Left = 766
@@ -895,7 +885,7 @@ object MjegyF: TMjegyF
       Width = 75
       Height = 19
       Caption = 'T'#225'rol'#243'k'
-      TabOrder = 22
+      TabOrder = 21
       OnClick = Button3Click
     end
     object termeklookup: TJvDBLookupCombo
@@ -910,7 +900,7 @@ object MjegyF: TMjegyF
       LookupField = 'ID'
       LookupDisplay = 'Nev;kod;'
       LookupSource = termeklistDs
-      TabOrder = 4
+      TabOrder = 3
       OnCloseUp = termeklookupCloseUp
     end
     object Spsznetto: TSpinEdit
@@ -921,7 +911,7 @@ object MjegyF: TMjegyF
       MaxValue = 0
       MinValue = 0
       ReadOnly = True
-      TabOrder = 23
+      TabOrder = 22
       Value = 0
     end
     object btnNyomtatas: TButton
@@ -930,7 +920,7 @@ object MjegyF: TMjegyF
       Width = 137
       Height = 36
       Caption = 'Nyomtat'#225's'
-      TabOrder = 24
+      TabOrder = 23
       OnClick = btnMentesClick
     end
     object chkelso_kezi: TCheckBox
@@ -940,7 +930,7 @@ object MjegyF: TMjegyF
       Height = 17
       Caption = 'K'#233'zi'
       Enabled = False
-      TabOrder = 25
+      TabOrder = 24
     end
     object chkmasodik_kezi: TCheckBox
       Left = 227
@@ -949,7 +939,7 @@ object MjegyF: TMjegyF
       Height = 17
       Caption = 'K'#233'zi'
       Enabled = False
-      TabOrder = 26
+      TabOrder = 25
     end
     object partnerlookup2: TJvDBLookupCombo
       Left = 7
@@ -964,7 +954,7 @@ object MjegyF: TMjegyF
       LookupField = 'ID'
       LookupDisplay = 'combo;cim;'
       LookupSource = Partnerlist2Ds
-      TabOrder = 27
+      TabOrder = 26
       OnChange = partnerlookup2Change
     end
     object chkpartnerekegy: TCheckBox
@@ -973,7 +963,7 @@ object MjegyF: TMjegyF
       Width = 162
       Height = 17
       Caption = 'A k'#233't partner megegyez'#337
-      TabOrder = 28
+      TabOrder = 27
     end
     object btnekaer: TButton
       Left = 7
@@ -981,7 +971,7 @@ object MjegyF: TMjegyF
       Width = 75
       Height = 25
       Caption = 'EK'#193'ER k'#233'r'#233's'
-      TabOrder = 29
+      TabOrder = 28
       OnClick = btnekaerClick
     end
     object levonlookup: TJvDBLookupCombo
@@ -994,7 +984,7 @@ object MjegyF: TMjegyF
       LookupField = 'id'
       LookupDisplay = 'Szoveg'
       LookupSource = levon_szovegDs
-      TabOrder = 30
+      TabOrder = 29
       OnChange = levonlookupChange
     end
     object sp_tomeg_levon: TSpinEdit
@@ -1004,7 +994,7 @@ object MjegyF: TMjegyF
       Height = 22
       MaxValue = 0
       MinValue = 0
-      TabOrder = 31
+      TabOrder = 30
       Value = 0
       OnChange = sp_tomeg_levonChange
       OnExit = sp_tomeg_levonExit
@@ -1016,7 +1006,7 @@ object MjegyF: TMjegyF
       Width = 137
       Height = 21
       Caption = 'Levon'#225'si sz'#246'vegek'
-      TabOrder = 32
+      TabOrder = 31
       OnClick = btnlevon_szovegClick
     end
     object tulajlookup: TJvDBLookupCombo
@@ -1029,7 +1019,7 @@ object MjegyF: TMjegyF
       LookupField = 'Id'
       LookupDisplay = 'Nev'
       LookupSource = tulajDs
-      TabOrder = 33
+      TabOrder = 32
     end
     object btnMeres: TButton
       Left = 255
@@ -1037,7 +1027,7 @@ object MjegyF: TMjegyF
       Width = 177
       Height = 36
       Caption = 'M'#233'r'#233's'
-      TabOrder = 34
+      TabOrder = 33
       OnClick = btnMeresClick
     end
     object lucTipus: TJvDBLookupCombo
@@ -1053,7 +1043,7 @@ object MjegyF: TMjegyF
       LookupField = 'ID'
       LookupDisplay = 'nev'
       LookupSource = AF.tipusQDs
-      TabOrder = 35
+      TabOrder = 34
       OnChange = lucTipusChange
     end
     object speSorszam: TJvSpinEdit
@@ -1067,6 +1057,15 @@ object MjegyF: TMjegyF
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      TabOrder = 35
+    end
+    object edszallev: TMemo
+      Left = 696
+      Top = 52
+      Width = 305
+      Height = 54
+      Lines.Strings = (
+        'edszallev')
       TabOrder = 36
     end
   end
@@ -1077,7 +1076,6 @@ object MjegyF: TMjegyF
     Height = 457
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 433
     object pnlFelsoBal: TPanel
       Left = 1
       Top = 1
@@ -1085,7 +1083,6 @@ object MjegyF: TMjegyF
       Height = 455
       Align = alLeft
       TabOrder = 0
-      ExplicitHeight = 431
       object JvDBUltimGrid1: TJvDBUltimGrid
         Left = 1
         Top = 1
@@ -1183,7 +1180,6 @@ object MjegyF: TMjegyF
       Height = 455
       Align = alClient
       TabOrder = 1
-      ExplicitHeight = 431
       object PageControl1: TPageControl
         Left = 1
         Top = 1
@@ -1192,7 +1188,6 @@ object MjegyF: TMjegyF
         ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 429
         object TabSheet1: TTabSheet
           Caption = 'K'#233'p 1'
           DesignSize = (
