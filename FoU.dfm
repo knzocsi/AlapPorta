@@ -91,6 +91,7 @@ object FoF: TFoF
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
           OnCellClick = dbgNyitbeCellClick
+          OnDrawColumnCell = dbgNyitbeDrawColumnCell
           Columns = <
             item
               Color = clLime
@@ -1255,6 +1256,10 @@ object FoF: TFoF
         Caption = 'K'#233'szlet'
         OnClick = Kszlet1Click
       end
+      object Mrlegelseklistja1: TMenuItem
+        Caption = 'M'#233'rlegel'#233'sek list'#225'ja'
+        OnClick = Mrlegelseklistja1Click
+      end
     end
     object Raktrkziszlltlevl1: TMenuItem
       Caption = 'Rakt'#225'rk'#246'zi sz'#225'll'#237't'#243'lev'#233'l'
@@ -1309,6 +1314,10 @@ object FoF: TFoF
           Caption = 'PLC soros port be'#225'll'#237't'#225's'
           OnClick = PLCsorosportbellts1Click
         end
+      end
+      object mnSzablyosmrlegentartozkodsfigyels1: TMenuItem
+        Caption = 'Szab'#225'lyosm'#233'rlegen tartozkod'#225's figyel'#233's (INFRA5,INFRA6)'
+        OnClick = mnSzablyosmrlegentartozkodsfigyels1Click
       end
       object Sorompnyitinfrahiba1: TMenuItem
         Caption = 'BE Soromp'#243' nyit'#243' infra hiba'

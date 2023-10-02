@@ -184,7 +184,7 @@
   end
   object btnMeres: TButton
     Left = 258
-    Top = 142
+    Top = 137
     Width = 88
     Height = 25
     Caption = 'M'#233'r'#233's'

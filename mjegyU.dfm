@@ -1022,7 +1022,7 @@ object MjegyF: TMjegyF
       TabOrder = 32
     end
     object btnMeres: TButton
-      Left = 255
+      Left = 263
       Top = 363
       Width = 177
       Height = 36

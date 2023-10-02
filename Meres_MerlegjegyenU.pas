@@ -45,7 +45,7 @@ var
   Meres_MerlegjegyenF: TMeres_MerlegjegyenF;
 
 implementation
-uses au,PortU;
+uses au,PortU,FoU;
 
 {$R *.dfm}
 
@@ -57,7 +57,19 @@ end;
 procedure TMeres_MerlegjegyenF.btnMeresClick(Sender: TObject);
 var tomeg:integer;
 begin
-   try
+  if szabalyos_merlegen_tartozkodas_figyeles then
+  begin
+
+    if (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA5')=0)  or
+       (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA6')=0)
+      then
+    begin
+      ShowMessage('Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!');
+      exit;
+    end;
+
+  end;
+  try
     tomeg :=StrToInt(mertertekek[rgMerlegszama.itemindex+1]);
     if tomeg < 0 then
       tomeg := 0;

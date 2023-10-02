@@ -126,6 +126,8 @@ type
     btn2: TButton;
     btn3: TButton;
     btn4: TButton;
+    mnSzablyosmrlegentartozkodsfigyels1: TMenuItem;
+    Mrlegelseklistja1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -205,6 +207,11 @@ type
     procedure Import1Click(Sender: TObject);
     procedure JvLED1DblClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
+    procedure dbgNyitbeDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure mnSzablyosmrlegentartozkodsfigyels1Click(Sender: TObject);
+    function bemenet_lekerdezes(merleg,Eszkoznev:string):integer;
+    procedure Mrlegelseklistja1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -265,7 +272,7 @@ uses
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
-  PLC_COMU, ImportU;
+  PLC_COMU, ImportU, MerlegelesekU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -471,6 +478,30 @@ begin
   Rendszam_Lampa_Timer.Enabled := true;
 end;
 
+function hatvany(alap, kitevo: Double): Integer;
+begin
+  hatvany:=Round(exp(ln(alap)*kitevo));
+end;
+
+function igaz(miben,mi:integer):boolean;
+begin
+  Result:=miben and hatvany( 2,mi) = hatvany( 2,mi);
+end;
+
+
+function TFoF.bemenet_lekerdezes(merleg,Eszkoznev: string): integer;
+begin
+  af.HardverQ.first;
+  if af.HardverQ.locate('Merleg;Eszkoznev',varArrayOf([merleg,Eszkoznev]),[] )then
+  begin
+    if  igaz(PLC_COMF.Lekerdezett_Valasz,(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then Result:=1
+    else Result:=0;
+  end
+  else Result:=2;
+end;
+
+
+
 procedure TFoF.btn1Click(Sender: TObject);
 var szam:integer;
 begin
@@ -532,7 +563,18 @@ end;
 procedure TFoF.dbgNyitbeCellClick(Column: TColumn);
 begin
   if not af.NyitbeQ.Eof then sbtnSorszamhivas.Caption:=af.NyitbeQ.fieldbyname('Hivo_sorszam').AsString;
+end;
 
+procedure TFoF.dbgNyitbeDrawColumnCell(Sender: TObject; const Rect: TRect;
+  DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+   if AF.NyitbeQ.RecordCount=0 then exit;
+   if (AF.NyitbeQ.FieldByName('Tara').AsFloat=0) and  (AF.NyitbeQ.FieldByName('Brutto').AsFloat=0 )then
+   begin
+    dbgNyitbe.Canvas.Brush.Color:=clred;
+   end
+   else dbgNyitbe.Canvas.Brush.Color:=clLime;
+   dbgNyitbe.DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure TFoF.DBGrid1KeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -677,16 +719,23 @@ var
               case merlegszam of
                 1 : begin
                       PortF.Comport1.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-                      PortF.portopen;
-                      if PortF.Comport1.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
-                        ShowMessage('Az 1. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
-
+                      try
+                        PortF.portopen;
+                        if PortF.Comport1.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
+                          ShowMessage('Az 1. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
+                      except
+                        ShowMessage('A port megnyitása nem sikerült: '+af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString);
+                      end;
                     end;
                 2 : begin
                       PortF.Comport2.Port:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-                      PortF.port2open;
-                      if PortF.Comport2.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
-                        ShowMessage('Az 2. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
+                      try
+                        PortF.port2open;
+                        if PortF.Comport2.Port<>af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString then
+                          ShowMessage('Az 2. mérleg COM portja eltér a hardverbeállításokban és a dat állományban!');
+                      except
+                        ShowMessage('A port megnyitása nem sikerült: '+af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString);
+                      end;
                     end;
               end;
 
@@ -812,6 +861,7 @@ begin
   tbIdeiglenes.TabVisible:=ideiglenes_latszik;
   tbForgalom.TabVisible:=forgalom_latszik;
   sbtnSorszamhivas.Visible:=Hivoszamhasznalat;
+  mnSzablyosmrlegentartozkodsfigyels1.Checked:=szabalyos_merlegen_tartozkodas_figyeles;
   if not automata_kezelo then
     begin
       if TryStrToInt(ParamStr(1),g) then
@@ -1176,14 +1226,14 @@ end;
 
 procedure TFoF.kapcsfrissTimer(Sender: TObject);
 begin
-szures;
-if formatDateTime('hh',now)='05' then
-  begin
-   ShellExecute(Handle, nil, PChar(Application.ExeName), PChar(f_ide.ToString), nil, SW_SHOWNORMAL);
-   af.restart_log;
-   Application.Terminate;
-  end;
-// or, if this is the main form, simply Close;
+  szures;
+  if formatDateTime('hh',now)='05' then
+    begin
+     ShellExecute(Handle, nil, PChar(Application.ExeName), PChar(f_ide.ToString), nil, SW_SHOWNORMAL);
+     af.restart_log;
+     Application.Terminate;
+    end;
+  // or, if this is the main form, simply Close;
 end;
 
 procedure TFoF.kepatmeretez;
@@ -2021,15 +2071,8 @@ begin
 end;
 
 
-function hatvany(alap, kitevo: Double): Integer;
-begin
-  hatvany:=Round(exp(ln(alap)*kitevo));
-end;
 
-function igaz(miben,mi:integer):boolean;
-begin
-  Result:=miben and hatvany( 2,mi) = hatvany( 2,mi);
-end;
+
 
 procedure TFoF.Tomeg_TimerTimer(Sender: TObject);
 var tomeg,i:integer;
@@ -2076,6 +2119,7 @@ begin
   if not Regi_hardver_beallitas then
 
     begin
+    { TODO -oKNZ -c : AT CP IP-s részt is meg kell csinálni ide 2023.08.10. 9:17:16 }
       af.HardverQ.first;
       while not af.HardverQ.eof do
       begin
@@ -2220,6 +2264,35 @@ procedure TFoF.mctPLCResponseError(const FunctionCode, ErrorCode: Byte;
 begin
   ShowMessage('PLC kapcsolati hiba!(R)');
   memlog.Lines.Insert(0,'PLC kapcsolati hiba!(R)');
+end;
+
+procedure TFoF.mnSzablyosmrlegentartozkodsfigyels1Click(Sender: TObject);
+begin
+  mnSzablyosmrlegentartozkodsfigyels1.Checked:=not mnSzablyosmrlegentartozkodsfigyels1.Checked;
+  szabalyos_merlegen_tartozkodas_figyeles:= mnSzablyosmrlegentartozkodsfigyels1.Checked;
+  with af.CfgT do
+  begin
+    open;
+    if locate('tulajdonsag','Szabályos mérlegen tartozkodás figyelése',[]) then
+    begin
+      edit;
+      FieldByName('ertek').AsBoolean:=mnSzablyosmrlegentartozkodsfigyels1.Checked;
+      post;
+
+    end
+    else
+    begin
+      close;
+      af.cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni','ALAP','Szabályos mérlegen tartozkodás figyelése','Boolean',mnSzablyosmrlegentartozkodsfigyels1.Checked);
+    end;
+  end;
+
+
+end;
+
+procedure TFoF.Mrlegelseklistja1Click(Sender: TObject);
+begin
+  MerlegelesekF.Showmodal;
 end;
 
 procedure TFoF.Mrlegjegyeklistja1Click(Sender: TObject);

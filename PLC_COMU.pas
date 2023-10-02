@@ -85,7 +85,11 @@ procedure ThLekerdezes.execute;
 var i:integer;
 begin
    repeat
-     PLC_COMF.Lekerdezett_Valasz:= PLC_COMF.ModBusOlvasBit(port,0,16);
+     try
+       PLC_COMF.Lekerdezett_Valasz:= PLC_COMF.ModBusOlvasBit(port,0,16);
+     finally
+
+     end;
      for i:=1 to 25 do
      begin
        Sleep(20);

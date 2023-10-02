@@ -53,7 +53,8 @@ uses
   Meres_MerlegjegyenU in 'Meres_MerlegjegyenU.pas' {Meres_MerlegjegyenF},
   Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF},
   PLC_COMU in 'PLC_COMU.pas' {PLC_COMF},
-  ImportU in 'ImportU.pas' {ImportF};
+  ImportU in 'ImportU.pas' {ImportF},
+  MerlegelesekU in 'MerlegelesekU.pas' {MerlegelesekF};
 
 {$R *.res}
 
@@ -103,5 +104,6 @@ begin
   Application.CreateForm(THardver_beallF, Hardver_beallF);
   Application.CreateForm(TPLC_COMF, PLC_COMF);
   Application.CreateForm(TImportF, ImportF);
+  Application.CreateForm(TMerlegelesekF, MerlegelesekF);
   Application.Run;
 end.

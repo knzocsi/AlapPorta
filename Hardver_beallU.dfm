@@ -212,6 +212,8 @@ object Hardver_beallF: THardver_beallF
           'INFRA2'
           'INFRA3'
           'INFRA4'
+          'INFRA5'
+          'INFRA6'
           'KAMERA1'
           'KAMERA2'
           'KAMERA3'
