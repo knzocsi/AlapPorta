@@ -256,6 +256,7 @@ var
   Regi_hardver_beallitas:boolean;
   PC_Szam:string;
   aktualis_merlegszam,kepernyo_meretarany:integer;
+  szabalyos_merlegen_tartozkodas_figyeles:boolean;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
@@ -336,7 +337,8 @@ begin
   Automentes.Enabled:=mentesido in [0..23];
   if (nedvesseg_beolvasasa) and (mezgaz) then Sample_Kapcs.Connected:=true;
   autotorzs.Enabled:=automata_torzsimport;
- // merlegjegy_tipus_betoltese;//iniben kell megadni-elõkészítés elõtt töltöm be
+  // merlegjegy_tipus_betoltese;//iniben kell megadni-elõkészítés elõtt töltöm be
+  ForceDirectories(ExtractFilePath(application.exename)+'\LOG');
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -674,6 +676,8 @@ begin
   //j:=inif.ReadInteger('ALAP','Automata_kezelo',0);
   automata_kezelo:=inif.ReadBool('ALAP','Automata_kezelo',False);
   automata_kezelo:=cfg_kezel('','ALAP','Automata kezelõ','Boolean',False);
+  szabalyos_merlegen_tartozkodas_figyeles:=cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni','ALAP','Szabályos mérlegen tartozkodás figyelése','Boolean',False);
+
   //inif.WriteBool('ALAP','Automata_kezelo',automata_kezelo);
   pdfmappa:=inif.ReadString('Mappak','Pdf',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');
   pdfmappa:=cfg_kezel('','MAPPAK','Pdf mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\Merlegjegy_PDF');

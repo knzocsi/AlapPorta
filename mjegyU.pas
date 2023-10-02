@@ -1396,6 +1396,8 @@ end;
 
 
 procedure TMjegyF.btnMeresClick(Sender: TObject);
+var tf:textfile;
+    fnev,kezi:string;
 begin
   Meres_MerlegjegyenF.lblelsodat.Caption:=lblelsodat.Caption;
   Meres_MerlegjegyenF.lblelsoido.Caption:=lblelsoido.Caption;
@@ -1409,7 +1411,6 @@ begin
   if Meres_MerlegjegyenF.Mert_eredmeny>0 then
   begin
     case Meres_MerlegjegyenF.rgMeresszama.ItemIndex of
-
       0 :
           begin
             lblTomeg1.Caption:=IntToStr( Meres_MerlegjegyenF.Mert_eredmeny);
@@ -1418,10 +1419,8 @@ begin
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
             if cbxirany.ItemIndex=1 then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
               else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
-
             if chkRogzitett.Checked then spTara.Value:=af.tara(cbxrendszam1.text);
-
-          end;
+           end;
 
       1 :
           begin
@@ -1433,6 +1432,19 @@ begin
             else if cbxirany.ItemIndex=2 then  spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
           end;
     end;
+
+    fnev:=ExtractFileDir(ExtractFilePath(application.exename))+'\LOG\m'+af.datum_szoveg(Now,false)+'.txt';
+    Assignfile(tf,fnev);
+    if not FileExists(fnev) then
+    begin
+      Rewrite(tf);
+      CloseFile(tf);
+    end;
+    if Meres_MerlegjegyenF.chkKezimeres.Checked then kezi:='Kézi' else kezi:='';
+
+    Append(tf);
+    Writeln(tf,DateToStr(Date)+#9+TimeToStr(Time)+#9+cbxRendszam1.Text+#9+IntToStr( Meres_MerlegjegyenF.Mert_eredmeny)+#9+cbxRendszam2.Text+#9+kezi);
+    CloseFile(tf);
     spnetto.Value:=spBrutto.Value-spTara.Value;
     szazalek;
   end;

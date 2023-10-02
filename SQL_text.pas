@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=20;
+      maxSQL=21;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -898,6 +898,10 @@ interface
      ,//20
      'ALTER TABLE `nyitbe`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL  AFTER `termek_ar`;'+#13#10 +
      'ALTER TABLE `merlegjegy`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL  AFTER `termek_ar`;'  +#13#10
+     ,//21
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'  +#13#10
+
     );
 
 
