@@ -336,14 +336,20 @@ end;
 
 procedure TPLC_COMF.ComPort_RTUAfterClose(Sender: TObject);
 begin
-  btnStartStop.Caption:='Port Nyitás';
-  btnKuldes.Enabled:=false;
+  if Active then
+  begin
+    btnStartStop.Caption:='Port Nyitás';
+    btnKuldes.Enabled:=false;
+  end;
 end;
 
 procedure TPLC_COMF.ComPort_RTUAfterOpen(Sender: TObject);
 begin
-  btnStartStop.Caption:='Port zárás';
-  btnKuldes.Enabled:=True;
+  if Active then
+  begin
+    btnStartStop.Caption:='Port zárás';
+    btnKuldes.Enabled:=True;
+  end;
 end;
 
 procedure TPLC_COMF.ComPort_RTURxChar(Sender: TObject; Count: Integer);

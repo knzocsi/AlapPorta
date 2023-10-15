@@ -257,6 +257,7 @@ var
   PC_Szam:string;
   aktualis_merlegszam,kepernyo_meretarany:integer;
   szabalyos_merlegen_tartozkodas_figyeles:boolean;
+  Masolas_utvonala,Kepek_Mappa:string;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
@@ -783,8 +784,16 @@ begin
   //utolso_sql:=cfg_kezel('','MYSQL','Utolsó SQL frissítés','Integer',Utolso_sql);
  // inif.WriteInteger('MySql','Utolso_sql',utolso_sql);
  // MW101	Bruttó tömeg felsõ két byte
+  Masolas_utvonala:=inif.ReadString('ALAP','Masolas_utvonala','');
+  if ( Masolas_utvonala<>'') and (Masolas_utvonala[Length(Masolas_utvonala)]<>'\')  then Masolas_utvonala:=Masolas_utvonala+'\';
+  inif.writeString('ALAP','Masolas_utvonala',Masolas_utvonala);
+
+  Kepek_Mappa:=cfg_kezel('A kamerák által készített képek tárolásio helye','PLC_USB','Kepek_Mappa','String',Kepek_Mappa);
+  if ( Kepek_Mappa<>'') and (Kepek_Mappa[Length(Kepek_Mappa)]<>'\')  then Kepek_Mappa:=Kepek_Mappa+'\';
 
   { TODO -oKNZ -c : Az Rtspket itt kell betölteni 2023. 03. 21. 17:55:47 }
+
+
   for k := 0 to 3 do
     begin
      rtspurls[k]:=inif.ReadString('Rtsp','URL Cam '+k.ToString,'');

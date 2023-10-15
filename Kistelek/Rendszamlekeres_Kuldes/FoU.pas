@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvAppStorage, JvAppIniStorage,
   JvComponentBase, JvFormPlacement, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
-  Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid;
+  Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, Vcl.Imaging.jpeg, CPort;
 
 type
   esemeny_rec=record
@@ -36,16 +36,28 @@ type
     JvDBGrid2: TJvDBGrid;
     Splitter1: TSplitter;
     tmrKepkeres: TTimer;
-    Panel3: TPanel;
+    pnlAlso: TPanel;
     tmrParosit_Kuld: TTimer;
+    lblRendszamok: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    pnlBalkep: TPanel;
+    pnlJobbKep: TPanel;
+    Image1: TImage;
+    Image2: TImage;
+    btnCombeallitas: TButton;
+    ComPort1: TComPort;
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure tmrKepkeresTimer(Sender: TObject);
-    procedure esemeny_kibont(idopont:Tdatetime;fnev:string);
+    function esemeny_kibont(idopont:Tdatetime;fnev:string):esemeny_rec;
     function nullak(szam,hossz:integer):string;
     procedure btnKilepesClick(Sender: TObject);
     procedure tmrParosit_KuldTimer(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure pnlAlsoResize(Sender: TObject);
+    procedure btnCombeallitasClick(Sender: TObject);
+    procedure ComPort1RxChar(Sender: TObject; Count: Integer);
   private
     { Private declarations }
   public
@@ -54,12 +66,19 @@ type
 
 var
   FoF: TFoF;
-  esemeny:esemeny_rec;
+  konyvtar,soros_adat,Masolas_utvonala:string;
+  kezdes:Boolean=True;
 
 implementation
 uses au;
 
 {$R *.dfm}
+
+procedure TFoF.btnCombeallitasClick(Sender: TObject);
+begin
+  ComPort1.ShowSetupDialog;
+  ComPort1.StoreSettings(stIniFile, konyvtar+'srport.dat' );
+end;
 
 procedure TFoF.btnKilepesClick(Sender: TObject);
 begin
@@ -67,9 +86,16 @@ begin
   close;
 end;
 
-procedure TFoF.esemeny_kibont(idopont: Tdatetime; fnev: string);
+procedure TFoF.ComPort1RxChar(Sender: TObject; Count: Integer);
+begin
+  ComPort1.ReadStr(soros_adat,count);
+end;
+
+function TFoF.esemeny_kibont(idopont: Tdatetime; fnev: string):esemeny_rec;
 var ev,ho,nap,ora,perc,masodperc,ms:word;
     datum,ido:Tdatetime;
+    esemeny:esemeny_rec;
+
 begin
   if fnev='' then
   begin
@@ -109,12 +135,18 @@ begin
       esemeny.ev:=0;
     end;
   end;
+  Result:=esemeny;
 end;
 
 procedure TFoF.FormActivate(Sender: TObject);
 begin
   OnActivate:=nil;
+  lblRendszamok.Caption:='';
+  if not FileExists( konyvtar+'srport.dat') then  ShowMessage('A port nincs beállítva!')
+  else ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
   af.RendszamokQ.Open;
+  af.ParositottQ.open;
+  kezdes:=false;
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -124,12 +156,16 @@ end;
 
 procedure TFoF.FormCreate(Sender: TObject);
 begin
-  IniFile.FileName:= ExtractFileDir(Application.Exename)+'\Rendszamkuldes_beallitas.ini';
+  konyvtar:= ExtractFileDir(Application.Exename)+'\';
+  IniFile.FileName:=konyvtar+'Rendszamkuldes_beallitas.ini';
   utolsoSQL:=IniFile.ReadInteger('SQL\utolsoSQL',0);
   IniFile.WriteInteger('SQL\utolsoSQL',utolsoSQL);
   logdir:=IniFile.ReadString('ALAP\LogDir','');
   if ( logdir<>'') and (logdir[Length(logdir)]<>'\')  then logdir:=logdir+'\';
   IniFile.WriteString('ALAP\LogDir',logdir);
+  Masolas_utvonala:=IniFile.ReadString('ALAP\Masolas_utvonala','');
+  if ( Masolas_utvonala<>'') and (Masolas_utvonala[Length(Masolas_utvonala)]<>'\')  then Masolas_utvonala:=Masolas_utvonala+'\';
+  IniFile.WriteString('ALAP\Masolas_utvonala',Masolas_utvonala);
  end;
 
 function TFoF.nullak(szam, hossz: integer): string;
@@ -140,12 +176,25 @@ begin
   Result:=s;
 end;
 
+procedure TFoF.pnlAlsoResize(Sender: TObject);
+var x,y:integer;
+begin
+  if  kezdes then exit;
+  //ShowMessage('Átméretezés');
+  y:=pnlAlso.Height;
+  x:=y*2;
+  pnlBalkep.Width:=x;
+  pnlJobbKep.Width:=x;
+end;
+
 procedure TFoF.tmrKepkeresTimer(Sender: TObject);
 var SearchRec: TSearchRec;
     aktdir:string;
+    esemeny:esemeny_rec;
+
 begin
   tmrKepkeres.Enabled:=false;
-  esemeny_kibont(Now,'');
+  esemeny:=esemeny_kibont(Now,'');
   aktdir:=logdir+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
 
   if DirectoryExists(aktdir) then
@@ -165,7 +214,7 @@ begin
               open;
               if eof then
               begin
-                esemeny_kibont(Now,SearchRec.Name);
+                esemeny:=esemeny_kibont(Now,SearchRec.Name);
                 if esemeny.ev<>0 then
                 begin
                   close;
@@ -195,16 +244,87 @@ begin
 end;
 
 procedure TFoF.tmrParosit_KuldTimer(Sender: TObject);
-var esem:esemeny_rec;
+var elozoesem:esemeny_rec;
+    parositott_id:Integer;
 
-  procedure kuldes(rendszam1,rendszam2,kepnev1,kepnev2:string);
+  procedure kep_masolas;
+  var aktdir:string;
+  esemeny:esemeny_rec;
+
   begin
-    ;
+    if DirectoryExists(Masolas_utvonala) then
+    begin
+      with Af.Q4 do
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add('SELECT * FROM parositott');
+        SQL.Add('WHERE (bekuldve=1) and (masolva=0)');
+        open;
+        while not Eof do
+        begin
+          if FieldByName('kepnev1').AsString<>'' then
+          begin
+            esemeny:=esemeny_kibont(now,FieldByName('kepnev1').AsString);
+            aktdir:=logdir+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
+            if CopyFile(PWideChar(aktdir+fieldbyname('kepnev1').AsString),PWideChar(Masolas_utvonala+fieldbyname('kepnev1').AsString),false) then
+            begin
+              Af.Q5.close;
+              Af.Q5.SQL.Clear;
+              Af.Q5.SQL.Add('UPDATE parositott');
+              Af.Q5.SQL.Add('SET masolva=1');
+              Af.Q5.SQL.Add('WHERE id='+FieldByName('id').AsString);
+              Af.Q5.ExecSQL;
+            end;
+          end;
+          if FieldByName('kepnev2').AsString<>'' then
+          begin
+            esemeny:=esemeny_kibont(now,FieldByName('kepnev2').AsString);
+            aktdir:=logdir+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
+            CopyFile(PWideChar(aktdir+fieldbyname('kepnev2').AsString),PWideChar(Masolas_utvonala+fieldbyname('kepnev2').AsString),false);
+          end;
+          next;
+        end;
+
+      end;
+    end;
+
+  end;
+
+
+  procedure kuldes(iD:integer;rendszam1,rendszam2,kepnev1,kepnev2:string);
+  var i:integer;
+  begin
+    if not FileExists( konyvtar+'srport.dat') then  exit;
+    ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
+    soros_adat:='';
+    ComPort1.open;
+    ComPort1.WriteStr(#2+rendszam1+';'+rendszam2+';'+kepnev1+';'+kepnev2+#3);
+    i:=1;
+    while (soros_adat<>#6) and (i<10) do
+    begin
+      Application.ProcessMessages;
+      Sleep(100);
+      i:=i+1;
+    end;
+    ComPort1.Close;
+    if i<>10 then
+      with Af.Q4 do
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add('UPDATE parositott');
+        SQL.Add('SET bekuldve=1');
+        SQL.Add('WHERE id='+ID.ToString);
+        ExecSQL;
+      end;
+
+
   end;
 
   procedure parositas_beiras(id:Integer);
   begin
-     with af.q4 do
+    with af.q4 do
     begin
       close;
       SQL.clear;
@@ -215,18 +335,20 @@ var esem:esemeny_rec;
   end;
 
   procedure mentes(ketrendszam:Boolean);
+  var aktdir:string;
+  esemeny:esemeny_rec;
   begin
     with af.q3 do
     begin
       close;
       SQL.clear;
       SQL.Add('INSERT INTO parositott ');
-      SQL.Add('(rendszam1,rendszam2,kepnev1,kepnev2) VALUES (:rendszam1,:rendszam2,:kepnev1,:kepnev2) ');
-      ParamByName('rendszam1').AsString:=esem.rendszam;
-      ParamByName('kepnev1').AsString:=esem.kepnev;
+      SQL.Add('(rendszam1,rendszam2,kepnev1,kepnev2,bekuldve,masolva) VALUES (:rendszam1,:rendszam2,:kepnev1,:kepnev2,0,0) ');
+      ParamByName('rendszam1').AsString:=elozoesem.rendszam;
+      ParamByName('kepnev1').AsString:=elozoesem.kepnev;
       ParamByName('rendszam2').AsString:='';
       ParamByName('kepnev2').AsString:='';
-      parositas_beiras(esem.id);
+      parositas_beiras(elozoesem.id);
       if ketrendszam then
       begin
         ParamByName('rendszam2').AsString:=af.q2.FieldByName('rendszam').AsString;
@@ -234,11 +356,25 @@ var esem:esemeny_rec;
         parositas_beiras(af.q2.FieldByName('id').AsInteger);
       end;
       ExecSQL;
-      kuldes(ParamByName('rendszam1').AsString,ParamByName('rendszam2').AsString,ParamByName('kepnev1').AsString,ParamByName('kepnev2').AsString);
-      esem.rendszam:='';
-      esem.kamera_szam:=0;
-      esem.kepnev:='';
-      esem.id:=0;
+      lblRendszamok.caption:=ParamByName('rendszam1').AsString+'   '+ParamByName('rendszam2').AsString;
+      esemeny:=esemeny_kibont(elozoesem.datum,'');
+      aktdir:=logdir+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
+      if ParamByName('kepnev1').AsString<>'' then  Image1.Picture.LoadFromFile(aktdir+ParamByName('kepnev1').AsString);
+      esemeny:=esemeny_kibont(af.q2.FieldByName('idopont').AsDateTime,'');
+      aktdir:=logdir+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
+      if ParamByName('kepnev2').AsString<>'' then Image2.Picture.LoadFromFile(aktdir+ParamByName('kepnev2').AsString);
+      close;
+      SQL.clear;
+      SQL.Add('SELECT * FROM parositott');
+      open;
+      last;
+      kuldes(Fieldbyname('ID').AsInteger,Fieldbyname('rendszam1').AsString,Fieldbyname('rendszam2').AsString,Fieldbyname('kepnev1').AsString,Fieldbyname('kepnev2').AsString);
+      close;
+      kep_masolas;
+      elozoesem.rendszam:='';
+      elozoesem.kamera_szam:=0;
+      elozoesem.kepnev:='';
+      elozoesem.id:=0;
       af.ParositottQ.close;
       af.ParositottQ.open;
     end;
@@ -257,22 +393,22 @@ begin
     SQL.Add('WHERE (idopont>:idopont) and (parositva=0) ');
     ParamByName('idopont').AsDatetime:=now-0.00001157*30;
     open;
-    esem.rendszam:='';
+    elozoesem.rendszam:='';
     while not eof do
     begin
-      if esem.rendszam<>'' then
+      if elozoesem.rendszam<>'' then
       begin
-        if esem.kamera_szam<>FieldByName('kameraszam').AsInteger then  mentes(True)
+        if elozoesem.kamera_szam<>FieldByName('kameraszam').AsInteger then  mentes(True)
         else mentes(False);
 
       end
       else
       begin
-        esem.rendszam:=FieldByName('rendszam').AsString;
-        esem.kamera_szam:=FieldByName('kameraszam').AsInteger;
-        esem.kepnev:=FieldByName('kepnev').AsString;
-        esem.datum:=FieldByName('idopont').AsDateTime;
-        esem.id:=FieldByName('id').AsInteger;
+        elozoesem.rendszam:=FieldByName('rendszam').AsString;
+        elozoesem.kamera_szam:=FieldByName('kameraszam').AsInteger;
+        elozoesem.kepnev:=FieldByName('kepnev').AsString;
+        elozoesem.datum:=FieldByName('idopont').AsDateTime;
+        elozoesem.id:=FieldByName('id').AsInteger;
       end;
 
       next;

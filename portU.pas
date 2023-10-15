@@ -1,4 +1,4 @@
-{.$Define D400}
+﻿{.$Define D400}
 unit portU;
 
 interface
@@ -40,6 +40,7 @@ type
     ComPort2: TComPort;
     comHivoszamkijelzo: TComPort;
     Button2: TButton;
+    comPC_Kommunikacio: TComPort;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -62,6 +63,8 @@ type
     procedure btnHivoszamkijezobeallitasClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure ComPort2RxChar(Sender: TObject; Count: Integer);
+    procedure comHivoszamkijelzoRxChar(Sender: TObject; Count: Integer);
+    procedure comPC_KommunikacioRxChar(Sender: TObject; Count: Integer);
 
 
   private
@@ -78,6 +81,9 @@ type
     procedure IP1_Start;
     procedure IP2_Start;
     function merleg_szam(merleg:string):integer;
+    procedure pc_komm_port_open(Port:string);
+    procedure pc_komm_port_close;
+    procedure pc_komm_port_kuld(szoveg:string);
   end;
 const
   hibamaximum=5;
@@ -94,7 +100,8 @@ var
   elozotomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
   nullszintvolt,rendszamvolt :array [1..maxmerleg] of boolean;
   hibaszamlalo:integer;
-
+  hivoszamkijezo_valasz,PC_kommunikacio:string;
+  pc_kom_resz:string;
 
 
 
@@ -153,7 +160,7 @@ begin
   //mertertek:='-4';
 
   if uppercase( ParamStr(1))='/LOG' then Append(tf) ;
- 
+
 
   if Active then
   begin
@@ -828,19 +835,24 @@ end;
 procedure TPortF.hivoszamkijelzore_ir(szam:string);
 var i:integer;
 begin
-  if PortF.comHivoszamKijelzo.Connected then exit;
-  PortF.comHivoszamKijelzo.LoadSettings(stIniFile, konyvtar+'hivoszamkijelzo.dat' );
-  PortF.comHivoszamKijelzo.open;
-  while  Length(szam)<3 do szam:='0'+szam;
-
-  for I := 1 to 3 do
-  begin
-    //ShowMessage(szam);
-    PortF.comHivoszamKijelzo.WriteStr('AX/B='+szam+'  2');
-    Sleep(100);
-    Application.ProcessMessages;
+  if (PortF.comHivoszamKijelzo.Connected) or (not FileExists(konyvtar+'hivoszamkijelzo.dat')) then exit;
+  try
+    PortF.comHivoszamKijelzo.LoadSettings(stIniFile, konyvtar+'hivoszamkijelzo.dat' );
+    hivoszamkijezo_valasz:='';
+    PortF.comHivoszamKijelzo.open;
+    PortF.comHivoszamKijelzo.WriteStr(#2+szam+#3);
+    i:=1;
+    while (hivoszamkijezo_valasz<>#4) and (i<10) do
+    begin
+      Application.ProcessMessages;
+      Sleep(100);
+      i:=i+1;
+    end;
+    PortF.comHivoszamKijelzo.Close;
+    if i=10 then ShowMessage('A a rendszámot nem sikerült kiküldeni, próbálja újra!')
+  except
+    ShowMessage('A rendszám küldés nem sikerült!')
   end;
-  PortF.comHivoszamKijelzo.Close;
 end;
 
 procedure TPortF.IdTCPClient1Connected(Sender: TObject);
@@ -899,23 +911,59 @@ begin
   Client_Timer2.Enabled:=True;
 end;
 
+procedure TPortF.pc_komm_port_close;
+begin
+  comPC_Kommunikacio.OnRxChar:=nil;
+  try
+    if comPC_Kommunikacio.Connected then comPC_Kommunikacio.close;
+  except
+
+  end;
+end;
+
+procedure TPortF.pc_komm_port_kuld(szoveg: string);
+begin
+  comPC_Kommunikacio.WriteStr(szoveg);
+end;
+
+procedure TPortF.pc_komm_port_open(Port: string);
+begin
+  if uppercase( ParamStr(1))='/LOG' then
+  begin
+    ForceDirectories(konyvtar+'LOG');
+    AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');
+    Rewrite(tf);
+    Writeln(tf,'PC Kommunikacio port:'+ Port+' 9600 N 8 1');
+    Writeln(tf, ' OPEN');
+    CloseFile(tf);
+    pc_kom_resz:='';
+  end;
+
+  comPC_Kommunikacio.Port:=port;
+  comPC_Kommunikacio.BaudRate:=br9600;
+  comPC_Kommunikacio.Parity.Bits:=prNone;
+  comPC_Kommunikacio.StopBits:=sbOneStopBit;
+  comPC_Kommunikacio.open;
+  comPC_Kommunikacio.ClearBuffer(true,true);
+end;
+
 procedure TPortF.port2close;
 begin
-   ComPort2.OnRxChar:=nil;
- while  sorosvetelben do
- begin
-   Sleep(10);
-   Application.ProcessMessages;
- end;
- try
-   if ComPort2.Connected then  ComPort2.close;
- except
- end;
+  ComPort2.OnRxChar:=nil;
+  while  sorosvetelben do
+  begin
+    Sleep(10);
+    Application.ProcessMessages;
+  end;
+  try
+    if ComPort2.Connected then  ComPort2.close;
+  except
+  end;
 end;
 
 procedure TPortF.port2open;
 begin
-   if uppercase( ParamStr(1))='/LOG' then
+  if uppercase( ParamStr(1))='/LOG' then
   begin
     ForceDirectories(konyvtar+'\LOG');
     AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');
@@ -974,7 +1022,11 @@ begin
   Aktiv:=true;
   memTeszT.Text:='Soros teszt';
   memHexa.Text:='';
-  btnKijelzo_beallitas.Enabled:= kijelzo_tipus<>'Nincs';
+  lblTomeg1.Caption:='';
+  lblTomeg2.Caption:='';
+  lblKapcsolat1.Caption:='';
+  lblKapcsolat2.Caption:='';
+  btnKijelzo_beallitas.Visible:= kijelzo_tipus<>'Nincs';
 end;
 
 procedure TPortF.btnMemotorolClick(Sender: TObject);
@@ -1070,6 +1122,12 @@ begin
   Client_Timer2.Enabled:=True;
 end;
 
+procedure TPortF.comHivoszamkijelzoRxChar(Sender: TObject; Count: Integer);
+begin
+  comHivoszamkijelzo.ReadStr(hivoszamkijezo_valasz,Count);
+  //ShowMessage(ord(hivoszamkijezo_valasz[1]).ToString);
+end;
+
 procedure TPortF.ComLed1DblClick(Sender: TObject);
 begin
   ComPort1.close;
@@ -1078,530 +1136,23 @@ begin
   ComPort1.Open;
 end;
 
+procedure TPortF.comPC_KommunikacioRxChar(Sender: TObject; Count: Integer);
+var ertek:string;
+begin
+  comPC_Kommunikacio.ReadStr(ertek,Count);
+  pc_kom_resz:=pc_kom_resz+ertek;
+  if ParamStr(1)='/RE' then
+  begin
+    PC_kommunikacio:=PC_kommunikacio+count.ToString;
+  end;
+  if (pc_kom_resz<>'') and (Copy(pc_kom_resz,1,1)=#2) and (Copy(pc_kom_resz,Length(pc_kom_resz),1)=#3) then
+  begin
+    PC_kommunikacio:= pc_kom_resz;
+    pc_komm_port_kuld(#6);
+    pc_kom_resz:='';
+  end;
+end;
+
 end.
 
 
-//R�gi vev�
-(*
- kilep:=FALSE;
-  kezd:=false;
-  ertek:=mertek;
-  db:=0;
-  //mertertek:='-4';
-  sorosvetelben:=true;
-  if uppercase( ParamStr(1))='/LOG' then Append(tf) ;
-  sadat:='';
-  Sleep(10);
-  comport1.readstr(sadat,Count);
-  if Aktiv then
-  begin
-    memTeszt.Text:=sadat+memTeszt.text;
-    memHexa.Text:= memHexa.Text+hexaszov(sadat);
-  end;
-  if uppercase( ParamStr(1))='/LOG'then  Writeln(tf,sadat);
-  if ParamStr(1)='/CT2' then ShowMessage('1s:'+ERTEK);
-  sadat:=ertek+sadat;
-  ertek:='';
-
-  if Merleg_tipus='Dibal' then mtip:=1        //R420 is
-  else if Merleg_tipus='DMI610' then mtip:=2
-    else if Merleg_tipus='MS' then mtip:=3
-      else if Merleg_tipus='Excell' then mtip:=4
-        else if Merleg_tipus='EntechVibra' then mtip:=5
-          else if Merleg_tipus='Senso' then mtip:=6
-            else if Merleg_tipus='Ohaus' then mtip:=7
-              else if Merleg_tipus='Bila' then mtip:=8
-                else if Merleg_tipus='D400' then mtip:=9
-                   else if Merleg_tipus='EntechSartorius' then mtip:=10
-                      else if Merleg_tipus='S120' then mtip:=11;
-
-  case mtip of
-
-    1 : begin            //Dibal, R420
-          si:=0;
-          bit:=8;
-          repeat
-            si:=si+1;
-            if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
-            adat:=sadat[si];
-
-            if adat=#2 then kezd:=true
-                else
-                  if kezd then
-                    begin
-                      if (adat=#3) and (length(ertek)=bit) then
-                        begin
-                          {comport2.writestring(#6);}
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          mertek:='';
-                          kilep:=true ;
-                          ertek:=ertek_tisztitas(ertek);
-                          if ParamStr(1)='/CT3' then ShowMessage('3e:'+ertek);
-                        end
-                      else
-                      begin
-                        if (adat=#3) or (length(ertek)=bit)then
-                        begin
-                          //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='Hib�s �rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          ertek:='';
-                          db:=1;
-                        end
-                        else ertek:=ertek+adat;
-                      end;
-                    end;
-
-          until (kilep) or (si=Length(sadat));
-          if Not(kilep) then mertek:=sadat;
-
-          if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
-        end;
-
-    2 : begin              //DMI610
-          si:=0;
-          repeat
-            si:=si+1;
-            if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
-            adat:=sadat[si];
-
-            if adat=#2 then kezd:=true
-                else
-                  if kezd then
-                    begin
-                      if (adat=#3) and (length(ertek)=bit) then
-                        begin
-                          {comport2.writestring(#6);}
-                          mertek:='';
-                          kilep:=true ;
-                          ertek:=ertek_tisztitas(ertek);
-                          if ParamStr(1)='/CT3' then ShowMessage('3e:'+ertek);
-                        end
-                      else
-                      begin
-                        if (adat=#3) or (length(ertek)=bit)then
-                        begin
-                          //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
-                          ertek:='';
-                          db:=1;
-                        end
-                        else ertek:=ertek+adat;
-                      end;
-                    end;
-
-          until (kilep) or (si=Length(sadat));
-          if Not(kilep) then mertek:=sadat;
-
-          if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
-        end;
-
-    3 : begin        //MS
-          si:=0;
-          if mertdarab<>'' then sadat:=mertdarab+sadat;
-          repeat
-            si:=si+1;
-            adat:=sadat[si];
-            if (adat<>#10) then ertek:=ertek+adat
-            else
-              begin
-                if (Aktiv) and (chkErtek_vj.Checked) then
-                begin
-                  memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                end;
-                i:=1;
-                s1:='';
-                ertek:=ertek_tisztitas(ertek);
-                if (Aktiv) and (chkErtek_feld.Checked) then
-                begin
-                  memEredmeny.Text:='�rt�k feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                end;
-                mertek:='';
-                kilep:=true;
-                mertdarab:='';
-              end;
-
-          until (kilep) or (si=Length(sadat));
-          if (adat<>#10) then mertdarab:=sadat;
-        end;
-
-
-    4:  Begin          //EXCELL
-          si:=0;
-          repeat
-            si:=si+1;
-
-            adat:=sadat[si];
-
-            if (adat<>#10) then ertek:=ertek+adat
-            else
-              if Length(ertek)=20 then
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertek:='';
-                kilep:=true;
-              end
-              else ertek:=''
-          until (kilep) or (si=Length(sadat)) or (programvege);
-
-
-         // portolvas�s v�ge
-          if Not(kilep) then mertek:=ertek;
-
-          if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              StrToFloat(ertek);
-            except
-              ertek:='-0';
-            end;
-          if ertek='-1' then ertek:='-0';
-
-        end;
-
-
-    5:  begin //EntechVibra
-
-
-
-          Merlegadathossz:=14;
-          si:=0;
-          repeat
-            si:=si+1;
-
-            adat:=sadat[si];
-
-            if (adat<>#10) then ertek:=ertek+adat
-            else
-              if Length(ertek)=Merlegadathossz then
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertek:='';
-                kilep:=true;
-              end
-              else ertek:=''
-          until (kilep) or (si=Length(sadat)) or (programvege);
-
-         // portolvas�s v�ge
-          if Not(kilep) then mertek:=ertek;
-
-         if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              ertek:=IntToStr(Round(StrToFloat(ertek)*10));
-            except
-              ertek:='-0';
-            end;
-            if ertek='-1' then ertek:='-0';
-
-        end;
-
-
-    6:  begin// Senso
-
-          si:=0;
-          repeat
-            si:=si+1;
-            if ParamStr(1)='/CT4' then ShowMessage('2s:'+sadat);
-            adat:=sadat[si];
-
-            if (adat<>#13) then ertek:=ertek+adat
-            else
-            begin
-              //if ParamStr(1)='/CT1' then ShowMessage('2e:'+inttostr(Length(ertek)));
-              if (Aktiv) and (chkErtek_vj.Checked) then
-              begin
-                memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-              end;
-              if Length(ertek)=8 then
-              begin
-                if ParamStr(1)='/CT1' then ShowMessage('3e:'+ertek);
-                ertek:=ertek_tisztitas(ertek);
-                if (Aktiv) and (chkErtek_feld.Checked) then
-                begin
-                  memEredmeny.Text:='�rt�k feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                end;
-
-                mertek:='';
-                comport1.ClearBuffer(True,true);
-                kilep:=true;
-              end
-              else
-              begin
-                ertek:='';
-                if ParamStr(1)='/CT1' then ShowMessage('2e:'+inttostr(Length(ertek)))
-              end;
-
-            end;
-          until (kilep) or (si=Length(sadat));
-
-
-         // portolvas�s v�ge
-          if Not(kilep) then mertek:=ertek;
-
-          if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              StrToFloat(ertek);
-            except
-              ertek:='-2';
-            end;
-          if ertek='-1' then ertek:='-3';
-
-        end;
-
-
-    7:  begin // Ohaus}
-
-          si:=0;
-          if Aktiv then
-          begin
-            memTeszt.Text:=sadat+memTeszt.text;
-            memHexa.Text:= memHexa.Text+hexaszov(sadat);
-          end;
-          repeat
-            si:=si+1;
-
-            adat:=sadat[si];
-
-            if (adat<>#10) then ertek:=ertek+adat
-            else
-              if Length(ertek)=13 then
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertek:='';
-                kilep:=true;
-              end
-              else ertek:=''
-          until (kilep) or (si=Length(sadat));
-
-
-           // portolvas�s v�ge
-
-
-
-          if Not(kilep) then mertek:=ertek;
-
-          if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              StrToFloat(ertek);
-            except
-              ertek:='-0';
-            end;
-          if ertek='-1' then ertek:='-0';
-       end;
-
-    8:  begin//Ifdef Bila}
-          si:=0;
-          bit:=8;
-          repeat
-            si:=si+1;
-            if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
-            adat:=sadat[si];
-
-            if (adat=#13) and (not (kezd)) then kezd:=true
-                else
-                  if kezd then
-                    begin
-                      if (adat=#13) and (length(ertek)=bit) then
-                        begin
-                          {comport2.writestring(#6);}
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          mertek:='';
-                          kilep:=true ;
-                          ertek:=ertek_tisztitas(ertek);
-                          if ParamStr(1)='/CT3' then ShowMessage('3e:'+ertek);
-                        end
-                      else
-                      begin
-                        if (adat=#13) or (length(ertek)=bit)then
-                        begin
-                          //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='Hib�s �rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          ertek:='';
-                          db:=1;
-                        end
-                        else ertek:=ertek+adat;
-                      end;
-                    end;
-
-          until (kilep) or (si=Length(sadat));
-          if Not(kilep) then mertek:=sadat;
-
-          if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
-        end;
-
-    9:  begin  //D400}       //Bilanchia
-          si:=0;
-          bit:=29;
-          repeat
-            si:=si+1;
-            if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
-            adat:=sadat[si];
-
-            if (adat=#10) and (not (kezd)) then kezd:=true
-                else
-                  if kezd then
-                    begin
-                      if (adat=#10) and (length(ertek)=bit) then
-                        begin
-                          {comport2.writestring(#6);}
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          mertek:='';
-                          kilep:=true ;
-                          ertek:=Copy(ertek,2,9) ;
-
-                          ertek:=ertek_tisztitas(ertek);
-                          if ParamStr(1)='/CT3' then ShowMessage('3e:'+ertek);
-                        end
-                      else
-                      begin
-                        if (adat=#10) or (length(ertek)=bit)then
-                        begin
-                          //if paramstr(1)='/b' then showMessage(IntToStr(length(ertek))+','+IntToStr(db));
-                          if (Aktiv) and (chkErtek_vj.Checked) then
-                          begin
-                            memEredmeny.Text:='Hib�s �rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
-                          end;
-                          ertek:='';
-                          db:=1;
-                        end
-                        else ertek:=ertek+adat;
-                      end;
-                    end;
-
-          until (kilep) or (si=Length(sadat));
-          if Not(kilep) then mertek:=sadat;
-
-          if ParamStr(1)='/CT2' then ShowMessage('4:'+ertek);
-        end;
-
-    10: begin //EntechSartorius
-
-
-          Merlegadathossz:=15;
-          si:=0;
-          repeat
-            si:=si+1;
-
-            adat:=sadat[si];
-
-            if (adat<>#10) then ertek:=ertek+adat
-            else
-              if Length(ertek)=Merlegadathossz then
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertek:='';
-                kilep:=true;
-              end
-              else ertek:=''
-          until (kilep) or (si=Length(sadat)) or (programvege);
-
-         // portolvas�s v�ge
-          if Not(kilep) then mertek:=ertek;
-
-         if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              ertek:=IntToStr(Round(StrToFloat(ertek)*10000));
-
-            except
-              ertek:='-0';
-            end;
-            if ertek='-1' then ertek:='-0';
-
-        end;
-
-     11: begin // Ohaus}
-
-          si:=0;
-          if Aktiv then
-          begin
-            memTeszt.Text:=sadat+memTeszt.text;
-            memHexa.Text:= memHexa.Text+hexaszov(sadat);
-          end;
-         repeat
-            si:=si+1;
-            adat:=sadat[si];
-            if (adat<>#3) or ((adat=#3) and (ertek=''))  then ertek:=adat+ertek
-            else
-              begin
-                ertek:=ertek_tisztitas(ertek);
-                mertek:='';
-                kilep:=true;
-                try
-                  if ertek<>'' then
-                  begin
-                    tom:=StrToInt(ertek);
-                    ertek:=IntToStr(tom);
-                  end;
-                except
-
-                end;
-
-              end;
-
-          until (kilep) or (si=Length(sadat)) or (programvege);
-
-
-
-          if Not(kilep) then mertek:=ertek;
-
-          if kilep then
-            try
-              if ertek='' then ertek:='-1';
-              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-              StrToFloat(ertek);
-            except
-              ertek:='-0';
-            end;
-          if ertek='-1' then ertek:='-0';
-       end;
-  end;
-
-
-  if (ertek<>'-0') and (ertek<>'') and (kilep) then
-  begin
-    if ParamStr(1)='/CT2' then ShowMessage('4e:'+ertek);
-    try
-      if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
-      mert:=StrToFloat(ertek);
-      ertek:=FloatToStr(mert);
-    except
-      ertek:='-0'
-    end;
-    if ERTEK<>'-0' THEN mertertek:=ertek;
-    sleep(1);
-  end
-  else if ParamStr(1)='/CT2' then ShowMessage('5e:'+ertek);
-  sorosvetelben:=false;
-  //Fof.Label11.caption:= mertertek+' kg';
-  if (Aktiv) and (chkMertertek.Checked) then
-  begin
-    memEredmeny.Text:='M�rt �rt�k: ('+Merleg_tipus+IntToStr(mtip)+')'+mertertek+#13#10+memEredmeny.text;
-  end;
-  if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
-
-  //Sleep(100);
-  //Application.ProcessMessages;
-  ComPort1.OnRXChar:= ComPort1RxChar ;
-  *)

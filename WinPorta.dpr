@@ -1,7 +1,5 @@
 program WinPorta;
 
-
-
 {$R *.dres}
 
 uses
@@ -65,7 +63,6 @@ begin
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TNezetF, NezetF);
-  Application.CreateForm(TBelepF, BelepF);
   Application.CreateForm(TPortF, PortF);
   Application.CreateForm(TMeresF, MeresF);
   Application.CreateForm(TPartnerekF, PartnerekF);
@@ -105,5 +102,6 @@ begin
   Application.CreateForm(TPLC_COMF, PLC_COMF);
   Application.CreateForm(TImportF, ImportF);
   Application.CreateForm(TMerlegelesekF, MerlegelesekF);
+  Application.CreateForm(TBelepF, BelepF);
   Application.Run;
 end.

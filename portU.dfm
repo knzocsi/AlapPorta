@@ -21,7 +21,7 @@ object PortF: TPortF
     Left = 0
     Top = 0
     Width = 908
-    Height = 41
+    Height = 68
     Align = alTop
     TabOrder = 0
     object ComLed1: TComLed
@@ -82,7 +82,7 @@ object PortF: TPortF
       OnClick = Button1Click
     end
     object btnKijelzo_beallitas: TButton
-      Left = 494
+      Left = 382
       Top = 4
       Width = 130
       Height = 25
@@ -91,18 +91,19 @@ object PortF: TPortF
       OnClick = btnKijelzo_beallitasClick
     end
     object btnHivoszamkijezobeallitas: TButton
-      Left = 640
-      Top = 4
-      Width = 153
+      Left = 382
+      Top = 37
+      Width = 130
       Height = 25
       Caption = 'H'#237'v'#243'sz'#225'mkijelz'#337' be'#225'll'#237't'#225's'
       TabOrder = 5
+      Visible = False
       OnClick = btnHivoszamkijezobeallitasClick
     end
     object Button2: TButton
-      Left = 359
-      Top = 4
-      Width = 114
+      Left = 253
+      Top = 37
+      Width = 100
       Height = 25
       Caption = '2. port be'#225'll'#237't'#225's'
       TabOrder = 6
@@ -111,9 +112,9 @@ object PortF: TPortF
   end
   object memTeszt: TMemo
     Left = 0
-    Top = 41
+    Top = 68
     Width = 668
-    Height = 383
+    Height = 356
     Align = alClient
     Lines.Strings = (
       'Soros teszt'
@@ -132,16 +133,16 @@ object PortF: TPortF
   end
   object Panel1: TPanel
     Left = 668
-    Top = 41
+    Top = 68
     Width = 240
-    Height = 383
+    Height = 356
     Align = alRight
     TabOrder = 2
     object memEredmeny: TMemo
       Left = 1
       Top = 137
       Width = 238
-      Height = 245
+      Height = 218
       Align = alClient
       Lines.Strings = (
         '')
@@ -313,7 +314,27 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
+    OnRxChar = comHivoszamkijelzoRxChar
     Left = 256
     Top = 224
+  end
+  object comPC_Kommunikacio: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    StoredProps = [spBasic]
+    TriggersOnRxChar = True
+    OnRxChar = comPC_KommunikacioRxChar
+    Left = 152
+    Top = 298
   end
 end

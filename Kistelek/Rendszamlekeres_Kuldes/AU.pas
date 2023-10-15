@@ -24,14 +24,16 @@ type
     ParositottQ: TFDQuery;
     ParositottDS: TDataSource;
     Q4: TFDQuery;
+    Q5: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
+
     { Public declarations }
   end;
 
-const maxSQL=2;
+const maxSQL=3;
 modSQL :array[1..maxSQL] of string =
 
       (
@@ -55,6 +57,10 @@ modSQL :array[1..maxSQL] of string =
       '`kepnev1` TEXT, '+#13#10+
       '`kepnev2` TEXT '+#13#10+
       '); '+ #13#10 +
+      ''
+      ,
+      'ALTER TABLE parositott ADD COLUMN masolva INTEGER;'+ #13#10 +
+
       ''
     );
 var
@@ -93,4 +99,6 @@ begin
   Kapcs.Connected:=false;
 end;
 
+
+ 
 end.

@@ -96,13 +96,13 @@ object FoF: TFoF
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Hivo_sorszam'
+              FieldName = 'Rendszam'
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Rendszam'
+              FieldName = 'Rendszam2'
               Visible = True
             end
             item
@@ -626,7 +626,7 @@ object FoF: TFoF
       object sbtnSorszamhivas: TSpeedButton
         Left = 383
         Top = 2
-        Width = 162
+        Width = 266
         Height = 51
         Caption = '0'
         Font.Charset = DEFAULT_CHARSET
@@ -1414,5 +1414,11 @@ object FoF: TFoF
     OnTimer = tmrElokepTimer
     Left = 841
     Top = 120
+  end
+  object tmrKep_Masolas: TTimer
+    Interval = 60000
+    OnTimer = tmrKep_MasolasTimer
+    Left = 344
+    Top = 265
   end
 end

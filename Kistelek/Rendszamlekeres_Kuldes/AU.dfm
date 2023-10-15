@@ -63,7 +63,7 @@ object AF: TAF
   object ParositottQ: TFDQuery
     Connection = Kapcs
     SQL.Strings = (
-      'SELECT id,rendszam1,rendszam2,kepnev1,kepnev2'
+      'SELECT id,rendszam1,rendszam2,kepnev1,kepnev2,bekuldve,masolva'
       'FROM parositott'
       'ORDER BY id desc')
     Left = 304
@@ -77,6 +77,11 @@ object AF: TAF
   object Q4: TFDQuery
     Connection = Kapcs
     Left = 160
+    Top = 160
+  end
+  object Q5: TFDQuery
+    Connection = Kapcs
+    Left = 200
     Top = 160
   end
 end

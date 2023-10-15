@@ -442,9 +442,9 @@ begin
   //lblekaer.Visible:=ekaer_felhasz<>'';
   //edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
-  lblSorszam.Visible:=Hivoszamhasznalat;
-  speSorszam.Visible:=Hivoszamhasznalat;
-  speSorszam.Enabled:=Not Folytatas;
+  //lblSorszam.Visible:=Hivoszamhasznalat;
+  //speSorszam.Visible:=Hivoszamhasznalat;
+  //speSorszam.Enabled:=Not Folytatas;
   speSorszam.Value:=0;
  // magassagok;
   af.tipusQ.Open;
@@ -458,7 +458,7 @@ begin
   if Folytatas then
   with af.NyitbeQ do
   begin
-    tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
+    if FieldByName('tul_id').AsInteger<>0 then  tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
     cbxirany.ItemIndex:=cbxirany.Items.IndexOf(FieldByName('irany').AsString);
     cbxiranyChange(Sender);
     chknincspot.Checked:=(FieldByName('rendszam').AsString=FieldByName('rendszam2').AsString)or (FieldByName('rendszam2').AsString='');
@@ -486,11 +486,11 @@ begin
     sptort.Value:=FieldByName('tortszaz').Value;
     edmegjegy.text:=FieldByName('megjegyzes').AsString;
     edekaer.Text:=FieldByName('ekaer').AsString;
-    spbrutto.Value:=FieldByName('brutto').Value;
-    sptara.Value:=FieldByName('tara').Value;
-    spnetto.Value:=FieldByName('netto').Value;
-    sp_tomeg_levon.Value:=FieldByName('levon_tomeg').Value;
-    spsznetto.Value:=FieldByName('sznetto').Value;
+    spbrutto.Value:=FieldByName('brutto').AsInteger;
+    sptara.Value:=FieldByName('tara').AsInteger;
+    spnetto.Value:=FieldByName('netto').AsInteger;
+    sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+    spsznetto.Value:=FieldByName('sznetto').AsInteger;
     edszallev.text:=FieldByName('szallitolev').AsString;
     cbxRendszam1.Text:=FieldByName('rendszam').AsString;
     cbxRendszam2.Text:=FieldByName('rendszam2').AsString;
@@ -530,6 +530,7 @@ begin
     Af.NyitbeQ.Open;
     Af.NyitbeQ.locate('eazon',egyedi_azonosito,[]);
   end;
+
 end;
 
 procedure TMjegyF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -802,7 +803,7 @@ begin
   aF.merlegkezQ.Open;
   TarolokT.Open;
   levon_szovegT.Open;
-  uresre
+  uresre;
 end;
 
 procedure TMjegyF.btnekaerClick(Sender: TObject);
@@ -1087,6 +1088,7 @@ begin
     exit
   end;
 
+  {
   if (speSorszam.Value=0) and (Hivoszamhasznalat)  then
   begin
     ShowMessage('A sorszám nem lehet nulla!');
@@ -1102,7 +1104,7 @@ begin
     speSorszam.SelectAll;
     exit
   end;
-
+  }
   if levonlookup.KeyValue<>'!' then
   if sp_tomeg_levon.Value<=0 then
   begin
@@ -1141,17 +1143,7 @@ begin
 
   end;
 
-  if Folytatas then
-    with aF.Q2 do
-    begin
-      Close;
-      SQL.Clear;
-      SQL.Add('DELETE FROM nyitbe');
-      SQL.Add('WHERE eazon= '+#39+AF.NyitbeQ.FieldByName('Eazon').AsString+#39);
-      ExecSQL;
-    end;
-
-  with aF.Q2 do
+ with aF.Q2 do
     begin
       Close;
       SQL.Clear;
@@ -1205,17 +1197,23 @@ begin
       ParamByName('megjegyzes').AsString:=edmegjegy.Text;
       ParamByName('merlegelo').AsString:=aF.merlegkezQ.FieldByName('nev').AsString;
 
+      if cbxirany.ItemIndex in [1,2] then
 
-      case cbxirany.Text[1] of
-       'B':begin
-            ParamByName('tomegbe').AsInteger:=spsznetto.Value;
-            ParamByName('tomegki').AsInteger:=0;
-           end;
-       'K':begin
-            ParamByName('tomegki').AsInteger:=spsznetto.Value;
-            ParamByName('tomegbe').AsInteger:=0;
-           end;
-      end;
+        case cbxirany.Text[1] of
+         'B':begin
+              ParamByName('tomegbe').AsInteger:=spsznetto.Value;
+              ParamByName('tomegki').AsInteger:=0;
+             end;
+         'K':begin
+              ParamByName('tomegki').AsInteger:=spsznetto.Value;
+              ParamByName('tomegbe').AsInteger:=0;
+             end;
+        end
+      else
+        begin
+          ParamByName('tomegbe').AsInteger:=0;
+          ParamByName('tomegki').AsInteger:=0;
+        end;
 
       ParamByName('brutto').AsInteger:=spbrutto.Value;
       ParamByName('tara').AsInteger:=sptara.Value;
@@ -1275,13 +1273,14 @@ begin
       //mennyiség kiszámitása még kell
       keszmenny:=0;
       tort_keszmenny:=0;
-      if spEgysegtomeg.Value=1 then
+      if (spEgysegtomeg.Value=1) or (spEgysegtomeg.Value=0) then
        begin
         keszmenny:=spsznetto.Value;
         tort_keszmenny:=szaritott_tort_szemek_tomege;
        end
       else
        begin
+
         if chkkerekites.Checked then
          begin
           keszmenny:=Round(spszNetto.Value/spEgysegtomeg.Value);
@@ -1323,6 +1322,16 @@ begin
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
       ExecSQL;
+
+      if Folytatas then
+      with aF.Q2 do
+      begin
+        Close;
+        SQL.Clear;
+        SQL.Add('DELETE FROM nyitbe');
+        SQL.Add('WHERE eazon= '+#39+AF.NyitbeQ.FieldByName('Eazon').AsString+#39);
+        ExecSQL;
+      end;
       //keszletezes
       if Sender <>btnFolytatasos_mentes then
         case cbxirany.Text[1] of

@@ -218,7 +218,8 @@ object Hardver_beallF: THardver_beallF
           'KAMERA2'
           'KAMERA3'
           'KAMERA4'
-          'HANG_MERES_UTAN')
+          'HANG_MERES_UTAN'
+          'PC_KOMMUNIKACIO')
         TabOrder = 5
       end
       object DBNavigator1: TDBNavigator
