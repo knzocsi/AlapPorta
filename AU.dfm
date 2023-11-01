@@ -19931,9 +19931,16 @@ object AF: TAF
     SQL.Strings = (
       'SELECT *'
       'FROM nyitbe'
-      'ORDER BY ErkDatum desc, ErkIdo desc')
+      '!SZURES'
+      'ORDER BY ErkDatum desc, ErkIdo desc'
+      '')
     Left = 432
-    Top = 40
+    Top = 48
+    MacroData = <
+      item
+        Value = ''
+        Name = 'SZURES'
+      end>
   end
   object NyitbeDS: TDataSource
     DataSet = NyitbeQ

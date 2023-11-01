@@ -14,6 +14,8 @@ uses
   Vcl.ComCtrls, Vcl.Buttons;
 
 type
+
+
   TMjegyF = class(TForm)
     Partnelist: TFDQuery;
     PartnelistDs: TDataSource;
@@ -234,6 +236,7 @@ type
     procedure masol(kd,vd:TDate;friss:Boolean);
   end;
 
+const maxkep=8;
 var
   MjegyF: TMjegyF;
   brutto,tara,netto,sznetto:integer;
@@ -243,6 +246,7 @@ var
   r11,r12,r21,r22:String;
   egyedi_azonosito:string;
   mentes_volt:boolean;
+  kepek_tomb:array[1..maxkep] of string;
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
@@ -410,6 +414,9 @@ procedure TMjegyF.FormActivate(Sender: TObject);
         pnlAlso.Height:=240;
       end;
    end;
+
+   var i:integer;
+
 begin
   mentes_volt:=false;
   pnlFelsoBal.Visible:=forgalom_latszik;
@@ -455,6 +462,8 @@ begin
   termeklist.open;
   lblTomeg1.Caption:='0';
   lblTomeg2.Caption:='0';
+  for i:= 1 to maxkep do kepek_tomb[i]:='';
+
   if Folytatas then
   with af.NyitbeQ do
   begin
@@ -498,6 +507,10 @@ begin
     af.merlegkezQ.locate('nev',FieldByName('merlegelo').AsString,[]);
     kezelolookup.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
     speSorszam.Value:=FieldByName('Hivo_sorszam').AsInteger;
+    kepek_tomb[1]:=FieldByName('kepnev1').AsString;
+    kepek_tomb[2]:=FieldByName('kepnev2').AsString;
+    kepek_tomb[3]:=FieldByName('kepnev3').AsString;
+    kepek_tomb[4]:=FieldByName('kepnev4').AsString;
     case cbxIrany.Itemindex of
       1 :
         begin
@@ -1158,7 +1171,7 @@ begin
       SQL.Add('szaritasi_dij,tisztitasi_dij,tarolo_id,tarolo,elso_kezi,masodik_kezi,');
       SQL.Add('tul_id,tul_nev,tul_cim,tul_adoszam,tul_kuj,tul_ktj,tul_elotag,');
       SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,');
-      SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek  ');
+      SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek,kepnev1,kepnev2,kepnev3,kepnev4  ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
       SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
@@ -1171,7 +1184,7 @@ begin
       SQL.Add(':szaritasi_dij,:tisztitasi_dij,:tarolo_id,:tarolo,:elso_kezi,:masodik_kezi,');
       SQL.Add(':tul_id,:tul_nev,:tul_cim,:tul_adoszam,:tul_kuj,:tul_ktj,:tul_elotag,');
       SQL.Add(':p2_id,:p2_kod,:p2_nev,:p2_cim,:p2_kuj,:p2_ktj,:levon_szoveg,');
-      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek ');
+      SQL.Add(' :levon_tomeg,:ewc,:tul_cjsz,:szaraz_tort_szemek,:kepnev1,:kepnev2,:kepnev3,:kepnev4 ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then
       begin
         SQL.Add(',:Hivo_sorszam ');
@@ -1321,6 +1334,10 @@ begin
       ParamByName('levon_tomeg').AsInteger:=sp_tomeg_levon.Value;
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
+      ParamByName('kepnev1').AsString:=kepek_tomb[1];
+      ParamByName('kepnev2').AsString:=kepek_tomb[2];
+      ParamByName('kepnev3').AsString:=kepek_tomb[3];
+      ParamByName('kepnev4').AsString:=kepek_tomb[4];
       ExecSQL;
 
       if Folytatas then

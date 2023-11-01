@@ -58,6 +58,8 @@ type
     procedure pnlAlsoResize(Sender: TObject);
     procedure btnCombeallitasClick(Sender: TObject);
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
+    procedure lblRendszamokDblClick(Sender: TObject);
+    procedure kuldes(iD:integer;rendszam1,rendszam2,kepnev1,kepnev2:string);
   private
     { Private declarations }
   public
@@ -168,6 +170,15 @@ begin
   IniFile.WriteString('ALAP\Masolas_utvonala',Masolas_utvonala);
  end;
 
+procedure TFoF.lblRendszamokDblClick(Sender: TObject);
+begin
+  with af.ParositottQ do
+  begin
+    if IsEmpty then exit;
+    kuldes(FieldByName('ID').AsInteger,FieldByName('Rendszam1').AsString,FieldByName('Rendszam2').AsString,FieldByName('Kepnev1').AsString,FieldByName('Kepnev2').AsString);
+  end;
+end;
+
 function TFoF.nullak(szam, hossz: integer): string;
 var s:string;
 begin
@@ -243,6 +254,36 @@ begin
   tmrKepkeres.Enabled:=true;
 end;
 
+
+ procedure TFoF.kuldes(iD:integer;rendszam1,rendszam2,kepnev1,kepnev2:string);
+  var i:integer;
+  begin
+    if not FileExists( konyvtar+'srport.dat') then  exit;
+    ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
+    soros_adat:='';
+    ComPort1.open;
+    ComPort1.WriteStr(#2+rendszam1+';'+rendszam2+';'+kepnev1+';'+kepnev2+#3);
+    i:=1;
+    while (soros_adat<>#6) and (i<10) do
+    begin
+      Application.ProcessMessages;
+      Sleep(100);
+      i:=i+1;
+    end;
+    ComPort1.Close;
+    if i<>10 then
+      with Af.Q4 do
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add('UPDATE parositott');
+        SQL.Add('SET bekuldve=1,idopont=:idopont');
+        SQL.Add('WHERE id='+ID.ToString);
+        ParamByName('idopont').AsDatetime:=Now;
+        ExecSQL;
+      end;
+  end;
+
 procedure TFoF.tmrParosit_KuldTimer(Sender: TObject);
 var elozoesem:esemeny_rec;
     parositott_id:Integer;
@@ -292,35 +333,7 @@ var elozoesem:esemeny_rec;
   end;
 
 
-  procedure kuldes(iD:integer;rendszam1,rendszam2,kepnev1,kepnev2:string);
-  var i:integer;
-  begin
-    if not FileExists( konyvtar+'srport.dat') then  exit;
-    ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
-    soros_adat:='';
-    ComPort1.open;
-    ComPort1.WriteStr(#2+rendszam1+';'+rendszam2+';'+kepnev1+';'+kepnev2+#3);
-    i:=1;
-    while (soros_adat<>#6) and (i<10) do
-    begin
-      Application.ProcessMessages;
-      Sleep(100);
-      i:=i+1;
-    end;
-    ComPort1.Close;
-    if i<>10 then
-      with Af.Q4 do
-      begin
-        close;
-        SQL.Clear;
-        SQL.Add('UPDATE parositott');
-        SQL.Add('SET bekuldve=1');
-        SQL.Add('WHERE id='+ID.ToString);
-        ExecSQL;
-      end;
 
-
-  end;
 
   procedure parositas_beiras(id:Integer);
   begin
@@ -391,16 +404,15 @@ begin
     SQL.clear;
     SQL.Add('SELECT * FROM rendszamok ');
     SQL.Add('WHERE (idopont>:idopont) and (parositva=0) ');
-    ParamByName('idopont').AsDatetime:=now-0.00001157*30;
+    ParamByName('idopont').AsDatetime:=now-0.00001157*60;
     open;
     elozoesem.rendszam:='';
     while not eof do
     begin
       if elozoesem.rendszam<>'' then
       begin
-        if elozoesem.kamera_szam<>FieldByName('kameraszam').AsInteger then  mentes(True)
-        else mentes(False);
-
+        if elozoesem.kamera_szam<>FieldByName('kameraszam').AsInteger then  mentes(True)  ;
+        //else mentes(False);
       end
       else
       begin
@@ -410,9 +422,9 @@ begin
         elozoesem.datum:=FieldByName('idopont').AsDateTime;
         elozoesem.id:=FieldByName('id').AsInteger;
       end;
-
       next;
     end;
+    //if (elozoesem.rendszam<>'') and (elozoesem.datum<now-0.00001157*50) then  mentes(False);
   end;
   tmrParosit_Kuld.Enabled:=True;
 end;

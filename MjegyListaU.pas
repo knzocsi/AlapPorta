@@ -10,7 +10,8 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
   frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup, JvMemoryDataset,
-  JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet, Vcl.Mask, JvExMask, JvSpin;
+  JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet, Vcl.Mask, JvExMask, JvSpin,
+  JvSplitter, JvSplit;
 
 type
   TMjegyekF = class(TForm)
@@ -23,7 +24,6 @@ type
     btnUjranyomtatas: TButton;
     btnListanyomtatas: TButton;
     Panel2: TPanel;
-    mlistaGrid: TJvDBUltimGrid;
     mjegyekQ: TFDQuery;
     mjegyekQDs: TDataSource;
     btnStorno: TButton;
@@ -121,6 +121,22 @@ type
     Label15: TLabel;
     Label16: TLabel;
     edmegjegy: TEdit;
+    chkKepek: TCheckBox;
+    Panel4: TPanel;
+    pnlKepek: TPanel;
+    PageControl1: TPageControl;
+    tabKep1: TTabSheet;
+    Kep1: TImage;
+    lblKep1: TLabel;
+    tabKep2: TTabSheet;
+    Kep2: TImage;
+    lblKep2: TLabel;
+    tabKep3: TTabSheet;
+    tabKep4: TTabSheet;
+    JvxSplitter1: TJvxSplitter;
+    mlistaGrid: TJvDBUltimGrid;
+    Kep3: TImage;
+    Kep4: TImage;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -141,6 +157,8 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure chkKepekClick(Sender: TObject);
+    procedure mlistaGridCellClick(Column: TColumn);
   private
     { Private declarations }
     procedure szures;
@@ -436,6 +454,13 @@ if rfelt then exit;
 szures
 end;
 
+procedure TMjegyekF.chkKepekClick(Sender: TObject);
+begin
+  pnlKepek.Visible:=chkKepek.Checked;
+  if pnlKepek.Visible then PageControl1.ActivePage:=tabKep1;
+
+end;
+
 procedure TMjegyekF.elokeszit(stfelirat: String);
 
   function jegyen_latszik(tid:Integer; mezo:string):Boolean;
@@ -641,6 +666,8 @@ begin
  spKitarolasi_dij.Value:=ki_tarolasi_dij;
  spSzallitasi_dij.Value:=szallitasi_dij;
  edmegjegy.Clear;
+ chkKepek.Checked:=false;
+ pnlKepek.Visible:=false;
  szures;
 end;
 
@@ -648,6 +675,32 @@ procedure TMjegyekF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 termeklist.close;
 Partnelist.close;
+end;
+
+procedure TMjegyekF.mlistaGridCellClick(Column: TColumn);
+var esemeny:esemeny_rec;
+    kep_teljes_nev:string;
+
+  procedure kepbetolt(kepnev:string;kep:TImage);
+  begin
+     if kepnev<>'' then
+     try
+       esemeny:=af.esemeny_kibont(Now,kepnev);
+       kep_teljes_nev:=Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\'+kepnev;
+       if FileExists(kep_teljes_nev) then kep.Picture.LoadFromFile(kep_teljes_nev);
+     except
+
+     end;
+  end;
+
+begin
+  if chkKepek.Checked then
+  begin
+    kepbetolt(mjegyekQ.FieldByName('Kepnev1').AsString ,Kep1);
+    kepbetolt(mjegyekQ.FieldByName('Kepnev2').AsString ,Kep2);
+    kepbetolt(mjegyekQ.FieldByName('Kepnev3').AsString ,Kep3);
+    kepbetolt(mjegyekQ.FieldByName('Kepnev4').AsString ,Kep4);
+  end;
 end;
 
 procedure TMjegyekF.mlistaGridDblClick(Sender: TObject);

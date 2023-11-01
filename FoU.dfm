@@ -65,7 +65,7 @@ object FoF: TFoF
       Left = 1
       Top = 60
       Width = 798
-      Height = 325
+      Height = 284
       ActivePage = tbIdeiglenes
       Align = alClient
       MultiLine = True
@@ -77,7 +77,7 @@ object FoF: TFoF
           Left = 0
           Top = 0
           Width = 790
-          Height = 297
+          Height = 256
           Align = alClient
           Color = clDefault
           DataSource = AF.NyitbeDS
@@ -93,6 +93,11 @@ object FoF: TFoF
           OnCellClick = dbgNyitbeCellClick
           OnDrawColumnCell = dbgNyitbeDrawColumnCell
           Columns = <
+            item
+              Expanded = False
+              FieldName = 'Hivo_sorszam'
+              Visible = True
+            end
             item
               Color = clLime
               Expanded = False
@@ -173,7 +178,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -210,7 +215,7 @@ object FoF: TFoF
           Left = 0
           Top = 80
           Width = 790
-          Height = 217
+          Height = 176
           Align = alClient
           DataSource = AF.ForgalomDS
           ReadOnly = True
@@ -1039,6 +1044,32 @@ object FoF: TFoF
         end
       end
     end
+    object Panel2: TPanel
+      Left = 1
+      Top = 344
+      Width = 798
+      Height = 41
+      Align = alBottom
+      TabOrder = 4
+      object btnTorles: TButton
+        Left = 32
+        Top = 6
+        Width = 75
+        Height = 25
+        Caption = 'T'#246'rl'#233's'
+        TabOrder = 0
+        OnClick = btnTorlesClick
+      end
+      object chkToroltek_mutatasa: TCheckBox
+        Left = 152
+        Top = 6
+        Width = 110
+        Height = 17
+        Caption = 'T'#246'r'#246'ltek mutat'#225'sa'
+        TabOrder = 1
+        OnClick = chkToroltek_mutatasaClick
+      end
+    end
   end
   object pnlJobboldal: TPanel
     Left = 800
@@ -1420,5 +1451,12 @@ object FoF: TFoF
     OnTimer = tmrKep_MasolasTimer
     Left = 344
     Top = 265
+  end
+  object tmrKijelzo_Torles: TTimer
+    Enabled = False
+    Interval = 600000
+    OnTimer = tmrKijelzo_TorlesTimer
+    Left = 445
+    Top = 268
   end
 end

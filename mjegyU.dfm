@@ -277,7 +277,6 @@ object MjegyF: TMjegyF
       Width = 44
       Height = 13
       Caption = 'Sorsz'#225'm:'
-      Visible = False
     end
     object btnFolytatasos_mentes: TSpeedButton
       Left = 510
@@ -1059,7 +1058,6 @@ object MjegyF: TMjegyF
       Font.Style = []
       ParentFont = False
       TabOrder = 35
-      Visible = False
     end
     object edszallev: TMemo
       Left = 696

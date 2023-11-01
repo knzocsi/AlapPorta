@@ -33,7 +33,7 @@ type
     { Public declarations }
   end;
 
-const maxSQL=3;
+const maxSQL=4;
 modSQL :array[1..maxSQL] of string =
 
       (
@@ -58,8 +58,12 @@ modSQL :array[1..maxSQL] of string =
       '`kepnev2` TEXT '+#13#10+
       '); '+ #13#10 +
       ''
+      //3
       ,
-      'ALTER TABLE parositott ADD COLUMN masolva INTEGER;'+ #13#10 +
+      'ALTER TABLE parositott ADD COLUMN masolva INTEGER;'+ #13#10
+      //4
+      ,
+      'ALTER TABLE parositott ADD COLUMN idopont DATETIME;'+ #13#10 +
 
       ''
     );

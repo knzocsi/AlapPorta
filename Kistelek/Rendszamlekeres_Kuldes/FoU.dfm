@@ -39,6 +39,7 @@ object FoF: TFoF
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
+      OnDblClick = lblRendszamokDblClick
     end
     object Label1: TLabel
       Left = 136
@@ -46,6 +47,7 @@ object FoF: TFoF
       Width = 94
       Height = 13
       Caption = 'Utols'#243' rendsz'#225'mok:'
+      OnDblClick = lblRendszamokDblClick
     end
     object btnKilepes: TButton
       Left = 32

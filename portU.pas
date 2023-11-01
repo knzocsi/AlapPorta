@@ -939,6 +939,16 @@ begin
     pc_kom_resz:='';
   end;
 
+  if uppercase( ParamStr(1))='/RE1' then
+  begin
+    ForceDirectories(konyvtar+'\LOG');
+    AssignFile(tf,konyvtar+'LOG\rendszam.txt');
+    Rewrite(tf);
+    CloseFile(tf);
+
+  end;
+
+
   comPC_Kommunikacio.Port:=port;
   comPC_Kommunikacio.BaudRate:=br9600;
   comPC_Kommunikacio.Parity.Bits:=prNone;
@@ -1138,19 +1148,51 @@ end;
 
 procedure TPortF.comPC_KommunikacioRxChar(Sender: TObject; Count: Integer);
 var ertek:string;
+    tf:textfile;
 begin
   comPC_Kommunikacio.ReadStr(ertek,Count);
   pc_kom_resz:=pc_kom_resz+ertek;
+
+  if ParamStr(1)='/RE1' then
+  begin
+    AssignFile(tf,konyvtar+'LOG\rendszam.txt');
+
+    Append(tf);
+    Writeln(tf,ertek);
+    Writeln(tf,pc_kom_resz);
+    Writeln(tf);
+    CloseFile(tf);
+  end;
   if ParamStr(1)='/RE' then
   begin
-    PC_kommunikacio:=PC_kommunikacio+count.ToString;
+    showmessage(pc_kom_resz+':'+count.ToString);
+    if Pos(#3,ertek)<>0 then showmessage('Három:'+Pos(#3,ertek).ToString);
+
   end;
   if (pc_kom_resz<>'') and (Copy(pc_kom_resz,1,1)=#2) and (Copy(pc_kom_resz,Length(pc_kom_resz),1)=#3) then
   begin
     PC_kommunikacio:= pc_kom_resz;
-    pc_komm_port_kuld(#6);
     pc_kom_resz:='';
+    pc_komm_port_kuld(#6);
+
+  end
+  else
+  begin
+    AssignFile(tf,konyvtar+'LOG\rendszam.txt');
+
+    Append(tf);
+    Writeln(tf,ertek);
+    Writeln(tf,'*'+Copy(pc_kom_resz,1,1)+Copy(pc_kom_resz,Length(pc_kom_resz),1)+'*');
+    Writeln(tf);
+    CloseFile(tf);
+
   end;
+  if (pc_kom_resz<>'')  and (Copy(pc_kom_resz,Length(pc_kom_resz),1)=#3) then
+  begin
+    pc_kom_resz:='';
+    if ParamStr(1)='/RE' then showmessage('Törlés');
+  end;
+
 end;
 
 end.

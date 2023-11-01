@@ -256,6 +256,15 @@ object MjegyekF: TMjegyekF
       TabOrder = 14
       OnChange = cbxrendszChange
     end
+    object chkKepek: TCheckBox
+      Left = 915
+      Top = 25
+      Width = 126
+      Height = 17
+      Caption = 'K'#233'pek megjelen'#237't'#233'se'
+      TabOrder = 15
+      OnClick = chkKepekClick
+    end
   end
   object Panel2: TPanel
     Left = 0
@@ -326,32 +335,6 @@ object MjegyekF: TMjegyekF
       OnClick = btntermenyszaritasClick
     end
   end
-  object mlistaGrid: TJvDBUltimGrid
-    Left = 0
-    Top = 137
-    Width = 1284
-    Height = 191
-    Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
-    Align = alClient
-    DataSource = mjegyekQDs
-    ParentShowHint = False
-    ReadOnly = True
-    ShowHint = True
-    TabOrder = 2
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    OnDblClick = mlistaGridDblClick
-    OnMouseUp = mlistaGridMouseUp
-    SelectColumnsDialogStrings.Caption = 'Select columns'
-    SelectColumnsDialogStrings.OK = '&OK'
-    SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
-    EditControls = <>
-    RowsHeight = 17
-    TitleRowHeight = 17
-  end
   object partnerlookup2: TJvDBLookupCombo
     Left = 440
     Top = 110
@@ -364,7 +347,7 @@ object MjegyekF: TMjegyekF
     LookupField = 'ID'
     LookupDisplay = 'Nev;Kod;'
     LookupSource = Partnelist2Ds
-    TabOrder = 3
+    TabOrder = 2
     OnChange = cbxrendszChange
   end
   object termenyszaritasroll: TJvRollOut
@@ -374,7 +357,7 @@ object MjegyekF: TMjegyekF
     Height = 212
     Align = alBottom
     Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
-    TabOrder = 4
+    TabOrder = 3
     FAWidth = 145
     FAHeight = 212
     FCWidth = 22
@@ -646,6 +629,150 @@ object MjegyekF: TMjegyekF
         end>
     end
   end
+  object Panel4: TPanel
+    Left = 0
+    Top = 137
+    Width = 1284
+    Height = 191
+    Align = alClient
+    Caption = 'Panel4'
+    TabOrder = 4
+    ExplicitLeft = 8
+    object pnlKepek: TPanel
+      Left = 840
+      Top = 1
+      Width = 443
+      Height = 189
+      Align = alRight
+      TabOrder = 0
+      object PageControl1: TPageControl
+        Left = 1
+        Top = 1
+        Width = 441
+        Height = 187
+        ActivePage = tabKep1
+        Align = alClient
+        TabOrder = 0
+        ExplicitLeft = 505
+        ExplicitTop = 18
+        ExplicitWidth = 1277
+        object tabKep1: TTabSheet
+          Caption = 'K'#233'p 1'
+          DesignSize = (
+            433
+            159)
+          object Kep1: TImage
+            Left = 0
+            Top = 0
+            Width = 433
+            Height = 159
+            Align = alClient
+            Stretch = True
+            ExplicitLeft = 1
+          end
+          object lblKep1: TLabel
+            Left = 3
+            Top = 409
+            Width = 45
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Nincs k'#233'p'
+            ExplicitTop = 392
+          end
+        end
+        object tabKep2: TTabSheet
+          Caption = 'K'#233'p 2'
+          ImageIndex = 1
+          DesignSize = (
+            433
+            159)
+          object Kep2: TImage
+            Left = 0
+            Top = 0
+            Width = 433
+            Height = 159
+            Align = alClient
+            Stretch = True
+            ExplicitLeft = 1
+            ExplicitTop = -1
+            ExplicitWidth = 338
+            ExplicitHeight = 161
+          end
+          object lblKep2: TLabel
+            Left = 1
+            Top = 412
+            Width = 45
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Nincs k'#233'p'
+            ExplicitTop = 388
+          end
+        end
+        object tabKep3: TTabSheet
+          Caption = 'K'#233'p 3'
+          ImageIndex = 2
+          object Kep3: TImage
+            Left = 0
+            Top = 0
+            Width = 433
+            Height = 159
+            Align = alClient
+            Stretch = True
+            ExplicitLeft = 1
+          end
+        end
+        object tabKep4: TTabSheet
+          Caption = 'K'#233'p 4'
+          ImageIndex = 3
+          object Kep4: TImage
+            Left = 0
+            Top = 0
+            Width = 433
+            Height = 159
+            Align = alClient
+            Stretch = True
+            ExplicitLeft = 1
+          end
+        end
+      end
+    end
+    object JvxSplitter1: TJvxSplitter
+      Left = 1
+      Top = 1
+      Width = 3
+      Height = 189
+      ControlFirst = pnlKepek
+      Align = alLeft
+      ExplicitTop = 6
+    end
+    object mlistaGrid: TJvDBUltimGrid
+      Left = 4
+      Top = 1
+      Width = 836
+      Height = 189
+      Hint = 'Sorbarendez'#233'shez kattintson jobb eg'#233'rf'#252'llel az oszlop fejl'#233'c'#233're'
+      Align = alClient
+      DataSource = mjegyekQDs
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 2
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnCellClick = mlistaGridCellClick
+      OnDblClick = mlistaGridDblClick
+      OnMouseUp = mlistaGridMouseUp
+      SelectColumnsDialogStrings.Caption = 'Select columns'
+      SelectColumnsDialogStrings.OK = '&OK'
+      SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+      EditControls = <>
+      RowsHeight = 17
+      TitleRowHeight = 17
+    end
+  end
   object mjegyekQ: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
@@ -836,8 +963,8 @@ object MjegyekF: TMjegyekF
   end
   object memszamol: TJvMemoryData
     FieldDefs = <>
-    Left = 592
-    Top = 304
+    Left = 648
+    Top = 272
     object memszamolsorsz: TStringField
       FieldName = 'sorsz'
     end

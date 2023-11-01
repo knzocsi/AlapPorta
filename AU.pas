@@ -40,6 +40,23 @@ const
 
 
 type
+   esemeny_rec=record
+    ev:word;
+    ho:word;
+    nap:word;
+    ora:word;
+    perc:Word;
+    masodperc:word;
+    evs:string;
+    hos:string;
+    naps:string;
+    oras:string;
+    kamera_szam:word;
+    datum:TDateTime;
+    rendszam:string[20];
+    kepnev:string;
+    id:integer;
+  end;
   TAF = class(TDataModule)
     ForgalomDS: TDataSource;
     ForgalomQ: TFDQuery;
@@ -155,6 +172,9 @@ type
     procedure KapcsLost(Sender: TObject);
     procedure AutomentesTimer(Sender: TObject);
     procedure autotorzsTimer(Sender: TObject);
+    procedure frissites(mappa:string);
+
+
   private
     { Private declarations }
     LCID: Cardinal;
@@ -170,9 +190,12 @@ type
     procedure ini_kezel;
     procedure kapcs_ini_kezel;
     procedure GetVerisonNumber(var Fover, Alver, Build: Integer; File_ut: Pchar);
-    procedure frissites;
+
 
   public
+
+    function esemeny_kibont(idopont: Tdatetime; fnev: string):esemeny_rec;
+    function nullak(szam, hossz: integer): string;
     function kepszures(im:TImage):string;
     function kepkeres(im:TImage):string;
     function Transform(Value : String) : String;
@@ -210,6 +233,9 @@ type
     function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant):Variant;
     procedure fo_szazalek(brutto,tara,szemet_szazalek,akt_nedvesseg_szazalek,alap_nedvesseg_szazalek,
                           tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
+    procedure nyitbe_torles(id,torles:integer);
+    procedure Regiek_torlese;
+
 
     { Public declarations }
   end;
@@ -257,7 +283,7 @@ var
   PC_Szam:string;
   aktualis_merlegszam,kepernyo_meretarany:integer;
   szabalyos_merlegen_tartozkodas_figyeles:boolean;
-  Masolas_utvonala,Kepek_Mappa:string;
+  Masolas_utvonala,Kepek_Mappa,Utolso_futtatas:string;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
@@ -265,6 +291,79 @@ uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+
+function TAF.nullak(szam, hossz: integer): string;
+var s:string;
+begin
+  s:=szam.ToString;
+  while Length(s)<hossz do s:='0'+s;
+  Result:=s;
+end;
+
+procedure TAF.nyitbe_torles(Id,torles: integer);
+var muveletQ:TFDQuery;
+begin
+  muveletQ:=TFDQuery.Create(Application);
+  with muveletQ do
+  begin
+    close;
+    Connection:=Kapcs;
+    SQL.Clear;
+    SQL.Add('UPDATE nyitbe SET Torolve='+torles.ToString);
+    SQL.Add('WHERE ID='+ID.ToString);
+    ExecSQL;
+    Free;
+  end;
+end;
+
+function TAF.esemeny_kibont(idopont: Tdatetime; fnev: string):esemeny_rec;
+var ev,ho,nap,ora,perc,masodperc,ms:word;
+    datum,ido:Tdatetime;
+    esemeny:esemeny_rec;
+
+begin
+  if fnev='' then
+  begin
+    DecodeDate(idopont,ev,ho,nap);
+    DecodeTime(idopont,ora,perc,masodperc,ms);
+    esemeny.ev:=ev;
+    esemeny.ho:=ho;
+    esemeny.nap:=nap;
+    esemeny.ora:=ora;
+    esemeny.perc:=perc;
+    esemeny.masodperc:=masodperc;
+    esemeny.evs:= nullak(ev,2);
+    esemeny.hos:=nullak(ho,2);
+    esemeny.naps:=nullak(nap,2);
+    esemeny.oras:=nullak(ora,2);
+  end
+  else
+  begin
+    try
+      esemeny.evs:=Copy(fnev,1,4);
+      esemeny.ev:=StrToInt(esemeny.evs);
+      esemeny.hos:=Copy(fnev,5,2);
+      esemeny.ho:=StrToInt(esemeny.hos);
+      esemeny.naps:=Copy(fnev,7,2);
+      esemeny.nap:=StrToInt(esemeny.naps);
+      esemeny.oras:=Copy(fnev,10,2);
+      esemeny.ora:=StrToInt(esemeny.oras);
+      esemeny.perc:=StrToInt(Copy(fnev,12,2));
+      esemeny.masodperc:=StrToInt(Copy(fnev,14,2));
+      esemeny.kamera_szam:=StrToInt(Copy(fnev,21,1));
+      esemeny.rendszam:=Copy(fnev,23,Length(fnev)-26);
+      datum:=EncodeDate (esemeny.ev, esemeny.ho, esemeny.nap);
+      ido:=EncodeTime( esemeny.ora, esemeny.perc, esemeny.masodperc,0);
+      esemeny.datum:=datum+ido;
+    except
+      //hiba esetén csak ezt ellenõrzöm majd le
+      esemeny.ev:=0;
+    end;
+  end;
+  Result:=esemeny;
+end;
+
 
 
 procedure TAF.DataModuleCreate(Sender: TObject);
@@ -279,7 +378,8 @@ procedure TAF.DataModuleCreate(Sender: TObject);
 begin
   bit:=9;
   kapcs_ini_kezel;
-  frissites;
+  frissites(kpmappa);
+
   user:='knz';
   passwd:='MaTt2019';
  { user:='knz';
@@ -328,6 +428,7 @@ begin
   modok_vegrehajt;//  SQL_text unitba kell
   if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
   ini_kezel;
+  if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
   FormatSettings.DecimalSeparator:=',';
@@ -548,38 +649,49 @@ begin
 
 end;
 
-procedure TAF.frissites;
-var  fover,alver,build,helyi_verzio,kp_verzio:Integer;
+procedure TAF.frissites(mappa:string);
+var  fover,alver,build,foverkp,alverkp,buildkp,helyi_verzio,kp_verzio:Integer;
      exe_neve,helyi_mappa:string;
+     frissites_kell:boolean;
+
 begin
-  if (Kozponti_prg)or(not DirectoryExists(kpmappa)) then Exit;
+  if (mappa<>'') and (mappa[Length(mappa)]='\') then Delete(mappa,Length(mappa),1);
+  // ha más helyrõl kell frissíteni, akkor a központi program is feissítsen
+  if ((Kozponti_prg) and (mappa='')  )or(not DirectoryExists(mappa)) then Exit;
 
   exe_neve:=TPath.GetFileName(Application.ExeName);
   helyi_mappa:=ExtractFileDir(Application.ExeName);
   //ha van elozo exe azt törlöm
   DeleteFile(PChar(helyi_mappa+'\'+exe_neve+'.OLD'));
   //kpver
-  GetVerisonNumber(Fover, Alver,Build,PChar((kpmappa+'\'+exe_neve)));
-  kp_verzio:= StrToInt(IntToStr(fover)+IntToStr(alver)+IntToStr(build));
+  GetVerisonNumber(Foverkp, Alverkp,Buildkp,PChar((mappa+'\'+exe_neve)));
+  kp_verzio:= StrToInt(IntToStr(foverkp)+IntToStr(alverkp)+IntToStr(buildkp));
 
   //kliens ver
-  if not FileExists(kpmappa+'\'+exe_neve) then Exit;
+  if not FileExists(mappa+'\'+exe_neve) then Exit;
   GetVerisonNumber(Fover, Alver,Build,PChar(helyi_mappa+'\'+exe_neve));
   helyi_verzio:= StrToInt(IntToStr(fover)+IntToStr(alver)+IntToStr(build));
 
-  if helyi_verzio<kp_verzio then //showmessage('frissites');
-   begin
+  //if helyi_verzio<kp_verzio then frissites_kell:=true;//showmessage('frissites');
+  frissites_kell:=false;
+  if foverkp>fover then frissites_kell:=true
+    else if alverkp>alver then frissites_kell:=true
+      else if buildkp>build then frissites_kell:=true;
+
+
+  if frissites_kell then
+  begin
     //a kliens exe-t átírom
     RenameFile(PChar(helyi_mappa+'\'+exe_neve),helyi_mappa+'\'+exe_neve+'.OLD');
     //ha sikeres a másolás restart
-    if CopyFile(PChar(kpmappa+'\'+exe_neve),PChar(helyi_mappa+'\'+exe_neve),False) then
+    if CopyFile(PChar(mappa+'\'+exe_neve),PChar(helyi_mappa+'\'+exe_neve),False) then
      begin
        ShowMessage('A program frissités miatt újraindul');
        ShellExecute(Application.Handle,'open', PChar(Application.ExeName), nil, nil, SW_SHOWNORMAL) ;
        Application.Terminate;
      end //ha sikertelen a másolás vissza módosítom a nevét eredetire
-    else RenameFile(PChar(helyi_mappa+'\'+exe_neve+'.OLD'),PChar(kpmappa+'\'+exe_neve));
-   end;
+    else RenameFile(PChar(helyi_mappa+'\'+exe_neve+'.OLD'),PChar(mappa+'\'+exe_neve));
+  end;
 end;
 
 procedure TAF.frxmerlegAfterPrint(Sender: TfrxReportComponent);
@@ -901,6 +1013,8 @@ begin
   //A kisteleki kábelgyárban sorszámmal hívják a kamionokat a mérlegre
   Hivoszamhasznalat:=inif.Readbool('ALAP','Hivoszamhasznalat',false);
   inif.WriteBool('ALAP','Hivoszamhasznalat',Hivoszamhasznalat);
+  Utolso_futtatas:=cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást','ALAP','Utolso_futtatas','String','');
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1336,6 +1450,26 @@ with Q1 do
    ExecSQL;
    Close;
  end;
+end;
+
+procedure TAF.Regiek_torlese;
+var inupQ: TFDQuery;
+begin
+  inupQ:=TFDQuery.Create(Application);
+  inupQ.Connection:=Kapcs;
+  with inupQ do
+  begin
+    close;
+    SQL.Clear;
+    SQL.Add('UPDATE nyitbe SET torolve=1');
+    SQL.Add('WHERE Erkdatum<:datum AND torolve<>1 AND irany is NULL ');
+    ParamByName('datum').AsDate:=date;
+    //ParamByName('irany').AsString:='';
+    ExecSQL;
+    free;
+  end;
+  NyitbeQ.close;
+  NyitbeQ.Open;
 end;
 
 procedure TAF.rendez(ds: TFDDataSet; fname: string);

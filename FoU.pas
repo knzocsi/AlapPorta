@@ -16,23 +16,15 @@ uses
   JvLED;
 
 type
-   esemeny_rec=record
-    ev:word;
-    ho:word;
-    nap:word;
-    ora:word;
-    perc:Word;
-    masodperc:word;
-    evs:string;
-    hos:string;
-    naps:string;
-    oras:string;
-    kamera_szam:word;
-    datum:TDateTime;
-    rendszam:string[20];
-    kepnev:string;
-    id:integer;
+
+
+  PCKommunikacio_thread=class(TThread)
+     procedure kijelez;
+  protected
+    procedure Execute; override;
+
   end;
+
   TFoF = class(TForm)
     MainMenu1: TMainMenu;
     Listk1: TMenuItem;
@@ -146,6 +138,10 @@ type
     mnSzablyosmrlegentartozkodsfigyels1: TMenuItem;
     Mrlegelseklistja1: TMenuItem;
     tmrKep_Masolas: TTimer;
+    tmrKijelzo_Torles: TTimer;
+    Panel2: TPanel;
+    btnTorles: TButton;
+    chkToroltek_mutatasa: TCheckBox;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -231,8 +227,11 @@ type
     function bemenet_lekerdezes(merleg,Eszkoznev:string):integer;
     procedure Mrlegelseklistja1Click(Sender: TObject);
     procedure tmrKep_MasolasTimer(Sender: TObject);
-    function nullak(szam, hossz: integer): string;
-    function esemeny_kibont(idopont:Tdatetime;fnev:string):esemeny_rec;
+    procedure tmrKijelzo_TorlesTimer(Sender: TObject);
+    procedure btnTorlesClick(Sender: TObject);
+    procedure chkToroltek_mutatasaClick(Sender: TObject);
+
+
   private
     { Private declarations }
     procedure socketconnect;
@@ -285,6 +284,7 @@ var
     // A VLC plugin maPPÁja iskell a dll/ek mellett!!!!
   vlcLib: integer;
   pingprobak,kamprobak:Integer;
+  ThPC_Komm:PCKommunikacio_thread;
 
 implementation
 
@@ -499,6 +499,24 @@ begin
   Rendszam_Lampa_Timer.Enabled := true;
 end;
 
+procedure TFoF.btnTorlesClick(Sender: TObject);
+begin
+  if AF.NyitbeQ.FieldByName('irany').AsString<>'' then exit;
+  if af.nyitbeQ.FieldByName('Torolve').AsInteger=1 then  AF.nyitbe_torles(af.nyitbeQ.FieldByName('ID').AsInteger,0)
+  else AF.nyitbe_torles(af.nyitbeQ.FieldByName('ID').AsInteger,1);
+  AF.NyitbeQ.Refresh;
+end;
+
+procedure TFoF.chkToroltek_mutatasaClick(Sender: TObject);
+
+begin
+  if af.NyitbeQ.IsEmpty then exit;
+  AF.NyitbeQ.Close;
+  if chkToroltek_mutatasa.Checked then  AF.NyitbeQ.MacroByName('SZURES').AsRaw:=''
+  else AF.NyitbeQ.MacroByName('SZURES').AsRaw:='WHERE Torolve=0';
+  AF.NyitbeQ.open;
+end;
+
 function hatvany(alap, kitevo: Double): Integer;
 begin
   hatvany:=Round(exp(ln(alap)*kitevo));
@@ -682,60 +700,7 @@ if (Assigned(vlcMediaPlayer3)) then
 end;
 
 
-function TFoF.nullak(szam, hossz: integer): string;
-var s:string;
-begin
-  s:=szam.ToString;
-  while Length(s)<hossz do s:='0'+s;
-  Result:=s;
-end;
 
-function TFoF.esemeny_kibont(idopont: Tdatetime; fnev: string):esemeny_rec;
-var ev,ho,nap,ora,perc,masodperc,ms:word;
-    datum,ido:Tdatetime;
-    esemeny:esemeny_rec;
-
-begin
-  if fnev='' then
-  begin
-    DecodeDate(idopont,ev,ho,nap);
-    DecodeTime(idopont,ora,perc,masodperc,ms);
-    esemeny.ev:=ev;
-    esemeny.ho:=ho;
-    esemeny.nap:=nap;
-    esemeny.ora:=ora;
-    esemeny.perc:=perc;
-    esemeny.masodperc:=masodperc;
-    esemeny.evs:= nullak(ev,2);
-    esemeny.hos:=nullak(ho,2);
-    esemeny.naps:=nullak(nap,2);
-    esemeny.oras:=nullak(ora,2);
-  end
-  else
-  begin
-    try
-      esemeny.evs:=Copy(fnev,1,4);
-      esemeny.ev:=StrToInt(esemeny.evs);
-      esemeny.hos:=Copy(fnev,5,2);
-      esemeny.ho:=StrToInt(esemeny.hos);
-      esemeny.naps:=Copy(fnev,7,2);
-      esemeny.nap:=StrToInt(esemeny.naps);
-      esemeny.oras:=Copy(fnev,10,2);
-      esemeny.ora:=StrToInt(esemeny.oras);
-      esemeny.perc:=StrToInt(Copy(fnev,12,2));
-      esemeny.masodperc:=StrToInt(Copy(fnev,14,2));
-      esemeny.kamera_szam:=StrToInt(Copy(fnev,21,1));
-      esemeny.rendszam:=Copy(fnev,23,Length(fnev)-26);
-      datum:=EncodeDate (esemeny.ev, esemeny.ho, esemeny.nap);
-      ido:=EncodeTime( esemeny.ora, esemeny.perc, esemeny.masodperc,0);
-      esemeny.datum:=datum+ido;
-    except
-      //hiba esetén csak ezt ellenõrzöm majd le
-      esemeny.ev:=0;
-    end;
-  end;
-  Result:=esemeny;
-end;
 
 
 procedure TFoF.tmrKep_MasolasTimer(Sender: TObject);
@@ -760,7 +725,7 @@ begin
       repeat
         if (SearchRec.Name<>'.') and (SearchRec.Name<>'..') then
         begin
-          esemeny:=esemeny_kibont(Now,SearchRec.Name);
+          esemeny:=af.esemeny_kibont(Now,SearchRec.Name);
           kep_teljes_nev:=Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\'+SearchRec.Name;
           if not FileExists(kep_teljes_nev) then
           begin
@@ -777,6 +742,13 @@ begin
 
 
   tmrKep_Masolas.Enabled:=True;
+end;
+
+procedure TFoF.tmrKijelzo_TorlesTimer(Sender: TObject);
+begin
+  PortF.hivoszamkijelzore_ir('');
+  tmrKijelzo_Torles.Enabled:=false;
+
 end;
 
 procedure TFoF.teszt_mClick(Sender: TObject);
@@ -821,6 +793,8 @@ end;
 procedure TFoF.FormActivate(Sender: TObject);
 var
   CardAddr, h,g,i: integer;
+  esemeny:esemeny_rec;
+
 
   procedure Merleg;
   var merlegszam:integer;
@@ -979,6 +953,7 @@ var
             and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)      then
         begin
           PC_kommunikacio:='';
+          ThPC_Komm:=PCKommunikacio_thread.Create(false);
           PortF.pc_komm_port_open(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString);
         end;
       end;
@@ -1035,7 +1010,12 @@ begin
   StatusBar1.panels[0].text := verzio;
   StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
   WindowState:=wsMaximized;
-  if ideiglenes_latszik then AF.NyitbeQ.open;
+  if ideiglenes_latszik then
+  begin
+    AF.NyitbeQ.Close;
+    AF.NyitbeQ.MacroByName('SZURES').AsRaw:='WHERE Torolve=0';
+    AF.NyitbeQ.open;
+  end;
 
   if ( rendszamleker)or (lejatszas) then   kepatmeretez;
   // vlc_betolt;
@@ -1157,9 +1137,34 @@ begin
   if (not FileExists(konyvtar+'hivoszamkijelzo.dat')) and (Hivoszamhasznalat)  then
       ShowMessage('A hívószám kijelzõ port nincs beállítva!');
   PC_kommunikacio_beallitas;
+  esemeny:=af.esemeny_kibont(Now,'');
+  if Utolso_futtatas<>esemeny.evs+esemeny.hos+esemeny.naps then
+  begin
+    if FileExists(konyvtar+'Ftp_fel.exe') then
+    begin
+      ShellExecute(Handle, 'open',PChar(konyvtar+'Ftp_fel.exe'), '/BEZAR', nil, SW_HIDE) ;
+      Af.Regiek_torlese;
+
+      with af.CfgT do
+      begin
+        open;
+        if locate('tulajdonsag','Utolso_futtatas',[]) then
+        begin
+          edit;
+          FieldByName('ertek').AsString:=esemeny.evs+esemeny.hos+esemeny.naps;
+          post;
+          close;
+        end
+        else
+         af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást','ALAP','Utolso_futtatas','String',esemeny.evs+esemeny.hos+esemeny.naps);
+      end;
+    end
+
+
+
+  end;
+
   Fof.SetFocus;
-
-
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -2084,6 +2089,8 @@ procedure TFoF.sbtnSorszamhivasClick(Sender: TObject);
 begin
   if sbtnSorszamhivas.Caption<>'0' then
     PortF.hivoszamkijelzore_ir(sbtnSorszamhivas.Caption);
+  tmrKijelzo_Torles.Enabled:=false;
+  tmrKijelzo_Torles.Enabled:=true;
 end;
 
 procedure TFoF.sbtnUjmerlegjegyClick(Sender: TObject);
@@ -2699,7 +2706,7 @@ var
     inup.Free;
 
 
-    if (ideiglenes_latszik) and (Screen.ActiveForm.Name='FoF') then Af.NyitbeQ.Refresh;
+    if (ideiglenes_latszik) {and (Screen.ActiveForm.Name='FoF')} then Af.NyitbeQ.Refresh;
   end;
 
   var i:Integer;
@@ -2710,11 +2717,13 @@ begin
   //StatusBar1.panels[4].text := 'Tömeg: ' + mertertek + ' kg';
   if automata_meres then
     for I := 1 to 4 do if mertertekek[i]<>'' then dolgozo(i);
+  {
   if PC_kommunikacio<>'' then
   begin
     PC_komm_rendszam;
     PC_kommunikacio:='';
   end;
+  }
   Rendszam_Lampa_Timer.Enabled := true;
 end;
 
@@ -2857,6 +2866,84 @@ begin
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
       Result := -1;
     end;
+end;
+
+{ PCKommunikacio_thread }
+
+procedure PCKommunikacio_thread.Execute;
+
+  procedure PC_komm_rendszam;
+  var inup: TFDQuery;
+      rendszam1,rendszam2,kepnev1,kepnev2,sz,azon:string;
+  begin
+    rendszam1:=Copy(PC_kommunikacio,2,Pos(';', PC_kommunikacio)-2);
+    sz:=Copy(PC_kommunikacio,Pos(';', PC_kommunikacio)+1,Length(PC_kommunikacio)-Pos(';', PC_kommunikacio)-1); //itt vágja le a #3-at
+    rendszam2:=Copy(sz,1,Pos(';', sz)-1);
+    sz:=Copy(sz,Pos(';', sz)+1,Length(sz)-Pos(';', sz));
+    kepnev1:=Copy(sz,1,Pos(';', sz)-1);
+    sz:=Copy(sz,Pos(';', sz)+1,Length(sz)-2);
+    kepnev2:=sz;
+    if ParamStr(1)='/RE' then ShowMessage(PortF.comPC_Kommunikacio.Port+#13+#10+#13+#10+rendszam1) ;
+
+    inup:=TFDQuery.Create(Application);
+    with inup do
+    begin
+      close;
+      Connection:=af.Kapcs;
+      SQL.Clear;
+      Close;
+      SQL.Clear;
+      SQL.Add('INSERT INTO nyitbe');
+      SQL.Add('(storno,rendszam,rendszam2,');
+      SQL.Add('erkdatum,erkido,tavdatum,tavido,felhasznalo,eazon,');
+      SQL.Add('merlegelo,kepnev1,kepnev2');
+      SQL.Add(')');
+      SQL.Add('VALUES(:storno,:rendszam,:rendszam2,');
+      SQL.Add(':erkdatum,:erkido,:tavdatum,:tavido,:felhasznalo,:eazon,');
+      SQL.Add(':merlegelo,:kepnev1,:kepnev2');
+
+      SQL.Add(');');
+      azon:=StringReplace(StringReplace(DateTimeToStr(Now), '.', '', [rfReplaceAll]), ':', '', [rfReplaceAll])+IntToStr(hibaszamlalo);
+      //ShowMessage(sql.Text);
+      //ParamByName('sorszam').AsString:=sorsz;
+      ParamByName('storno').AsString:='';
+      ParamByName('rendszam').AsString:=rendszam1;
+      ParamByName('rendszam2').AsString:=rendszam2;
+      ParamByName('kepnev1').AsString:=kepnev1;
+      ParamByName('kepnev2').AsString:=kepnev2;
+      ParamByName('merlegelo').AsString:='';
+      ParamByName('erkdatum').AsDate:=Date;
+      ParamByName('erkido').AsTime:=Time;
+      ParamByName('tavdatum').AsDate:=Date;
+      ParamByName('tavido').AsTime:=Time;
+      ParamByName('felhasznalo').AsString:=felhnev;
+      ParamByName('eazon').AsString:=azon;
+      ExecSQL;
+    end;
+    inup.Free;
+    Synchronize(kijelez);
+
+
+  end;
+
+
+begin
+  inherited;
+  repeat
+    if PC_kommunikacio<>'' then
+    begin
+      PC_komm_rendszam;
+      PC_kommunikacio:='';
+    end;
+    Application.ProcessMessages;
+    Sleep(100);
+  until programvege;
+
+end;
+
+procedure PCKommunikacio_thread.kijelez;
+begin
+   if (ideiglenes_latszik) {and (Screen.ActiveForm.Name='FoF')} then Af.NyitbeQ.Refresh;
 end;
 
 end.

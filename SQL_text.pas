@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=22;
+      maxSQL=23;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -901,7 +901,7 @@ interface
      ,//21
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'+#13#10 +
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'  +#13#10
-     ,
+     , //22
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
@@ -910,6 +910,8 @@ interface
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10
+     , //23
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Torolve`  INT(11) DEFAULT 0 ;'  +#13#10
     );
 
 
