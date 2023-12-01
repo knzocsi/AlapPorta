@@ -16,28 +16,32 @@ File_13=TSourceModule,'N:\Delphi_10_4\KNZ\Porta_alap\MermodU.pas',0,1,816,65,851
 
 [Modules]
 Module0=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\AU.pas
-Module2=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
-Module3=default.htm
-Module4=N:\Delphi_10_4\Merleges\Alap\portU.pas
-Module5=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-Module6=N:\Delphi_10_4\Merleges\Alap\Kistelek\Rendszamlekeres_Kuldes\FoU.pas
-Module7=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
-Module8=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
-Count=9
+Module1=documentation.htm
+Module2=default.htm
+Module3=N:\Delphi_10_4\Merleges\Alap\AU.pas
+Module4=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
+Module5=N:\Delphi_10_4\Merleges\Alap\portU.pas
+Module6=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+Module7=N:\Delphi_10_4\Merleges\Alap\Kistelek\Rendszamlekeres_Kuldes\FoU.pas
+Module8=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
+Module9=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
+Count=10
 EditWindowCount=1
 
 [N:\Delphi_10_4\Merleges\Alap\FoU.pas]
 ModuleType=TSourceModule
+
+[documentation.htm]
+ModuleType=TURLModule
+
+[default.htm]
+ModuleType=TURLModule
 
 [N:\Delphi_10_4\Merleges\Alap\AU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas]
 ModuleType=TSourceModule
-
-[default.htm]
-ModuleType=TURLModule
 
 [N:\Delphi_10_4\Merleges\Alap\portU.pas]
 ModuleType=TSourceModule
@@ -55,7 +59,7 @@ ModuleType=TSourceModule
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=9
+ViewCount=10
 CurrentEditView=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 View0=0
 View1=1
@@ -66,6 +70,7 @@ View5=5
 View6=6
 View7=7
 View8=8
+View9=9
 PercentageSizes=1
 Create=1
 Visible=1
@@ -89,7 +94,7 @@ RightPanelSize=2000
 RightPanelClients=DockSite2,DockSite4,DockSite0
 RightPanelData=00000800010100000000D00D00000000000001D0070000000000000100000002441200000000000002000000004F0A000009000000446F636B53697465300200000000E40D000009000000446F636B536974653201000000008F18000009000000446F636B5369746534FFFFFFFF
 BottomPanelSize=1593
-BottomPanelClients=DockSite1,MessageView
+BottomPanelClients=MessageView,DockSite1
 BottomPanelData=0000080001020100000009000000446F636B5369746531DE440000000000000239060000000000000100000000DE4400000F0000004D65737361676556696577466F726DFFFFFFFF
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=GraphDrawingModel
@@ -100,6 +105,10 @@ CustomEditViewType=TWelcomePageView
 WelcomePageURL=bds:/default.htm
 
 [View1]
+CustomEditViewType=TWelcomePageView
+WelcomePageURL=bds:/documentation.htm
+
+[View2]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 CursorX=58
@@ -110,7 +119,7 @@ Elisions=
 Bookmarks={1,2939,16}{2,2946,89}{3,287,35}{4,1139,1}{5,953,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 
-[View2]
+[View3]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
 CursorX=35
@@ -121,7 +130,7 @@ Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View3]
+[View4]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\AU.pas
 CursorX=81
@@ -132,7 +141,7 @@ Elisions=
 Bookmarks={1,305,23}{2,888,1}{3,709,1}{4,551,1}{5,652,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\AU.pas
 
-[View4]
+[View5]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 CursorX=43
@@ -143,7 +152,7 @@ Elisions=
 Bookmarks={1,1092,11}{2,1660,13}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 
-[View5]
+[View6]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\portU.pas
 CursorX=81
@@ -154,7 +163,7 @@ Elisions=
 Bookmarks={1,1168,1}{2,939,21}{3,603,1}{4,663,1}{5,158,1}{6,674,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\portU.pas
 
-[View6]
+[View7]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
 CursorX=12
@@ -165,7 +174,7 @@ Elisions=
 Bookmarks={1,915,5}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
 
-[View7]
+[View8]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
 CursorX=1
@@ -176,7 +185,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
 
-[View8]
+[View9]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\Kistelek\Rendszamlekeres_Kuldes\FoU.pas
 CursorX=141
@@ -352,16 +361,11 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=1589
 ClientHeight=2442
-TBDockHeight=7990
+TBDockHeight=6538
 LRDockWidth=1589
 Dockable=1
 StayOnTop=0
-SplitPos=93
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Caption,OnTimer
-ExpandedItems=ActiveStoredUsage=0,Connection=0,FetchOptions=0,FieldOptions=0,FilterChanges=0,FilterOptions=0,FormatOptions=0,"LiveBindings Designer=0",ResourceOptions=0,UpdateOptions=0,Value=0,LiveBindings=0,Margins=0,Constraints=0,Anchors=0,EngineOptions=0,BorderIcons=0,Font=0,Title=0
+SplitPos=108
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -372,11 +376,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=5654
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=5654
+ClientHeight=5923
 TBDockHeight=5962
 LRDockWidth=2510
 Dockable=1
@@ -389,7 +393,7 @@ Visible=0
 Docked=1
 State=0
 Left=-1528
-Top=168
+Top=196
 Width=276
 Height=365
 MaxLeft=-1
@@ -493,11 +497,11 @@ State=0
 Left=0
 Top=0
 Width=667
-Height=7721
+Height=6269
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=667
-ClientHeight=7721
+ClientHeight=6269
 TBDockHeight=2317
 LRDockWidth=2823
 Dockable=1
@@ -512,11 +516,11 @@ State=0
 Left=0
 Top=0
 Width=667
-Height=7721
+Height=6269
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=667
-ClientHeight=7721
+ClientHeight=6269
 TBDockHeight=3212
 LRDockWidth=2823
 Dockable=1
@@ -558,11 +562,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=5654
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=5654
+ClientHeight=5923
 TBDockHeight=4885
 LRDockWidth=7151
 Dockable=1
@@ -594,7 +598,7 @@ Visible=0
 Docked=1
 State=0
 Left=-8
-Top=-201
+Top=-173
 Width=1849
 Height=3144
 MaxLeft=-1
@@ -615,11 +619,11 @@ State=0
 Left=0
 Top=0
 Width=1000
-Height=5654
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1000
-ClientHeight=5654
+ClientHeight=5923
 TBDockHeight=4837
 LRDockWidth=3562
 Dockable=1
@@ -634,11 +638,11 @@ State=0
 Left=0
 Top=0
 Width=1000
-Height=5654
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1000
-ClientHeight=5654
+ClientHeight=5923
 TBDockHeight=4837
 LRDockWidth=3562
 Dockable=1
@@ -698,11 +702,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=5654
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=5654
+ClientHeight=5923
 TBDockHeight=4885
 LRDockWidth=5307
 Dockable=1
@@ -818,7 +822,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=1589
 ClientHeight=3471
-TBDockHeight=7990
+TBDockHeight=6538
 LRDockWidth=1589
 Dockable=1
 StayOnTop=0
@@ -842,7 +846,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
 ClientHeight=1404
-TBDockHeight=7990
+TBDockHeight=6538
 LRDockWidth=2000
 Dockable=1
 StayOnTop=0
