@@ -68,6 +68,16 @@ object FoF: TFoF
       TabOrder = 1
       OnClick = btnCombeallitasClick
     end
+    object btnElokep: TButton
+      Left = 712
+      Top = 16
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = #201'l'#337' k'#233'p'
+      TabOrder = 2
+      OnClick = btnElokepClick
+    end
   end
   object Panel2: TPanel
     Left = 0
@@ -194,7 +204,7 @@ object FoF: TFoF
         Name = 'TestBoolean'
         Value = False
       end>
-    Left = 96
+    Left = 104
     Top = 216
   end
   object IniFile: TJvAppIniFileStorage

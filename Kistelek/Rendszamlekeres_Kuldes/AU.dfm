@@ -1,6 +1,7 @@
 object AF: TAF
   OldCreateOrder = False
   OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
   Height = 284
   Width = 543
   object Kapcs: TFDConnection

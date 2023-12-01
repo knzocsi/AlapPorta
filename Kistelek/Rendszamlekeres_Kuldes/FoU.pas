@@ -47,6 +47,7 @@ type
     Image2: TImage;
     btnCombeallitas: TButton;
     ComPort1: TComPort;
+    btnElokep: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure tmrKepkeresTimer(Sender: TObject);
@@ -60,6 +61,7 @@ type
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure lblRendszamokDblClick(Sender: TObject);
     procedure kuldes(iD:integer;rendszam1,rendszam2,kepnev1,kepnev2:string);
+    procedure btnElokepClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,7 +74,7 @@ var
   kezdes:Boolean=True;
 
 implementation
-uses au;
+uses au, Cam_kepU;
 
 {$R *.dfm}
 
@@ -86,6 +88,13 @@ procedure TFoF.btnKilepesClick(Sender: TObject);
 begin
   //ShowMessage(DateTimeToStr(now)+' '+DateTimeToStr(45197.4825578704));
   close;
+end;
+
+procedure TFoF.btnElokepClick(Sender: TObject);
+begin
+
+  Cam_kepF.show;
+
 end;
 
 procedure TFoF.ComPort1RxChar(Sender: TObject; Count: Integer);
@@ -149,6 +158,7 @@ begin
   af.RendszamokQ.Open;
   af.ParositottQ.open;
   kezdes:=false;
+  btnElokepClick(Sender);
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -168,7 +178,7 @@ begin
   Masolas_utvonala:=IniFile.ReadString('ALAP\Masolas_utvonala','');
   if ( Masolas_utvonala<>'') and (Masolas_utvonala[Length(Masolas_utvonala)]<>'\')  then Masolas_utvonala:=Masolas_utvonala+'\';
   IniFile.WriteString('ALAP\Masolas_utvonala',Masolas_utvonala);
- end;
+end;
 
 procedure TFoF.lblRendszamokDblClick(Sender: TObject);
 begin
