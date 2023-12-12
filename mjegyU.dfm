@@ -1180,21 +1180,116 @@ object MjegyF: TMjegyF
       Height = 455
       Align = alClient
       TabOrder = 1
-      object PageControl1: TPageControl
+      object pgKepek: TPageControl
         Left = 1
         Top = 1
         Width = 665
         Height = 453
-        ActivePage = TabSheet1
+        ActivePage = tsOsszeskep
         Align = alClient
         TabOrder = 0
-        object TabSheet1: TTabSheet
+        object tsOsszeskep: TTabSheet
+          Caption = #214'sszes k'#233'p'
+          ImageIndex = 2
+          OnResize = tsOsszeskepResize
+          object pnlKepBal: TPanel
+            Left = 0
+            Top = 0
+            Width = 313
+            Height = 425
+            Align = alLeft
+            TabOrder = 0
+            object pnlKepBalFelso: TPanel
+              Left = 1
+              Top = 1
+              Width = 311
+              Height = 208
+              Align = alTop
+              TabOrder = 0
+              ExplicitLeft = 0
+              ExplicitTop = -5
+              object OKep1: TImage
+                Left = -7
+                Top = -1
+                Width = 304
+                Height = 194
+                Stretch = True
+                OnClick = kep1Click
+              end
+            end
+            object pnlKepBalAlso: TPanel
+              Left = 1
+              Top = 209
+              Width = 311
+              Height = 215
+              Align = alClient
+              TabOrder = 1
+              ExplicitLeft = 72
+              ExplicitTop = 256
+              ExplicitWidth = 185
+              ExplicitHeight = 41
+              object OKep2: TImage
+                Left = 0
+                Top = 6
+                Width = 297
+                Height = 195
+                Stretch = True
+                OnClick = kep1Click
+              end
+            end
+          end
+          object pnlKepJobb: TPanel
+            Left = 313
+            Top = 0
+            Width = 344
+            Height = 425
+            Align = alClient
+            TabOrder = 1
+            object pnlKepJobbFelso: TPanel
+              Left = 1
+              Top = 1
+              Width = 342
+              Height = 208
+              Align = alTop
+              TabOrder = 0
+              ExplicitLeft = -7
+              ExplicitTop = -5
+              object OKep3: TImage
+                Left = 5
+                Top = -1
+                Width = 308
+                Height = 194
+                Stretch = True
+                OnClick = kep1Click
+              end
+            end
+            object pnkKepJobbAlso: TPanel
+              Left = 1
+              Top = 209
+              Width = 342
+              Height = 215
+              Align = alClient
+              TabOrder = 1
+              ExplicitLeft = 2
+              ExplicitTop = 210
+              object OKep4: TImage
+                Left = 4
+                Top = 6
+                Width = 312
+                Height = 195
+                Stretch = True
+                OnClick = kep1Click
+              end
+            end
+          end
+        end
+        object tsKep1: TTabSheet
           Caption = 'K'#233'p 1'
           DesignSize = (
             657
             425)
           object kep1: TImage
-            Left = 0
+            Left = 1
             Top = 0
             Width = 657
             Height = 375
@@ -1211,7 +1306,7 @@ object MjegyF: TMjegyF
             ExplicitTop = 392
           end
         end
-        object TabSheet2: TTabSheet
+        object tsKep2: TTabSheet
           Caption = 'K'#233'p 2'
           ImageIndex = 1
           DesignSize = (
@@ -1233,6 +1328,52 @@ object MjegyF: TMjegyF
             Anchors = [akLeft, akBottom]
             Caption = 'Nincs k'#233'p'
             ExplicitTop = 388
+          end
+        end
+        object tsKep3: TTabSheet
+          Caption = 'K'#233'p 3'
+          ImageIndex = 3
+          DesignSize = (
+            657
+            425)
+          object Kep3: TImage
+            Left = 0
+            Top = 8
+            Width = 657
+            Height = 375
+            Stretch = True
+            OnClick = kep1Click
+          end
+          object lblKep3: TLabel
+            Left = 11
+            Top = 412
+            Width = 45
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Nincs k'#233'p'
+          end
+        end
+        object tsKep4: TTabSheet
+          Caption = 'K'#233'p 4'
+          ImageIndex = 4
+          DesignSize = (
+            657
+            425)
+          object Kep4: TImage
+            Left = 0
+            Top = 16
+            Width = 657
+            Height = 375
+            Stretch = True
+            OnClick = kep1Click
+          end
+          object lblKep4: TLabel
+            Left = 19
+            Top = 412
+            Width = 45
+            Height = 13
+            Anchors = [akLeft, akBottom]
+            Caption = 'Nincs k'#233'p'
           end
         end
       end

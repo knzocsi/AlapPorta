@@ -12,7 +12,7 @@ object FoF: TFoF
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poDesigned
   OnActivate = FormActivate
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
@@ -58,9 +58,10 @@ object FoF: TFoF
     Left = 0
     Top = 0
     Width = 800
-    Height = 672
+    Height = 617
     Align = alLeft
     TabOrder = 1
+    ExplicitHeight = 672
     object pcTablak: TPageControl
       Left = 1
       Top = 60
@@ -69,7 +70,7 @@ object FoF: TFoF
       ActivePage = tbIdeiglenes
       Align = alClient
       MultiLine = True
-      TabOrder = 1
+      TabOrder = 0
       object tbIdeiglenes: TTabSheet
         Caption = 'Ideiglenes'
         ImageIndex = 1
@@ -199,6 +200,7 @@ object FoF: TFoF
             Height = 25
             Caption = 'M'#233'r'#233's m'#243'dos'#237't'#225's'
             TabOrder = 2
+            Visible = False
             OnClick = btnMeresmodositasClick
           end
           object btnMeres: TButton
@@ -208,6 +210,7 @@ object FoF: TFoF
             Height = 25
             Caption = 'M'#233'r'#233's'
             TabOrder = 3
+            Visible = False
             OnClick = btnMeresClick
           end
         end
@@ -291,7 +294,7 @@ object FoF: TFoF
       Width = 798
       Height = 59
       Align = alTop
-      TabOrder = 2
+      TabOrder = 1
       object sbtnUjmerlegjegy: TSpeedButton
         Left = 16
         Top = 2
@@ -803,213 +806,13 @@ object FoF: TFoF
         OnClick = sbtnSorszamhivasClick
       end
     end
-    object pnlGomobesLedek: TPanel
-      Left = 1
-      Top = 616
-      Width = 798
-      Height = 55
-      Align = alBottom
-      TabOrder = 0
-      object JvLED1: TJvLED
-        Left = 32
-        Top = 6
-        Width = 30
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object lblFelirat1: TLabel
-        Left = 16
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat1'
-        Visible = False
-      end
-      object JvLED2: TJvLED
-        Left = 96
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object lblFelirat2: TLabel
-        Left = 88
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat2'
-        Visible = False
-      end
-      object JvLED3: TJvLED
-        Left = 160
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object lblFelirat3: TLabel
-        Left = 152
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat3'
-        Visible = False
-      end
-      object JvLED4: TJvLED
-        Left = 224
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object lblFelirat4: TLabel
-        Left = 216
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat4'
-        Visible = False
-      end
-      object JvLED5: TJvLED
-        Left = 301
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object JvLED6: TJvLED
-        Left = 360
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object JvLED7: TJvLED
-        Left = 424
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object JvLED8: TJvLED
-        Left = 488
-        Top = 6
-        Width = 25
-        Height = 25
-        Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
-        Status = False
-        Visible = False
-        OnDblClick = JvLED1DblClick
-      end
-      object lblFelirat8: TLabel
-        Left = 480
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat8'
-        Visible = False
-      end
-      object lblFelirat7: TLabel
-        Left = 416
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat7'
-        Visible = False
-      end
-      object lblFelirat6: TLabel
-        Left = 352
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat6'
-        Visible = False
-      end
-      object lblFelirat5: TLabel
-        Left = 280
-        Top = 32
-        Width = 46
-        Height = 13
-        Alignment = taCenter
-        Caption = 'lblFelirat5'
-        Visible = False
-      end
-      object btn1: TButton
-        Left = 532
-        Top = 6
-        Width = 75
-        Height = 25
-        Caption = 'btn1'
-        TabOrder = 0
-        Visible = False
-        OnClick = btn1Click
-      end
-      object btn2: TButton
-        Left = 613
-        Top = 6
-        Width = 75
-        Height = 25
-        Caption = 'btn2'
-        TabOrder = 1
-        Visible = False
-        OnClick = btn1Click
-      end
-      object btn3: TButton
-        Left = 694
-        Top = 6
-        Width = 75
-        Height = 25
-        Caption = 'btn3'
-        TabOrder = 2
-        Visible = False
-        OnClick = btn1Click
-      end
-      object btn4: TButton
-        Left = 775
-        Top = 6
-        Width = 75
-        Height = 25
-        Caption = 'btn4'
-        TabOrder = 3
-        Visible = False
-        OnClick = btn1Click
-      end
-    end
     object pnlKiskep: TPanel
       Left = 1
       Top = 385
       Width = 798
       Height = 231
       Align = alBottom
-      TabOrder = 3
+      TabOrder = 2
       object ipcamPanel: TPanel
         Left = 1
         Top = 1
@@ -1050,7 +853,7 @@ object FoF: TFoF
       Width = 798
       Height = 41
       Align = alBottom
-      TabOrder = 4
+      TabOrder = 3
       object btnTorles: TButton
         Left = 32
         Top = 6
@@ -1075,17 +878,20 @@ object FoF: TFoF
     Left = 800
     Top = 0
     Width = 307
-    Height = 672
+    Height = 617
     Align = alClient
     TabOrder = 2
+    ExplicitHeight = 672
     object pnlJobbAlso: TPanel
       Left = 1
-      Top = 560
+      Top = 505
       Width = 305
       Height = 111
       Align = alBottom
       TabOrder = 0
+      Visible = False
       OnClick = pnlJobbAlsoClick
+      ExplicitTop = 560
       object lbl1: TLabel
         Left = 24
         Top = 24
@@ -1179,17 +985,22 @@ object FoF: TFoF
       Left = 1
       Top = 1
       Width = 305
-      Height = 559
+      Height = 504
       Align = alClient
       TabOrder = 1
+      ExplicitHeight = 559
       object pnlFelsokep: TPanel
         Left = 1
         Top = 1
         Width = 303
-        Height = 279
+        Height = 281
         Align = alClient
         TabOrder = 0
         OnResize = pnlFelsokepResize
+        ExplicitHeight = 279
+        DesignSize = (
+          303
+          281)
         object imgFelsokep: TImage
           Left = 0
           Top = 0
@@ -1198,34 +1009,308 @@ object FoF: TFoF
           Stretch = True
           OnClick = imgFelsokepClick
         end
+        object lblThElo1: TLabel
+          Left = 4
+          Top = 120
+          Width = 42
+          Height = 13
+          Caption = 'lblThElo1'
+          Visible = False
+        end
+        object lblThElo2: TLabel
+          Left = 4
+          Top = 139
+          Width = 42
+          Height = 13
+          Caption = 'lblThElo2'
+          Visible = False
+        end
+        object lblThElo3: TLabel
+          Left = 4
+          Top = 155
+          Width = 42
+          Height = 13
+          Caption = 'lblThElo3'
+          Visible = False
+        end
+        object lblThElo4: TLabel
+          Left = 4
+          Top = 174
+          Width = 42
+          Height = 13
+          Caption = 'lblThElo4'
+          Visible = False
+        end
+        object lblThRendszam1: TLabel
+          Left = 3
+          Top = 200
+          Width = 77
+          Height = 13
+          Caption = 'lblThRendszam1'
+          Visible = False
+        end
+        object lblThRendszam2: TLabel
+          Left = 4
+          Top = 219
+          Width = 77
+          Height = 13
+          Caption = 'lblThRendszam2'
+          Visible = False
+        end
+        object lblKep1: TLabel
+          Left = 4
+          Top = 262
+          Width = 45
+          Height = 13
+          Anchors = [akLeft, akBottom]
+          Caption = 'Nincs k'#233'p'
+          ExplicitTop = 260
+        end
         object memLog: TMemo
           Left = 117
           Top = 1
           Width = 185
-          Height = 277
+          Height = 279
           Align = alRight
           Lines.Strings = (
             'memLog')
           TabOrder = 0
           Visible = False
+          ExplicitHeight = 277
         end
       end
       object pnlAlsokep: TPanel
         Left = 1
-        Top = 280
+        Top = 282
         Width = 303
-        Height = 278
+        Height = 221
         Align = alBottom
         TabOrder = 1
+        ExplicitTop = 337
+        DesignSize = (
+          303
+          221)
         object imgAlsokep: TImage
-          Left = 3
-          Top = 0
+          Left = 4
+          Top = 6
           Width = 105
           Height = 105
           Stretch = True
           OnClick = imgFelsokepClick
         end
+        object lblKep2: TLabel
+          Left = 1
+          Top = 208
+          Width = 45
+          Height = 13
+          Anchors = [akLeft, akBottom]
+          Caption = 'Nincs k'#233'p'
+          ExplicitTop = 265
+        end
       end
+    end
+  end
+  object pnlGomobesLedek: TPanel
+    Left = 0
+    Top = 617
+    Width = 1107
+    Height = 55
+    Align = alBottom
+    TabOrder = 3
+    ExplicitLeft = 1
+    ExplicitTop = 616
+    ExplicitWidth = 798
+    object JvLED1: TJvLED
+      Left = 32
+      Top = 6
+      Width = 30
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object lblFelirat1: TLabel
+      Left = 16
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat1'
+      Visible = False
+    end
+    object JvLED2: TJvLED
+      Left = 96
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object lblFelirat2: TLabel
+      Left = 88
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat2'
+      Visible = False
+    end
+    object JvLED3: TJvLED
+      Left = 160
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object lblFelirat3: TLabel
+      Left = 152
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat3'
+      Visible = False
+    end
+    object JvLED4: TJvLED
+      Left = 224
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object lblFelirat4: TLabel
+      Left = 216
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat4'
+      Visible = False
+    end
+    object JvLED5: TJvLED
+      Left = 301
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object JvLED6: TJvLED
+      Left = 360
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object JvLED7: TJvLED
+      Left = 424
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object JvLED8: TJvLED
+      Left = 488
+      Top = 6
+      Width = 25
+      Height = 25
+      Hint = 'Dupla katttint'#225'ssal v'#225'lthat'
+      Status = False
+      Visible = False
+      OnDblClick = JvLED1DblClick
+    end
+    object lblFelirat8: TLabel
+      Left = 480
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat8'
+      Visible = False
+    end
+    object lblFelirat7: TLabel
+      Left = 416
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat7'
+      Visible = False
+    end
+    object lblFelirat6: TLabel
+      Left = 352
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat6'
+      Visible = False
+    end
+    object lblFelirat5: TLabel
+      Left = 280
+      Top = 32
+      Width = 46
+      Height = 13
+      Alignment = taCenter
+      Caption = 'lblFelirat5'
+      Visible = False
+    end
+    object btn1: TButton
+      Left = 532
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'btn1'
+      TabOrder = 0
+      Visible = False
+      OnClick = btn1Click
+    end
+    object btn2: TButton
+      Left = 613
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'btn2'
+      TabOrder = 1
+      Visible = False
+      OnClick = btn1Click
+    end
+    object btn3: TButton
+      Left = 694
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'btn3'
+      TabOrder = 2
+      Visible = False
+      OnClick = btn1Click
+    end
+    object btn4: TButton
+      Left = 775
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'btn4'
+      TabOrder = 3
+      Visible = False
+      OnClick = btn1Click
     end
   end
   object MainMenu1: TMainMenu
@@ -1431,8 +1516,8 @@ object FoF: TFoF
     Protocol = 1
     ProtocolIPv6 = 58
     PacketSize = 64
-    Left = 825
-    Top = 192
+    Left = 649
+    Top = 256
   end
   object mcIOmodul: TIdModBusClient
     ConnectTimeout = 0
@@ -1443,8 +1528,8 @@ object FoF: TFoF
   object tmrElokep: TTimer
     Enabled = False
     OnTimer = tmrElokepTimer
-    Left = 841
-    Top = 120
+    Left = 713
+    Top = 256
   end
   object tmrKep_Masolas: TTimer
     Interval = 60000

@@ -171,9 +171,9 @@ type
     pnlFelsoBal: TPanel;
     JvDBUltimGrid1: TJvDBUltimGrid;
     pnlFelsoJobb: TPanel;
-    PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
+    pgKepek: TPageControl;
+    tsKep1: TTabSheet;
+    tsKep2: TTabSheet;
     kep1: TImage;
     lblKep1: TLabel;
     kep2: TImage;
@@ -189,6 +189,23 @@ type
     lblSorszam: TLabel;
     btnFolytatasos_mentes: TSpeedButton;
     edszallev: TMemo;
+    tsOsszeskep: TTabSheet;
+    tsKep3: TTabSheet;
+    tsKep4: TTabSheet;
+    Kep3: TImage;
+    lblKep3: TLabel;
+    Kep4: TImage;
+    lblKep4: TLabel;
+    pnlKepBal: TPanel;
+    pnlKepJobb: TPanel;
+    pnlKepBalFelso: TPanel;
+    pnlKepBalAlso: TPanel;
+    pnlKepJobbFelso: TPanel;
+    pnkKepJobbAlso: TPanel;
+    OKep1: TImage;
+    OKep2: TImage;
+    OKep3: TImage;
+    OKep4: TImage;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -221,6 +238,7 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure btnMeresClick(Sender: TObject);
     procedure lucTipusChange(Sender: TObject);
+    procedure tsOsszeskepResize(Sender: TObject);
 
 
   private
@@ -745,6 +763,7 @@ begin
         JPEGImg.Scale:=jsEighth;
     finally
      kep1.Picture.Assign(JPEGImg);
+     Okep1.Picture.Assign(JPEGImg);
      JPEGImg.Free;
     end;
    end;
@@ -765,6 +784,7 @@ begin
         JPEGImg.Scale:=jsEighth;
     finally
      kep2.Picture.Assign(JPEGImg);
+     Okep2.Picture.Assign(JPEGImg);
      JPEGImg.Free;
     end;
    end;
@@ -1630,6 +1650,21 @@ begin
   chkkerekites.Checked:=termeklistkerekites.AsBoolean;
   chkkerekites.Visible:=chkkerekites.Checked;
   szazalek
+end;
+
+procedure TMjegyF.tsOsszeskepResize(Sender: TObject);
+begin
+  pnlKepBal.Width:=Round(tsOsszeskep.Width/2);
+  pnlKepBalFelso.Height:=Round(tsOsszeskep.Height/2);
+  pnlKepJobbFelso.Height:=Round(tsOsszeskep.Height/2);
+  OKep1.Height:=Round(tsOsszeskep.Height/2);
+  OKep1.Width:=OKep1.Height*2;
+  OKep2.Height:=Round(tsOsszeskep.Height/2);
+  OKep2.Width:=OKep2.Height*2;
+  OKep3.Height:=Round(tsOsszeskep.Height/2);
+  OKep3.Width:=OKep3.Height*2;
+  OKep4.Height:=Round(tsOsszeskep.Height/2);
+  OKep4.Width:=OKep4.Height*2;
 end;
 
 procedure TMjegyF.uresre;

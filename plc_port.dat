@@ -1,5 +1,5 @@
-[ComPort1]
-Port=COM8
+[ComPort_RTU]
+Port=CNCA0
 BaudRate=9600
 StopBits=1
 DataBits=8

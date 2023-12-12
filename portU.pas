@@ -6,7 +6,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   CPort, StdCtrls, ExtCtrls, CPortCtl, IdBaseComponent, IdComponent,
-  IdTCPConnection, System.inifiles,IdTCPClient;
+  IdTCPConnection, System.inifiles,IdTCPClient,AU;
 
 type
   TPortF = class(TForm)
@@ -87,7 +87,7 @@ type
   end;
 const
   hibamaximum=5;
-  Maxmerleg=4;  // ha v�ltoz�s van, akkor a hardver_beall formon az merleg komb�ban is kell v�ltoztatmi
+  //Maxmerleg=4;
 
 var
   PortF: TPortF;
@@ -96,17 +96,18 @@ var
   mertdarab,mertek:string;
   tf:textfile;
 
-  merlegek,mertertekek,mertekek,merleg_tipus: array [1..maxmerleg]of String;
-  elozotomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
-  nullszintvolt,rendszamvolt :array [1..maxmerleg] of boolean;
+  merlegek,mertertekek,mertekek,merleg_tipus: array [1..maxmerleg]of String;       // A maxmerleg az auban van, hogy másik unit is elérje
+  elozotomeg,maxtomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
+  nullszintvolt,rendszamvolt,mentesvolt :array [1..maxmerleg] of boolean;
   hibaszamlalo:integer;
   hivoszamkijezo_valasz,PC_kommunikacio:string;
   pc_kom_resz:string;
+  thElet: array [1..MaxMerleg] of integer;
 
 
 
 implementation
-uses au, foU;
+uses  foU;
 
 {$R *.DFM}
 
@@ -197,7 +198,11 @@ begin
             si:=si+1;
             if ParamStr(1)='/CT2' then ShowMessage('2s:'+sadat);
             adat:=sadat[si];
-            if adat=#2 then kezd:=true
+            if adat=#2 then
+            begin
+              kezd:=true;
+              ertek:='';
+            end
                 else
                   if kezd then
                     begin
