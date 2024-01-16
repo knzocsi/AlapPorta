@@ -210,7 +210,7 @@ begin
                         begin
                           if (Active) and (chkErtek_vj.Checked) then
                           begin
-                            memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
+                            memEredmeny.Text:='Ertek vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                           end;
                           mertekek[merlegszam]:='';
                           kilep:=true ;

@@ -111,10 +111,10 @@ type
     sptara: TSpinEdit;
     spnetto: TSpinEdit;
     edmegjegy: TEdit;
-    Button1: TButton;
+    btnPartnerek_listaja: TButton;
     btn1: TButton;
     kezelolookup: TJvDBLookupCombo;
-    Button2: TButton;
+    btnMerlegkezelok_listaja: TButton;
     cbxktip: TComboBox;
     chknincspot: TCheckBox;
     edekaer: TEdit;
@@ -148,7 +148,7 @@ type
     cbxbuzaminoseg: TComboBox;
     edSample: TEdit;
     taroloklookup: TJvDBLookupCombo;
-    Button3: TButton;
+    btnTarolok_listaja: TButton;
     termeklookup: TJvDBLookupCombo;
     Spsznetto: TSpinEdit;
     btnNyomtatas: TButton;
@@ -210,8 +210,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure btnPartnerek_listajaClick(Sender: TObject);
+    procedure btnMerlegkezelok_listajaClick(Sender: TObject);
     procedure JvDBUltimGrid1CellClick(Column: TColumn);
     procedure JvDBUltimGrid1KeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
@@ -222,7 +222,7 @@ type
     procedure btnTaramegadasClick(Sender: TObject);
     procedure sptisztasagChange(Sender: TObject);
     procedure termeklookupCloseUp(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    procedure btnTarolok_listajaClick(Sender: TObject);
     procedure spnedvExit(Sender: TObject);
     procedure edSampleChange(Sender: TObject);
     procedure spnedvChange(Sender: TObject);
@@ -244,6 +244,7 @@ type
   private
     { Private declarations }
     procedure kepek_betoltese;
+    procedure jpeg_betoltese(kepnev:string;kep,Okep:TImage);
     procedure uresre;
     procedure jeloles;
     procedure rendszam_combok;
@@ -265,6 +266,7 @@ var
   egyedi_azonosito:string;
   mentes_volt:boolean;
   kepek_tomb:array[1..maxkep] of string;
+  jeloltek_szama:integer;
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
@@ -289,7 +291,7 @@ begin
   rendszam_combok
 end;
 
-procedure TMjegyF.Button1Click(Sender: TObject);
+procedure TMjegyF.btnPartnerek_listajaClick(Sender: TObject);
 begin
  try
    PartnerekF.ShowModal
@@ -299,7 +301,7 @@ begin
  end;
 end;
 
-procedure TMjegyF.Button2Click(Sender: TObject);
+procedure TMjegyF.btnMerlegkezelok_listajaClick(Sender: TObject);
 begin
  try
    MerlegkezelokF.ShowModal
@@ -309,7 +311,7 @@ begin
  end;
 end;
 
-procedure TMjegyF.Button3Click(Sender: TObject);
+procedure TMjegyF.btnTarolok_listajaClick(Sender: TObject);
 begin
   try
    tarolokF.ShowModal
@@ -481,10 +483,11 @@ begin
   lblTomeg1.Caption:='0';
   lblTomeg2.Caption:='0';
   for i:= 1 to maxkep do kepek_tomb[i]:='';
-
+  jeloltek_szama:=0;
   if Folytatas then
   with af.NyitbeQ do
   begin
+     jeloltek_szama:=2;
     if FieldByName('tul_id').AsInteger<>0 then  tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
     cbxirany.ItemIndex:=cbxirany.Items.IndexOf(FieldByName('irany').AsString);
     cbxiranyChange(Sender);
@@ -526,9 +529,13 @@ begin
     kezelolookup.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
     speSorszam.Value:=FieldByName('Hivo_sorszam').AsInteger;
     kepek_tomb[1]:=FieldByName('kepnev1').AsString;
+    jpeg_betoltese(kepek_tomb[1],kep1,okep1);
     kepek_tomb[2]:=FieldByName('kepnev2').AsString;
+    jpeg_betoltese(kepek_tomb[2],kep2,okep2);
     kepek_tomb[3]:=FieldByName('kepnev3').AsString;
+    jpeg_betoltese(kepek_tomb[3],kep3,okep3);
     kepek_tomb[4]:=FieldByName('kepnev4').AsString;
+    jpeg_betoltese(kepek_tomb[4],kep4,okep4);
     case cbxIrany.Itemindex of
       1 :
         begin
@@ -575,9 +582,45 @@ end;
 
 procedure TMjegyF.jeloles;
 begin
+  if (not jvmemparosparosit.AsBoolean) and (jeloltek_szama=2) then
+  begin
+    ShowMessage('Már ki van jelölve két jármû, vagy folytatásban van!');
+    exit;
+  end;
+  if (not jvmemparosparosit.AsBoolean)  then jeloltek_szama:=jeloltek_szama+1
+  else jeloltek_szama:=jeloltek_szama-1;
+
   jvmemparos.Edit;
   jvmemparosparosit.AsBoolean:=not jvmemparosparosit.AsBoolean;
   jvmemparos.Post;
+end;
+
+procedure TMjegyF.jpeg_betoltese(kepnev: string; kep,Okep: TImage);
+var     JPEGImg: TJPEGImage;
+begin
+  kep.Picture:=nil;
+  Okep.Picture:=nil;
+  if FileExists( kepnev) then
+     begin
+      JPEGImg := TJpegImage.Create;
+      try
+       JPEGImg.LoadFromFile( kepnev);
+       if JPEGImg.Width<600 then
+        JPEGImg.Scale:=jsFullSize
+       else
+        if JPEGImg.Width<1200 then
+         JPEGImg.Scale:=jsHalf
+        else
+         if JPEGImg.Width<2000 then
+          JPEGImg.Scale:=jsQuarter
+         else
+          JPEGImg.Scale:=jsEighth;
+      finally
+       kep.Picture.Assign(JPEGImg);
+       Okep.Picture.Assign(JPEGImg);
+       JPEGImg.Free;
+      end;
+    end;
 end;
 
 procedure TMjegyF.levonlookupChange(Sender: TObject);
@@ -607,6 +650,7 @@ procedure TMjegyF.JvDBUltimGrid1CellClick(Column: TColumn);
 begin
   jeloles;
   //Application.ProcessMessages;
+
   kepek_betoltese;
 end;
 
@@ -645,14 +689,16 @@ begin
         begin
           if (t1=0)and (t2=0) then
            begin
-            t1:=FieldByName('tomeg').AsInteger;
-            rc:=RecNo;
-            lblelsodat.Caption:=FieldByName('datum').AsString;
-            lblelsoido.Caption:=FieldByName('ido').AsString;
-            lblTomeg1.Caption:=FieldByName('Tomeg').AsString;
-            chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
-            r11:=jvmemparos.FieldByName('rendszam').AsString;
-            r12:=jvmemparos.FieldByName('rendszam2').AsString;
+             t1:=FieldByName('tomeg').AsInteger;
+             rc:=RecNo;
+             lblelsodat.Caption:=FieldByName('datum').AsString;
+             lblelsoido.Caption:=FieldByName('ido').AsString;
+             lblTomeg1.Caption:=FieldByName('Tomeg').AsString;
+             chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
+             r11:=jvmemparos.FieldByName('rendszam').AsString;
+             r12:=jvmemparos.FieldByName('rendszam2').AsString;
+             cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
+             cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
            end;
           if (t1<>0)and (t2=0)and (rc<>RecNo) then
            begin
@@ -664,8 +710,7 @@ begin
             r21:=jvmemparos.FieldByName('rendszam').AsString;
             r22:=jvmemparos.FieldByName('rendszam2').AsString;
            end;
-          cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
-          cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
+
         end;
         next;
       end;
@@ -740,56 +785,144 @@ procedure TMjegyF.kepek_betoltese;
 var     JPEGImg: TJPEGImage;
 begin
  // if (k1=jvmemparoskepnev1.AsString)and (k2=jvmemparoskepnev2.AsString) then exit;//ne olvassa be újra
-  kep1.Picture:=nil;
-  kep2.Picture:=nil;
-  //if not jvmemparosparosit.AsBoolean then Exit;
 
-  lblKep1.Caption:=jvmemparoskepnev1.AsString;
-  lblKep2.Caption:=jvmemparoskepnev2.AsString;
-  if FileExists( lblKep1.Caption) then
-   begin
-    JPEGImg := TJpegImage.Create;
-    try
-     JPEGImg.LoadFromFile( lblKep1.Caption);
-     if JPEGImg.Width<600 then
-      JPEGImg.Scale:=jsFullSize
-     else
-      if JPEGImg.Width<1200 then
-       JPEGImg.Scale:=jsHalf
-      else
-       if JPEGImg.Width<2000 then
-        JPEGImg.Scale:=jsQuarter
-       else
-        JPEGImg.Scale:=jsEighth;
-    finally
-     kep1.Picture.Assign(JPEGImg);
-     Okep1.Picture.Assign(JPEGImg);
-     JPEGImg.Free;
+
+  if not jvmemparosparosit.AsBoolean then
+    if jeloltek_szama=0 then
+    begin
+      Okep1.Picture:=nil;
+      Okep2.Picture:=nil;
+      kep1.Picture:=nil;
+      kep2.Picture:=nil;
+      lblKep1.Caption:='';
+      lblKep2.Caption:='';
+      kepek_tomb[1]:='';
+      kepek_tomb[2]:='';
+      exit;
+    end
+    else
+    begin
+      Okep3.Picture:=nil;
+      Okep4.Picture:=nil;
+      kep3.Picture:=nil;
+      kep4.Picture:=nil;
+      lblKep3.Caption:='';
+      lblKep4.Caption:='';
+      kepek_tomb[3]:='';
+      kepek_tomb[4]:='';
+      exit;
     end;
-   end;
-   if FileExists(lblKep2.Caption) then
-   begin
-    JPEGImg := TJpegImage.Create;
-    try
-     JPEGImg.LoadFromFile(lblKep2.Caption);
-     if JPEGImg.Width<600 then
-      JPEGImg.Scale:=jsFullSize
-     else
-      if JPEGImg.Width<1200 then
-       JPEGImg.Scale:=jsHalf
-      else
-       if JPEGImg.Width<2000 then
-        JPEGImg.Scale:=jsQuarter
+  if jeloltek_szama=1 then
+  begin
+    kep1.Picture:=nil;
+    kep2.Picture:=nil;
+    Okep1.Picture:=nil;
+    Okep2.Picture:=nil;
+    lblKep1.Caption:=jvmemparoskepnev1.AsString;
+    kepek_tomb[1]:=jvmemparoskepnev1.AsString;
+    lblKep2.Caption:=jvmemparoskepnev2.AsString;
+    kepek_tomb[2]:=jvmemparoskepnev2.AsString;
+    if FileExists( lblKep1.Caption) then
+     begin
+      JPEGImg := TJpegImage.Create;
+      try
+       JPEGImg.LoadFromFile( lblKep1.Caption);
+       if JPEGImg.Width<600 then
+        JPEGImg.Scale:=jsFullSize
        else
-        JPEGImg.Scale:=jsEighth;
-    finally
-     kep2.Picture.Assign(JPEGImg);
-     Okep2.Picture.Assign(JPEGImg);
-     JPEGImg.Free;
-    end;
-   end;
-  lblKep1.Visible:=kep1.Picture=nil;
-  lblKep2.Visible:=kep2.Picture=nil;
+        if JPEGImg.Width<1200 then
+         JPEGImg.Scale:=jsHalf
+        else
+         if JPEGImg.Width<2000 then
+          JPEGImg.Scale:=jsQuarter
+         else
+          JPEGImg.Scale:=jsEighth;
+      finally
+       kep1.Picture.Assign(JPEGImg);
+       Okep1.Picture.Assign(JPEGImg);
+       JPEGImg.Free;
+      end;
+     end;
+     if FileExists(lblKep2.Caption) then
+     begin
+      JPEGImg := TJpegImage.Create;
+      try
+       JPEGImg.LoadFromFile(lblKep2.Caption);
+       if JPEGImg.Width<600 then
+        JPEGImg.Scale:=jsFullSize
+       else
+        if JPEGImg.Width<1200 then
+         JPEGImg.Scale:=jsHalf
+        else
+         if JPEGImg.Width<2000 then
+          JPEGImg.Scale:=jsQuarter
+         else
+          JPEGImg.Scale:=jsEighth;
+      finally
+       kep2.Picture.Assign(JPEGImg);
+       Okep2.Picture.Assign(JPEGImg);
+       JPEGImg.Free;
+      end;
+     end;
+    lblKep1.Visible:=kep1.Picture=nil;
+    lblKep2.Visible:=kep2.Picture=nil;
+  end
+  else
+  begin
+    kep3.Picture:=nil;
+    kep4.Picture:=nil;
+    Okep3.Picture:=nil;
+    Okep4.Picture:=nil;
+    lblKep3.Caption:=jvmemparoskepnev1.AsString;
+    lblKep4.Caption:=jvmemparoskepnev2.AsString;
+    kepek_tomb[3]:=jvmemparoskepnev1.AsString;
+    kepek_tomb[4]:=jvmemparoskepnev2.AsString;
+    if FileExists( lblKep3.Caption) then
+     begin
+      JPEGImg := TJpegImage.Create;
+      try
+       JPEGImg.LoadFromFile( lblKep3.Caption);
+       if JPEGImg.Width<600 then
+        JPEGImg.Scale:=jsFullSize
+       else
+        if JPEGImg.Width<1200 then
+         JPEGImg.Scale:=jsHalf
+        else
+         if JPEGImg.Width<2000 then
+          JPEGImg.Scale:=jsQuarter
+         else
+          JPEGImg.Scale:=jsEighth;
+      finally
+       kep3.Picture.Assign(JPEGImg);
+       Okep3.Picture.Assign(JPEGImg);
+       JPEGImg.Free;
+      end;
+     end;
+     if FileExists(lblKep4.Caption) then
+     begin
+      JPEGImg := TJpegImage.Create;
+      try
+       JPEGImg.LoadFromFile(lblKep4.Caption);
+       if JPEGImg.Width<600 then
+        JPEGImg.Scale:=jsFullSize
+       else
+        if JPEGImg.Width<1200 then
+         JPEGImg.Scale:=jsHalf
+        else
+         if JPEGImg.Width<2000 then
+          JPEGImg.Scale:=jsQuarter
+         else
+          JPEGImg.Scale:=jsEighth;
+      finally
+       kep4.Picture.Assign(JPEGImg);
+       Okep4.Picture.Assign(JPEGImg);
+       JPEGImg.Free;
+      end;
+     end;
+    lblKep3.Visible:=kep1.Picture=nil;
+    lblKep4.Visible:=kep2.Picture=nil;
+  end
+
 end;
 
 procedure TMjegyF.masol(kd, vd: TDate;friss:Boolean);

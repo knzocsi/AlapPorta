@@ -532,14 +532,14 @@ object MjegyF: TMjegyF
       TabOrder = 7
       Text = 'edmegjegy'
     end
-    object Button1: TButton
+    object btnPartnerek_listaja: TButton
       Left = 534
       Top = 115
       Width = 139
       Height = 17
       Caption = 'Partnerek list'#225'ja'
       TabOrder = 8
-      OnClick = Button1Click
+      OnClick = btnPartnerek_listajaClick
     end
     object btn1: TButton
       Left = 536
@@ -562,14 +562,14 @@ object MjegyF: TMjegyF
       LookupSource = AF.merlegkezQDs
       TabOrder = 10
     end
-    object Button2: TButton
+    object btnMerlegkezelok_listaja: TButton
       Left = 864
       Top = 204
       Width = 137
       Height = 20
       Caption = 'M'#233'rlegkezel'#337'k list'#225'ja'
       TabOrder = 11
-      OnClick = Button2Click
+      OnClick = btnMerlegkezelok_listajaClick
     end
     object cbxktip: TComboBox
       Left = 864
@@ -879,14 +879,14 @@ object MjegyF: TMjegyF
       LookupSource = TarolokDs
       TabOrder = 20
     end
-    object Button3: TButton
+    object btnTarolok_listaja: TButton
       Left = 766
       Top = 263
       Width = 75
       Height = 19
       Caption = 'T'#225'rol'#243'k'
       TabOrder = 21
-      OnClick = Button3Click
+      OnClick = btnTarolok_listajaClick
     end
     object termeklookup: TJvDBLookupCombo
       Left = 176
@@ -1206,8 +1206,6 @@ object MjegyF: TMjegyF
               Height = 208
               Align = alTop
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = -5
               object OKep1: TImage
                 Left = -7
                 Top = -1
@@ -1224,10 +1222,6 @@ object MjegyF: TMjegyF
               Height = 215
               Align = alClient
               TabOrder = 1
-              ExplicitLeft = 72
-              ExplicitTop = 256
-              ExplicitWidth = 185
-              ExplicitHeight = 41
               object OKep2: TImage
                 Left = 0
                 Top = 6
@@ -1252,8 +1246,6 @@ object MjegyF: TMjegyF
               Height = 208
               Align = alTop
               TabOrder = 0
-              ExplicitLeft = -7
-              ExplicitTop = -5
               object OKep3: TImage
                 Left = 5
                 Top = -1
@@ -1270,8 +1262,6 @@ object MjegyF: TMjegyF
               Height = 215
               Align = alClient
               TabOrder = 1
-              ExplicitLeft = 2
-              ExplicitTop = 210
               object OKep4: TImage
                 Left = 4
                 Top = 6

@@ -43,6 +43,12 @@ type
     thkamera:Integer;
   end;
 
+  PLC_Lekerdezes_Thread  = class(TThread)
+     //procedure kijelez;
+  protected
+    procedure Execute; override;
+  end;
+
   Rendszamrec=record
     rendszam:string;
     kep:string;
@@ -217,6 +223,7 @@ type
     procedure Mrlegkezelk1Click(Sender: TObject);
     procedure btnMeresmodositasClick(Sender: TObject);
     function PLC_Ir(cim, ertek: Integer): boolean;
+    function PLC_Ir_Coil(cim:integer; ertek: Boolean): boolean;
     function PLC_Olvas(cim: integer): integer;
     function IO_Ir(cim:Integer; ertek: Boolean): boolean;
     procedure FormCreate(Sender: TObject);
@@ -331,7 +338,8 @@ var
   RendszamTomb:array[1..maxmerleg,1..2]  of Rendszamrec;     //csak az elsõ két kamera lehet rendszám felismerõ
   SocketTomb:array[1..maxmerleg,1..2]  of Rendszamrec;     //csak az elsõ két kamera lehet rendszám felismerõ
   KameraTomb:array[1..maxmerleg,1..maxkamera] of Kamerarec;
-
+  PLC_Lekerdezett_Valasz:array [0..15] of Boolean;
+  ThPLC_Lekerdezes:PLC_Lekerdezes_Thread;
 implementation
 
 uses
@@ -394,6 +402,7 @@ procedure SetCounterDebounceTime(CounterNr, DebounceTime: integer); stdcall; ext
 procedure TFoF.Alaphardveresbelltsok1Click(Sender: TObject);
 begin
    if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'OK2023' then exit;
+
   Tomeg_Timer.Enabled:=false;
   Hardver_beallF.ShowModal;
   Tomeg_Timer.Enabled:=true;
@@ -401,25 +410,25 @@ end;
 
 procedure TFoF.Antheratrzsimport1Click(Sender: TObject);
 begin
-if torzsiport_folyamatban then exit;
-af.autotorzs.Enabled:=False;
-torzsiport_folyamatban:=True;
-//Screen.Cursor:=crHourGlass;
-try
- try
-  //af.torzs_import_csv;
-  af.torzs_import_xlsx;
- finally
-  ShowMessage('Importálás kész');
-  torzsiport_folyamatban:=False;
- // Screen.Cursor:=crDefault;
- end;
-except
- af.import_log('Hiba történt ');// ShowMessage('Hiba történt');
- torzsiport_folyamatban:=False;
- //Screen.Cursor:=crDefault;
-end;
-af.autotorzs.Enabled:=true;
+  if torzsiport_folyamatban then exit;
+  af.autotorzs.Enabled:=False;
+  torzsiport_folyamatban:=True;
+  //Screen.Cursor:=crHourGlass;
+  try
+   try
+    //af.torzs_import_csv;
+    af.torzs_import_xlsx;
+   finally
+    ShowMessage('Importálás kész');
+    torzsiport_folyamatban:=False;
+   // Screen.Cursor:=crDefault;
+   end;
+  except
+   af.import_log('Hiba történt ');// ShowMessage('Hiba történt');
+   torzsiport_folyamatban:=False;
+   //Screen.Cursor:=crDefault;
+  end;
+  af.autotorzs.Enabled:=true;
 end;
 
 procedure TFoF.Anyagok1Click(Sender: TObject);
@@ -575,14 +584,32 @@ end;
 
 
 function TFoF.bemenet_lekerdezes(merleg,Eszkoznev: string): integer;
+var hwQ: TFDQuery;
 begin
-  af.HardverQ.first;
-  if af.HardverQ.locate('Merleg;Eszkoznev',varArrayOf([merleg,Eszkoznev]),[] )then
+  hwQ:= TFDQuery.Create(Application);
+
+  with hwQ do
   begin
-    if  igaz(PLC_COMF.Lekerdezett_Valasz,(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then Result:=1
-    else Result:=0;
-  end
-  else Result:=2;
+    SQL:= af.HardverQ.SQL;
+    Connection:= af.HardverQ.Connection;
+    open;
+    if locate('Merleg;Eszkoznev',varArrayOf([merleg,Eszkoznev]),[] )then
+    begin
+      if FieldbyName('Tipus').AsString='PLC485' then
+      begin
+        if  igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then Result:=1
+        else Result:=0;
+      end
+      else
+        if FieldbyName('Tipus').AsString='PLC' then
+        begin
+          if PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger] then Result:=1
+          else Result:=0;
+        end;
+    end
+    else Result:=2;
+    free;
+  end;
 end;
 
 
@@ -923,8 +950,13 @@ var
           if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
           begin
             PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-            PLC_Ir(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger);
-            thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            if af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger<>0 then
+               PLC_Ir_Coil(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger=1);
+            if thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]='' then
+            begin
+              thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+              ThPLC_Lekerdezes:=PLC_Lekerdezes_Thread.Create(False);
+            end;
           end;
       end;
   end;
@@ -974,8 +1006,8 @@ var
           if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
           begin
             PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-            PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger);
-            thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger=1);
+            //thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
           end
           else
             if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
@@ -1010,10 +1042,12 @@ var
           TLabel(FindComponent('lblFelirat'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Visible:= True;
           TLabel(FindComponent('lblFelirat'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Caption:= af.HardverQ.FieldbyName('Felirat_szoveg').AsString;
       end;
-      if (af.HardverQ.FieldbyName('Tipus').AsString='PLC') and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1) then
+      if (af.HardverQ.FieldbyName('Tipus').AsString='PLC') and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+        and   (thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]='') then
         begin
           thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-          //ide kell betnni a PLC-s lekérdezés indítását
+          FoF.mctPLC. Host:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+          ThPLC_Lekerdezes:=PLC_Lekerdezes_Thread.Create(False);
         end
         else
           if (af.HardverQ.FieldbyName('Tipus').AsString='PLC485') and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1) then
@@ -1525,7 +1559,8 @@ begin
       if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
       begin
         PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-        PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
+        PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status);
+        //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
       end
       else
         if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
@@ -2459,8 +2494,12 @@ begin
       begin
         if af.HardverQ.FieldByName('Felirat_szam').AsInteger>0 then
         begin
-          TJvLED(FindComponent('JvLED'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Status:=
-               igaz(PLC_COMF.Lekerdezett_Valasz,(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger));
+          if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
+             TJvLED(FindComponent('JvLED'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Status:=
+             igaz(PLC_COMF.Lekerdezett_Valasz,(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger));
+          if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
+             TJvLED(FindComponent('JvLED'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Status:=
+             PLC_Lekerdezett_Valasz[af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger];
         end;
         af.HardverQ.next;
       end;
@@ -2476,6 +2515,8 @@ begin
 end;
 
 procedure TFoF.Lampakapcs(Melyik, Mire: integer);
+var PLC_Zold:boolean;
+    Zold:Integer;
 begin
   if Melyik = 0 then
     exit;
@@ -2500,9 +2541,31 @@ begin
   else
     if vezerles_tipus = 'PLC' then
     begin
-      PLC_Ir(Melyik, Mire);
-    end
-    else
+      if Regi_hardver_beallitas then PLC_Ir(Melyik, Mire)
+      else
+      begin
+        af.HardverQ.first;
+        if af.HardverQ.Locate('Eszkoznev','LAMPA'+Melyik.ToString,[]) then
+        begin
+          if af.HardverQ.FieldbyName('Aktiv').AsInteger=1 then
+            if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
+            begin
+              PLC_Zold:=Mire=Lampa_Zold;
+              PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+              PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,PLC_Zold);
+              //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
+            end
+            else
+              if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
+              begin
+                if Mire=Lampa_Zold then Zold:=1
+                else Zold:=0;
+                PLC_COMF.ModBusIrBit(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,Zold);
+              end;
+          end;
+        end;
+      end
+     else
       if vezerles_tipus = 'IO' then
       begin
         IO_Ir(IOmodul_regiszter_iras1,Mire=1);
@@ -2931,6 +2994,7 @@ begin
   if (vezerles_tipus <> 'PLC') then exit;
 
   mctPLC.Host := PLC_IP;
+
   if Ping_teszt(mctPLC.Host) then
   begin
     if mctPLC.WriteRegister(cim + 1, ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
@@ -2951,6 +3015,12 @@ begin
       StatusBar1.panels[3].text := 'PLC kapcsolati hiba!(I)';
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end;
+end;
+
+function TFoF.PLC_Ir_Coil(cim:integer; ertek: Boolean): boolean;
+begin
+  mctPLC.Host := PLC_IP;
+  mctPLC.WriteCoil(cim+1,Ertek);
 end;
 
 function TFoF.PLC_Olvas(cim: integer): integer;
@@ -3138,6 +3208,11 @@ begin
         if tomeg>mintomeg then
         begin
           //A jármû ráhalad a mérlegre
+          if not mentesvolt[thmerleg]  then
+          begin
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=1 then FoF.lampakapcs(1,Lampa_Piros);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=1 then FoF.lampakapcs(2,Lampa_Piros);
+          end;
           if tomeg>elozotomeg[thmerleg]+20 then
           begin
             elozotomeg[thmerleg]:=tomeg;
@@ -3169,6 +3244,8 @@ begin
                   kepnev2 := Fof.snapshot(IntToStr((thmerleg-1)*2+1));
                 end;
                 if not mentesvolt[thmerleg] then mentes;
+                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=0 then FoF.lampakapcs(1,Lampa_Zold);
+                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=0 then FoF.lampakapcs(2,Lampa_Zold);
               end;
             end
             else //a tömeg csökken
@@ -3183,14 +3260,16 @@ begin
               end;
         end
         else  //ha a tömeg min alatt van, de volt rajta valami akkor mentsen
-          if  maxtomeg[thmerleg]<>0 then
           begin
-            if not mentesvolt[thmerleg] then mentes;
+            if  maxtomeg[thmerleg]<>0 then
+            begin
+              if not mentesvolt[thmerleg] then mentes;
+
+            end;
+
             mentesvolt[thmerleg]:=false;
-          end
-          else
-          begin
-            mentesvolt[thmerleg]:=false;
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=0 then FoF.lampakapcs(1,Lampa_Zold);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=0 then FoF.lampakapcs(2,Lampa_Zold);
           end;
 
 
@@ -3300,6 +3379,29 @@ procedure Rendszam_keres_thread.kijelez;
 begin
   if felhnev='Programozó' then TLabel(Fof.FindComponent('lblThRendszam'+thkamera.ToString)).Visible:=True;
   TLabel(Fof.FindComponent('lblThRendszam'+thKamera.ToString)).caption:=szoveg+' '+nyugalmiszamlalo[thmerleg].ToString;;
+end;
+
+{ ThPLC_Lekerdezes }
+
+procedure PLC_Lekerdezes_Thread.Execute;
+var i:integer;
+begin
+  inherited;
+  repeat
+     try
+       FoF.mctPLC.ReadCoils(1,16,PLC_Lekerdezett_Valasz);
+     finally
+
+     end;
+     for i:=1 to 25 do
+     begin
+       Sleep(20);
+       Application.ProcessMessages;
+     end;
+     //Synchronize(kijelez);
+   until programvege;
+
+
 end;
 
 end.

@@ -61,7 +61,6 @@ object FoF: TFoF
     Height = 617
     Align = alLeft
     TabOrder = 1
-    ExplicitHeight = 672
     object pcTablak: TPageControl
       Left = 1
       Top = 60
@@ -179,7 +178,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495600
+            Time = 0.773554583327495500
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -881,7 +880,6 @@ object FoF: TFoF
     Height = 617
     Align = alClient
     TabOrder = 2
-    ExplicitHeight = 672
     object pnlJobbAlso: TPanel
       Left = 1
       Top = 505
@@ -891,7 +889,6 @@ object FoF: TFoF
       TabOrder = 0
       Visible = False
       OnClick = pnlJobbAlsoClick
-      ExplicitTop = 560
       object lbl1: TLabel
         Left = 24
         Top = 24
@@ -988,7 +985,6 @@ object FoF: TFoF
       Height = 504
       Align = alClient
       TabOrder = 1
-      ExplicitHeight = 559
       object pnlFelsokep: TPanel
         Left = 1
         Top = 1
@@ -997,7 +993,6 @@ object FoF: TFoF
         Align = alClient
         TabOrder = 0
         OnResize = pnlFelsokepResize
-        ExplicitHeight = 279
         DesignSize = (
           303
           281)
@@ -1076,7 +1071,6 @@ object FoF: TFoF
             'memLog')
           TabOrder = 0
           Visible = False
-          ExplicitHeight = 277
         end
       end
       object pnlAlsokep: TPanel
@@ -1086,7 +1080,6 @@ object FoF: TFoF
         Height = 221
         Align = alBottom
         TabOrder = 1
-        ExplicitTop = 337
         DesignSize = (
           303
           221)
@@ -1117,9 +1110,6 @@ object FoF: TFoF
     Height = 55
     Align = alBottom
     TabOrder = 3
-    ExplicitLeft = 1
-    ExplicitTop = 616
-    ExplicitWidth = 798
     object JvLED1: TJvLED
       Left = 32
       Top = 6
