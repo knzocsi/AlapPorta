@@ -27,6 +27,7 @@ type
 
   Rendszam_lampa_thread=class(TThread)
      procedure mukodtet;
+     procedure kijelez;
   protected
     procedure Execute; override;
   public
@@ -44,10 +45,19 @@ type
   end;
 
   PLC_Lekerdezes_Thread  = class(TThread)
-     //procedure kijelez;
+
   protected
     procedure Execute; override;
   end;
+
+  SQL_Lekerdezes_Thread  = class(TThread)
+    szmerleg:string;
+    eszkoz:string;
+    eredmeny:integer;
+  protected
+    procedure Execute; override;
+  end;
+
 
   Rendszamrec=record
     rendszam:string;
@@ -187,6 +197,8 @@ type
     lblThRendszam2: TLabel;
     lblKep1: TLabel;
     lblKep2: TLabel;
+    SOAPAllapottmr: TTimer;
+    Djak1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -277,6 +289,8 @@ type
     procedure btnTorlesClick(Sender: TObject);
     procedure chkToroltek_mutatasaClick(Sender: TObject);
     procedure jpgbetolt(kepnev1,kepnev2:string);
+    procedure SOAPAllapottmrTimer(Sender: TObject);
+    procedure Djak1Click(Sender: TObject);
 
 
   private
@@ -347,7 +361,7 @@ uses
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
-  PLC_COMU, ImportU, MerlegelesekU;
+  PLC_COMU, ImportU, MerlegelesekU,DMSoapU, DijakU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -584,32 +598,53 @@ end;
 
 
 function TFoF.bemenet_lekerdezes(merleg,Eszkoznev: string): integer;
+var SQL_LekTH:SQL_Lekerdezes_Thread;
 var hwQ: TFDQuery;
-begin
-  hwQ:= TFDQuery.Create(Application);
+    hwKap:TFDConnection;
 
+begin
+  inherited;
+  hwQ:= TFDQuery.Create(nil);
+  hwKap :=TFDConnection.Create(nil);
+  hwKap.Params:=Af.Kapcs.Params;
+  hwKap.Connected:=true;
+  hwQ.Connection:= hwKap;
   with hwQ do
-  begin
-    SQL:= af.HardverQ.SQL;
-    Connection:= af.HardverQ.Connection;
-    open;
-    if locate('Merleg;Eszkoznev',varArrayOf([merleg,Eszkoznev]),[] )then
     begin
-      if FieldbyName('Tipus').AsString='PLC485' then
+      close;
+      SQL.Text:= af.HardverQ.SQL.Text;
+      open;
+      if locate('Merleg;Eszkoznev',varArrayOf([merleg,Eszkoznev]),[] ) and (FieldbyName('Aktiv').AsInteger=1)  then
       begin
-        if  igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then Result:=1
-        else Result:=0;
-      end
-      else
-        if FieldbyName('Tipus').AsString='PLC' then
+        if FieldbyName('Tipus').AsString='PLC485' then
         begin
-          if PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger] then Result:=1
+          if  igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then Result:=1
           else Result:=0;
-        end;
-    end
-    else Result:=2;
-    free;
-  end;
+        end
+        else
+          if FieldbyName('Tipus').AsString='PLC' then
+          begin
+            if PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger] then Result:=1
+            else Result:=0;
+          end;
+      end
+      else Result:=2;
+      close;
+      free;
+    end;
+  hwKap.Connected:=False;
+  hwKap.Free;
+
+
+  exit;
+  SQL_LekTH:=SQL_Lekerdezes_Thread.Create(True);
+  SQL_LekTH.szmerleg:=merleg;
+  SQL_LekTH.eszkoz:=Eszkoznev;
+  SQL_LekTH.eredmeny:=3;
+  SQL_LekTH.Resume;
+  SQL_LekTH.WaitFor;
+  Result:=SQL_LekTH.eredmeny;
+
 end;
 
 
@@ -703,6 +738,11 @@ end;
 procedure TFoF.DBGrid1MouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
 begin
   kepbetolt;
+end;
+
+procedure TFoF.Djak1Click(Sender: TObject);
+begin
+DijakF.showmodal;
 end;
 
 procedure TFoF.tmrElokepTimer(Sender: TObject);
@@ -930,6 +970,11 @@ var
                           moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
                           PortF.IP2_Start;
                         end;
+                   3 :  begin
+                          moxa_ip3:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+                          moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          PortF.IP3_Start;
+                        end;
                  end;
 
                end;
@@ -966,7 +1011,7 @@ var
   var merlegszam,kameraszam:integer;
   begin
     for merlegszam :=1 to Maxmerleg do
-      for kameraszam := 1 to Maxinfra do
+      for kameraszam := 1 to Maxkamera do
       begin
         if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['KAMERA'+kameraszam.ToString,'M'+merlegszam.ToString]),[])) then
           if (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)  then
@@ -1093,6 +1138,7 @@ begin
   btnElso.Caption:=Elso_Gomb_Szoveg;
   tbIdeiglenes.TabVisible:=ideiglenes_latszik;
   if ideiglenes_latszik then  pcTablak.ActivePageIndex:=0;
+  for i:=0 to 15 do PLC_Lekerdezett_Valasz[i]:=false;
 
   tbForgalom.TabVisible:=forgalom_latszik;
   sbtnSorszamhivas.Visible:=Hivoszamhasznalat;
@@ -1265,7 +1311,7 @@ begin
 
   if (not FileExists(konyvtar+'hivoszamkijelzo.dat')) and (Hivoszamhasznalat)  then
       ShowMessage('A hívószám kijelzõ port nincs beállítva!');
-  PC_kommunikacio_beallitas;
+  if not Regi_hardver_beallitas then PC_kommunikacio_beallitas;
   esemeny:=af.esemeny_kibont(Now,'');
   if Utolso_futtatas<>esemeny.evs+esemeny.hos+esemeny.naps then
   begin
@@ -1273,7 +1319,6 @@ begin
     begin
       ShellExecute(Handle, 'open',PChar(konyvtar+'Ftp_fel.exe'), '/BEZAR', nil, SW_HIDE) ;
       Af.Regiek_torlese;
-
       with af.CfgT do
       begin
         open;
@@ -1288,31 +1333,48 @@ begin
          af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást','ALAP','Utolso_futtatas','String',esemeny.evs+esemeny.hos+esemeny.naps);
       end;
     end
-
-
-
   end;
-  for i := 1 to Maxmerleg do
-  begin
-    elozotomeg[i]:=0;
-    nyugalmiszamlalo[i]:=0;
-    nullszintvolt[i]:=True;
-    rendszamvolt[i]:=False;
-    mentesvolt[i]:=False;
-    maxtomeg[i]:=0;
-    if aktiv_merlegek[i]<>0 then
+
+  if not Regi_hardver_beallitas then
+    for i := 1 to Maxmerleg do
     begin
-      ThRendszamLampa[i]:=Rendszam_lampa_thread.Create(True);
-      ThRendszamLampa[i].thmerleg:=i;
-      ThRendszamLampa[i].Resume;
+      elozotomeg[i]:=0;
+      nyugalmiszamlalo[i]:=0;
+      nullszintvolt[i]:=True;
+      rendszamvolt[i]:=False;
+      mentesvolt[i]:=False;
+      maxtomeg[i]:=0;
+      if aktiv_merlegek[i]<>0 then
+      begin
+        ThRendszamLampa[i]:=Rendszam_lampa_thread.Create(True);
+        ThRendszamLampa[i].thmerleg:=i;
+        ThRendszamLampa[i].Resume;
+        memlog.Lines.Insert(0,'RendszamLampa indul '+i.ToString);
+
+      end;
     end;
-  end;
+   if Soap_aktiv then
+   begin
+    try
+      soap_szerver:=szerver;
+      soap_port:=port;
+      soap_adatbazis:=adatbazis;
+      soap_user:=user;
+      soap_passwd:=passwd;
+      SOAPAllapottmr.Enabled:=True;
+      //ShowMessage(soap_szapcim);
+    finally
+      DMSoapF.SoapThreadRun
+    end;
+   end;
+
   Fof.SetFocus;
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   programvege:=true;
+  soap_programvege:=true;
   StatusBar1.panels[1].Text:='Kilépés folyamatban...';
   Tomeg_Timer.Enabled:=false;
   if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS') and (felhnev<>'') then
@@ -2108,7 +2170,7 @@ end;
 
 procedure TFoF.ServerSocketClientRead(Sender: TObject; Socket: TCustomWinSocket);
 var
-  soc: string;
+  soc,csat: string;
   merleg,kamera:integer;
 begin
   soc := Socket.ReceiveText;
@@ -2117,16 +2179,40 @@ begin
   begin
     StatusBar1.Panels[1].Text := soc;
     socketrendszam := copy(soc, 1, Pos(';', soc) - 1);
+    Delete(soc,1,Pos(';', soc));
+    if (soc<>'' ) and (soc[1] in ['0'..'9']) then
+    begin
+      csat := copy(soc, 1, Pos(';', soc) - 1);
+      Delete(soc,1,Pos(';', soc));
+    end
+    else csat:='';
+
     socketkep := copy(soc, Pos(';', soc) + 1, Length(soc) - Pos(';', soc) - 1);
+
     //új rendszer
     merleg:=0;
     kamera:=0;
-    if Pos('_1_',soc)<>0 then  begin merleg:=1;kamera:=1;   end
-    else
-      if Pos('_2_',soc)<>0 then  begin merleg:=1;kamera:=2;   end
+    if csat='' then
+    begin
+      if Pos('_1_',soc)<>0 then  begin merleg:=1;kamera:=1;   end
       else
-        if Pos('_3_',soc)<>0 then  begin merleg:=2;kamera:=1;   end
-        else if Pos('_4_',soc)<>0 then  begin merleg:=2;kamera:=2;   end;
+        if Pos('_2_',soc)<>0 then  begin merleg:=1;kamera:=2;   end
+        else
+          if Pos('_3_',soc)<>0 then  begin merleg:=2;kamera:=1;   end
+          else if Pos('_4_',soc)<>0 then  begin merleg:=2;kamera:=2;   end
+               else
+                if Pos('_5_',soc)<>0 then  begin merleg:=3;kamera:=1;   end
+                else if Pos('_6_',soc)<>0 then  begin merleg:=3;kamera:=2;   end;
+    end
+    else
+      case csat[1] of
+        '1' : begin merleg:=1;kamera:=1;  end;
+        '2' : begin merleg:=1;kamera:=2;  end;
+        '3' : begin merleg:=2;kamera:=1;  end;
+        '4' : begin merleg:=2;kamera:=2;  end;
+        '5' : begin merleg:=3;kamera:=1;  end;
+        '6' : begin merleg:=3;kamera:=2;  end;
+      end;
     if merleg<>0 then
     begin
       SocketTomb[merleg,kamera].rendszam:=socketrendszam;
@@ -2226,6 +2312,13 @@ begin
   end;
 end;
 
+procedure TFoF.SOAPAllapottmrTimer(Sender: TObject);
+begin
+ SOAPAllapottmr.Enabled:=False;
+ StatusBar1.Panels[7].Text:=soap_logba;
+ SOAPAllapottmr.Enabled:=True;
+end;
+
 procedure varakozas;
   var i: integer;
   begin
@@ -2238,15 +2331,32 @@ procedure varakozas;
 
 procedure TFoF.socketconnect;
 var
-  i: integer;
+  i,kliens_port,szerver_port,merlegszam,socketszam: integer;
+
 
 begin
   if ClientSocket.Active then
     ClientSocket.Active := False;
+  kliens_port:=9001;
+  szerver_port:=9002;
+  if not Regi_hardver_beallitas then
+  begin
+    merlegszam:=1;
+    socketszam:=1;
+    // RENDSZAM_KLIENS1 RENDSZAM_SZERVER1
+    if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_KLIENS'+socketszam.ToString,'M'+merlegszam.ToString]),[]))
+            and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+            and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+      then kliens_port:=af.HardverQ.FieldbyName('IP_Port').AsInteger;
+    if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_SZERVER'+socketszam.ToString,'M'+merlegszam.ToString]),[]))
+            and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+            and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+      then szerver_port:=af.HardverQ.FieldbyName('IP_Port').AsInteger;
+  end;
   with ClientSocket do
   begin
     //Host := edIp.Text;
-    //Port:=StrToInt(edPort.Text);
+    Port:=kliens_port;
     Active := True;
     i := 0;
     varakozas;
@@ -2257,6 +2367,7 @@ begin
       i := i + 1;
     end;
   end;
+  ServerSocket.Port:=szerver_port;
   ServerSocket.Active := True;
 end;
 
@@ -2447,63 +2558,90 @@ end;
 procedure TFoF.Tomeg_TimerTimer(Sender: TObject);
 var tomeg,i:integer;
     pont:char;
-    tomeg_szoveg:string;
+    tomeg_szoveg,szamlalo_szoveg:string;
+    hwQ: TFDQuery;
+
 begin
   Tomeg_Timer.Enabled:=false;
-  af.  ForgalomQ.Refresh;
+  //af.ForgalomQ.Refresh;
   pont:=' ';
   if (StatusBar1.panels[4].text<>'') and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)]=' ') then pont:='.';
-  tomeg_szoveg:='';
-  for i := 1 to 4 do
-  begin
-    if mertertekek[i]<>'' then  tomeg_szoveg:=tomeg_szoveg+mertertekek[i]+' kg   ';
-    try
-      tomeg:=strtoint(mertertekek[i]);
-      if (lado=1) and (tomeg>mintomeg) then AF.tomeglog('M'+IntTosTr(i)+':'+mertertekek[i]);
-    except
-
-    end;
-  end;
-  StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont;
-  lblIrany.caption:=meresirany;
   try
-    tomeg:=strtoint(mertertekek[1]);
-    if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertekek[1]);
-    {
-    if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
-    begin
-      PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
-      PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
-      nullszintvolt := true;
-      rendszamvolt := false;
-      lblRendszam_elso.Caption := '';
-      lblRendszam_hatso.Caption := '';
-    end;
-    }
-    if UpperCase(ParamStr(1)) <> '/D' then
-      if (FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then PortF.kijelzore_ir;
-  except
-  end;
 
-  if not Regi_hardver_beallitas then
-
+    tomeg_szoveg:='';
+    szamlalo_szoveg:='';
+    for i := 1 to Maxmerleg do
     begin
-    { TODO -oKNZ -c : AT CP IP-s részt is meg kell csinálni ide 2023.08.10. 9:17:16 }
-      af.HardverQ.first;
-      while not af.HardverQ.eof do
+      if mertertekek[i]<>'' then
       begin
-        if af.HardverQ.FieldByName('Felirat_szam').AsInteger>0 then
-        begin
-          if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
-             TJvLED(FindComponent('JvLED'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Status:=
-             igaz(PLC_COMF.Lekerdezett_Valasz,(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger));
-          if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
-             TJvLED(FindComponent('JvLED'+IntToStr(af.HardverQ.FieldbyName('Felirat_szam').AsInteger))).Status:=
-             PLC_Lekerdezett_Valasz[af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger];
-        end;
-        af.HardverQ.next;
+        tomeg_szoveg:=tomeg_szoveg+mertertekek[i]+' kg   ';
+        szamlalo_szoveg:=szamlalo_szoveg+merlegszamlalo[i].ToString+'  ';
+      end;
+      try
+        tomeg:=strtoint(mertertekek[i]);
+
+        if (lado=1) and (tomeg>mintomeg) then AF.tomeglog('M'+IntTosTr(i)+':'+mertertekek[i]);
+      except
+
       end;
     end;
+    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+szamlalo_szoveg;
+    lblIrany.caption:=meresirany;
+    try
+      tomeg:=strtoint(mertertekek[1]);
+      if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertekek[1]);
+      {
+      if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
+      begin
+        PLC_Ir(Sorompo_Nyitas_Volt_Cim_BE, 0);
+        PLC_Ir(Sorompo_Nyitas_Volt_Cim_KI, 0);
+        nullszintvolt := true;
+        rendszamvolt := false;
+        lblRendszam_elso.Caption := '';
+        lblRendszam_hatso.Caption := '';
+      end;
+      }
+      if UpperCase(ParamStr(1)) <> '/D' then
+        if (FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then PortF.kijelzore_ir;
+    except
+    end;
+
+  finally
+
+  end;
+
+
+    if not Regi_hardver_beallitas then
+
+      begin
+        hwQ:= TFDQuery.Create(nil);
+        Sleep(100);
+        with hwQ do
+        begin
+          close;
+          SQL.Add('Select * From hardver_beallitasok WHERE Aktiv=1');
+          Connection:= af.Kapcs;
+          open;
+          while not eof do
+          begin
+          if (FieldByName('Felirat_szam').AsInteger>0)    then
+            begin
+              if FieldbyName('Tipus').AsString='PLC485' then
+                 TJvLED(FindComponent('JvLED'+IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status:=
+                 igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger));
+
+              if FieldbyName('Tipus').AsString='PLC' then
+              begin
+                 TJvLED(Fof.FindComponent('JvLED'+IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status:=
+                 not PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger];
+              end;
+            end;
+            next;
+          end;
+          close;
+          free;
+        end;
+      end;
 
   Tomeg_Timer.Enabled:=true;
 end;
@@ -2518,6 +2656,7 @@ procedure TFoF.Lampakapcs(Melyik, Mire: integer);
 var PLC_Zold:boolean;
     Zold:Integer;
 begin
+
   if Melyik = 0 then
     exit;
   if Mire = Lampa_Zold then
@@ -2550,7 +2689,7 @@ begin
           if af.HardverQ.FieldbyName('Aktiv').AsInteger=1 then
             if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
             begin
-              PLC_Zold:=Mire=Lampa_Zold;
+              PLC_Zold:=Mire<>Lampa_Zold;
               PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
               PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,PLC_Zold);
               //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
@@ -3079,10 +3218,11 @@ procedure PCKommunikacio_thread.Execute;
     if ParamStr(1)='/RE' then ShowMessage(PortF.comPC_Kommunikacio.Port+#13+#10+#13+#10+rendszam1) ;
 
     inup:=TFDQuery.Create(Application);
+    if not af.MentesKapcs.Connected then af.MentesKapcs.Connected :=true;
     with inup do
     begin
       close;
-      Connection:=af.Kapcs;
+      Connection:=af.MentesKapcs;
       SQL.Clear;
       Close;
       SQL.Clear;
@@ -3096,7 +3236,7 @@ procedure PCKommunikacio_thread.Execute;
       SQL.Add(':merlegelo,:kepnev1,:kepnev2');
 
       SQL.Add(');');
-      azon:=StringReplace(StringReplace(DateTimeToStr(Now), '.', '', [rfReplaceAll]), ':', '', [rfReplaceAll])+IntToStr(hibaszamlalo);
+      azon:=StringReplace(StringReplace(DateTimeToStr(Now), '.', '', [rfReplaceAll]), ':', '', [rfReplaceAll]);
       //ShowMessage(sql.Text);
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
@@ -3114,9 +3254,8 @@ procedure PCKommunikacio_thread.Execute;
       ExecSQL;
     end;
     inup.Free;
+    af.MentesKapcs.Connected:=false;
     Synchronize(kijelez);
-
-
   end;
 
 
@@ -3158,17 +3297,21 @@ var i,tomeg:integer;
       kepnev1:=Rendszamtomb[thmerleg,1].kep;
       kepnev2:=Rendszamtomb[thmerleg,2].kep;;
     end;
+    af.MentesKapcs.Connected:=false;
+    af.MentesKapcs.Connected :=true;
     inup:=TFDQuery.Create(Application);
     with inup do
     begin
       close;
-      Connection:=af.Kapcs;
+      Connection:=af.MentesKapcs;
       SQL.Clear;
       Close;
       SQL.Clear;
       SQL.Add('Insert into forgalom ');
-      SQL.Add('(Datum,Ido,Rendszam,Rendszam2,Irany,Kod,Szallitolev,Tomeg,Kepnev1,Kepnev2,Parositott,Nem_kell,kezi)');
-      SQL.Add(' VALUES(:Datum,:Ido,:Rendszam,:Rendszam2,:Irany,:Kod,:Szallitolev,:Tomeg,:Kepnev1,:Kepnev2,:Parositott,:Nem_Kell,:kezi) ');
+      SQL.Add('(Datum,Ido,Rendszam,Rendszam2,Irany,Kod,Szallitolev,');
+      SQL.Add(' Tomeg,Kepnev1,Kepnev2,Parositott,Nem_kell,kezi,soap_merleg_azonosito)');
+      SQL.Add(' VALUES(:Datum,:Ido,:Rendszam,:Rendszam2,:Irany,:Kod,:Szallitolev,');
+      SQL.Add(' :Tomeg,:Kepnev1,:Kepnev2,:Parositott,:Nem_Kell,:kezi,:soap_merleg_azonosito) ');
       ParamByName('Datum').AsDate := Date;
       ParamByName('Ido').AsTime := Time;
       ParamByName('Rendszam').AsString := rendszam1;
@@ -3182,6 +3325,7 @@ var i,tomeg:integer;
       ParamByName('Parositott').AsInteger := 0;
       ParamByName('Nem_Kell').AsInteger := 0;
       ParamByName('kezi').AsBoolean:=False;
+      ParamByName('soap_merleg_azonosito').AsInteger := thmerleg; //ezt küldjük a SOAP rendszerbe
       //showmessage(SQL.Text);
       ExecSQL;
     end;
@@ -3210,8 +3354,12 @@ begin
           //A jármû ráhalad a mérlegre
           if not mentesvolt[thmerleg]  then
           begin
-            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=1 then FoF.lampakapcs(1,Lampa_Piros);
-            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=1 then FoF.lampakapcs(2,Lampa_Piros);
+            //leengedõ lámpák pirosra váltanak
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Zold then FoF.lampakapcs(1,Lampa_Piros);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=Lampa_Zold then FoF.lampakapcs(2,Lampa_Piros);
+            //ráengedõ lámpák pirosra váltanak
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA3')=Lampa_Zold then FoF.lampakapcs(3,Lampa_Piros);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA4')=Lampa_Zold then FoF.lampakapcs(4,Lampa_Piros);
           end;
           if tomeg>elozotomeg[thmerleg]+20 then
           begin
@@ -3228,6 +3376,7 @@ begin
                    ThRendszam_keres[thmerleg,i].thkamera:=i;
                    RendszamTomb[thmerleg,i].fut:=true;
                    ThRendszam_keres[thmerleg,i].Resume;
+                   Synchronize(kijelez);
                 end;
           end
           else
@@ -3244,8 +3393,9 @@ begin
                   kepnev2 := Fof.snapshot(IntToStr((thmerleg-1)*2+1));
                 end;
                 if not mentesvolt[thmerleg] then mentes;
-                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=0 then FoF.lampakapcs(1,Lampa_Zold);
-                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=0 then FoF.lampakapcs(2,Lampa_Zold);
+                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Piros then FoF.lampakapcs(1,Lampa_Zold);
+                Sleep(51);
+                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=Lampa_Piros then FoF.lampakapcs(2,Lampa_Zold);
               end;
             end
             else //a tömeg csökken
@@ -3268,8 +3418,13 @@ begin
             end;
 
             mentesvolt[thmerleg]:=false;
-            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=0 then FoF.lampakapcs(1,Lampa_Zold);
-            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=0 then FoF.lampakapcs(2,Lampa_Zold);
+            //leengedõ lámpák zöldre váltanak
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Piros then FoF.lampakapcs(1,Lampa_Zold);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=Lampa_Piros then FoF.lampakapcs(2,Lampa_Zold);
+
+            //Rángedõ lámpák zöldre váltanak                                   Lampa_Piros
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA3')=Lampa_Piros then FoF.lampakapcs(3,Lampa_Zold);
+            if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA4')=Lampa_Piros then FoF.lampakapcs(4,Lampa_Zold);
           end;
 
 
@@ -3285,6 +3440,11 @@ begin
       Sleep(100);
     end;
   until programvege;
+end;
+
+procedure Rendszam_lampa_thread.kijelez;
+begin
+   FoF.memlog.Lines.Insert(0,'Renszamleker m:'+thmerleg.ToString);;
 end;
 
 procedure Rendszam_lampa_thread.mukodtet;
@@ -3321,7 +3481,11 @@ var kilep:boolean;
         else
           if (thmerleg=2) and  (thkamera=1) then kepszam:='3'
           else
-            if (thmerleg=2) and  (thkamera=2) then kepszam:='4';
+            if (thmerleg=2) and  (thkamera=2) then kepszam:='4'
+            else
+              if (thmerleg=3) and  (thkamera=1) then kepszam:='5'
+                else
+                if (thmerleg=3) and  (thkamera=2) then kepszam:='6';
 
       FoF.ClientSocket.Socket.SendText('<H' + kepszam + '=1>');
       sza := 0;
@@ -3402,6 +3566,46 @@ begin
    until programvege;
 
 
+end;
+
+{ SQL_Lekerdezes_Thread }
+
+procedure SQL_Lekerdezes_Thread.Execute;
+var hwQ: TFDQuery;
+    hwKap:TFDConnection;
+
+begin
+  inherited;
+  hwQ:= TFDQuery.Create(nil);
+  hwKap :=TFDConnection.Create(nil);
+  hwKap.Params:=Af.Kapcs.Params;
+  hwKap.Connected:=true;
+  hwQ.Connection:= hwKap;
+  with hwQ do
+    begin
+      close;
+      SQL.Text:= af.HardverQ.SQL.Text;
+      open;
+      if locate('Merleg;Eszkoznev',varArrayOf([szmerleg,eszkoz]),[] ) and (FieldbyName('Aktiv').AsInteger=1)  then
+      begin
+        if FieldbyName('Tipus').AsString='PLC485' then
+        begin
+          if  igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger)) then eredmeny:=1
+          else eredmeny:=0;
+        end
+        else
+          if FieldbyName('Tipus').AsString='PLC' then
+          begin
+            if PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger] then eredmeny:=1
+            else eredmeny:=0;
+          end;
+      end
+      else eredmeny:=2;
+      close;
+      free;
+    end;
+  hwKap.Connected:=False;
+  hwKap.Free;
 end;
 
 end.

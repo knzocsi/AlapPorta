@@ -1,12 +1,12 @@
 object AF: TAF
   OldCreateOrder = True
   OnCreate = DataModuleCreate
-  Height = 514
-  Width = 912
+  Height = 639
+  Width = 1142
   object ForgalomDS: TDataSource
     DataSet = ForgalomQ
-    Left = 205
-    Top = 95
+    Left = 253
+    Top = 103
   end
   object ForgalomQ: TFDQuery
     Connection = Kapcs
@@ -14,22 +14,22 @@ object AF: TAF
       'SELECT *'
       'FROM forgalom'
       'ORDER BY Datum desc, Ido desc')
-    Left = 200
-    Top = 40
+    Left = 248
+    Top = 48
   end
   object Forgalom_Timer: TTimer
     Enabled = False
     Interval = 10000
     OnTimer = Forgalom_TimerTimer
-    Left = 272
-    Top = 40
+    Left = 320
+    Top = 48
   end
   object ForgTimT: TFDTable
     Connection = Kapcs
     UpdateOptions.UpdateTableName = 'stadler.forgalom'
     TableName = 'stadler.forgalom'
-    Left = 272
-    Top = 96
+    Left = 320
+    Top = 104
   end
   object ForgTimQ: TFDQuery
     Connection = Kapcs
@@ -40,13 +40,13 @@ object AF: TAF
     Connection = Kapcs
     UpdateOptions.UpdateTableName = 'stadler.parositott'
     TableName = 'stadler.parositott'
-    Left = 352
-    Top = 40
+    Left = 400
+    Top = 48
   end
   object ParositottQ: TFDQuery
     Connection = Kapcs
-    Left = 352
-    Top = 96
+    Left = 400
+    Top = 104
   end
   object ParositottDS: TDataSource
     DataSet = ParositottQ
@@ -200,8 +200,8 @@ object AF: TAF
   end
   object Q1: TFDQuery
     Connection = Kapcs
-    Left = 136
-    Top = 40
+    Left = 808
+    Top = 184
   end
   object felhasznalok_jogaiDs: TDataSource
     DataSet = felhasznalok_jogai
@@ -2592,8 +2592,8 @@ object AF: TAF
   end
   object SszQ: TFDQuery
     Connection = Kapcs
-    Left = 504
-    Top = 40
+    Left = 552
+    Top = 48
   end
   object FrxmjegyList: TfrxReport
     Version = '6.7'
@@ -3337,14 +3337,14 @@ object AF: TAF
     ResourceOptions.AssignedValues = [rvMacroCreate, rvMacroExpand, rvDirectExecute, rvPersistent]
     ResourceOptions.MacroCreate = False
     ResourceOptions.DirectExecute = True
-    Left = 808
-    Top = 56
+    Left = 856
+    Top = 64
   end
   object ModScriptDialog: TFDGUIxScriptDialog
     Provider = 'Forms'
     Options = [ssCallstack, ssConsole]
-    Left = 808
-    Top = 104
+    Left = 856
+    Top = 112
   end
   object KeszletQDs: TDataSource
     DataSet = KeszletQ
@@ -3684,8 +3684,8 @@ object AF: TAF
   end
   object FoglaltQ: TFDQuery
     Connection = Kapcs
-    Left = 504
-    Top = 88
+    Left = 552
+    Top = 96
   end
   object KeszletezesProc: TFDStoredProc
     Connection = Kapcs
@@ -6656,8 +6656,8 @@ object AF: TAF
     IndexFieldNames = 'csoport:A'
     Connection = Kapcs
     TableName = 'cfg'
-    Left = 616
-    Top = 48
+    Left = 16
+    Top = 160
   end
   object CfgTDs: TDataSource
     DataSet = CfgT
@@ -19934,8 +19934,8 @@ object AF: TAF
       '!SZURES'
       'ORDER BY ErkDatum desc, ErkIdo desc'
       '')
-    Left = 432
-    Top = 48
+    Left = 480
+    Top = 56
     MacroData = <
       item
         Value = ''
@@ -19944,8 +19944,8 @@ object AF: TAF
   end
   object NyitbeDS: TDataSource
     DataSet = NyitbeQ
-    Left = 429
-    Top = 103
+    Left = 477
+    Top = 111
   end
   object tipusQDs: TDataSource
     DataSet = tipusQ
@@ -19971,12 +19971,58 @@ object AF: TAF
     SQL.Strings = (
       'Select *'
       'From hardver_beallitasok')
-    Left = 656
-    Top = 48
+    Left = 704
+    Top = 56
   end
   object HardverDS: TDataSource
     DataSet = HardverQ
-    Left = 653
-    Top = 103
+    Left = 701
+    Top = 111
+  end
+  object HWKapcs: TFDConnection
+    ConnectionName = 'HWKapcs'
+    Params.Strings = (
+      'Server=127.0.0.1'
+      'Password=MaTt2019'
+      'DriverID=MySQL'
+      'CharacterSet=utf8'
+      'User_Name=knz'
+      'Port=3307'
+      'Database=alap')
+    FetchOptions.AssignedValues = [evDetailCascade]
+    FetchOptions.DetailCascade = True
+    ResourceOptions.AssignedValues = [rvAutoConnect, rvSilentMode]
+    ResourceOptions.SilentMode = True
+    ResourceOptions.AutoConnect = False
+    UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
+    UpdateOptions.LockMode = lmOptimistic
+    LoginPrompt = False
+    OnLost = KapcsLost
+    BeforeCommit = KapcsBeforeCommit
+    Left = 128
+    Top = 40
+  end
+  object MentesKapcs: TFDConnection
+    ConnectionName = 'MentesKapcs'
+    Params.Strings = (
+      'Server=127.0.0.1'
+      'Password=MaTt2019'
+      'DriverID=MySQL'
+      'CharacterSet=utf8'
+      'User_Name=knz'
+      'Port=3307'
+      'Database=alap')
+    FetchOptions.AssignedValues = [evDetailCascade]
+    FetchOptions.DetailCascade = True
+    ResourceOptions.AssignedValues = [rvAutoConnect, rvSilentMode]
+    ResourceOptions.SilentMode = True
+    ResourceOptions.AutoConnect = False
+    UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
+    UpdateOptions.LockMode = lmOptimistic
+    LoginPrompt = False
+    OnLost = KapcsLost
+    BeforeCommit = KapcsBeforeCommit
+    Left = 184
+    Top = 40
   end
 end

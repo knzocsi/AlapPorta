@@ -52,13 +52,19 @@ uses
   Hardver_beallU in 'Hardver_beallU.pas' {Hardver_beallF},
   PLC_COMU in 'PLC_COMU.pas' {PLC_COMF},
   ImportU in 'ImportU.pas' {ImportF},
-  MerlegelesekU in 'MerlegelesekU.pas' {MerlegelesekF};
+  MerlegelesekU in 'MerlegelesekU.pas' {MerlegelesekF},
+  DMSoapU in 'SOAP\DMSoapU.pas' {DMSoapF: TDataModule},
+  Soap_valaszU in 'SOAP\Soap_valaszU.pas',
+  Soap_PingU in 'SOAP\Soap_PingU.pas',
+  Soap_keresU in 'SOAP\Soap_keresU.pas',
+  DijakU in 'DijakU.pas' {DijakF};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDMSoapF, DMSoapF);
   Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
@@ -103,5 +109,6 @@ begin
   Application.CreateForm(TImportF, ImportF);
   Application.CreateForm(TMerlegelesekF, MerlegelesekF);
   Application.CreateForm(TBelepF, BelepF);
+  Application.CreateForm(TDijakF, DijakF);
   Application.Run;
 end.

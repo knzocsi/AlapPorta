@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=23;
+      maxSQL=25;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -911,7 +911,21 @@ interface
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10
      , //23
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Torolve`  INT(11) DEFAULT 0 ;'  +#13#10
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Torolve`  INT(11) DEFAULT 0 ;' // +#13#10
+     ,//24 forgalom tábla módosítása SOAP miatt
+      'ALTER TABLE `forgalom`	ADD COLUMN IF NOT EXISTS `soap_merleg_azonosito`  INT(11) NULL DEFAULT 0 ;'  +#13#10+
+      'ALTER TABLE `forgalom`	ADD COLUMN IF NOT EXISTS `soap_allapot`  VARCHAR(20) NULL DEFAULT ''SEND'' ;'  +#13#10 +
+      'ALTER TABLE `forgalom`	ADD COLUMN IF NOT EXISTS `soap_code`  VARCHAR(30) NULL DEFAULT '''' ;'
+    , //25
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `betarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `kitarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `szallitasi_dij` DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `betarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `kitarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `szallitasi_dij` DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `betarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `kitarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `szallitasi_dij` DECIMAL(12,6) NOT NULL DEFAULT 0 ;'
     );
 
 

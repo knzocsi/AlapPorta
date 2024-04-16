@@ -41,6 +41,10 @@ type
     comHivoszamkijelzo: TComPort;
     Button2: TButton;
     comPC_Kommunikacio: TComPort;
+    IdTCPClient3: TIdTCPClient;
+    Client_Timer3: TTimer;
+    lblTomeg3: TLabel;
+    lblKapcsolat3: TLabel;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -65,6 +69,9 @@ type
     procedure ComPort2RxChar(Sender: TObject; Count: Integer);
     procedure comHivoszamkijelzoRxChar(Sender: TObject; Count: Integer);
     procedure comPC_KommunikacioRxChar(Sender: TObject; Count: Integer);
+    procedure Client_Timer3Timer(Sender: TObject);
+    procedure IdTCPClient3Connected(Sender: TObject);
+    procedure IdTCPClient3Disconnected(Sender: TObject);
 
 
   private
@@ -80,6 +87,7 @@ type
     procedure hivoszamkijelzore_ir(szam:string);
     procedure IP1_Start;
     procedure IP2_Start;
+    procedure IP3_Start;
     function merleg_szam(merleg:string):integer;
     procedure pc_komm_port_open(Port:string);
     procedure pc_komm_port_close;
@@ -99,7 +107,8 @@ var
   merlegek,mertertekek,mertekek,merleg_tipus: array [1..maxmerleg]of String;       // A maxmerleg az auban van, hogy másik unit is elérje
   elozotomeg,maxtomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
   nullszintvolt,rendszamvolt,mentesvolt :array [1..maxmerleg] of boolean;
-  hibaszamlalo:integer;
+  hibaszamlalo:array [1..MaxMerleg] of integer;
+  merlegszamlalo,elozomerlegszamlalo:array [1..MaxMerleg] of integer;
   hivoszamkijezo_valasz,PC_kommunikacio:string;
   pc_kom_resz:string;
   thElet: array [1..MaxMerleg] of integer;
@@ -744,9 +753,9 @@ begin
       if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
       mert:=StrToFloat(ertek);
       ertek:=FloatToStr(mert);
-      hibaszamlalo:=0;
+      hibaszamlalo[merlegszam]:=0;
     except
-      hibaszamlalo:=hibaszamlalo+1;
+      hibaszamlalo[merlegszam]:=hibaszamlalo[merlegszam]+1;
       ertek:='-0'
     end;
     //if ERTEK<>'-0' THEN mertertek:=ertek;
@@ -754,7 +763,7 @@ begin
   end
   else
   begin
-    hibaszamlalo:=hibaszamlalo+1;
+    hibaszamlalo[merlegszam]:=hibaszamlalo[merlegszam]+1;
     if ParamStr(1)='/CT2' then ShowMessage('5e:'+ertek);
     ertek:='-4';
   end;
@@ -765,8 +774,9 @@ begin
     memEredmeny.Text:='M�rt �rt�k: ('+Merleg_tipus[merlegszam]+IntToStr(mtip)+')'+ertek+#13#10+memEredmeny.text;
   end;
   if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
-  if (hibaszamlalo=0) or (hibaszamlalo>hibamaximum) then Result:=ertek
+  if (hibaszamlalo[merlegszam]=0) or (hibaszamlalo[merlegszam]>hibamaximum) then Result:=ertek
   else Result:=mertertekek[merlegszam];
+  if (hibaszamlalo[merlegszam]=0) then  merlegszamlalo[merlegszam]:=merlegszamlalo[merlegszam]+1;
 end;
 
 
@@ -813,7 +823,7 @@ begin
   sorosvetelben:=false;
   Aktiv:=false;
   //mertertek:='-5';
-  hibaszamlalo:=0;
+
 
   inif:=TIniFile.Create(ExtractFileDir(ExtractFilePath(application.exename))+'\'+ini_nev);
   merlegek[1]:=inif.ReadString('Merleg','Merleg1','RS1');
@@ -825,7 +835,7 @@ begin
   merlegek[4]:=inif.ReadString('Merleg','Merleg4','NINCS');
   inif.writeString('Merleg','Merleg4',merlegek[4]);
 
-  for k:=1 to 4 do
+  for k:=1 to Maxmerleg do
   begin
     mertertekek[k]:='';
     mertekek[k]:='';
@@ -833,6 +843,9 @@ begin
     nullszintvolt[k]  := true;
     rendszamvolt [k] := false;
     nyugalmiszamlalo [k] := 0;
+    hibaszamlalo[k]:=0;
+    merlegszamlalo[k]:=0;
+    elozomerlegszamlalo[k]:=0;
   end;
   btnHivoszamkijezobeallitas.Visible:=Hivoszamhasznalat;
 end;
@@ -880,6 +893,16 @@ begin
   lblKapcsolat2.Caption:='Nincs kapcsolat';
 end;
 
+procedure TPortF.IdTCPClient3Connected(Sender: TObject);
+begin
+   lblKapcsolat3.Caption:='Kapcsolatban';
+end;
+
+procedure TPortF.IdTCPClient3Disconnected(Sender: TObject);
+begin
+  lblKapcsolat3.Caption:='Nincs kapcsolat';
+end;
+
 procedure TPortF.IP1_Start;
 begin
   Client_Timer1.Enabled:=False;
@@ -914,6 +937,24 @@ begin
   IdTCPClient2.Port:=moxa_port;
   IdTCPClient2.connect;
   Client_Timer2.Enabled:=True;
+end;
+
+procedure TPortF.IP3_Start;
+begin
+  Client_Timer3.Enabled:=False;
+  if uppercase( ParamStr(1))='/LOG' then
+  begin
+    ForceDirectories(konyvtar+'\LOG');
+    AssignFile(tf,konyvtar+'LOG\3IP'+datum_szoveg(Now,True)+'.txt');
+    Rewrite(tf);
+    CloseFile(tf);
+  end;
+  lblTomeg3.Caption:='-';
+  lblKapcsolat3.Caption:='-';
+  IdTCPClient3.Host:=moxa_ip3;
+  IdTCPClient3.Port:=moxa_port;
+  IdTCPClient3.connect;
+  Client_Timer3.Enabled:=True;
 end;
 
 procedure TPortF.pc_komm_port_close;
@@ -1039,8 +1080,10 @@ begin
   memHexa.Text:='';
   lblTomeg1.Caption:='';
   lblTomeg2.Caption:='';
+  lblTomeg3.Caption:='';
   lblKapcsolat1.Caption:='';
   lblKapcsolat2.Caption:='';
+  lblKapcsolat3.Caption:='';
   btnKijelzo_beallitas.Visible:= kijelzo_tipus<>'Nincs';
 end;
 
@@ -1135,6 +1178,22 @@ begin
       lblTomeg2.Caption:=mertertekek[merleg_szam('IP2')];
     end;
   Client_Timer2.Enabled:=True;
+end;
+
+procedure TPortF.Client_Timer3Timer(Sender: TObject);
+var s:string;
+begin
+
+  Client_Timer3.Enabled:=False;
+  if IdTCPClient3.Connected then
+    if not IdTCPClient3.Socket.InputBufferIsEmpty then
+    begin
+      s:=IdTCPClient3.Socket.ReadString(IdTCPClient3.Socket.InputBuffer.Size);
+      mertertekek[merleg_szam('IP3')]:=merleg_kiolvasas(s,merleg_szam('IP3'));
+      IdTCPClient3.Socket.InputBuffer.Clear;
+      lblTomeg3.Caption:=mertertekek[merleg_szam('IP3')];
+    end;
+  Client_Timer3.Enabled:=True;
 end;
 
 procedure TPortF.comHivoszamkijelzoRxChar(Sender: TObject; Count: Integer);

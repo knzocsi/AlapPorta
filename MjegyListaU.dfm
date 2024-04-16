@@ -637,7 +637,6 @@ object MjegyekF: TMjegyekF
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 4
-    ExplicitLeft = 8
     object pnlKepek: TPanel
       Left = 840
       Top = 1
@@ -653,9 +652,6 @@ object MjegyekF: TMjegyekF
         ActivePage = tabKep1
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 505
-        ExplicitTop = 18
-        ExplicitWidth = 1277
         object tabKep1: TTabSheet
           Caption = 'K'#233'p 1'
           DesignSize = (
@@ -743,7 +739,6 @@ object MjegyekF: TMjegyekF
       Height = 189
       ControlFirst = pnlKepek
       Align = alLeft
-      ExplicitTop = 6
     end
     object mlistaGrid: TJvDBUltimGrid
       Left = 4

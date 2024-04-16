@@ -37,7 +37,7 @@ object Hardver_beallF: THardver_beallF
     Top = 41
     Width = 1112
     Height = 433
-    ActivePage = tsLista
+    ActivePage = tsReszletek
     Align = alClient
     TabOrder = 1
     OnChange = pcAdatokChange
@@ -200,6 +200,8 @@ object Hardver_beallF: THardver_beallF
           '- Nincs megadva -'
           'MERLEG1'
           'MERLEG2'
+          'MERLEG3'
+          'MERLEG4'
           'SOROMPO1_NYITAS'
           'SOROMPO1_ZARAS'
           'SOROMPO2_NYITAS'
@@ -219,7 +221,9 @@ object Hardver_beallF: THardver_beallF
           'KAMERA3'
           'KAMERA4'
           'HANG_MERES_UTAN'
-          'PC_KOMMUNIKACIO')
+          'PC_KOMMUNIKACIO'
+          'RENDSZAM_KLIENS1'
+          'RENDSZAM_SZERVER1')
         TabOrder = 5
       end
       object DBNavigator1: TDBNavigator

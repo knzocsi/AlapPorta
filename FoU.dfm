@@ -52,6 +52,10 @@ object FoF: TFoF
       item
         Text = #201'l'#337'k'#233'p(2):'
         Width = 150
+      end
+      item
+        Text = 'SOAP'
+        Width = 50
       end>
   end
   object pnlBaloldal: TPanel
@@ -1342,6 +1346,10 @@ object FoF: TFoF
         Caption = 'T'#246'meg levon'#225'si sz'#246'vegek'
         OnClick = tomeg_levon_szovegek_mClick
       end
+      object Djak1: TMenuItem
+        Caption = 'D'#237'jak'
+        OnClick = Djak1Click
+      end
     end
     object Listk1: TMenuItem
       Caption = 'List'#225'k'
@@ -1533,5 +1541,11 @@ object FoF: TFoF
     OnTimer = tmrKijelzo_TorlesTimer
     Left = 445
     Top = 268
+  end
+  object SOAPAllapottmr: TTimer
+    Enabled = False
+    OnTimer = SOAPAllapottmrTimer
+    Left = 544
+    Top = 360
   end
 end

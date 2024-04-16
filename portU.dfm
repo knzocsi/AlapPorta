@@ -120,6 +120,7 @@ object PortF: TPortF
       'Soros teszt'
       '')
     TabOrder = 1
+    ExplicitLeft = -5
   end
   object memHexa: TMemo
     Left = 0
@@ -183,6 +184,20 @@ object PortF: TPortF
         Height = 13
         Caption = 'lblKapcsolat2'
       end
+      object lblTomeg3: TLabel
+        Left = 16
+        Top = 117
+        Width = 49
+        Height = 13
+        Caption = 'lblTomeg3'
+      end
+      object lblKapcsolat3: TLabel
+        Left = 120
+        Top = 117
+        Width = 63
+        Height = 13
+        Caption = 'lblKapcsolat3'
+      end
       object chkErtek_vj: TCheckBox
         Left = 16
         Top = 16
@@ -245,8 +260,8 @@ object PortF: TPortF
     FlowControl.XonXoffIn = False
     StoredProps = [spBasic]
     TriggersOnRxChar = True
-    Left = 160
-    Top = 226
+    Left = 120
+    Top = 322
   end
   object IdTCPClient1: TIdTCPClient
     OnDisconnected = IdTCPClient1Disconnected
@@ -315,8 +330,8 @@ object PortF: TPortF
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     OnRxChar = comHivoszamkijelzoRxChar
-    Left = 256
-    Top = 224
+    Left = 184
+    Top = 320
   end
   object comPC_Kommunikacio: TComPort
     BaudRate = br9600
@@ -334,7 +349,23 @@ object PortF: TPortF
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     OnRxChar = comPC_KommunikacioRxChar
-    Left = 152
-    Top = 298
+    Left = 296
+    Top = 314
+  end
+  object IdTCPClient3: TIdTCPClient
+    OnDisconnected = IdTCPClient3Disconnected
+    OnConnected = IdTCPClient3Connected
+    ConnectTimeout = 0
+    Host = '127.0.0.1'
+    Port = 1001
+    ReadTimeout = -1
+    Left = 240
+    Top = 216
+  end
+  object Client_Timer3: TTimer
+    Interval = 500
+    OnTimer = Client_Timer3Timer
+    Left = 320
+    Top = 216
   end
 end

@@ -286,7 +286,7 @@ end;
 
 procedure TMjegyF.btnTaramegadasClick(Sender: TObject);
 begin
-  if not aF.van_joga('j10') then exit; //Taramegadas
+  if not aF.van_joga('j9') then exit; //Taramegadas
   RendszamokF.ShowModal;
   rendszam_combok
 end;
@@ -1326,6 +1326,7 @@ begin
       SQL.Add('p2_id,p2_kod,p2_nev,p2_cim,p2_kuj,p2_ktj,levon_szoveg,levon_tomeg,');
       SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek,kepnev1,kepnev2,kepnev3,kepnev4  ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
+      SQL.Add(',betarolasi_dij,kitarolasi_dij,szallitasi_dij');
       SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
@@ -1343,8 +1344,11 @@ begin
         SQL.Add(',:Hivo_sorszam ');
         ParamByName('Hivo_sorszam').AsString:=speSorszam.Text;
       end;
-
+      SQL.Add(',:betarolasi_dij,:kitarolasi_dij,:szallitasi_dij');
       SQL.Add(');');
+      {ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
+        ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
+        ParamByName('szallitasi_dij').value:=spszNetto.Value*szallitasi_dij;}
       //ShowMessage(sql.Text);
       //ParamByName('sorszam').AsString:=sorsz;
       ParamByName('storno').AsString:='';
@@ -1461,9 +1465,35 @@ begin
 
       ParamByName('mennyiseg').AsFloat:=keszmenny;
       ParamByName('szaraz_tort_szemek').AsFloat:=tort_keszmenny;
-      ParamByName('tarolasi_dij').value:=0;
-      ParamByName('szaritasi_dij').value:=0;
-      ParamByName('tisztitasi_dij').value:=0;
+       //dijak
+      if cbxirany.ItemIndex in [1,2] then
+      begin
+        ParamByName('tarolasi_dij').value:=spszNetto.Value*tarolasi_dij;
+        ParamByName('szaritasi_dij').value:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
+        ParamByName('tisztitasi_dij').value:=spnetto.Value*tisztitasi_dij;
+        ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
+        ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
+        ParamByName('szallitasi_dij').value:=spszNetto.Value*szallitasi_dij;
+        case cbxirany.Text[1] of
+         'B':begin
+              ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
+              ParamByName('kitarolasi_dij').value:=0;
+             end;
+         'K':begin
+              ParamByName('betarolasi_dij').value:=0;
+              ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
+             end;
+        end
+      end
+      else
+        begin
+          ParamByName('tarolasi_dij').value:=0;
+          ParamByName('szaritasi_dij').value:=0;
+          ParamByName('tisztitasi_dij').value:=0;
+          ParamByName('betarolasi_dij').value:=0;
+          ParamByName('kitarolasi_dij').value:=0;
+          ParamByName('szallitasi_dij').value:=0;
+        end;
       if taroloklookup.KeyValue<>'!' then ParamByName('tarolo_id').AsInteger:=taroloklookup.KeyValue
       else ParamByName('tarolo_id').AsInteger:=-1;
 

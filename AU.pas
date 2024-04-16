@@ -27,7 +27,7 @@ const
   ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
    ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés','Mérlegelõk módosítása',
-   'Mérés','Kezdõ készlet felv.','Kézi mérés','Mérlegjegy módosítás','Táramegadás',
+   'Mérés','Kezdõ készlet felv.','Kézi mérés','Táramegadás','',
    '','', '','','',
    '','','','','');
 
@@ -164,6 +164,8 @@ type
     tipusQnev: TWideStringField;
     HardverQ: TFDQuery;
     HardverDS: TDataSource;
+    HWKapcs: TFDConnection;
+    MentesKapcs: TFDConnection;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -269,7 +271,7 @@ var
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
   merlegjegy_modositas: Boolean;
-  kijelzo_tipus,moxa_ip1,moxa_ip2:string;
+  kijelzo_tipus,moxa_ip1,moxa_ip2,moxa_ip3:string;
   moxa_port:integer;
   tisztitasi_dij,szaritasi_dij,tarolasi_dij,be_tarolasi_dij,
   ki_tarolasi_dij,szallitasi_dij:Extended;
@@ -284,9 +286,12 @@ var
   aktualis_merlegszam,kepernyo_meretarany:integer;
   szabalyos_merlegen_tartozkodas_figyeles:boolean;
   Masolas_utvonala,Kepek_Mappa,Utolso_futtatas:string;
+  //ha true elindul a tead
+  Soap_aktiv: Boolean=False;
 
 implementation
-uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU;
+uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
+     DMSoapU ;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -441,6 +446,9 @@ begin
   autotorzs.Enabled:=automata_torzsimport;
   // merlegjegy_tipus_betoltese;//iniben kell megadni-elõkészítés elõtt töltöm be
   ForceDirectories(ExtractFilePath(application.exename)+'\LOG');
+  HWKapcs.Params:=Kapcs.Params;
+  MentesKapcs.Params:=Kapcs.Params;
+
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -915,6 +923,8 @@ begin
     end;
   soapXML:=inif.ReadString('Mappak','SoapXML',ExtractFileDir(ExtractFilePath(application.exename))+'\SoapXML');
   soapXML:=cfg_kezel('','MAPPAK','SoapXML mappa','String',soapXML);
+  soap_alap_mappa:=soapXML;
+  ForceDirectories(soap_alap_mappa);
   //inif.writeString('Mappak','SoapXML',SoapXML);
   kepmappa:=inif.ReadString('Mappak','kepek',ExtractFileDir(ExtractFilePath(application.exename))+'\Kepek');
   kepmappa:=cfg_kezel('','MAPPAK','Képek mappa','String',kepmappa);
@@ -1015,6 +1025,18 @@ begin
   inif.WriteBool('ALAP','Hivoszamhasznalat',Hivoszamhasznalat);
   Utolso_futtatas:=cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást','ALAP','Utolso_futtatas','String','');
 
+  Soap_aktiv:=cfg_kezel('SOAP beküldés aktiv e','SOAP','Soap_aktiv','Boolean', true);
+  soap_kepet_kuld:=cfg_kezel('SOAP rendszerbe küldjön e képet','SOAP','Soap_kep_kuldes','Boolean', False);
+  soap_xml_teszt:=cfg_kezel('SOAP teszt xmlt hozza csak létre, de nem küldi be','SOAP','Soap_xml_teszt','Boolean', False);
+  soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String', 'merlegtestelek');
+  soap_passhash:=cfg_kezel('SOAP password hash','SOAP','Soap_passHash','String', 'S@Pmerlego$$ze');
+  soap_alakulcs:=cfg_kezel('SOAP XML aláíró kulcs','SOAP','Soap_alairo_kulcs','String', 'Al@|rashoz szükséges_kulcs');
+  soap_szapcim:=cfg_kezel('SOAP végpont elérési címe','SOAP','Soap_cim','String', 'http://192.168.16.15:40080/test/merleg/?');
+  soap_ip:=cfg_kezel('SOAP végpont ip címe','SOAP','Soap_ip','String', '192.168.16.06');
+  soap_kapcs_idokorlat:=cfg_kezel('SOAP szerverhez kapcsolódási idõkorlát(ms)','SOAP','Soap_kapcs_idokorlat','Integer', 300000);
+  soap_valaszadasi_idokorlat:=cfg_kezel('SOAP szerver válaszadási idõkorlát(ms)','SOAP','Soap_szerver_idokorlat','Integer', 300000);
+  soap_kuldes_gyakorisaga:=cfg_kezel('SOAP küldés gyakorisága, ennyi sleepet teszek a szálba(ms)','SOAP','Soap_kuldes_gyak','Integer', 5000);
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1031,6 +1053,7 @@ begin
     torzs_import_mappa:=torzs_import_mappa+'\';
     ForceDirectories(torzs_import_mappa+'Importalva');
    end;
+
   inif.UpdateFile;
   inif.Free;
 end;
@@ -1073,12 +1096,12 @@ end;
 
 procedure TAF.KapcsBeforeCommit(Sender: TObject);
 begin
-if not Kapcs.Connected then Kapcs.Connected:=True;
+  if not Kapcs.Connected then Kapcs.Connected:=True;
 end;
 
 procedure TAF.KapcsLost(Sender: TObject);
 begin
-Kapcs.Connected:=true
+  Kapcs.Connected:=true
 end;
 
 procedure TAF.kapcs_ini_kezel;
@@ -1630,11 +1653,11 @@ procedure TAF.soclog(S: string);
 begin
  m:=ExtractFileDir(application.exename);
 // ForceDirectories(m);
- AssignFile(tf,m+'\sock_log.txt');
- if not FileExists(m+'\sock_log.txt') then ReWrite(tf)
+ AssignFile(tf,m+'\LOG\sock_log.txt');
+ if not FileExists(m+'\LOG\sock_log.txt') then ReWrite(tf)
  else Append(tf);
  WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
- Writeln(tf,'*****************************************************************************************************************');
+// Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
 end;
 

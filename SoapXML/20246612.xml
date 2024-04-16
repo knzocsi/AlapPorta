@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GenIfQueryRoot>
+	<header>
+		<requestId>R20240313140235gtestelek2181</requestId>
+		<timestamp>2024-03-13T14:02:35.167Z+01:00</timestamp>
+		<requestVersion>1.0</requestVersion>
+		<headerVersion>1.0</headerVersion>
+	</header>
+	<user>
+		<login>merlegtestelek</login>
+		<passwordHash>549CE8383EEDC2F0A4EF2B759B5F5593C6A0D656BFCC1182AA64D7014815A514C344AA9594671F9B9E548BCAE28C6E4B2FA3B294E474C070F9B9DF77619DEC68</passwordHash>
+		<requestSignature>1778A5E133D1E41BDCF7EAB9C3FB5B3E3C80C7FB441E4E3068126A11EFC5BE3DA952EA5F43D0CE291844777F7DC78A630D5F557132481437399F76254D0C0FF3</requestSignature>
+	</user>
+	<GenIfQuerys>
+		<GenIfQuery>
+			<querydomain>merleg</querydomain>
+			<op_name>post</op_name>
+			<op_mode>0</op_mode>
+			<sql_name/>
+			<params/>
+			<UserSpecXMLs>
+				<MerlegXMLs>
+					<MerlegXML>
+						<ID>20246612</ID>
+						<WERKS>2010</WERKS>
+						<MERLEG>M20101</MERLEG>
+						<Rendszam>NUS396</Rendszam>
+						<Brutto>36700</Brutto>
+						<ForgalomIrany>OUT</ForgalomIrany>
+						<Datum>2024.03.13</Datum>
+						<Ido>15:02:32</Ido>
+						<Picture_Base64 ext="jpg"></Picture_Base64>
+					</MerlegXML>
+				</MerlegXMLs>
+			</UserSpecXMLs>
+		</GenIfQuery>
+	</GenIfQuerys>
+</GenIfQueryRoot>

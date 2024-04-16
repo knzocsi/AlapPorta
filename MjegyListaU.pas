@@ -185,13 +185,13 @@ implementation
 
 procedure TMjegyekF.btnelozmenyekClick(Sender: TObject);
 begin
-if not aF.van_joga('j9') then exit;
-MermodlistF.fo(mjegyekQ.FieldByName('sorszam').AsString);
+  if not aF.van_joga('j3') then exit;
+  MermodlistF.fo(mjegyekQ.FieldByName('sorszam').AsString);
 end;
 
 procedure TMjegyekF.btnKilepesClick(Sender: TObject);
 begin
- Close;
+  Close;
 end;
 
 procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
@@ -238,7 +238,7 @@ end;
 
 procedure TMjegyekF.btnModositasClick(Sender: TObject);
 begin
-if not aF.van_joga('j9') then exit;
+if not aF.van_joga('j3') then exit;
 if mjegyekQ.IsEmpty then exit;
 try
  MermodF.fo(mjegyekQ.fields[0].AsInteger);
