@@ -69,7 +69,6 @@ begin
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TNezetF, NezetF);
-  Application.CreateForm(TPortF, PortF);
   Application.CreateForm(TMeresF, MeresF);
   Application.CreateForm(TPartnerekF, PartnerekF);
   Application.CreateForm(TTermekekF, TermekekF);

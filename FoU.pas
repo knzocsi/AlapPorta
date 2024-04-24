@@ -72,6 +72,12 @@ type
     port:integer;
     rtsp:string;
   end;
+
+  Soromporec=record
+    nyitva:boolean;
+    nyitas_idopont:TTime;
+    varakozas:Double;
+  end;
   TFoF = class(TForm)
     MainMenu1: TMainMenu;
     Listk1: TMenuItem;
@@ -291,6 +297,7 @@ type
     procedure jpgbetolt(kepnev1,kepnev2:string);
     procedure SOAPAllapottmrTimer(Sender: TObject);
     procedure Djak1Click(Sender: TObject);
+    procedure sorompo_kezeles(merleg,sorompo:Integer;nyit:boolean);
 
 
   private
@@ -354,6 +361,8 @@ var
   KameraTomb:array[1..maxmerleg,1..maxkamera] of Kamerarec;
   PLC_Lekerdezett_Valasz:array [0..15] of Boolean;
   ThPLC_Lekerdezes:PLC_Lekerdezes_Thread;
+  Sorompok:array[1..maxmerleg,1..2] of Soromporec;
+
 implementation
 
 uses
@@ -1352,6 +1361,8 @@ begin
         memlog.Lines.Insert(0,'RendszamLampa indul '+i.ToString);
 
       end;
+      Sorompok[i][1].nyitva:=False;
+      Sorompok[i][2].nyitva:=False;
     end;
    if Soap_aktiv then
    begin
@@ -2371,6 +2382,67 @@ begin
   ServerSocket.Active := True;
 end;
 
+procedure TFoF.sorompo_kezeles(merleg, sorompo: Integer; nyit: boolean);
+var hwQ: TFDQuery;
+    hwKap:TFDConnection;
+    PLC_IP:string;
+
+begin
+  hwQ:= TFDQuery.Create(nil);
+  hwKap :=TFDConnection.Create(nil);
+  hwKap.Params:=Af.Kapcs.Params;
+  hwKap.LoginPrompt:=false;
+  hwKap.Connected:=true;
+  hwQ.Connection:= hwKap;
+  with hwQ do
+    begin
+      close;
+      SQL.Text:= af.HardverQ.SQL.Text;
+      open;
+      if locate('Merleg;Eszkoznev',varArrayOf(['M'+merleg.ToString,'SOROMPO'+sorompo.ToString]),[] ) and (FieldbyName('Aktiv').AsInteger=1)  then
+      begin
+        if FieldbyName('Tipus').AsString='PLC' then
+        begin
+          PLC_IP:=FieldbyName('Port_v_IP_Cim').AsString;
+          if nyit then
+          begin
+            PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,True);
+            Sleep(100);
+            PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,False);
+            Sorompok[merleg,sorompo].nyitva:=True;
+            Sorompok[merleg,sorompo].nyitas_idopont:=Time;
+            Sorompok[merleg,sorompo].varakozas:=FieldbyName('Varakozas_ms').AsInteger/24/60/60/1000;
+            if felhnev='Programozó' then
+            begin
+              memlog.Lines.Insert(0,'Merleg: '+merleg.ToString+' nyit sorompo:'+sorompo.ToString);
+            end;
+          end
+          else
+          begin
+            PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,True);
+            Sleep(100);
+            PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,False);
+            Sorompok[merleg,sorompo].nyitva:=False;
+            if felhnev='Programozó' then
+            begin
+              memlog.Lines.Insert(0,'Merleg: '+merleg.ToString+' zar sorompo:'+sorompo.ToString);
+            end;
+          end;
+        end
+        else
+        if FieldbyName('Tipus').AsString='PLC485' then
+        begin
+          if nyit then PLC_COMF.ModBusIrBit(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('Bekapcs_Kimenet_szam').AsInteger,1)
+          else PLC_COMF.ModBusIrBit(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('Kikapcs_Kimenet_szam').AsInteger,1)
+        end;
+      end;
+      close;
+      free;
+    end;
+  hwKap.Connected:=False;
+  hwKap.Free;
+end;
+
 procedure TFoF.Sorompnyitinfrahiba1Click(Sender: TObject);
 var inif:Tinifile;
 begin
@@ -2576,6 +2648,11 @@ begin
       begin
         tomeg_szoveg:=tomeg_szoveg+mertertekek[i]+' kg   ';
         szamlalo_szoveg:=szamlalo_szoveg+merlegszamlalo[i].ToString+'  ';
+        if (Sorompok[i][1].nyitva) and (Time>Sorompok[i][1].nyitas_idopont+Sorompok[i][1].varakozas) and
+           (mertertekek[i].ToInteger<100)  then  sorompo_kezeles(i,1,False);
+
+        if (Sorompok[i][2].nyitva) and (Time>Sorompok[i][2].nyitas_idopont+Sorompok[i][2].varakozas) and
+           (mertertekek[i].ToInteger<100)  then  sorompo_kezeles(i,2,False);
       end;
       try
         tomeg:=strtoint(mertertekek[i]);
@@ -2678,7 +2755,7 @@ begin
     end;
   end
   else
-    if vezerles_tipus = 'PLC' then
+    //if vezerles_tipus = 'PLC' then
     begin
       if Regi_hardver_beallitas then PLC_Ir(Melyik, Mire)
       else
@@ -2703,12 +2780,8 @@ begin
               end;
           end;
         end;
-      end
-     else
-      if vezerles_tipus = 'IO' then
-      begin
-        IO_Ir(IOmodul_regiszter_iras1,Mire=1);
       end;
+
 
 
 end;
@@ -3160,6 +3233,10 @@ function TFoF.PLC_Ir_Coil(cim:integer; ertek: Boolean): boolean;
 begin
   mctPLC.Host := PLC_IP;
   mctPLC.WriteCoil(cim+1,Ertek);
+  if felhnev='Programozó' then
+  begin
+    memlog.Lines.Insert(0,'Cim: '+cim.ToString+' '+ertek.ToString);
+  end;
 end;
 
 function TFoF.PLC_Olvas(cim: integer): integer;
@@ -3392,10 +3469,19 @@ begin
                   kepnev1 := Fof.snapshot(IntToStr((thmerleg-1)*2));
                   kepnev2 := Fof.snapshot(IntToStr((thmerleg-1)*2+1));
                 end;
-                if not mentesvolt[thmerleg] then mentes;
-                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Piros then FoF.lampakapcs(1,Lampa_Zold);
-                Sleep(51);
-                if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=Lampa_Piros then FoF.lampakapcs(2,Lampa_Zold);
+                if not mentesvolt[thmerleg] then
+                begin
+                  mentes;
+                  //Sorompo nyitás
+                  FoF.sorompo_kezeles(thmerleg,1,True);
+                  Application.ProcessMessages;
+                  Sleep(1000);
+
+                  // a leengedõ lámpák zöldre váltanak
+                  if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Piros then FoF.lampakapcs(1,Lampa_Zold);
+                  Sleep(51);
+                  if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA2')=Lampa_Piros then FoF.lampakapcs(2,Lampa_Zold);
+                end;
               end;
             end
             else //a tömeg csökken

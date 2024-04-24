@@ -163,7 +163,7 @@ begin
     SQL.Clear;
     SQL.Add(' UPDATE forgalom SET ');
     SQL.Add(' soap_allapot=:soap_allapot, soap_code=:soap_code');
-    SQL.Add(' WHERE meres_id='+#39+IntToStr(StrToInt(merid)-30000000)+#39);
+    SQL.Add(' WHERE id='+#39+IntToStr(StrToInt(merid)-30000000)+#39);
     ParamByName('soap_allapot').AsString:=GenResFuncCode;
     ParamByName('soap_code').AsString:=SOAP_CODE;
     ExecSQL;
@@ -172,7 +172,7 @@ end;
 
 function TDMSoapF.SoapXmlKuld: Boolean;
 var fn,Vn,stcode,
-    tms,tmsj,rid:string;
+    tms,tmsj,rid,val:string;
     GenQuery: IXMLGenIfQueryRootType;
 
 
@@ -204,6 +204,27 @@ var fn,Vn,stcode,
      end
      else Result:='';
     end;
+
+   procedure hiba_mentese(uzenet:string);
+     var tf : TextFile;
+    begin
+     AssignFile(tf, ExtractFileDir(ExtractFilePath(application.exename))+'\SAP_hibak.txt');
+     //ShowMessage(ExtractFileDir(ExtractFilePath(application.exename))+'\hibak.txt');
+     if not FileExists(ExtractFileDir(ExtractFilePath(application.exename))+'\SAP_hibak.txt') then ReWrite(tf)
+     else Append(tf);
+     WriteLn(tf, DateTimeToStr(now)+':'+ uzenet);
+     //Writeln(tf,'*************************************************************');
+     CloseFile(tf);
+    end;
+
+    function entorles(rpk:string):string;
+     var x:string;
+     begin
+       x:=rpk;
+       while pos(#13#10, x) > 0 do
+       Delete(x, pos(#13#10, x), 2);
+       Result:=x;
+     end;
 begin
   fn:=soap_kuldve+intToStr(ForgQ_tread.FieldByName('id').AsInteger+30000000)+'.xml';
   vn:=soap_valasz+intToStr(ForgQ_tread.FieldByName('id').AsInteger+30000000)+'.xml';
@@ -243,7 +264,7 @@ XMLDoc.Encoding:='utf-8';}
         Brutto:=ForgQ_tread.FieldByName('tomeg').AsString;
         ForgalomIrany:=ForgQ_tread.FieldByName('irany').AsString;
         Datum:=ForgQ_tread.FieldByName('datum').AsString;
-        Ido:=ForgQ_tread.FieldByName('ido').AsString;
+        Ido:=FormatDateTime('hh:nn:ss',ForgQ_tread.FieldByName('ido').AsDateTime);
         if (soap_kepet_kuld) and (FileExists(ForgQ_tread.FieldByName('kepnev').AsString)) then
          begin
           Picture_Base64.Ext:='jpg';
@@ -261,11 +282,7 @@ XMLDoc.Encoding:='utf-8';}
   Xmlbe.Add(FormatXMLData(GenQuery.XML));
   Xmlbe.SaveToFile(fn);
   Xmlbe.Free;
-//  XMLD1.Active:=True;
-//  XMLD1.Version:='1.0';
-//  XMLD1.Encoding:='utf-8';
-//  XMLD1.LoadFromFile(fn);
-//  Xmld1.SaveToFile(fn);
+
   if soap_xml_teszt then//csak létrehozza az xmlt
    begin
      Result:=True;
@@ -273,31 +290,33 @@ XMLDoc.Encoding:='utf-8';}
    end;
   try
    rp:=NetHTTPRequest1.Post(soap_szapcim,fn);
+   //hiba_mentese(ForgQ_tread.FieldByName('id').AsString+': ' + rp.StatusCode.ToString);
   // soap_logba:= rp.StatusCode.ToString;
    //Synchronize;
    Result:=True;
   except
     on E:Exception do
     begin
-      MessageDlg('hiba: ' +
-        E.Message, mtWarning, [mbOK], 0);
-     //hiba_mentese({df.Q1meres_id.AsString}'}: ' + E.Message);
+     { MessageDlg('hiba: ' +
+        E.Message, mtWarning, [mbOK], 0);  }
+     //hiba_mentese(ForgQ_tread.FieldByName('id').AsString+': ' + E.Message);
      Result:=False;
     end;
   end;
-  stcode:='';
-     stcode:=(rp.StatusCode.ToString);
-     valasz:=TStringList.Create;
-     valasz.Add(FormatXMLData(rp.ContentAsString(TEncoding.UTF8)));
-     valasz.SaveToFile(vn,TEncoding.UTF8);
-     valasz.Free;
   if Result then
    begin
-   {  stcode:=(rp.StatusCode.ToString);
+     stcode:=rp.StatusCode.ToString;
+     //hiba_mentese(ForgQ_tread.FieldByName('id').AsString+': Result=True');
+     val:=entorles(rp.ContentAsString);
      valasz:=TStringList.Create;
-     valasz.Add(FormatXMLData(rp.ContentAsString(TEncoding.UTF8)));
+     try
+      valasz.Add(FormatXMLDAta(val));
+     except
+      valasz.Add(val);
+     end;
+    // valasz.Add(FormatXMLData(rp.ContentAsString(TEncoding.UTF8)));
      valasz.SaveToFile(vn,TEncoding.UTF8);
-     valasz.Free;}
+     valasz.Free;
      if stcode='200' then SoapValaszFeldolgozasa(vn);
    end;
 end;
@@ -323,11 +342,11 @@ begin
  Ping1(soap_ip,1,32,van,hiba);
  if van then
   begin
-   szoveg:='Szerver elérhetõ!';
+   szoveg:='SOAP elérhetõ!';
   end
  else
   begin
-   szoveg:='Szerver nem elérhetõ: '+hiba ;
+   szoveg:='SOAP nem elérhetõ: '+hiba ;
   end;
  st:=van;
  //if not st then hiba_mentese(szoveg);

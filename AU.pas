@@ -449,6 +449,8 @@ begin
   HWKapcs.Params:=Kapcs.Params;
   MentesKapcs.Params:=Kapcs.Params;
 
+  PortF:=TPortF.Create(Application);
+
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;

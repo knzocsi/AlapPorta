@@ -1,49 +1,56 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas',0,1,420,1,447,0,0,,{1,238,1}
-File_1=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,119,23,132,0,0,,
-File_2=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\SOURCE\XML\Xml.XMLIntf.pas',0,1,203,1,219,0,0,,
-File_3=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\ForgalomU.pas',0,1,22,31,9,0,0,,
-File_4=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_PingU.pas',0,1,48,5,59,0,0,,
-File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_valaszU.pas',0,1,1,1,1,0,0,,
-File_6=TSourceModule,'C:\Kompon\Comport\Source\CPort.pas',0,1,1954,1,1964,0,0,,
-File_7=TSourceModule,'N:\Delphi_10_4\Apro\Modbus_teszt\FoU.pas',0,1,53,73,63,0,0,,
-File_8=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\DmNavU.pas',0,1,331,79,940,0,0,,
-File_9=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\source\rtl\common\System.Classes.pas',0,1,15608,1,15625,0,0,,
-File_10=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\Aeljar3_0U.pas',0,1,1,18,11,0,0,,{1
-File_11=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\api3_0_pas\invoiceData.pas',0,1,2965,41,15,0,0,,
+File_0=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\IdModbusClient.pas',0,1,708,1,713,0,0,,
+File_1=TSourceModule,'N:\Delphi_10_4\D10munkak\MERLEG_SAP\FoU.pas',0,1,75,19,94,0,0,,
+File_2=TSourceModule,'N:\Delphi_10_4\D10munkak\MERLEG_SAP\DmU.pas',0,1,411,22,433,0,0,,
+File_3=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,119,23,132,0,0,,
+File_4=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\SOURCE\XML\Xml.XMLIntf.pas',0,1,203,1,219,0,0,,
+File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\ForgalomU.pas',0,1,22,31,9,0,0,,
+File_6=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_PingU.pas',0,1,48,5,59,0,0,,
+File_7=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_valaszU.pas',0,1,1,1,1,0,0,,
+File_8=TSourceModule,'C:\Kompon\Comport\Source\CPort.pas',0,1,1954,1,1964,0,0,,
+File_9=TSourceModule,'N:\Delphi_10_4\Apro\Modbus_teszt\FoU.pas',0,1,53,73,63,0,0,,
+File_10=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\DmNavU.pas',0,1,331,79,940,0,0,,
+File_11=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\source\rtl\common\System.Classes.pas',0,1,15608,1,15625,0,0,,
+File_12=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\Aeljar3_0U.pas',0,1,1,18,11,0,0,,{1
+File_13=TSourceModule,'N:\Delphi_10_4\Szamlazo\NAV\api3_0_pas\invoiceData.pas',0,1,2965,41,15,0,0,,
 
 [Modules]
 Module0=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
-Module2=N:\Delphi_10_4\Merleges\Alap\AU.pas
-Module3=N:\Delphi_10_4\Merleges\Alap\portU.pas
-Module4=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
-Module5=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-Module6=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
-Module7=N:\Delphi_10_4\Merleges\Alap\my_sqlU.pas
-Module8=N:\Delphi_10_4\Merleges\Alap\DijakU.pas
-Module9=N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas
-Module10=N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas
-Module11=N:\Delphi_10_4\D10munkak\MERLEG_SAP\DmU.pas
-Module12=N:\Delphi_10_4\D10munkak\MERLEG_SAP\FoU.pas
-Module13=N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas
-Module14=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
-Count=15
+Module1=N:\Delphi_10_4\Merleges\Alap\AU.pas
+Module2=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module3=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
+Module4=N:\Delphi_10_4\Merleges\Alap\portU.pas
+Module5=N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas
+Module6=N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas
+Module7=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+Module8=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
+Module9=N:\Delphi_10_4\Merleges\Alap\my_sqlU.pas
+Module10=N:\Delphi_10_4\Merleges\Alap\DijakU.pas
+Module11=N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas
+Module12=N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas
+Module13=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
+Count=14
 EditWindowCount=1
 
 [N:\Delphi_10_4\Merleges\Alap\FoU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas]
+[N:\Delphi_10_4\Merleges\Alap\AU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\AU.pas]
+[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\portU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
+[N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
@@ -64,20 +71,11 @@ ModuleType=TSourceModule
 [N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\D10munkak\MERLEG_SAP\DmU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\D10munkak\MERLEG_SAP\FoU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas]
-ModuleType=TSourceModule
-
 [N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=15
+ViewCount=14
 CurrentEditView=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 View0=0
 View1=1
@@ -93,7 +91,6 @@ View10=10
 View11=11
 View12=12
 View13=13
-View14=14
 PercentageSizes=1
 Create=1
 Visible=1
@@ -126,12 +123,12 @@ BottomMiddelPanelData=0000080001000100000010000000477261706844726177696E67566965
 [View0]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-CursorX=25
-CursorY=2326
-TopLine=2318
+CursorX=47
+CursorY=3477
+TopLine=3511
 LeftCol=1
 Elisions=
-Bookmarks={0,3122,1}{1,2355,7}{2,988,1}{3,3340,1}{4,3436,1}{5,57,12}{6,2775,1}{7,2111,1}{8,338,1}{9,1626,1}
+Bookmarks={0,3195,1}{1,2443,14}{2,2653,1}{3,3467,1}{4,3574,67}{5,3239,7}{6,2848,1}{7,2122,1}{8,345,1}{9,1637,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 
 [View1]
@@ -149,12 +146,12 @@ EditViewName=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\portU.pas
 CursorX=1
-CursorY=1192
-TopLine=1183
+CursorY=1191
+TopLine=1170
 LeftCol=1
 Elisions=
 Bookmarks={1,1173,1}{2,944,3}{3,608,1}{4,668,1}{5,159,1}{6,679,1}
-EditViewName=Borland.FormDesignerView
+EditViewName=N:\Delphi_10_4\Merleges\Alap\portU.pas
 
 [View3]
 CustomEditViewType=TEditView
@@ -172,35 +169,24 @@ CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
 CursorX=1
 CursorY=140
-TopLine=124
+TopLine=123
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=Borland.FormDesignerView
+EditViewName=N:\Delphi_10_4\Merleges\Alap\Hardver_beallU.pas
 
 [View5]
 CustomEditViewType=TEditView
-Module=N:\Delphi_10_4\D10munkak\MERLEG_SAP\FoU.pas
-CursorX=19
-CursorY=94
-TopLine=75
+Module=N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas
+CursorX=82
+CursorY=310
+TopLine=252
 LeftCol=1
 Elisions=
-Bookmarks=
-EditViewName=N:\Delphi_10_4\D10munkak\MERLEG_SAP\FoU.pas
+Bookmarks={1,259,1}
+EditViewName=N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas
 
 [View6]
-CustomEditViewType=TEditView
-Module=N:\Delphi_10_4\D10munkak\MERLEG_SAP\DmU.pas
-CursorX=14
-CursorY=127
-TopLine=368
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=N:\Delphi_10_4\D10munkak\MERLEG_SAP\DmU.pas
-
-[View7]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas
 CursorX=38
@@ -211,7 +197,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\SOAP\Soap_keresU.pas
 
-[View8]
+[View7]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\AlapbemodU.pas
 CursorX=1
@@ -222,7 +208,7 @@ Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View9]
+[View8]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas
 CursorX=1
@@ -233,7 +219,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\szoftver_alapU.pas
 
-[View10]
+[View9]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\DijakU.pas
 CursorX=14
@@ -244,7 +230,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\DijakU.pas
 
-[View11]
+[View10]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
 CursorX=22
@@ -255,7 +241,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\PLC_COMU.pas
 
-[View12]
+[View11]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 CursorX=50
@@ -266,7 +252,7 @@ Elisions=
 Bookmarks={1,1235,11}{2,1843,13}{3,1819,6}{4,828,10}{5,652,1}{6,594,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 
-[View13]
+[View12]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\my_sqlU.pas
 CursorX=1
@@ -277,7 +263,7 @@ Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View14]
+[View13]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\SQL_text.pas
 CursorX=69
@@ -453,16 +439,11 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=1589
 ClientHeight=2712
-TBDockHeight=2481
+TBDockHeight=8260
 LRDockWidth=1589
 Dockable=1
 StayOnTop=0
-SplitPos=140
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Port,OnTimer
-ExpandedItems=LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,Touch=0,Anchors=0,BevelEdges=0,Constraints=0,Font=1,Colors=0,Buffer=0,Events=0,FlowControl=0,Parity=1,StoredProps=0,Timeouts=0,ImageMargins=0,Connection=0,FetchOptions=0,FormatOptions=0,ResourceOptions=0,ScriptOptions=0,Font.Style=1,BorderIcons=0,CustomTitleBar=0,GlassFrame=0,HorzScrollBar=0,Padding=0,VertScrollBar=0,DataSource=0
+SplitPos=93
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -593,12 +574,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=625
-Height=0
+Width=667
+Height=7990
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=625
-ClientHeight=0
+ClientWidth=667
+ClientHeight=7990
 TBDockHeight=2317
 LRDockWidth=2823
 Dockable=1
@@ -612,12 +593,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=625
-Height=0
+Width=667
+Height=7990
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=625
-ClientHeight=0
+ClientWidth=667
+ClientHeight=7990
 TBDockHeight=3212
 LRDockWidth=2823
 Dockable=1
@@ -919,7 +900,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=1589
 ClientHeight=3471
-TBDockHeight=3442
+TBDockHeight=8260
 LRDockWidth=1589
 Dockable=1
 StayOnTop=0
@@ -943,7 +924,7 @@ MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
 ClientHeight=1673
-TBDockHeight=1433
+TBDockHeight=8260
 LRDockWidth=2000
 Dockable=1
 StayOnTop=0
