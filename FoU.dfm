@@ -121,6 +121,11 @@ object FoF: TFoF
               Visible = True
             end
             item
+              Expanded = False
+              FieldName = 'Erkido'
+              Visible = True
+            end
+            item
               Color = clLime
               Expanded = False
               FieldName = 'Netto'

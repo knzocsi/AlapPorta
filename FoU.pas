@@ -1727,7 +1727,6 @@ end;
 
 procedure TFoF.Kilps1Click(Sender: TObject);
 begin
-
   close;
 end;
 
@@ -2704,7 +2703,7 @@ begin
           if (FieldByName('Felirat_szam').AsInteger>0)    then
             begin
               if FieldbyName('Tipus').AsString='PLC485' then
-                 TJvLED(FindComponent('JvLED'+IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status:=
+                 TJvLED(Fof.FindComponent('JvLED'+IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status:=
                  igaz(PLC_COMF.Lekerdezett_Valasz,(FieldbyName('Bekapcs_Kimenet_szam').AsInteger));
 
               if FieldbyName('Tipus').AsString='PLC' then
@@ -3579,7 +3578,9 @@ var kilep:boolean;
         Sleep(100);
         Application.ProcessMessages;
         sza := sza + 1;
-      until (sza > 10) or (SocketTomb[thmerleg,thkamera].rendszam <> '');
+      until (sza > 40) or (SocketTomb[thmerleg,thkamera].rendszam <> '');
+      // a Sigmoidban 5s-nek kell lennie a lezárásnak
+
       szoveg:=SocketTomb[thmerleg,thkamera].rendszam;
       Result:=false;
       //Itt van a kiértékelõ rész
@@ -3597,7 +3598,7 @@ var kilep:boolean;
           RendszamTomb[thmerleg,thkamera].kep:=SocketTomb[thmerleg,thkamera].kep;
         end
         else
-        //Ha már volt helyesnek tûnõ rendszám letárolva és nem egyezik meg akkor kelllene megvizsálni esetleg
+        //Ha már volt helyesnek tûnõ rendszám letárolva és nem egyezik meg akkor kellene megvizsálni esetleg
         //de most beírom az újabbat
           if (RendszamTomb[thmerleg,thkamera].rendszam[1]<>'_')
              and (SocketTomb[thmerleg,thkamera].rendszam<>'') and ( SocketTomb[thmerleg,thkamera].rendszam[1]<>'_')
