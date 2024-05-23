@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=25;
+      maxSQL=26;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -926,6 +926,10 @@ interface
      'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `betarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
      'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `kitarolasi_dij`  DECIMAL(12,6) NOT NULL DEFAULT 0 ;'+#13#10 +
      'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `szallitasi_dij` DECIMAL(12,6) NOT NULL DEFAULT 0 ;'
+     ,// automata mjegy nyomtatás
+      'ALTER TABLE `forgalom`	ADD COLUMN IF NOT EXISTS `aut_nyom`  TINYINT(1) NULL DEFAULT 0 ;'  +#13#10+
+      'ALTER TABLE `parositott`	ADD COLUMN IF NOT EXISTS `aut_nyom`  TINYINT(1) NULL DEFAULT 0 ;'  +#13#10+
+      'ALTER TABLE `forgalom`	MODIFY COLUMN  `Parositott`  INT(11) NULL DEFAULT 0 ;' // +#13#10+
     );
 
 

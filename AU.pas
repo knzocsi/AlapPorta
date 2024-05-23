@@ -57,6 +57,58 @@ type
     kepnev:string;
     id:integer;
   end;
+
+  Tautomata_mjegy_rec=class(TObject)
+     Fs_Id : Integer;
+     Fs_Mjegysorszam: string;
+     Fs_Erkdatum: TDate;
+     Fs_Erkido: TTime;
+     Fs_Tavdatum: TDate;
+     Fs_Tavido: TTime;
+     Fs_Rendszam: string;
+     Fs_Betomeg:Integer;
+     Fs_Kitomeg:Integer;
+     Fs_Netto:Integer;
+     Fs_Parositott:Boolean;
+     Fs_Irany: string;
+     Fs_Tara:Integer;
+  public
+     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
+     procedure mjegy_rec_ures;
+  published
+   property Id: integer read Fs_Id
+        write Fs_Id;
+    property Mjegysorszam: string read Fs_Mjegysorszam
+        write Fs_Mjegysorszam;
+    property Erkdatum: TDate read Fs_Erkdatum
+        write Fs_Erkdatum;
+    property Erkido: TTime read Fs_Erkido
+        write Fs_Erkido;
+    property Tavdatum: TDate read Fs_Tavdatum
+        write Fs_Tavdatum;
+    property Tavido: TTime read Fs_Tavido
+        write Fs_Tavido;
+    property Rendszam: string read Fs_Rendszam
+        write Fs_Rendszam;
+    property Betomeg: integer read Fs_Betomeg
+        write Fs_Betomeg;
+    property Kitomeg: integer read Fs_Kitomeg
+        write Fs_Kitomeg;
+    property Netto: integer read Fs_Netto
+        write Fs_Netto;
+    property Parositott: Boolean read Fs_Parositott
+        write Fs_Parositott;
+    property Irany: string read Fs_Irany
+        write Fs_Irany;
+    property Tara: integer read Fs_Tara
+        write Fs_Tara;
+  end;
+
+  Auto_mjegy_Thread  = class(TThread)
+  protected
+    procedure Execute; override;
+  end;
+
   TAF = class(TDataModule)
     ForgalomDS: TDataSource;
     ForgalomQ: TFDQuery;
@@ -166,6 +218,11 @@ type
     HardverDS: TDataSource;
     HWKapcs: TFDConnection;
     MentesKapcs: TFDConnection;
+    Auto_mjegy_kapcs: TFDConnection;
+    Auto_mjegy_Trans: TFDTransaction;
+    Auto_mjegyQ: TFDQuery;
+    Auto_mjegyINUPQ: TFDQuery;
+    frxPDFTeszthez: TfrxPDFExport;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -237,7 +294,8 @@ type
                           tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
     procedure nyitbe_torles(id,torles:integer);
     procedure Regiek_torlese;
-
+    procedure auto_mjegy_tread_run;
+    procedure auto_teszt;
 
     { Public declarations }
   end;
@@ -288,6 +346,12 @@ var
   Masolas_utvonala,Kepek_Mappa,Utolso_futtatas:string;
   //ha true elindul a tead
   Soap_aktiv: Boolean=False;
+  Automata_irany_meghatarozas:boolean;
+  Automata_parositas:boolean;
+  Automata_merlegjegy, Automata_merlegjegy_parositaskor:Boolean;
+  Automata_mjegy_Rec : Tautomata_mjegy_rec;
+
+  Automata_mjegy_thread: Auto_mjegy_Thread;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -448,6 +512,11 @@ begin
   ForceDirectories(ExtractFilePath(application.exename)+'\LOG');
   HWKapcs.Params:=Kapcs.Params;
   MentesKapcs.Params:=Kapcs.Params;
+ // Auto_mjegy_kapcs.Params.Clear;
+ // Auto_mjegy_kapcs.Params:=Kapcs.Params;
+
+  if Automata_parositas then Forgalom_Timer.Enabled:=True;
+ // if Automata_merlegjegy or Automata_merlegjegy_parositaskor then auto_mjegy_tread_run;
 
   PortF:=TPortF.Create(Application);
 
@@ -483,14 +552,14 @@ procedure TAF.Forgalom_TimerTimer(Sender: TObject);
 var id,id1:integer;
   function lekerdez(rendszam,irany:string;datum:TDate):Integer;
   begin
-    if irany='B' then irany:='K'
-    else if irany='K' then irany:='B';
+    if irany='BE' then irany:='KI'
+    else if irany='KI' then irany:='BE';
     with ForgTimQ do
     begin
       close;
       SQL.Clear;
       SQL.Add('SELECT * FROM forgalom ');
-      SQL.Add('WHERE (Rendszam<>"-") and (Parositott=0) and (Rendszam=:rendszam) and (Irany=:irany) and (Datum>=:datum) ');
+      SQL.Add('WHERE (Rendszam<>"******") and (Parositott=0) and (Rendszam=:rendszam) and (Irany=:irany) and (Datum>=:datum) ');
       ParamByName('rendszam').AsString:=rendszam;
       ParamByName('irany').AsString:=irany;
       ParamByName('datum').AsDate:=datum;
@@ -510,7 +579,7 @@ begin
     Last;
     while  (FieldByName('Parositott').AsInteger=0) and (not bof) do
     begin
-      if FieldByName('Rendszam').AsString<>'-' then
+      if FieldByName('Rendszam').AsString<>'******' then
       begin
         id:=lekerdez(FieldByName('Rendszam').AsString,FieldByName('Irany').AsString,FieldByName('datum').AsDateTime-visszanap);
         if id<>-1 then
@@ -1027,7 +1096,7 @@ begin
   inif.WriteBool('ALAP','Hivoszamhasznalat',Hivoszamhasznalat);
   Utolso_futtatas:=cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást','ALAP','Utolso_futtatas','String','');
 
-  Soap_aktiv:=cfg_kezel('SOAP beküldés aktiv e','SOAP','Soap_aktiv','Boolean', true);
+  Soap_aktiv:=cfg_kezel('SOAP beküldés aktiv e','SOAP','Soap_aktiv','Boolean', False);
   soap_kepet_kuld:=cfg_kezel('SOAP rendszerbe küldjön e képet','SOAP','Soap_kep_kuldes','Boolean', False);
   soap_xml_teszt:=cfg_kezel('SOAP teszt xmlt hozza csak létre, de nem küldi be','SOAP','Soap_xml_teszt','Boolean', False);
   soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String', 'merlegtestelek');
@@ -1039,6 +1108,12 @@ begin
   soap_valaszadasi_idokorlat:=cfg_kezel('SOAP szerver válaszadási idõkorlát(ms)','SOAP','Soap_szerver_idokorlat','Integer', 300000);
   soap_kuldes_gyakorisaga:=cfg_kezel('SOAP küldés gyakorisága, ennyi sleepet teszek a szálba(ms)','SOAP','Soap_kuldes_gyak','Integer', 5000);
 
+  Automata_irany_meghatarozas:=cfg_kezel('Meghatározza az irányt a kamerából és abból, hogy bent van e a jármû','ALAP','Automata_irany_meghatarozas','Boolean', False);
+  Automata_parositas:= cfg_kezel('A forgalom táblában lévõ adatokat párosítja','ALAP','Automata_parositas','Boolean', False);
+
+  Automata_merlegjegy:= cfg_kezel('Minden forgalomba került mérésnél nyomtat mérlegjegyet','ALAP','Automata_merlegjegy','Boolean', False);
+  Automata_merlegjegy_parositaskor:= cfg_kezel('Akkor nyomtat mérlegjegyet ha sikerült párosítani','ALAP','Automata_merlegjegy_parositaskor','Boolean', False);
+  //Automata_merlegjegy, Automata_merlegjegy_parositaskor
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1335,6 +1410,93 @@ except
  //Screen.Cursor:=crDefault;
 end;
  autotorzs.Enabled:=true;
+end;
+
+procedure TAF.auto_mjegy_tread_run;
+begin
+ inherited;
+ Automata_mjegy_thread := auto_mjegy_Thread.Create(False);
+end;
+
+procedure TAF.auto_teszt;
+begin
+ with  Af.Auto_mjegy_kapcs do
+  begin
+    Close;
+    with Params do
+    begin
+      clear;
+      Add('DriverID=MySQL');
+      Add('Server='+szerver);
+      Add('Port='+port);
+      Add('Database='+adatbazis);
+      Add('User_Name='+user);
+      Add('Password='+passwd);
+      Add('CharacterSet= Utf8mb4');
+      open;
+    end;
+  end;
+  if Af.Auto_mjegy_kapcs.Connected then
+   begin
+     if Automata_merlegjegy then
+      begin
+        With AF.Auto_mjegyQ do
+         begin
+           Close;
+           SQL.Clear;
+           SQL.Add('SELECT id,datum As erkdatum,ido As erkido, 0 AS tavdatum,0 AS tavido,');
+           SQL.Add('rendszam,IF(irany=''BE'', tomeg,0) betomeg,IF(irany=''KI'', tomeg,0) kitomeg,');
+           SQL.Add('tomeg AS netto,irany,'''' AS Mjegysorszam');
+           SQL.Add(' FROM forgalom');
+           SQL.Add(' WHERE aut_nyom=0 ');
+           Open;
+           first;
+           DisableControls;
+           while not Eof do
+           begin
+            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
+            Sleep(200);
+            AF.Auto_mjegyINUPQ.close;
+            AF.Auto_mjegyINUPQ.SQL.Clear;
+            AF.Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+fields[0].AsString);
+            AF.Auto_mjegyINUPQ.ExecSQL;
+            Next;
+           end;
+           EnableControls;
+           Close
+         end;
+      end;
+     //if Automata_merlegjegy_parositaskor then
+     // begin
+        With AF.Auto_mjegyQ do
+         begin
+           Close;
+           SQL.Clear;
+           SQL.Add('SELECT id,erkdatum,erkido,tavdatum, tavido,');
+           SQL.Add(' rendszam, betomeg,kitomeg,');
+           SQL.Add(' netto,IF(betomeg>kitomeg,''BE'',''KI'') AS irany,Mjegysorszam');
+           SQL.Add(' FROM parositott');
+           SQL.Add(' WHERE aut_nyom=0');
+           //ParamByName('a').AsBoolean:=False;
+           Open;
+           first;
+           DisableControls;
+           while not Eof do
+           begin
+            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
+            Sleep(200);
+            AF.Auto_mjegyINUPQ.close;
+            AF.Auto_mjegyINUPQ.SQL.Clear;
+            AF.Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+fields[0].AsString);
+            AF.Auto_mjegyINUPQ.ExecSQL;
+            Next;
+           end;
+           EnableControls;
+           Close
+         end;
+      //end;
+   end;
+   Af.Auto_mjegy_kapcs.Close;
 end;
 
 function TAF.bizszam(length: integer; pad: char;kt,etag:string;tulid:integer): string;
@@ -2050,6 +2212,202 @@ end;
 function TAF.van_joga(jogszam: string): Boolean;
 begin
   Result:=felhasznalok_jogai.Locate('f_id;jszam;jog',varArrayOf([f_ide,jogszam,True]),[]);
+end;
+
+{ Tautomata_mjegy_rec }
+
+procedure Tautomata_mjegy_rec.mjegy_rec_betoltese_nyomtatasa(parositva:Boolean);
+var etagja,mappaja:String;
+    frxAuto_mjegy:TfrxReport;
+
+ procedure merlegjegy_tipus_betoltese_automata;
+  var Stream: TResourceStream;
+  begin
+    frxAuto_mjegy := TfrxReport.Create(Application);
+    if Parositva then Stream := TResourceStream.Create(HInstance, 'umwelt_paros', RT_RCDATA)
+    else Stream := TResourceStream.Create(HInstance, 'umwelt', RT_RCDATA);
+    frxAuto_mjegy.LoadFromStream(Stream);
+    Stream.Free
+  end;
+
+  procedure nyomt_volt;
+   begin
+     AF.Auto_mjegyINUPQ.close;
+     AF.Auto_mjegyINUPQ.SQL.Clear;
+     if Parositva then
+      AF.Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString)
+     else AF.Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString);
+     AF.Auto_mjegyINUPQ.ExecSQL;
+   end;
+begin
+
+ if Automata_mjegy_Rec=nil then Automata_mjegy_Rec := Tautomata_mjegy_rec.Create
+ else mjegy_rec_ures;
+ try
+   if Parositva then etagja:='P' else etagja:='F';
+    try
+     merlegjegy_tipus_betoltese_automata;
+    finally
+     Automata_mjegy_Rec.Id := Af.Auto_mjegyQ.FieldByName('id').AsInteger;
+     Automata_mjegy_Rec.Mjegysorszam:=etagja + Af.nullak(Af.Auto_mjegyQ.FieldByName('id').AsInteger,7) ;
+     Automata_mjegy_Rec.Erkdatum:=Af.Auto_mjegyQ.FieldByName('Erkdatum').AsDateTime;
+     Automata_mjegy_Rec.Erkido:=Af.Auto_mjegyQ.FieldByName('Erkido').AsDateTime;
+     Automata_mjegy_Rec.Tavdatum:=Af.Auto_mjegyQ.FieldByName('Tavdatum').AsDateTime;
+     Automata_mjegy_Rec.Tavido:=Af.Auto_mjegyQ.FieldByName('Tavido').AsDateTime;
+     Automata_mjegy_Rec.Rendszam:=Af.Auto_mjegyQ.FieldByName('rendszam').AsString;
+     Automata_mjegy_Rec.Betomeg:=Af.Auto_mjegyQ.FieldByName('betomeg').AsInteger;
+     Automata_mjegy_Rec.Kitomeg:=Af.Auto_mjegyQ.FieldByName('kitomeg').AsInteger;
+
+      if Automata_mjegy_Rec.Betomeg>Automata_mjegy_Rec.Kitomeg then
+       Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.kitomeg
+      else Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.Betomeg;
+
+      Automata_mjegy_Rec.Netto:=Af.Auto_mjegyQ.FieldByName('Netto').AsInteger;
+      Automata_mjegy_Rec.Parositott:=Parositva;
+      Automata_mjegy_Rec.Irany:=Af.Auto_mjegyQ.FieldByName('irany').AsString;
+    end;
+ finally
+  with frxAuto_mjegy do
+   begin
+     if TfrxMemoView(FindObject('membizszam'))<>nil
+     then TfrxMemoView(FindObject('membizszam')).Text:=Automata_mjegy_Rec.Mjegysorszam;
+     if TfrxMemoView(FindObject('memelsoido'))<>nil
+     then TfrxMemoView(FindObject('memelsoido')).Text:=DateToStr(Automata_mjegy_Rec.Erkdatum)+ ' '+ TimeToStr(Automata_mjegy_Rec.Erkido);
+     if TfrxMemoView(FindObject('memmasodikido'))<>nil
+     then TfrxMemoView(FindObject('memmasodikido')).Text:=DateToStr(Automata_mjegy_Rec.Tavdatum)+ ' '+ TimeToStr(Automata_mjegy_Rec.Tavido);
+     if TfrxMemoView(FindObject('memrendszamok'))<>nil
+     then TfrxMemoView(FindObject('memrendszamok')).Text:=Automata_mjegy_Rec.Rendszam;
+     if TfrxMemoView(FindObject('memirany'))<>nil
+     then TfrxMemoView(FindObject('memirany')).Text:=Automata_mjegy_Rec.Irany;
+     if TfrxMemoView(FindObject('membrutto'))<>nil
+     then TfrxMemoView(FindObject('membrutto')).Text:=Automata_mjegy_Rec.Betomeg.ToString;
+     if TfrxMemoView(FindObject('memtara'))<>nil
+     then TfrxMemoView(FindObject('memtara')).Text:=Automata_mjegy_Rec.Tara.ToString;
+     if TfrxMemoView(FindObject('memnetto'))<>nil
+     then TfrxMemoView(FindObject('memnetto')).Text:=Automata_mjegy_Rec.Netto.ToString;
+     PrintOptions.Copies:=1;
+     PrepareReport();
+     if UpperCase(ParamStr(1)) = '/PDFTESZT' then
+      begin
+        mappaja:=ExtractFilePath(Application.ExeName)+'AMJ_PDF\'+etagja+'\';
+        ForceDirectories(mappaja);
+        Af.frxPDFTeszthez.DefaultPath:=mappaja;
+        Af.frxPDFTeszthez.FileName:=Automata_mjegy_Rec.Mjegysorszam+'.pdf';
+        Export(Af.frxPDFTeszthez);
+      end
+     else Print;
+     Free
+   end;
+  nyomt_volt
+ end;
+end;
+
+procedure Tautomata_mjegy_rec.mjegy_rec_ures;
+begin
+with Automata_mjegy_Rec do
+ begin
+  Id:=0;
+  Mjegysorszam:='';
+  Erkdatum:=0;
+  Erkido:=0;
+  Tavdatum:=0;
+  Tavido:=0;
+  Rendszam:='';
+  Betomeg:=0;
+  Kitomeg:=0;
+  Netto:=0;
+  Parositott:=False;
+  Irany:='';
+  Tara:=0;
+ end;
+end;
+
+{ Auto_mjegy_Thread }
+
+procedure Auto_mjegy_Thread.Execute;
+begin
+  inherited;
+ repeat
+  with  Af.Auto_mjegy_kapcs do
+  begin
+    Close;
+    with Params do
+    begin
+      clear;
+      Add('DriverID=MySQL');
+      Add('Server='+szerver);
+      Add('Port='+port);
+      Add('Database='+adatbazis);
+      Add('User_Name='+user);
+      Add('Password='+passwd);
+      Add('CharacterSet= Utf8mb4');
+      open;
+    end;
+  end;
+  if Af.Auto_mjegy_kapcs.Connected then
+   begin
+    try
+     if Automata_merlegjegy then
+      begin
+        With AF.Auto_mjegyQ do
+         begin
+           Close;
+           SQL.Clear;
+           SQL.Add('SELECT id,datum As erkdatum,ido As erkido, ''1899.01.01'' AS tavdatum,''00:00:00'' AS tavido,');
+           SQL.Add('rendszam,tomeg AS betomeg,0 AS kitomeg,');
+           SQL.Add('0 AS netto,irany');
+           SQL.Add(' FROM forgalom');
+           SQL.Add(' WHERE aut_nyom=0 ');
+           Open;
+           first;
+           DisableControls;
+           while not Eof do
+           begin
+            try
+              Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
+            finally
+              Sleep(200);
+              Next;
+            end;
+           end;
+           EnableControls;
+           Close
+         end;
+      end;
+    finally
+     if Automata_merlegjegy_parositaskor then
+      begin
+        With AF.Auto_mjegyQ do
+         begin
+           Close;
+           SQL.Clear;
+           SQL.Add('SELECT id,erkdatum,erkido,tavdatum, tavido,');
+           SQL.Add('rendszam, betomeg,kitomeg,');
+           SQL.Add('netto,IF(betomeg>kitomeg,''BE'',''KI'') AS irany');
+           SQL.Add(' FROM parositott');
+           SQL.Add(' WHERE aut_nyom=0 ');
+           Open;
+           first;
+           DisableControls;
+           while not Eof do
+           begin
+            try
+             Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
+            finally
+             Sleep(200);
+             Next;
+            end;
+
+           end;
+           EnableControls;
+           Close
+         end;
+      end;
+    end;
+   end;
+   Af.Auto_mjegy_kapcs.Close;
+   Application.ProcessMessages;
+ until programvege ;
 end;
 
 end.

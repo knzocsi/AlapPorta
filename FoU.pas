@@ -65,6 +65,8 @@ type
     fut:boolean;
     van_kamera:boolean;
     rtsp:string;
+    Ido:Ttime;
+    irany:integer;
   end;
 
   Kamerarec=record
@@ -362,6 +364,7 @@ var
   PLC_Lekerdezett_Valasz:array [0..15] of Boolean;
   ThPLC_Lekerdezes:PLC_Lekerdezes_Thread;
   Sorompok:array[1..maxmerleg,1..2] of Soromporec;
+  iranyok:array[1..maxmerleg] of string[2];
 
 implementation
 
@@ -1136,6 +1139,7 @@ var
 
 begin
   onActivate := nil;
+ // AF.auto_teszt;
   if not Regi_hardver_beallitas then af.HardverQ.Open
   else pnlJobbAlso.Visible:=true;
   meresirany:='-';
@@ -1353,6 +1357,7 @@ begin
       rendszamvolt[i]:=False;
       mentesvolt[i]:=False;
       maxtomeg[i]:=0;
+      iranyok[i]:='-';
       if aktiv_merlegek[i]<>0 then
       begin
         ThRendszamLampa[i]:=Rendszam_lampa_thread.Create(True);
@@ -1378,6 +1383,7 @@ begin
       DMSoapF.SoapThreadRun
     end;
    end;
+  if Automata_merlegjegy or Automata_merlegjegy_parositaskor then AF.auto_mjegy_tread_run;
 
   Fof.SetFocus;
 end;
@@ -2181,8 +2187,10 @@ end;
 procedure TFoF.ServerSocketClientRead(Sender: TObject; Socket: TCustomWinSocket);
 var
   soc,csat: string;
-  merleg,kamera:integer;
+  merleg,kamera,irany:integer;
 begin
+  csat:='';
+  irany:=0;
   soc := Socket.ReceiveText;
   aF.soclog(soc);
   if (Pos(';', soc) <> 0) and (soc[Length(soc)] = '#') then
@@ -2190,10 +2198,21 @@ begin
     StatusBar1.Panels[1].Text := soc;
     socketrendszam := copy(soc, 1, Pos(';', soc) - 1);
     Delete(soc,1,Pos(';', soc));
+    //Ha számmal kezdõdik, akkor csatorna beírása
     if (soc<>'' ) and (soc[1] in ['0'..'9']) then
     begin
       csat := copy(soc, 1, Pos(';', soc) - 1);
       Delete(soc,1,Pos(';', soc));
+      //Ha továbbra is számmal kezdõdik, akkor irány is van
+      if (soc<>'' ) and (soc[1] in ['0'..'9']) then
+      begin
+        try
+          irany:=StrToInt( Copy(soc, 1, Pos(';', soc) - 1));
+        except
+          irany:=0;
+        end;
+        Delete(soc,1,Pos(';', soc));
+      end;
     end
     else csat:='';
 
@@ -2227,6 +2246,7 @@ begin
     begin
       SocketTomb[merleg,kamera].rendszam:=socketrendszam;
       SocketTomb[merleg,kamera].kep:=socketkep;
+      SocketTomb[merleg,kamera].irany:=irany;
     end;
 
 
@@ -3371,7 +3391,18 @@ var i,tomeg:integer;
       rendszam1:=Rendszamtomb[thmerleg,1].rendszam;
       rendszam2:=Rendszamtomb[thmerleg,2].rendszam;
       kepnev1:=Rendszamtomb[thmerleg,1].kep;
-      kepnev2:=Rendszamtomb[thmerleg,2].kep;;
+      kepnev2:=Rendszamtomb[thmerleg,2].kep;
+      if (iranyok[thmerleg]='-')  and (Automata_irany_meghatarozas) then
+      begin
+        //Hosszú teherautók esetén
+        if maxtomeg[thmerleg]>10000 then
+        begin
+          //ha az elsõ kamera ismeri fel elõbb
+          if Rendszamtomb[thmerleg,1].Ido<Rendszamtomb[thmerleg,2].Ido then   iranyok[thmerleg]:='BE'
+          else iranyok[thmerleg]:='KI';
+        end
+        //kis jármûnél elvileg a hátsó rendszámot látja meg elõbb
+      end;
     end;
     af.MentesKapcs.Connected:=false;
     af.MentesKapcs.Connected :=true;
@@ -3404,13 +3435,16 @@ var i,tomeg:integer;
       ParamByName('soap_merleg_azonosito').AsInteger := thmerleg; //ezt küldjük a SOAP rendszerbe
       //showmessage(SQL.Text);
       ExecSQL;
+
     end;
+
     inup.Free;
     if rendszamleker then
       for i := 1 to 2 do
         if  (RendszamTomb[thmerleg,i].fut) then ThRendszam_keres[thmerleg,i].Terminate;
 
     maxtomeg[thmerleg]:=0;
+    iranyok[thmerleg]:='-';
     mentesvolt[thmerleg]:=true;
   end;
 
@@ -3589,6 +3623,8 @@ var kilep:boolean;
       begin
         RendszamTomb[thmerleg,thkamera].rendszam:=SocketTomb[thmerleg,thkamera].rendszam;
         RendszamTomb[thmerleg,thkamera].kep:=SocketTomb[thmerleg,thkamera].kep;
+        RendszamTomb[thmerleg,thkamera].irany:=SocketTomb[thmerleg,thkamera].irany;
+        RendszamTomb[thmerleg,thkamera].ido:=Time;
       end
       else
       // Ha már volt ismeretlen rendszám , akkor beírja az újabb adatait, így mindig az utolsó ismeretlen lesz letárolva
@@ -3596,6 +3632,8 @@ var kilep:boolean;
         begin
           RendszamTomb[thmerleg,thkamera].rendszam:=SocketTomb[thmerleg,thkamera].rendszam;
           RendszamTomb[thmerleg,thkamera].kep:=SocketTomb[thmerleg,thkamera].kep;
+          if SocketTomb[thmerleg,thkamera].irany<>0 then RendszamTomb[thmerleg,thkamera].irany:=SocketTomb[thmerleg,thkamera].irany;
+          //RendszamTomb[thmerleg,thkamera].ido:=Time;
         end
         else
         //Ha már volt helyesnek tûnõ rendszám letárolva és nem egyezik meg akkor kellene megvizsálni esetleg
@@ -3606,6 +3644,8 @@ var kilep:boolean;
           begin
             RendszamTomb[thmerleg,thkamera].rendszam:=SocketTomb[thmerleg,thkamera].rendszam;
             RendszamTomb[thmerleg,thkamera].kep:=SocketTomb[thmerleg,thkamera].kep;
+            if SocketTomb[thmerleg,thkamera].irany<>0 then RendszamTomb[thmerleg,thkamera].irany:=SocketTomb[thmerleg,thkamera].irany;
+            //RendszamTomb[thmerleg,thkamera].ido:=Time;
           end
           else
             if RendszamTomb[thmerleg,thkamera].rendszam=SocketTomb[thmerleg,thkamera].rendszam then  Result:=True;
@@ -3618,6 +3658,7 @@ begin
   kilep:=false;
   RendszamTomb[thmerleg,thkamera].rendszam:='';
   RendszamTomb[thmerleg,thkamera].kep:='';
+
   while (not terminated) and (not kilep) do
   begin
     Synchronize(kijelez);
