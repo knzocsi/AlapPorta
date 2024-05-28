@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=26;
+      maxSQL=27;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -930,6 +930,8 @@ interface
       'ALTER TABLE `forgalom`	ADD COLUMN IF NOT EXISTS `aut_nyom`  TINYINT(1) NULL DEFAULT 0 ;'  +#13#10+
       'ALTER TABLE `parositott`	ADD COLUMN IF NOT EXISTS `aut_nyom`  TINYINT(1) NULL DEFAULT 0 ;'  +#13#10+
       'ALTER TABLE `forgalom`	MODIFY COLUMN  `Parositott`  INT(11) NULL DEFAULT 0 ;' // +#13#10+
+     ,// magansz a partnerbe
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS magansz TINYINT(1) NOT NULL DEFAULT 0;'
     );
 
 

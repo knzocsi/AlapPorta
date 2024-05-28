@@ -2257,10 +2257,10 @@ begin
      Automata_mjegy_Rec.Rendszam:=Af.Auto_mjegyQ.FieldByName('rendszam').AsString;
      Automata_mjegy_Rec.Betomeg:=Af.Auto_mjegyQ.FieldByName('betomeg').AsInteger;
      Automata_mjegy_Rec.Kitomeg:=Af.Auto_mjegyQ.FieldByName('kitomeg').AsInteger;
-
-      if Automata_mjegy_Rec.Betomeg>Automata_mjegy_Rec.Kitomeg then
-       Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.kitomeg
-      else Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.Betomeg;
+//
+//      if Automata_mjegy_Rec.Betomeg>Automata_mjegy_Rec.Kitomeg then
+//       Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.kitomeg
+//      else Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.Betomeg;
 
       Automata_mjegy_Rec.Netto:=Af.Auto_mjegyQ.FieldByName('Netto').AsInteger;
       Automata_mjegy_Rec.Parositott:=Parositva;
@@ -2282,7 +2282,7 @@ begin
      if TfrxMemoView(FindObject('membrutto'))<>nil
      then TfrxMemoView(FindObject('membrutto')).Text:=Automata_mjegy_Rec.Betomeg.ToString;
      if TfrxMemoView(FindObject('memtara'))<>nil
-     then TfrxMemoView(FindObject('memtara')).Text:=Automata_mjegy_Rec.Tara.ToString;
+     then TfrxMemoView(FindObject('memtara')).Text:=Automata_mjegy_Rec.Kitomeg.ToString;
      if TfrxMemoView(FindObject('memnetto'))<>nil
      then TfrxMemoView(FindObject('memnetto')).Text:=Automata_mjegy_Rec.Netto.ToString;
      PrintOptions.Copies:=1;
@@ -2383,7 +2383,7 @@ begin
            SQL.Clear;
            SQL.Add('SELECT id,erkdatum,erkido,tavdatum, tavido,');
            SQL.Add('rendszam, betomeg,kitomeg,');
-           SQL.Add('netto,IF(betomeg>kitomeg,''BE'',''KI'') AS irany');
+           SQL.Add('netto,IF(betomeg>kitomeg,''BESZÁLLÍTÁS'',''KISZÁLLÍTÁS'') AS irany');
            SQL.Add(' FROM parositott');
            SQL.Add(' WHERE aut_nyom=0 ');
            Open;

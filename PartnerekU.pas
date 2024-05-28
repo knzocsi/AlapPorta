@@ -66,6 +66,7 @@ type
     edszures: TEdit;
     Edit1: TEdit;
     Edit2: TEdit;
+    bdchkMagansz: TDBCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);

@@ -451,6 +451,16 @@ object PartnerekF: TPartnerekF
         Height = 21
         TabOrder = 20
       end
+      object bdchkMagansz: TDBCheckBox
+        Left = 324
+        Top = 272
+        Width = 97
+        Height = 17
+        Caption = 'Mag'#225'nszem'#233'ly'
+        DataField = 'magansz'
+        DataSource = PartnerDS
+        TabOrder = 21
+      end
     end
   end
   object PartnerT: TFDTable
