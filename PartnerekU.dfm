@@ -68,7 +68,7 @@ object PartnerekF: TPartnerekF
     Top = 41
     Width = 770
     Height = 328
-    ActivePage = tbReszlet
+    ActivePage = tbLista
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -88,6 +88,135 @@ object PartnerekF: TPartnerekF
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
         OnMouseUp = PartnerGridMouseUp
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'kod'
+            Title.Caption = 'K'#243'd'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'nev'
+            Title.Caption = 'N'#233'v'
+            Width = 200
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'irsz'
+            Title.Caption = 'Ir'#225'ny'#237't'#243'sz'#225'm'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'telepules'
+            Title.Caption = 'Telep'#252'l'#233's'
+            Width = 120
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'kozterulet'
+            Title.Caption = 'K'#246'zter'#252'let neve'
+            Width = 100
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'kozt_jelleg'
+            Title.Caption = 'K'#246'zt.jellege'
+            Width = 65
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'hazszam'
+            Title.Caption = 'H'#225'zsz'#225'm'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'epulet'
+            Title.Caption = #201'p'#252'let'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'lepcsohaz'
+            Title.Caption = 'Lph.'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'emelet'
+            Title.Caption = 'Em.'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ajto'
+            Title.Caption = 'Ajt'#243
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'hrsz'
+            Title.Caption = 'H.R.SZ.'
+            Width = 65
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'telefon'
+            Title.Caption = 'Telefon'
+            Width = 100
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'email'
+            Title.Caption = 'E-mail'
+            Width = 100
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ado_azon'
+            Title.Caption = 'Ad'#243'.azon'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ado_kod'
+            Title.Caption = 'Ad'#243' k'#243'd'
+            Width = 65
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ado_megye_kod'
+            Title.Caption = 'Ad'#243'.M.k'#243'd'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'kuj'
+            Title.Caption = 'K'#220'J'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ktj'
+            Title.Caption = 'KTJ'
+            Visible = True
+          end>
       end
       object Panel2: TPanel
         Left = 0
@@ -214,9 +343,9 @@ object PartnerekF: TPartnerekF
       object lbl12: TLabel
         Left = 272
         Top = 211
-        Width = 47
+        Width = 124
         Height = 13
-        Caption = 'Ad'#243'sz'#225'm:'
+        Caption = 'Ad'#243'sz'#225'm(nem megfelel'#337'):'
         FocusControl = dbedtAdoszam
       end
       object Label1: TLabel
@@ -241,15 +370,15 @@ object PartnerekF: TPartnerekF
         Caption = #201'p'#252'let:'
       end
       object Label4: TLabel
-        Left = 32
-        Top = 255
+        Left = 273
+        Top = 250
         Width = 32
         Height = 13
         Caption = 'E-mail:'
       end
       object Label5: TLabel
-        Left = 168
-        Top = 255
+        Left = 423
+        Top = 250
         Width = 40
         Height = 13
         Caption = 'Telefon:'
@@ -260,6 +389,27 @@ object PartnerekF: TPartnerekF
         Width = 72
         Height = 13
         Caption = 'Helyrajzi sz'#225'm:'
+      end
+      object Label8: TLabel
+        Left = 32
+        Top = 251
+        Width = 65
+        Height = 13
+        Caption = 'Ad'#243'.azon.jel:'
+      end
+      object Label9: TLabel
+        Left = 136
+        Top = 251
+        Width = 43
+        Height = 13
+        Caption = 'Ad'#243' k'#243'd:'
+      end
+      object Label10: TLabel
+        Left = 193
+        Top = 251
+        Width = 56
+        Height = 13
+        Caption = 'Ad'#243'.m.k'#243'd:'
       end
       object DBNavigator1: TDBNavigator
         Left = 409
@@ -377,6 +527,7 @@ object PartnerekF: TPartnerekF
         Height = 21
         DataField = 'Adoszam'
         DataSource = PartnerDS
+        ReadOnly = True
         TabOrder = 12
       end
       object DBEdtkuj: TDBEdit
@@ -409,9 +560,9 @@ object PartnerekF: TPartnerekF
         TabOrder = 15
       end
       object dbedtemail: TDBEdit
-        Left = 32
-        Top = 268
-        Width = 121
+        Left = 273
+        Top = 263
+        Width = 130
         Height = 21
         DataField = 'email'
         DataSource = PartnerDS
@@ -419,8 +570,8 @@ object PartnerekF: TPartnerekF
         TabOrder = 16
       end
       object dbedttelefon: TDBEdit
-        Left = 168
-        Top = 268
+        Left = 423
+        Top = 263
         Width = 121
         Height = 21
         DataField = 'telefon'
@@ -452,7 +603,7 @@ object PartnerekF: TPartnerekF
         TabOrder = 20
       end
       object bdchkMagansz: TDBCheckBox
-        Left = 324
+        Left = 644
         Top = 272
         Width = 97
         Height = 17
@@ -461,11 +612,42 @@ object PartnerekF: TPartnerekF
         DataSource = PartnerDS
         TabOrder = 21
       end
+      object dbeadoazon: TDBEdit
+        Left = 32
+        Top = 264
+        Width = 81
+        Height = 21
+        DataField = 'ado_azon'
+        DataSource = PartnerDS
+        MaxLength = 8
+        TabOrder = 22
+      end
+      object dbeado_kod: TDBEdit
+        Left = 136
+        Top = 264
+        Width = 43
+        Height = 21
+        DataField = 'ado_kod'
+        DataSource = PartnerDS
+        MaxLength = 1
+        TabOrder = 23
+      end
+      object dbeado_megye_kod: TDBEdit
+        Left = 193
+        Top = 263
+        Width = 56
+        Height = 21
+        DataField = 'ado_megye_kod'
+        DataSource = PartnerDS
+        MaxLength = 2
+        TabOrder = 24
+      end
     end
   end
   object PartnerT: TFDTable
     BeforeInsert = PartnerTBeforeInsert
     AfterInsert = PartnerTAfterInsert
+    BeforePost = PartnerTBeforePost
     BeforeDelete = PartnerTBeforeDelete
     IndexFieldNames = 'ID'
     Connection = AF.Kapcs

@@ -67,6 +67,12 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     bdchkMagansz: TDBCheckBox;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    dbeadoazon: TDBEdit;
+    dbeado_kod: TDBEdit;
+    dbeado_megye_kod: TDBEdit;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);
@@ -80,6 +86,7 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure edszuresChange(Sender: TObject);
     procedure dbedtIrszChange(Sender: TObject);
+    procedure PartnerTBeforePost(DataSet: TDataSet);
   private
     { Private declarations }
     procedure szures;
@@ -205,6 +212,18 @@ end;
 procedure TPartnerekF.PartnerTBeforeInsert(DataSet: TDataSet);
 begin
 //
+end;
+
+procedure TPartnerekF.PartnerTBeforePost(DataSet: TDataSet);
+begin
+ if Length(dbeadoazon.Text)<>0 then
+  begin
+    if (Length(dbeadoazon.Text)<>8) OR (Length(dbeado_kod.Text)<>1) OR (Length(dbeado_megye_kod.Text)<>2)  then
+     begin
+      ShowMessage('Hibás adószám!');
+      if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+     end;
+  end;
 end;
 
 procedure TPartnerekF.szures;

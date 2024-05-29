@@ -494,7 +494,7 @@ interface
     'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
     'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
     'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
-    'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim' + #13#10 +
+    'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim, magansz' + #13#10 +
     'from partner ;' + #13#10 +
     '' + #13#10 +
     'DROP TABLE IF EXISTS `rak_szall_lista_nezet`;' + #13#10 +
@@ -931,7 +931,23 @@ interface
       'ALTER TABLE `parositott`	ADD COLUMN IF NOT EXISTS `aut_nyom`  TINYINT(1) NULL DEFAULT 0 ;'  +#13#10+
       'ALTER TABLE `forgalom`	MODIFY COLUMN  `Parositott`  INT(11) NULL DEFAULT 0 ;' // +#13#10+
      ,// magansz a partnerbe
-     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS magansz TINYINT(1) NOT NULL DEFAULT 0;'
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS magansz TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_azon VARCHAR(8) NOT NULL DEFAULT '''';' + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_kod VARCHAR(1) NOT NULL DEFAULT '''';' + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_megye_kod VARCHAR(2) NOT NULL DEFAULT '''';' + #13#10 +
+     ''+ #13#10 +
+     'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
+     'CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,kuj,ktj,' + #13#10 +
+      'irsz,telepules,kerulet,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,'+ #13#10 +
+      'email,telefon, CONCAT(kod,'' '',nev) As combo,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim, magansz,' + #13#10 +
+      'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam' + #13#10 +
+      'from partner ;'//+ #13#10 +
+      //'' + #13#10 +
+
     );
 
 

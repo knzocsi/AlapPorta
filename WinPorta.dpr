@@ -6,8 +6,6 @@ uses
   Vcl.Forms,
   FoU in 'FoU.pas' {FoF},
   AU in 'AU.pas' {AF: TDataModule},
-  PartnerekU in 'PartnerekU.pas' {PartnerekF},
-  TermekekU in 'TermekekU.pas' {TermekekF},
   RendszamokU in 'RendszamokU.pas' {RendszamokF},
   ForgalomU in 'ForgalomU.pas' {ForgalomF},
   ParositottU in 'ParositottU.pas' {ParositottF},
@@ -57,7 +55,9 @@ uses
   Soap_valaszU in 'SOAP\Soap_valaszU.pas',
   Soap_PingU in 'SOAP\Soap_PingU.pas',
   Soap_keresU in 'SOAP\Soap_keresU.pas',
-  DijakU in 'DijakU.pas' {DijakF};
+  DijakU in 'DijakU.pas' {DijakF},
+  PartnerekU in 'PartnerekU.pas' {PartnerekF},
+  TermekekU in 'TermekekU.pas' {TermekekF};
 
 {$R *.res}
 
@@ -70,8 +70,6 @@ begin
   Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TNezetF, NezetF);
   Application.CreateForm(TMeresF, MeresF);
-  Application.CreateForm(TPartnerekF, PartnerekF);
-  Application.CreateForm(TTermekekF, TermekekF);
   Application.CreateForm(TRendszamokF, RendszamokF);
   Application.CreateForm(TForgalomF, ForgalomF);
   Application.CreateForm(TParositottF, ParositottF);
@@ -109,5 +107,7 @@ begin
   Application.CreateForm(TMerlegelesekF, MerlegelesekF);
   Application.CreateForm(TBelepF, BelepF);
   Application.CreateForm(TDijakF, DijakF);
+  Application.CreateForm(TPartnerekF, PartnerekF);
+  Application.CreateForm(TTermekekF, TermekekF);
   Application.Run;
 end.
