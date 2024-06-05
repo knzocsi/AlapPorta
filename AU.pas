@@ -325,7 +325,7 @@ var
   Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
-  Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa:boolean;
+  Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa,dijszab_csoportok:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
   merlegjegy_modositas: Boolean;
@@ -1114,6 +1114,7 @@ begin
   Automata_merlegjegy:= cfg_kezel('Minden forgalomba került mérésnél nyomtat mérlegjegyet','ALAP','Automata_merlegjegy','Boolean', False);
   Automata_merlegjegy_parositaskor:= cfg_kezel('Akkor nyomtat mérlegjegyet ha sikerült párosítani','ALAP','Automata_merlegjegy_parositaskor','Boolean', False);
   //Automata_merlegjegy, Automata_merlegjegy_parositaskor
+  dijszab_csoportok:=cfg_kezel('Díjszabási csoport pertnerhez rendelhetõ','DÍJAK','Díjszabási csoportok','Boolean',dijszab_csoportok);
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';

@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=27;
+      maxSQL=28;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -944,9 +944,19 @@ interface
       'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim, magansz,' + #13#10 +
-      'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam' + #13#10 +
-      'from partner ;'//+ #13#10 +
-      //'' + #13#10 +
+      'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam, ado_azon, ado_kod,ado_megye_kod ' + #13#10 +
+      'from partner ;'
+      ,
+      '' + #13#10 +
+      'ALTER TABLE `nyitbe`	MODIFY COLUMN IF EXISTS `betarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `nyitbe`	MODIFY COLUMN IF EXISTS `kitarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `nyitbe`	MODIFY COLUMN IF EXISTS `szallitasi_dij` DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	MODIFY COLUMN IF EXISTS `betarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	MODIFY COLUMN IF EXISTS `kitarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	MODIFY COLUMN IF EXISTS `szallitasi_dij` DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `betarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `kitarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `szallitasi_dij` DECIMAL(20,6) NOT NULL DEFAULT 0 ;'
 
     );
 

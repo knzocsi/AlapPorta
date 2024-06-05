@@ -1306,7 +1306,6 @@ begin
   else
   begin
     tablaneve:='nyitbe';
-
   end;
 
  with aF.Q2 do
@@ -1468,31 +1467,32 @@ begin
        //dijak
       if cbxirany.ItemIndex in [1,2] then
       begin
-        ParamByName('tarolasi_dij').value:=spszNetto.Value*tarolasi_dij;
-        ParamByName('szaritasi_dij').value:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
-        ParamByName('tisztitasi_dij').value:=spnetto.Value*tisztitasi_dij;
-        ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
-        ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
-        ParamByName('szallitasi_dij').value:=spszNetto.Value*szallitasi_dij;
+        ParamByName('tarolasi_dij').AsFloat:=spszNetto.Value*tarolasi_dij;
+        ParamByName('szaritasi_dij').AsFloat:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
+        ParamByName('tisztitasi_dij').AsFloat:=spnetto.Value*tisztitasi_dij;
+        //ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
+       // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
+        ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
         case cbxirany.Text[1] of
          'B':begin
-              ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
-              ParamByName('kitarolasi_dij').value:=0;
+              ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
+              //ShowMessage(VarToStr(spszNetto.Value*be_tarolasi_dij));
+              ParamByName('kitarolasi_dij').AsFloat:=0;
              end;
          'K':begin
-              ParamByName('betarolasi_dij').value:=0;
-              ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
+              ParamByName('betarolasi_dij').AsFloat:=0;
+              ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
              end;
         end
       end
       else
         begin
-          ParamByName('tarolasi_dij').value:=0;
-          ParamByName('szaritasi_dij').value:=0;
-          ParamByName('tisztitasi_dij').value:=0;
-          ParamByName('betarolasi_dij').value:=0;
-          ParamByName('kitarolasi_dij').value:=0;
-          ParamByName('szallitasi_dij').value:=0;
+          ParamByName('tarolasi_dij').AsFloat:=0;
+          ParamByName('szaritasi_dij').AsFloat:=0;
+          ParamByName('tisztitasi_dij').AsFloat:=0;
+          ParamByName('betarolasi_dij').AsFloat:=0;
+          ParamByName('kitarolasi_dij').AsFloat:=0;
+          ParamByName('szallitasi_dij').AsFloat:=0;
         end;
       if taroloklookup.KeyValue<>'!' then ParamByName('tarolo_id').AsInteger:=taroloklookup.KeyValue
       else ParamByName('tarolo_id').AsInteger:=-1;

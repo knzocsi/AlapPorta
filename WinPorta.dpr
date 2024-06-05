@@ -19,7 +19,6 @@ uses
   MjegyListaU in 'MjegyListaU.pas' {MjegyekF},
   MerlegkezelokU in 'MerlegkezelokU.pas' {MerlegkezelokF},
   SQL_text in 'SQL_text.pas',
-  KeszletU in 'KeszletU.pas' {keszletF},
   kezdokeszletU in 'kezdokeszletU.pas' {kezdokeszletF},
   nagykepU in 'nagykepU.pas' {NagykepF},
   nagykamU in 'nagykamU.pas' {NagykamF},
@@ -57,7 +56,8 @@ uses
   Soap_keresU in 'SOAP\Soap_keresU.pas',
   DijakU in 'DijakU.pas' {DijakF},
   PartnerekU in 'PartnerekU.pas' {PartnerekF},
-  TermekekU in 'TermekekU.pas' {TermekekF};
+  TermekekU in 'TermekekU.pas' {TermekekF},
+  KeszletU in 'KeszletU.pas' {KeszletF};
 
 {$R *.res}
 
@@ -78,7 +78,6 @@ begin
   Application.CreateForm(TkodF, kodF);
   Application.CreateForm(TMjegyF, MjegyF);
   Application.CreateForm(TMerlegkezelokF, MerlegkezelokF);
-  Application.CreateForm(TkeszletF, keszletF);
   Application.CreateForm(TkezdokeszletF, kezdokeszletF);
   Application.CreateForm(TNagykepF, NagykepF);
   Application.CreateForm(TLibreExcelF, LibreExcelF);
@@ -109,5 +108,6 @@ begin
   Application.CreateForm(TDijakF, DijakF);
   Application.CreateForm(TPartnerekF, PartnerekF);
   Application.CreateForm(TTermekekF, TermekekF);
+  Application.CreateForm(TKeszletF, KeszletF);
   Application.Run;
 end.
