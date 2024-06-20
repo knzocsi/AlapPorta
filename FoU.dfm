@@ -42,7 +42,7 @@ object FoF: TFoF
         Width = 150
       end
       item
-        Text = 'T'#246'meg:'
+        Text = 'T'#246'meg: '
         Width = 200
       end
       item
@@ -1352,8 +1352,12 @@ object FoF: TFoF
         OnClick = tomeg_levon_szovegek_mClick
       end
       object Djak1: TMenuItem
-        Caption = 'D'#237'jak'
+        Caption = 'Alap d'#237'jak'
         OnClick = Djak1Click
+      end
+      object Djszabsikategrik1: TMenuItem
+        Caption = 'D'#237'jszab'#225'si kateg'#243'ri'#225'k'
+        OnClick = Djszabsikategrik1Click
       end
     end
     object Listk1: TMenuItem

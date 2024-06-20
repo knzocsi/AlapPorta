@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=28;
+      maxSQL=31;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -900,7 +900,8 @@ interface
      'ALTER TABLE `merlegjegy`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL  AFTER `termek_ar`;'  +#13#10
      ,//21
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'  +#13#10
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'  +#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;' // +#13#10
      , //22
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
@@ -909,7 +910,11 @@ interface
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
      'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;' // +#13#10
      , //23
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Torolve`  INT(11) DEFAULT 0 ;' // +#13#10
      ,//24 forgalom tábla módosítása SOAP miatt
@@ -934,18 +939,8 @@ interface
      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS magansz TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_azon VARCHAR(8) NOT NULL DEFAULT '''';' + #13#10 +
      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_kod VARCHAR(1) NOT NULL DEFAULT '''';' + #13#10 +
-     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_megye_kod VARCHAR(2) NOT NULL DEFAULT '''';' + #13#10 +
-     ''+ #13#10 +
-     'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
-     'CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,kuj,ktj,' + #13#10 +
-      'irsz,telepules,kerulet,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,'+ #13#10 +
-      'email,telefon, CONCAT(kod,'' '',nev) As combo,' + #13#10 +
-      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
-      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
-      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
-      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim, magansz,' + #13#10 +
-      'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam, ado_azon, ado_kod,ado_megye_kod ' + #13#10 +
-      'from partner ;'
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_megye_kod VARCHAR(2) NOT NULL DEFAULT '''';'// + #13#10 +
+
       ,
       '' + #13#10 +
       'ALTER TABLE `nyitbe`	MODIFY COLUMN IF EXISTS `betarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
@@ -957,7 +952,86 @@ interface
      'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `betarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
      'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `kitarolasi_dij`  DECIMAL(20,6) NOT NULL DEFAULT 0 ;'+#13#10 +
      'ALTER TABLE `modositott_merlegjegyek`	MODIFY COLUMN IF EXISTS `szallitasi_dij` DECIMAL(20,6) NOT NULL DEFAULT 0 ;'
-
+     ,//dijszab kategóriák
+     'CREATE TABLE IF NOT EXISTS `dijaszab_kategoriak` (' + #13#10 +
+    '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+    '`nev` varchar(20) NOT NULL DEFAULT '''',' + #13#10 +
+    '`tarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    '`betarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    '`kitarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    '`szaritasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    '`tisztitasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    '`szallitasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
+    'PRIMARY KEY (`id`)' + #13#10 +
+    ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'+ #13#10 +
+    'ALTER TABLE partner ADD COLUMN IF NOT EXISTS d_id INT(11) NOT NULL DEFAULT 0;' + #13#10 +
+    ''+ #13#10 +
+     'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
+     'CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,kuj,ktj,' + #13#10 +
+      'irsz,telepules,kerulet,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,'+ #13#10 +
+      'email,telefon, CONCAT(kod,'' '',nev) As combo,' + #13#10 +
+      'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
+      'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
+      'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
+      'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim, magansz,' + #13#10 +
+      'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam, ado_azon, ado_kod,ado_megye_kod, ' + #13#10 +
+      'd_id from partner ;'
+      ,//partner 3 fuvarozó
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     //
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      '' + #13#10 +
+      'CREATE TABLE IF NOT EXISTS `dijaszab_kategoriak_termek` (' + #13#10 +
+      '	`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+      '	`d_id` INT(11) NOT NULL DEFAULT ''0'',' + #13#10 +
+      '	`t_id` INT(11) NOT NULL DEFAULT ''0'',' + #13#10 +
+      '	`t_nev` VARCHAR(100) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`tarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	`betarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	`kitarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	`szaritasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	`tisztitasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	`szallitasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
+      '	PRIMARY KEY (`id`) USING BTREE' + #13#10 +
+      ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;',
+      //cfg-k exporthoz
+      'CREATE TABLE IF NOT EXISTS `cfg_export` (' + #13#10 +
+      '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+      '`forras` varchar(50) DEFAULT '''',' + #13#10 +
+      '`automatikus` tinyint(1) DEFAULT 0,' + #13#10 +
+      '`excel` tinyint(1) DEFAULT 0,' + #13#10 +
+      '`feltoltes_ftp` tinyint(1) DEFAULT 0,' + #13#10 +
+      'PRIMARY KEY (`id`)' + #13#10 +
+      ') ENGINE=InnoDB DEFAULT CHARSET=utf8;' + #13#10 +
+      '' + #13#10 +
+      'CREATE TABLE IF NOT EXISTS `cfg_export_mezok` (' + #13#10 +
+      '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+      '`c_id` int(11) NOT NULL DEFAULT 0,' + #13#10 +
+      '`mezo` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+      'PRIMARY KEY (`id`)' + #13#10 +
+      ') ENGINE=InnoDB DEFAULT CHARSET=utf8;'
     );
 
 

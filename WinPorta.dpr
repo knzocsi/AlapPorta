@@ -57,7 +57,10 @@ uses
   DijakU in 'DijakU.pas' {DijakF},
   PartnerekU in 'PartnerekU.pas' {PartnerekF},
   TermekekU in 'TermekekU.pas' {TermekekF},
-  KeszletU in 'KeszletU.pas' {KeszletF};
+  KeszletU in 'KeszletU.pas' {KeszletF},
+  dijszabU in 'dijszabU.pas' {dijszabF},
+  dijszab_termekU in 'dijszab_termekU.pas' {dijszab_termekF},
+  ftpDlU in 'FTP\ftpDlU.pas' {ftpF};
 
 {$R *.res}
 
@@ -109,5 +112,8 @@ begin
   Application.CreateForm(TPartnerekF, PartnerekF);
   Application.CreateForm(TTermekekF, TermekekF);
   Application.CreateForm(TKeszletF, KeszletF);
+  Application.CreateForm(TdijszabF, dijszabF);
+  Application.CreateForm(Tdijszab_termekF, dijszab_termekF);
+  Application.CreateForm(TftpF, ftpF);
   Application.Run;
 end.

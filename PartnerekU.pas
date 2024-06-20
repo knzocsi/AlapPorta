@@ -8,7 +8,8 @@ uses
   Vcl.DBGrids, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  JvExControls, JvDBLookup;
 
 type
   TPartnerekF = class(TForm)
@@ -73,6 +74,11 @@ type
     dbeadoazon: TDBEdit;
     dbeado_kod: TDBEdit;
     dbeado_megye_kod: TDBEdit;
+    cbdijkat: TJvDBLookupCombo;
+    lbldijszab: TLabel;
+    dijkatT: TFDTable;
+    dijkatDs: TDataSource;
+    btndijszab: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);
@@ -87,6 +93,9 @@ type
     procedure edszuresChange(Sender: TObject);
     procedure dbedtIrszChange(Sender: TObject);
     procedure PartnerTBeforePost(DataSet: TDataSet);
+    procedure btndijszabClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure PartnerGridCellClick(Column: TColumn);
   private
     { Private declarations }
     procedure szures;
@@ -100,9 +109,18 @@ var
 implementation
 
 uses
-  AU;
+  AU, DijakU, dijszabU;
 
 {$R *.dfm}
+
+procedure TPartnerekF.btndijszabClick(Sender: TObject);
+begin
+ try
+  dijszabF.showmodal;
+ finally
+  dijkatT.Refresh;
+ end;
+end;
 
 procedure TPartnerekF.btnKilepesClick(Sender: TObject);
 begin
@@ -153,13 +171,29 @@ procedure TPartnerekF.FormActivate(Sender: TObject);
 begin
   OnActivate:=nil;
   pcListaReszlet.ActivePage:=TTabSheet(tbLista);
+  lbldijszab.Visible:=dijszab_csoportok;
+  cbdijkat.Visible:=dijszab_csoportok;
+  btndijszab.Visible:=dijszab_csoportok;
+  dijkatT.Open;
   PartnerT.Open();
+end;
+
+procedure TPartnerekF.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+dijkatT.Close;
 end;
 
 procedure TPartnerekF.FormCreate(Sender: TObject);
 begin
  col_neve:='kod';
  col_felirat:='Kód';
+end;
+
+procedure TPartnerekF.PartnerGridCellClick(Column: TColumn);
+begin
+// af.dijak_lekerese(PartnerT.FieldByName('id').AsInteger);
+// ShowMessage(tisztitasi_dij.ToString+' '+ tarolasi_dij.ToString);
+
 end;
 
 procedure TPartnerekF.PartnerGridMouseUp(Sender: TObject; Button: TMouseButton;
@@ -224,6 +258,31 @@ begin
       if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
      end;
   end;
+  if Length(dbedtNev.Text)<5 then
+  begin
+    ShowMessage('Adja meg a nevet');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if Length(dbedtIrsz.Text)<4 then
+  begin
+    ShowMessage('Adja meg az irányítószámot');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if Length(dbedtTelepules.Text)<3 then
+  begin
+    ShowMessage('Adja meg a települést');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+if af.kod_foglalt(PartnerT.FieldByName('id').AsInteger,dbedtKod.Text,'partner') then
+  begin
+    ShowMessage('Ez a kód már foglalt!');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
+  if af.nev_foglalt(PartnerT.FieldByName('id').AsInteger,dbedtNev.Text,'partner') then
+  begin
+    ShowMessage('Ez a név már foglalt!');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+   end;
 end;
 
 procedure TPartnerekF.szures;

@@ -207,6 +207,7 @@ type
     lblKep2: TLabel;
     SOAPAllapottmr: TTimer;
     Djak1: TMenuItem;
+    Djszabsikategrik1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -300,6 +301,7 @@ type
     procedure SOAPAllapottmrTimer(Sender: TObject);
     procedure Djak1Click(Sender: TObject);
     procedure sorompo_kezeles(merleg,sorompo:Integer;nyit:boolean);
+    procedure Djszabsikategrik1Click(Sender: TObject);
 
 
   private
@@ -373,7 +375,8 @@ uses
   FelhaszU, kodu, portU, mjegyU, MjegyListaU, MerlegkezelokU, KeszletU,nagykamU,
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
-  PLC_COMU, ImportU, MerlegelesekU,DMSoapU, DijakU;
+  PLC_COMU, ImportU, MerlegelesekU,DMSoapU, DijakU, dijszabU, ftpDlU,
+  LibreExcelU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -755,6 +758,12 @@ end;
 procedure TFoF.Djak1Click(Sender: TObject);
 begin
 DijakF.showmodal;
+end;
+
+procedure TFoF.Djszabsikategrik1Click(Sender: TObject);
+begin
+  dijszabF.showmodal;
+  //btndijszab.Visible:=dijszab_csoportok;
 end;
 
 procedure TFoF.tmrElokepTimer(Sender: TObject);
@@ -1364,7 +1373,6 @@ begin
         ThRendszamLampa[i].thmerleg:=i;
         ThRendszamLampa[i].Resume;
         memlog.Lines.Insert(0,'RendszamLampa indul '+i.ToString);
-
       end;
       Sorompok[i][1].nyitva:=False;
       Sorompok[i][2].nyitva:=False;
@@ -1384,7 +1392,7 @@ begin
     end;
    end;
   if Automata_merlegjegy or Automata_merlegjegy_parositaskor then AF.auto_mjegy_tread_run;
-
+  Djszabsikategrik1.Visible:=dijszab_csoportok;
   Fof.SetFocus;
 end;
 
@@ -1405,6 +1413,32 @@ end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
+  if (Clean_way) and (Automata_Ftp_feltoltes) then
+   begin
+    CanClose:=false;
+    try
+     StatusBar1.panels[1].Text:='Mérlegjegyek feltöltése folyamatban...';
+     with MjegyekF.mjegyekQ do
+      begin
+       try
+        Close;
+        SQL.Clear;
+        SQL.Add(' select * from merlegjegy ');
+        SQL.Add(' where (Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1) and tul_id=:p2 ');
+        ParamByName('p0').AsDate:=Date;//StrToDate('2021.01.01');
+        ParamByName('p1').AsDate:=Date;//StrToDate('2024.05.01');
+        ParamByName('p2').AsInteger:=1;
+        open;
+       finally
+         LibreExcelF.mezo_nevek(MjegyekF.mlistaGrid,nil,True)//automata
+       end
+      end;
+    finally
+      //StatusBar1.panels[1].Text:='Mérlegjegyek feltöltve.';
+      CanClose:=True
+    end;
+   end
+  else
   if torzsiport_folyamatban then CanClose:=false
   else
   begin
@@ -1420,6 +1454,7 @@ begin
      else CanClose:=true;
     end;
   end;
+
 end;
 
 procedure TFoF.FormCreate(Sender: TObject);
@@ -2647,7 +2682,7 @@ end;
 
 
 procedure TFoF.Tomeg_TimerTimer(Sender: TObject);
-var tomeg,i:integer;
+var tomeg,i,trint:integer;
     pont:char;
     tomeg_szoveg,szamlalo_szoveg:string;
     hwQ: TFDQuery;
@@ -2674,7 +2709,7 @@ begin
            (mertertekek[i].ToInteger<100)  then  sorompo_kezeles(i,2,False);
       end;
       try
-        tomeg:=strtoint(mertertekek[i]);
+       if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
 
         if (lado=1) and (tomeg>mintomeg) then AF.tomeglog('M'+IntTosTr(i)+':'+mertertekek[i]);
       except
@@ -2684,7 +2719,7 @@ begin
     StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+szamlalo_szoveg;
     lblIrany.caption:=meresirany;
     try
-      tomeg:=strtoint(mertertekek[1]);
+      if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
       if (lado=1) and (tomeg>mintomeg) then AF.tomeglog(mertertekek[1]);
       {
       if (vezerles_tipus = 'PLC')  and (sorompo_vezerles) and (tomeg<mintomeg)then
@@ -2702,14 +2737,14 @@ begin
     except
     end;
 
-  finally
-
+  except
+   //
   end;
 
 
     if not Regi_hardver_beallitas then
-
       begin
+       try
         hwQ:= TFDQuery.Create(nil);
         Sleep(100);
         with hwQ do
@@ -2737,6 +2772,9 @@ begin
           close;
           free;
         end;
+       except
+         //
+       end;
       end;
 
   Tomeg_Timer.Enabled:=true;

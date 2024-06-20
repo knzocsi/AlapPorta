@@ -109,6 +109,187 @@ type
     procedure Execute; override;
   end;
 
+  Tmjegy_rec_nyom=class(TObject)
+     Fs_Id : Integer;
+     Fs_Mjegysorszam: string;
+     Fs_Psz : Integer;
+     Fs_Storno:Boolean;
+
+     Fs_Tulaj_nev: String;
+     Fs_Tulaj_cime: string;
+     Fs_Tulaj_adosz: string;
+     Fs_Tulaj_cjsz: string;
+     Fs_Tulaj_telefon: string;
+
+     Fs_Partner1_felirat: string;
+     Fs_Partner1_nev: string;
+     Fs_Partner1_cim: string;
+     Fs_Partner2_felirat: string;
+     Fs_Partner2_nev: string;
+     Fs_Partner2_cim: string;
+     Fs_Partner3_felirat: string;
+     Fs_Partner3_nev: string;
+     Fs_Partner3_cim: string;
+
+     Fs_Ekaer: string;
+     Fs_Szallev: string;
+     Fs_Szarmazasi_hely: string;
+     Fs_Megjegyzes: string;
+
+     Fs_Rendszam: string;
+     Fs_Erkdatum: TDate;
+     Fs_Erkido: TTime;
+     Fs_Tavdatum: TDate;
+     Fs_Tavido: TTime;
+     Fs_Irany: string;
+
+     Fs_Termek_kod: string;
+     Fs_Termek_nev: string;
+
+     Fs_Merlegkezelo: string;
+
+     Fs_Nedvesseg_latszik: Boolean;
+     Fs_Alapnedv: string;
+     Fs_Nedv:string;
+     Fs_Nedvlevon: string;
+
+     Fs_Tisztasag_latszik: Boolean;
+     Fs_Tisztasag: string;
+     Fs_Szemet_levon: string;
+
+     Fs_Tort_latszik: Boolean;
+     Fs_Tort: string;
+     Fs_Tort_tomeg: string;
+
+     Fs_Hekto_latszik: Boolean;
+     Fs_Hekto: string;
+
+     Fs_Brutto:string;
+     Fs_Tara:string;
+     Fs_Sz_netto:string;
+     Fs_Netto:string;
+
+     Fs_Termek_ar:string;
+
+     Fs_Tomeg_levon_ny: string;
+     Fs_Tomeg_levon_szoveg: string;
+
+     Fs_Parositott:Boolean;
+
+  public
+//     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
+     procedure mjegy_rec_nyom_ures;
+  published
+   property Id: integer read Fs_Id
+        write Fs_Id;
+    property Mjegysorszam: string read Fs_Mjegysorszam
+        write Fs_Mjegysorszam;
+    property Psz: integer read Fs_Psz
+        write Fs_Psz;
+    property Storno: Boolean read Fs_Storno
+        write Fs_Storno;
+    property Tulaj_nev: string read Fs_Tulaj_nev
+        write Fs_Tulaj_nev;
+    property Tulaj_cime: string read Fs_Tulaj_cime
+        write Fs_Tulaj_cime;
+    property Tulaj_adosz: string read Fs_Tulaj_adosz
+        write Fs_Tulaj_adosz;
+    property Tulaj_cjsz: string read Fs_Tulaj_cjsz
+        write Fs_Tulaj_cjsz;
+    property Tulaj_telefon: string read Fs_Tulaj_telefon
+        write Fs_Tulaj_telefon;
+
+    property Partner1_felirat: string read Fs_Partner1_felirat
+        write Fs_Partner1_felirat;
+    property Partner1_nev: string read Fs_Partner1_nev
+        write Fs_Partner1_nev;
+    property Partner1_cim: string read Fs_Partner1_cim
+        write Fs_Partner1_cim;
+    property Partner2_felirat: string read Fs_Partner2_felirat
+        write Fs_Partner2_felirat;
+    property Partner2_nev: string read Fs_Partner2_nev
+        write Fs_Partner2_nev;
+    property Partner2_cim: string read Fs_Partner2_cim
+        write Fs_Partner2_cim;
+    property Partner3_felirat: string read Fs_Partner3_felirat
+        write Fs_Partner3_felirat;
+    property Partner3_nev: string read Fs_Partner3_nev
+        write Fs_Partner3_nev;
+    property Partner3_cim: string read Fs_Partner3_cim
+        write Fs_Partner3_cim;
+
+    property Ekaer: string read Fs_Ekaer
+        write Fs_Ekaer;
+    property Szallev: string read Fs_Szallev
+        write Fs_Szallev;
+    property Szarmazasi_hely: string read Fs_Szarmazasi_hely
+        write Fs_Szarmazasi_hely;
+    property Megjegyzes: string read Fs_Megjegyzes
+        write Fs_Megjegyzes;
+    property Irany: string read Fs_Irany
+        write Fs_Irany;
+    property Termek_kod: string read Fs_Termek_kod
+        write Fs_Termek_kod;
+    property Termek_nev: string read Fs_Termek_nev
+        write Fs_Termek_nev;
+    property Merlegkezelo: string read Fs_Merlegkezelo
+        write Fs_Merlegkezelo;
+
+    property Erkdatum: TDate read Fs_Erkdatum
+        write Fs_Erkdatum;
+    property Erkido: TTime read Fs_Erkido
+        write Fs_Erkido;
+    property Tavdatum: TDate read Fs_Tavdatum
+        write Fs_Tavdatum;
+    property Tavido: TTime read Fs_Tavido
+        write Fs_Tavido;
+    property Rendszam: string read Fs_Rendszam
+        write Fs_Rendszam;
+
+    property Nedvesseg_latszik: Boolean read Fs_Nedvesseg_latszik
+        write Fs_Nedvesseg_latszik;
+    property Alapnedv: string read Fs_Alapnedv
+        write Fs_Alapnedv;
+    property Nedv: string read Fs_Nedv
+        write Fs_Nedv;
+    property Nedvlevon: string read Fs_Nedvlevon
+        write Fs_Nedvlevon;
+    property Tisztasag_latszik: Boolean read Fs_Tisztasag_latszik
+        write Fs_Tisztasag_latszik;
+    property Tisztasag: string read Fs_Tisztasag
+        write Fs_Tisztasag;
+    property Szemet_levon: string read Fs_Szemet_levon
+        write Fs_Szemet_levon;
+    property Tort_latszik: Boolean read Fs_Tort_latszik
+        write Fs_Tort_latszik;
+    property Tort: string read Fs_Tort
+        write Fs_Tort;
+    property Tort_tomeg: string read Fs_Tort_tomeg
+        write Fs_Tort_tomeg;
+    property Hekto_latszik: Boolean read Fs_Hekto_latszik
+        write Fs_Hekto_latszik;
+    property Hekto: string read Fs_Hekto
+        write Fs_Hekto;
+    property Brutto: string read Fs_Brutto
+        write Fs_Brutto;
+    property Tara: string read Fs_Tara
+        write Fs_Tara;
+    property Sz_netto: string read Fs_Sz_netto
+        write Fs_Sz_netto;
+    property Netto: string read Fs_Netto
+        write Fs_Netto;
+    property Termek_ar: string read Fs_Termek_ar
+        write Fs_Termek_ar;
+    property Tomeg_levon_ny: string read Fs_Tomeg_levon_ny
+        write Fs_Tomeg_levon_ny;
+    property Tomeg_levon_szoveg: string read Fs_Tomeg_levon_szoveg
+        write Fs_Tomeg_levon_szoveg;
+
+    property Parositott: Boolean read Fs_Parositott
+        write Fs_Parositott;
+
+  end;
+
   TAF = class(TDataModule)
     ForgalomDS: TDataSource;
     ForgalomQ: TFDQuery;
@@ -223,6 +404,7 @@ type
     Auto_mjegyQ: TFDQuery;
     Auto_mjegyINUPQ: TFDQuery;
     frxPDFTeszthez: TfrxPDFExport;
+    dijkatQ: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -282,6 +464,7 @@ type
     function tabla_zarolva(tabla:string):Integer;
     procedure tabla_kizar(tabla:string);
     procedure merlegjegy_tipus_betoltese;
+    procedure merlegjegy_tipus_betoltese_clean(iranya:string);
     procedure merlegjegy_tomeglevonas;
     procedure camlog(S:string);
     procedure tomeglog(S:string);
@@ -296,7 +479,7 @@ type
     procedure Regiek_torlese;
     procedure auto_mjegy_tread_run;
     procedure auto_teszt;
-
+    procedure dijak_lekerese(pid,tid:Integer);
     { Public declarations }
   end;
 
@@ -351,7 +534,19 @@ var
   Automata_merlegjegy, Automata_merlegjegy_parositaskor:Boolean;
   Automata_mjegy_Rec : Tautomata_mjegy_rec;
 
+  Mjegy_nyom_rec: Tmjegy_rec_nyom;
+
   Automata_mjegy_thread: Auto_mjegy_Thread;
+
+  fuvarozo_merlegjegyen: Boolean=False;
+
+  Clean_way: Boolean=False;
+
+  szarmazasi_hely_latszik: Boolean=False;
+
+  Ftp_feltoltes: Boolean=False;
+  Automata_Ftp_feltoltes: Boolean=False;
+  Ftp_tavoli_mappa: string;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -519,7 +714,8 @@ begin
  // if Automata_merlegjegy or Automata_merlegjegy_parositaskor then auto_mjegy_tread_run;
 
   PortF:=TPortF.Create(Application);
-
+  //  mérlegjegy nyomtatáshoz KELL
+  if Mjegy_nyom_rec=nil then Mjegy_nyom_rec := Tmjegy_rec_nyom.Create;
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -529,6 +725,75 @@ begin
   DecodeTime(datum,ora,perc,mp,szmp);
   Result:=IntToStr(ev)+IntToStr(ho)+IntToStr(nap);
   if idokell then Result:=Result+IntToStr(ora)+IntToStr(perc)+IntToStr(mp)+IntToStr(szmp);
+end;
+
+procedure TAF.dijak_lekerese(pid,tid: Integer);
+var kat:Integer;
+  function  van_kat: Integer;
+   begin
+     with dijkatQ do
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add(' SELECT d_id FROM partner');
+        SQL.Add(' WHERE id='+pid.ToString);
+        Open;
+        Result:=Fields[0].AsInteger;
+        close;
+      end;
+   end;
+
+begin
+ if not dijszab_csoportok then exit;
+ kat:=van_kat;
+ if kat=0 then //ha nincs neki beolvassuk az alapot
+  begin
+    tisztitasi_dij:=cfg_kezel('','DÍJAK','Tisztítási díj','Float',0);
+    szaritasi_dij:=cfg_kezel('','DÍJAK','Szárítási díj','Float',0);
+    tarolasi_dij:=cfg_kezel('','DÍJAK','Tárolási díj','Float',0);
+    be_tarolasi_dij:=cfg_kezel('','DÍJAK','Betárolási díj','Float',0);
+    ki_tarolasi_dij:=cfg_kezel('','DÍJAK','Kitárolási díj','Float',0);
+    szallitasi_dij:=cfg_kezel('','DÍJAK','Szállítási díj','Float',0);
+  end
+ else
+  begin
+    with dijkatQ do
+      begin
+        close;
+        SQL.Clear;
+        SQL.Add(' SELECT * FROM dijaszab_kategoriak');
+        SQL.Add(' WHERE id='+kat.ToString);
+        Open;
+        tisztitasi_dij:=FieldByName('tisztitasi').AsFloat;
+        szaritasi_dij:=FieldByName('szaritasi').AsFloat;
+        tarolasi_dij:=FieldByName('tarolasi').AsFloat;
+        be_tarolasi_dij:=FieldByName('betarolasi').AsFloat;
+        ki_tarolasi_dij:=FieldByName('kitarolasi').AsFloat;
+        szallitasi_dij:=FieldByName('szallitasi').AsFloat;
+        close;
+        //ha van vmi külön beállítva azt beállítja
+        SQL.Clear;
+        SQL.Add('SELECT *, COUNT(id) AS van  FROM dijaszab_kategoriak_termek');
+        SQL.Add(' WHERE d_id='+kat.ToString+' AND t_id='+tid.ToString );
+        Open;
+        if FieldByName('van').AsInteger<>0 then
+         begin  //csak akkor írja felül az alap díjszab árakat ha van külön megadva
+          if FieldByName('tisztitasi').AsFloat<>0 then
+           tisztitasi_dij:=FieldByName('tisztitasi').AsFloat;
+          if FieldByName('szaritasi').AsFloat<>0 then
+           szaritasi_dij:=FieldByName('szaritasi').AsFloat;
+          if FieldByName('tarolasi').AsFloat<>0 then
+           tarolasi_dij:=FieldByName('tarolasi').AsFloat;
+          if FieldByName('betarolasi').AsFloat<>0 then
+           be_tarolasi_dij:=FieldByName('betarolasi').AsFloat;
+          if FieldByName('kitarolasi').AsFloat<>0 then
+           ki_tarolasi_dij:=FieldByName('kitarolasi').AsFloat;
+          if FieldByName('szallitasi').AsFloat<>0 then
+           szallitasi_dij:=FieldByName('szallitasi').AsFloat;
+         end;
+        Close;
+      end;
+  end;
 end;
 
 procedure TAF.felhasznalok_jogaijogChange(Sender: TField);
@@ -1115,6 +1380,13 @@ begin
   Automata_merlegjegy_parositaskor:= cfg_kezel('Akkor nyomtat mérlegjegyet ha sikerült párosítani','ALAP','Automata_merlegjegy_parositaskor','Boolean', False);
   //Automata_merlegjegy, Automata_merlegjegy_parositaskor
   dijszab_csoportok:=cfg_kezel('Díjszabási csoport pertnerhez rendelhetõ','DÍJAK','Díjszabási csoportok','Boolean',dijszab_csoportok);
+  fuvarozo_merlegjegyen:= cfg_kezel('Fuvarozó kiválasztható a mérlegjegyhez','ALAP','Fuvarozo_merlegjegyen','Boolean', fuvarozo_merlegjegyen);
+  Clean_way:= cfg_kezel('Clean_way használja','ALAP','Clean_way','Boolean', Clean_way);
+  szarmazasi_hely_latszik:= cfg_kezel('Származási hely megadható a mérlegjegyen','ALAP','Szarmazasi_hely_latszik','Boolean', szarmazasi_hely_latszik);
+
+  Ftp_feltoltes:= cfg_kezel('Exportált fájl feltöltése FTP szerverre','FTP','Ftp_feltoltes','Boolean', Ftp_feltoltes);
+  Ftp_tavoli_mappa:=cfg_kezel('FTP feltöltéshez mappa','FTP','Ftp_tavoli_mappa','String', 'HU1265634700000093');
+  automata_Ftp_feltoltes:= cfg_kezel('Automatikus feltöltés az FTP szerverre','FTP','Automata_Ftp_feltoltes','Boolean', Automata_Ftp_feltoltes);
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1310,6 +1582,15 @@ procedure TAF.merlegjegy_tipus_betoltese;
 var Stream: TResourceStream;
 begin
   Stream := TResourceStream.Create(HInstance, 'Rep_'+merlegjegy_tipus.ToString, RT_RCDATA);
+  frxmerleg.LoadFromStream(Stream);
+  Stream.Free
+end;
+
+procedure TAF.merlegjegy_tipus_betoltese_clean(iranya: string);
+var Stream: TResourceStream;
+begin
+  if (iranya='BE')or(iranya='KI') then Stream := TResourceStream.Create(HInstance, 'CleanWay_'+iranya, RT_RCDATA)
+  else Stream := TResourceStream.Create(HInstance, 'CleanWay_BE', RT_RCDATA);
   frxmerleg.LoadFromStream(Stream);
   Stream.Free
 end;
@@ -2409,6 +2690,80 @@ begin
    Af.Auto_mjegy_kapcs.Close;
    Application.ProcessMessages;
  until programvege ;
+end;
+
+{ Tmjegy_rec_nyom }
+
+procedure Tmjegy_rec_nyom.mjegy_rec_nyom_ures;
+begin
+   with Mjegy_nyom_rec do
+    begin
+     Id:=0;
+     Mjegysorszam:='';
+     Psz :=0;
+     Storno:=False;
+
+     Tulaj_nev:='';
+     Tulaj_cime:='';
+     Tulaj_adosz:='';
+     Tulaj_cjsz:='';
+     Tulaj_telefon:='';
+
+     Partner1_felirat:='';
+     Partner1_nev:='';
+     Partner1_cim:='';
+     Partner2_felirat:='';
+     Partner2_nev:='';
+     Partner2_cim:='';
+     Partner3_felirat:='';
+     Partner3_nev:='';
+     Partner3_cim:='';
+
+     Ekaer:='';
+     Szallev:='';
+     Szarmazasi_hely:='';
+     Megjegyzes:='';
+
+     Rendszam:='';
+     Erkdatum:=0;
+     Erkido:=0;
+     Tavdatum:=0;
+     Tavido:=0;
+     Irany:='';
+
+     Termek_kod:='';
+     Termek_nev:='';
+
+     Merlegkezelo:='';
+
+     Nedvesseg_latszik:=False;
+     Alapnedv:='';
+     Nedv:='';
+     Nedvlevon:='';
+
+     Tisztasag_latszik:=False;
+     Tisztasag:='';
+     Szemet_levon:='';
+
+     Tort_latszik:=False;
+     Tort:='';
+     Tort_tomeg:='';
+
+     Hekto_latszik:=False;
+     Hekto:='';
+
+     Brutto:='';
+     Tara:='';
+     Sz_netto:='';
+     Netto:='';
+
+     Termek_ar:='';
+
+     Tomeg_levon_ny:='';
+     Tomeg_levon_szoveg:='';
+
+     Fs_Parositott:=False;
+    end;
 end;
 
 end.

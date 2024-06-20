@@ -47,7 +47,7 @@ begin
     Open;
     Filtered:=False;
     Filter:='';
-    Filter:=' csoport='+QuotedStr('DÍJAK');
+    Filter:=' csoport='+QuotedStr('DÍJAK')+' AND tulajdonsag<>'+QuotedStr('Díjszabási csoportok') ;
     Filtered:=True;
   end;
 end;

@@ -156,6 +156,18 @@ type
     TarolokT: TFDQuery;
     TarolokDs: TDataSource;
     Button4: TButton;
+    Partnerlist3: TFDQuery;
+    Partnerlist3Ds: TDataSource;
+    lblfuvarozo: TLabel;
+    cbfuvarozo: TJvDBLookupCombo;
+    lblkepnev1: TLabel;
+    lblkepnev2: TLabel;
+    lblkepnev3: TLabel;
+    lblkepnev4: TLabel;
+    lblszabalyos: TLabel;
+    lblszar: TLabel;
+    cbxszar: TComboBox;
+    szarQ: TFDQuery;
     procedure cbxiranyChange(Sender: TObject);
     procedure btnTaramegadasClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
@@ -260,140 +272,220 @@ var sorsz,pcime,egyedi,paramok:String;
 
 procedure elokeszit;
    begin
-     AF.merlegjegy_tipus_betoltese;//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
-     af.merlegjegy_mezgaz;//mezõgazdasági
-     AF.merlegjegy_tomeglevonas;// tömeg levonás
-     with aF.frxmerleg do
-       begin
-         TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
-         if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. példány';
-         if edekaer.Text<>'' then
-          begin
-           TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
-           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
-          end
-          else
-          begin
-           TfrxMemoView(FindObject('frxekaer')).Text:='';
-           TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
-          end;
-
-         TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
-         TfrxMemoView(FindObject('memtulajcime')).Text:=tulajTcim.AsString;
-         if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memtuladosz')).Text:=tulajTadoszam.AsString;
-         if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=tulajTcjsz.AsString;
-         if TfrxMemoView(FindObject('memTelefon'))<>nil then TfrxMemoView(FindObject('memTelefon')).Text:=tulajTTelefon.AsString;
-         if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=merleg_neve;
-         TfrxMemoView(FindObject('mempartner')).Text:=lblpartner.Caption;
-         TfrxMemoView(FindObject('mempartnerneve')).Text:=Partnelist.FieldByName('nev').AsString;
-         TfrxMemoView(FindObject('mempartnercime')).Text:=Partnelist.FieldByName('cim').AsString;//pcime;
-         TfrxMemoView(FindObject('mempartner2')).Text:=lblpartner2.Caption;
-         TfrxMemoView(FindObject('mempartnerneve2')).Text:=Partnerlist2.FieldByName('nev').AsString;
-         TfrxMemoView(FindObject('mempartnercime2')).Text:=Partnerlist2.FieldByName('cim').AsString;
-         TfrxMemoView(FindObject('memelsoido')).Text:=lblelsodat.Caption+' '+lblelsoido.Caption;
-         if not chkrogzitett.checked then
-          begin
-           TfrxMemoView(FindObject('memmasodikido')).Text:=lblmasdat.Caption+' '+lblmasido.Caption;
-          end
-          else
-          begin
-           TfrxMemoView(FindObject('memmasodikido')).text:='';
-          end;
-         TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
-         TfrxMemoView(FindObject('memrendszamok')).Text:=cbxrendszam1.text+' '+cbxrendszam2.text;
-         TfrxMemoView(FindObject('membrutto')).Text:=spBrutto.Value.ToString+' kg';
-         TfrxMemoView(FindObject('memtara')).Text:=sptara.Value.ToString+' kg';
-         TfrxMemoView(FindObject('memnetto')).Text:=spnetto.Value.ToString+' kg';
-         TfrxMemoView(FindObject('memirany')).Text:=cbxirany.Text;
-         TfrxMemoView(FindObject('memmegjegy')).Text:=edmegjegy.Text;
-         TfrxMemoView(FindObject('memtermkod')).Text:=termeklist.FieldByName('kod').AsString;
-         TfrxMemoView(FindObject('memtermnev')).Text:=termeklist.FieldByName('nev').AsString;
-         //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=aF.merlegkezQ.FieldByName('nev').AsString;
-         //TfrxMemoView(FindObject('frxkuj')).Text:=tulajTkuj.AsString;
-         //TfrxMemoView(FindObject('frxktj')).Text:=tulajTktj.AsString;
-         //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=Partnelist.FieldByName('kuj').AsString;
-         //TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
-         TfrxMemoView(FindObject('memszallev')).Text:=edszallev.Text;
-         //ewc
-         if termeklist.FieldByName('ewc').AsString<>'' then
-          begin
-           TfrxMemoView(FindObject('memewc')).Text:=termeklist.FieldByName('ewc').AsString;
-          end
-         else
-         begin
-           TfrxMemoView(FindObject('memewc')).Text:='';
-           TfrxMemoView(FindObject('memewclbl')).Text:='';
-         end;
-        if spnedv.Visible then //nedvesseghez kapcsolodik
-         begin
-          TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
-          TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
-          TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
-          //ezek nem kellenek
-          // TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
-          TfrxMemoView(FindObject('memnedveszt')).Text:='';
-          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
-         end
-        else
-         begin
-          TfrxMemoView(FindObject('memalapnedv')).Text:='';
-          TfrxMemoView(FindObject('memalapnedvlbl')).Text:='';
-          TfrxMemoView(FindObject('memnedv')).Text:='';
-          TfrxMemoView(FindObject('memnedvlbl')).Text:='';
-          TfrxMemoView(FindObject('memnedvlevon')).Text:='';
-          TfrxMemoView(FindObject('memnedvlevonlbl')).Text:='';
-          TfrxMemoView(FindObject('memnedveszt')).Text:='';
-          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
-         end;
-         if sptisztasag.Visible then //szemet
-          begin
-           TfrxMemoView(FindObject('memtisztasag')).Text:=sptisztasag.Value.ToString+' %';
-           TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
-          end
-         else
-          begin
-           TfrxMemoView(FindObject('memtisztasag')).Text:='';
-           TfrxMemoView(FindObject('memtisztasaglbl')).Text:='';
-           TfrxMemoView(FindObject('memszemetlevon')).Text:='';
-           TfrxMemoView(FindObject('memszemetlevonlbl')).Text:='';
-          end;
-         if sptort.Visible then //tort szemek
-          begin
-           TfrxMemoView(FindObject('memtort')).Text:=sptort.Value.ToString+' %';
-           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
-          end
-          else
-          begin
-           TfrxMemoView(FindObject('memtort')).Text:='';
-           TfrxMemoView(FindObject('memtortlbl')).Text:='';
-           TfrxMemoView(FindObject('memtorttomeg')).Text:='';
-           TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
-          end;
-         if sphekto.Visible then
-         begin
-         if TfrxMemoView(FindObject('memhekto'))<>nil then
-          begin
-           TfrxMemoView(FindObject('memhekto')).Text:=sphekto.Value.ToString;
-          end;
-         end
-         else
-         begin
-          if TfrxMemoView(FindObject('memhekto'))<>nil then
-          begin
-           TfrxMemoView(FindObject('memhekto')).Text:='';
-           TfrxMemoView(FindObject('memhektolbl')).Text:='';
-          end;
-         end;
-
-         TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
-         TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
-         TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
-         TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
-         //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
-         if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
-         NezetF.rep_valaszt(aF.frxmerleg,1);
-       end;
+    try
+     if not Clean_way then AF.merlegjegy_tipus_betoltese//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
+     else AF.merlegjegy_tipus_betoltese_clean(UpperCase(Copy(cbxIrany.Text,1,2)));
+    finally
+      af.merlegjegy_mezgaz;//mezõgazdasági
+      AF.merlegjegy_tomeglevonas;// tömeg levonás
+      Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //üresre teszem mindig
     end;
+     while Mjegy_nyom_rec=nil do Sleep(200);
+
+     with Mjegy_nyom_rec do
+      begin
+       Id:=0;
+       Mjegysorszam:=sorsz;
+       Psz :=1;
+       Storno:=False;
+       Tulaj_nev:=tulajTNev.AsString;
+       Tulaj_cime:=tulajTCim.AsString;
+       Tulaj_adosz:=tulajTAdoszam.AsString;
+       Tulaj_cjsz:=tulajTcjsz.AsString;
+       Tulaj_telefon:=tulajTTelefon.AsString;
+       Partner1_felirat:=lblpartner.Caption;
+       Partner1_nev:=Partnelist.FieldByName('nev').AsString;
+       Partner1_cim:=Partnelist.FieldByName('cim').AsString;
+       Partner2_felirat:=lblpartner2.Caption;
+       Partner2_nev:=Partnerlist2.FieldByName('nev').AsString;
+       Partner2_cim:=Partnerlist2.FieldByName('cim').AsString;;
+       Partner3_felirat:='Fuvarozó';
+       Partner3_nev:=Partnerlist3.FieldByName('nev').AsString;
+       Partner3_cim:=Partnerlist3.FieldByName('cim').AsString;
+       Ekaer:=edekaer.Text;
+       Szallev:=edszallev.Text;
+       Szarmazasi_hely:=cbxszar.Text;
+       Megjegyzes:=edmegjegy.Text;
+       Rendszam:=cbxrendszam1.text+' '+cbxrendszam2.text;
+       Erkdatum:=StrToDate(lblelsodat.Caption);
+       Erkido:=StrToTime(lblelsoido.Caption);
+       if not chkrogzitett.checked then
+        begin
+         Tavdatum:=StrToDate(lblmasdat.Caption);;
+         Tavido:=StrToTime(lblmasido.Caption);
+        end;
+       Irany:=cbxIrany.Text;
+       if (not Clean_way) or (cbxIrany.ItemIndex=0) then
+        begin
+          Termek_kod:=termeklist.FieldByName('kod').AsString;
+          Termek_nev:=termeklist.FieldByName('nev').AsString;
+        end
+       else
+        begin
+          case cbxIrany.Text[1] of
+           'B' : begin
+                   Termek_kod:=termeklist.FieldByName('ewc').AsString;
+                   Termek_nev:=termeklist.FieldByName('nev').AsString;
+                 end;
+           'K' : begin
+                   Termek_kod:=termeklist.FieldByName('itj').AsString;
+                   Termek_nev:=termeklist.FieldByName('nev').AsString;
+                 end;
+          end;
+        end;
+       Merlegkezelo:='';
+       Nedvesseg_latszik:=spnedv.Visible;
+       Alapnedv:=spalapnedv.Value.ToString+' %';
+       Nedv:=spnedv.Value.ToString+' %';
+       Nedvlevon:=IntToStr(Round(nedvesseg_vesztes_tomege))+' kg';
+       Tisztasag_latszik:=sptisztasag.Visible;
+       Tisztasag:=sptisztasag.Value.ToString+' %';
+       Szemet_levon:=IntToStr(Round(szemet_tomeg))+' kg';
+       Tort_latszik:=sptort.Visible;
+       Tort:=sptort.Value.ToString+' %';
+       Tort_tomeg:=IntToStr(Round(nyers_tort_szemek_tomege))+' kg';
+       Hekto_latszik:=sphekto.Visible;
+       Hekto:=sphekto.Value.ToString;
+       Brutto:=spBrutto.Value.ToString+' kg';
+       Tara:=sptara.Value.ToString+' kg';
+       Sz_netto:=Spsznetto.Value.ToString+' kg';
+       Netto:=spnetto.Value.ToString+' kg';
+       Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
+       Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
+       Tomeg_levon_szoveg:=levonlookup.DisplayValue;
+      end;
+
+//     with aF.frxmerleg do
+//       begin
+//         TfrxMemoView(FindObject('frxpsz')).Text:='1. példány';
+//         if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. példány';
+//         if edekaer.Text<>'' then
+//          begin
+//           TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
+//           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EKÁER:';
+//          end
+//          else
+//          begin
+//           TfrxMemoView(FindObject('frxekaer')).Text:='';
+//           TfrxMemoView(FindObject('frxekaerlbl')).Text:='';
+//          end;
+//
+//         TfrxMemoView(FindObject('memtulaj')).Text:=tulajTNev.AsString;
+//         TfrxMemoView(FindObject('memtulajcime')).Text:=tulajTcim.AsString;
+//         if TfrxMemoView(FindObject('memtuladosz'))<>nil then TfrxMemoView(FindObject('memtuladosz')).Text:=tulajTadoszam.AsString;
+//         if TfrxMemoView(FindObject('memtulcjsz'))<>nil then TfrxMemoView(FindObject('memtulcjsz')).Text:=tulajTcjsz.AsString;
+//         if TfrxMemoView(FindObject('memTelefon'))<>nil then TfrxMemoView(FindObject('memTelefon')).Text:=tulajTTelefon.AsString;
+//         if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then TfrxMemoView(FindObject('memmerlegtipusa')).Text:=merleg_neve;
+//         TfrxMemoView(FindObject('mempartner')).Text:=lblpartner.Caption;
+//         TfrxMemoView(FindObject('mempartnerneve')).Text:=Partnelist.FieldByName('nev').AsString;
+//         TfrxMemoView(FindObject('mempartnercime')).Text:=Partnelist.FieldByName('cim').AsString;//pcime;
+//         TfrxMemoView(FindObject('mempartner2')).Text:=lblpartner2.Caption;
+//         TfrxMemoView(FindObject('mempartnerneve2')).Text:=Partnerlist2.FieldByName('nev').AsString;
+//         TfrxMemoView(FindObject('mempartnercime2')).Text:=Partnerlist2.FieldByName('cim').AsString;
+//         TfrxMemoView(FindObject('memelsoido')).Text:=lblelsodat.Caption+' '+lblelsoido.Caption;
+//         if not chkrogzitett.checked then
+//          begin
+//           TfrxMemoView(FindObject('memmasodikido')).Text:=lblmasdat.Caption+' '+lblmasido.Caption;
+//          end
+//          else
+//          begin
+//           TfrxMemoView(FindObject('memmasodikido')).text:='';
+//          end;
+//         TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
+//         TfrxMemoView(FindObject('memrendszamok')).Text:=cbxrendszam1.text+' '+cbxrendszam2.text;
+//         TfrxMemoView(FindObject('membrutto')).Text:=spBrutto.Value.ToString+' kg';
+//         TfrxMemoView(FindObject('memtara')).Text:=sptara.Value.ToString+' kg';
+//         TfrxMemoView(FindObject('memnetto')).Text:=spnetto.Value.ToString+' kg';
+//         TfrxMemoView(FindObject('memirany')).Text:=cbxirany.Text;
+//         TfrxMemoView(FindObject('memmegjegy')).Text:=edmegjegy.Text;
+//         TfrxMemoView(FindObject('memtermkod')).Text:=termeklist.FieldByName('kod').AsString;
+//         TfrxMemoView(FindObject('memtermnev')).Text:=termeklist.FieldByName('nev').AsString;
+//         //TfrxMemoView(FindObject('memmerlegkezelo')).Text:=aF.merlegkezQ.FieldByName('nev').AsString;
+//         //TfrxMemoView(FindObject('frxkuj')).Text:=tulajTkuj.AsString;
+//         //TfrxMemoView(FindObject('frxktj')).Text:=tulajTktj.AsString;
+//         //TfrxMemoView(FindObject('frxpartnerkuj')).Text:=Partnelist.FieldByName('kuj').AsString;
+//         //TfrxMemoView(FindObject('frxpartnerktj')).Text:=Partnelist.FieldByName('ktj').AsString;
+//         TfrxMemoView(FindObject('memszallev')).Text:=edszallev.Text;
+//         //ewc
+//         if termeklist.FieldByName('ewc').AsString<>'' then
+//          begin
+//           TfrxMemoView(FindObject('memewc')).Text:=termeklist.FieldByName('ewc').AsString;
+//          end
+//         else
+//         begin
+//           TfrxMemoView(FindObject('memewc')).Text:='';
+//           TfrxMemoView(FindObject('memewclbl')).Text:='';
+//         end;
+//        if spnedv.Visible then //nedvesseghez kapcsolodik
+//         begin
+//          TfrxMemoView(FindObject('memalapnedv')).Text:=spalapnedv.Value.ToString+' %';
+//          TfrxMemoView(FindObject('memnedv')).Text:=spnedv.Value.ToString+' %';
+//          TfrxMemoView(FindObject('memnedvlevon')).Text:=nedvelvon+' kg';
+//          //ezek nem kellenek
+//          // TfrxMemoView(FindObject('memnedveszt')).Text:=nedvesseg+' kg';
+//          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+//          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
+//         end
+//        else
+//         begin
+//          TfrxMemoView(FindObject('memalapnedv')).Text:='';
+//          TfrxMemoView(FindObject('memalapnedvlbl')).Text:='';
+//          TfrxMemoView(FindObject('memnedv')).Text:='';
+//          TfrxMemoView(FindObject('memnedvlbl')).Text:='';
+//          TfrxMemoView(FindObject('memnedvlevon')).Text:='';
+//          TfrxMemoView(FindObject('memnedvlevonlbl')).Text:='';
+//          TfrxMemoView(FindObject('memnedveszt')).Text:='';
+//          TfrxMemoView(FindObject('memnedvesztlbl')).Text:='';
+//         end;
+//         if sptisztasag.Visible then //szemet
+//          begin
+//           TfrxMemoView(FindObject('memtisztasag')).Text:=sptisztasag.Value.ToString+' %';
+//           TfrxMemoView(FindObject('memszemetlevon')).Text:=tisztasag+' kg';
+//          end
+//         else
+//          begin
+//           TfrxMemoView(FindObject('memtisztasag')).Text:='';
+//           TfrxMemoView(FindObject('memtisztasaglbl')).Text:='';
+//           TfrxMemoView(FindObject('memszemetlevon')).Text:='';
+//           TfrxMemoView(FindObject('memszemetlevonlbl')).Text:='';
+//          end;
+//         if sptort.Visible then //tort szemek
+//          begin
+//           TfrxMemoView(FindObject('memtort')).Text:=sptort.Value.ToString+' %';
+//           TfrxMemoView(FindObject('memtorttomeg')).Text:=IntToStr(Round(ttom))+' kg';
+//          end
+//          else
+//          begin
+//           TfrxMemoView(FindObject('memtort')).Text:='';
+//           TfrxMemoView(FindObject('memtortlbl')).Text:='';
+//           TfrxMemoView(FindObject('memtorttomeg')).Text:='';
+//           TfrxMemoView(FindObject('memtorttomeglbl')).Text:='';
+//          end;
+//         if sphekto.Visible then
+//         begin
+//         if TfrxMemoView(FindObject('memhekto'))<>nil then
+//          begin
+//           TfrxMemoView(FindObject('memhekto')).Text:=sphekto.Value.ToString;
+//          end;
+//         end
+//         else
+//         begin
+//          if TfrxMemoView(FindObject('memhekto'))<>nil then
+//          begin
+//           TfrxMemoView(FindObject('memhekto')).Text:='';
+//           TfrxMemoView(FindObject('memhektolbl')).Text:='';
+//          end;
+//         end;
+//
+//         TfrxMemoView(FindObject('memsznetto')).Text:=Spsznetto.Value.ToString+' kg';
+//         TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
+//         TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
+//         TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
+//         //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
+//         if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+//         NezetF.rep_valaszt(aF.frxmerleg,1);
+//       end;
+   end;
 
    procedure elozo_mentese;
    var c:String;
@@ -506,7 +598,11 @@ begin
   if Sender=btnNyomtatas then
   begin
     NezetF.nyomtatva:=false;
-    elokeszit;
+    try
+     elokeszit;
+    finally
+     NezetF.rep_valaszt(aF.frxmerleg,1);
+    end;
     if not NezetF.nyomtatva then  exit;
   end;
   if spegysegtomeg.Value=0 then
@@ -651,6 +747,61 @@ begin
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
       ParamByName('szaraz_tort_szemek').AsInteger:=Round(tort_keszmenny);
+      if fuvarozo_merlegjegyen then
+       begin
+        ParamByName('p3_id').AsInteger:=Partnerlist3.FieldByName('id').AsInteger;
+        ParamByName('p3_kod').AsString:=Partnerlist3.FieldByName('kod').AsString;
+        ParamByName('p3_nev').AsString:=Partnerlist3.FieldByName('nev').AsString;
+        ParamByName('p3_cim').AsString:=Partnerlist3.FieldByName('cim').AsString;;
+        ParamByName('p3_kuj').AsString:=Partnerlist3.FieldByName('kuj').AsString;
+        ParamByName('p3_ktj').AsString:=Partnerlist3.FieldByName('ktj').AsString;
+       end
+       else
+       begin
+        ParamByName('p3_id').AsInteger:=0;
+        ParamByName('p3_kod').AsString:='';
+        ParamByName('p3_nev').AsString:='';
+        ParamByName('p3_cim').AsString:='';
+        ParamByName('p3_kuj').AsString:='';
+        ParamByName('p3_ktj').AsString:='';
+       end;
+        ParamByName('kepnev1').AsString:=lblkepnev1.Caption;
+        ParamByName('kepnev2').AsString:=lblkepnev2.Caption;
+        ParamByName('kepnev3').AsString:=lblkepnev3.Caption;
+        ParamByName('kepnev4').AsString:=lblkepnev4.Caption;
+        ParamByName('Szabalyos_meres').AsString:=lblszabalyos.Caption;
+        ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
+        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
+        //dijak
+      if cbxirany.ItemIndex in [1,2] then
+      begin
+        ParamByName('tarolasi_dij').AsFloat:=spszNetto.Value*tarolasi_dij;
+        ParamByName('szaritasi_dij').AsFloat:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
+        ParamByName('tisztitasi_dij').AsFloat:=spnetto.Value*tisztitasi_dij;
+        //ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
+       // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
+        ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
+        case cbxirany.Text[1] of
+         'B':begin
+              ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
+              //ShowMessage(VarToStr(spszNetto.Value*be_tarolasi_dij));
+              ParamByName('kitarolasi_dij').AsFloat:=0;
+             end;
+         'K':begin
+              ParamByName('betarolasi_dij').AsFloat:=0;
+              ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
+             end;
+        end
+      end
+      else
+        begin
+          ParamByName('tarolasi_dij').AsFloat:=0;
+          ParamByName('szaritasi_dij').AsFloat:=0;
+          ParamByName('tisztitasi_dij').AsFloat:=0;
+          ParamByName('betarolasi_dij').AsFloat:=0;
+          ParamByName('kitarolasi_dij').AsFloat:=0;
+          ParamByName('szallitasi_dij').AsFloat:=0;
+        end;
 
      // SQL.SaveToFile(ExtractFileDir(ExtractFilePath(application.exename))+'\sqltext.txt');
       ExecSQL;
@@ -768,11 +919,33 @@ procedure TMermodF.fo(ideje: Integer);
      TempQ.Open('SELECT * FROM '+Temp_tabla_neve);
     end;
    end;
+   procedure szarcb_feltoltese;
+    begin
+      cbxszar.Clear;
+      if not cbxszar.Visible then exit;
+      with szarQ do
+       begin
+         close;
+         open;
+         first;
+         DisableControls;
+         while not eof do
+          begin
+            cbxszar.Items.Add(Fields[0].AsString);
+            next;
+          end;
+          close;
+          cbxszar.ItemIndex:=-1;
+       end;
+    end;
 begin
 try
  masolas_tempbe;
  Partnelist.Open;
  Partnerlist2.Open;
+ Partnerlist3.Open;
+ lblfuvarozo.Visible:=fuvarozo_merlegjegyen;
+ cbfuvarozo.Visible:=fuvarozo_merlegjegyen;
  termeklist.Open;
  aF.merlegkezQ.Open;
  TarolokT.Open;
@@ -809,6 +982,9 @@ try
   lblekaer.Visible:=ekaer_felhasz<>'';
   edekaer.Visible:=ekaer_felhasz<>'';
   btnekaer.visible:=ekaer_felhasz<>'';
+  lblszar.Visible:=szarmazasi_hely_latszik;
+  cbxszar.Visible:=szarmazasi_hely_latszik;
+  szarcb_feltoltese;
 finally
  lblsorszam.Caption:=TempQ.FieldByName('sorszam').AsString;
 
@@ -823,6 +999,7 @@ finally
  chkmasodik_kezi.Checked:=TempQ.FieldByName('masodik_kezi').AsBoolean;
  partnerlookup.KeyValue:=TempQ.FieldByName('p_id').AsInteger;
  partnerlookup2.KeyValue:=TempQ.FieldByName('p2_id').AsInteger;
+ cbfuvarozo.KeyValue:=TempQ.FieldByName('p3_id').AsInteger;
  termeklookup.KeyValue:=TempQ.FieldByName('termek_id').AsInteger;
  termeklookupCloseUp(self);
  chkkerekites.Checked:=TempQ.FieldByName('kerekites').AsBoolean;
@@ -849,6 +1026,12 @@ finally
  cbxrendszam2.ItemIndex:=cbxrendszam2.Items.IndexOf(TempQ.FieldByName('rendszam2').AsString);
  taroloklookup.KeyValue:=TempQ.FieldByName('tarolo_id').AsInteger;
  kezelolookup.KeyValue:=TempQ.FieldByName('merlegelo').AsString;
+ lblkepnev1.Caption:=TempQ.fieldbyName('Kepnev1'). Asstring;
+ lblkepnev2.Caption:=TempQ.fieldbyName('Kepnev2'). Asstring;
+ lblkepnev3.Caption:=TempQ.fieldbyName('Kepnev3'). Asstring;
+ lblkepnev4.Caption:=TempQ.fieldbyName('Kepnev4'). Asstring;
+ lblszabalyos.Caption:=TempQ.fieldbyName('Szabalyos_meres'). Asstring;
+ cbxszar.Text:=TempQ.FieldByName('szarmazasi_hely').AsString;
  ShowModal
 end;
 end;

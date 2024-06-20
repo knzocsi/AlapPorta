@@ -2,7 +2,7 @@ object MermodF: TMermodF
   Left = 0
   Top = 0
   Caption = 'M'#233'rlegjegy m'#243'dos'#237't'#225'sa'
-  ClientHeight = 437
+  ClientHeight = 491
   ClientWidth = 1045
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object MermodF: TMermodF
     Left = 0
     Top = 0
     Width = 1045
-    Height = 437
+    Height = 491
     Align = alClient
     TabOrder = 0
     object lblpartner: TLabel
@@ -45,7 +45,7 @@ object MermodF: TMermodF
     end
     object Label1: TLabel
       Left = 9
-      Top = 204
+      Top = 235
       Width = 39
       Height = 13
       Caption = 'Term'#233'k:'
@@ -66,21 +66,21 @@ object MermodF: TMermodF
     end
     object Label9: TLabel
       Left = 185
-      Top = 358
+      Top = 389
       Width = 34
       Height = 13
       Caption = 'Brutto:'
     end
     object Label10: TLabel
       Left = 293
-      Top = 358
+      Top = 389
       Width = 26
       Height = 13
       Caption = 'T'#225'ra:'
     end
     object Label11: TLabel
       Left = 401
-      Top = 358
+      Top = 389
       Width = 31
       Height = 13
       Caption = 'Nett'#243':'
@@ -165,7 +165,7 @@ object MermodF: TMermodF
     end
     object Label8: TLabel
       Left = 8
-      Top = 321
+      Top = 352
       Width = 61
       Height = 13
       Caption = 'Megjegyz'#233's:'
@@ -179,7 +179,7 @@ object MermodF: TMermodF
     end
     object lblekaer: TLabel
       Left = 8
-      Top = 358
+      Top = 389
       Width = 39
       Height = 13
       Caption = 'EK'#193'ER: '
@@ -193,7 +193,7 @@ object MermodF: TMermodF
     end
     object lblsznetto: TLabel
       Left = 618
-      Top = 358
+      Top = 389
       Width = 46
       Height = 13
       Caption = 'Sz.Nett'#243':'
@@ -214,7 +214,7 @@ object MermodF: TMermodF
     end
     object lbl_tomeg_levon: TLabel
       Left = 510
-      Top = 359
+      Top = 390
       Width = 76
       Height = 13
       Caption = 'T'#246'meg levon'#225's:'
@@ -232,6 +232,60 @@ object MermodF: TMermodF
       Font.Style = [fsBold]
       ParentFont = False
     end
+    object lblfuvarozo: TLabel
+      Left = 7
+      Top = 200
+      Width = 49
+      Height = 13
+      Caption = 'Fuvaroz'#243':'
+    end
+    object lblkepnev1: TLabel
+      Left = 184
+      Top = 8
+      Width = 51
+      Height = 13
+      Caption = 'lblkepnev1'
+      Visible = False
+    end
+    object lblkepnev2: TLabel
+      Left = 256
+      Top = 8
+      Width = 51
+      Height = 13
+      Caption = 'lblkepnev2'
+      Visible = False
+    end
+    object lblkepnev3: TLabel
+      Left = 360
+      Top = 8
+      Width = 51
+      Height = 13
+      Caption = 'lblkepnev3'
+      Visible = False
+    end
+    object lblkepnev4: TLabel
+      Left = 448
+      Top = 8
+      Width = 51
+      Height = 13
+      Caption = 'lblkepnev4'
+      Visible = False
+    end
+    object lblszabalyos: TLabel
+      Left = 600
+      Top = 8
+      Width = 57
+      Height = 13
+      Caption = 'lblszabalyos'
+      Visible = False
+    end
+    object lblszar: TLabel
+      Left = 743
+      Top = 390
+      Width = 85
+      Height = 13
+      Caption = 'Sz'#225'rzmaz'#225'si hely:'
+    end
     object cbxirany: TComboBox
       Left = 60
       Top = 45
@@ -248,7 +302,7 @@ object MermodF: TMermodF
     end
     object btnMentes: TButton
       Left = 424
-      Top = 401
+      Top = 432
       Width = 137
       Height = 25
       Caption = 'Ment'#233's'
@@ -282,7 +336,7 @@ object MermodF: TMermodF
     end
     object spBrutto: TSpinEdit
       Left = 185
-      Top = 374
+      Top = 405
       Width = 100
       Height = 22
       MaxValue = 0
@@ -293,7 +347,7 @@ object MermodF: TMermodF
     end
     object sptara: TSpinEdit
       Left = 293
-      Top = 374
+      Top = 405
       Width = 100
       Height = 22
       MaxValue = 0
@@ -304,7 +358,7 @@ object MermodF: TMermodF
     end
     object spnetto: TSpinEdit
       Left = 401
-      Top = 374
+      Top = 405
       Width = 100
       Height = 22
       MaxValue = 0
@@ -315,7 +369,7 @@ object MermodF: TMermodF
     end
     object edmegjegy: TEdit
       Left = 8
-      Top = 336
+      Top = 367
       Width = 665
       Height = 21
       TabOrder = 8
@@ -331,7 +385,7 @@ object MermodF: TMermodF
     end
     object btn1: TButton
       Left = 536
-      Top = 241
+      Top = 272
       Width = 137
       Height = 17
       Caption = 'Term'#233'kek list'#225'ja'
@@ -384,7 +438,7 @@ object MermodF: TMermodF
     end
     object edekaer: TEdit
       Left = 8
-      Top = 373
+      Top = 404
       Width = 161
       Height = 21
       TabOrder = 15
@@ -430,7 +484,7 @@ object MermodF: TMermodF
     end
     object pnlmezgaz: TPanel
       Left = 8
-      Top = 258
+      Top = 289
       Width = 665
       Height = 63
       TabOrder = 20
@@ -669,7 +723,7 @@ object MermodF: TMermodF
     end
     object termeklookup: TJvDBLookupCombo
       Left = 7
-      Top = 220
+      Top = 251
       Width = 665
       Height = 21
       DisplayAllFields = True
@@ -684,7 +738,7 @@ object MermodF: TMermodF
     end
     object Spsznetto: TSpinEdit
       Left = 618
-      Top = 372
+      Top = 403
       Width = 100
       Height = 22
       MaxValue = 0
@@ -695,7 +749,7 @@ object MermodF: TMermodF
     end
     object btnNyomtatas: TButton
       Left = 584
-      Top = 401
+      Top = 432
       Width = 137
       Height = 25
       Caption = 'Nyomtat'#225's'
@@ -746,7 +800,7 @@ object MermodF: TMermodF
     end
     object btnekaer: TButton
       Left = 7
-      Top = 400
+      Top = 431
       Width = 75
       Height = 25
       Caption = 'EK'#193'ER k'#233'r'#233's'
@@ -767,7 +821,7 @@ object MermodF: TMermodF
     end
     object sp_tomeg_levon: TSpinEdit
       Left = 510
-      Top = 373
+      Top = 404
       Width = 100
       Height = 22
       MaxValue = 0
@@ -798,12 +852,36 @@ object MermodF: TMermodF
     end
     object Button4: TButton
       Left = 958
-      Top = 400
+      Top = 431
       Width = 75
       Height = 25
       Caption = 'M'#233'gsem'
       TabOrder = 34
       OnClick = Button4Click
+    end
+    object cbfuvarozo: TJvDBLookupCombo
+      Left = 7
+      Top = 214
+      Width = 665
+      Height = 21
+      DropDownWidth = 1024
+      DisplayAllFields = True
+      DisplayEmpty = '----Nincs kiv'#225'lasztva----'
+      EmptyValue = '0'
+      ListStyle = lsDelimited
+      LookupField = 'ID'
+      LookupDisplay = 'combo;cim;'
+      LookupSource = Partnerlist3Ds
+      TabOrder = 35
+      OnChange = partnerlookup2Change
+    end
+    object cbxszar: TComboBox
+      Left = 743
+      Top = 403
+      Width = 176
+      Height = 21
+      TabOrder = 36
+      Text = 'cbxszar'
     end
   end
   object TempQ: TFDQuery
@@ -847,22 +925,22 @@ object MermodF: TMermodF
   end
   object Partnerlist2Ds: TDataSource
     DataSet = Partnerlist2
-    Left = 320
-    Top = 177
+    Left = 304
+    Top = 153
   end
   object Partnerlist2: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner_combo ORDER BY Nev ASC;')
-    Left = 256
-    Top = 177
+    Left = 200
+    Top = 153
   end
   object termeklist: TFDQuery
     Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
-    Left = 272
-    Top = 225
+    Left = 240
+    Top = 281
     object termeklistID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -981,7 +1059,7 @@ object MermodF: TMermodF
   object termeklistDs: TDataSource
     DataSet = termeklist
     Left = 304
-    Top = 217
+    Top = 313
   end
   object levon_szovegT: TFDTable
     IndexFieldNames = 'ID'
@@ -1146,5 +1224,26 @@ object MermodF: TMermodF
     DataSet = TarolokT
     Left = 800
     Top = 256
+  end
+  object Partnerlist3: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner_combo ORDER BY Nev ASC;')
+    Left = 408
+    Top = 169
+  end
+  object Partnerlist3Ds: TDataSource
+    DataSet = Partnerlist3
+    Left = 480
+    Top = 169
+  end
+  object szarQ: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT DISTINCT(szarmazasi_hely)'
+      ' FROM merlegjegy'
+      'ORDER BY szarmazasi_hely ASC')
+    Left = 880
+    Top = 415
   end
 end

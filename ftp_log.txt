@@ -10,3 +10,110 @@
 2023.10.24. 9:40:10: Adatbázis tömörítése...
 2023.10.24. 9:40:12: Tömorített adatbázis fájl másolása: C:\mentes\adatbazis\20231024_094007.7z
 2023.10.24. 9:40:12: Tömorített adatbázis fájl másolva ide: C:\backup_teszt\20231024_094007.7z
+2024.06.14 10:25:28: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 10:25:28: Connecting to 87.229.69.135.
+2024.06.14 10:25:28: Connected.
+2024.06.14 10:25:28: Connection established
+2024.06.14 10:25:28: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 10:25:28: Starting FTP transfer
+2024.06.14 10:25:28: Transfer complete
+2024.06.14 10:25:28: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20231212_20.ods feltöltve
+2024.06.14 10:25:28: Starting FTP transfer
+2024.06.14 10:25:28: Transfer complete
+2024.06.14 10:25:28: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240205_20.ods feltöltve
+2024.06.14 10:25:29: Starting FTP transfer
+2024.06.14 10:25:29: Transfer complete
+2024.06.14 10:25:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240206_20.ods feltöltve
+2024.06.14 10:25:29: Starting FTP transfer
+2024.06.14 10:25:29: Transfer complete
+2024.06.14 10:25:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240209_20.ods feltöltve
+2024.06.14 10:25:29: Starting FTP transfer
+2024.06.14 10:25:29: Transfer complete
+2024.06.14 10:25:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240210_20.ods feltöltve
+2024.06.14 10:25:29: Starting FTP transfer
+2024.06.14 10:25:29: Transfer complete
+2024.06.14 10:25:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240214_20.ods feltöltve
+2024.06.14 10:25:29: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240215_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240220_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240223_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240224_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240312_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240422_20.ods feltöltve
+2024.06.14 10:25:30: Starting FTP transfer
+2024.06.14 10:25:30: Transfer complete
+2024.06.14 10:25:30: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 10:25:30: Excel fájl(ok) feltöltve
+2024.06.14 13:24:37: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 13:24:37: Connecting to 87.229.69.135.
+2024.06.14 13:24:37: Connected.
+2024.06.14 13:24:37: Connection established
+2024.06.14 13:24:55: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 13:24:55: Starting FTP transfer
+2024.06.14 13:24:55: Transfer complete
+2024.06.14 13:24:55: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 13:24:55: Excel fájl(ok) feltöltve
+2024.06.14 13:24:55: Disconnecting.
+2024.06.14 13:24:55: Disconnected.
+2024.06.14 13:24:37: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 13:24:37: Connecting to 87.229.69.135.
+2024.06.14 13:24:37: Connected.
+2024.06.14 13:24:37: Connection established
+2024.06.14 13:24:55: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 13:24:55: Starting FTP transfer
+2024.06.14 13:24:55: Transfer complete
+2024.06.14 13:24:55: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 13:24:55: Excel fájl(ok) feltöltve
+2024.06.14 13:24:55: Disconnecting.
+2024.06.14 13:24:55: Disconnected.
+2024.06.14 13:32:20: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 13:32:20: Connecting to 87.229.69.135.
+2024.06.14 13:32:20: Connected.
+2024.06.14 13:32:21: Connection established
+2024.06.14 13:32:29: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 13:32:29: Starting FTP transfer
+2024.06.14 13:32:29: Transfer complete
+2024.06.14 13:32:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 13:32:29: Excel fájl(ok) feltöltve
+2024.06.14 13:32:29: Disconnecting.
+2024.06.14 13:32:29: Disconnected.
+2024.06.14 13:32:20: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 13:32:20: Connecting to 87.229.69.135.
+2024.06.14 13:32:20: Connected.
+2024.06.14 13:32:21: Connection established
+2024.06.14 13:32:29: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 13:32:29: Starting FTP transfer
+2024.06.14 13:32:29: Transfer complete
+2024.06.14 13:32:29: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 13:32:29: Excel fájl(ok) feltöltve
+2024.06.14 13:32:29: Disconnecting.
+2024.06.14 13:32:29: Disconnected.
+2024.06.14 13:35:18: Disconnecting.
+2024.06.14 13:35:19: Disconnected.
+2024.06.14 13:35:18: Disconnecting.
+2024.06.14 13:35:19: Disconnected.
+2024.06.14 13:35:40: Connecting to 87.229.69.135.
+2024.06.14 13:51:30: Resolving hostname ftp.knzsoft.hu.maxer.hu.
+2024.06.14 13:51:30: Connecting to 87.229.69.135.
+2024.06.14 13:51:30: Connected.
+2024.06.14 13:51:30: Connection established
+2024.06.14 13:51:30: Starting FTP transfer
+2024.06.14 13:51:30: Transfer complete
+2024.06.14 13:51:30: Új excel fájl(ok) feltöltése FTP-re
+2024.06.14 13:51:30: Starting FTP transfer
+2024.06.14 13:51:31: Transfer complete
+2024.06.14 13:51:31: N:\Delphi_10_4\Merleges\Alap\Win32\Libre_export\20240614_24.xlsx feltöltve
+2024.06.14 13:51:31: Excel fájl(ok) feltöltve
+2024.06.14 13:51:31: Disconnecting.
+2024.06.14 13:51:31: Disconnected.

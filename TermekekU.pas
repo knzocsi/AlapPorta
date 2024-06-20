@@ -285,6 +285,11 @@ begin
     ShowMessage('Ez a név már foglalt!');
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
    end;
+ if Length(DBEdMe.Text)<1 then
+  begin
+    ShowMessage('Adja meg a mértékegységet');
+    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
+  end;
 end;
 
 end.

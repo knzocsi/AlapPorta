@@ -18,12 +18,12 @@ object LibreExcelF: TLibreExcelF
     Left = 0
     Top = 0
     Width = 595
-    Height = 65
+    Height = 89
     Align = alTop
     TabOrder = 0
     object Label1: TLabel
       Left = 8
-      Top = 47
+      Top = 72
       Width = 73
       Height = 13
       Caption = 'El'#233'rhet'#337' mez'#243'k'
@@ -51,7 +51,7 @@ object LibreExcelF: TLibreExcelF
       TabOrder = 1
     end
     object Exportbtn: TButton
-      Left = 408
+      Left = 448
       Top = 16
       Width = 75
       Height = 25
@@ -59,12 +59,38 @@ object LibreExcelF: TLibreExcelF
       TabOrder = 2
       OnClick = ExportbtnClick
     end
+    object chkftp: TCheckBox
+      Left = 320
+      Top = 20
+      Width = 97
+      Height = 17
+      Caption = 'Felt'#246'lt'#233's FTP-re'
+      TabOrder = 3
+    end
+    object chkosszes: TCheckBox
+      Left = 320
+      Top = 66
+      Width = 73
+      Height = 17
+      Caption = #214'sszesre'
+      TabOrder = 4
+      OnClick = chkosszesClick
+    end
+    object btnbeall_ment: TButton
+      Left = 448
+      Top = 58
+      Width = 129
+      Height = 25
+      Caption = 'Be'#225'll'#237't'#225'sok ment'#233'se'
+      TabOrder = 5
+      OnClick = btnbeall_mentClick
+    end
   end
   object leszgrid: TJvDBUltimGrid
     Left = 0
-    Top = 65
+    Top = 89
     Width = 595
-    Height = 416
+    Height = 392
     Align = alClient
     DataSource = JvMlehetDs
     TabOrder = 1
@@ -120,5 +146,22 @@ object LibreExcelF: TLibreExcelF
   object SaveDialog: TSaveDialog
     Left = 519
     Top = 8
+  end
+  object cfg_exportT: TFDTable
+    Connection = AF.Kapcs
+    TableName = 'cfg_export'
+    Left = 440
+    Top = 96
+  end
+  object cfg_export_mezokT: TFDTable
+    Connection = AF.Kapcs
+    TableName = 'cfg_export_mezok'
+    Left = 440
+    Top = 160
+  end
+  object TQ: TFDQuery
+    Connection = AF.Kapcs
+    Left = 432
+    Top = 232
   end
 end

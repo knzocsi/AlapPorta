@@ -228,9 +228,9 @@
       object Label1: TLabel
         Left = 5
         Top = 97
-        Width = 15
+        Width = 43
         Height = 13
-        Caption = 'Itj:'
+        Caption = 'Itj/VTSZ:'
       end
       object Label2: TLabel
         Left = 144
@@ -270,9 +270,9 @@
       object Label6: TLabel
         Left = 712
         Top = 96
-        Width = 27
+        Width = 51
         Height = 13
-        Caption = 'EWC:'
+        Caption = 'EWC/HAK:'
       end
       object Label8: TLabel
         Left = 3

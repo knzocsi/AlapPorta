@@ -3,7 +3,7 @@ object PartnerekF: TPartnerekF
   Top = 0
   Caption = 'Partnerek'
   ClientHeight = 369
-  ClientWidth = 770
+  ClientWidth = 824
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,13 +13,14 @@ object PartnerekF: TPartnerekF
   OldCreateOrder = False
   Position = poMainFormCenter
   OnActivate = FormActivate
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 770
+    Width = 824
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -66,9 +67,9 @@ object PartnerekF: TPartnerekF
   object pcListaReszlet: TPageControl
     Left = 0
     Top = 41
-    Width = 770
+    Width = 824
     Height = 328
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -76,7 +77,7 @@ object PartnerekF: TPartnerekF
       object PartnerGrid: TDBGrid
         Left = 0
         Top = 57
-        Width = 762
+        Width = 816
         Height = 243
         Align = alClient
         DataSource = PartnerDS
@@ -87,6 +88,7 @@ object PartnerekF: TPartnerekF
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnCellClick = PartnerGridCellClick
         OnMouseUp = PartnerGridMouseUp
         Columns = <
           item
@@ -221,7 +223,7 @@ object PartnerekF: TPartnerekF
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 762
+        Width = 816
         Height = 57
         Align = alTop
         TabOrder = 1
@@ -410,6 +412,13 @@ object PartnerekF: TPartnerekF
         Width = 56
         Height = 13
         Caption = 'Ad'#243'.m.k'#243'd:'
+      end
+      object lbldijszab: TLabel
+        Left = 576
+        Top = 250
+        Width = 97
+        Height = 13
+        Caption = 'D'#237'jszab'#225's kateg'#243'ria:'
       end
       object DBNavigator1: TDBNavigator
         Left = 409
@@ -603,8 +612,8 @@ object PartnerekF: TPartnerekF
         TabOrder = 20
       end
       object bdchkMagansz: TDBCheckBox
-        Left = 644
-        Top = 272
+        Left = 612
+        Top = 130
         Width = 97
         Height = 17
         Caption = 'Mag'#225'nszem'#233'ly'
@@ -642,6 +651,30 @@ object PartnerekF: TPartnerekF
         MaxLength = 2
         TabOrder = 24
       end
+      object cbdijkat: TJvDBLookupCombo
+        Left = 573
+        Top = 264
+        Width = 145
+        Height = 21
+        DataField = 'd_id'
+        DataSource = PartnerDS
+        DisplayEmpty = '---Nincs kiv'#225'lasztva---'
+        EmptyValue = '0'
+        LookupField = 'id'
+        LookupDisplay = 'nev'
+        LookupSource = dijkatDs
+        TabOrder = 25
+      end
+      object btndijszab: TButton
+        Left = 728
+        Top = 264
+        Width = 75
+        Height = 33
+        Caption = 'Dijszab'#225's kateg'#243'ri'#225'k'
+        TabOrder = 26
+        WordWrap = True
+        OnClick = btndijszabClick
+      end
     end
   end
   object PartnerT: TFDTable
@@ -660,5 +693,16 @@ object PartnerekF: TPartnerekF
     DataSet = PartnerT
     Left = 344
     Top = 72
+  end
+  object dijkatT: TFDTable
+    Connection = AF.Kapcs
+    TableName = 'dijaszab_kategoriak'
+    Left = 648
+    Top = 160
+  end
+  object dijkatDs: TDataSource
+    DataSet = dijkatT
+    Left = 696
+    Top = 160
   end
 end
