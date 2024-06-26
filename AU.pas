@@ -533,6 +533,7 @@ var
   Automata_parositas:boolean;
   Automata_merlegjegy, Automata_merlegjegy_parositaskor:Boolean;
   Automata_mjegy_Rec : Tautomata_mjegy_rec;
+  Automata_mjegy_nyom_sulyhatar:Integer=0;
 
   Mjegy_nyom_rec: Tmjegy_rec_nyom;
 
@@ -1378,6 +1379,7 @@ begin
 
   Automata_merlegjegy:= cfg_kezel('Minden forgalomba került mérésnél nyomtat mérlegjegyet','ALAP','Automata_merlegjegy','Boolean', False);
   Automata_merlegjegy_parositaskor:= cfg_kezel('Akkor nyomtat mérlegjegyet ha sikerült párosítani','ALAP','Automata_merlegjegy_parositaskor','Boolean', False);
+  Automata_mjegy_nyom_sulyhatar:=cfg_kezel('Akkor nyomtat mérlegjegyet ha túllépi a súlyhatárt','ALAP','Automata_mjegy_nyom_sulyhatar','Integer',20000);
   //Automata_merlegjegy, Automata_merlegjegy_parositaskor
   dijszab_csoportok:=cfg_kezel('Díjszabási csoport pertnerhez rendelhetõ','DÍJAK','Díjszabási csoportok','Boolean',dijszab_csoportok);
   fuvarozo_merlegjegyen:= cfg_kezel('Fuvarozó kiválasztható a mérlegjegyhez','ALAP','Fuvarozo_merlegjegyen','Boolean', fuvarozo_merlegjegyen);
@@ -2646,7 +2648,8 @@ begin
            while not Eof do
            begin
             try
-              Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
+              if FieldByName('betomeg').AsInteger>Automata_mjegy_nyom_sulyhatar then
+               Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
             finally
               Sleep(200);
               Next;
@@ -2674,7 +2677,8 @@ begin
            while not Eof do
            begin
             try
-             Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
+             if ABS(FieldByName('betomeg').AsInteger-FieldByName('kitomeg').AsInteger)>Automata_mjegy_nyom_sulyhatar then
+              Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
             finally
              Sleep(200);
              Next;

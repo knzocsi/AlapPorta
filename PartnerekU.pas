@@ -169,7 +169,7 @@ end;
 
 procedure TPartnerekF.FormActivate(Sender: TObject);
 begin
-  OnActivate:=nil;
+ // OnActivate:=nil;
   pcListaReszlet.ActivePage:=TTabSheet(tbLista);
   lbldijszab.Visible:=dijszab_csoportok;
   cbdijkat.Visible:=dijszab_csoportok;
