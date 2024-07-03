@@ -208,6 +208,7 @@ type
     SOAPAllapottmr: TTimer;
     Djak1: TMenuItem;
     Djszabsikategrik1: TMenuItem;
+    tmrForgalom_frissites: TTimer;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -302,6 +303,7 @@ type
     procedure Djak1Click(Sender: TObject);
     procedure sorompo_kezeles(merleg,sorompo:Integer;nyit:boolean);
     procedure Djszabsikategrik1Click(Sender: TObject);
+    procedure tmrForgalom_frissitesTimer(Sender: TObject);
 
 
   private
@@ -619,12 +621,14 @@ var hwQ: TFDQuery;
 
 begin
   inherited;
-  hwQ:= TFDQuery.Create(nil);
-  hwKap :=TFDConnection.Create(nil);
-  hwKap.Params:=Af.Kapcs.Params;
-  hwKap.Connected:=true;
-  hwQ.Connection:= hwKap;
-  with hwQ do
+  try
+    hwQ:= TFDQuery.Create(nil);
+    hwKap :=TFDConnection.Create(nil);
+    hwKap.Params:=Af.Kapcs.Params;
+    hwKap.Connected:=true;
+    hwQ.Connection:= hwKap;
+    if hwKap.Connected then
+    with hwQ do
     begin
       close;
       SQL.Text:= af.HardverQ.SQL.Text;
@@ -649,16 +653,13 @@ begin
     end;
   hwKap.Connected:=False;
   hwKap.Free;
+  finally
+
+  end;
 
 
   exit;
-  SQL_LekTH:=SQL_Lekerdezes_Thread.Create(True);
-  SQL_LekTH.szmerleg:=merleg;
-  SQL_LekTH.eszkoz:=Eszkoznev;
-  SQL_LekTH.eredmeny:=3;
-  SQL_LekTH.Resume;
-  SQL_LekTH.WaitFor;
-  Result:=SQL_LekTH.eredmeny;
+  
 
 end;
 
@@ -836,6 +837,13 @@ end;
 
 
 
+
+procedure TFoF.tmrForgalom_frissitesTimer(Sender: TObject);
+begin
+  tmrForgalom_frissites.Enabled:=false;
+  if AF.ForgalomQ.Active then  AF.ForgalomQ.Refresh;
+  tmrForgalom_frissites.Enabled:=true;
+end;
 
 procedure TFoF.tmrKep_MasolasTimer(Sender: TObject);
 var SearchRec: TSearchRec;
@@ -1163,6 +1171,7 @@ begin
   for i:=0 to 15 do PLC_Lekerdezett_Valasz[i]:=false;
 
   tbForgalom.TabVisible:=forgalom_latszik;
+  tmrForgalom_frissites.Enabled:=forgalom_latszik;
   sbtnSorszamhivas.Visible:=Hivoszamhasznalat;
   mnSzablyosmrlegentartozkodsfigyels1.Checked:=szabalyos_merlegen_tartozkodas_figyeles;
   if not automata_kezelo then
@@ -2233,6 +2242,8 @@ begin
     StatusBar1.Panels[1].Text := soc;
     socketrendszam := copy(soc, 1, Pos(';', soc) - 1);
     Delete(soc,1,Pos(';', soc));
+
+
     //Ha számmal kezdõdik, akkor csatorna beírása
     if (soc<>'' ) and (soc[1] in ['0'..'9']) then
     begin
@@ -2249,8 +2260,7 @@ begin
         Delete(soc,1,Pos(';', soc));
       end;
     end
-    else csat:='';
-
+    else csat:='';//;socketrendszam := copy(soc, 1, Pos(';', soc) - 1);
     socketkep := copy(soc, Pos(';', soc) + 1, Length(soc) - Pos(';', soc) - 1);
 
     //új rendszer
@@ -2716,7 +2726,7 @@ begin
 
       end;
     end;
-    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+szamlalo_szoveg;
+    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+szamlalo_szoveg+':'+nyomtatas_szamlalo.ToString;
     lblIrany.caption:=meresirany;
     try
       if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
@@ -3432,14 +3442,19 @@ var i,tomeg:integer;
       kepnev2:=Rendszamtomb[thmerleg,2].kep;
       if (iranyok[thmerleg]='-')  and (Automata_irany_meghatarozas) then
       begin
-        //Hosszú teherautók esetén
-        if maxtomeg[thmerleg]>10000 then
-        begin
-          //ha az elsõ kamera ismeri fel elõbb
-          if Rendszamtomb[thmerleg,1].Ido<Rendszamtomb[thmerleg,2].Ido then   iranyok[thmerleg]:='BE'
-          else iranyok[thmerleg]:='KI';
-        end
-        //kis jármûnél elvileg a hátsó rendszámot látja meg elõbb
+
+        if (Rendszamtomb[thmerleg,1].van_kamera) and (not (Rendszamtomb[thmerleg,2].van_kamera)) then iranyok[thmerleg]:='BE'
+        else
+          if (not Rendszamtomb[thmerleg,1].van_kamera) and ( (Rendszamtomb[thmerleg,2].van_kamera)) then iranyok[thmerleg]:='KI'
+          else
+            //Hosszú teherautók esetén
+            if maxtomeg[thmerleg]>10000 then
+            begin
+              //ha az elsõ kamera ismeri fel elõbb
+              if Rendszamtomb[thmerleg,1].Ido<Rendszamtomb[thmerleg,2].Ido then   iranyok[thmerleg]:='BE'
+              else iranyok[thmerleg]:='KI';
+            end
+            //kis jármûnél elvileg a hátsó rendszámot látja meg elõbb
       end;
     end;
     af.MentesKapcs.Connected:=false;
@@ -3461,7 +3476,7 @@ var i,tomeg:integer;
       ParamByName('Ido').AsTime := Time;
       ParamByName('Rendszam').AsString := rendszam1;
       ParamByName('Rendszam2').AsString := rendszam2;
-      ParamByName('Irany').AsString := meresirany;//'-';
+      ParamByName('Irany').AsString :=iranyok[thmerleg];//'-';
       ParamByName('Kod').AsString := '0';
       ParamByName('Szallitolev').AsString := '0';
       ParamByName('Tomeg').AsInteger := maxtomeg[thmerleg];
@@ -3494,7 +3509,8 @@ begin
     thElet[thmerleg]:=thElet[thmerleg]+1;
     Synchronize(mukodtet);
     try
-      tomeg := StrToInt(mertertekek[thmerleg]);
+      if mertertekek[thmerleg]<>'' then  tomeg := StrToInt(mertertekek[thmerleg])
+      else tomeg:=-1;
       if (tomeg >= 0) or (tomeg < -10) then
       begin
         if tomeg>mintomeg then
@@ -3588,7 +3604,19 @@ begin
       end
       else  tomeg := -1;
     except
-      tomeg := -1;
+      on E : Exception do
+      begin
+        if UpperCase(paramstr(1))='/HIBAKERESES' then
+        begin
+          ShowMessage('Exception class name = '+E.ClassName);
+          ShowMessage('Exception message = '+E.Message);
+        end;
+        tomeg := -1;
+      end;
+
+
+
+
     end;
 
     for i := 1 to 2 do

@@ -70,7 +70,7 @@ object FoF: TFoF
       Top = 60
       Width = 798
       Height = 284
-      ActivePage = tbIdeiglenes
+      ActivePage = tbForgalom
       Align = alClient
       MultiLine = True
       TabOrder = 0
@@ -1556,5 +1556,11 @@ object FoF: TFoF
     OnTimer = SOAPAllapottmrTimer
     Left = 544
     Top = 360
+  end
+  object tmrForgalom_frissites: TTimer
+    Enabled = False
+    OnTimer = tmrForgalom_frissitesTimer
+    Left = 229
+    Top = 196
   end
 end

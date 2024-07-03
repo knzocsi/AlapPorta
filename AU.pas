@@ -73,7 +73,7 @@ type
      Fs_Irany: string;
      Fs_Tara:Integer;
   public
-     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
+     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean;Auto_mjegyQ: TFDQuery);
      procedure mjegy_rec_ures;
   published
    property Id: integer read Fs_Id
@@ -548,6 +548,7 @@ var
   Ftp_feltoltes: Boolean=False;
   Automata_Ftp_feltoltes: Boolean=False;
   Ftp_tavoli_mappa: string;
+  nyomtatas_szamlalo:Integer=0;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -1698,8 +1699,10 @@ end;
 
 procedure TAF.auto_mjegy_tread_run;
 begin
- inherited;
- Automata_mjegy_thread := auto_mjegy_Thread.Create(False);
+  inherited;
+  Automata_mjegy_thread := auto_mjegy_Thread.Create(True);
+  Automata_mjegy_thread.Priority:=tpLower;
+  Automata_mjegy_thread.Resume;
 end;
 
 procedure TAF.auto_teszt;
@@ -1738,7 +1741,7 @@ begin
            DisableControls;
            while not Eof do
            begin
-            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
+            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False,AF.Auto_mjegyQ);
             Sleep(200);
             AF.Auto_mjegyINUPQ.close;
             AF.Auto_mjegyINUPQ.SQL.Clear;
@@ -1767,7 +1770,7 @@ begin
            DisableControls;
            while not Eof do
            begin
-            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
+            Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True,AF.Auto_mjegyQ);
             Sleep(200);
             AF.Auto_mjegyINUPQ.close;
             AF.Auto_mjegyINUPQ.SQL.Clear;
@@ -2500,7 +2503,7 @@ end;
 
 { Tautomata_mjegy_rec }
 
-procedure Tautomata_mjegy_rec.mjegy_rec_betoltese_nyomtatasa(parositva:Boolean);
+procedure Tautomata_mjegy_rec.mjegy_rec_betoltese_nyomtatasa(parositva:Boolean;Auto_mjegyQ: TFDQuery);
 var etagja,mappaja:String;
     frxAuto_mjegy:TfrxReport;
 
@@ -2515,13 +2518,22 @@ var etagja,mappaja:String;
   end;
 
   procedure nyomt_volt;
-   begin
-     AF.Auto_mjegyINUPQ.close;
-     AF.Auto_mjegyINUPQ.SQL.Clear;
-     if Parositva then
-      AF.Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString)
-     else AF.Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString);
-     AF.Auto_mjegyINUPQ.ExecSQL;
+  var Auto_mjegy_kapcs:TFDConnection;
+     Auto_mjegyINUPQ: TFDQuery;
+  begin
+    Auto_mjegy_kapcs :=TFDConnection.Create(nil);
+    Auto_mjegyINUPQ:= TFDQuery.Create(nil);
+    Auto_mjegy_kapcs.Params:=Af.Kapcs.Params;
+    Auto_mjegy_kapcs.Connected:=true;
+    Auto_mjegyINUPQ.Connection:= Auto_mjegy_kapcs;
+    Auto_mjegyINUPQ.close;
+    Auto_mjegyINUPQ.SQL.Clear;
+    if Parositva then
+      Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString)
+     else Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString);
+    Auto_mjegyINUPQ.ExecSQL;
+    Auto_mjegyINUPQ.Free;
+    Auto_mjegy_kapcs.Free;
    end;
 begin
 
@@ -2532,23 +2544,23 @@ begin
     try
      merlegjegy_tipus_betoltese_automata;
     finally
-     Automata_mjegy_Rec.Id := Af.Auto_mjegyQ.FieldByName('id').AsInteger;
-     Automata_mjegy_Rec.Mjegysorszam:=etagja + Af.nullak(Af.Auto_mjegyQ.FieldByName('id').AsInteger,7) ;
-     Automata_mjegy_Rec.Erkdatum:=Af.Auto_mjegyQ.FieldByName('Erkdatum').AsDateTime;
-     Automata_mjegy_Rec.Erkido:=Af.Auto_mjegyQ.FieldByName('Erkido').AsDateTime;
-     Automata_mjegy_Rec.Tavdatum:=Af.Auto_mjegyQ.FieldByName('Tavdatum').AsDateTime;
-     Automata_mjegy_Rec.Tavido:=Af.Auto_mjegyQ.FieldByName('Tavido').AsDateTime;
-     Automata_mjegy_Rec.Rendszam:=Af.Auto_mjegyQ.FieldByName('rendszam').AsString;
-     Automata_mjegy_Rec.Betomeg:=Af.Auto_mjegyQ.FieldByName('betomeg').AsInteger;
-     Automata_mjegy_Rec.Kitomeg:=Af.Auto_mjegyQ.FieldByName('kitomeg').AsInteger;
+     Automata_mjegy_Rec.Id := Auto_mjegyQ.FieldByName('id').AsInteger;
+     Automata_mjegy_Rec.Mjegysorszam:=etagja + Af.nullak(Auto_mjegyQ.FieldByName('id').AsInteger,7) ;
+     Automata_mjegy_Rec.Erkdatum:=Auto_mjegyQ.FieldByName('Erkdatum').AsDateTime;
+     Automata_mjegy_Rec.Erkido:=Auto_mjegyQ.FieldByName('Erkido').AsDateTime;
+     Automata_mjegy_Rec.Tavdatum:=Auto_mjegyQ.FieldByName('Tavdatum').AsDateTime;
+     Automata_mjegy_Rec.Tavido:=Auto_mjegyQ.FieldByName('Tavido').AsDateTime;
+     Automata_mjegy_Rec.Rendszam:=Auto_mjegyQ.FieldByName('rendszam').AsString;
+     Automata_mjegy_Rec.Betomeg:=Auto_mjegyQ.FieldByName('betomeg').AsInteger;
+     Automata_mjegy_Rec.Kitomeg:=Auto_mjegyQ.FieldByName('kitomeg').AsInteger;
 //
 //      if Automata_mjegy_Rec.Betomeg>Automata_mjegy_Rec.Kitomeg then
 //       Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.kitomeg
 //      else Automata_mjegy_Rec.Tara:=Automata_mjegy_Rec.Betomeg;
 
-      Automata_mjegy_Rec.Netto:=Af.Auto_mjegyQ.FieldByName('Netto').AsInteger;
+      Automata_mjegy_Rec.Netto:=Auto_mjegyQ.FieldByName('Netto').AsInteger;
       Automata_mjegy_Rec.Parositott:=Parositva;
-      Automata_mjegy_Rec.Irany:=Af.Auto_mjegyQ.FieldByName('irany').AsString;
+      Automata_mjegy_Rec.Irany:=Auto_mjegyQ.FieldByName('irany').AsString;
     end;
  finally
   with frxAuto_mjegy do
@@ -2579,7 +2591,13 @@ begin
         Af.frxPDFTeszthez.FileName:=Automata_mjegy_Rec.Mjegysorszam+'.pdf';
         Export(Af.frxPDFTeszthez);
       end
-     else Print;
+     else
+       if Automata_mjegy_Rec.Irany='BESZÁLLÍTÁS' then
+       begin
+         nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
+         PrintOptions.ShowDialog := False;
+         Print;
+       end;
      Free
    end;
   nyomt_volt
@@ -2609,31 +2627,66 @@ end;
 { Auto_mjegy_Thread }
 
 procedure Auto_mjegy_Thread.Execute;
+var Auto_mjegyQ,Auto_mjegyINUPQ: TFDQuery;
+    Auto_mjegy_kapcs:TFDConnection;
+
+
+  procedure   nyom_volt_kistomeg(Parositott:boolean;Id:integer);
+  begin
+     Auto_mjegyINUPQ:= TFDQuery.Create(nil);
+     Auto_mjegyINUPQ.Connection:= Auto_mjegy_kapcs;
+     Auto_mjegyINUPQ.close;
+     Auto_mjegyINUPQ. SQL.Clear;
+     if not Parositott then Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+id.ToString)
+     else Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+id.ToString);
+     Auto_mjegyINUPQ.ExecSQL;
+     Auto_mjegyINUPQ. Free;
+
+
+  end;
+
+
 begin
   inherited;
- repeat
-  with  Af.Auto_mjegy_kapcs do
-  begin
-    Close;
-    with Params do
-    begin
-      clear;
-      Add('DriverID=MySQL');
-      Add('Server='+szerver);
-      Add('Port='+port);
-      Add('Database='+adatbazis);
-      Add('User_Name='+user);
-      Add('Password='+passwd);
-      Add('CharacterSet= Utf8mb4');
-      open;
-    end;
-  end;
-  if Af.Auto_mjegy_kapcs.Connected then
+  Auto_mjegyQ:= TFDQuery.Create(nil);
+  Auto_mjegy_kapcs :=TFDConnection.Create(nil);
+  Auto_mjegy_kapcs.Params:=Af.Kapcs.Params;
+  Auto_mjegy_kapcs.Connected:=true;
+  Auto_mjegyQ.Connection:= Auto_mjegy_kapcs;
+  repeat
+    //nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
+
+    {
+    try
+
+      with  Auto_mjegy_kapcs do
+      begin
+        Close;
+        with Params do
+        begin
+          clear;
+          Add('DriverID=MySQL');
+          Add('Server='+szerver);
+          Add('Port='+port);
+          Add('Database='+adatbazis);
+          Add('User_Name='+user);
+          Add('Password='+passwd);
+          Add('CharacterSet= Utf8mb4');
+          open;
+        end;
+      end;
+    finally
+
+    end;  }
+
+
+
+   if Auto_mjegy_kapcs.Connected then
    begin
     try
      if Automata_merlegjegy then
       begin
-        With AF.Auto_mjegyQ do
+        With Auto_mjegyQ do
          begin
            Close;
            SQL.Clear;
@@ -2642,6 +2695,7 @@ begin
            SQL.Add('0 AS netto,irany');
            SQL.Add(' FROM forgalom');
            SQL.Add(' WHERE aut_nyom=0 ');
+
            Open;
            first;
            DisableControls;
@@ -2649,7 +2703,9 @@ begin
            begin
             try
               if FieldByName('betomeg').AsInteger>Automata_mjegy_nyom_sulyhatar then
-               Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False);
+               Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(False,Auto_mjegyQ)
+               // a súlyhatár alattiakat is nyomtatottra írja
+              else  nyom_volt_kistomeg(False,FieldByName('ID').AsInteger);
             finally
               Sleep(200);
               Next;
@@ -2659,16 +2715,16 @@ begin
            Close
          end;
       end;
-    finally
-     if Automata_merlegjegy_parositaskor then
+      if Automata_merlegjegy_parositaskor then
       begin
-        With AF.Auto_mjegyQ do
+
+        With Auto_mjegyQ do
          begin
            Close;
            SQL.Clear;
            SQL.Add('SELECT id,erkdatum,erkido,tavdatum, tavido,');
            SQL.Add('rendszam, betomeg,kitomeg,');
-           SQL.Add('netto,IF(betomeg>kitomeg,''BESZÁLLÍTÁS'',''KISZÁLLÍTÁS'') AS irany');
+           SQL.Add('netto,IF(betomeg>kitomeg,'+#39+'BESZÁLLÍTÁS'+#39+','+#39+'KISZÁLLÍTÁS'+#39+') AS irany');
            SQL.Add(' FROM parositott');
            SQL.Add(' WHERE aut_nyom=0 ');
            Open;
@@ -2677,11 +2733,13 @@ begin
            while not Eof do
            begin
             try
-             if ABS(FieldByName('betomeg').AsInteger-FieldByName('kitomeg').AsInteger)>Automata_mjegy_nyom_sulyhatar then
-              Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True);
+             if (FieldByName('betomeg').AsInteger>Automata_mjegy_nyom_sulyhatar) then
+              Automata_mjegy_Rec.mjegy_rec_betoltese_nyomtatasa(True,Auto_mjegyQ)
+            // a súlyhatár alattiakat is nyomtatottra írja
+            else  nyom_volt_kistomeg(True,FieldByName('ID').AsInteger);
             finally
-             Sleep(200);
-             Next;
+              Sleep(200);
+              Next;
             end;
 
            end;
@@ -2689,11 +2747,28 @@ begin
            Close
          end;
       end;
+    except
+    on E : Exception do
+      begin
+        if UpperCase(paramstr(1))='/HIBAKERESES' then
+        begin
+          ShowMessage('Exception class name = '+E.ClassName);
+          ShowMessage('Exception message = '+E.Message);
+        end;
+      end;
+
     end;
+   end
+   else
+   begin
+     Auto_mjegy_kapcs.Connected:=true;
    end;
-   Af.Auto_mjegy_kapcs.Close;
+
    Application.ProcessMessages;
- until programvege ;
+  until programvege ;
+  Auto_mjegy_kapcs.Close;
+  Auto_mjegyQ.Free;
+  Auto_mjegy_kapcs.Free;
 end;
 
 { Tmjegy_rec_nyom }

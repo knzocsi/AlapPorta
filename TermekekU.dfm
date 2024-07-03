@@ -49,7 +49,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbReszlet
+    ActivePage = tbLista
     Align = alClient
     TabOrder = 1
     OnChange = pcListaReszletChange
@@ -281,6 +281,12 @@
         Height = 13
         Caption = 'Tipus:'
       end
+      object SpeedButton1: TSpeedButton
+        Left = 88
+        Top = 120
+        Width = 23
+        Height = 22
+      end
       object DBNavigator1: TDBNavigator
         Left = 409
         Top = 0
@@ -489,7 +495,6 @@
         ListStyle = lsDelimited
         LookupField = 'ID'
         LookupDisplay = 'nev'
-        LookupSource = AF.tipusQDs
         TabOrder = 20
         OnChange = lucTipusChange
       end

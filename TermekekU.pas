@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Vcl.Mask, FireDAC.Comp.DataSet, FireDAC.Comp.Client,System.Win.ComObj,
-  JvExMask, JvSpin, JvDBSpinEdit, JvExControls, JvDBLookup;
+  JvExMask, JvSpin, JvDBSpinEdit, JvExControls, JvDBLookup, Vcl.Buttons;
 
 type
   TTermekekF = class(TForm)
@@ -80,6 +80,7 @@ type
     lucTipus: TJvDBLookupCombo;
     Label8: TLabel;
     edTipus_id: TDBEdit;
+    SpeedButton1: TSpeedButton;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);
