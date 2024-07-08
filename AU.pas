@@ -548,7 +548,7 @@ var
   Ftp_feltoltes: Boolean=False;
   Automata_Ftp_feltoltes: Boolean=False;
   Ftp_tavoli_mappa: string;
-  nyomtatas_szamlalo:Integer=0;
+  nyomtatas_szamlalo:Integer=2;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -865,7 +865,7 @@ begin
           if FieldByName('Szallitolev').AsString<>'0' then
             ParositottT.FieldByName('Szallitolev').AsString:=FieldByName('Szallitolev').AsString
           else ParositottT.FieldByName('Szallitolev').AsString:=ForgTimQ.FieldByName('Szallitolev').AsString;
-          if FieldByName('Irany').AsString='K' then
+          if FieldByName('Irany').AsString='KI' then
           begin
             ParositottT.FieldByName('Betomeg').AsInteger:=ForgTimQ.FieldByName('Tomeg').AsInteger;
             ParositottT.FieldByName('Kitomeg').AsInteger:=FieldByName('Tomeg').AsInteger;
@@ -2517,7 +2517,7 @@ var etagja,mappaja:String;
     Stream.Free
   end;
 
-  procedure nyomt_volt;
+  procedure nyomt_volt(szamlalo:integer);
   var Auto_mjegy_kapcs:TFDConnection;
      Auto_mjegyINUPQ: TFDQuery;
   begin
@@ -2529,14 +2529,15 @@ var etagja,mappaja:String;
     Auto_mjegyINUPQ.close;
     Auto_mjegyINUPQ.SQL.Clear;
     if Parositva then
-      Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString)
+      Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom='+szamlalo.ToString+' WHERE id='+Automata_mjegy_Rec.Id.ToString)
      else Auto_mjegyINUPQ.SQL.Add('UPDATE forgalom SET aut_nyom=1 WHERE id='+Automata_mjegy_Rec.Id.ToString);
     Auto_mjegyINUPQ.ExecSQL;
     Auto_mjegyINUPQ.Free;
     Auto_mjegy_kapcs.Free;
    end;
-begin
 
+
+begin
  if Automata_mjegy_Rec=nil then Automata_mjegy_Rec := Tautomata_mjegy_rec.Create
  else mjegy_rec_ures;
  try
@@ -2597,10 +2598,12 @@ begin
          nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
          PrintOptions.ShowDialog := False;
          Print;
-       end;
+         nyomt_volt(2);
+       end
+       else  nyomt_volt(3);
      Free
    end;
-  nyomt_volt
+
  end;
 end;
 
@@ -2641,8 +2644,6 @@ var Auto_mjegyQ,Auto_mjegyINUPQ: TFDQuery;
      else Auto_mjegyINUPQ.SQL.Add('UPDATE parositott SET aut_nyom=1 WHERE id='+id.ToString);
      Auto_mjegyINUPQ.ExecSQL;
      Auto_mjegyINUPQ. Free;
-
-
   end;
 
 
@@ -2654,30 +2655,6 @@ begin
   Auto_mjegy_kapcs.Connected:=true;
   Auto_mjegyQ.Connection:= Auto_mjegy_kapcs;
   repeat
-    //nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
-
-    {
-    try
-
-      with  Auto_mjegy_kapcs do
-      begin
-        Close;
-        with Params do
-        begin
-          clear;
-          Add('DriverID=MySQL');
-          Add('Server='+szerver);
-          Add('Port='+port);
-          Add('Database='+adatbazis);
-          Add('User_Name='+user);
-          Add('Password='+passwd);
-          Add('CharacterSet= Utf8mb4');
-          open;
-        end;
-      end;
-    finally
-
-    end;  }
 
 
 

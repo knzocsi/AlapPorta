@@ -21,7 +21,7 @@ object AF: TAF
     Enabled = False
     Interval = 10000
     OnTimer = Forgalom_TimerTimer
-    Left = 456
+    Left = 448
     Top = 48
   end
   object ForgTimT: TFDTable
@@ -32,7 +32,7 @@ object AF: TAF
   end
   object ForgTimQ: TFDQuery
     Connection = Kapcs
-    Left = 408
+    Left = 392
     Top = 160
   end
   object ParositottT: TFDTable
@@ -18493,13 +18493,13 @@ object AF: TAF
     SQL.Strings = (
       'Select *'
       'From hardver_beallitasok')
-    Left = 704
-    Top = 56
+    Left = 760
+    Top = 48
   end
   object HardverDS: TDataSource
     DataSet = HardverQ
-    Left = 701
-    Top = 111
+    Left = 765
+    Top = 103
   end
   object HWKapcs: TFDConnection
     ConnectionName = 'HWKapcs'

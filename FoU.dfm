@@ -1013,54 +1013,6 @@ object FoF: TFoF
           Stretch = True
           OnClick = imgFelsokepClick
         end
-        object lblThElo1: TLabel
-          Left = 4
-          Top = 120
-          Width = 42
-          Height = 13
-          Caption = 'lblThElo1'
-          Visible = False
-        end
-        object lblThElo2: TLabel
-          Left = 4
-          Top = 139
-          Width = 42
-          Height = 13
-          Caption = 'lblThElo2'
-          Visible = False
-        end
-        object lblThElo3: TLabel
-          Left = 4
-          Top = 155
-          Width = 42
-          Height = 13
-          Caption = 'lblThElo3'
-          Visible = False
-        end
-        object lblThElo4: TLabel
-          Left = 4
-          Top = 174
-          Width = 42
-          Height = 13
-          Caption = 'lblThElo4'
-          Visible = False
-        end
-        object lblThRendszam1: TLabel
-          Left = 3
-          Top = 200
-          Width = 77
-          Height = 13
-          Caption = 'lblThRendszam1'
-          Visible = False
-        end
-        object lblThRendszam2: TLabel
-          Left = 4
-          Top = 219
-          Width = 77
-          Height = 13
-          Caption = 'lblThRendszam2'
-          Visible = False
-        end
         object lblKep1: TLabel
           Left = 4
           Top = 262
@@ -1071,15 +1023,71 @@ object FoF: TFoF
           ExplicitTop = 260
         end
         object memLog: TMemo
-          Left = 117
+          Left = 184
           Top = 1
-          Width = 185
+          Width = 118
           Height = 279
           Align = alRight
           Lines.Strings = (
             'memLog')
           TabOrder = 0
           Visible = False
+        end
+        object pnlSzamlalok: TPanel
+          Left = 87
+          Top = 1
+          Width = 97
+          Height = 279
+          Align = alRight
+          TabOrder = 1
+          object lblThElo1: TLabel
+            Left = 4
+            Top = 0
+            Width = 42
+            Height = 13
+            Caption = 'lblThElo1'
+            Visible = False
+          end
+          object lblThElo2: TLabel
+            Left = 4
+            Top = 19
+            Width = 42
+            Height = 13
+            Caption = 'lblThElo2'
+            Visible = False
+          end
+          object lblThElo3: TLabel
+            Left = 4
+            Top = 38
+            Width = 42
+            Height = 13
+            Caption = 'lblThElo3'
+            Visible = False
+          end
+          object lblThElo4: TLabel
+            Left = 4
+            Top = 57
+            Width = 42
+            Height = 13
+            Caption = 'lblThElo4'
+            Visible = False
+          end
+          object lblThRendszam1: TLabel
+            Left = 4
+            Top = 83
+            Width = 77
+            Height = 13
+            Caption = 'lblThRendszam1'
+            Visible = False
+          end
+          object lblThRendszam2: TLabel
+            Left = 4
+            Top = 102
+            Width = 77
+            Height = 13
+            Caption = 'lblThRendszam2'
+            Visible = False
+          end
         end
       end
       object pnlAlsokep: TPanel

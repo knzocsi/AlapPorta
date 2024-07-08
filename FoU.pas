@@ -197,18 +197,19 @@ type
     Panel2: TPanel;
     btnTorles: TButton;
     chkToroltek_mutatasa: TCheckBox;
-    lblThElo1: TLabel;
-    lblThElo2: TLabel;
-    lblThElo3: TLabel;
-    lblThElo4: TLabel;
-    lblThRendszam1: TLabel;
-    lblThRendszam2: TLabel;
     lblKep1: TLabel;
     lblKep2: TLabel;
     SOAPAllapottmr: TTimer;
     Djak1: TMenuItem;
     Djszabsikategrik1: TMenuItem;
     tmrForgalom_frissites: TTimer;
+    pnlSzamlalok: TPanel;
+    lblThElo1: TLabel;
+    lblThElo2: TLabel;
+    lblThElo3: TLabel;
+    lblThElo4: TLabel;
+    lblThRendszam1: TLabel;
+    lblThRendszam2: TLabel;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -1768,6 +1769,7 @@ begin
  Hardverbelltsok1.visible:=felhnev='Programozó';
  teszt_m.visible:=felhnev='Programozó';
  memLog.Visible:=felhnev='Programozó';
+ pnlSzamlalok.Visible:=felhnev='Programozó';
 end;
 
 procedure TFoF.Keress1Click(Sender: TObject);
@@ -2694,7 +2696,7 @@ end;
 procedure TFoF.Tomeg_TimerTimer(Sender: TObject);
 var tomeg,i,trint:integer;
     pont:char;
-    tomeg_szoveg,szamlalo_szoveg:string;
+    tomeg_szoveg,szamlalo_szoveg,nyugalmi_szoveg:string;
     hwQ: TFDQuery;
 
 begin
@@ -2706,12 +2708,14 @@ begin
 
     tomeg_szoveg:='';
     szamlalo_szoveg:='';
+    nyugalmi_szoveg:='';
     for i := 1 to Maxmerleg do
     begin
       if mertertekek[i]<>'' then
       begin
         tomeg_szoveg:=tomeg_szoveg+mertertekek[i]+' kg   ';
         szamlalo_szoveg:=szamlalo_szoveg+merlegszamlalo[i].ToString+'  ';
+        nyugalmi_szoveg:=nyugalmi_szoveg+nyugalmiszamlalo[i].ToString+':';
         if (Sorompok[i][1].nyitva) and (Time>Sorompok[i][1].nyitas_idopont+Sorompok[i][1].varakozas) and
            (mertertekek[i].ToInteger<100)  then  sorompo_kezeles(i,1,False);
 
@@ -2719,14 +2723,14 @@ begin
            (mertertekek[i].ToInteger<100)  then  sorompo_kezeles(i,2,False);
       end;
       try
-       if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
+       if TryStrToInt(mertertekek[i],trint) then tomeg:=trint else tomeg:=-1;
 
         if (lado=1) and (tomeg>mintomeg) then AF.tomeglog('M'+IntTosTr(i)+':'+mertertekek[i]);
       except
 
       end;
     end;
-    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+szamlalo_szoveg+':'+nyomtatas_szamlalo.ToString;
+    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+' '+nyugalmi_szoveg; //szamlalo_szoveg+':'+nyomtatas_szamlalo.ToString;
     lblIrany.caption:=meresirany;
     try
       if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
