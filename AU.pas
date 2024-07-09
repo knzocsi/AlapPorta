@@ -176,6 +176,13 @@ type
 
      Fs_Parositott:Boolean;
 
+     Fs_Siker_latszik: Boolean;
+     Fs_Siker: string;
+     Fs_Siker_tomeg: string;
+
+     Fs_Tisztitasi_dij_rec:string;
+     Fs_Szaritasi_dij_rec:string;
+
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -287,6 +294,17 @@ type
 
     property Parositott: Boolean read Fs_Parositott
         write Fs_Parositott;
+
+    property Siker_latszik: Boolean read Fs_Siker_latszik
+        write Fs_Siker_latszik;
+    property Siker: string read Fs_Siker
+        write Fs_Siker;
+    property Siker_tomeg: string read Fs_Siker_tomeg
+        write Fs_Siker_tomeg;
+    property Tisztitasi_dij_rec: string read Fs_Tisztitasi_dij_rec
+        write Fs_Tisztitasi_dij_rec;
+    property Szaritasi_dij_rec: string read Fs_Szaritasi_dij_rec
+        write Fs_Szaritasi_dij_rec;
 
   end;
 
@@ -520,7 +538,7 @@ var
   szemet_tomeg, nedvesseg_szazalek,nedvesseg_vesztes_tomege,
   nyers_tort_szemek_tomege,tisztitott_nyers_netto_tomege,
   tisztitott_nyers_netto_tomege_tortel, nyers_netto_tomege,
-  szaritott_tort_szemek_tomege,szaritott_netto_tomege: Extended;
+  szaritott_tort_szemek_tomege,szaritott_netto_tomege,akt_szar_dij, akt_tiszt_dij: Extended;
   ideiglenes_latszik,forgalom_latszik,taramegadas,Hivoszamhasznalat:boolean;
   Regi_hardver_beallitas:boolean;
   PC_Szam:string;
@@ -919,20 +937,25 @@ begin
  nyers_netto_tomege:=0;
  szaritott_tort_szemek_tomege:=0;
  szaritott_netto_tomege:=0;
+ akt_szar_dij:=0;
+ akt_tiszt_dij:=0;
 
  nyers_netto_tomege:=brutto-tara;
 
  if akt_nedvesseg_szazalek>alap_nedvesseg_szazalek then
  begin
   alap_nedv:=alap_nedvesseg_szazalek;
-  akt_nedv:=akt_nedvesseg_szazalek
+  akt_nedv:=akt_nedvesseg_szazalek;
+  akt_szar_dij:=((nyers_netto_tomege*(akt_nedv-alap_nedv))/1000)*szaritasi_dij;//szárítási díj csak akkor ha nedv>alapnedv
  end
  else
  begin
   alap_nedv:=alap_nedvesseg_szazalek;
   akt_nedv:=alap_nedvesseg_szazalek
  end;
- szemet_tomeg:=(nyers_netto_tomege*(szemet_szazalek/100.0));
+ akt_tiszt_dij:=(nyers_netto_tomege/1000)*tisztitasi_dij;
+
+ szemet_tomeg:=nyers_netto_tomege*(szemet_szazalek/100.0);
  nyers_tort_szemek_tomege:=(nyers_netto_tomege*(tort_szemek_szazalek/100.0));
 
  tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;
@@ -956,6 +979,7 @@ begin
    // Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
    // nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
   end;
+
  // nyers_netto_tomege:
   { tisz := Sptisztasag.Value;
   tortszem_szazalek:= Sptort.Value;
@@ -2819,6 +2843,13 @@ begin
      Tomeg_levon_szoveg:='';
 
      Fs_Parositott:=False;
+
+     Siker_latszik:=False;
+     Siker:='';
+     Siker_tomeg:='';
+
+     Szaritasi_dij_rec:='';
+     Tisztitasi_dij_rec:='';
     end;
 end;
 

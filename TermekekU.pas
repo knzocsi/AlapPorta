@@ -80,7 +80,8 @@ type
     lucTipus: TJvDBLookupCombo;
     Label8: TLabel;
     edTipus_id: TDBEdit;
-    SpeedButton1: TSpeedButton;
+    DBChksiker: TDBCheckBox;
+    TermekTb_siker: TBooleanField;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);

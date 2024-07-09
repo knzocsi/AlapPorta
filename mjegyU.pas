@@ -213,6 +213,9 @@ type
     lblszar: TLabel;
     cbxszar: TComboBox;
     szarQ: TFDQuery;
+    spsiker: TJvSpinEdit;
+    Label16: TLabel;
+    termeklistb_siker: TBooleanField;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -1148,6 +1151,10 @@ var sorsz,pcime,tablaneve:String;
        Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
        Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
        Tomeg_levon_szoveg:=levonlookup.DisplayValue;
+       Siker_latszik:=spsiker.Visible;
+       Siker:=spSiker.Value.ToString+' %';
+       Tisztitasi_dij_rec:=IntToStr(Round(akt_tiszt_dij))+' -Ft';
+       Szaritasi_dij_rec:=IntToStr(Round(akt_szar_dij))+' -Ft';
       end;
    end;
 
@@ -1273,7 +1280,11 @@ begin
   sorsz:=af.bizszam(6,'0','merlegjegy',tulajTElotag.AsString,tulajTID.AsInteger);
 
   try
+   try
+    af.dijak_lekerese(Partnelist.FieldByName('id').asinteger,termeklistid.AsInteger)
+   finally
     szazalek;
+   end;
   except
     exit;
   end;
@@ -1321,7 +1332,7 @@ begin
       SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek,kepnev1,kepnev2,kepnev3,kepnev4  ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
       SQL.Add(',betarolasi_dij,kitarolasi_dij,szallitasi_dij,');
-      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj');
+      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj,siker');
       SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
@@ -1341,7 +1352,7 @@ begin
         ParamByName('Hivo_sorszam').AsString:=speSorszam.Text;
       end;
       SQL.Add(',:betarolasi_dij,:kitarolasi_dij,:szallitasi_dij,');
-      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj');
+      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj,:siker');
       SQL.Add(');');
       {ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
         ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
@@ -1466,8 +1477,8 @@ begin
       if cbxirany.ItemIndex in [1,2] then
       begin
         ParamByName('tarolasi_dij').AsFloat:=spszNetto.Value*tarolasi_dij;
-        ParamByName('szaritasi_dij').AsFloat:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
-        ParamByName('tisztitasi_dij').AsFloat:=spnetto.Value*tisztitasi_dij;
+        ParamByName('szaritasi_dij').AsFloat:=akt_szar_dij;//spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
+        ParamByName('tisztitasi_dij').AsFloat:=akt_tiszt_dij; //spnetto.Value*tisztitasi_dij;
         //ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
        // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
         ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
@@ -1539,6 +1550,7 @@ begin
        end;
        ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
+       ParamByName('siker').value:=spsiker.Value;
       ExecSQL;
 
       if Folytatas then

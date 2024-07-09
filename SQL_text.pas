@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=31;
+      maxSQL=32;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1032,6 +1032,12 @@ interface
       '`mezo` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
       'PRIMARY KEY (`id`)' + #13#10 +
       ') ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+      ,
+      //sikér
+      'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `b_siker` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+      'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+      'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' //+ #13#10 +
     );
 
 

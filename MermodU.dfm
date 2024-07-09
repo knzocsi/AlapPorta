@@ -3,7 +3,7 @@ object MermodF: TMermodF
   Top = 0
   Caption = 'M'#233'rlegjegy m'#243'dos'#237't'#225'sa'
   ClientHeight = 491
-  ClientWidth = 1045
+  ClientWidth = 1107
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,10 +18,11 @@ object MermodF: TMermodF
   object pnlAlso: TPanel
     Left = 0
     Top = 0
-    Width = 1045
+    Width = 1107
     Height = 491
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 1045
     object lblpartner: TLabel
       Left = 7
       Top = 108
@@ -37,8 +38,8 @@ object MermodF: TMermodF
       Caption = 'Ir'#225'ny:'
     end
     object Label4: TLabel
-      Left = 696
-      Top = 105
+      Left = 768
+      Top = 103
       Width = 59
       Height = 13
       Caption = 'Sz'#225'll'#237't'#243'lev'#233'l:'
@@ -51,15 +52,15 @@ object MermodF: TMermodF
       Caption = 'Term'#233'k:'
     end
     object Label6: TLabel
-      Left = 696
-      Top = 159
+      Left = 768
+      Top = 157
       Width = 53
       Height = 13
       Caption = 'Rendsz'#225'm:'
     end
     object Label7: TLabel
-      Left = 880
-      Top = 159
+      Left = 952
+      Top = 157
       Width = 62
       Height = 13
       Caption = 'Rendsz'#225'm 2:'
@@ -171,8 +172,8 @@ object MermodF: TMermodF
       Caption = 'Megjegyz'#233's:'
     end
     object Label13: TLabel
-      Left = 696
-      Top = 203
+      Left = 768
+      Top = 201
       Width = 62
       Height = 13
       Caption = 'M'#233'rlegkezel'#337
@@ -185,8 +186,8 @@ object MermodF: TMermodF
       Caption = 'EK'#193'ER: '
     end
     object Label27: TLabel
-      Left = 696
-      Top = 263
+      Left = 768
+      Top = 261
       Width = 34
       Height = 13
       Caption = 'T'#225'rol'#243':'
@@ -206,8 +207,8 @@ object MermodF: TMermodF
       Caption = 'Partner 2:'
     end
     object lbllevonszoveg: TLabel
-      Left = 696
-      Top = 321
+      Left = 768
+      Top = 319
       Width = 115
       Height = 13
       Caption = 'T'#246'meg levon'#225'si sz'#246'veg:'
@@ -326,8 +327,8 @@ object MermodF: TMermodF
       OnChange = partnerlookupChange
     end
     object edszallev: TEdit
-      Left = 696
-      Top = 124
+      Left = 768
+      Top = 122
       Width = 145
       Height = 21
       MaxLength = 20
@@ -393,8 +394,8 @@ object MermodF: TMermodF
       OnClick = btn1Click
     end
     object kezelolookup: TJvDBLookupCombo
-      Left = 696
-      Top = 216
+      Left = 768
+      Top = 214
       Width = 305
       Height = 21
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
@@ -405,16 +406,16 @@ object MermodF: TMermodF
       TabOrder = 11
     end
     object Button2: TButton
-      Left = 864
-      Top = 243
+      Left = 936
+      Top = 241
       Width = 137
       Height = 20
       Caption = 'M'#233'rlegkezel'#337'k list'#225'ja'
       TabOrder = 12
     end
     object cbxktip: TComboBox
-      Left = 880
-      Top = 276
+      Left = 952
+      Top = 274
       Width = 39
       Height = 22
       Style = csOwnerDrawFixed
@@ -445,8 +446,8 @@ object MermodF: TMermodF
       Text = 'EdEkaer'
     end
     object cbxrendszam1: TComboBox
-      Left = 696
-      Top = 175
+      Left = 768
+      Top = 173
       Width = 145
       Height = 21
       CharCase = ecUpperCase
@@ -456,8 +457,8 @@ object MermodF: TMermodF
       OnChange = cbxrendszam1Change
     end
     object cbxrendszam2: TComboBox
-      Left = 880
-      Top = 178
+      Left = 952
+      Top = 176
       Width = 121
       Height = 21
       CharCase = ecUpperCase
@@ -474,8 +475,8 @@ object MermodF: TMermodF
       TabOrder = 18
     end
     object btnTaramegadas: TButton
-      Left = 760
-      Top = 151
+      Left = 832
+      Top = 149
       Width = 81
       Height = 17
       Caption = 'T'#225'ra megad'#225'sa'
@@ -485,7 +486,7 @@ object MermodF: TMermodF
     object pnlmezgaz: TPanel
       Left = 8
       Top = 289
-      Width = 665
+      Width = 737
       Height = 63
       TabOrder = 20
       object Label17: TLabel
@@ -573,6 +574,14 @@ object MermodF: TMermodF
         Width = 40
         Height = 13
         Caption = 'Minta ID'
+      end
+      object Label16: TLabel
+        Tag = 21
+        Left = 661
+        Top = 27
+        Width = 27
+        Height = 13
+        Caption = 'Sik'#233'r:'
       end
       object spalapnedv: TJvSpinEdit
         Tag = 11
@@ -700,10 +709,20 @@ object MermodF: TMermodF
         TabOrder = 12
         Text = 'edSample'
       end
+      object spsiker: TJvSpinEdit
+        Tag = 21
+        Left = 660
+        Top = 38
+        Width = 65
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 13
+        OnChange = spnedvChange
+      end
     end
     object taroloklookup: TJvDBLookupCombo
-      Left = 696
-      Top = 279
+      Left = 768
+      Top = 277
       Width = 145
       Height = 21
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
@@ -714,8 +733,8 @@ object MermodF: TMermodF
       TabOrder = 21
     end
     object Button3: TButton
-      Left = 766
-      Top = 302
+      Left = 838
+      Top = 300
       Width = 75
       Height = 19
       Caption = 'T'#225'rol'#243'k'
@@ -808,8 +827,8 @@ object MermodF: TMermodF
       OnClick = btnekaerClick
     end
     object levonlookup: TJvDBLookupCombo
-      Left = 696
-      Top = 336
+      Left = 768
+      Top = 334
       Width = 305
       Height = 21
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
@@ -831,8 +850,8 @@ object MermodF: TMermodF
       OnExit = spnedvChange
     end
     object btnlevon_szoveg: TButton
-      Left = 864
-      Top = 363
+      Left = 936
+      Top = 361
       Width = 137
       Height = 21
       Caption = 'Levon'#225'si sz'#246'vegek'
@@ -1054,6 +1073,9 @@ object MermodF: TMermodF
     end
     object termeklistewc: TWideStringField
       FieldName = 'ewc'
+    end
+    object termeklistb_siker: TBooleanField
+      FieldName = 'b_siker'
     end
   end
   object termeklistDs: TDataSource

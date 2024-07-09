@@ -49,7 +49,7 @@
     Top = 41
     Width = 862
     Height = 414
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     OnChange = pcListaReszletChange
@@ -281,12 +281,6 @@
         Height = 13
         Caption = 'Tipus:'
       end
-      object SpeedButton1: TSpeedButton
-        Left = 88
-        Top = 120
-        Width = 23
-        Height = 22
-      end
       object DBNavigator1: TDBNavigator
         Left = 409
         Top = 0
@@ -507,6 +501,16 @@
         DataSource = TermekDS
         TabOrder = 21
       end
+      object DBChksiker: TDBCheckBox
+        Left = 480
+        Top = 208
+        Width = 49
+        Height = 17
+        Caption = 'Sik'#233'r'
+        DataField = 'b_siker'
+        DataSource = TermekDS
+        TabOrder = 22
+      end
     end
   end
   object TermekT: TFDTable
@@ -652,6 +656,9 @@
     end
     object TermekTewc: TWideStringField
       FieldName = 'ewc'
+    end
+    object TermekTb_siker: TBooleanField
+      FieldName = 'b_siker'
     end
   end
   object TermekDS: TDataSource

@@ -658,7 +658,7 @@ object MjegyF: TMjegyF
     object pnlmezgaz: TPanel
       Left = 8
       Top = 219
-      Width = 665
+      Width = 729
       Height = 63
       TabOrder = 19
       object Label17: TLabel
@@ -746,6 +746,14 @@ object MjegyF: TMjegyF
         Width = 40
         Height = 13
         Caption = 'Minta ID'
+      end
+      object Label16: TLabel
+        Tag = 21
+        Left = 661
+        Top = 27
+        Width = 27
+        Height = 13
+        Caption = 'Sik'#233'r:'
       end
       object spalapnedv: TJvSpinEdit
         Tag = 11
@@ -879,6 +887,17 @@ object MjegyF: TMjegyF
         TabOrder = 12
         Text = 'edSample'
         OnChange = edSampleChange
+      end
+      object spsiker: TJvSpinEdit
+        Tag = 21
+        Left = 660
+        Top = 38
+        Width = 65
+        Height = 21
+        ValueType = vtFloat
+        TabOrder = 13
+        OnChange = spnedvChange
+        OnExit = spnedvExit
       end
     end
     object taroloklookup: TJvDBLookupCombo
@@ -1114,7 +1133,6 @@ object MjegyF: TMjegyF
     Height = 456
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 457
     object pnlFelsoBal: TPanel
       Left = 1
       Top = 1
@@ -1122,7 +1140,6 @@ object MjegyF: TMjegyF
       Height = 454
       Align = alLeft
       TabOrder = 0
-      ExplicitHeight = 455
       object JvDBUltimGrid1: TJvDBUltimGrid
         Left = 1
         Top = 1
@@ -1220,7 +1237,6 @@ object MjegyF: TMjegyF
       Height = 454
       Align = alClient
       TabOrder = 1
-      ExplicitHeight = 455
       object pgKepek: TPageControl
         Left = 1
         Top = 1
@@ -1229,7 +1245,6 @@ object MjegyF: TMjegyF
         ActivePage = tsOsszeskep
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 453
         object tsOsszeskep: TTabSheet
           Caption = #214'sszes k'#233'p'
           ImageIndex = 2
@@ -1241,7 +1256,6 @@ object MjegyF: TMjegyF
             Height = 424
             Align = alLeft
             TabOrder = 0
-            ExplicitHeight = 425
             object pnlKepBalFelso: TPanel
               Left = 1
               Top = 1
@@ -1265,7 +1279,6 @@ object MjegyF: TMjegyF
               Height = 214
               Align = alClient
               TabOrder = 1
-              ExplicitHeight = 215
               object OKep2: TImage
                 Left = 0
                 Top = 6
@@ -1283,7 +1296,6 @@ object MjegyF: TMjegyF
             Height = 424
             Align = alClient
             TabOrder = 1
-            ExplicitHeight = 425
             object pnlKepJobbFelso: TPanel
               Left = 1
               Top = 1
@@ -1307,7 +1319,6 @@ object MjegyF: TMjegyF
               Height = 214
               Align = alClient
               TabOrder = 1
-              ExplicitHeight = 215
               object OKep4: TImage
                 Left = 4
                 Top = 6
@@ -1548,6 +1559,9 @@ object MjegyF: TMjegyF
     end
     object termeklistewc: TWideStringField
       FieldName = 'ewc'
+    end
+    object termeklistb_siker: TBooleanField
+      FieldName = 'b_siker'
     end
   end
   object termeklistDs: TDataSource

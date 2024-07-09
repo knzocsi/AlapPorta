@@ -168,6 +168,9 @@ type
     lblszar: TLabel;
     cbxszar: TComboBox;
     szarQ: TFDQuery;
+    spsiker: TJvSpinEdit;
+    Label16: TLabel;
+    termeklistb_siker: TBooleanField;
     procedure cbxiranyChange(Sender: TObject);
     procedure btnTaramegadasClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
@@ -353,6 +356,10 @@ procedure elokeszit;
        Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
        Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
        Tomeg_levon_szoveg:=levonlookup.DisplayValue;
+       Siker_latszik:=spsiker.Visible;
+       Siker:=spSiker.Value.ToString+' %';
+       Tisztitasi_dij_rec:=IntToStr(Round(akt_tiszt_dij))+' -Ft';
+       Szaritasi_dij_rec:=IntToStr(Round(akt_szar_dij))+' -Ft';
       end;
 
 //     with aF.frxmerleg do
@@ -593,8 +600,13 @@ begin
      Exit
     end;
   sorsz:=lblsorszam.Caption;
+  try
+   af.dijak_lekerese(Partnelist.FieldByName('id').asinteger,termeklistid.AsInteger)
+  finally
+   szazalek;
+  end;
 
-  szazalek;
+
   if Sender=btnNyomtatas then
   begin
     NezetF.nyomtatva:=false;
@@ -723,8 +735,8 @@ begin
 
       ParamByName('mennyiseg').AsFloat:=keszmenny;
       ParamByName('tarolasi_dij').value:=0;
-      ParamByName('szaritasi_dij').value:=0;
-      ParamByName('tisztitasi_dij').value:=0;
+      ParamByName('szaritasi_dij').value:=akt_szar_dij;
+      ParamByName('tisztitasi_dij').value:=akt_tiszt_dij;
       ParamByName('tarolo_id').AsInteger:=taroloklookup.KeyValue;
       ParamByName('tarolo').AsString:=taroloklookup.DisplayValue;
       ParamByName('elso_kezi').AsBoolean:=chkelso_kezi.checked;
@@ -747,6 +759,7 @@ begin
       ParamByName('ewc').AsString:=termeklist.Fields[20].AsString;
       ParamByName('tul_cjsz').Asstring:=tulajTcjsz.AsString;
       ParamByName('szaraz_tort_szemek').AsInteger:=Round(tort_keszmenny);
+
       if fuvarozo_merlegjegyen then
        begin
         ParamByName('p3_id').AsInteger:=Partnerlist3.FieldByName('id').AsInteger;
@@ -772,6 +785,7 @@ begin
         ParamByName('Szabalyos_meres').AsString:=lblszabalyos.Caption;
         ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
         ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
+        ParamByName('siker').value:=spsiker.Value;
         //dijak
       if cbxirany.ItemIndex in [1,2] then
       begin
@@ -1032,6 +1046,7 @@ finally
  lblkepnev4.Caption:=TempQ.fieldbyName('Kepnev4'). Asstring;
  lblszabalyos.Caption:=TempQ.fieldbyName('Szabalyos_meres'). Asstring;
  cbxszar.Text:=TempQ.FieldByName('szarmazasi_hely').AsString;
+ spsiker.Value:=TempQ.FieldByName('siker').Value;
  ShowModal
 end;
 end;

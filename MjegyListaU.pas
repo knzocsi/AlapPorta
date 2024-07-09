@@ -589,6 +589,10 @@ begin
        Termek_ar:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
        Tomeg_levon_ny:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
        Tomeg_levon_szoveg:=mjegyekQ.FieldByName('levon_szoveg').AsString;
+       Siker_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_siker');
+       Siker:=mjegyekQ.FieldByName('siker').AsString+' %';
+       Tisztitasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat))+' -Ft';
+       Szaritasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('szaritasi_dij').AsFloat))+' -Ft';
       end;
 
 //     NezetF.rep_valaszt(aF.frxmerleg,1);

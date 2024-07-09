@@ -314,6 +314,25 @@ begin
          TfrxMemoView(FindObject('memtomlevon')).Text:=Mjegy_nyom_rec.Tomeg_levon_ny;
          TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=Mjegy_nyom_rec.Tomeg_levon_szoveg;
        end;
+
+     if Mjegy_nyom_rec.Siker_latszik then //sikér
+      begin
+      if TfrxMemoView(FindObject('memsiker'))<>nil then
+       TfrxMemoView(FindObject('memsiker')).Text:=Mjegy_nyom_rec.Siker;
+      end
+     else
+      begin
+      if TfrxMemoView(FindObject('memsiker'))<>nil then
+       TfrxMemoView(FindObject('memsiker')).Text:='';
+      if TfrxMemoView(FindObject('memsikerlbl'))<>nil then
+       TfrxMemoView(FindObject('memsikerlbl')).Text:='';
+      end;
+      //dijak
+     if TfrxMemoView(FindObject('memtisztitasi_dij'))<>nil then
+      TfrxMemoView(FindObject('memtisztitasi_dij')).Text:=Mjegy_nyom_rec.Tisztitasi_dij_rec;
+     if TfrxMemoView(FindObject('memszaritasi_dij'))<>nil then
+      TfrxMemoView(FindObject('memszaritasi_dij')).Text:=Mjegy_nyom_rec.Szaritasi_dij_rec;
+
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
      if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
   end;
