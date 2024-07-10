@@ -91,7 +91,7 @@ procedure Tdijszab_termekF.dijak_termekTBeforePost(DataSet: TDataSet);
         Close;
         SQL.Clear;
         SQL.Add('SELECT COUNT(id) AS van FROM dijaszab_kategoriak_termek');
-        SQL.Add(' WHERE id=:id AND d_id=:d_id AND t_nev=:nev');
+        SQL.Add(' WHERE id<>:id AND d_id=:d_id AND t_nev=:nev');
         ParamByName('id').AsInteger:=dijak_termekT.FieldByName('id').AsInteger;
         ParamByName('d_id').AsInteger:=dijszabF.dijkatT.FieldByName('id').AsInteger;
         ParamByName('nev').AsString:=dijak_termekT.FieldByName('t_nev').AsString;

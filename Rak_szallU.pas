@@ -203,7 +203,7 @@ begin
       if Sender=btnnyomtatas then
       with NezetF.valasztott do//frissiti a bizszamot
        begin
-          TfrxMemoView(FindObject('frxizszam')).Text:=sorsz;
+          TfrxMemoView(FindObject('frxbizszam')).Text:=sorsz;
           PrepareReport(true);
           print
        end;

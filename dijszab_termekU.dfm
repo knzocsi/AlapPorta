@@ -23,7 +23,6 @@ object dijszab_termekF: Tdijszab_termekF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 699
     DesignSize = (
       913
       41)
@@ -139,8 +138,6 @@ object dijszab_termekF: Tdijszab_termekF
     Height = 76
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 250
-    ExplicitWidth = 699
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -199,7 +196,6 @@ object dijszab_termekF: Tdijszab_termekF
       VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
       Align = alTop
       TabOrder = 0
-      ExplicitWidth = 697
     end
     object DBEtarolasi: TDBEdit
       Left = 295

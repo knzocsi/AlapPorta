@@ -238,7 +238,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 45482.287498935180000000
+    ReportOptions.LastChange = 45483.323893773150000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -775,7 +775,7 @@ object AF: TAF
           AllowVectorExport = True
           Left = 239.527830000000000000
           Top = 323.519697240000000000
-          Width = 355.275820000000000000
+          Width = 351.275820000000000000
           Height = 18.897650000000000000
           Frame.Typ = []
         end
@@ -1148,7 +1148,6 @@ object AF: TAF
           Top = 438.086890000000000000
           Width = 60.472480000000000000
           Height = 18.897650000000000000
-          Visible = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -1165,7 +1164,6 @@ object AF: TAF
           Top = 438.086890000000000000
           Width = 45.354360000000000000
           Height = 18.897650000000000000
-          Visible = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13

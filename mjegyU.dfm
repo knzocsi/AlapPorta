@@ -500,7 +500,7 @@ object MjegyF: TMjegyF
       EmptyValue = '!'
       ListStyle = lsDelimited
       LookupField = 'ID'
-      LookupDisplay = 'combo;cim;'
+      LookupDisplay = 'nev;cim;'
       LookupSource = PartnelistDs
       TabOrder = 2
       OnChange = partnerlookupChange
@@ -985,7 +985,7 @@ object MjegyF: TMjegyF
       EmptyValue = '!'
       ListStyle = lsDelimited
       LookupField = 'ID'
-      LookupDisplay = 'combo;cim;'
+      LookupDisplay = 'nev;cim;'
       LookupSource = Partnerlist2Ds
       TabOrder = 26
       OnChange = partnerlookup2Change
@@ -1112,7 +1112,7 @@ object MjegyF: TMjegyF
       EmptyValue = '0'
       ListStyle = lsDelimited
       LookupField = 'ID'
-      LookupDisplay = 'combo;cim;'
+      LookupDisplay = 'nev;cim;'
       LookupSource = Partnerlist3Ds
       TabOrder = 37
       OnChange = partnerlookup2Change
