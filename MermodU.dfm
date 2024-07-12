@@ -22,7 +22,6 @@ object MermodF: TMermodF
     Height = 491
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1045
     object lblpartner: TLabel
       Left = 7
       Top = 108

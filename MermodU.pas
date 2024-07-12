@@ -1090,58 +1090,15 @@ end;
 procedure TMermodF.szazalek;
 var tisztitott_tomeg,sze,szu,levsz,tortszem_szazalek,tortszem_tomeg:Extended;
 begin
-  nedvesseg:='0';
-  tisztasag:='0';
-  nedvelvon:='0';
 
-  br:=0;tr:=0;aned:=0;ned:=0;tisz:=0;tortszem_szazalek:=0;tisztitott_tomeg:=0;sze:=0;szu:=0;levsz:=0;
-  nedvesseg:='';tisztasag:='';ttom:=0;
-  br := SpBrutto.Value;
-  tr := Sptara.value;
-  if spnedv.Value>spalapnedv.Value then
-   begin
-    aned := SpAlapnedv.Value;
-    ned := SpNedv.Value;
-   end
-   else
-   begin
-    aned := SpAlapnedv.Value;
-    ned := SpAlapnedv.Value;
-   end;
-  tisz := Sptisztasag.Value;
-  tortszem_szazalek:= Sptort.Value;
-  if sp_tomeg_levon.Text='' then sp_tomeg_levon.Value:=0;
+ try
+  AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
+                 SpAlapnedv.Value, Sptort.Value,sp_tomeg_levon.Value,chkkuk.Checked);
+ finally
+  spSznetto.Value:=Round(szaritott_netto_tomege);
+ end;
+ Exit;
 
-  nedvesseg := IntToStr(round((br-tr)*((ned-aned)/100.0)));
-  tisztasag := IntToStr(round((br-tr)*((tisz)/100.0)));
-  //tort szemek tomege
-  tortszem_tomeg:=(round((br-tr)*(tortszem_szazalek/100.0)));
-  ttom:=tortszem_tomeg;
-  //Öcsi
-  tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tortszem_szazalek)/100.0)))));
-
-  sze:=1-((tisz+tortszem_szazalek+ned)/100);
-  szu:=1-((tisz+tortszem_szazalek+aned)/100);
-  levsz:=sze/szu;
-  if chkkuk.Checked then
-  begin
-    //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)
-     spSznetto.Value :=Round(tisztitott_tomeg*(1-ned/100)/(1-aned/100))-sp_tomeg_levon.Value;
-     nedvelvon:=FloatToStr(Round(tisztitott_tomeg-spSznetto.Value));
-
-    //Sznetto=nettó*(1-Tisztaság)*(1-Tisztaság-Nedvesség)/(1-Tisztaság-Alapnedvesség)
-    //Spsznetto.Value :=Round(levsz*tisztitott_tomeg)-sp_tomeg_levon.Value;
-    //nedvelvon:=FloatToStr(Round((1-levsz)*tisztitott_tomeg));
-  end
-  else
-  begin
-    Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;
-    nedvelvon:=FloatToStr(Round((ned-aned)*tisztitott_tomeg/100));
-  end;
-
-  if nedvesseg='' then nedvesseg:='0';
-  if nedvelvon='' then nedvelvon:='0';
-  if tisztasag='' then tisztasag:='0';
 end;
 
 procedure TMermodF.temp_tabla_torlese;
