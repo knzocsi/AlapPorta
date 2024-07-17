@@ -202,6 +202,7 @@ var
   nedvesseg,tisztasag,nedvelvon: string;
   ttom:Real;
   Temp_tabla_neve: String;
+  regi_ar,akt_ar:Extended;
 implementation
   uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU;
 {$R *.dfm}
@@ -209,13 +210,49 @@ implementation
 { TMermodF }
 
 procedure TMermodF.btn1Click(Sender: TObject);
+var i:Integer;
+
+   procedure term_ures;
+   var k:Integer;
+    begin
+      for k := 0 to componentcount-1 do
+       if (Components[k].Tag>0) then (Components[k] as Tcontrol).visible:=false;
+      spegysegtomeg.Value:=1;
+      spegysegtomeg.Visible:=spegysegtomeg.Value<>1;
+      lblegysegtomeg.Visible:=spegysegtomeg.Visible;
+      spalapnedv.Value:=0;
+      chkkuk.Checked:=False;
+      chkkuk.Visible:=chkkuk.Checked;
+      chkkerekites.Checked:=False;
+      chkkerekites.Visible:=chkkerekites.Checked;
+    end;
+
 begin
- try
-   TermekekF.ShowModal
- finally
-   termeklist.Refresh;
-   termeklookupCloseUp(self);
- end;
+ if not pnlmezgaz.visible then  exit;
+try
+ TermekekF.ShowModal
+finally
+ termeklist.Refresh;
+ term_ures;
+ if termeklookup.KeyValue<>'!' then
+  begin
+   for I := 0 to componentcount-1 do
+    if (Components[i].Tag>0) then (Components[i] as Tcontrol).visible:=termeklist.Fields[Components[i].Tag].AsBoolean;
+
+    spegysegtomeg.Value:=termeklistegysegtomeg.Value;
+    spegysegtomeg.Visible:=spegysegtomeg.Value<>1;
+    lblegysegtomeg.Visible:=spegysegtomeg.Visible;
+    spalapnedv.Value:=termeklistalapnedv.Value;
+    //spnedv.Value:=termeklistalapnedv.Value;
+    chkkuk.Checked:=termeklistkukorica.AsBoolean;
+    chkkuk.Visible:=chkkuk.Checked;
+    chkkerekites.Checked:=termeklistkerekites.AsBoolean;
+    chkkerekites.Visible:=chkkerekites.Checked;
+    akt_ar:=termeklistar.AsFloat;
+    szazalek;
+  end;
+end;
+
 end;
 
 procedure TMermodF.btnekaerClick(Sender: TObject);
@@ -353,7 +390,7 @@ procedure elokeszit;
        Tara:=sptara.Value.ToString+' kg';
        Sz_netto:=Spsznetto.Value.ToString+' kg';
        Netto:=spnetto.Value.ToString+' kg';
-       Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
+       Termek_ar:=akt_ar.ToString+' Ft';
        Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
        Tomeg_levon_szoveg:=levonlookup.DisplayValue;
        Siker_latszik:=spsiker.Visible;
@@ -599,6 +636,12 @@ begin
      ShowMessage('Adja meg a levonandó tömeget!');
      Exit
     end;
+
+  if regi_ar<>akt_ar then
+  if MessageDlg('A termék egységára változott. Módosítja a mérlegjegyen?',
+     mtConfirmation, [mbYes,mbNo], 0) = mrNo
+  then akt_ar:=regi_ar;
+
   sorsz:=lblsorszam.Caption;
   try
    af.dijak_lekerese(Partnelist.FieldByName('id').asinteger,termeklistid.AsInteger)
@@ -659,7 +702,7 @@ begin
       ParamByName('termek_kod').AsString:=termeklist.Fields[1].AsString;
       ParamByName('termek_nev').AsString:=termeklist.Fields[2].AsString;
       ParamByName('termek_afa').value:=termeklist.Fields[6].value;
-      ParamByName('termek_ar').value:=termeklist.Fields[5].value;
+      ParamByName('termek_ar').value:=akt_ar;
       ParamByName('szallitolev').AsString:=edszallev.Text;
       ParamByName('megjegyzes').AsString:=edmegjegy.Text;
       ParamByName('merlegelo').AsString:=aF.merlegkezQ.FieldByName('nev').AsString;
@@ -735,8 +778,8 @@ begin
 
       ParamByName('mennyiseg').AsFloat:=keszmenny;
       ParamByName('tarolasi_dij').value:=0;
-      ParamByName('szaritasi_dij').value:=akt_szar_dij;
-      ParamByName('tisztitasi_dij').value:=akt_tiszt_dij;
+//      ParamByName('szaritasi_dij').value:=akt_szar_dij;
+//      ParamByName('tisztitasi_dij').value:=akt_tiszt_dij;
       ParamByName('tarolo_id').AsInteger:=taroloklookup.KeyValue;
       ParamByName('tarolo').AsString:=taroloklookup.DisplayValue;
       ParamByName('elso_kezi').AsBoolean:=chkelso_kezi.checked;
@@ -790,8 +833,8 @@ begin
       if cbxirany.ItemIndex in [1,2] then
       begin
         ParamByName('tarolasi_dij').AsFloat:=spszNetto.Value*tarolasi_dij;
-        ParamByName('szaritasi_dij').AsFloat:=spnetto.Value*(spnedv.Value-spalapnedv.Value)*szaritasi_dij;
-        ParamByName('tisztitasi_dij').AsFloat:=spnetto.Value*tisztitasi_dij;
+        ParamByName('szaritasi_dij').AsFloat:=akt_szar_dij;
+        ParamByName('tisztitasi_dij').AsFloat:=akt_tiszt_dij;
         //ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
        // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
         ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
@@ -1047,6 +1090,7 @@ finally
  lblszabalyos.Caption:=TempQ.fieldbyName('Szabalyos_meres'). Asstring;
  cbxszar.Text:=TempQ.FieldByName('szarmazasi_hely').AsString;
  spsiker.Value:=TempQ.FieldByName('siker').Value;
+ regi_ar:=TempQ.FieldByName('termek_ar').Value;
  ShowModal
 end;
 end;
@@ -1146,6 +1190,7 @@ begin
   chkkuk.Visible:=chkkuk.Checked;
   chkkerekites.Checked:=termeklistkerekites.AsBoolean;
   chkkerekites.Visible:=chkkerekites.Checked;
+  akt_ar:=termeklistar.AsFloat;
   szazalek
 end;
 
