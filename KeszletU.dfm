@@ -3,7 +3,7 @@ object KeszletF: TKeszletF
   Top = 0
   Caption = 'K'#233'szlet'
   ClientHeight = 530
-  ClientWidth = 950
+  ClientWidth = 1053
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object KeszletF: TKeszletF
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 950
+    Width = 1053
     Height = 73
     Align = alTop
     TabOrder = 0
@@ -54,7 +54,7 @@ object KeszletF: TKeszletF
       OnClick = btnKilepesClick
     end
     object btnNyomtatas: TButton
-      Left = 855
+      Left = 871
       Top = 19
       Width = 75
       Height = 25
@@ -113,11 +113,40 @@ object KeszletF: TKeszletF
       TabOrder = 5
       OnClick = termeklookupChange
     end
+    object chkpartnercsop: TCheckBox
+      Left = 328
+      Top = 50
+      Width = 161
+      Height = 17
+      Caption = 'Partnerre csoportos'#237't'
+      TabOrder = 6
+      OnClick = termeklookupChange
+    end
+    object btnexport: TButton
+      Left = 968
+      Top = 19
+      Width = 75
+      Height = 25
+      Caption = 'Export'
+      TabOrder = 7
+      OnClick = btnexportClick
+    end
+    object chknullas: TCheckBox
+      Left = 511
+      Top = 50
+      Width = 185
+      Height = 17
+      Caption = 'Null'#225's '#233's negat'#237'v k'#233'szlet elrejt'#233'se'
+      Checked = True
+      State = cbChecked
+      TabOrder = 8
+      OnClick = termeklookupChange
+    end
   end
-  object JvDBUltimGrid1: TJvDBUltimGrid
+  object keszletGrid: TJvDBUltimGrid
     Left = 0
     Top = 73
-    Width = 950
+    Width = 1053
     Height = 457
     Align = alClient
     DataSource = AF.KeszletQDs
@@ -140,42 +169,42 @@ object KeszletF: TKeszletF
         Expanded = False
         FieldName = 'Tarolo_nev'
         Title.Caption = 'T'#225'rol'#243
-        Width = 121
+        Width = 137
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Term_kod'
         Title.Caption = 'Term.k'#243'd'
-        Width = 74
+        Width = 77
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Term_nev'
         Title.Caption = 'Term.n'#233'v'
-        Width = 242
+        Width = 268
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Partner_kod'
         Title.Caption = 'Part.k'#243'd'
-        Width = 37
+        Width = 38
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Partner_nev'
         Title.Caption = 'Part.n'#233'v'
-        Width = 194
+        Width = 216
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'menny'
         Title.Caption = 'Mennyis'#233'g'
-        Width = 77
+        Width = 80
         Visible = True
       end
       item
@@ -189,14 +218,14 @@ object KeszletF: TKeszletF
         Expanded = False
         FieldName = 'Felhasznalo_nev'
         Title.Caption = 'Felhaszn'#225'l'#243
-        Width = 121
+        Width = 137
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'modositva'
         Title.Caption = 'M'#243'dos'#237'tva'
-        Width = 44
+        Width = 60
         Visible = True
       end>
   end
@@ -204,13 +233,12 @@ object KeszletF: TKeszletF
     Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * FROM tarolok ORDER BY nev ASC')
-    Left = 574
-    Top = 17
+    Left = 590
+    Top = 65529
   end
   object TarolokDs: TDataSource
     DataSet = TarolokT
-    Left = 616
-    Top = 16
+    Left = 640
   end
   object termeklist: TFDQuery
     Connection = AF.Kapcs

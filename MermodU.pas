@@ -202,7 +202,7 @@ var
   nedvesseg,tisztasag,nedvelvon: string;
   ttom:Real;
   Temp_tabla_neve: String;
-  regi_ar,akt_ar:Extended;
+  regi_ar,akt_ar,mod_ar:Extended;
 implementation
   uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU;
 {$R *.dfm}
@@ -390,7 +390,7 @@ procedure elokeszit;
        Tara:=sptara.Value.ToString+' kg';
        Sz_netto:=Spsznetto.Value.ToString+' kg';
        Netto:=spnetto.Value.ToString+' kg';
-       Termek_ar:=akt_ar.ToString+' Ft';
+       Termek_ar:=mod_ar.ToString+' Ft';
        Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
        Tomeg_levon_szoveg:=levonlookup.DisplayValue;
        Siker_latszik:=spsiker.Visible;
@@ -638,9 +638,13 @@ begin
     end;
 
   if regi_ar<>akt_ar then
-  if MessageDlg('A termék egységára változott. Módosítja a mérlegjegyen?',
-     mtConfirmation, [mbYes,mbNo], 0) = mrNo
-  then akt_ar:=regi_ar;
+   begin
+    if MessageDlg('A termék egységára változott. Módosítja a mérlegjegyen?',
+       mtConfirmation, [mbYes,mbNo], 0) = mrNo
+    then mod_ar:=regi_ar
+    else mod_ar:=akt_ar
+   end
+  else mod_ar:=akt_ar;
 
   sorsz:=lblsorszam.Caption;
   try
@@ -702,7 +706,7 @@ begin
       ParamByName('termek_kod').AsString:=termeklist.Fields[1].AsString;
       ParamByName('termek_nev').AsString:=termeklist.Fields[2].AsString;
       ParamByName('termek_afa').value:=termeklist.Fields[6].value;
-      ParamByName('termek_ar').value:=akt_ar;
+      ParamByName('termek_ar').value:=mod_ar;
       ParamByName('szallitolev').AsString:=edszallev.Text;
       ParamByName('megjegyzes').AsString:=edmegjegy.Text;
       ParamByName('merlegelo').AsString:=aF.merlegkezQ.FieldByName('nev').AsString;

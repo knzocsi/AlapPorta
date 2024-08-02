@@ -183,6 +183,8 @@ type
      Fs_Tisztitasi_dij_rec:string;
      Fs_Szaritasi_dij_rec:string;
 
+     Fs_Ertek:string;
+
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -305,7 +307,8 @@ type
         write Fs_Tisztitasi_dij_rec;
     property Szaritasi_dij_rec: string read Fs_Szaritasi_dij_rec
         write Fs_Szaritasi_dij_rec;
-
+    property Ertek: string read Fs_Ertek
+        write Fs_ertek;
   end;
 
   TAF = class(TDataModule)
@@ -347,19 +350,6 @@ type
     Automentes: TTimer;
     FoglaltQ: TFDQuery;
     KeszletezesProc: TFDStoredProc;
-    KeszletQTerm_id: TLongWordField;
-    KeszletQTerm_kod: TWideStringField;
-    KeszletQTerm_nev: TWideStringField;
-    KeszletQTarolo_id: TIntegerField;
-    KeszletQTarolo_nev: TWideStringField;
-    KeszletQpartner_id: TIntegerField;
-    KeszletQPartner_kod: TWideStringField;
-    KeszletQPartner_nev: TWideStringField;
-    KeszletQfelhasznalo_id: TIntegerField;
-    KeszletQFelhasznalo_nev: TWideStringField;
-    KeszletQmenny: TBCDField;
-    KeszletQmodositva: TDateTimeField;
-    KeszletQtort: TBooleanField;
     Partner_keszleteQ: TFDQuery;
     rktetm: TJvMemoryData;
     rktetmtermek_id: TIntegerField;
@@ -423,6 +413,19 @@ type
     Auto_mjegyINUPQ: TFDQuery;
     frxPDFTeszthez: TfrxPDFExport;
     dijkatQ: TFDQuery;
+    FDQuery1: TFDQuery;
+    FDQuery1Term_id: TLongWordField;
+    FDQuery1Term_kod: TWideStringField;
+    FDQuery1Term_nev: TWideStringField;
+    FDQuery1Tarolo_id: TIntegerField;
+    FDQuery1Tarolo_nev: TWideStringField;
+    FDQuery1partner_id: TIntegerField;
+    FDQuery1Partner_kod: TWideStringField;
+    FDQuery1Partner_nev: TWideStringField;
+    FDQuery1felhasznalo_id: TIntegerField;
+    FDQuery1Felhasznalo_nev: TWideStringField;
+    FDQuery1modositva: TDateTimeField;
+    FDQuery1tort: TBooleanField;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -498,6 +501,7 @@ type
     procedure auto_mjegy_tread_run;
     procedure auto_teszt;
     procedure dijak_lekerese(pid,tid:Integer);
+    procedure merlegjegy_lista_tipus_betoltese;
     { Public declarations }
   end;
 
@@ -525,7 +529,7 @@ var
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
-  Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba:Integer;
+  Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba,Merlegjegy_lista_tipus:Integer;
   Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa,dijszab_csoportok:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
@@ -1328,6 +1332,7 @@ begin
   //inif.WriteInteger('ALAP','Alap_elado',alap_elado);
   Merlegjegy_tipus:=inif.ReadInteger('ALAP','Merlegjegy_tipus',0);
   Merlegjegy_tipus:=cfg_kezel('','ALAP','Mérlegjegy típus','Integer',Merlegjegy_tipus);
+  Merlegjegy_lista_tipus:=cfg_kezel('','ALAP','Mérlegjegy lista típus','Integer',0);
 //  inif.WriteInteger('ALAP','Merlegjegy_tipus',Merlegjegy_tipus);
   merleg_neve:=inif.ReadString('ALAP','Merleg_neve','');
  // merleg_neve:=cfg_kezel('','ALAP','Mérleg neve','String',merleg_neve);
@@ -1595,6 +1600,14 @@ Result:=true;
     open;
     Result:=(Fields[0].AsInteger<>ide) and (Fields[1].AsInteger>0);
   end;
+end;
+
+procedure TAF.merlegjegy_lista_tipus_betoltese;
+var Stream: TResourceStream;
+begin
+  Stream := TResourceStream.Create(HInstance, 'Mjegylista_'+merlegjegy_lista_tipus.ToString, RT_RCDATA);
+  FrxmjegyList.LoadFromStream(Stream);
+  Stream.Free
 end;
 
 procedure TAF.merlegjegy_mezgaz; //mezõgazdesági programnál
@@ -2850,6 +2863,8 @@ begin
 
      Szaritasi_dij_rec:='';
      Tisztitasi_dij_rec:='';
+
+     Ertek:='';
     end;
 end;
 

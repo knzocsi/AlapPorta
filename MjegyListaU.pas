@@ -232,6 +232,7 @@ procedure TMjegyekF.btnListanyomtatasClick(Sender: TObject);
 begin
   if mjegyekQ.IsEmpty then exit;
   nyomtat:=True;
+  AF.merlegjegy_lista_tipus_betoltese;
    with NezetF do
      begin
       rep_valaszt(aF.FrxmjegyList,1);
@@ -397,6 +398,29 @@ if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
        nyomtat:=false;
        exit;
       end;
+      case mjegyekQ.FieldByName('irany').AsString[1] of
+       'B':begin
+             aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+             mjegyekQ.FieldByName('tarolo_id').AsInteger,
+             mjegyekQ.FieldByName('p2_id').AsInteger,0,-1*mjegyekQ.FieldByName('mennyiseg').value);
+             //tort szemek
+             if mjegyekQ.FieldByName('tortszaz').Value>0 then
+             aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+             mjegyekQ.FieldByName('tarolo_id').AsInteger,
+             mjegyekQ.FieldByName('p_id2').AsInteger,1,-1*ttom);
+
+           end;
+       'K':begin
+            aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+             mjegyekQ.FieldByName('tarolo_id').AsInteger,
+             mjegyekQ.FieldByName('p_id').AsInteger,0,mjegyekQ.FieldByName('mennyiseg').value);
+            //tort szemek
+             if mjegyekQ.FieldByName('tortszaz').Value>0 then
+             aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
+             mjegyekQ.FieldByName('tarolo_id').AsInteger,
+             mjegyekQ.FieldByName('p_id').AsInteger,1,ttom);
+           end;
+       end;
     with NezetF.valasztott do
      begin
         with aF.Q2 do
@@ -423,29 +447,7 @@ if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
         mjegyekQ.Refresh;
         Preview:=nil;
      end;
-         case mjegyekQ.FieldByName('irany').AsString[1] of
-         'B':begin
-               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-               mjegyekQ.FieldByName('tarolo_id').AsInteger,
-               mjegyekQ.FieldByName('p2_id').AsInteger,0,-1*mjegyekQ.FieldByName('mennyiseg').value);
-               //tort szemek
-               if mjegyekQ.FieldByName('tortszaz').Value>0 then
-               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-               mjegyekQ.FieldByName('tarolo_id').AsInteger,
-               mjegyekQ.FieldByName('p_id2').AsInteger,1,-1*ttom);
 
-             end;
-         'K':begin
-              aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-               mjegyekQ.FieldByName('tarolo_id').AsInteger,
-               mjegyekQ.FieldByName('p_id').AsInteger,0,mjegyekQ.FieldByName('mennyiseg').value);
-              //tort szemek
-               if mjegyekQ.FieldByName('tortszaz').Value>0 then
-               aF.keszletez(mjegyekQ.FieldByName('termek_id').AsInteger,
-               mjegyekQ.FieldByName('tarolo_id').AsInteger,
-               mjegyekQ.FieldByName('p_id').AsInteger,1,ttom);
-             end;
-         end;
      szures;
      nyomtat:=false;
    end;
@@ -593,6 +595,8 @@ begin
        Siker:=mjegyekQ.FieldByName('siker').AsString+' %';
        Tisztitasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat))+' -Ft';
        Szaritasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('szaritasi_dij').AsFloat))+' -Ft';
+       Ertek:=IntToStr(Round(mjegyekQ.FieldByName('SzNetto').value*mjegyekQ.FieldByName('termek_ar').Value
+       -(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat+mjegyekQ.FieldByName('szaritasi_dij').AsFloat))) +' -Ft';
       end;
 
 //     NezetF.rep_valaszt(aF.frxmerleg,1);

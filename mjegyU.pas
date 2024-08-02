@@ -1155,6 +1155,8 @@ var sorsz,pcime,tablaneve:String;
        Siker:=spSiker.Value.ToString+' %';
        Tisztitasi_dij_rec:=IntToStr(Round(akt_tiszt_dij))+' -Ft';
        Szaritasi_dij_rec:=IntToStr(Round(akt_szar_dij))+' -Ft';
+       Ertek:=IntToStr(Round(Spsznetto.value*termeklist.FieldByName('ar').Value
+       -(akt_tiszt_dij+akt_szar_dij)))+' -Ft';
       end;
    end;
 
