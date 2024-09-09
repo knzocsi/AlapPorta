@@ -57,7 +57,7 @@ object MerlegkezelokF: TMerlegkezelokF
     Width = 421
     Height = 523
     Align = alClient
-    DataSource = aF.merlegkezQDs
+    DataSource = AF.merlegkezQDs
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

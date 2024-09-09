@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\DijakU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\DijakU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45532.3481018519</prop>
+        <prop prop-type="OrigDateTime">45425.4228009259</prop>
+        <prop prop-type="XlatDateTime">45425.4228009259</prop>
+        <prop prop-type="Translated">6</prop>
+        <prop prop-type="UnTranslated">86</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:DijakF.Left" resname="O:DijakF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Top" resname="O:DijakF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Caption" resname="O:DijakF.Caption">
+        <source>'Dijak'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Fees'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.ClientHeight" resname="O:DijakF.ClientHeight">
+        <source>327</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.ClientWidth" resname="O:DijakF.ClientWidth">
+        <source>462</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Color" resname="O:DijakF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Font.Charset" resname="O:DijakF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Font.Color" resname="O:DijakF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Font.Height" resname="O:DijakF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Font.Name" resname="O:DijakF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Font.Style" resname="O:DijakF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.OldCreateOrder" resname="O:DijakF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.Position" resname="O:DijakF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.OnActivate" resname="O:DijakF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.OnClose" resname="O:DijakF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.PixelsPerInch" resname="O:DijakF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.TextHeight" resname="O:DijakF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TDijakF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.Left" resname="O:DijakF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.Top" resname="O:DijakF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.Width" resname="O:DijakF.O:Panel1.Width">
+        <source>462</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.Height" resname="O:DijakF.O:Panel1.Height">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.Align" resname="O:DijakF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.TabOrder" resname="O:DijakF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.ExplicitWidth" resname="O:DijakF.O:Panel1.ExplicitWidth">
+        <source>638</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label1.Left" resname="O:DijakF.O:Panel1.O:Label1.Left">
+        <source>144</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label1.Top" resname="O:DijakF.O:Panel1.O:Label1.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label1.Width" resname="O:DijakF.O:Panel1.O:Label1.Width">
+        <source>43</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label1.Height" resname="O:DijakF.O:Panel1.O:Label1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label1.Caption" resname="O:DijakF.O:Panel1.O:Label1.Caption">
+        <source>'Díj neve:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Fee name:'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label2.Left" resname="O:DijakF.O:Panel1.O:Label2.Left">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label2.Top" resname="O:DijakF.O:Panel1.O:Label2.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label2.Width" resname="O:DijakF.O:Panel1.O:Label2.Width">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label2.Height" resname="O:DijakF.O:Panel1.O:Label2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:Label2.Caption" resname="O:DijakF.O:Panel1.O:Label2.Caption">
+        <source>'Ár:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Price:'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.Left" resname="O:DijakF.O:Panel1.O:btnkilepes.Left">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.Top" resname="O:DijakF.O:Panel1.O:btnkilepes.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.Width" resname="O:DijakF.O:Panel1.O:btnkilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.Height" resname="O:DijakF.O:Panel1.O:btnkilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.Caption" resname="O:DijakF.O:Panel1.O:btnkilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.TabOrder" resname="O:DijakF.O:Panel1.O:btnkilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:btnkilepes.OnClick" resname="O:DijakF.O:Panel1.O:btnkilepes.OnClick">
+        <source>btnkilepesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.Left" resname="O:DijakF.O:Panel1.O:DBEdit1.Left">
+        <source>144</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.Top" resname="O:DijakF.O:Panel1.O:DBEdit1.Top">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.Width" resname="O:DijakF.O:Panel1.O:DBEdit1.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.Height" resname="O:DijakF.O:Panel1.O:DBEdit1.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.DataField" resname="O:DijakF.O:Panel1.O:DBEdit1.DataField">
+        <source>'tulajdonsag'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.DataSource" resname="O:DijakF.O:Panel1.O:DBEdit1.DataSource">
+        <source>AF.CfgTDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBEdit1.TabOrder" resname="O:DijakF.O:Panel1.O:DBEdit1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Left" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Left">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Top" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419669444</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Width" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Height" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.TabOrder" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.DataField" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.DataField">
+        <source>'ertek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:JvDBSpinEdit1.DataSource" resname="O:DijakF.O:Panel1.O:JvDBSpinEdit1.DataSource">
+        <source>AF.CfgTDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TJvDBSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.Left" resname="O:DijakF.O:Panel1.O:DBNavigator1.Left">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.Top" resname="O:DijakF.O:Panel1.O:DBNavigator1.Top">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.Width" resname="O:DijakF.O:Panel1.O:DBNavigator1.Width">
+        <source>222</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.Height" resname="O:DijakF.O:Panel1.O:DBNavigator1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.DataSource" resname="O:DijakF.O:Panel1.O:DBNavigator1.DataSource">
+        <source>AF.CfgTDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.VisibleButtons" resname="O:DijakF.O:Panel1.O:DBNavigator1.VisibleButtons">
+        <source>[nbPost, nbCancel]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:Panel1.O:DBNavigator1.TabOrder" resname="O:DijakF.O:Panel1.O:DBNavigator1.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Left" resname="O:DijakF.O:JvDBUltimGrid1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Top" resname="O:DijakF.O:JvDBUltimGrid1.Top">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Width" resname="O:DijakF.O:JvDBUltimGrid1.Width">
+        <source>462</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Height" resname="O:DijakF.O:JvDBUltimGrid1.Height">
+        <source>238</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Align" resname="O:DijakF.O:JvDBUltimGrid1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.DataSource" resname="O:DijakF.O:JvDBUltimGrid1.DataSource">
+        <source>AF.CfgTDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Options" resname="O:DijakF.O:JvDBUltimGrid1.Options">
+        <source>[dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.ReadOnly" resname="O:DijakF.O:JvDBUltimGrid1.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TabOrder" resname="O:DijakF.O:JvDBUltimGrid1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleFont.Charset" resname="O:DijakF.O:JvDBUltimGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleFont.Color" resname="O:DijakF.O:JvDBUltimGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleFont.Height" resname="O:DijakF.O:JvDBUltimGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleFont.Name" resname="O:DijakF.O:JvDBUltimGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleFont.Style" resname="O:DijakF.O:JvDBUltimGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption" resname="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK" resname="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:DijakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.EditControls" resname="O:DijakF.O:JvDBUltimGrid1.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.RowsHeight" resname="O:DijakF.O:JvDBUltimGrid1.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.TitleRowHeight" resname="O:DijakF.O:JvDBUltimGrid1.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[0].Expanded" resname="O:DijakF.O:JvDBUltimGrid1.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[0].FieldName" resname="O:DijakF.O:JvDBUltimGrid1.Columns[0].FieldName">
+        <source>'tulajdonsag'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[0].Title.Caption" resname="O:DijakF.O:JvDBUltimGrid1.Columns[0].Title.Caption">
+        <source>'Díj neve'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Fee name'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[0].Width" resname="O:DijakF.O:JvDBUltimGrid1.Columns[0].Width">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[0].Visible" resname="O:DijakF.O:JvDBUltimGrid1.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[1].Expanded" resname="O:DijakF.O:JvDBUltimGrid1.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[1].FieldName" resname="O:DijakF.O:JvDBUltimGrid1.Columns[1].FieldName">
+        <source>'ertek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[1].Title.Caption" resname="O:DijakF.O:JvDBUltimGrid1.Columns[1].Title.Caption">
+        <source>'Ár'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Price'</target>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[1].Width" resname="O:DijakF.O:JvDBUltimGrid1.Columns[1].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:DijakF.O:JvDBUltimGrid1.Columns[1].Visible" resname="O:DijakF.O:JvDBUltimGrid1.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.641966956</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

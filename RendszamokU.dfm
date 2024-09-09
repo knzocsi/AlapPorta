@@ -37,7 +37,7 @@ object RendszamokF: TRendszamokF
     Top = 41
     Width = 746
     Height = 290
-    ActivePage = tbReszlet
+    ActivePage = tbLista
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet

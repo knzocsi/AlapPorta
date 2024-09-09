@@ -87,7 +87,7 @@ object TarolokF: TTarolokF
   end
   object TarolokT: TFDQuery
     BeforePost = TarolokTBeforePost
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * FROM tarolok')
     Left = 434
@@ -96,6 +96,7 @@ object TarolokF: TTarolokF
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object TarolokTnev: TWideStringField
       AutoGenerateValue = arDefault

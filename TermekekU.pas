@@ -65,7 +65,7 @@ type
     DBChknedv: TDBCheckBox;
     DBChkfeherje: TDBCheckBox;
     DBCheckBox5: TDBCheckBox;
-    DBChktisztaság: TDBCheckBox;
+    DBChktisztasag: TDBCheckBox;
     DBChktort: TDBCheckBox;
     DBChkolaj: TDBCheckBox;
     DBCheckBox3: TDBCheckBox;
@@ -214,7 +214,7 @@ end;
 procedure TTermekekF.FormCreate(Sender: TObject);
 begin
  col_neve:='kod';
- col_felirat:='Kód';
+ col_felirat:=af.ford('rsKod');
 end;
 
 procedure TTermekekF.lbl1DblClick(Sender: TObject);
@@ -269,27 +269,27 @@ procedure TTermekekF.TermekTBeforePost(DataSet: TDataSet);
 begin
   if dedkod.Text='' then
   begin
-    ShowMessage('Adja meg a kódot');
+    ShowMessage(af.ford('rsKodotMegKellAdni'));
     if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if af.kod_foglalt(TermekTID.AsInteger,dedkod.Text,'termek') then
   begin
-    ShowMessage('Ez a kód már foglalt!');
+    ShowMessage(af.ford('rsEzAKodMarFoglalt'));
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if dednev.Text='' then
   begin
-    ShowMessage('Adja meg a nevet');
+    ShowMessage(af.ford('rsNevetMegKellAdni'));
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if af.nev_foglalt(TermekTID.AsInteger,dednev.Text,'termek') then
   begin
-    ShowMessage('Ez a név már foglalt!');
+    ShowMessage(af.ford('rsEzANevMarFoglalt'));
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
    end;
  if Length(DBEdMe.Text)<1 then
   begin
-    ShowMessage('Adja meg a mértékegységet');
+    ShowMessage(af.ford('rsAdjaMegME'));
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
 end;

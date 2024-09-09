@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\FelhaszU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\FelhaszU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45541.5745833333</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">12</prop>
+        <prop prop-type="UnTranslated">98</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:FelhaszF.Left" resname="O:FelhaszF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Top" resname="O:FelhaszF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.AutoSize" resname="O:FelhaszF.AutoSize">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Caption" resname="O:FelhaszF.Caption">
+        <source>'Felhasználók'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Users'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.ClientHeight" resname="O:FelhaszF.ClientHeight">
+        <source>561</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>213</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.ClientWidth" resname="O:FelhaszF.ClientWidth">
+        <source>635</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924769</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>343</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Color" resname="O:FelhaszF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Font.Charset" resname="O:FelhaszF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Font.Color" resname="O:FelhaszF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Font.Height" resname="O:FelhaszF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Font.Name" resname="O:FelhaszF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Font.Style" resname="O:FelhaszF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.OldCreateOrder" resname="O:FelhaszF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.Position" resname="O:FelhaszF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.OnActivate" resname="O:FelhaszF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.OnClose" resname="O:FelhaszF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.PixelsPerInch" resname="O:FelhaszF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.TextHeight" resname="O:FelhaszF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TFelhaszF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Left" resname="O:FelhaszF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>2</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Top" resname="O:FelhaszF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Width" resname="O:FelhaszF.O:Panel1.Width">
+        <source>635</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>335</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Height" resname="O:FelhaszF.O:Panel1.Height">
+        <source>65</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Align" resname="O:FelhaszF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.Caption" resname="O:FelhaszF.O:Panel1.Caption">
+        <source>'Panel1'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.TabOrder" resname="O:FelhaszF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.Left" resname="O:FelhaszF.O:Panel1.O:Button1.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.Top" resname="O:FelhaszF.O:Panel1.O:Button1.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.Width" resname="O:FelhaszF.O:Panel1.O:Button1.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.Height" resname="O:FelhaszF.O:Panel1.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.Caption" resname="O:FelhaszF.O:Panel1.O:Button1.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.TabOrder" resname="O:FelhaszF.O:Panel1.O:Button1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button1.OnClick" resname="O:FelhaszF.O:Panel1.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.Left" resname="O:FelhaszF.O:Panel1.O:Button2.Left">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.Top" resname="O:FelhaszF.O:Panel1.O:Button2.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.Width" resname="O:FelhaszF.O:Panel1.O:Button2.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.Height" resname="O:FelhaszF.O:Panel1.O:Button2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.Caption" resname="O:FelhaszF.O:Panel1.O:Button2.Caption">
+        <source>'Új'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'New'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.TabOrder" resname="O:FelhaszF.O:Panel1.O:Button2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button2.OnClick" resname="O:FelhaszF.O:Panel1.O:Button2.OnClick">
+        <source>Button2Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.Left" resname="O:FelhaszF.O:Panel1.O:Button3.Left">
+        <source>264</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.Top" resname="O:FelhaszF.O:Panel1.O:Button3.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.Width" resname="O:FelhaszF.O:Panel1.O:Button3.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.Height" resname="O:FelhaszF.O:Panel1.O:Button3.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.Caption" resname="O:FelhaszF.O:Panel1.O:Button3.Caption">
+        <source>'Módosít'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Modify'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.TabOrder" resname="O:FelhaszF.O:Panel1.O:Button3.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button3.OnClick" resname="O:FelhaszF.O:Panel1.O:Button3.OnClick">
+        <source>Button3Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.Left" resname="O:FelhaszF.O:Panel1.O:Button4.Left">
+        <source>520</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.Top" resname="O:FelhaszF.O:Panel1.O:Button4.Top">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.Width" resname="O:FelhaszF.O:Panel1.O:Button4.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.Height" resname="O:FelhaszF.O:Panel1.O:Button4.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.Caption" resname="O:FelhaszF.O:Panel1.O:Button4.Caption">
+        <source>'Töröl'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Delete'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.TabOrder" resname="O:FelhaszF.O:Panel1.O:Button4.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:Panel1.O:Button4.OnClick" resname="O:FelhaszF.O:Panel1.O:Button4.OnClick">
+        <source>Button4Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Left" resname="O:FelhaszF.O:JvDBUltimGrid1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Top" resname="O:FelhaszF.O:JvDBUltimGrid1.Top">
+        <source>65</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Width" resname="O:FelhaszF.O:JvDBUltimGrid1.Width">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Height" resname="O:FelhaszF.O:JvDBUltimGrid1.Height">
+        <source>496</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Align" resname="O:FelhaszF.O:JvDBUltimGrid1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.DataSource" resname="O:FelhaszF.O:JvDBUltimGrid1.DataSource">
+        <source>aF.FelhaszQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.ReadOnly" resname="O:FelhaszF.O:JvDBUltimGrid1.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TabOrder" resname="O:FelhaszF.O:JvDBUltimGrid1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Charset" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Color" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Height" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Name" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Style" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419924884</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.OnCellClick" resname="O:FelhaszF.O:JvDBUltimGrid1.OnCellClick">
+        <source>JvDBUltimGrid1CellClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.OnKeyUp" resname="O:FelhaszF.O:JvDBUltimGrid1.OnKeyUp">
+        <source>JvDBUltimGrid1KeyUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption" resname="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK" resname="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:FelhaszF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.EditControls" resname="O:FelhaszF.O:JvDBUltimGrid1.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.RowsHeight" resname="O:FelhaszF.O:JvDBUltimGrid1.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.TitleRowHeight" resname="O:FelhaszF.O:JvDBUltimGrid1.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Expanded" resname="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].FieldName" resname="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].FieldName">
+        <source>'nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Title.Caption" resname="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Title.Caption">
+        <source>'Felhasználó'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'User'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Visible" resname="O:FelhaszF.O:JvDBUltimGrid1.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Left" resname="O:FelhaszF.O:JvDBUltimGrid2.Left">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Top" resname="O:FelhaszF.O:JvDBUltimGrid2.Top">
+        <source>65</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Width" resname="O:FelhaszF.O:JvDBUltimGrid2.Width">
+        <source>331</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Height" resname="O:FelhaszF.O:JvDBUltimGrid2.Height">
+        <source>496</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Align" resname="O:FelhaszF.O:JvDBUltimGrid2.Align">
+        <source>alRight</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.DataSource" resname="O:FelhaszF.O:JvDBUltimGrid2.DataSource">
+        <source>aF.felhasznalok_jogaiDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TabOrder" resname="O:FelhaszF.O:JvDBUltimGrid2.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Charset" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Color" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Height" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Name" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Style" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.OnKeyDown" resname="O:FelhaszF.O:JvDBUltimGrid2.OnKeyDown">
+        <source>JvDBUltimGrid2KeyDown</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.OnMouseDown" resname="O:FelhaszF.O:JvDBUltimGrid2.OnMouseDown">
+        <source>JvDBUltimGrid2MouseDown</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.Caption" resname="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.OK" resname="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:FelhaszF.O:JvDBUltimGrid2.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.EditControls" resname="O:FelhaszF.O:JvDBUltimGrid2.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.RowsHeight" resname="O:FelhaszF.O:JvDBUltimGrid2.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.TitleRowHeight" resname="O:FelhaszF.O:JvDBUltimGrid2.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Expanded" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].FieldName" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].FieldName">
+        <source>'jog_neve'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].ReadOnly" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Title.Caption" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Title.Caption">
+        <source>'Jogosultság'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Privileg'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Visible" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Expanded" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].FieldName" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].FieldName">
+        <source>'jog'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Title.Caption" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Title.Caption">
+        <source>'Engedélyezve'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Grant'</target>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Visible" resname="O:FelhaszF.O:JvDBUltimGrid2.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:ajogQ.Connection" resname="O:FelhaszF.O:ajogQ.Connection">
+        <source>aF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:ajogQ.Left" resname="O:FelhaszF.O:ajogQ.Left">
+        <source>376</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">108</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:FelhaszF.O:ajogQ.Top" resname="O:FelhaszF.O:ajogQ.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419925</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">109</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

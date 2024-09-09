@@ -65,13 +65,6 @@ object EkaerF: TEkaerF
     Height = 13
     Caption = 'Sz'#225'll'#237't'#243' neve:'
   end
-  object Label9: TLabel
-    Left = 192
-    Top = 99
-    Width = 47
-    Height = 13
-    Caption = 'Ad'#243'sz'#225'm:'
-  end
   object Label10: TLabel
     Left = 322
     Top = 99
@@ -315,6 +308,13 @@ object EkaerF: TEkaerF
     Width = 86
     Height = 13
     Caption = 'Lelrakod'#225'si c'#237'mek:'
+  end
+  object Label9: TLabel
+    Left = 193
+    Top = 98
+    Width = 47
+    Height = 13
+    Caption = 'Adosz'#225'm:'
   end
   object btnkilepes: TButton
     Left = 16
@@ -1413,7 +1413,6 @@ object EkaerF: TEkaerF
     ParentFont = False
     TabOrder = 41
     OnClick = btnkuldesClick
-    ExplicitTop = 497
   end
   object felcimlookup: TJvDBLookupCombo
     Left = 17

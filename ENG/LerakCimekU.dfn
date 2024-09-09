@@ -1,0 +1,2273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\LerakCimekU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\LerakCimekU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45532.5037962963</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">15</prop>
+        <prop prop-type="UnTranslated">209</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:LerakCimekF.Left" resname="O:LerakCimekF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094676</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Top" resname="O:LerakCimekF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Caption" resname="O:LerakCimekF.Caption">
+        <source>'Lerakodási címek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Unload addresses'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.ClientHeight" resname="O:LerakCimekF.ClientHeight">
+        <source>263</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.ClientWidth" resname="O:LerakCimekF.ClientWidth">
+        <source>635</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Color" resname="O:LerakCimekF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Font.Charset" resname="O:LerakCimekF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Font.Color" resname="O:LerakCimekF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Font.Height" resname="O:LerakCimekF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Font.Name" resname="O:LerakCimekF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Font.Style" resname="O:LerakCimekF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.OldCreateOrder" resname="O:LerakCimekF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.Position" resname="O:LerakCimekF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.PixelsPerInch" resname="O:LerakCimekF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.TextHeight" resname="O:LerakCimekF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TLerakCimekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.Left" resname="O:LerakCimekF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.Top" resname="O:LerakCimekF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.Width" resname="O:LerakCimekF.O:Panel1.Width">
+        <source>635</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.Height" resname="O:LerakCimekF.O:Panel1.Height">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.Align" resname="O:LerakCimekF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.TabOrder" resname="O:LerakCimekF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Left" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Left">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Top" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Width" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Width">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Height" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Caption" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Caption">
+        <source>'lbltulid'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:lbltulid.Visible" resname="O:LerakCimekF.O:Panel1.O:lbltulid.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.Left" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.Left">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.Top" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.Width" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.Height" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.Caption" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:Panel1.O:btnkilepes.TabOrder" resname="O:LerakCimekF.O:Panel1.O:btnkilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.Left" resname="O:LerakCimekF.O:PageControl1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.Top" resname="O:LerakCimekF.O:PageControl1.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.Width" resname="O:LerakCimekF.O:PageControl1.Width">
+        <source>635</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.Height" resname="O:LerakCimekF.O:PageControl1.Height">
+        <source>223</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.ActivePage" resname="O:LerakCimekF.O:PageControl1.ActivePage">
+        <source>tsfelcimlist</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.Align" resname="O:LerakCimekF.O:PageControl1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.TabOrder" resname="O:LerakCimekF.O:PageControl1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.ExplicitTop" resname="O:LerakCimekF.O:PageControl1.ExplicitTop">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.ExplicitHeight" resname="O:LerakCimekF.O:PageControl1.ExplicitHeight">
+        <source>226</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094792</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.Caption">
+        <source>'Felrakodási címek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Load adresses'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Width">
+        <source>627</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Height">
+        <source>195</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Align" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Charset" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Color" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Name" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Style" resname="O:LerakCimekF.O:PageControl1.O:tsfelcimlist.O:DBGrid2.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.Caption">
+        <source>'Felrakodási cím részletesen'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Load address details'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.ImageIndex" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Top">
+        <source>39</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Width">
+        <source>66</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.Caption">
+        <source>'Irányítószám:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Postal code:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label10.FocusControl">
+        <source>DBEdit1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Top">
+        <source>39</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.Caption">
+        <source>'Település:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Settlement:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label11.FocusControl">
+        <source>DBEdit2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.Caption">
+        <source>'Közterület neve:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Public place name:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label12.FocusControl">
+        <source>DBEdit3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420094907</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Width">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.Caption">
+        <source>'Közterület jellege:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Public place category:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label13.FocusControl">
+        <source>DBEdit4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Left">
+        <source>316</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Width">
+        <source>46</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.Caption">
+        <source>'Házszám:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'House number:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label14.FocusControl">
+        <source>DBEdit5</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Left">
+        <source>397</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Width">
+        <source>34</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label15.Caption">
+        <source>'Épület:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Building:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Left">
+        <source>466</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Width">
+        <source>54</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.Caption">
+        <source>'Lépcsőház:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Staircase:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label16.FocusControl">
+        <source>DBEdit7</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Left">
+        <source>549</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Top">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Width">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.Caption">
+        <source>'Emelet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Floor:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label17.FocusControl">
+        <source>DBEdit8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Top">
+        <source>119</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Width">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.Caption">
+        <source>'Ajtó:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">108</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Door:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.FocusControl" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label18.FocusControl">
+        <source>DBEdit9</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">109</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Left">
+        <source>101</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">110</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Top">
+        <source>119</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">111</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Width">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095023</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">112</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">113</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label19.Caption">
+        <source>'Helyrajzi szám:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">114</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'LOT number:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Left">
+        <source>253</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">115</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Top">
+        <source>119</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">116</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Width">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">117</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">118</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label20.Caption">
+        <source>'E-mail:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">119</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Left">
+        <source>389</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">120</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Top">
+        <source>119</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">121</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Width">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">122</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">123</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Caption" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:Label21.Caption">
+        <source>'Telefon:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">124</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Telephone:'</target>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">125</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Top">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">126</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Width">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">127</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">128</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.DataField">
+        <source>'Irsz'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">129</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">130</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">131</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">132</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Top">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">133</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Width">
+        <source>394</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">134</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">135</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.DataField">
+        <source>'Telepules'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">136</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">137</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">138</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">139</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">140</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Width">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">141</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">142</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.DataField">
+        <source>'Kozterulet'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">143</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">144</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit3.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">145</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Left">
+        <source>165</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095139</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">146</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">147</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Width">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">148</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">149</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.DataField">
+        <source>'Kozt_Jelleg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">150</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">151</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit4.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">152</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Left">
+        <source>316</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">153</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">154</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">155</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">156</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.DataField">
+        <source>'Hazszam'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">157</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">158</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit5.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">159</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Left">
+        <source>398</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">160</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">161</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Width">
+        <source>56</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">162</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">163</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.DataField">
+        <source>'epulet'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">164</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">165</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit6.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">166</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Left">
+        <source>466</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">167</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">168</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">169</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">170</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.DataField">
+        <source>'Lepcsohaz'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">171</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">172</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit7.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">173</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Left">
+        <source>549</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">174</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Top">
+        <source>92</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">175</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">176</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">177</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.DataField">
+        <source>'Emelet'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">178</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">179</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit8.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">180</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Left">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">181</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Top">
+        <source>132</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">182</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">183</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">184</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.DataField">
+        <source>'Ajto'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">185</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">186</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit9.TabOrder">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">187</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Left">
+        <source>101</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">188</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Top">
+        <source>133</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">189</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Width">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">190</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">191</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.DataField">
+        <source>'hrsz'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">192</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">193</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit10.TabOrder">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">194</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Left">
+        <source>253</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">195</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Top">
+        <source>132</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">196</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">197</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">198</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.DataField">
+        <source>'email'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">199</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420095255</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">200</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit11.TabOrder">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">201</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Left">
+        <source>389</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">202</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Top">
+        <source>132</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">203</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">204</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">205</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.DataField" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.DataField">
+        <source>'telefon'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">206</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">207</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBEdit12.TabOrder">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">208</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Left" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Left">
+        <source>417</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">209</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Top" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">210</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Width" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Width">
+        <source>215</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">211</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Height" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">212</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.DataSource" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.DataSource">
+        <source>lecimekDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">213</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.VisibleButtons" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.VisibleButtons">
+        <source>[nbInsert, nbDelete, nbEdit, nbPost, nbCancel]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">214</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.TabOrder" resname="O:LerakCimekF.O:PageControl1.O:tsfelrakreszlet.O:DBNavigator2.TabOrder">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">215</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:LecimekT.BeforePost" resname="O:LerakCimekF.O:LecimekT.BeforePost">
+        <source>LecimekTBeforePost</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">216</prop>
+          <prop prop-type="Type">TFDTable</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:LecimekT.Connection" resname="O:LerakCimekF.O:LecimekT.Connection">
+        <source>AF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">217</prop>
+          <prop prop-type="Type">TFDTable</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:LecimekT.TableName" resname="O:LerakCimekF.O:LecimekT.TableName">
+        <source>'lerakodasi_cimek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">218</prop>
+          <prop prop-type="Type">TFDTable</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:LecimekT.Left" resname="O:LerakCimekF.O:LecimekT.Left">
+        <source>496</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">219</prop>
+          <prop prop-type="Type">TFDTable</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:LecimekT.Top" resname="O:LerakCimekF.O:LecimekT.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">220</prop>
+          <prop prop-type="Type">TFDTable</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:lecimekDs.DataSet" resname="O:LerakCimekF.O:lecimekDs.DataSet">
+        <source>LecimekT</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">221</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:lecimekDs.Left" resname="O:LerakCimekF.O:lecimekDs.Left">
+        <source>560</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">222</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:LerakCimekF.O:lecimekDs.Top" resname="O:LerakCimekF.O:lecimekDs.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.642009537</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">223</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

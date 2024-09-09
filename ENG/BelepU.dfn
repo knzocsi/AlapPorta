@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\BelepU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\BelepU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45531.6470601852</prop>
+        <prop prop-type="OrigDateTime">45210.9624768519</prop>
+        <prop prop-type="XlatDateTime">45210.9624768519</prop>
+        <prop prop-type="Translated">2</prop>
+        <prop prop-type="UnTranslated">58</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:BelepF.Left" resname="O:BelepF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Top" resname="O:BelepF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.BorderIcons" resname="O:BelepF.BorderIcons">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.BorderStyle" resname="O:BelepF.BorderStyle">
+        <source>bsSingle</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Caption" resname="O:BelepF.Caption">
+        <source>'Belépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Sign in'</target>
+      </trans-unit>
+      <trans-unit id="O:BelepF.ClientHeight" resname="O:BelepF.ClientHeight">
+        <source>305</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.ClientWidth" resname="O:BelepF.ClientWidth">
+        <source>208</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Color" resname="O:BelepF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.DefaultMonitor" resname="O:BelepF.DefaultMonitor">
+        <source>dmPrimary</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Font.Charset" resname="O:BelepF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Font.Color" resname="O:BelepF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Font.Height" resname="O:BelepF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Font.Name" resname="O:BelepF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Font.Style" resname="O:BelepF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.FormStyle" resname="O:BelepF.FormStyle">
+        <source>fsStayOnTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.OldCreateOrder" resname="O:BelepF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.Position" resname="O:BelepF.Position">
+        <source>poScreenCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.OnActivate" resname="O:BelepF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.OnCreate" resname="O:BelepF.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.PixelsPerInch" resname="O:BelepF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.TextHeight" resname="O:BelepF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TBelepF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.Left" resname="O:BelepF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.Top" resname="O:BelepF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.Width" resname="O:BelepF.O:Panel1.Width">
+        <source>208</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.Height" resname="O:BelepF.O:Panel1.Height">
+        <source>280</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.Align" resname="O:BelepF.O:Panel1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.TabOrder" resname="O:BelepF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.Left" resname="O:BelepF.O:Panel1.O:edjelszo.Left">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.Top" resname="O:BelepF.O:Panel1.O:edjelszo.Top">
+        <source>258</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.Width" resname="O:BelepF.O:Panel1.O:edjelszo.Width">
+        <source>206</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.Height" resname="O:BelepF.O:Panel1.O:edjelszo.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.Align" resname="O:BelepF.O:Panel1.O:edjelszo.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.PasswordChar" resname="O:BelepF.O:Panel1.O:edjelszo.PasswordChar">
+        <source>'*'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.TabOrder" resname="O:BelepF.O:Panel1.O:edjelszo.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.OnKeyPress" resname="O:BelepF.O:Panel1.O:edjelszo.OnKeyPress">
+        <source>edjelszoKeyPress</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:edjelszo.OnKeyUp" resname="O:BelepF.O:Panel1.O:edjelszo.OnKeyUp">
+        <source>edjelszoKeyUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Left" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Left">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Top" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Top">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Width" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Width">
+        <source>206</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Height" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Height">
+        <source>251</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Align" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Charset" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Color" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Height" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Height">
+        <source>-16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Name" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659143</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Style" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.Font.Style">
+        <source>[fsBold]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.KeyField" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.KeyField">
+        <source>'id'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.ListField" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.ListField">
+        <source>'nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.ListSource" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.ListSource">
+        <source>AF.FelhaszQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.ParentFont" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.TabOrder" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Panel1.O:DBLookupListBox1.OnClick" resname="O:BelepF.O:Panel1.O:DBLookupListBox1.OnClick">
+        <source>DBLookupListBox1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TDBLookupListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Left" resname="O:BelepF.O:Button1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Top" resname="O:BelepF.O:Button1.Top">
+        <source>280</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Width" resname="O:BelepF.O:Button1.Width">
+        <source>208</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Height" resname="O:BelepF.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Align" resname="O:BelepF.O:Button1.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.Caption" resname="O:BelepF.O:Button1.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.TabOrder" resname="O:BelepF.O:Button1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:BelepF.O:Button1.OnClick" resname="O:BelepF.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6419659259</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

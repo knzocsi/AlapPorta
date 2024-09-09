@@ -349,6 +349,7 @@ object PartnerekF: TPartnerekF
         Height = 13
         Caption = 'Ad'#243'sz'#225'm(nem megfelel'#337'):'
         FocusControl = dbedtAdoszam
+        Visible = False
       end
       object Label1: TLabel
         Left = 423
@@ -538,6 +539,7 @@ object PartnerekF: TPartnerekF
         DataSource = PartnerDS
         ReadOnly = True
         TabOrder = 12
+        Visible = False
       end
       object DBEdtkuj: TDBEdit
         Left = 423

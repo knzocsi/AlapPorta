@@ -15,9 +15,6 @@ uses
   ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons, JvExControls,
   JvLED,AU;
 
-
-
-
 type
   PCKommunikacio_thread=class(TThread)
      procedure kijelez;
@@ -210,6 +207,7 @@ type
     lblThElo4: TLabel;
     lblThRendszam1: TLabel;
     lblThRendszam2: TLabel;
+    btnnyelv: TButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -305,6 +303,7 @@ type
     procedure sorompo_kezeles(merleg,sorompo:Integer;nyit:boolean);
     procedure Djszabsikategrik1Click(Sender: TObject);
     procedure tmrForgalom_frissitesTimer(Sender: TObject);
+    procedure btnnyelvClick(Sender: TObject);
 
 
   private
@@ -354,7 +353,7 @@ var
   //nagy
   vlcMediaPlayer4, vlcMediaPlayer5, vlcMediaPlayer6, vlcMediaPlayer7: plibvlc_media_player_t;
 
-  teszt, van_cam: Boolean;
+  teszt, van_cam, indult: Boolean;
 
     // A VLC plugin maPPÁja iskell a dll/ek mellett!!!!
   vlcLib: integer;
@@ -379,7 +378,7 @@ uses
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU,DMSoapU, DijakU, dijszabU, ftpDlU,
-  LibreExcelU;
+  LibreExcelU, NzelvvalaszTU,reinit, FordU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -544,7 +543,7 @@ begin
   if not aF.van_joga('j6') then exit;
   if aF.ForgalomQ.FieldByName('mjegy').asString<>'' then
   begin
-    ShowMessage('Ebbõl a mérésbõl készült már mérlegjegy!');
+    ShowMessage(af.ford('rsEbbolAMeresbolMarKeszultMjegy'));
     exit;
   end;
 
@@ -592,6 +591,47 @@ begin
   if af.nyitbeQ.FieldByName('Torolve').AsInteger=1 then  AF.nyitbe_torles(af.nyitbeQ.FieldByName('ID').AsInteger,0)
   else AF.nyitbe_torles(af.nyitbeQ.FieldByName('ID').AsInteger,1);
   AF.NyitbeQ.Refresh;
+end;
+
+
+
+procedure TFoF.btnnyelvClick(Sender: TObject);
+var m:Integer;
+    h:THandle;
+    AppName: PChar;
+const
+  ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
+begin
+ try
+   nyelvF:=TNyelvF.Create(Self);
+   NyelvF.Position:=poScreenCenter;
+   if NyelvF.ShowModal=mrOk then nyelv_index:=nyelvF.cbxnyelv.itemindex
+   else nyelv_index:=0;
+   //ShowMessage(nyelv_index.ToString)
+ finally
+  nyelvF.free;
+  //portf.portclose;
+//      case nyelv_index of
+//        0:if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
+//        1:if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
+//      end;
+
+     with af.CfgT do
+      begin
+        open;
+        if Locate('tulajdonsag','Nyelv',[] ) then
+         begin
+           edit;
+           FieldByName('ertek').AsInteger:=nyelv_index;
+           post;
+         end;
+         close
+      end;
+   AppName := PChar(Application.ExeName) ;
+   ShellExecute(Handle,'open', AppName, nil, nil, SW_SHOWNORMAL) ;
+   Application.Terminate;
+ end;
+   nyelvvalaszt:=false;
 end;
 
 procedure TFoF.chkToroltek_mutatasaClick(Sender: TObject);
@@ -657,11 +697,6 @@ begin
   finally
 
   end;
-
-
-  exit;
-  
-
 end;
 
 
@@ -715,12 +750,12 @@ end;
 
 procedure TFoF.ClientSocketConnect(Sender: TObject; Socket: TCustomWinSocket);
 begin
-  StatusBar1.Panels[1].Text := 'Csatlakozva: ' + Socket.RemoteHost;
+  StatusBar1.Panels[1].Text := af.ford('rsCsatlakoztatva') + Socket.RemoteHost;
 end;
 
 procedure TFoF.ClientSocketError(Sender: TObject; Socket: TCustomWinSocket; ErrorEvent: TErrorEvent; var ErrorCode: Integer);
 begin
-  StatusBar1.Panels[1].Text := 'Kliens hiba:' + inttostr(ErrorCode);
+  StatusBar1.Panels[1].Text := af.ford('rsKliensHiba') + inttostr(ErrorCode);
   ErrorCode := 0;
 end;
 
@@ -782,35 +817,35 @@ begin
  if (Assigned(vlcMediaPlayer0)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0) then
    begin
-    StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
+    StatusBar1.panels[5].text := af.ford('rsElokep1Szunetel');
     af.camlog('Élõkép(1) SZÜNETEL');
     kiskam1:=true;
    end
-  else if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer0) = 1) then StatusBar1.panels[5].text := af.ford('rsElokep1Folyamatos');
  if (Assigned(vlcMediaPlayer1)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0) then
    begin
-    StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
+    StatusBar1.panels[6].text := af.ford('rsElokep2Szunetel');
     af.camlog('Élõkép(2) SZÜNETEL');
     kiskam2:=true;
    end
-  else if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer1) = 1) then StatusBar1.panels[6].text := af.ford('rsElokep2Folyamatos');
  if (Assigned(vlcMediaPlayer2)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0) then
    begin
-    StatusBar1.panels[5].text := 'Élõkép(1) SZÜNETEL';
+    StatusBar1.panels[5].text := af.ford('rsElokep1Szunetel');
     af.camlog('Élõkép(1) SZÜNETEL');
     nagykam1:=true;
    end
-  else if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 1) then StatusBar1.panels[5].text := 'Élõkép(1) FOLYAMATOS';
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer2) = 1) then StatusBar1.panels[5].text := af.ford('rsElokep1Folyamatos');
 if (Assigned(vlcMediaPlayer3)) then
   if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 0) then
    begin
-    StatusBar1.panels[6].text := 'Élõkép(2): SZÜNETEL';
+    StatusBar1.panels[6].text := af.ford('rsElokep2Szunetel');
     af.camlog('Élõkép(2) SZÜNETEL');
     nagykam2:=true;
    end
-  else if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 1) then StatusBar1.panels[6].text := 'Élõkép(2): FOLYAMATOS';
+  else if (libvlc_media_player_is_playing(vlcMediaPlayer3) = 1) then StatusBar1.panels[6].text := af.ford('rsElokep2Folyamatos');
  //Application.ProcessMessages;
  //ha valamelyik true újra kell indítani, azért van így külön hogy csak egyszer indítsa újra
  if kiskam1 or kiskam2 then
@@ -842,6 +877,7 @@ end;
 procedure TFoF.tmrForgalom_frissitesTimer(Sender: TObject);
 begin
   tmrForgalom_frissites.Enabled:=false;
+  if piBefejezoDatum.Date<>Date then piBefejezoDatum.Date:=date;
   if AF.ForgalomQ.Active then  AF.ForgalomQ.Refresh;
   tmrForgalom_frissites.Enabled:=true;
 end;
@@ -918,7 +954,7 @@ begin
 
     BelepF.ShowModal;
   finally
-    StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
+    StatusBar1.panels[2].text := af.ford('rsBejelentkezve')+ felhnev;
     alapbe_m.Enabled:=felhnev='Programozó';
     Hardverbelltsok1.Visible:=felhnev='Programozó';
     sbtnUjmerlegjegy.Enabled:=true;
@@ -1154,9 +1190,25 @@ var
         end;
       end;
   end;
+  procedure nyelv_valasztas;
+  var    h:THandle;
+  const
+    ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
+  begin
+   try
+    //FordF:=FordF.Create(Application);
+   finally
+    case nyelv_index of
+     0: if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
+     1: if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
+    end;
+   end;
+  end;
+
 
 begin
   onActivate := nil;
+  nyelv_valasztas;
  // AF.auto_teszt;
   if not Regi_hardver_beallitas then af.HardverQ.Open
   else pnlJobbAlso.Visible:=true;
@@ -1212,9 +1264,9 @@ begin
   Antheratrzsimport1.Visible:= automata_torzsimport;
   if rendszamleker then  socketconnect;
   piKezdoDatum.Date := date;
-  piBefejezoDatum.Date := date;
+  //piBefejezoDatum.Date := date;
   StatusBar1.panels[0].text := verzio;
-  StatusBar1.panels[2].text := 'Bejelentkezve: ' + felhnev;
+  StatusBar1.panels[2].text := af.ford('rsBejelentkezve') + felhnev;
   WindowState:=wsMaximized;
   if ideiglenes_latszik then
   begin
@@ -1222,6 +1274,7 @@ begin
     AF.NyitbeQ.MacroByName('SZURES').AsRaw:='WHERE Torolve=0';
     AF.NyitbeQ.open;
   end;
+  if forgalom_latszik then pcTablak.ActivePage:=tbForgalom;
 
   if ( rendszamleker)or (lejatszas) then   kepatmeretez;
   // vlc_betolt;
@@ -1233,7 +1286,7 @@ begin
     if (not nagykamera)and (lejatszas) then play(False);
     application.processmessages;
   except
-    Showmessage('Kamerakép betöltése sikertelen!');
+    Showmessage(af.ford('rsKamerakepBetolteseSikertelen'));
   // Exit
   end;
   try
@@ -1248,12 +1301,12 @@ begin
           case h of
             0..3:
               begin
-                StatusBar1.panels[3].text := 'Kártya ' + inttostr(h) + ' csatlakozva';
+                StatusBar1.panels[3].text := af.ford('rsKartya') + inttostr(h) + af.ford('rsCsatlakoztatva');
                 kartyavan := true;
               end;
             -1:
               begin
-                StatusBar1.panels[3].text := 'Kártya ' + inttostr(CardAddr) + ' nem található';
+                StatusBar1.panels[3].text := af.ford('rsKartya') + inttostr(CardAddr) + af.ford('rsNemTalalhato');
               end;
           end;
         end
@@ -1339,10 +1392,10 @@ begin
     end;
   end;
   if (not FileExists(konyvtar+'kijelzo.dat')) and (kijelzo_tipus<>'Nincs') then
-      ShowMessage('A kijelzõ port nincs beállítva!');
+      ShowMessage(af.ford('rsAKijelzoPortNincsBeallitva'));
 
   if (not FileExists(konyvtar+'hivoszamkijelzo.dat')) and (Hivoszamhasznalat)  then
-      ShowMessage('A hívószám kijelzõ port nincs beállítva!');
+      ShowMessage(af.ford('rsAHivoszamKijelzoPortNincsBeallitva'));
   if not Regi_hardver_beallitas then PC_kommunikacio_beallitas;
   esemeny:=af.esemeny_kibont(Now,'');
   if Utolso_futtatas<>esemeny.evs+esemeny.hos+esemeny.naps then
@@ -1382,7 +1435,7 @@ begin
         ThRendszamLampa[i]:=Rendszam_lampa_thread.Create(True);
         ThRendszamLampa[i].thmerleg:=i;
         ThRendszamLampa[i].Resume;
-        memlog.Lines.Insert(0,'RendszamLampa indul '+i.ToString);
+        memlog.Lines.Insert(0,'RendszamLampaIndul '+i.ToString);
       end;
       Sorompok[i][1].nyitva:=False;
       Sorompok[i][2].nyitva:=False;
@@ -1404,13 +1457,14 @@ begin
   if Automata_merlegjegy or Automata_merlegjegy_parositaskor then AF.auto_mjegy_tread_run;
   Djszabsikategrik1.Visible:=dijszab_csoportok;
   Fof.SetFocus;
+  indult:=True;
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   programvege:=true;
   soap_programvege:=true;
-  StatusBar1.panels[1].Text:='Kilépés folyamatban...';
+  StatusBar1.panels[1].Text:='Kilépés folyamatban...';//af.ford('rsKilepesFolyamatban');
   Tomeg_Timer.Enabled:=false;
   if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS') and (felhnev<>'') then
   begin
@@ -1418,7 +1472,7 @@ begin
     PortF.port2close;
     PortF.pc_komm_port_close;
   end;
-
+FordF.Close
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -1500,8 +1554,8 @@ begin
       end;
       sL.Free;
    end
-  else ShowMessage('A plugin mappa hiányzik az IP kamerához!');
-
+  else ShowMessage(af.ford('rsPluginMappaHianyzik'));
+ // indult:=false;
 end;
 
 procedure TFoF.FormResize(Sender: TObject);
@@ -1579,12 +1633,12 @@ begin
     if mcIOmodul.WriteCoil(cim , ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin
       Result := True;
-      StatusBar1.panels[3].text := 'Írt cím:' + Inttostr(cim) + ' Érték:'+BoolToStr(ertek);
+      StatusBar1.panels[3].text := af.ford('rsIrtCim') + Inttostr(cim) + af.ford('rsErtek') +BoolToStr(ertek);
     end
     else
     begin
       Result := False;
-      StatusBar1.panels[3].text := 'IO írási hiba!'
+      StatusBar1.panels[3].text := af.ford('rsIOIrasiHiba');
     end;
   end
   {
@@ -2194,27 +2248,27 @@ procedure TFoF.Sajtjelszmdostsa1Click(Sender: TObject);
 var
   regi, uj, ujra: string;
 begin
-  regi := InputBox('Adja meg jelenlegi jelszavát', #31'Jelszó:', 'aaaaaaaa');
+  regi := InputBox(af.ford('rsAdjaMegAJelenlegiJelszavat'), #31+PChar(af.ford('rsJelszo')), 'aaaaaaaa');
   if not aF.FelhaszQ.locate('id;jelszo', VarArrayOf([f_ide, aF.Transform(regi)]), []) then
   begin
-    ShowMessage('Helytelen jelszó!');
+    ShowMessage(af.ford('rsHibasJelszo'));
     Exit
   end;
-  uj := InputBox('Adja meg az új jelszavát',  #31'Jelszó:', '');
+  uj := InputBox(af.ford('rsAdjaMegAzUjJelszavat'),  #31+PChar(af.ford('rsJelszo')), '');
   if uj = '' then
   begin
-    ShowMessage('Helytelen jelszó!');
+    ShowMessage(af.ford('rsHibasJelszo'));
     Exit
   end;
-  ujra := InputBox('Erõsítse meg az új jelszavát',  #31'Jelszó:', '');
+  ujra := InputBox(af.ford('rsErositseMegAzUjJelszavat'),  #31+PChar(af.ford('rsJelszo')), '');
   if ujra = '' then
   begin
-    ShowMessage('Helytelen jelszó!');
+    ShowMessage(af.ford('rsHibasJelszo'));
     Exit
   end;
   if uj <> ujra then
   begin
-    ShowMessage('A két megadott jelszó nem egyezik!');
+    ShowMessage(af.ford('rsAKetJelszoNemEgyezik'));
     Exit
   end;
   with aF.Q1 do
@@ -2227,7 +2281,7 @@ begin
     Close;
   end;
   aF.FelhaszQ.Refresh;
-  ShowMessage('Jelszó módosítva!');
+  ShowMessage(af.ford('rsJelszoModositva'));
 end;
 
 procedure TFoF.ServerSocketClientRead(Sender: TObject; Socket: TCustomWinSocket);
@@ -2935,15 +2989,15 @@ end;
 procedure TFoF.mcIOmodulResponseError(const FunctionCode, ErrorCode: Byte;
   const ResponseBuffer: TModBusResponseBuffer);
 begin
-  ShowMessage('IO kapcsolati hiba!');
-  memlog.Lines.Insert(0,'IO kapcsolati hiba!');
+  ShowMessage(af.ford('rsIOKapcsolatiHiba'));
+  memlog.Lines.Insert(0,af.ford('rsIOKapcsolatiHiba'));
 end;
 
 procedure TFoF.mctPLCResponseError(const FunctionCode, ErrorCode: Byte;
   const ResponseBuffer: TModBusResponseBuffer);
 begin
-  ShowMessage('PLC kapcsolati hiba!(R)');
-  memlog.Lines.Insert(0,'PLC kapcsolati hiba!(R)');
+  ShowMessage(af.ford('rsPLCKapcsolatiHiba'));
+  memlog.Lines.Insert(0,af.ford('rsPLCKapcsolatiHiba'));
 end;
 
 procedure TFoF.mnSzablyosmrlegentartozkodsfigyels1Click(Sender: TObject);
@@ -3223,7 +3277,7 @@ begin
           p := Tpanel.create(Application);
           p.parent := F.components[i] as TtabSheet;
           p.Name :=F.Name+neve;
-          p.caption := 'Kamera nem elérhetõ!';
+          p.caption := 'Kamera nem elérhetõ';// af.ford('rsKamerNemElerheto');
           p.align := TAlign.alClient;
           panelek.Add(p);
           af.camlog('Panel létrehozva:'+F.Name+neve );
@@ -3241,13 +3295,13 @@ begin
 
   if pingprobak=pingproba then
   begin
-   StatusBar1.panels[3].text := 'PLC ping hiba!(P)';
-   memlog.Lines.Insert(0,'PLC ping hiba!(P)');
+   StatusBar1.panels[3].text := af.ford('rsPLCPingHiba');
+   memlog.Lines.Insert(0,af.ford('rsPLCPingHiba'));
    Exit;
   end;
   Inc(pingprobak);
-  StatusBar1.panels[3].text := 'Ping teszt';
-  memlog.Lines.Insert(0,'PLC teszt');
+  StatusBar1.panels[3].text := af.ford('rsPingTeszt');
+  memlog.Lines.Insert(0,af.ford('rsPLCTeszt'));
   Application.ProcessMessages;
   for I := 1 to Ping_varakozas do
   begin
@@ -3283,19 +3337,19 @@ begin
     if mctPLC.WriteRegister(cim + 1, ertek) then     //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin
       Result := True;
-      StatusBar1.panels[3].text := 'Írt cím:' + Inttostr(cim) + ' Érték:' + Inttostr(ertek);
+      StatusBar1.panels[3].text := af.ford('rsIrtCim') + Inttostr(cim) + af.ford('rsErtek') + Inttostr(ertek);
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end
     else
     begin
       Result := False;
-      StatusBar1.panels[3].text := 'PLC írási hiba!';
+      StatusBar1.panels[3].text := af.ford('rsPLCIrasiiHiba');
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end;
   end
   else
     begin
-      StatusBar1.panels[3].text := 'PLC kapcsolati hiba!(I)';
+      StatusBar1.panels[3].text :=StringReplace(af.ford('rsPLCKapcsolatiHiba'),'(R)','(I)',[rfReplaceAll]);
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
     end;
 end;
@@ -3323,7 +3377,7 @@ begin
   begin
     if mctPLC.ReadHoldingRegisters(cim + 1, blokk, Data) then  //A címhez hozzá kell adni egyet, mert így olvassa ki a helyes regisztert
     begin
-      sLine := 'Olvasott cím:' + Inttostr(cim) + ' Érték:';
+      sLine := af.ford('rsOlvasottCim') + Inttostr(cim) + af.ford('rsErtek');
       for i := 0 to (blokk - 1) do
       begin
         sLine := sLine + IntToHex(Data[i], 4);
@@ -3335,14 +3389,14 @@ begin
     end
     else
     begin
-      StatusBar1.panels[3].text := 'PLC olvasási hiba!';
+      StatusBar1.panels[3].text := af.ford('rsPLCOlvasasiHiba');
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
       Result := -1;
     end;
   end
   else
     begin
-      StatusBar1.panels[3].text := 'PLC kapcsolati hiba(O)!';
+      StatusBar1.panels[3].text := StringReplace(af.ford('rsPLCKapcsolatiHiba'),'(R)','(O)',[rfReplaceAll]);
       memlog.Lines.Insert(0,StatusBar1.panels[3].text );
       Result := -1;
     end;
@@ -3617,10 +3671,6 @@ begin
         end;
         tomeg := -1;
       end;
-
-
-
-
     end;
 
     for i := 1 to 2 do
@@ -3633,7 +3683,7 @@ end;
 
 procedure Rendszam_lampa_thread.kijelez;
 begin
-   FoF.memlog.Lines.Insert(0,'Renszamleker m:'+thmerleg.ToString);;
+   FoF.memlog.Lines.Insert(0,af.ford('rsRendszamLekerM')+thmerleg.ToString);;
 end;
 
 procedure Rendszam_lampa_thread.mukodtet;
@@ -3644,8 +3694,6 @@ begin
   if RendszamTomb[thmerleg,2].fut then s:=s+' 2. rsz.fut';
   if Mentesvolt[thmerleg] then  s:=s+' Mentve'
   else  s:=s+' Nincs mentés';
-
-
 
   if felhnev='Programozó' then TLabel(Fof.FindComponent('lblThElo'+thmerleg.ToString)).Visible:=True;
   TLabel(Fof.FindComponent('lblThElo'+thmerleg.ToString)).caption:=
@@ -3807,5 +3855,3 @@ begin
 end;
 
 end.
-
-

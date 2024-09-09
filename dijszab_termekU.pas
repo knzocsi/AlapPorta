@@ -115,7 +115,7 @@ procedure Tdijszab_termekF.dijak_termekTBeforePost(DataSet: TDataSet);
 begin
   if not ellenorzes  then
   begin
-    ShowMessage('Ez a tekmék már szerepel ebben a dijszabás kategóriában!');
+    ShowMessage(af.ford('rsEzaTermekmerszerepeldijszabkat'));
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end
   else dijak_termekT.FieldByName('t_nev').AsString:=TermekTNev.AsString;

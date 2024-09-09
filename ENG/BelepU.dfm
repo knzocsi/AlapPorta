@@ -1,0 +1,70 @@
+object BelepF: TBelepF
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Sign in'
+  ClientHeight = 305
+  ClientWidth = 208
+  Color = clBtnFace
+  DefaultMonitor = dmPrimary
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 208
+    Height = 280
+    Align = alClient
+    TabOrder = 0
+    object edjelszo: TEdit
+      Left = 1
+      Top = 258
+      Width = 206
+      Height = 21
+      Align = alBottom
+      PasswordChar = '*'
+      TabOrder = 0
+      OnKeyPress = edjelszoKeyPress
+      OnKeyUp = edjelszoKeyUp
+    end
+    object DBLookupListBox1: TDBLookupListBox
+      Left = 1
+      Top = 1
+      Width = 206
+      Height = 251
+      Align = alClient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      KeyField = 'id'
+      ListField = 'nev'
+      ListSource = AF.FelhaszQDs
+      ParentFont = False
+      TabOrder = 1
+      OnClick = DBLookupListBox1Click
+    end
+  end
+  object Button1: TButton
+    Left = 0
+    Top = 280
+    Width = 208
+    Height = 25
+    Align = alBottom
+    Caption = 'Exit'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+end

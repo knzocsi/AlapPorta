@@ -30,7 +30,6 @@ type
     ed_szallneve: TEdit;
     Label8: TLabel;
     ed_szalladosz: TEdit;
-    Label9: TLabel;
     cbx_szallojel: TComboBox;
     Label10: TLabel;
     ed_szallcim1: TEdit;
@@ -140,6 +139,7 @@ type
     lecimekQemail: TWideStringField;
     lecimekQtelefon: TWideStringField;
     lecimekQcim: TWideStringField;
+    Label9: TLabel;
     procedure btnkuldesClick(Sender: TObject);
     procedure felcimlookupCloseUp(Sender: TObject);
     procedure btnkilepesClick(Sender: TObject);
@@ -527,99 +527,99 @@ var kifn,vfn:string;
 begin
  if (Length(ed_vtsz.text)<6)then
    begin
-     ShowMessage('Hibás a termék VTSZ száma!');
+     ShowMessage(af.ford('rsHibastermekVTSZ'));
      exit;
    end;
 
    if (ed_szallneve.Text='')then
    begin
-     ShowMessage('A szállítót meg kell adni!');
+     ShowMessage(af.ford('rsSzalliotMegKellAdni'));
      exit;
    end;
   if (Length(ed_szalladosz.text)<8)then
    begin
-     ShowMessage('Hibás a szállító adószáma!');
+     ShowMessage(af.ford('rsSzallitoAdoszamaHibas'));
      exit;
    end;
    if (cbx_szallojel.Text='')then
    begin
-     ShowMessage('A szállító országát meg kell adni!');
+     ShowMessage(af.ford('rsSzallitoOrszagatMegKellAdni'));
      exit;
    end;
   if (ed_szallcim1.text='') then
    begin
-     ShowMessage('A szállító címét meg kell adni!');
+     ShowMessage(af.ford('rsSzallitoCimetMegKellAdni'));
      exit;
    end;
   if (ed_Vevoneve.Text='')then
    begin
-     ShowMessage('A vevõt meg kell adni!');
+     ShowMessage(af.ford('rsVevotMegKellAdni'));
      exit;
    end;
   if (Length(ed_VevAdosz.text)<8)then
    begin
-     ShowMessage('Hibás a vevõ adószáma!');
+     ShowMessage(af.ford('rsVevoAdoszamaHibas'));
      exit;
    end;
    if (cbx_vevojel.Text='')then
    begin
-     ShowMessage('A vevõ országát meg kell adni!');
+     ShowMessage(af.ford('rsVevoOrszagatMegKellAdni'));
      exit;
    end;
   if (ed_VevoCim1.text='') then
    begin
-     ShowMessage('A vevõ címét meg kell adni!');
+     ShowMessage(af.ford('rsVevoCimetMegKellAdni'));
      exit;
    end;
  if (ed_Felceg.Text='')then
    begin
-     ShowMessage('A felrakodási céget meg kell adni!');
+     ShowMessage(af.ford('rsFelrakCegetegKellAdni'));
      exit;
    end;
    if (Length(ed_felcegadosz.text)<8)then
    begin
-     ShowMessage('Hibás a felrakodási cég adószáma!');
+     ShowMessage(af.ford('rsFelrakAdoszamaHibas'));
      exit;
    end;
   if cbx_felcegojel.text='' then
    begin
-     ShowMessage('Hibás a felrakodási ország!');
+     ShowMessage(af.ford('rsFelrakOrszagatMegKellAdni'));
      exit;
    end;
   if felcimekQirsz.AsString='' then
    begin
-     ShowMessage('Hibás a felrakodási irányitószám!');
+     ShowMessage(af.ford('rsFelrakIrszHibas'));
      exit;
    end;
   if felcimekQtelepules.AsString='' then
    begin
-     ShowMessage('Hibás a felrakodási cég városa!');
+     ShowMessage(af.ford('rsFelrakVarosHibas'));
      exit;
    end;
 
   if ed_leceg.Text='' then
    begin
-     ShowMessage('Hibás a lerakodási cég neve!');
+     ShowMessage(af.ford('rsLerakCegetMegKellAdni'));
      exit;
    end;
    if (Length(ed_lecegadosz.text)<8)then
    begin
-     ShowMessage('Hibás a lerakodási cég adószáma!');
+     ShowMessage(af.ford('rsLerakAdoszamaHibas'));
      exit;
    end;
   if cbx_lecegojel.text='' then
    begin
-     ShowMessage('Hibás a lerakodási ország!');
+     ShowMessage(af.ford('rsLerakOrszagatMegKellAdni'));
      exit;
    end;
   if lecimekQirsz.AsString='' then
    begin
-     ShowMessage('Hibás a lerakodási irányitószám!');
+     ShowMessage(af.ford('rsLerakIrszHibas'));
      exit;
    end;
   if lecimekQtelepules.AsString='' then
    begin
-     ShowMessage('Hibás a lerakodási cég városa!');
+     ShowMessage(af.ford('rsLerakVarosHibas'));
      exit;
    end;
 
@@ -638,7 +638,7 @@ begin
     begin
       eredmeny:=Copy(VaXML.Text,Pos('tcn',VaXML.Text)+4,15);
     end
-   else eredmeny:='HIBA';
+   else eredmeny:= af.ford('rsHiba');
    VaXML.Free;
  end;
  lblekaer.Caption:=eredmeny;

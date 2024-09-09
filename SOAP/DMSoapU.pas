@@ -66,7 +66,7 @@ var
   soap_kilepes,soap_xml_teszt:Boolean;
 
 implementation
-  uses Soap_valaszU,Soap_PingU,Soap_keresU;
+  uses Soap_valaszU,Soap_PingU,Soap_keresU,FordU;
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
@@ -97,6 +97,7 @@ procedure TDMSoapF.DataModuleCreate(Sender: TObject);
 begin
  soap_req_ver:='1.0';
  soap_head_ver:='1.0';
+
 end;
 
 procedure TDMSoapF.mappak_letrehozasa;
@@ -142,6 +143,7 @@ inherited;
   //ha true akkor suspended
  // LekerdezesTh.port:=port;  //ha változót szeretnék beküldeni akkor create(true)
  // NTAKTh.Resume; //majd resume
+
 end;
 
 procedure TDMSoapF.SoapValaszFeldolgozasa(fi: string);

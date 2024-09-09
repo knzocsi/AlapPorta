@@ -28,10 +28,10 @@ type
     btnKilepes: TButton;
     Label6: TLabel;
     chkKezimeres: TCheckBox;
-    Elfogadás: TButton;
+    btnelfogadas: TButton;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure ElfogadásClick(Sender: TObject);
+    procedure btnelfogadasClick(Sender: TObject);
     procedure btnMeresClick(Sender: TObject);
     procedure chkKezimeresClick(Sender: TObject);
   private
@@ -64,7 +64,7 @@ begin
        (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA6')=0)
       then
     begin
-      ShowMessage('Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!');
+      ShowMessage(af.ford('rsJarmuNincsAMerlegen'));
       exit;
     end;
 
@@ -85,11 +85,11 @@ begin
   spTomeg.Enabled:=chkKezimeres.Checked;
 end;
 
-procedure TMeres_MerlegjegyenF.ElfogadásClick(Sender: TObject);
+procedure TMeres_MerlegjegyenF.btnelfogadasClick(Sender: TObject);
 begin
   if spTomeg.Value<0 then
   begin
-    ShowMessage('A mérés eredménye nem lehet 0!');
+    ShowMessage(af.ford('rsMeresEredmenyeNulla'));
     exit;
   end;
   Mert_eredmeny:=spTomeg.Value;

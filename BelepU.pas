@@ -56,7 +56,7 @@ begin
  end
  else
  begin
-  Application.MessageBox('Hibás jelszó!','Hiba',MB_OK);
+  Application.MessageBox(PChar(af.ford('rsHibasJelszo')),PChar(af.ford('rsHiba')),MB_OK);
   edjelszo.SetFocus;
  end;
 end;

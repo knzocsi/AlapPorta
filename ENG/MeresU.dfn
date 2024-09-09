@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MeresU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MeresU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45532.5319444444</prop>
+        <prop prop-type="OrigDateTime">45104.4777546296</prop>
+        <prop prop-type="XlatDateTime">45104.4777546296</prop>
+        <prop prop-type="Translated">11</prop>
+        <prop prop-type="UnTranslated">97</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MeresF.Left" resname="O:MeresF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Top" resname="O:MeresF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Caption" resname="O:MeresF.Caption">
+        <source>'Mérés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Measur'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.ClientHeight" resname="O:MeresF.ClientHeight">
+        <source>272</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.ClientWidth" resname="O:MeresF.ClientWidth">
+        <source>439</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Color" resname="O:MeresF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Font.Charset" resname="O:MeresF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Font.Color" resname="O:MeresF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Font.Height" resname="O:MeresF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Font.Name" resname="O:MeresF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Font.Style" resname="O:MeresF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.OldCreateOrder" resname="O:MeresF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.Position" resname="O:MeresF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.OnActivate" resname="O:MeresF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.PixelsPerInch" resname="O:MeresF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.TextHeight" resname="O:MeresF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TMeresF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label6.Left" resname="O:MeresF.O:Label6.Left">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label6.Top" resname="O:MeresF.O:Label6.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label6.Width" resname="O:MeresF.O:Label6.Width">
+        <source>53</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label6.Height" resname="O:MeresF.O:Label6.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label6.Caption" resname="O:MeresF.O:Label6.Caption">
+        <source>'Rendszám:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Licence plate:'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label7.Left" resname="O:MeresF.O:Label7.Left">
+        <source>217</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label7.Top" resname="O:MeresF.O:Label7.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label7.Width" resname="O:MeresF.O:Label7.Width">
+        <source>62</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label7.Height" resname="O:MeresF.O:Label7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421487963</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label7.Caption" resname="O:MeresF.O:Label7.Caption">
+        <source>'Rendszám 2:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'License plate 2.:'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label9.Left" resname="O:MeresF.O:Label9.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label9.Top" resname="O:MeresF.O:Label9.Top">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label9.Width" resname="O:MeresF.O:Label9.Width">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label9.Height" resname="O:MeresF.O:Label9.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:Label9.Caption" resname="O:MeresF.O:Label9.Caption">
+        <source>'Tömeg:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Mass:'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Left" resname="O:MeresF.O:cbxrendszam1.Left">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Top" resname="O:MeresF.O:cbxrendszam1.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Width" resname="O:MeresF.O:cbxrendszam1.Width">
+        <source>145</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Height" resname="O:MeresF.O:cbxrendszam1.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.CharCase" resname="O:MeresF.O:cbxrendszam1.CharCase">
+        <source>ecUpperCase</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Sorted" resname="O:MeresF.O:cbxrendszam1.Sorted">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.TabOrder" resname="O:MeresF.O:cbxrendszam1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam1.Text" resname="O:MeresF.O:cbxrendszam1.Text">
+        <source>'CBXRENDSZAM1'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Left" resname="O:MeresF.O:cbxrendszam2.Left">
+        <source>217</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Top" resname="O:MeresF.O:cbxrendszam2.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Width" resname="O:MeresF.O:cbxrendszam2.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Height" resname="O:MeresF.O:cbxrendszam2.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.CharCase" resname="O:MeresF.O:cbxrendszam2.CharCase">
+        <source>ecUpperCase</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Sorted" resname="O:MeresF.O:cbxrendszam2.Sorted">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.TabOrder" resname="O:MeresF.O:cbxrendszam2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:cbxrendszam2.Text" resname="O:MeresF.O:cbxrendszam2.Text">
+        <source>'CBXRENDSZAM2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.Left" resname="O:MeresF.O:spTomeg.Left">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.Top" resname="O:MeresF.O:spTomeg.Top">
+        <source>106</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.Width" resname="O:MeresF.O:spTomeg.Width">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.Height" resname="O:MeresF.O:spTomeg.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.MaxValue" resname="O:MeresF.O:spTomeg.MaxValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.MinValue" resname="O:MeresF.O:spTomeg.MinValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.ReadOnly" resname="O:MeresF.O:spTomeg.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.TabOrder" resname="O:MeresF.O:spTomeg.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.Value" resname="O:MeresF.O:spTomeg.Value">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:spTomeg.OnEnter" resname="O:MeresF.O:spTomeg.OnEnter">
+        <source>spTomegEnter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.Left" resname="O:MeresF.O:btnMentes.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.Top" resname="O:MeresF.O:btnMentes.Top">
+        <source>222</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.Width" resname="O:MeresF.O:btnMentes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.Height" resname="O:MeresF.O:btnMentes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.Caption" resname="O:MeresF.O:btnMentes.Caption">
+        <source>'Mentés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Save'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.TabOrder" resname="O:MeresF.O:btnMentes.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMentes.OnClick" resname="O:MeresF.O:btnMentes.OnClick">
+        <source>btnMentesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.Left" resname="O:MeresF.O:btnKilepes.Left">
+        <source>256</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.Top" resname="O:MeresF.O:btnKilepes.Top">
+        <source>222</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.Width" resname="O:MeresF.O:btnKilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.Height" resname="O:MeresF.O:btnKilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.Caption" resname="O:MeresF.O:btnKilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.TabOrder" resname="O:MeresF.O:btnKilepes.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnKilepes.OnClick" resname="O:MeresF.O:btnKilepes.OnClick">
+        <source>btnKilepesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.Left" resname="O:MeresF.O:chkkezi.Left">
+        <source>159</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.Top" resname="O:MeresF.O:chkkezi.Top">
+        <source>111</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.Width" resname="O:MeresF.O:chkkezi.Width">
+        <source>97</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.Height" resname="O:MeresF.O:chkkezi.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.Caption" resname="O:MeresF.O:chkkezi.Caption">
+        <source>'Kézi mérés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Manual measur'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.TabOrder" resname="O:MeresF.O:chkkezi.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:chkkezi.OnClick" resname="O:MeresF.O:chkkezi.OnClick">
+        <source>chkkeziClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">TCheckBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.Left" resname="O:MeresF.O:btnMeres1.Left">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.Top" resname="O:MeresF.O:btnMeres1.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.Width" resname="O:MeresF.O:btnMeres1.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.Height" resname="O:MeresF.O:btnMeres1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.Caption" resname="O:MeresF.O:btnMeres1.Caption">
+        <source>'Mérés 1. mérleg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Measur 1. scale'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.TabOrder" resname="O:MeresF.O:btnMeres1.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488079</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres1.OnClick" resname="O:MeresF.O:btnMeres1.OnClick">
+        <source>btnMeres1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Left" resname="O:MeresF.O:btnMeres2.Left">
+        <source>137</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Top" resname="O:MeresF.O:btnMeres2.Top">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Width" resname="O:MeresF.O:btnMeres2.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Height" resname="O:MeresF.O:btnMeres2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Caption" resname="O:MeresF.O:btnMeres2.Caption">
+        <source>'Mérés 2. mérleg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Measur 2. scale'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.TabOrder" resname="O:MeresF.O:btnMeres2.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.Visible" resname="O:MeresF.O:btnMeres2.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres2.OnClick" resname="O:MeresF.O:btnMeres2.OnClick">
+        <source>btnMeres1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Left" resname="O:MeresF.O:btnMeres3.Left">
+        <source>233</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Top" resname="O:MeresF.O:btnMeres3.Top">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Width" resname="O:MeresF.O:btnMeres3.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Height" resname="O:MeresF.O:btnMeres3.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Caption" resname="O:MeresF.O:btnMeres3.Caption">
+        <source>'Mérés 3. mérleg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Measur 3. scale'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.TabOrder" resname="O:MeresF.O:btnMeres3.TabOrder">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres3.Visible" resname="O:MeresF.O:btnMeres3.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Left" resname="O:MeresF.O:btnMeres4.Left">
+        <source>329</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Top" resname="O:MeresF.O:btnMeres4.Top">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Width" resname="O:MeresF.O:btnMeres4.Width">
+        <source>90</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Height" resname="O:MeresF.O:btnMeres4.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Caption" resname="O:MeresF.O:btnMeres4.Caption">
+        <source>'Mérés 4. mérleg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Measur 4. scale'</target>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.TabOrder" resname="O:MeresF.O:btnMeres4.TabOrder">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.Visible" resname="O:MeresF.O:btnMeres4.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresF.O:btnMeres4.OnClick" resname="O:MeresF.O:btnMeres4.OnClick">
+        <source>btnMeres1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421488194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

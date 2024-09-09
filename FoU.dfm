@@ -187,7 +187,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -243,46 +243,54 @@ object FoF: TFoF
             item
               Expanded = False
               FieldName = 'Datum'
+              Title.Caption = 'D'#225'tum'
               Width = 60
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Ido'
+              Title.Caption = 'Id'#337
               Width = 55
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Rendszam'
+              Title.Caption = 'Rendsz'#225'm'
               Width = 60
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Rendszam2'
+              Title.Caption = 'Rendsz'#225'm 2'
               Width = 60
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Tomeg'
+              Title.Caption = 'T'#246'meg'
               Width = 50
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Szallitolev'
+              Title.Caption = 'Sz'#225'll'#237't'#243'lev'
               Visible = False
             end
             item
               Expanded = False
               FieldName = 'Kod'
+              Title.Caption = 'K'#243'd'
               Visible = False
             end
             item
               Expanded = False
               FieldName = 'Irany'
+              Title.Caption = 'Ir'#225'ny'
               Width = 20
               Visible = True
             end
@@ -303,6 +311,9 @@ object FoF: TFoF
       Height = 59
       Align = alTop
       TabOrder = 1
+      DesignSize = (
+        798
+        59)
       object sbtnUjmerlegjegy: TSpeedButton
         Left = 16
         Top = 2
@@ -812,6 +823,16 @@ object FoF: TFoF
           FFFFFFFFFFFFFFFFFFFFFFFFFFFF}
         ParentFont = False
         OnClick = sbtnSorszamhivasClick
+      end
+      object btnnyelv: TButton
+        Left = 655
+        Top = 24
+        Width = 116
+        Height = 25
+        Anchors = [akTop, akRight]
+        Caption = 'Nyelv/Language'
+        TabOrder = 0
+        OnClick = btnnyelvClick
       end
     end
     object pnlKiskep: TPanel

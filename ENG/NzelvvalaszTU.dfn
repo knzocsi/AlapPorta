@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\NzelvvalaszTU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\NzelvvalaszTU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45539.5886111111</prop>
+        <prop prop-type="OrigDateTime">45539.5866666667</prop>
+        <prop prop-type="XlatDateTime">45539.5866666667</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">42</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:NyelvF.Left" resname="O:NyelvF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Top" resname="O:NyelvF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.BorderStyle" resname="O:NyelvF.BorderStyle">
+        <source>bsNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Caption" resname="O:NyelvF.Caption">
+        <source>'NyelvF'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.ClientHeight" resname="O:NyelvF.ClientHeight">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.ClientWidth" resname="O:NyelvF.ClientWidth">
+        <source>205</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Color" resname="O:NyelvF.Color">
+        <source>clSkyBlue</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Font.Charset" resname="O:NyelvF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Font.Color" resname="O:NyelvF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Font.Height" resname="O:NyelvF.Font.Height">
+        <source>-27</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Font.Name" resname="O:NyelvF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Font.Style" resname="O:NyelvF.Font.Style">
+        <source>[fsBold]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.OldCreateOrder" resname="O:NyelvF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.Position" resname="O:NyelvF.Position">
+        <source>poScreenCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.StyleElements" resname="O:NyelvF.StyleElements">
+        <source>[seFont, seBorder]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.OnCreate" resname="O:NyelvF.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.PixelsPerInch" resname="O:NyelvF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.TextHeight" resname="O:NyelvF.TextHeight">
+        <source>33</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TNyelvF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.Left" resname="O:NyelvF.O:Button1.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.Top" resname="O:NyelvF.O:Button1.Top">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.Width" resname="O:NyelvF.O:Button1.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.Height" resname="O:NyelvF.O:Button1.Height">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.Caption" resname="O:NyelvF.O:Button1.Caption">
+        <source>'OK'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.ModalResult" resname="O:NyelvF.O:Button1.ModalResult">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button1.TabOrder" resname="O:NyelvF.O:Button1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.Left" resname="O:NyelvF.O:Button2.Left">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.Top" resname="O:NyelvF.O:Button2.Top">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.Width" resname="O:NyelvF.O:Button2.Width">
+        <source>83</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.Height" resname="O:NyelvF.O:Button2.Height">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.Caption" resname="O:NyelvF.O:Button2.Caption">
+        <source>'Close'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.ModalResult" resname="O:NyelvF.O:Button2.ModalResult">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:Button2.TabOrder" resname="O:NyelvF.O:Button2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Left" resname="O:NyelvF.O:cbxnyelv.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Top" resname="O:NyelvF.O:cbxnyelv.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Width" resname="O:NyelvF.O:cbxnyelv.Width">
+        <source>180</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Height" resname="O:NyelvF.O:cbxnyelv.Height">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Style" resname="O:NyelvF.O:cbxnyelv.Style">
+        <source>csDropDownList</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.ItemIndex" resname="O:NyelvF.O:cbxnyelv.ItemIndex">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.TabOrder" resname="O:NyelvF.O:cbxnyelv.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Text" resname="O:NyelvF.O:cbxnyelv.Text">
+        <source>'Magyar'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Items.Strings[0]" resname="O:NyelvF.O:cbxnyelv.Items.Strings[0]">
+        <source>'Magyar'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyelvF.O:cbxnyelv.Items.Strings[1]" resname="O:NyelvF.O:cbxnyelv.Items.Strings[1]">
+        <source>'English'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45539.5886209491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

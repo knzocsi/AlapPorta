@@ -385,7 +385,7 @@ end;
 procedure TMjegyekF.btnStornoClick(Sender: TObject);
 var p,psz:Integer;
 begin
-if MessageDlg('Biztosan stornozza?',mtConfirmation,mbYesNo,0)=6 then
+if MessageDlg(af.ford('rsStornozza'),mtConfirmation,mbYesNo,0)=6 then
    begin
      try
       elokeszit('Storno');
@@ -460,7 +460,7 @@ end;
 
 procedure TMjegyekF.Button6Click(Sender: TObject);
 begin
-if MessageDlg('Biztosan törli az elszámolásból?',mtConfirmation,mbYesNo,0)=6 then
+if MessageDlg(af.ford('rsBiztosanTorliElszamolasbol'),mtConfirmation,mbYesNo,0)=6 then
    memszamol.Delete;
 end;
 
@@ -689,17 +689,17 @@ begin
   begin
     if memszamol.Locate('sorsz',mjegyekQ.FieldByName('sorszam').AsString,[]) then
      begin
-       ShowMessage('Ez a mérlegjegy már szerepel ebben az elszámolásban!');
+       ShowMessage(af.ford('rsMerlegjegySzerepelAzElszamolasban'));
        Exit;
      end;
     if not memszamol.Locate('p_nev',mjegyekQ.FieldByName('p_nev').AsString,[]) then
      begin
-       ShowMessage('Egy elszámolásban csak egy partner szerepelhet!');
+       ShowMessage(af.ford('rsElaszolasbanegyPartner'));
        Exit;
      end;
     if not memszamol.Locate('termek_nev',mjegyekQ.FieldByName('termek_nev').AsString,[]) then
      begin
-       ShowMessage('Egy elszámolásban csak egy termény szerepelhet!');
+       ShowMessage(af.ford('rsElaszolasbanegyTermek'));
        Exit;
      end;
   end;

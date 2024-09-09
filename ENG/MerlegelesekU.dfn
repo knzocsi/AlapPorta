@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MerlegelesekU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MerlegelesekU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45533.3898148148</prop>
+        <prop prop-type="OrigDateTime">45201.3203703704</prop>
+        <prop prop-type="XlatDateTime">45201.3203703704</prop>
+        <prop prop-type="Translated">2</prop>
+        <prop prop-type="UnTranslated">42</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MerlegelesekF.Left" resname="O:MerlegelesekF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Top" resname="O:MerlegelesekF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Caption" resname="O:MerlegelesekF.Caption">
+        <source>'MerlegelesekF'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'List of measures'</target>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.ClientHeight" resname="O:MerlegelesekF.ClientHeight">
+        <source>548</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.ClientWidth" resname="O:MerlegelesekF.ClientWidth">
+        <source>989</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Color" resname="O:MerlegelesekF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Font.Charset" resname="O:MerlegelesekF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Font.Color" resname="O:MerlegelesekF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Font.Height" resname="O:MerlegelesekF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Font.Name" resname="O:MerlegelesekF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Font.Style" resname="O:MerlegelesekF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.OldCreateOrder" resname="O:MerlegelesekF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.Position" resname="O:MerlegelesekF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.OnActivate" resname="O:MerlegelesekF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.OnClose" resname="O:MerlegelesekF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.PixelsPerInch" resname="O:MerlegelesekF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.TextHeight" resname="O:MerlegelesekF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TMerlegelesekF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.Left" resname="O:MerlegelesekF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.Top" resname="O:MerlegelesekF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.Width" resname="O:MerlegelesekF.O:Panel1.Width">
+        <source>989</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.Height" resname="O:MerlegelesekF.O:Panel1.Height">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.Align" resname="O:MerlegelesekF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.TabOrder" resname="O:MerlegelesekF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.ExplicitLeft" resname="O:MerlegelesekF.O:Panel1.ExplicitLeft">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.ExplicitTop" resname="O:MerlegelesekF.O:Panel1.ExplicitTop">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.ExplicitWidth" resname="O:MerlegelesekF.O:Panel1.ExplicitWidth">
+        <source>185</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.Left" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.Top" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.Width" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.Height" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.Caption" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.TabOrder" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496296</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Panel1.O:btnKilepes.OnClick" resname="O:MerlegelesekF.O:Panel1.O:btnKilepes.OnClick">
+        <source>btnKilepesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Left" resname="O:MerlegelesekF.O:Memo1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Top" resname="O:MerlegelesekF.O:Memo1.Top">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Width" resname="O:MerlegelesekF.O:Memo1.Width">
+        <source>989</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Height" resname="O:MerlegelesekF.O:Memo1.Height">
+        <source>459</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Align" resname="O:MerlegelesekF.O:Memo1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.Lines.Strings[0]" resname="O:MerlegelesekF.O:Memo1.Lines.Strings[0]">
+        <source>'Memo1'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">(</prop>
+          <prop prop-type="Close">)</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.TabOrder" resname="O:MerlegelesekF.O:Memo1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.ExplicitLeft" resname="O:MerlegelesekF.O:Memo1.ExplicitLeft">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.ExplicitTop" resname="O:MerlegelesekF.O:Memo1.ExplicitTop">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.ExplicitWidth" resname="O:MerlegelesekF.O:Memo1.ExplicitWidth">
+        <source>185</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MerlegelesekF.O:Memo1.ExplicitHeight" resname="O:MerlegelesekF.O:Memo1.ExplicitHeight">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421496412</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TMemo</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

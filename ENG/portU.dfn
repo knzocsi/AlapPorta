@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\portU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\portU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45531.6422222222</prop>
+        <prop prop-type="OrigDateTime">45425.4228009259</prop>
+        <prop prop-type="XlatDateTime">45425.4228009259</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">296</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:PortF.Left" resname="O:PortF.Left">
+        <source>445</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Top" resname="O:PortF.Top">
+        <source>180</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Caption" resname="O:PortF.Caption">
+        <source>'Port'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.ClientHeight" resname="O:PortF.ClientHeight">
+        <source>500</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.ClientWidth" resname="O:PortF.ClientWidth">
+        <source>908</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Color" resname="O:PortF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Font.Charset" resname="O:PortF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Font.Color" resname="O:PortF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Font.Height" resname="O:PortF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Font.Name" resname="O:PortF.Font.Name">
+        <source>'MS Sans Serif'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Font.Style" resname="O:PortF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.OldCreateOrder" resname="O:PortF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.Position" resname="O:PortF.Position">
+        <source>poScreenCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.OnActivate" resname="O:PortF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.OnClose" resname="O:PortF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.OnCreate" resname="O:PortF.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.PixelsPerInch" resname="O:PortF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.TextHeight" resname="O:PortF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPortF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.Left" resname="O:PortF.O:pnlFelso.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.Top" resname="O:PortF.O:pnlFelso.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.Width" resname="O:PortF.O:pnlFelso.Width">
+        <source>908</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.Height" resname="O:PortF.O:pnlFelso.Height">
+        <source>68</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.Align" resname="O:PortF.O:pnlFelso.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.TabOrder" resname="O:PortF.O:pnlFelso.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.Left" resname="O:PortF.O:pnlFelso.O:ComLed1.Left">
+        <source>817</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.Top" resname="O:PortF.O:pnlFelso.O:ComLed1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.Width" resname="O:PortF.O:pnlFelso.O:ComLed1.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.Height" resname="O:PortF.O:pnlFelso.O:ComLed1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.ComPort" resname="O:PortF.O:pnlFelso.O:ComLed1.ComPort">
+        <source>ComPort1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.LedSignal" resname="O:PortF.O:pnlFelso.O:ComLed1.LedSignal">
+        <source>lsConn</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.Kind" resname="O:PortF.O:pnlFelso.O:ComLed1.Kind">
+        <source>lkRedLight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed1.OnDblClick" resname="O:PortF.O:pnlFelso.O:ComLed1.OnDblClick">
+        <source>ComLed1DblClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.Left" resname="O:PortF.O:pnlFelso.O:ComLed2.Left">
+        <source>848</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.Top" resname="O:PortF.O:pnlFelso.O:ComLed2.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.Width" resname="O:PortF.O:pnlFelso.O:ComLed2.Width">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.Height" resname="O:PortF.O:pnlFelso.O:ComLed2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.ComPort" resname="O:PortF.O:pnlFelso.O:ComLed2.ComPort">
+        <source>ComPort1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.LedSignal" resname="O:PortF.O:pnlFelso.O:ComLed2.LedSignal">
+        <source>lsRx</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:ComLed2.Kind" resname="O:PortF.O:pnlFelso.O:ComLed2.Kind">
+        <source>lkRedLight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TComLed</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.Left" resname="O:PortF.O:pnlFelso.O:btnKilepes.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.Top" resname="O:PortF.O:pnlFelso.O:btnKilepes.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.Width" resname="O:PortF.O:pnlFelso.O:btnKilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.Height" resname="O:PortF.O:pnlFelso.O:btnKilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.Caption" resname="O:PortF.O:pnlFelso.O:btnKilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.TabOrder" resname="O:PortF.O:pnlFelso.O:btnKilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKilepes.OnClick" resname="O:PortF.O:pnlFelso.O:btnKilepes.OnClick">
+        <source>btnKilepesClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.Left" resname="O:PortF.O:pnlFelso.O:btnMemotorol.Left">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.Top" resname="O:PortF.O:pnlFelso.O:btnMemotorol.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.Width" resname="O:PortF.O:pnlFelso.O:btnMemotorol.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.Height" resname="O:PortF.O:pnlFelso.O:btnMemotorol.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.Caption" resname="O:PortF.O:pnlFelso.O:btnMemotorol.Caption">
+        <source>'Töröl'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.TabOrder" resname="O:PortF.O:pnlFelso.O:btnMemotorol.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnMemotorol.OnClick" resname="O:PortF.O:pnlFelso.O:btnMemotorol.OnClick">
+        <source>btnMemotorolClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Left" resname="O:PortF.O:pnlFelso.O:chkKiiras.Left">
+        <source>104</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Top" resname="O:PortF.O:pnlFelso.O:chkKiiras.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Width" resname="O:PortF.O:pnlFelso.O:chkKiiras.Width">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Height" resname="O:PortF.O:pnlFelso.O:chkKiiras.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Caption" resname="O:PortF.O:pnlFelso.O:chkKiiras.Caption">
+        <source>'Kiírás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.Checked" resname="O:PortF.O:pnlFelso.O:chkKiiras.Checked">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.State" resname="O:PortF.O:pnlFelso.O:chkKiiras.State">
+        <source>cbChecked</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.TabOrder" resname="O:PortF.O:pnlFelso.O:chkKiiras.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:chkKiiras.OnClick" resname="O:PortF.O:pnlFelso.O:chkKiiras.OnClick">
+        <source>chkKiirasClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.Left" resname="O:PortF.O:pnlFelso.O:Button1.Left">
+        <source>253</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422299884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.Top" resname="O:PortF.O:pnlFelso.O:Button1.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.Width" resname="O:PortF.O:pnlFelso.O:Button1.Width">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.Height" resname="O:PortF.O:pnlFelso.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.Caption" resname="O:PortF.O:pnlFelso.O:Button1.Caption">
+        <source>'1. port beállítás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.TabOrder" resname="O:PortF.O:pnlFelso.O:Button1.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button1.OnClick" resname="O:PortF.O:pnlFelso.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Left" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Left">
+        <source>382</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Top" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Width" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Width">
+        <source>130</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Height" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Caption" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.Caption">
+        <source>'Másodkijelző beállítás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.TabOrder" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.OnClick" resname="O:PortF.O:pnlFelso.O:btnKijelzo_beallitas.OnClick">
+        <source>btnKijelzo_beallitasClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Left" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Left">
+        <source>382</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Top" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Top">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Width" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Width">
+        <source>130</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Height" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Caption" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Caption">
+        <source>'Hívószámkijelző beállítás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.TabOrder" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Visible" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.OnClick" resname="O:PortF.O:pnlFelso.O:btnHivoszamkijezobeallitas.OnClick">
+        <source>btnHivoszamkijezobeallitasClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.Left" resname="O:PortF.O:pnlFelso.O:Button2.Left">
+        <source>253</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.Top" resname="O:PortF.O:pnlFelso.O:Button2.Top">
+        <source>37</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.Width" resname="O:PortF.O:pnlFelso.O:Button2.Width">
+        <source>100</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.Height" resname="O:PortF.O:pnlFelso.O:Button2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.Caption" resname="O:PortF.O:pnlFelso.O:Button2.Caption">
+        <source>'2. port beállítás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.TabOrder" resname="O:PortF.O:pnlFelso.O:Button2.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:pnlFelso.O:Button2.OnClick" resname="O:PortF.O:pnlFelso.O:Button2.OnClick">
+        <source>Button2Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Left" resname="O:PortF.O:memTeszt.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Top" resname="O:PortF.O:memTeszt.Top">
+        <source>68</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Width" resname="O:PortF.O:memTeszt.Width">
+        <source>668</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Height" resname="O:PortF.O:memTeszt.Height">
+        <source>356</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Align" resname="O:PortF.O:memTeszt.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Lines.Strings[0]" resname="O:PortF.O:memTeszt.Lines.Strings[0]">
+        <source>'Soros teszt'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.Lines.Strings[1]" resname="O:PortF.O:memTeszt.Lines.Strings[1]">
+        <source>''</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.TabOrder" resname="O:PortF.O:memTeszt.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memTeszt.ExplicitLeft" resname="O:PortF.O:memTeszt.ExplicitLeft">
+        <source>-5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Left" resname="O:PortF.O:memHexa.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Top" resname="O:PortF.O:memHexa.Top">
+        <source>424</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Width" resname="O:PortF.O:memHexa.Width">
+        <source>908</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Height" resname="O:PortF.O:memHexa.Height">
+        <source>76</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Align" resname="O:PortF.O:memHexa.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.Lines.Strings[0]" resname="O:PortF.O:memHexa.Lines.Strings[0]">
+        <source>''</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:memHexa.TabOrder" resname="O:PortF.O:memHexa.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.Left" resname="O:PortF.O:Panel1.Left">
+        <source>668</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.Top" resname="O:PortF.O:Panel1.Top">
+        <source>68</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.Width" resname="O:PortF.O:Panel1.Width">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.Height" resname="O:PortF.O:Panel1.Height">
+        <source>356</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.Align" resname="O:PortF.O:Panel1.Align">
+        <source>alRight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.TabOrder" resname="O:PortF.O:Panel1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Left" resname="O:PortF.O:Panel1.O:memEredmeny.Left">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Top" resname="O:PortF.O:Panel1.O:memEredmeny.Top">
+        <source>137</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Width" resname="O:PortF.O:Panel1.O:memEredmeny.Width">
+        <source>238</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Height" resname="O:PortF.O:Panel1.O:memEredmeny.Height">
+        <source>218</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Align" resname="O:PortF.O:Panel1.O:memEredmeny.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.Lines.Strings[0]" resname="O:PortF.O:Panel1.O:memEredmeny.Lines.Strings[0]">
+        <source>''</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:memEredmeny.TabOrder" resname="O:PortF.O:Panel1.O:memEredmeny.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TMemo</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.Left" resname="O:PortF.O:Panel1.O:Panel2.Left">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.Top" resname="O:PortF.O:Panel1.O:Panel2.Top">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.64223</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.Width" resname="O:PortF.O:Panel1.O:Panel2.Width">
+        <source>238</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.Height" resname="O:PortF.O:Panel1.O:Panel2.Height">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.Align" resname="O:PortF.O:Panel1.O:Panel2.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.TabOrder" resname="O:PortF.O:Panel1.O:Panel2.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Top">
+        <source>77</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg1.Caption">
+        <source>'lblTomeg1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Left">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Top">
+        <source>77</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat1.Caption">
+        <source>'lblKapcsolat1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Top">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg2.Caption">
+        <source>'lblTomeg2'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Left">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Top">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat2.Caption">
+        <source>'lblKapcsolat2'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Top">
+        <source>117</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblTomeg3.Caption">
+        <source>'lblTomeg3'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Left" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Left">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Top" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Top">
+        <source>117</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Width" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Height" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:lblKapcsolat3.Caption">
+        <source>'lblKapcsolat3'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Left" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Top" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Width" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Width">
+        <source>137</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Height" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.Caption">
+        <source>'Érték vége jel után'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.TabOrder" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_vj.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Left" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Top" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Width" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Width">
+        <source>137</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Height" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.Caption">
+        <source>'Érték feldolgozva'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.TabOrder" resname="O:PortF.O:Panel1.O:Panel2.O:chkErtek_feld.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Left" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Top" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Top">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Width" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Width">
+        <source>97</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Height" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Caption" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.Caption">
+        <source>'Mért érték'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.TabOrder" resname="O:PortF.O:Panel1.O:Panel2.O:chkMertertek.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.BaudRate" resname="O:PortF.O:ComPort1.BaudRate">
+        <source>br9600</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.Port" resname="O:PortF.O:ComPort1.Port">
+        <source>'COM1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.Parity.Bits" resname="O:PortF.O:ComPort1.Parity.Bits">
+        <source>prNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.StopBits" resname="O:PortF.O:ComPort1.StopBits">
+        <source>sbOneStopBit</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.DataBits" resname="O:PortF.O:ComPort1.DataBits">
+        <source>dbEight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.DiscardNull" resname="O:PortF.O:ComPort1.DiscardNull">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.Events" resname="O:PortF.O:ComPort1.Events">
+        <source>[evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.OutCTSFlow" resname="O:PortF.O:ComPort1.FlowControl.OutCTSFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.OutDSRFlow" resname="O:PortF.O:ComPort1.FlowControl.OutDSRFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.ControlDTR" resname="O:PortF.O:ComPort1.FlowControl.ControlDTR">
+        <source>dtrEnable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.ControlRTS" resname="O:PortF.O:ComPort1.FlowControl.ControlRTS">
+        <source>rtsDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.XonXoffOut" resname="O:PortF.O:ComPort1.FlowControl.XonXoffOut">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.FlowControl.XonXoffIn" resname="O:PortF.O:ComPort1.FlowControl.XonXoffIn">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.StoredProps" resname="O:PortF.O:ComPort1.StoredProps">
+        <source>[spBasic]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.TriggersOnRxChar" resname="O:PortF.O:ComPort1.TriggersOnRxChar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.SyncMethod" resname="O:PortF.O:ComPort1.SyncMethod">
+        <source>smNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.OnRxChar" resname="O:PortF.O:ComPort1.OnRxChar">
+        <source>ComPort1RxChar</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.Left" resname="O:PortF.O:ComPort1.Left">
+        <source>168</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort1.Top" resname="O:PortF.O:ComPort1.Top">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.BaudRate" resname="O:PortF.O:comKijelzo.BaudRate">
+        <source>br9600</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.Port" resname="O:PortF.O:comKijelzo.Port">
+        <source>'COM1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.Parity.Bits" resname="O:PortF.O:comKijelzo.Parity.Bits">
+        <source>prNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.StopBits" resname="O:PortF.O:comKijelzo.StopBits">
+        <source>sbOneStopBit</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.DataBits" resname="O:PortF.O:comKijelzo.DataBits">
+        <source>dbEight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.Events" resname="O:PortF.O:comKijelzo.Events">
+        <source>[evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.OutCTSFlow" resname="O:PortF.O:comKijelzo.FlowControl.OutCTSFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.OutDSRFlow" resname="O:PortF.O:comKijelzo.FlowControl.OutDSRFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.ControlDTR" resname="O:PortF.O:comKijelzo.FlowControl.ControlDTR">
+        <source>dtrDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.ControlRTS" resname="O:PortF.O:comKijelzo.FlowControl.ControlRTS">
+        <source>rtsDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.XonXoffOut" resname="O:PortF.O:comKijelzo.FlowControl.XonXoffOut">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.FlowControl.XonXoffIn" resname="O:PortF.O:comKijelzo.FlowControl.XonXoffIn">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.StoredProps" resname="O:PortF.O:comKijelzo.StoredProps">
+        <source>[spBasic]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.TriggersOnRxChar" resname="O:PortF.O:comKijelzo.TriggersOnRxChar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.Left" resname="O:PortF.O:comKijelzo.Left">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comKijelzo.Top" resname="O:PortF.O:comKijelzo.Top">
+        <source>322</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.OnDisconnected" resname="O:PortF.O:IdTCPClient1.OnDisconnected">
+        <source>IdTCPClient1Disconnected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.OnConnected" resname="O:PortF.O:IdTCPClient1.OnConnected">
+        <source>IdTCPClient1Connected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.ConnectTimeout" resname="O:PortF.O:IdTCPClient1.ConnectTimeout">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.Host" resname="O:PortF.O:IdTCPClient1.Host">
+        <source>'127.0.0.1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.Port" resname="O:PortF.O:IdTCPClient1.Port">
+        <source>1001</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.ReadTimeout" resname="O:PortF.O:IdTCPClient1.ReadTimeout">
+        <source>-1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.Left" resname="O:PortF.O:IdTCPClient1.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient1.Top" resname="O:PortF.O:IdTCPClient1.Top">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.OnDisconnected" resname="O:PortF.O:IdTCPClient2.OnDisconnected">
+        <source>IdTCPClient2Disconnected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.OnConnected" resname="O:PortF.O:IdTCPClient2.OnConnected">
+        <source>IdTCPClient2Connected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.ConnectTimeout" resname="O:PortF.O:IdTCPClient2.ConnectTimeout">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.Host" resname="O:PortF.O:IdTCPClient2.Host">
+        <source>'127.0.0.1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.Port" resname="O:PortF.O:IdTCPClient2.Port">
+        <source>1001</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.ReadTimeout" resname="O:PortF.O:IdTCPClient2.ReadTimeout">
+        <source>-1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.Left" resname="O:PortF.O:IdTCPClient2.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient2.Top" resname="O:PortF.O:IdTCPClient2.Top">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer1.Interval" resname="O:PortF.O:Client_Timer1.Interval">
+        <source>500</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer1.OnTimer" resname="O:PortF.O:Client_Timer1.OnTimer">
+        <source>Client_Timer1Timer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer1.Left" resname="O:PortF.O:Client_Timer1.Left">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer1.Top" resname="O:PortF.O:Client_Timer1.Top">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">228</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer2.Interval" resname="O:PortF.O:Client_Timer2.Interval">
+        <source>500</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">229</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer2.OnTimer" resname="O:PortF.O:Client_Timer2.OnTimer">
+        <source>Client_Timer2Timer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">230</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer2.Left" resname="O:PortF.O:Client_Timer2.Left">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">231</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer2.Top" resname="O:PortF.O:Client_Timer2.Top">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">232</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.BaudRate" resname="O:PortF.O:ComPort2.BaudRate">
+        <source>br9600</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">233</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.Port" resname="O:PortF.O:ComPort2.Port">
+        <source>'COM1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">234</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.Parity.Bits" resname="O:PortF.O:ComPort2.Parity.Bits">
+        <source>prNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">235</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.StopBits" resname="O:PortF.O:ComPort2.StopBits">
+        <source>sbOneStopBit</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">236</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.DataBits" resname="O:PortF.O:ComPort2.DataBits">
+        <source>dbEight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">237</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.Events" resname="O:PortF.O:ComPort2.Events">
+        <source>[evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300231</prop><prop prop-type="Status">0</prop><prop prop-type="Order">238</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.OutCTSFlow" resname="O:PortF.O:ComPort2.FlowControl.OutCTSFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">239</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.OutDSRFlow" resname="O:PortF.O:ComPort2.FlowControl.OutDSRFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">240</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.ControlDTR" resname="O:PortF.O:ComPort2.FlowControl.ControlDTR">
+        <source>dtrDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">241</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.ControlRTS" resname="O:PortF.O:ComPort2.FlowControl.ControlRTS">
+        <source>rtsDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">242</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.XonXoffOut" resname="O:PortF.O:ComPort2.FlowControl.XonXoffOut">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">243</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.FlowControl.XonXoffIn" resname="O:PortF.O:ComPort2.FlowControl.XonXoffIn">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">244</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.StoredProps" resname="O:PortF.O:ComPort2.StoredProps">
+        <source>[spBasic]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">245</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.TriggersOnRxChar" resname="O:PortF.O:ComPort2.TriggersOnRxChar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">246</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.OnRxChar" resname="O:PortF.O:ComPort2.OnRxChar">
+        <source>ComPort2RxChar</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">247</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.Left" resname="O:PortF.O:ComPort2.Left">
+        <source>168</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">248</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:ComPort2.Top" resname="O:PortF.O:ComPort2.Top">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">249</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.BaudRate" resname="O:PortF.O:comHivoszamkijelzo.BaudRate">
+        <source>br9600</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">250</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.Port" resname="O:PortF.O:comHivoszamkijelzo.Port">
+        <source>'COM1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">251</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.Parity.Bits" resname="O:PortF.O:comHivoszamkijelzo.Parity.Bits">
+        <source>prNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">252</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.StopBits" resname="O:PortF.O:comHivoszamkijelzo.StopBits">
+        <source>sbOneStopBit</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">253</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.DataBits" resname="O:PortF.O:comHivoszamkijelzo.DataBits">
+        <source>dbEight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">254</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.Events" resname="O:PortF.O:comHivoszamkijelzo.Events">
+        <source>[evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">255</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.OutCTSFlow" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.OutCTSFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">256</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.OutDSRFlow" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.OutDSRFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">257</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.ControlDTR" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.ControlDTR">
+        <source>dtrDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">258</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.ControlRTS" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.ControlRTS">
+        <source>rtsDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">259</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.XonXoffOut" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.XonXoffOut">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">260</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.FlowControl.XonXoffIn" resname="O:PortF.O:comHivoszamkijelzo.FlowControl.XonXoffIn">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">261</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.StoredProps" resname="O:PortF.O:comHivoszamkijelzo.StoredProps">
+        <source>[spBasic]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">262</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.TriggersOnRxChar" resname="O:PortF.O:comHivoszamkijelzo.TriggersOnRxChar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">263</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.OnRxChar" resname="O:PortF.O:comHivoszamkijelzo.OnRxChar">
+        <source>comHivoszamkijelzoRxChar</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">264</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.Left" resname="O:PortF.O:comHivoszamkijelzo.Left">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">265</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comHivoszamkijelzo.Top" resname="O:PortF.O:comHivoszamkijelzo.Top">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">266</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.BaudRate" resname="O:PortF.O:comPC_Kommunikacio.BaudRate">
+        <source>br9600</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">267</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.Port" resname="O:PortF.O:comPC_Kommunikacio.Port">
+        <source>'COM1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">268</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.Parity.Bits" resname="O:PortF.O:comPC_Kommunikacio.Parity.Bits">
+        <source>prNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">269</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.StopBits" resname="O:PortF.O:comPC_Kommunikacio.StopBits">
+        <source>sbOneStopBit</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">270</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.DataBits" resname="O:PortF.O:comPC_Kommunikacio.DataBits">
+        <source>dbEight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">271</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.Events" resname="O:PortF.O:comPC_Kommunikacio.Events">
+        <source>[evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">272</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.OutCTSFlow" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.OutCTSFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">273</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.OutDSRFlow" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.OutDSRFlow">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">274</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.ControlDTR" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.ControlDTR">
+        <source>dtrDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">275</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.ControlRTS" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.ControlRTS">
+        <source>rtsDisable</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">276</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.XonXoffOut" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.XonXoffOut">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">277</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.FlowControl.XonXoffIn" resname="O:PortF.O:comPC_Kommunikacio.FlowControl.XonXoffIn">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">278</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.StoredProps" resname="O:PortF.O:comPC_Kommunikacio.StoredProps">
+        <source>[spBasic]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">279</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.TriggersOnRxChar" resname="O:PortF.O:comPC_Kommunikacio.TriggersOnRxChar">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">280</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.OnRxChar" resname="O:PortF.O:comPC_Kommunikacio.OnRxChar">
+        <source>comPC_KommunikacioRxChar</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">281</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.Left" resname="O:PortF.O:comPC_Kommunikacio.Left">
+        <source>296</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">282</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:comPC_Kommunikacio.Top" resname="O:PortF.O:comPC_Kommunikacio.Top">
+        <source>314</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">283</prop><prop prop-type="Type">TComPort</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.OnDisconnected" resname="O:PortF.O:IdTCPClient3.OnDisconnected">
+        <source>IdTCPClient3Disconnected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">284</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.OnConnected" resname="O:PortF.O:IdTCPClient3.OnConnected">
+        <source>IdTCPClient3Connected</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">285</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.ConnectTimeout" resname="O:PortF.O:IdTCPClient3.ConnectTimeout">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">286</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.Host" resname="O:PortF.O:IdTCPClient3.Host">
+        <source>'127.0.0.1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">287</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.Port" resname="O:PortF.O:IdTCPClient3.Port">
+        <source>1001</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">288</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.ReadTimeout" resname="O:PortF.O:IdTCPClient3.ReadTimeout">
+        <source>-1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">289</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.Left" resname="O:PortF.O:IdTCPClient3.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">290</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:IdTCPClient3.Top" resname="O:PortF.O:IdTCPClient3.Top">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">291</prop><prop prop-type="Type">TIdTCPClient</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer3.Interval" resname="O:PortF.O:Client_Timer3.Interval">
+        <source>500</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">292</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer3.OnTimer" resname="O:PortF.O:Client_Timer3.OnTimer">
+        <source>Client_Timer3Timer</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">293</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer3.Left" resname="O:PortF.O:Client_Timer3.Left">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">294</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:PortF.O:Client_Timer3.Top" resname="O:PortF.O:Client_Timer3.Top">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422300347</prop><prop prop-type="Status">0</prop><prop prop-type="Order">295</prop><prop prop-type="Type">TTimer</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

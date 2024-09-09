@@ -48,12 +48,12 @@ procedure TTipusokF.tipusQBeforePost(DataSet: TDataSet);
 begin
 if dbednev.Text='' then
  begin
-   ShowMessage('Adja meg a nevet');
+   ShowMessage(af.ford('rsNevetMegKellAdni'));
    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
  end;
   if af.nev_foglalt(af.tipusqid.AsInteger,dbednev.Text,'tipus') then
   begin
-     ShowMessage('Ez a név már foglalt!');
+     ShowMessage(af.ford('rsEzANevMarFoglalt'));
      if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
 end;

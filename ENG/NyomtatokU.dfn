@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\NyomtatokU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\NyomtatokU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45533.4371990741</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">2</prop>
+        <prop prop-type="UnTranslated">32</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:NyomtatokF.Left" resname="O:NyomtatokF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Top" resname="O:NyomtatokF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.AutoSize" resname="O:NyomtatokF.AutoSize">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.BorderIcons" resname="O:NyomtatokF.BorderIcons">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.BorderStyle" resname="O:NyomtatokF.BorderStyle">
+        <source>bsNone</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Caption" resname="O:NyomtatokF.Caption">
+        <source>'Nyomtatók'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Printers'</target>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.ClientHeight" resname="O:NyomtatokF.ClientHeight">
+        <source>233</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.ClientWidth" resname="O:NyomtatokF.ClientWidth">
+        <source>225</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Color" resname="O:NyomtatokF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Font.Charset" resname="O:NyomtatokF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Font.Color" resname="O:NyomtatokF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Font.Height" resname="O:NyomtatokF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Font.Name" resname="O:NyomtatokF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Font.Style" resname="O:NyomtatokF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.FormStyle" resname="O:NyomtatokF.FormStyle">
+        <source>fsStayOnTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.KeyPreview" resname="O:NyomtatokF.KeyPreview">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.OldCreateOrder" resname="O:NyomtatokF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.Position" resname="O:NyomtatokF.Position">
+        <source>poDesigned</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.OnCreate" resname="O:NyomtatokF.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.OnDestroy" resname="O:NyomtatokF.OnDestroy">
+        <source>FormDestroy</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.OnKeyUp" resname="O:NyomtatokF.OnKeyUp">
+        <source>FormKeyUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.PixelsPerInch" resname="O:NyomtatokF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.TextHeight" resname="O:NyomtatokF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TNyomtatokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Left" resname="O:NyomtatokF.O:lbNyomtatok.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Top" resname="O:NyomtatokF.O:lbNyomtatok.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Width" resname="O:NyomtatokF.O:lbNyomtatok.Width">
+        <source>225</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Height" resname="O:NyomtatokF.O:lbNyomtatok.Height">
+        <source>233</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Hint" resname="O:NyomtatokF.O:lbNyomtatok.Hint">
+        <source>'Válasszon nyomtatót. ESC-kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Select printer. ESC-Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.Color" resname="O:NyomtatokF.O:lbNyomtatok.Color">
+        <source>clSkyBlue</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.ItemHeight" resname="O:NyomtatokF.O:lbNyomtatok.ItemHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.ParentShowHint" resname="O:NyomtatokF.O:lbNyomtatok.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.ShowHint" resname="O:NyomtatokF.O:lbNyomtatok.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.TabOrder" resname="O:NyomtatokF.O:lbNyomtatok.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:NyomtatokF.O:lbNyomtatok.OnClick" resname="O:NyomtatokF.O:lbNyomtatok.OnClick">
+        <source>lbNyomtatokClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6422227431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TListBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

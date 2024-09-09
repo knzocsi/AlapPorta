@@ -221,6 +221,4 @@ begin
     Inc(WordPtr);
   end;
 end;
-
-
 end.

@@ -1,4 +1,4 @@
-﻿object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
+object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   Left = 0
   Top = 0
   Caption = 'M'#233'r'#233's a m'#233'rlegjegyen'
@@ -232,13 +232,13 @@
     TabOrder = 7
     OnClick = chkKezimeresClick
   end
-  object Elfogadás: TButton
+  object btnelfogadas: TButton
     Left = 91
     Top = 201
     Width = 75
     Height = 25
     Caption = 'Elfogad'#225's'
     TabOrder = 8
-    OnClick = ElfogadásClick
+    OnClick = btnelfogadasClick
   end
 end

@@ -143,7 +143,7 @@ try
   JvMlehet.EnableControls;
   cfg_export_mezokT.Close;
 finally
-  ShowMessage('Beállítások mentve!')
+  ShowMessage(af.ford('rsBeallitasokMentve'))
 end;
 end;
 

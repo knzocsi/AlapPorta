@@ -1,4 +1,4 @@
-﻿object TermekekF: TTermekekF
+object TermekekF: TTermekekF
   Left = 0
   Top = 0
   Caption = 'Term'#233'kek'
@@ -418,7 +418,7 @@
         DataSource = TermekDS
         TabOrder = 13
       end
-      object DBChktisztaság: TDBCheckBox
+      object DBChktisztasag: TDBCheckBox
         Left = 592
         Top = 160
         Width = 97

@@ -42,11 +42,11 @@ var ujnev:string;
     i:Integer;
     sqlsz:string;
 begin
- ujnev:=InputBox('Új mérlegkezelõ felvitele','Adja meg a nevet:','');
+ ujnev:=InputBox(af.ford('rsUjMerlegkezeloFelvitele'),af.ford('rsAdjaMegANevet'),'');
  if ujnev='' then Exit;
  if aF.merlegkezQ.Locate('nev',ujnev,[locaseinsensitive]) then
   begin
-    ShowMessage('Ilyen mérlegkezelõ már léterzik!');
+    ShowMessage(af.ford('rsMerlegkezeloMarLetezik'));
     exit;
   end;
 
@@ -64,7 +64,7 @@ end;
 
 procedure TMerlegkezelokF.Button3Click(Sender: TObject);
 begin
-  if MessageDlg('Biztosan törli  ezt a mérlegkezelõt?',mtConfirmation,mbYesNo,0)=6 then
+  if MessageDlg(af.ford('rsMerlegkezeloTorlese'),mtConfirmation,mbYesNo,0)=6 then
    begin
     with aF.Q1 do
     begin

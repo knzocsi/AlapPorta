@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<TfrxReport Version="6.7" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44224,5924481597" ReportOptions.Description.Text="" ReportOptions.LastChange="45492,4698112731" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+<TfrxReport Version="6.7" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="44224,5924481597" ReportOptions.Description.Text="" ReportOptions.LastChange="45507,3606359491" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
   <Datasets>
     <item DataSet="frxDBDKeszlet" DataSetName="frxDBDKeszlet"/>
   </Datasets>
@@ -25,5 +25,8 @@
       <TfrxMemoView Name="frxDBDKeszletPartner_nev" IndexTag="1" AllowVectorExport="True" Left="292" Top="2" Width="188" Height="16" StretchMode="smMaxHeight" DataField="Partner_nev" DataSet="frxDBDKeszlet" DataSetName="frxDBDKeszlet" Frame.Typ="0" Text="[frxDBDKeszlet.&#34;Partner_nev&#34;]"/>
       <TfrxMemoView Name="frxDBDKeszletTarolo_nev" IndexTag="1" AllowVectorExport="True" Left="504" Top="2" Width="80" Height="16" DataField="Tarolo_nev" DataSet="frxDBDKeszlet" DataSetName="frxDBDKeszlet" Frame.Typ="0" Text="[frxDBDKeszlet.&#34;Tarolo_nev&#34;]"/>
     </TfrxMasterData>
+    <TfrxReportSummary Name="ReportSummary1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Frame.Typ="0" Height="36" Left="0" Top="252" Width="718,1107">
+      <TfrxSysMemoView Name="SysMemo2" AllowVectorExport="True" Left="637" Top="8" Width="76" Height="20" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" Frame.Typ="0" HAlign="haRight" ParentFont="False" Text="ÖSSZESEN: [SUM(&#60;frxDBDKeszlet.&#34;menny&#34;&#62;,MasterData1)]"/>
+    </TfrxReportSummary>
   </TfrxReportPage>
 </TfrxReport>

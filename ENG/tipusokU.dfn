@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\tipusokU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\tipusokU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45533.5769444444</prop>
+        <prop prop-type="OrigDateTime">45104.4777777778</prop>
+        <prop prop-type="XlatDateTime">45104.4777777778</prop>
+        <prop prop-type="Translated">5</prop>
+        <prop prop-type="UnTranslated">57</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:TipusokF.Left" resname="O:TipusokF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Top" resname="O:TipusokF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Caption" resname="O:TipusokF.Caption">
+        <source>'Tipusok'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Types'</target>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.ClientHeight" resname="O:TipusokF.ClientHeight">
+        <source>256</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.ClientWidth" resname="O:TipusokF.ClientWidth">
+        <source>554</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Color" resname="O:TipusokF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Font.Charset" resname="O:TipusokF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Font.Color" resname="O:TipusokF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Font.Height" resname="O:TipusokF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Font.Name" resname="O:TipusokF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Font.Style" resname="O:TipusokF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.OldCreateOrder" resname="O:TipusokF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.Position" resname="O:TipusokF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.OnActivate" resname="O:TipusokF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.OnClose" resname="O:TipusokF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.PixelsPerInch" resname="O:TipusokF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493403</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.TextHeight" resname="O:TipusokF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TTipusokF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.Left" resname="O:TipusokF.O:PageControl1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.Top" resname="O:TipusokF.O:PageControl1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.Width" resname="O:TipusokF.O:PageControl1.Width">
+        <source>554</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.Height" resname="O:TipusokF.O:PageControl1.Height">
+        <source>256</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.ActivePage" resname="O:TipusokF.O:PageControl1.ActivePage">
+        <source>listatab</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.Align" resname="O:TipusokF.O:PageControl1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.TabOrder" resname="O:TipusokF.O:PageControl1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TPageControl</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.Caption" resname="O:TipusokF.O:PageControl1.O:listatab.Caption">
+        <source>'Lista'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'List'</target>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Left" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Top" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Width" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Width">
+        <source>546</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Height" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Height">
+        <source>228</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Align" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.DataSource" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.DataSource">
+        <source>AF.tipusQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.ReadOnly" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TabOrder" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Charset" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Color" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Height" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Name" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Style" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Expanded" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].FieldName" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].FieldName">
+        <source>'id'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Title.Caption" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Title.Caption">
+        <source>'Sorsz.'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'ID'</target>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Visible" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Expanded" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].FieldName" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].FieldName">
+        <source>'nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Title.Caption" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Title.Caption">
+        <source>'Típus'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Type'</target>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Visible" resname="O:TipusokF.O:PageControl1.O:listatab.O:DBGrid1.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">C:TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.Caption" resname="O:TipusokF.O:PageControl1.O:reszletektab.Caption">
+        <source>'Részletek'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Details'</target>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.ImageIndex" resname="O:TipusokF.O:PageControl1.O:reszletektab.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TTabSheet</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Left" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Top" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Width" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Width">
+        <source>225</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Height" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.DataSource" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.DataSource">
+        <source>AF.tipusQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.VisibleButtons" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.VisibleButtons">
+        <source>[nbInsert, nbDelete, nbEdit, nbPost, nbCancel]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.TabOrder" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBNavigator1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TDBNavigator</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Left" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Top" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Top">
+        <source>64</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Width" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Width">
+        <source>273</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Height" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.DataField" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.DataField">
+        <source>'nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.DataSource" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.DataSource">
+        <source>AF.tipusQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.TabOrder" resname="O:TipusokF.O:PageControl1.O:reszletektab.O:DBEdnev.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6423493519</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TDBEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

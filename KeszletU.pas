@@ -32,6 +32,7 @@ type
     chkpartnercsop: TCheckBox;
     btnexport: TButton;
     chknullas: TCheckBox;
+    Panel2: TPanel;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnNyomtatasClick(Sender: TObject);
@@ -41,6 +42,7 @@ type
   private
     { Private declarations }
     procedure szures;
+    procedure summa;
   public
     { Public declarations }
   end;
@@ -95,6 +97,25 @@ begin
  aF.KeszletQ.Close
 end;
 
+
+procedure TKeszletF.summa;
+var ossz:Extended;
+begin
+ ossz:=0;
+ with af.KeszletQ do
+  begin
+    first;
+    DisableControls;
+    while not Eof do
+     begin
+       ossz:=ossz+FieldByName('menny').AsFloat;
+       next;
+     end;
+     First;
+     EnableControls;
+     Panel2.Caption:='Összesen: ' + FloatToStr(ossz);
+  end;
+end;
 
 procedure TKeszletF.szures;
 var felt:string;
@@ -159,6 +180,7 @@ begin
      end;
     Open;
   end;
+  summa;
 end;
 
 procedure TKeszletF.termeklookupChange(Sender: TObject);

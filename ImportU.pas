@@ -15,6 +15,12 @@ uses
   FireDAC.Phys, FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait,
   JvExDBGrids, JvDBGrid;
 
+   //ImportF
+ resourcestring rsTablatMegKellAdni= 'A táblát meg kell adni!';
+ resourcestring rsImportalasKesz= 'Importálás kesz!';
+ resourcestring rsMezotMegKellAdni= 'A mezõt meg kell adni!';
+ resourcestring rsOszlopotMegKellAdni= 'Az oszlopot meg kell adni!';
+
 type
   TImportF = class(TForm)
     Panel1: TPanel;
@@ -55,10 +61,7 @@ var
 
 implementation
 
-
 {$R *.dfm}
-
-
 
 procedure TImportF.btnBetoltesClick(Sender: TObject);
   procedure csv;
@@ -153,9 +156,6 @@ var i,mezoszam:integer;
     SQLF,sqlt,sqlv,mezo:string;
     hasznalt_oszlop:array[1..100] of integer;
     hasznalt_mezo:array[1..100] of string[30];
-
-
-
 begin
   sqlt:='';
   mezoszam:=0;
@@ -230,7 +230,7 @@ begin
     end;
     EnableControls;
   end;
-  ShowMessage('Kész az importálás!');
+  ShowMessage(rsImportalasKesz);
 end;
 
 procedure TImportF.btnKilepesClick(Sender: TObject);
@@ -242,17 +242,17 @@ procedure TImportF.btnOszlopbeallitasaClick(Sender: TObject);
 begin
    if cbTabla.itemindex=-1 then
   begin
-    ShowMessage('A táblát meg kell adni!');
+    ShowMessage(rsTablatMegKellAdni);
     exit;
   end;
   if cbMezo.Text='' then
   begin
-    ShowMessage('A mezõt meg kell adni!');
+    ShowMessage(rsMezotMegKellAdni);
     exit;
   end;
   if cbOszlop.Text='' then
   begin
-    ShowMessage('Az oszlopot meg kell adni!');
+    ShowMessage(rsOszlopotMegKellAdni);
     exit;
   end;
   JvDBGrid1.Columns[JvDBGrid1.col-1].Title.Caption:=IntToStr(JvDBGrid1.col)+'.'+cbMezo.Text;

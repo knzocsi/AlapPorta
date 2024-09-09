@@ -63,7 +63,7 @@ procedure TNezetF.Button3Click(Sender: TObject);
 begin
  if (jvpsz.Value<=0)or(jvpsz.Text='') then
   begin
-    Application.MessageBox('A példányszám hibás!','Hiba!',MB_OK);
+    Application.MessageBox(PChar(af.ford('rsHibasPeldanyszam')),PChar(af.ford('rsHiba')),MB_OK);
     Exit;
   end;
  valasztott.PrintOptions.Copies:=jvpsz.AsInteger;
@@ -348,7 +348,6 @@ begin
   //NezetF.frxNezet.Zoom:=meret;
   jvpsz.Value:=psz;
   if valasztott.Name='frxmerleg' then merlegjegy_elokeszitese;
-
   valasztott.PrepareReport(true);
   ShowModal;
 end;

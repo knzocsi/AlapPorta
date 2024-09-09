@@ -21,10 +21,10 @@ uses
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
   Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000, System.Actions,
-  Vcl.ActnList, Vcl.StdActns;
+  Vcl.ActnList, Vcl.StdActns,reinit;
 
-const
-  ini_nev='porta_beallit.ini';
+ 
+  const ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
    ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés','Mérlegelõk módosítása',
    'Mérés','Kezdõ készlet felv.','Kézi mérés','Táramegadás','',
@@ -502,6 +502,7 @@ type
     procedure auto_teszt;
     procedure dijak_lekerese(pid,tid:Integer);
     procedure merlegjegy_lista_tipus_betoltese;
+    function ford(keresett: string):string;
     { Public declarations }
   end;
 
@@ -520,7 +521,7 @@ var
   lehajtasivarakozas:integer;
   rtspURLs: array [0..3] of string;
   soapXML:string;
-  lejatszas: Boolean;
+  lejatszas,nyelvvalaszt: Boolean;
   libre_mappa:string;
   duplex_mjegy,automata_meres,nedvesseg_beolvasasa,automata_kezelo,programvege,tomeg_levon:Boolean;
   IOmodul_van:boolean;
@@ -571,10 +572,12 @@ var
   Automata_Ftp_feltoltes: Boolean=False;
   Ftp_tavoli_mappa: string;
   nyomtatas_szamlalo:Integer=2;
+  //0-hun, 1-eng
+  nyelv_index:Integer=0;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
-     DMSoapU ;
+     DMSoapU, FordU ;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -736,10 +739,14 @@ begin
 
   if Automata_parositas then Forgalom_Timer.Enabled:=True;
  // if Automata_merlegjegy or Automata_merlegjegy_parositaskor then auto_mjegy_tread_run;
+//
 
   PortF:=TPortF.Create(Application);
   //  mérlegjegy nyomtatáshoz KELL
   if Mjegy_nyom_rec=nil then Mjegy_nyom_rec := Tmjegy_rec_nyom.Create;
+ // FordF:=FordF.Create(Application);//azért van itt mert angol alatt ezen kiakad és nem fordul le
+//  ShowMessage(nyelv_index.ToString);
+
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -834,6 +841,20 @@ begin
        ExecSQL
      end;
     jogmod:=False;
+  end;
+end;
+
+function TAF.ford(keresett: string): string;
+begin
+ if FordF<>nil then
+ with FordF do
+  begin
+
+   try
+    Result:= TLabel(FindComponent(keresett)).Caption;
+   except
+    Result:='';
+   end;
   end;
 end;
 
@@ -1060,7 +1081,7 @@ begin
     //ha sikeres a másolás restart
     if CopyFile(PChar(mappa+'\'+exe_neve),PChar(helyi_mappa+'\'+exe_neve),False) then
      begin
-       ShowMessage('A program frissités miatt újraindul');
+       ShowMessage(ford('rsFrissites'));
        ShellExecute(Application.Handle,'open', PChar(Application.ExeName), nil, nil, SW_SHOWNORMAL) ;
        Application.Terminate;
      end //ha sikertelen a másolás vissza módosítom a nevét eredetire
@@ -1419,6 +1440,9 @@ begin
   Ftp_feltoltes:= cfg_kezel('Exportált fájl feltöltése FTP szerverre','FTP','Ftp_feltoltes','Boolean', Ftp_feltoltes);
   Ftp_tavoli_mappa:=cfg_kezel('FTP feltöltéshez mappa','FTP','Ftp_tavoli_mappa','String', 'HU1265634700000093');
   automata_Ftp_feltoltes:= cfg_kezel('Automatikus feltöltés az FTP szerverre','FTP','Automata_Ftp_feltoltes','Boolean', Automata_Ftp_feltoltes);
+
+  nyelv_index:=cfg_kezel('0-magyat; 1-angol','ALAP','Nyelv','Integer',nyelv_index);
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';

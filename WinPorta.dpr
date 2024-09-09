@@ -28,7 +28,6 @@ uses
   Rak_szallU in 'Rak_szallU.pas' {Rak_szallF},
   rak_szall_listU in 'rak_szall_listU.pas' {rak_szall_listF},
   MeresU in 'MeresU.pas' {MeresF},
-  NezetU in 'NezetU.pas' {NezetF},
   NyomtatokU in 'NyomtatokU.pas' {NyomtatokF},
   Tulajok in 'Tulajok.pas' {TulajokF},
   EkaerU in 'EkaerU.pas' {EkaerF},
@@ -60,7 +59,11 @@ uses
   KeszletU in 'KeszletU.pas' {KeszletF},
   dijszabU in 'dijszabU.pas' {dijszabF},
   dijszab_termekU in 'dijszab_termekU.pas' {dijszab_termekF},
-  ftpDlU in 'FTP\ftpDlU.pas' {ftpF};
+  ftpDlU in 'FTP\ftpDlU.pas' {ftpF},
+  NzelvvalaszTU in 'NzelvvalaszTU.pas' {NyelvF},
+  reinit in 'reinit.pas',
+  NezetU in 'NezetU.pas' {NezetF},
+  FordU in 'FordU.pas' {FordF};
 
 {$R *.res}
 
@@ -71,9 +74,9 @@ begin
   Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
-  Application.CreateForm(TNezetF, NezetF);
   Application.CreateForm(TMeresF, MeresF);
   Application.CreateForm(TRendszamokF, RendszamokF);
+  Application.CreateForm(TNyelvF, NyelvF);
   Application.CreateForm(TForgalomF, ForgalomF);
   Application.CreateForm(TParositottF, ParositottF);
   Application.CreateForm(TKepekF, KepekF);
@@ -115,5 +118,6 @@ begin
   Application.CreateForm(TdijszabF, dijszabF);
   Application.CreateForm(Tdijszab_termekF, dijszab_termekF);
   Application.CreateForm(TftpF, ftpF);
+  Application.CreateForm(TNezetF, NezetF);
   Application.Run;
 end.

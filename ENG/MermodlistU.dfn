@@ -1,0 +1,2427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MermodlistU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MermodlistU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45532.559837963</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">29</prop>
+        <prop prop-type="UnTranslated">202</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MermodlistF.Left" resname="O:MermodlistF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Top" resname="O:MermodlistF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Hint" resname="O:MermodlistF.Hint">
+        <source>'Sorbarendezéshez kattintson bal egérfüllel az oszlop fejlécére'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'For sorting click to the title with left mouse'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Caption" resname="O:MermodlistF.Caption">
+        <source>'Mérlegjegy előzményei'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Weighning ticket antecedents'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.ClientHeight" resname="O:MermodlistF.ClientHeight">
+        <source>479</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.ClientWidth" resname="O:MermodlistF.ClientWidth">
+        <source>936</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Color" resname="O:MermodlistF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Font.Charset" resname="O:MermodlistF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Font.Color" resname="O:MermodlistF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Font.Height" resname="O:MermodlistF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Font.Name" resname="O:MermodlistF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Font.Style" resname="O:MermodlistF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.OldCreateOrder" resname="O:MermodlistF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.Position" resname="O:MermodlistF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.PixelsPerInch" resname="O:MermodlistF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.TextHeight" resname="O:MermodlistF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TMermodlistF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.Left" resname="O:MermodlistF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.Top" resname="O:MermodlistF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.Width" resname="O:MermodlistF.O:Panel1.Width">
+        <source>936</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.Height" resname="O:MermodlistF.O:Panel1.Height">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.Align" resname="O:MermodlistF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.TabOrder" resname="O:MermodlistF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Left" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Left">
+        <source>822</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Top" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Top">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Width" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Width">
+        <source>113</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Height" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Height">
+        <source>55</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Align" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Align">
+        <source>alRight</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Caption" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Caption">
+        <source>'lblsorszam'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Charset" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Color" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Height" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Height">
+        <source>-21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Name" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Style" resname="O:MermodlistF.O:Panel1.O:lblsorszam.Font.Style">
+        <source>[fsBold]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.ParentFont" resname="O:MermodlistF.O:Panel1.O:lblsorszam.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:lblsorszam.ExplicitHeight" resname="O:MermodlistF.O:Panel1.O:lblsorszam.ExplicitHeight">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.Left" resname="O:MermodlistF.O:Panel1.O:btnkilepes.Left">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.Top" resname="O:MermodlistF.O:Panel1.O:btnkilepes.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.Width" resname="O:MermodlistF.O:Panel1.O:btnkilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.Height" resname="O:MermodlistF.O:Panel1.O:btnkilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.Caption" resname="O:MermodlistF.O:Panel1.O:btnkilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.TabOrder" resname="O:MermodlistF.O:Panel1.O:btnkilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577083</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:Panel1.O:btnkilepes.OnClick" resname="O:MermodlistF.O:Panel1.O:btnkilepes.OnClick">
+        <source>btnkilepesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Left" resname="O:MermodlistF.O:mlistaGrid.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Top" resname="O:MermodlistF.O:mlistaGrid.Top">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Width" resname="O:MermodlistF.O:mlistaGrid.Width">
+        <source>936</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Height" resname="O:MermodlistF.O:mlistaGrid.Height">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Hint" resname="O:MermodlistF.O:mlistaGrid.Hint">
+        <source>'Sorbarendezéshez kattintson jobb egérfüllel az oszlop fejlécére'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'For sorting click to the title with right mouse'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Align" resname="O:MermodlistF.O:mlistaGrid.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.DataSource" resname="O:MermodlistF.O:mlistaGrid.DataSource">
+        <source>mjegyekQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.ParentShowHint" resname="O:MermodlistF.O:mlistaGrid.ParentShowHint">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.ReadOnly" resname="O:MermodlistF.O:mlistaGrid.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.ShowHint" resname="O:MermodlistF.O:mlistaGrid.ShowHint">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TabOrder" resname="O:MermodlistF.O:mlistaGrid.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleFont.Charset" resname="O:MermodlistF.O:mlistaGrid.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleFont.Color" resname="O:MermodlistF.O:mlistaGrid.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleFont.Height" resname="O:MermodlistF.O:mlistaGrid.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleFont.Name" resname="O:MermodlistF.O:mlistaGrid.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleFont.Style" resname="O:MermodlistF.O:mlistaGrid.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.OnMouseUp" resname="O:MermodlistF.O:mlistaGrid.OnMouseUp">
+        <source>mlistaGridMouseUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.Caption" resname="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.OK" resname="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:MermodlistF.O:mlistaGrid.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.EditControls" resname="O:MermodlistF.O:mlistaGrid.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.RowsHeight" resname="O:MermodlistF.O:mlistaGrid.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.TitleRowHeight" resname="O:MermodlistF.O:mlistaGrid.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[0].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[0].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[0].FieldName">
+        <source>'mod_idobelyeg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[0].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[0].Title.Caption">
+        <source>'Módosítás időpontja'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Modified timestamp'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[0].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[0].Width">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[0].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[1].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[1].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[1].FieldName">
+        <source>'rendszam'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[1].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[1].Title.Caption">
+        <source>'Rendszám'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Licence plate'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[1].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[1].Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[1].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[2].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[2].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[2].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[2].FieldName">
+        <source>'rendszam2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[2].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[2].Title.Caption">
+        <source>'Rendszám 2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'License plate 2'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[2].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[2].Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[2].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[2].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[3].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[3].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[3].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[3].FieldName">
+        <source>'p_kod'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[3].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[3].Title.Caption">
+        <source>'P.Kód'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'P.code'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[3].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[3].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[3].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[3].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[4].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[4].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[4].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[4].FieldName">
+        <source>'p_nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[4].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[4].Title.Caption">
+        <source>'Partner név'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Partner name'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[4].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[4].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[4].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[4].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[5].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[5].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[5].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[5].FieldName">
+        <source>'p_cim'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[5].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[5].Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[6].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[6].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[6].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[6].FieldName">
+        <source>'p2_kod'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[6].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[6].Title.Caption">
+        <source>'P.kód 2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'P.code 2'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[6].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[6].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[6].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[6].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[7].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[7].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[7].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[7].FieldName">
+        <source>'p2_nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[7].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[7].Title.Caption">
+        <source>'Partner név 2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577199</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Partner name 2'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[7].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[7].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[7].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[7].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[8].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[8].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[8].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[8].FieldName">
+        <source>'p2_cim'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[8].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[8].Title.Caption">
+        <source>'Partner cim 2'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[8].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[8].Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[9].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[9].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[9].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[9].FieldName">
+        <source>'termek_id'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">108</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[9].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[9].Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">109</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[10].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[10].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">110</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[10].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[10].FieldName">
+        <source>'termek_kod'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">111</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[10].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[10].Title.Caption">
+        <source>'T. kód'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">112</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Prod.code'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[10].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[10].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">113</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[10].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[10].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">114</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[11].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[11].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">115</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[11].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[11].FieldName">
+        <source>'termek_nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">116</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[11].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[11].Title.Caption">
+        <source>'T_név'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">117</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Prod.name'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[11].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[11].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">118</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[11].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[11].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">119</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[12].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[12].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">120</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[12].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[12].FieldName">
+        <source>'szallitolev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">121</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[12].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[12].Title.Caption">
+        <source>'Szállítólevél'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">122</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Bill of delivery'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[12].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[12].Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">123</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[12].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[12].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">124</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[13].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[13].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">125</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[13].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[13].FieldName">
+        <source>'megjegyzes'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">126</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[13].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[13].Visible">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">127</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[14].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[14].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">128</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[14].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[14].FieldName">
+        <source>'tomegbe'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">129</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[14].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[14].Title.Caption">
+        <source>'Be'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">130</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'In'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[14].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[14].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">131</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[14].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[14].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">132</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[15].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[15].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">133</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[15].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[15].FieldName">
+        <source>'tomegki'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">134</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[15].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[15].Title.Caption">
+        <source>'Ki'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">135</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Out'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[15].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[15].Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">136</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[15].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[15].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">137</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[16].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[16].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">138</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[16].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[16].FieldName">
+        <source>'brutto'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">139</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[16].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[16].Title.Caption">
+        <source>'Bruttó'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">140</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Gross'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[16].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[16].Width">
+        <source>28</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">141</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[16].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[16].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">142</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[17].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[17].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">143</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[17].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[17].FieldName">
+        <source>'tara'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">144</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[17].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[17].Title.Caption">
+        <source>'Tára'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">145</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Tara'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[17].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[17].Width">
+        <source>28</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">146</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[17].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[17].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">147</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[18].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[18].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">148</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[18].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[18].FieldName">
+        <source>'netto'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">149</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[18].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[18].Title.Caption">
+        <source>'Nettó'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">150</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Net'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[18].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[18].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">151</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[19].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[19].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">152</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[19].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[19].FieldName">
+        <source>'Sznetto'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">153</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[19].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[19].Title.Caption">
+        <source>'Sz.nettó'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">154</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Calc.net'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[19].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[19].Width">
+        <source>33</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">155</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[19].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[19].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">156</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[20].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[20].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">157</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[20].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[20].FieldName">
+        <source>'irany'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">158</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[20].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[20].Title.Caption">
+        <source>'Irány'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">159</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Direction'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[20].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[20].Width">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577315</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">160</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[20].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[20].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">161</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[21].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[21].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">162</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[21].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[21].FieldName">
+        <source>'elso_kezi'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">163</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[21].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[21].Title.Caption">
+        <source>'E.kézi'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">164</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'1.manual'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[21].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[21].Width">
+        <source>43</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">165</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[21].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[21].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">166</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[22].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[22].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">167</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[22].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[22].FieldName">
+        <source>'erkdatum'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">168</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[22].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[22].Title.Caption">
+        <source>'E.Dátum'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">169</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'1. date'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[22].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[22].Width">
+        <source>38</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">170</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[22].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[22].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">171</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[23].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[23].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">172</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[23].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[23].FieldName">
+        <source>'erkido'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">173</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[23].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[23].Title.Caption">
+        <source>'E.Idő'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">174</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'1. time'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[23].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[23].Width">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">175</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[23].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[23].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">176</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[24].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[24].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">177</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[24].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[24].FieldName">
+        <source>'masodik_kezi'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">178</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[24].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[24].Title.Caption">
+        <source>'M.kézi'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">179</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'2. manual'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[24].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[24].Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">180</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[24].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[24].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">181</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[25].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[25].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">182</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[25].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[25].FieldName">
+        <source>'tavdatum'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">183</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[25].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[25].Title.Caption">
+        <source>'M.Dátum'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">184</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'2. date'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[25].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[25].Width">
+        <source>34</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">185</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[25].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[25].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">186</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[26].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[26].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">187</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[26].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[26].FieldName">
+        <source>'tavido'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">188</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[26].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[26].Title.Caption">
+        <source>'M.Idő'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">189</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'2. time'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[26].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[26].Width">
+        <source>27</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">190</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[26].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[26].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">191</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[27].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[27].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">192</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[27].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[27].FieldName">
+        <source>'felhasznalo'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">193</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[27].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[27].Title.Caption">
+        <source>'Dolgozó'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">194</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'User'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[27].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[27].Width">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">195</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[27].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[27].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">196</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[28].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[28].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">197</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[28].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[28].FieldName">
+        <source>'merlegelo'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">198</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[28].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[28].Title.Caption">
+        <source>'Mérlegkezelő'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">199</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Scale operator'</target>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[28].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[28].Width">
+        <source>45</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">200</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[28].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[28].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">201</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[29].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[29].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">202</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[29].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[29].FieldName">
+        <source>'ekaer'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">203</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[29].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[29].Title.Caption">
+        <source>'EKÁER'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">204</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[29].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[29].Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">205</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[29].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[29].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">206</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[30].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[30].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">207</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[30].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[30].FieldName">
+        <source>'kuj'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">208</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[30].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[30].Title.Caption">
+        <source>'KÜJ'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">209</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[30].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[30].Width">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">210</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[30].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[30].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">211</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[31].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[31].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">212</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[31].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[31].FieldName">
+        <source>'ktj'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">213</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[31].Title.Caption" resname="O:MermodlistF.O:mlistaGrid.Columns[31].Title.Caption">
+        <source>'KTJ'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">214</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[31].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[31].Width">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">215</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[31].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[31].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">216</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[32].Expanded" resname="O:MermodlistF.O:mlistaGrid.Columns[32].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">217</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[32].FieldName" resname="O:MermodlistF.O:mlistaGrid.Columns[32].FieldName">
+        <source>'Storno'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">218</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[32].Width" resname="O:MermodlistF.O:mlistaGrid.Columns[32].Width">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">219</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mlistaGrid.Columns[32].Visible" resname="O:MermodlistF.O:mlistaGrid.Columns[32].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577431</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">220</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.Connection" resname="O:MermodlistF.O:mjegyekQ.Connection">
+        <source>AF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">221</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.SQL.Strings[0]" resname="O:MermodlistF.O:mjegyekQ.SQL.Strings[0]">
+        <source>'Select * from modositott_merlegjegyek WHERE sorszam=:s;'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">222</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">(</prop>
+          <prop prop-type="Close">)</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.Left" resname="O:MermodlistF.O:mjegyekQ.Left">
+        <source>640</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">223</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.Top" resname="O:MermodlistF.O:mjegyekQ.Top">
+        <source>224</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">224</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.ParamData[0].Name" resname="O:MermodlistF.O:mjegyekQ.ParamData[0].Name">
+        <source>'S'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">225</prop>
+          <prop prop-type="Type">C:TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.ParamData[0].DataType" resname="O:MermodlistF.O:mjegyekQ.ParamData[0].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">226</prop>
+          <prop prop-type="Type">C:TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQ.ParamData[0].ParamType" resname="O:MermodlistF.O:mjegyekQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">227</prop>
+          <prop prop-type="Type">C:TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQDs.DataSet" resname="O:MermodlistF.O:mjegyekQDs.DataSet">
+        <source>mjegyekQ</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">228</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQDs.Left" resname="O:MermodlistF.O:mjegyekQDs.Left">
+        <source>736</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">229</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MermodlistF.O:mjegyekQDs.Top" resname="O:MermodlistF.O:mjegyekQDs.Top">
+        <source>224</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6421577546</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">230</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

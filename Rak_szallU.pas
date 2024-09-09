@@ -125,27 +125,27 @@ var k:Extended;
 begin
  if af.rktetm.IsEmpty then
   begin
-   showmessage('Elõször vigyen fel tételeket!');
+   showmessage(af.ford('rsEloszorTeteltVigyenFel'));
    Exit
   end;
  if k_partnerlookup.KeyValue=0 then
   begin
-   showmessage('Válassza ki a kiadó partnert!');
+   showmessage(af.ford('rsKiadoPartnertMegKellAdni'));
    Exit
   end;
  if k_tarololookup.KeyValue=0 then
   begin
-   showmessage('Válassza ki a kiadó tárolót!');
+   showmessage(af.ford('rsKiadoTarolotMegKellAdni'));
    Exit
   end;
  if f_partnerlookup.KeyValue=0 then
   begin
-   showmessage('Válassza ki a fogadó partnert!');
+   showmessage(af.ford('rsFogadoPartnertMegKellAdni'));
    Exit
   end;
  if f_tarololookup.KeyValue=0 then
   begin
-   showmessage('Válassza ki a fogadó tárolót!');
+   showmessage(af.ford('rsFogadoTarolotMegKellAdni'));
    Exit
   end;
   //mennyiségek ellenõrzése
@@ -156,7 +156,7 @@ begin
      begin
        k:=aF.partner_kesz(af.rktetmtermek_id.AsInteger, k_tarololookup.KeyValue,k_partnerlookup.KeyValue,af.rktetmtort.Value.ToInteger);
        if af.rktetmmenny.Value>k then
-        if MessageDlg('Kiadó partner készlete kevesebb, mint a kiadandó mennyiség: '+af.rktetmtermek_nev.AsString +'  Folytatja?',
+        if MessageDlg(af.ford('rsKiadoPartnerKeszlete')+af.rktetmtermek_nev.AsString +af.ford('rsFolytatja'),
                        TMsgDlgType.mtconfirmation,mbYesNo,0)=7
         then abort;
        next
@@ -244,17 +244,17 @@ procedure TRak_szallF.btnfelveszClick(Sender: TObject);
 begin
  if termeklookup.KeyValue=0 then
   begin
-    ShowMessage('Válasszon terméket!');
+    ShowMessage(af.ford('rsTermeketMegKellAdni'));
     Exit
   end;
  if spmenny.Value<=0 then
   begin
-    ShowMessage('Adja meg a mennyiséget!');
+    ShowMessage(af.ford('rsAdjaMegAMennyisege'));
     Exit
   end;
   if af.rktetm.Locate('termek_id;tort',VarArrayOf([TermekekQ.FieldByName('id').AsInteger,chktort.Checked]),[]) then
    begin
-    ShowMessage('Ezt a terméket már felvitte a tételek közé!');
+    ShowMessage(af.ford('rsEztATermeketMarFelvette'));
     Exit
    end;
 
@@ -266,7 +266,7 @@ end;
 
 procedure TRak_szallF.Button2Click(Sender: TObject);
 begin
- if MessageDlg('Biztosan törli ezt a tételt?',TMsgDlgType.mtConfirmation,mbYesNo,0)=7 then exit;
+ if MessageDlg(af.ford('rsBiztosanTorli'),TMsgDlgType.mtConfirmation,mbYesNo,0)=7 then exit;
  af.rktetm.Delete
 end;
 

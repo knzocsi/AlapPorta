@@ -147,7 +147,7 @@ object KeszletF: TKeszletF
     Left = 0
     Top = 73
     Width = 1053
-    Height = 457
+    Height = 416
     Align = alClient
     DataSource = AF.KeszletQDs
     ReadOnly = True
@@ -228,6 +228,24 @@ object KeszletF: TKeszletF
         Width = 60
         Visible = True
       end>
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 489
+    Width = 1053
+    Height = 41
+    Align = alBottom
+    Caption = 'Panel2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    ExplicitLeft = 344
+    ExplicitTop = 480
+    ExplicitWidth = 185
   end
   object TarolokT: TFDQuery
     Connection = AF.Kapcs

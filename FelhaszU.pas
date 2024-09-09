@@ -75,14 +75,14 @@ var ujnev:string;
 begin
  if not aktjogle('j1')then
   begin
-   ShowMessage('Ehhez nincs jogosultsága !');
+   ShowMessage(af.ford('rsNincsJogosultsaga'));
    Exit;
   end;
- ujnev:=InputBox('Új felhasználó felvitele','Adja meg a nevet:','');
+ ujnev:=InputBox(af.ford('rsUjFelhasznaloFelvitele'),af.ford('rsAdjaMegANevet'),'');
  if ujnev='' then Exit;
  if aF.FelhaszQ.Locate('nev',ujnev,[locaseinsensitive]) then
   begin
-    ShowMessage('Ilyen felhasználó már léterzik!');
+    ShowMessage(af.ford('rsFelhasznaloMarLetezik'));
     exit;
   end;
 
@@ -106,7 +106,7 @@ begin
   aF.FelhaszQ.Last;
   aF.jogok_beolvasasa;
   jogok_szur(aF.FelhaszQ.Fields[0].AsInteger);
-  ShowMessage('Felhasználó létrehozva. Jelszó: proba');
+  ShowMessage(af.ford('rsFelhasznaloLetrehozva'));
 end;
 
 procedure TFelhaszF.Button3Click(Sender: TObject);
@@ -116,16 +116,16 @@ var ujnev:string;
 begin
 if not aktjogle('j2')then
  begin
-  ShowMessage('Ehhez nincs jogosultsága !');
+  ShowMessage(af.ford('rsNincsJogosultsaga'));
   exit;
  end;
 
  kod:=aF.FelhaszQ.Fields[0].AsInteger;
- ujnev:=InputBox('Felhasználó módosítása','Adja meg a nevet:',aF.felhaszQ.FieldByName('nev').AsString);
+ ujnev:=InputBox(af.ford('rsFelhasznaloModositas'),af.ford('rsAdjaMegANevet'),aF.felhaszQ.FieldByName('nev').AsString);
  if ujnev='' then Exit;
  if (aF.FelhaszQ.Locate('nev',ujnev,[locaseinsensitive]))and(aF.FelhaszQ.Fields[0].AsInteger<>kod) then
   begin
-    ShowMessage('Ilyen felhasználó már léterzik!');
+    ShowMessage(af.ford('rsFelhasznaloMarLetezik'));
     exit;
   end;
 
@@ -145,10 +145,10 @@ procedure TFelhaszF.Button4Click(Sender: TObject);
 begin
 if not aktjogle('j2')then
  begin
-  ShowMessage('Ehhez nincs jogosultsága !');
+  ShowMessage(af.ford('rsNincsJogosultsaga'));
   exit;
  end;
-  if MessageDlg('Biztosan törli  ezt a felhasználót?',mtConfirmation,mbYesNo,0)=6 then
+  if MessageDlg(af.ford('rsFelhasznaloTorlese'),mtConfirmation,mbYesNo,0)=6 then
    begin
     with aF.Q1 do
     begin

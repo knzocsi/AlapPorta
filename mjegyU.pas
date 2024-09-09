@@ -346,9 +346,9 @@ case cbxirany.ItemIndex of
     btnMeres.enabled:=False;
    end;
  1:begin //beszállítás
-    lblpartner.Caption:='Átadó:';
+    lblpartner.Caption:=af.ford('rsAtado');
     partnerlookup.Enabled:=True;
-    lblpartner2.Caption:='Átvevõ:';
+    lblpartner2.Caption:=af.ford('rsAtvevo');
     partnerlookup2.Enabled:=true;
     btnekaer.Enabled:=false;
     partnerlookup.keyvalue:='!';
@@ -356,9 +356,9 @@ case cbxirany.ItemIndex of
     btnMeres.enabled:= True;
    end;
  2:begin //kiszállítás
-    lblpartner.Caption:='Eladó:';
+    lblpartner.Caption:=af.ford('rsElado');
     partnerlookup.Enabled:=true;
-    lblpartner2.Caption:='Vevõ:';
+    lblpartner2.Caption:=af.ford('rsVevo');
     partnerlookup2.Enabled:=True;
     btnekaer.Enabled:=true;
     partnerlookup2.keyvalue:='!';
@@ -612,7 +612,7 @@ end;
 procedure TMjegyF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if (not mentes_volt) then
-    CanClose:=  ( MessageDlg('Nem volt mentés! Biztos kilép?', mtConfirmation, [mbOK,mbCancel], 0) = mrOk)
+    CanClose:=  ( MessageDlg(af.ford('rsNemVoltMentes'), mtConfirmation, [mbOK,mbCancel], 0) = mrOk)
   else   CanClose:=True;
 
 
@@ -622,7 +622,7 @@ procedure TMjegyF.jeloles;
 begin
   if (not jvmemparosparosit.AsBoolean) and (jeloltek_szama=2) then
   begin
-    ShowMessage('Már ki van jelölve két jármû, vagy folytatásban van!');
+    ShowMessage(af.ford('rsMarKiVanJelolveKetJarmu'));
     exit;
   end;
   if (not jvmemparosparosit.AsBoolean)  then jeloltek_szama:=jeloltek_szama+1
@@ -1015,38 +1015,38 @@ procedure TMjegyF.btnekaerClick(Sender: TObject);
 begin
 if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage('A bizonylat kibocsájtót meg kell adni!');
+    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
     exit
   end;
  if partnerlookup.KeyValue='!' then
   begin
-    ShowMessage('A(z) '+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
     exit
   end;
  if partnerlookup2.KeyValue='!' then
   begin
-    ShowMessage('A(z) '+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
     exit
   end;
 
  if termeklookup.KeyValue='!' then
   begin
-    ShowMessage('A terméket meg kell adni!');
+    ShowMessage(af.ford('rsTermeketMegKellAdni'));
     exit
   end;
  if cbxirany.ItemIndex<1 then
   begin
-    ShowMessage('A mérés irányát meg kell adni!');
+    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
     exit
   end;
  if (cbxrendszam1.Text=''){or(cbxrendszam2.Text='')} then
   begin
-    ShowMessage('A rendszámot meg kell adni!');
+    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
     exit
   end;
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
   begin
-    ShowMessage('Nincs kiválasztva 2 mérés vagy nincs tára rögzített mérésnél!');
+    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
     exit
   end;
 
@@ -1185,72 +1185,72 @@ begin
 
   if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage('A bizonylat kibocsájtót meg kell adni!');
+    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
     tulajlookup.SetFocus;
     exit
   end;
   if (partnerlookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('A(z) '+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
     partnerlookup.SetFocus;
     exit
   end;
   if (partnerlookup2.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('A(z) '+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+' meg kell adni!');
+    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
     partnerlookup2.SetFocus;
     exit
   end;
   if (termeklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes))  then
   begin
-    ShowMessage('A terméket meg kell adni!');
+    ShowMessage(af.ford('rsTermeketMegKellAdni'));
     termeklookup.SetFocus;
     exit
   end;
   if cbfuvarozo.Visible then
    if (cbfuvarozo.KeyValue=0) and (not (Sender = btnFolytatasos_mentes)) then
     begin
-      ShowMessage('Adja meg a fuvarozót!');
+      ShowMessage(af.ford('rsAdjaMegAFuvarozot'));
       exit;
     end;
   if (kezelolookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('A mérlegkezelõt meg kell adni!');
+    ShowMessage(af.ford('rsMerlegkezelotMegKellAdni'));
     kezelolookup.SetFocus;
     exit
   end;
   if (cbxirany.ItemIndex<1) and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('A mérés irányát meg kell adni!');
+    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
     cbxirany.SetFocus;
     exit
   end;
   if (not chkrogzitett.Checked) and (not (Sender = btnFolytatasos_mentes)) then
   if ((r11<>r21)and(r11<>r22))or((r12<>r21)and(r12<>r22)) then
   begin
-    if MessageDlg('A rendszámok eltérnek. Folytatja?',mtConfirmation,mbYesNo,0)=7 then exit;
+    if MessageDlg(af.ford('rsRendszamokElternek'),mtConfirmation,mbYesNo,0)=7 then exit;
   end;
   if (cbxrendszam1.Text='') then
   begin
-    ShowMessage('A rendszámot meg kell adni!');
+    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
     cbxrendszam1.SetFocus;
     exit
   end;
   if (not chknincspot.Checked) and (cbxrendszam2.Text='') then
   begin
-    ShowMessage('A pótkocsi rendszámot meg kell adni!');
+    ShowMessage(af.ford('rsPotkocsiRendszamatMegKellAdni'));
     cbxrendszam2.SetFocus;
     exit
   end;
 
   if ((spBrutto.Value<=0)or(sptara.Value<=0) ) and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('Nincs kiválasztva 2 mérés vagy nincs tára rögzített mérésnél!');
+    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
     exit
   end;
   if (taroloklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage('A tárolót meg kell adni!');
+    ShowMessage(af.ford('rsTarolotMegKellAdni'));
     taroloklookup.SetFocus;
     exit
   end;
@@ -1275,7 +1275,7 @@ begin
   if levonlookup.KeyValue<>'!' then
   if sp_tomeg_levon.Value<=0 then
   begin
-    ShowMessage('Adja meg a levonandó tömeget!');
+    ShowMessage(af.ford('rsLevonandoTomegetMegKellAdni'));
     sp_tomeg_levon.SetFocus;
     Exit
   end;
@@ -1380,11 +1380,13 @@ begin
       if cbxirany.ItemIndex in [1,2] then
 
         case cbxirany.Text[1] of
-         'B':begin
+         'B','I':
+             begin
               ParamByName('tomegbe').AsInteger:=spsznetto.Value;
               ParamByName('tomegki').AsInteger:=0;
              end;
-         'K':begin
+         'K','O':
+             begin
               ParamByName('tomegki').AsInteger:=spsznetto.Value;
               ParamByName('tomegbe').AsInteger:=0;
              end;
@@ -1485,12 +1487,14 @@ begin
        // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
         ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
         case cbxirany.Text[1] of
-         'B':begin
+         'B','I':
+             begin
               ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
               //ShowMessage(VarToStr(spszNetto.Value*be_tarolasi_dij));
               ParamByName('kitarolasi_dij').AsFloat:=0;
              end;
-         'K':begin
+         'K', 'O':
+             begin
               ParamByName('betarolasi_dij').AsFloat:=0;
               ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
              end;
@@ -1567,13 +1571,15 @@ begin
       //keszletezes
       if Sender <>btnFolytatasos_mentes then
         case cbxirany.Text[1] of
-         'B':begin
+         'B','I':
+             begin
               aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,0,keszmenny);
               //tört szemek készletezése
               if sptort.Value>0 then
               aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,1,tort_keszmenny);
              end;
-         'K':begin
+         'K','O':
+             begin
               aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,0,-1* keszmenny);
               //tört szemek készletezése
               if sptort.Value>0 then
@@ -1681,7 +1687,7 @@ begin
       Rewrite(tf);
       CloseFile(tf);
     end;
-    if Meres_MerlegjegyenF.chkKezimeres.Checked then kezi:='Kézi' else kezi:='';
+    if Meres_MerlegjegyenF.chkKezimeres.Checked then kezi:=af.ford('rsKezi') else kezi:='';
 
     Append(tf);
     Writeln(tf,DateToStr(Date)+#9+TimeToStr(Time)+#9+cbxRendszam1.Text+#9+IntToStr( Meres_MerlegjegyenF.Mert_eredmeny)+#9+cbxRendszam2.Text+#9+kezi);

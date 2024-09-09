@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F74445FA-ED97-4D36-9869-F1B76ED9ACAC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="WinPorta.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ENG\WinPorta_ENG.bdsproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="WinPorta">
+        <MSBuild Projects="WinPorta.dproj"/>
+    </Target>
+    <Target Name="WinPorta:Clean">
+        <MSBuild Projects="WinPorta.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WinPorta:Make">
+        <MSBuild Projects="WinPorta.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WinPorta_ENG">
+        <MSBuild Projects="ENG\WinPorta_ENG.bdsproj"/>
+    </Target>
+    <Target Name="WinPorta_ENG:Clean">
+        <MSBuild Projects="ENG\WinPorta_ENG.bdsproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WinPorta_ENG:Make">
+        <MSBuild Projects="ENG\WinPorta_ENG.bdsproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="WinPorta;WinPorta_ENG"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="WinPorta:Clean;WinPorta_ENG:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="WinPorta:Make;WinPorta_ENG:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

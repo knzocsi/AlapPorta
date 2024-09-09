@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\kezdokeszletU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\kezdokeszletU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45532.4919212963</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">8</prop>
+        <prop prop-type="UnTranslated">103</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:kezdokeszletF.Left" resname="O:kezdokeszletF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Top" resname="O:kezdokeszletF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Caption" resname="O:kezdokeszletF.Caption">
+        <source>'Kezdő készletek felvitele'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Uploading starter stock'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.ClientHeight" resname="O:kezdokeszletF.ClientHeight">
+        <source>507</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.ClientWidth" resname="O:kezdokeszletF.ClientWidth">
+        <source>895</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Color" resname="O:kezdokeszletF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Font.Charset" resname="O:kezdokeszletF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Font.Color" resname="O:kezdokeszletF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Font.Height" resname="O:kezdokeszletF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Font.Name" resname="O:kezdokeszletF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Font.Style" resname="O:kezdokeszletF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.OldCreateOrder" resname="O:kezdokeszletF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.Position" resname="O:kezdokeszletF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.OnActivate" resname="O:kezdokeszletF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.OnClose" resname="O:kezdokeszletF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.PixelsPerInch" resname="O:kezdokeszletF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.TextHeight" resname="O:kezdokeszletF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TkezdokeszletF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label3.Left" resname="O:kezdokeszletF.O:Label3.Left">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label3.Top" resname="O:kezdokeszletF.O:Label3.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label3.Width" resname="O:kezdokeszletF.O:Label3.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label3.Height" resname="O:kezdokeszletF.O:Label3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label3.Caption" resname="O:kezdokeszletF.O:Label3.Caption">
+        <source>'A készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'A stock:'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label4.Left" resname="O:kezdokeszletF.O:Label4.Left">
+        <source>202</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label4.Top" resname="O:kezdokeszletF.O:Label4.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label4.Width" resname="O:kezdokeszletF.O:Label4.Width">
+        <source>46</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label4.Height" resname="O:kezdokeszletF.O:Label4.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Label4.Caption" resname="O:kezdokeszletF.O:Label4.Caption">
+        <source>'B készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'B stock:'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Left" resname="O:kezdokeszletF.O:DBGrid1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Top" resname="O:kezdokeszletF.O:DBGrid1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Width" resname="O:kezdokeszletF.O:DBGrid1.Width">
+        <source>895</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Height" resname="O:kezdokeszletF.O:DBGrid1.Height">
+        <source>449</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Align" resname="O:kezdokeszletF.O:DBGrid1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.DataSource" resname="O:kezdokeszletF.O:DBGrid1.DataSource">
+        <source>termeklistDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.Options" resname="O:kezdokeszletF.O:DBGrid1.Options">
+        <source>[dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.ReadOnly" resname="O:kezdokeszletF.O:DBGrid1.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TabOrder" resname="O:kezdokeszletF.O:DBGrid1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TitleFont.Charset" resname="O:kezdokeszletF.O:DBGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TitleFont.Color" resname="O:kezdokeszletF.O:DBGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TitleFont.Height" resname="O:kezdokeszletF.O:DBGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TitleFont.Name" resname="O:kezdokeszletF.O:DBGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.TitleFont.Style" resname="O:kezdokeszletF.O:DBGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.OnCellClick" resname="O:kezdokeszletF.O:DBGrid1.OnCellClick">
+        <source>DBGrid1CellClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:DBGrid1.OnKeyUp" resname="O:kezdokeszletF.O:DBGrid1.OnKeyUp">
+        <source>DBGrid1KeyUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TDBGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.Left" resname="O:kezdokeszletF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.Top" resname="O:kezdokeszletF.O:Panel1.Top">
+        <source>455</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.Width" resname="O:kezdokeszletF.O:Panel1.Width">
+        <source>895</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.Height" resname="O:kezdokeszletF.O:Panel1.Height">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.Align" resname="O:kezdokeszletF.O:Panel1.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.TabOrder" resname="O:kezdokeszletF.O:Panel1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label1.Left" resname="O:kezdokeszletF.O:Panel1.O:Label1.Left">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label1.Top" resname="O:kezdokeszletF.O:Panel1.O:Label1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label1.Width" resname="O:kezdokeszletF.O:Panel1.O:Label1.Width">
+        <source>62</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label1.Height" resname="O:kezdokeszletF.O:Panel1.O:Label1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label1.Caption" resname="O:kezdokeszletF.O:Panel1.O:Label1.Caption">
+        <source>'ÚJ A készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'NEW A stock:'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label2.Left" resname="O:kezdokeszletF.O:Panel1.O:Label2.Left">
+        <source>199</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label2.Top" resname="O:kezdokeszletF.O:Panel1.O:Label2.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label2.Width" resname="O:kezdokeszletF.O:Panel1.O:Label2.Width">
+        <source>61</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label2.Height" resname="O:kezdokeszletF.O:Panel1.O:Label2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082639</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label2.Caption" resname="O:kezdokeszletF.O:Panel1.O:Label2.Caption">
+        <source>'ÚJ B készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'NEW B stock:'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Left" resname="O:kezdokeszletF.O:Panel1.O:Label5.Left">
+        <source>449</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Top" resname="O:kezdokeszletF.O:Panel1.O:Label5.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Width" resname="O:kezdokeszletF.O:Panel1.O:Label5.Width">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Height" resname="O:kezdokeszletF.O:Panel1.O:Label5.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Alignment" resname="O:kezdokeszletF.O:Panel1.O:Label5.Alignment">
+        <source>taRightJustify</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label5.Caption" resname="O:kezdokeszletF.O:Panel1.O:Label5.Caption">
+        <source>'FELVITT A készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'UPLOADED A stock'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Left" resname="O:kezdokeszletF.O:Panel1.O:Label7.Left">
+        <source>665</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Top" resname="O:kezdokeszletF.O:Panel1.O:Label7.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Width" resname="O:kezdokeszletF.O:Panel1.O:Label7.Width">
+        <source>88</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Height" resname="O:kezdokeszletF.O:Panel1.O:Label7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Alignment" resname="O:kezdokeszletF.O:Panel1.O:Label7.Alignment">
+        <source>taRightJustify</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Label7.Caption" resname="O:kezdokeszletF.O:Panel1.O:Label7.Caption">
+        <source>'FELVITT B készlet:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'UPLOADED B stock'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.Left" resname="O:kezdokeszletF.O:Panel1.O:Button1.Left">
+        <source>183</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.Top" resname="O:kezdokeszletF.O:Panel1.O:Button1.Top">
+        <source>28</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.Width" resname="O:kezdokeszletF.O:Panel1.O:Button1.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.Height" resname="O:kezdokeszletF.O:Panel1.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.Caption" resname="O:kezdokeszletF.O:Panel1.O:Button1.Caption">
+        <source>'Mentés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Save'</target>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.TabOrder" resname="O:kezdokeszletF.O:Panel1.O:Button1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:Button1.OnClick" resname="O:kezdokeszletF.O:Panel1.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spakeszlet.Left" resname="O:kezdokeszletF.O:Panel1.O:spakeszlet.Left">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spakeszlet.Top" resname="O:kezdokeszletF.O:Panel1.O:spakeszlet.Top">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spakeszlet.Width" resname="O:kezdokeszletF.O:Panel1.O:spakeszlet.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spakeszlet.Height" resname="O:kezdokeszletF.O:Panel1.O:spakeszlet.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spakeszlet.TabOrder" resname="O:kezdokeszletF.O:Panel1.O:spakeszlet.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Left" resname="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Left">
+        <source>266</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Top" resname="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Width" resname="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Height" resname="O:kezdokeszletF.O:Panel1.O:spbkeszlet.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:Panel1.O:spbkeszlet.TabOrder" resname="O:kezdokeszletF.O:Panel1.O:spbkeszlet.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">TJvSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.Left" resname="O:kezdokeszletF.O:SpinEdit1.Left">
+        <source>542</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.Top" resname="O:kezdokeszletF.O:SpinEdit1.Top">
+        <source>455</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.Width" resname="O:kezdokeszletF.O:SpinEdit1.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.Height" resname="O:kezdokeszletF.O:SpinEdit1.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.MaxValue" resname="O:kezdokeszletF.O:SpinEdit1.MaxValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.MinValue" resname="O:kezdokeszletF.O:SpinEdit1.MinValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.TabOrder" resname="O:kezdokeszletF.O:SpinEdit1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit1.Value" resname="O:kezdokeszletF.O:SpinEdit1.Value">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.Left" resname="O:kezdokeszletF.O:SpinEdit2.Left">
+        <source>755</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.Top" resname="O:kezdokeszletF.O:SpinEdit2.Top">
+        <source>455</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.Width" resname="O:kezdokeszletF.O:SpinEdit2.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.Height" resname="O:kezdokeszletF.O:SpinEdit2.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.MaxValue" resname="O:kezdokeszletF.O:SpinEdit2.MaxValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.MinValue" resname="O:kezdokeszletF.O:SpinEdit2.MinValue">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.TabOrder" resname="O:kezdokeszletF.O:SpinEdit2.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:SpinEdit2.Value" resname="O:kezdokeszletF.O:SpinEdit2.Value">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">TSpinEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklist.Connection" resname="O:kezdokeszletF.O:termeklist.Connection">
+        <source>aF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklist.SQL.Strings[0]" resname="O:kezdokeszletF.O:termeklist.SQL.Strings[0]">
+        <source>'select * from termek ORDER By NEV ASC;'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">(</prop>
+          <prop prop-type="Close">)</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklist.Left" resname="O:kezdokeszletF.O:termeklist.Left">
+        <source>328</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklist.Top" resname="O:kezdokeszletF.O:termeklist.Top">
+        <source>56</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklistDs.DataSet" resname="O:kezdokeszletF.O:termeklistDs.DataSet">
+        <source>termeklist</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">108</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklistDs.Left" resname="O:kezdokeszletF.O:termeklistDs.Left">
+        <source>376</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">109</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:kezdokeszletF.O:termeklistDs.Top" resname="O:kezdokeszletF.O:termeklistDs.Top">
+        <source>56</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">45531.6420082755</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">110</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

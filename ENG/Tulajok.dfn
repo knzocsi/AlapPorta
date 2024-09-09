@@ -1,0 +1,2178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\Tulajok.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\Tulajok.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45531.642337963</prop>
+        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">432</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:TulajokF.Left" resname="O:TulajokF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Top" resname="O:TulajokF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Caption" resname="O:TulajokF.Caption">
+        <source>'Tulajdonosok'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.ClientHeight" resname="O:TulajokF.ClientHeight">
+        <source>387</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.ClientWidth" resname="O:TulajokF.ClientWidth">
+        <source>772</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Color" resname="O:TulajokF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Font.Charset" resname="O:TulajokF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Font.Color" resname="O:TulajokF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Font.Height" resname="O:TulajokF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Font.Name" resname="O:TulajokF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.Font.Style" resname="O:TulajokF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.OldCreateOrder" resname="O:TulajokF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.OnActivate" resname="O:TulajokF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.OnClose" resname="O:TulajokF.OnClose">
+        <source>FormClose</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.PixelsPerInch" resname="O:TulajokF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.TextHeight" resname="O:TulajokF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TTulajokF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.Left" resname="O:TulajokF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.Top" resname="O:TulajokF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.Width" resname="O:TulajokF.O:Panel1.Width">
+        <source>772</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499074</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.Height" resname="O:TulajokF.O:Panel1.Height">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.Align" resname="O:TulajokF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.TabOrder" resname="O:TulajokF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.Left" resname="O:TulajokF.O:Panel1.O:btnkilepes.Left">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.Top" resname="O:TulajokF.O:Panel1.O:btnkilepes.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.Width" resname="O:TulajokF.O:Panel1.O:btnkilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.Height" resname="O:TulajokF.O:Panel1.O:btnkilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.Caption" resname="O:TulajokF.O:Panel1.O:btnkilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.TabOrder" resname="O:TulajokF.O:Panel1.O:btnkilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:btnkilepes.OnClick" resname="O:TulajokF.O:Panel1.O:btnkilepes.OnClick">
+        <source>btnkilepesClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.Left" resname="O:TulajokF.O:Panel1.O:Button1.Left">
+        <source>288</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.Top" resname="O:TulajokF.O:Panel1.O:Button1.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.Width" resname="O:TulajokF.O:Panel1.O:Button1.Width">
+        <source>193</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.Height" resname="O:TulajokF.O:Panel1.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.Caption" resname="O:TulajokF.O:Panel1.O:Button1.Caption">
+        <source>'Beírás az előző mérlegjegyekhez'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.TabOrder" resname="O:TulajokF.O:Panel1.O:Button1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button1.OnClick" resname="O:TulajokF.O:Panel1.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.Left" resname="O:TulajokF.O:Panel1.O:Button2.Left">
+        <source>664</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.Top" resname="O:TulajokF.O:Panel1.O:Button2.Top">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.Width" resname="O:TulajokF.O:Panel1.O:Button2.Width">
+        <source>91</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.Height" resname="O:TulajokF.O:Panel1.O:Button2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.Caption" resname="O:TulajokF.O:Panel1.O:Button2.Caption">
+        <source>'Felrakodási címek'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.TabOrder" resname="O:TulajokF.O:Panel1.O:Button2.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:Panel1.O:Button2.OnClick" resname="O:TulajokF.O:Panel1.O:Button2.OnClick">
+        <source>Button2Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.Left" resname="O:TulajokF.O:pcListaReszlet.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.Top" resname="O:TulajokF.O:pcListaReszlet.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.Width" resname="O:TulajokF.O:pcListaReszlet.Width">
+        <source>772</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.Height" resname="O:TulajokF.O:pcListaReszlet.Height">
+        <source>347</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.ActivePage" resname="O:TulajokF.O:pcListaReszlet.ActivePage">
+        <source>tbLista</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.Align" resname="O:TulajokF.O:pcListaReszlet.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.TabOrder" resname="O:TulajokF.O:pcListaReszlet.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.Caption">
+        <source>'Lista'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Width">
+        <source>764</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Height">
+        <source>319</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Align" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.ReadOnly" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Charset" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Color" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Name" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Style" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].FieldName">
+        <source>'Elotag'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Title.Caption">
+        <source>'Előtag'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].FieldName">
+        <source>'Nev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Title.Caption">
+        <source>'Név'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[2].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].FieldName">
+        <source>'Cim'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Title.Caption">
+        <source>'Cím'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[3].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].FieldName">
+        <source>'Adoszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Title.Caption">
+        <source>'Adószám'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[4].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].FieldName">
+        <source>'kuj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Title.Caption">
+        <source>'KÜJ'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[5].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Expanded" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].FieldName" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].FieldName">
+        <source>'ktj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Title.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Title.Caption">
+        <source>'KTJ'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Visible" resname="O:TulajokF.O:pcListaReszlet.O:tbLista.O:DBGrid1.Columns[6].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.Caption">
+        <source>'Részletek'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.ImageIndex" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.ImageIndex">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Top">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Width">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.Caption">
+        <source>'ID:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl1.FocusControl">
+        <source>dedID</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Left">
+        <source>76</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Top">
+        <source>48</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Width">
+        <source>23</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.Caption">
+        <source>'Név:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl2.FocusControl">
+        <source>dedNev</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Top">
+        <source>267</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label1.Caption">
+        <source>'Cím egyben:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Top">
+        <source>172</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label2.Caption">
+        <source>'Adószám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Left">
+        <source>373</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Top">
+        <source>172</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Width">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label3.Caption">
+        <source>'KÜJ:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Left">
+        <source>504</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Top">
+        <source>172</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Width">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label4.Caption">
+        <source>'KTJ:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Left">
+        <source>632</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Top">
+        <source>172</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Width">
+        <source>34</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label5.Caption">
+        <source>'Előtag:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Top">
+        <source>95</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Width">
+        <source>66</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.Caption">
+        <source>'Irányítószám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl3.FocusControl">
+        <source>dbedtIrsz</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Left">
+        <source>157</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Top">
+        <source>95</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Width">
+        <source>49</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.Caption">
+        <source>'Település:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl4.FocusControl">
+        <source>dbedtTelepules</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Width">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.Caption">
+        <source>'Közterület neve:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl6.FocusControl">
+        <source>dbedtKozterulet</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Left">
+        <source>157</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Width">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.Caption">
+        <source>'Közterület jellege:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl7.FocusControl">
+        <source>dbedtKozt_Jelleg</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Left">
+        <source>308</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Width">
+        <source>46</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.Caption">
+        <source>'Házszám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl8.FocusControl">
+        <source>dbedtHazszam</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Left">
+        <source>389</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Width">
+        <source>34</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label6.Caption">
+        <source>'Épület:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Left">
+        <source>458</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Width">
+        <source>54</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.Caption">
+        <source>'Lépcsőház:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl9.FocusControl">
+        <source>dbedtLepcsohaz</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Left">
+        <source>541</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Top">
+        <source>135</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Width">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.Caption">
+        <source>'Emelet:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl10.FocusControl">
+        <source>dbedtEmelet</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Top">
+        <source>175</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Width">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.Caption">
+        <source>'Ajtó:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.FocusControl" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:lbl11.FocusControl">
+        <source>dbedtAjto</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Left">
+        <source>93</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Top">
+        <source>175</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Width">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label7.Caption">
+        <source>'Helyrajzi szám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Top">
+        <source>219</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Width">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label8.Caption">
+        <source>'E-mail:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Left">
+        <source>141</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Top">
+        <source>219</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Width">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label9.Caption">
+        <source>'Telefon:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Left">
+        <source>284</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Top">
+        <source>219</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Width">
+        <source>87</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Caption" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:Label22.Caption">
+        <source>'Cégjegyzék szám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Left">
+        <source>409</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Width">
+        <source>215</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.VisibleButtons" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.VisibleButtons">
+        <source>[nbInsert, nbDelete, nbEdit, nbPost, nbCancel]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBNavigator1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">210</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Top">
+        <source>64</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Width">
+        <source>52</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.DataField">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.ReadOnly" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedID.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">217</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Left">
+        <source>76</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Top">
+        <source>64</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Width">
+        <source>643</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.DataField">
+        <source>'Nev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedNev.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">224</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Left">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">225</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Top">
+        <source>286</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">226</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Width">
+        <source>731</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">227</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">228</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.DataField">
+        <source>'Cim'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">229</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">230</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedcim.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">231</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">232</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Top">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">233</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Width">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">234</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">235</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.DataField">
+        <source>'Adoszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">236</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">237</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedadoszam.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">238</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Left">
+        <source>372</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">239</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Top">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">240</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Width">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">241</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">242</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.DataField">
+        <source>'kuj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">243</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">244</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedkuj.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">245</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Left">
+        <source>504</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">246</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Top">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">247</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Width">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">248</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">249</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.DataField">
+        <source>'ktj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">250</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">251</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedktj.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">252</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Left">
+        <source>632</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">253</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Top">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">254</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Width">
+        <source>102</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">255</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">256</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.DataField">
+        <source>'Elotag'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">257</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">258</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dedelotag.TabOrder">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">259</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">260</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Top">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">261</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Width">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">262</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">263</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.DataField">
+        <source>'Irsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">264</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">265</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtIrsz.TabOrder">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">266</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Left">
+        <source>157</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">267</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Top">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">268</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Width">
+        <source>394</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">269</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">270</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.DataField">
+        <source>'Telepules'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">271</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">272</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtTelepules.TabOrder">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">273</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">274</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">275</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Width">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">276</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">277</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.DataField">
+        <source>'Kozterulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">278</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">279</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozterulet.TabOrder">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">280</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Left">
+        <source>157</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">281</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">282</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Width">
+        <source>134</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">283</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">284</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.DataField">
+        <source>'Kozt_Jelleg'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">285</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">286</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtKozt_Jelleg.TabOrder">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">287</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Left">
+        <source>308</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">288</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">289</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">290</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">291</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.DataField">
+        <source>'Hazszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">292</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">293</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtHazszam.TabOrder">
+        <source>12</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">294</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Left">
+        <source>390</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">295</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">296</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Width">
+        <source>56</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">297</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">298</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.DataField">
+        <source>'epulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">299</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">300</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:DBEdepulet.TabOrder">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">301</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Left">
+        <source>458</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">302</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">303</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">304</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">305</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.DataField">
+        <source>'Lepcsohaz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">306</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">307</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtLepcsohaz.TabOrder">
+        <source>14</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">308</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Left">
+        <source>541</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">309</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Top">
+        <source>148</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">310</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">311</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">312</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.DataField">
+        <source>'Emelet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">313</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">314</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtEmelet.TabOrder">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">315</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">316</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Top">
+        <source>188</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">317</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Width">
+        <source>69</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">318</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">319</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.DataField">
+        <source>'Ajto'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">320</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">321</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtAjto.TabOrder">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">322</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Left">
+        <source>93</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">323</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Top">
+        <source>189</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">324</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Width">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">325</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">326</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.DataField">
+        <source>'hrsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">327</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">328</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedthrsz.TabOrder">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">329</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Left">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">330</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Top">
+        <source>232</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">331</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">332</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">333</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.DataField">
+        <source>'email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">334</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">335</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedtemail.TabOrder">
+        <source>18</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">336</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Left">
+        <source>141</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">337</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Top">
+        <source>232</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">338</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">339</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">340</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.DataField">
+        <source>'telefon'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">341</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">342</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedttelefon.TabOrder">
+        <source>19</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">343</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Left" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Left">
+        <source>284</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">344</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Top" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Top">
+        <source>232</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">345</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Width" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">346</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Height" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">347</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.DataField" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.DataField">
+        <source>'cjsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">348</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.DataSource" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.DataSource">
+        <source>tulajDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">349</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.TabOrder" resname="O:TulajokF.O:pcListaReszlet.O:tbReszlet.O:dbedcjsz.TabOrder">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">350</prop><prop prop-type="Type">TDBEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.IndexFieldNames" resname="O:TulajokF.O:tulajT.IndexFieldNames">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">351</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.Connection" resname="O:TulajokF.O:tulajT.Connection">
+        <source>AF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">352</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.TableName" resname="O:TulajokF.O:tulajT.TableName">
+        <source>'tulajok'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">353</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.Left" resname="O:TulajokF.O:tulajT.Left">
+        <source>168</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">354</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.Top" resname="O:TulajokF.O:tulajT.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">355</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTID.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTID.FieldName">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">356</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTID.Origin" resname="O:TulajokF.O:tulajT.O:tulajTID.Origin">
+        <source>'ID'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">357</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTID.ProviderFlags" resname="O:TulajokF.O:tulajT.O:tulajTID.ProviderFlags">
+        <source>[pfInWhere, pfInKey]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">358</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTID.ReadOnly" resname="O:TulajokF.O:tulajT.O:tulajTID.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">359</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTNev.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTNev.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">360</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTNev.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTNev.FieldName">
+        <source>'Nev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">361</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTNev.Origin" resname="O:TulajokF.O:tulajT.O:tulajTNev.Origin">
+        <source>'Nev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">362</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTNev.Size" resname="O:TulajokF.O:tulajT.O:tulajTNev.Size">
+        <source>80</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">363</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTCim.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTCim.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">364</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTCim.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTCim.FieldName">
+        <source>'Cim'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">365</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTCim.Origin" resname="O:TulajokF.O:tulajT.O:tulajTCim.Origin">
+        <source>'Cim'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">366</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTCim.Size" resname="O:TulajokF.O:tulajT.O:tulajTCim.Size">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">367</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTAdoszam.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTAdoszam.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">368</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTAdoszam.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTAdoszam.FieldName">
+        <source>'Adoszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">369</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTAdoszam.Origin" resname="O:TulajokF.O:tulajT.O:tulajTAdoszam.Origin">
+        <source>'Adoszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">370</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTkuj.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTkuj.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">371</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTkuj.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTkuj.FieldName">
+        <source>'kuj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">372</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTkuj.Origin" resname="O:TulajokF.O:tulajT.O:tulajTkuj.Origin">
+        <source>'kuj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">373</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTktj.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTktj.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">374</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTktj.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTktj.FieldName">
+        <source>'ktj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">375</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTktj.Origin" resname="O:TulajokF.O:tulajT.O:tulajTktj.Origin">
+        <source>'ktj'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">376</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTElotag.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTElotag.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">377</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTElotag.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTElotag.FieldName">
+        <source>'Elotag'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">378</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTElotag.Origin" resname="O:TulajokF.O:tulajT.O:tulajTElotag.Origin">
+        <source>'Elotag'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">379</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTElotag.Size" resname="O:TulajokF.O:tulajT.O:tulajTElotag.Size">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">380</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTIrsz.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTIrsz.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">381</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTIrsz.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTIrsz.FieldName">
+        <source>'Irsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499769</prop><prop prop-type="Status">0</prop><prop prop-type="Order">382</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTIrsz.Origin" resname="O:TulajokF.O:tulajT.O:tulajTIrsz.Origin">
+        <source>'Irsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">383</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTIrsz.Size" resname="O:TulajokF.O:tulajT.O:tulajTIrsz.Size">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">384</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelepules.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTTelepules.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">385</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelepules.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTTelepules.FieldName">
+        <source>'Telepules'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">386</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelepules.Origin" resname="O:TulajokF.O:tulajT.O:tulajTTelepules.Origin">
+        <source>'Telepules'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">387</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelepules.Size" resname="O:TulajokF.O:tulajT.O:tulajTTelepules.Size">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">388</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKerulet.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTKerulet.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">389</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKerulet.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTKerulet.FieldName">
+        <source>'Kerulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">390</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKerulet.Origin" resname="O:TulajokF.O:tulajT.O:tulajTKerulet.Origin">
+        <source>'Kerulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">391</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKerulet.Size" resname="O:TulajokF.O:tulajT.O:tulajTKerulet.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">392</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozterulet.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTKozterulet.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">393</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozterulet.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTKozterulet.FieldName">
+        <source>'Kozterulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">394</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozterulet.Origin" resname="O:TulajokF.O:tulajT.O:tulajTKozterulet.Origin">
+        <source>'Kozterulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">395</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozterulet.Size" resname="O:TulajokF.O:tulajT.O:tulajTKozterulet.Size">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">396</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">397</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.FieldName">
+        <source>'Kozt_Jelleg'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">398</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.Origin" resname="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.Origin">
+        <source>'Kozt_Jelleg'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">399</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.Size" resname="O:TulajokF.O:tulajT.O:tulajTKozt_Jelleg.Size">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">400</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHazszam.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTHazszam.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">401</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHazszam.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTHazszam.FieldName">
+        <source>'Hazszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">402</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHazszam.Origin" resname="O:TulajokF.O:tulajT.O:tulajTHazszam.Origin">
+        <source>'Hazszam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">403</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHazszam.Size" resname="O:TulajokF.O:tulajT.O:tulajTHazszam.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">404</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEpulet.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTEpulet.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">405</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEpulet.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTEpulet.FieldName">
+        <source>'Epulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">406</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEpulet.Origin" resname="O:TulajokF.O:tulajT.O:tulajTEpulet.Origin">
+        <source>'Epulet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">407</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEpulet.Size" resname="O:TulajokF.O:tulajT.O:tulajTEpulet.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">408</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">409</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.FieldName">
+        <source>'Lepcsohaz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">410</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.Origin" resname="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.Origin">
+        <source>'Lepcsohaz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">411</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.Size" resname="O:TulajokF.O:tulajT.O:tulajTLepcsohaz.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">412</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmelet.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTEmelet.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">413</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmelet.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTEmelet.FieldName">
+        <source>'Emelet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">414</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmelet.Origin" resname="O:TulajokF.O:tulajT.O:tulajTEmelet.Origin">
+        <source>'Emelet'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">415</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmelet.Size" resname="O:TulajokF.O:tulajT.O:tulajTEmelet.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">416</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHrsz.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTHrsz.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">417</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHrsz.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTHrsz.FieldName">
+        <source>'Hrsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">418</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTHrsz.Origin" resname="O:TulajokF.O:tulajT.O:tulajTHrsz.Origin">
+        <source>'Hrsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">419</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmail.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTEmail.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">420</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmail.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTEmail.FieldName">
+        <source>'Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">421</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTEmail.Origin" resname="O:TulajokF.O:tulajT.O:tulajTEmail.Origin">
+        <source>'Email'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">422</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelefon.AutoGenerateValue" resname="O:TulajokF.O:tulajT.O:tulajTTelefon.AutoGenerateValue">
+        <source>arDefault</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">423</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelefon.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTTelefon.FieldName">
+        <source>'Telefon'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">424</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTTelefon.Origin" resname="O:TulajokF.O:tulajT.O:tulajTTelefon.Origin">
+        <source>'Telefon'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">425</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTAjto.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTAjto.FieldName">
+        <source>'Ajto'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">426</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTAjto.Size" resname="O:TulajokF.O:tulajT.O:tulajTAjto.Size">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">427</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajT.O:tulajTcjsz.FieldName" resname="O:TulajokF.O:tulajT.O:tulajTcjsz.FieldName">
+        <source>'cjsz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">428</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajDs.DataSet" resname="O:TulajokF.O:tulajDs.DataSet">
+        <source>tulajT</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">429</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajDs.Left" resname="O:TulajokF.O:tulajDs.Left">
+        <source>224</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">430</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:TulajokF.O:tulajDs.Top" resname="O:TulajokF.O:tulajDs.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6423499884</prop><prop prop-type="Status">0</prop><prop prop-type="Order">431</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
