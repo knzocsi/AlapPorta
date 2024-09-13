@@ -108,7 +108,7 @@ var
   col_neve,col_felirat:String;
 implementation
 uses
-  AU, kezdokeszletU;
+  AU, kezdokeszletU,UzenetekU;
 
 {$R *.dfm}
 
@@ -214,7 +214,7 @@ end;
 procedure TTermekekF.FormCreate(Sender: TObject);
 begin
  col_neve:='kod';
- col_felirat:=af.ford('rsKod');
+ col_felirat:=rsKod;
 end;
 
 procedure TTermekekF.lbl1DblClick(Sender: TObject);
@@ -269,27 +269,27 @@ procedure TTermekekF.TermekTBeforePost(DataSet: TDataSet);
 begin
   if dedkod.Text='' then
   begin
-    ShowMessage(af.ford('rsKodotMegKellAdni'));
+    ShowMessage(rsKodotMegKellAdni);
     if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if af.kod_foglalt(TermekTID.AsInteger,dedkod.Text,'termek') then
   begin
-    ShowMessage(af.ford('rsEzAKodMarFoglalt'));
+    ShowMessage(rsEzAKodMarFoglalt);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if dednev.Text='' then
   begin
-    ShowMessage(af.ford('rsNevetMegKellAdni'));
+    ShowMessage(rsNevetMegKellAdni);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if af.nev_foglalt(TermekTID.AsInteger,dednev.Text,'termek') then
   begin
-    ShowMessage(af.ford('rsEzANevMarFoglalt'));
+    ShowMessage(rsEzANevMarFoglalt);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
    end;
  if Length(DBEdMe.Text)<1 then
   begin
-    ShowMessage(af.ford('rsAdjaMegME'));
+    ShowMessage(rsAdjaMegME);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
 end;

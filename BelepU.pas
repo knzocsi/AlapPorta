@@ -31,7 +31,7 @@ var
   BelepF: TBelepF;
 
 implementation
-  uses au;
+  uses au, UzenetekU;
 {$R *.dfm}
 
 procedure TBelepF.Button1Click(Sender: TObject);
@@ -56,7 +56,7 @@ begin
  end
  else
  begin
-  Application.MessageBox(PChar(af.ford('rsHibasJelszo')),PChar(af.ford('rsHiba')),MB_OK);
+  Application.MessageBox(PChar(rsHibasJelszo),PChar(rsHiba),MB_OK);
   edjelszo.SetFocus;
  end;
 end;

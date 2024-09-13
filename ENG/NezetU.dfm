@@ -17,19 +17,6 @@ object NezetF: TNezetF
   WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
-  object frxNezet: TfrxPreview
-    Left = 0
-    Top = 66
-    Width = 1032
-    Height = 623
-    Align = alClient
-    OutlineVisible = False
-    OutlineWidth = 120
-    ThumbnailVisible = False
-    FindFmVisible = False
-    UseReportHints = False
-    HideScrolls = False
-  end
   object JvToolBar1: TJvToolBar
     Left = 0
     Top = 0
@@ -40,7 +27,7 @@ object NezetF: TNezetF
     ButtonWidth = 78
     Color = clSkyBlue
     ParentColor = False
-    TabOrder = 1
+    TabOrder = 0
     Transparent = True
     object ToolButton1: TToolButton
       Left = 0
@@ -136,6 +123,23 @@ object NezetF: TNezetF
       TabOrder = 5
       OnClick = Button5Click
     end
+  end
+  object frxNezet: TfrxPreview
+    Left = 0
+    Top = 66
+    Width = 1032
+    Height = 623
+    Align = alClient
+    OutlineVisible = True
+    OutlineWidth = 121
+    ThumbnailVisible = False
+    FindFmVisible = False
+    UseReportHints = True
+    HideScrolls = False
+    ExplicitLeft = 264
+    ExplicitTop = 264
+    ExplicitWidth = 100
+    ExplicitHeight = 100
   end
   object ImageList1: TImageList
     DrawingStyle = dsTransparent

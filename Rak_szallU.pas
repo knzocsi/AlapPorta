@@ -72,7 +72,7 @@ var
   Rak_szallF: TRak_szallF;
   indul:Boolean;
 implementation
-  uses AU,NezetU;
+  uses AU,NezetU, UzenetekU;
 {$R *.dfm}
 
 procedure TRak_szallF.btnkilepesClick(Sender: TObject);
@@ -125,27 +125,27 @@ var k:Extended;
 begin
  if af.rktetm.IsEmpty then
   begin
-   showmessage(af.ford('rsEloszorTeteltVigyenFel'));
+   showmessage(rsEloszorTeteltVigyenFel);
    Exit
   end;
  if k_partnerlookup.KeyValue=0 then
   begin
-   showmessage(af.ford('rsKiadoPartnertMegKellAdni'));
+   showmessage(rsKiadoPartnertMegKellAdni);
    Exit
   end;
  if k_tarololookup.KeyValue=0 then
   begin
-   showmessage(af.ford('rsKiadoTarolotMegKellAdni'));
+   showmessage(rsKiadoTarolotMegKellAdni);
    Exit
   end;
  if f_partnerlookup.KeyValue=0 then
   begin
-   showmessage(af.ford('rsFogadoPartnertMegKellAdni'));
+   showmessage(rsFogadoPartnertMegKellAdni);
    Exit
   end;
  if f_tarololookup.KeyValue=0 then
   begin
-   showmessage(af.ford('rsFogadoTarolotMegKellAdni'));
+   showmessage(rsFogadoTarolotMegKellAdni);
    Exit
   end;
   //mennyiségek ellenõrzése
@@ -156,7 +156,7 @@ begin
      begin
        k:=aF.partner_kesz(af.rktetmtermek_id.AsInteger, k_tarololookup.KeyValue,k_partnerlookup.KeyValue,af.rktetmtort.Value.ToInteger);
        if af.rktetmmenny.Value>k then
-        if MessageDlg(af.ford('rsKiadoPartnerKeszlete')+af.rktetmtermek_nev.AsString +af.ford('rsFolytatja'),
+        if MessageDlg(rsKiadoPartnerKeszlete+af.rktetmtermek_nev.AsString +rsFolytatja,
                        TMsgDlgType.mtconfirmation,mbYesNo,0)=7
         then abort;
        next
@@ -244,17 +244,17 @@ procedure TRak_szallF.btnfelveszClick(Sender: TObject);
 begin
  if termeklookup.KeyValue=0 then
   begin
-    ShowMessage(af.ford('rsTermeketMegKellAdni'));
+    ShowMessage(rsTermeketMegKellAdni);
     Exit
   end;
  if spmenny.Value<=0 then
   begin
-    ShowMessage(af.ford('rsAdjaMegAMennyisege'));
+    ShowMessage(rsAdjaMegAMennyisege);
     Exit
   end;
   if af.rktetm.Locate('termek_id;tort',VarArrayOf([TermekekQ.FieldByName('id').AsInteger,chktort.Checked]),[]) then
    begin
-    ShowMessage(af.ford('rsEztATermeketMarFelvette'));
+    ShowMessage(rsEztATermeketMarFelvette);
     Exit
    end;
 
@@ -266,7 +266,7 @@ end;
 
 procedure TRak_szallF.Button2Click(Sender: TObject);
 begin
- if MessageDlg(af.ford('rsBiztosanTorli'),TMsgDlgType.mtConfirmation,mbYesNo,0)=7 then exit;
+ if MessageDlg(rsBiztosanTorli,TMsgDlgType.mtConfirmation,mbYesNo,0)=7 then exit;
  af.rktetm.Delete
 end;
 

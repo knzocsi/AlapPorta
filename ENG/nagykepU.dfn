@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45533.4362731481</prop>
+        <prop prop-type="SelfDateTime">45546.353912037</prop>
         <prop prop-type="OrigDateTime">44983.6349768518</prop>
-        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">45544.8855555556</prop>
         <prop prop-type="Translated">2</prop>
         <prop prop-type="UnTranslated">40</prop>
       </prop-group>
@@ -16,424 +16,214 @@
       <trans-unit id="O:NagykepF.Left" resname="O:NagykepF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Top" resname="O:NagykepF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Caption" resname="O:NagykepF.Caption">
         <source>'Kép nagyítás'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Picture zoom'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.ClientHeight" resname="O:NagykepF.ClientHeight">
         <source>300</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.ClientWidth" resname="O:NagykepF.ClientWidth">
         <source>635</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Color" resname="O:NagykepF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Font.Charset" resname="O:NagykepF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Font.Color" resname="O:NagykepF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Font.Height" resname="O:NagykepF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Font.Name" resname="O:NagykepF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.Font.Style" resname="O:NagykepF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.KeyPreview" resname="O:NagykepF.KeyPreview">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.OldCreateOrder" resname="O:NagykepF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.WindowState" resname="O:NagykepF.WindowState">
         <source>wsMaximized</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.OnActivate" resname="O:NagykepF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.OnClose" resname="O:NagykepF.OnClose">
         <source>FormClose</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.OnCreate" resname="O:NagykepF.OnCreate">
         <source>FormCreate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.OnKeyDown" resname="O:NagykepF.OnKeyDown">
         <source>FormKeyDown</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.PixelsPerInch" resname="O:NagykepF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.TextHeight" resname="O:NagykepF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TNagykepF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TNagykepF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Left" resname="O:NagykepF.O:imgnagy.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Top" resname="O:NagykepF.O:imgnagy.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Width" resname="O:NagykepF.O:imgnagy.Width">
         <source>635</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Height" resname="O:NagykepF.O:imgnagy.Height">
         <source>248</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Align" resname="O:NagykepF.O:imgnagy.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.Stretch" resname="O:NagykepF.O:imgnagy.Stretch">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.ExplicitLeft" resname="O:NagykepF.O:imgnagy.ExplicitLeft">
         <source>-8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:imgnagy.ExplicitTop" resname="O:NagykepF.O:imgnagy.ExplicitTop">
         <source>-6</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Left" resname="O:NagykepF.O:Button1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Top" resname="O:NagykepF.O:Button1.Top">
         <source>248</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Width" resname="O:NagykepF.O:Button1.Width">
         <source>635</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Height" resname="O:NagykepF.O:Button1.Height">
         <source>52</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Align" resname="O:NagykepF.O:Button1.Align">
         <source>alBottom</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Caption" resname="O:NagykepF.O:Button1.Caption">
         <source>'Kilépés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Exit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Font.Charset" resname="O:NagykepF.O:Button1.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Font.Color" resname="O:NagykepF.O:Button1.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Font.Height" resname="O:NagykepF.O:Button1.Font.Height">
         <source>-21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Font.Name" resname="O:NagykepF.O:Button1.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.Font.Style" resname="O:NagykepF.O:Button1.Font.Style">
         <source>[fsBold]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.ParentFont" resname="O:NagykepF.O:Button1.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.TabOrder" resname="O:NagykepF.O:Button1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykepF.O:Button1.OnClick" resname="O:NagykepF.O:Button1.OnClick">
         <source>Button1Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422167824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422167824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

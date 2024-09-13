@@ -169,7 +169,7 @@ var
   KiXML,VaXML:TStringlist;
   ekaercim:String;
 implementation
-  uses au,mjegyU, FelrakCimekU,LerakCimekU;
+  uses au,mjegyU, FelrakCimekU,LerakCimekU, UzenetekU;
 {$R *.dfm}
 
 { TForm1 }
@@ -527,99 +527,99 @@ var kifn,vfn:string;
 begin
  if (Length(ed_vtsz.text)<6)then
    begin
-     ShowMessage(af.ford('rsHibastermekVTSZ'));
+     ShowMessage(rsHibastermekVTSZ);
      exit;
    end;
 
    if (ed_szallneve.Text='')then
    begin
-     ShowMessage(af.ford('rsSzalliotMegKellAdni'));
+     ShowMessage(rsSzalliotMegKellAdni);
      exit;
    end;
   if (Length(ed_szalladosz.text)<8)then
    begin
-     ShowMessage(af.ford('rsSzallitoAdoszamaHibas'));
+     ShowMessage(rsSzallitoAdoszamaHibas);
      exit;
    end;
    if (cbx_szallojel.Text='')then
    begin
-     ShowMessage(af.ford('rsSzallitoOrszagatMegKellAdni'));
+     ShowMessage(rsSzallitoOrszagatMegKellAdni);
      exit;
    end;
   if (ed_szallcim1.text='') then
    begin
-     ShowMessage(af.ford('rsSzallitoCimetMegKellAdni'));
+     ShowMessage(rsSzallitoCimetMegKellAdni);
      exit;
    end;
   if (ed_Vevoneve.Text='')then
    begin
-     ShowMessage(af.ford('rsVevotMegKellAdni'));
+     ShowMessage(rsVevotMegKellAdni);
      exit;
    end;
   if (Length(ed_VevAdosz.text)<8)then
    begin
-     ShowMessage(af.ford('rsVevoAdoszamaHibas'));
+     ShowMessage(rsVevoAdoszamaHibas);
      exit;
    end;
    if (cbx_vevojel.Text='')then
    begin
-     ShowMessage(af.ford('rsVevoOrszagatMegKellAdni'));
+     ShowMessage(rsVevoOrszagatMegKellAdni);
      exit;
    end;
   if (ed_VevoCim1.text='') then
    begin
-     ShowMessage(af.ford('rsVevoCimetMegKellAdni'));
+     ShowMessage(rsVevoCimetMegKellAdni);
      exit;
    end;
  if (ed_Felceg.Text='')then
    begin
-     ShowMessage(af.ford('rsFelrakCegetegKellAdni'));
+     ShowMessage(rsFelrakCegetegKellAdni);
      exit;
    end;
    if (Length(ed_felcegadosz.text)<8)then
    begin
-     ShowMessage(af.ford('rsFelrakAdoszamaHibas'));
+     ShowMessage(rsFelrakAdoszamaHibas);
      exit;
    end;
   if cbx_felcegojel.text='' then
    begin
-     ShowMessage(af.ford('rsFelrakOrszagatMegKellAdni'));
+     ShowMessage(rsFelrakOrszagatMegKellAdni);
      exit;
    end;
   if felcimekQirsz.AsString='' then
    begin
-     ShowMessage(af.ford('rsFelrakIrszHibas'));
+     ShowMessage(rsFelrakIrszHibas);
      exit;
    end;
   if felcimekQtelepules.AsString='' then
    begin
-     ShowMessage(af.ford('rsFelrakVarosHibas'));
+     ShowMessage(rsFelrakVarosHibas);
      exit;
    end;
 
   if ed_leceg.Text='' then
    begin
-     ShowMessage(af.ford('rsLerakCegetMegKellAdni'));
+     ShowMessage(rsLerakCegetMegKellAdni);
      exit;
    end;
    if (Length(ed_lecegadosz.text)<8)then
    begin
-     ShowMessage(af.ford('rsLerakAdoszamaHibas'));
+     ShowMessage(rsLerakAdoszamaHibas);
      exit;
    end;
   if cbx_lecegojel.text='' then
    begin
-     ShowMessage(af.ford('rsLerakOrszagatMegKellAdni'));
+     ShowMessage(rsLerakOrszagatMegKellAdni);
      exit;
    end;
   if lecimekQirsz.AsString='' then
    begin
-     ShowMessage(af.ford('rsLerakIrszHibas'));
+     ShowMessage(rsLerakIrszHibas);
      exit;
    end;
   if lecimekQtelepules.AsString='' then
    begin
-     ShowMessage(af.ford('rsLerakVarosHibas'));
+     ShowMessage(rsLerakVarosHibas);
      exit;
    end;
 
@@ -638,7 +638,7 @@ begin
     begin
       eredmeny:=Copy(VaXML.Text,Pos('tcn',VaXML.Text)+4,15);
     end
-   else eredmeny:= af.ford('rsHiba');
+   else eredmeny:= rsHiba;
    VaXML.Free;
  end;
  lblekaer.Caption:=eredmeny;

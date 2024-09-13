@@ -178,7 +178,7 @@ var
   ttom:Real;
   nyomtat:Boolean;
 implementation
-  uses au, NezetU,LibreExcelU, MermodU, MermodlistU;
+  uses au, NezetU,LibreExcelU, MermodU, MermodlistU, UzenetekU;
 {$R *.dfm}
 
 { TMjegyekF }
@@ -385,7 +385,7 @@ end;
 procedure TMjegyekF.btnStornoClick(Sender: TObject);
 var p,psz:Integer;
 begin
-if MessageDlg(af.ford('rsStornozza'),mtConfirmation,mbYesNo,0)=6 then
+if MessageDlg(rsStornozza,mtConfirmation,mbYesNo,0)=6 then
    begin
      try
       elokeszit('Storno');
@@ -460,7 +460,7 @@ end;
 
 procedure TMjegyekF.Button6Click(Sender: TObject);
 begin
-if MessageDlg(af.ford('rsBiztosanTorliElszamolasbol'),mtConfirmation,mbYesNo,0)=6 then
+if MessageDlg(rsBiztosanTorliElszamolasbol,mtConfirmation,mbYesNo,0)=6 then
    memszamol.Delete;
 end;
 
@@ -689,17 +689,17 @@ begin
   begin
     if memszamol.Locate('sorsz',mjegyekQ.FieldByName('sorszam').AsString,[]) then
      begin
-       ShowMessage(af.ford('rsMerlegjegySzerepelAzElszamolasban'));
+       ShowMessage(rsMerlegjegySzerepelAzElszamolasban);
        Exit;
      end;
     if not memszamol.Locate('p_nev',mjegyekQ.FieldByName('p_nev').AsString,[]) then
      begin
-       ShowMessage(af.ford('rsElaszolasbanegyPartner'));
+       ShowMessage(rsElaszolasbanegyPartner);
        Exit;
      end;
     if not memszamol.Locate('termek_nev',mjegyekQ.FieldByName('termek_nev').AsString,[]) then
      begin
-       ShowMessage(af.ford('rsElaszolasbanegyTermek'));
+       ShowMessage(rsElaszolasbanegyTermek);
        Exit;
      end;
   end;

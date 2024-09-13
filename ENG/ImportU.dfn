@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45532.4801851852</prop>
+        <prop prop-type="SelfDateTime">45546.3538425926</prop>
         <prop prop-type="OrigDateTime">45104.4777546296</prop>
-        <prop prop-type="XlatDateTime">45104.4777546296</prop>
+        <prop prop-type="XlatDateTime">45544.8855324074</prop>
         <prop prop-type="Translated">9</prop>
         <prop prop-type="UnTranslated">140</prop>
       </prop-group>
@@ -16,1505 +16,756 @@
       <trans-unit id="O:ImportF.Left" resname="O:ImportF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Top" resname="O:ImportF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Caption" resname="O:ImportF.Caption">
         <source>'ImportF'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.ClientHeight" resname="O:ImportF.ClientHeight">
         <source>468</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.ClientWidth" resname="O:ImportF.ClientWidth">
         <source>1073</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Color" resname="O:ImportF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Font.Charset" resname="O:ImportF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Font.Color" resname="O:ImportF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.642005787</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.642005787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Font.Height" resname="O:ImportF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Font.Name" resname="O:ImportF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Font.Style" resname="O:ImportF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.OldCreateOrder" resname="O:ImportF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.Position" resname="O:ImportF.Position">
         <source>poMainFormCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.OnActivate" resname="O:ImportF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.OnCreate" resname="O:ImportF.OnCreate">
         <source>FormCreate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.PixelsPerInch" resname="O:ImportF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.TextHeight" resname="O:ImportF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TImportF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TImportF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.Left" resname="O:ImportF.O:Panel1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.Top" resname="O:ImportF.O:Panel1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.Width" resname="O:ImportF.O:Panel1.Width">
         <source>1073</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.Height" resname="O:ImportF.O:Panel1.Height">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.Align" resname="O:ImportF.O:Panel1.Align">
         <source>alTop</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.TabOrder" resname="O:ImportF.O:Panel1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label1.Left" resname="O:ImportF.O:Panel1.O:Label1.Left">
         <source>256</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label1.Top" resname="O:ImportF.O:Panel1.O:Label1.Top">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label1.Width" resname="O:ImportF.O:Panel1.O:Label1.Width">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label1.Height" resname="O:ImportF.O:Panel1.O:Label1.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label1.Caption" resname="O:ImportF.O:Panel1.O:Label1.Caption">
         <source>'Tábla:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Table'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label2.Left" resname="O:ImportF.O:Panel1.O:Label2.Left">
         <source>456</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label2.Top" resname="O:ImportF.O:Panel1.O:Label2.Top">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label2.Width" resname="O:ImportF.O:Panel1.O:Label2.Width">
         <source>29</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label2.Height" resname="O:ImportF.O:Panel1.O:Label2.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label2.Caption" resname="O:ImportF.O:Panel1.O:Label2.Caption">
         <source>'Mező:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Field:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:lblFilename.Left" resname="O:ImportF.O:Panel1.O:lblFilename.Left">
         <source>144</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:lblFilename.Top" resname="O:ImportF.O:Panel1.O:lblFilename.Top">
         <source>56</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:lblFilename.Width" resname="O:ImportF.O:Panel1.O:lblFilename.Width">
         <source>52</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:lblFilename.Height" resname="O:ImportF.O:Panel1.O:lblFilename.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:lblFilename.Caption" resname="O:ImportF.O:Panel1.O:lblFilename.Caption">
         <source>'lblFilename'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label3.Left" resname="O:ImportF.O:Panel1.O:Label3.Left">
         <source>616</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label3.Top" resname="O:ImportF.O:Panel1.O:Label3.Top">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label3.Width" resname="O:ImportF.O:Panel1.O:Label3.Width">
         <source>36</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label3.Height" resname="O:ImportF.O:Panel1.O:Label3.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:Label3.Caption" resname="O:ImportF.O:Panel1.O:Label3.Caption">
         <source>'Oszlop:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Column:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.Left" resname="O:ImportF.O:Panel1.O:btnKilepes.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.Top" resname="O:ImportF.O:Panel1.O:btnKilepes.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.Width" resname="O:ImportF.O:Panel1.O:btnKilepes.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.Height" resname="O:ImportF.O:Panel1.O:btnKilepes.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.Caption" resname="O:ImportF.O:Panel1.O:btnKilepes.Caption">
         <source>'Kilépés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Exit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.TabOrder" resname="O:ImportF.O:Panel1.O:btnKilepes.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnKilepes.OnClick" resname="O:ImportF.O:Panel1.O:btnKilepes.OnClick">
         <source>btnKilepesClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Left" resname="O:ImportF.O:Panel1.O:cbTabla.Left">
         <source>264</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Top" resname="O:ImportF.O:Panel1.O:cbTabla.Top">
         <source>26</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Width" resname="O:ImportF.O:Panel1.O:cbTabla.Width">
         <source>161</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Height" resname="O:ImportF.O:Panel1.O:cbTabla.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Style" resname="O:ImportF.O:Panel1.O:cbTabla.Style">
         <source>csDropDownList</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.TabOrder" resname="O:ImportF.O:Panel1.O:cbTabla.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.OnChange" resname="O:ImportF.O:Panel1.O:cbTabla.OnChange">
         <source>cbTablaChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[0]" resname="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[0]">
         <source>'Termek'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
         <target>'Product'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[1]" resname="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[1]">
         <source>'Partner'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Partners'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[2]" resname="O:ImportF.O:Panel1.O:cbTabla.Items.Strings[2]">
         <source>'Keszlet'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
         <target>'Stock'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">1</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.Left" resname="O:ImportF.O:Panel1.O:cbMezo.Left">
         <source>456</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.Top" resname="O:ImportF.O:Panel1.O:cbMezo.Top">
         <source>26</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.Width" resname="O:ImportF.O:Panel1.O:cbMezo.Width">
         <source>145</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.Height" resname="O:ImportF.O:Panel1.O:cbMezo.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.Style" resname="O:ImportF.O:Panel1.O:cbMezo.Style">
         <source>csDropDownList</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbMezo.TabOrder" resname="O:ImportF.O:Panel1.O:cbMezo.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">65</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.Left" resname="O:ImportF.O:Panel1.O:btnBetoltes.Left">
         <source>136</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420057986</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">66</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420057986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.Top" resname="O:ImportF.O:Panel1.O:btnBetoltes.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">67</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.Width" resname="O:ImportF.O:Panel1.O:btnBetoltes.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">68</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.Height" resname="O:ImportF.O:Panel1.O:btnBetoltes.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">69</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.Caption" resname="O:ImportF.O:Panel1.O:btnBetoltes.Caption">
         <source>'Betöltés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">70</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Loading'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">1</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.TabOrder" resname="O:ImportF.O:Panel1.O:btnBetoltes.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">71</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnBetoltes.OnClick" resname="O:ImportF.O:Panel1.O:btnBetoltes.OnClick">
         <source>btnBetoltesClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">72</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Left" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Left">
         <source>784</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">73</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Top" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">74</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Width" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Width">
         <source>137</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">75</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Height" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">76</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Caption" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.Caption">
         <source>'Oszlop beállítása'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">77</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Column setup'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">1</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.TabOrder" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.TabOrder">
         <source>4</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">78</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.OnClick" resname="O:ImportF.O:Panel1.O:btnOszlopbeallitasa.OnClick">
         <source>btnOszlopbeallitasaClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">79</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.Left" resname="O:ImportF.O:Panel1.O:cbOszlop.Left">
         <source>616</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">80</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.Top" resname="O:ImportF.O:Panel1.O:cbOszlop.Top">
         <source>26</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">81</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.Width" resname="O:ImportF.O:Panel1.O:cbOszlop.Width">
         <source>145</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">82</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.Height" resname="O:ImportF.O:Panel1.O:cbOszlop.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">83</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.Style" resname="O:ImportF.O:Panel1.O:cbOszlop.Style">
         <source>csDropDownList</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">84</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.TabOrder" resname="O:ImportF.O:Panel1.O:cbOszlop.TabOrder">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">85</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:cbOszlop.OnChange" resname="O:ImportF.O:Panel1.O:cbOszlop.OnChange">
         <source>cbOszlopChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">86</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.Left" resname="O:ImportF.O:Panel1.O:btnImport.Left">
         <source>944</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">87</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.Top" resname="O:ImportF.O:Panel1.O:btnImport.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">88</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.Width" resname="O:ImportF.O:Panel1.O:btnImport.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">89</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.Height" resname="O:ImportF.O:Panel1.O:btnImport.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">90</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.Caption" resname="O:ImportF.O:Panel1.O:btnImport.Caption">
         <source>'Import'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">91</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.TabOrder" resname="O:ImportF.O:Panel1.O:btnImport.TabOrder">
         <source>6</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">92</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Panel1.O:btnImport.OnClick" resname="O:ImportF.O:Panel1.O:btnImport.OnClick">
         <source>btnImportClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">93</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.Left" resname="O:ImportF.O:JvDBGrid1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">94</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.Top" resname="O:ImportF.O:JvDBGrid1.Top">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">95</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.Width" resname="O:ImportF.O:JvDBGrid1.Width">
         <source>1073</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">96</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.Height" resname="O:ImportF.O:JvDBGrid1.Height">
         <source>387</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">97</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.Align" resname="O:ImportF.O:JvDBGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">98</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.DataSource" resname="O:ImportF.O:JvDBGrid1.DataSource">
         <source>ImportDS</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">99</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TabOrder" resname="O:ImportF.O:JvDBGrid1.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">100</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleFont.Charset" resname="O:ImportF.O:JvDBGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">101</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleFont.Color" resname="O:ImportF.O:JvDBGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">102</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleFont.Height" resname="O:ImportF.O:JvDBGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">103</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleFont.Name" resname="O:ImportF.O:JvDBGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">104</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleFont.Style" resname="O:ImportF.O:JvDBGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">105</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.Caption" resname="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.Caption">
         <source>'Select columns'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">106</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.OK" resname="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.OK">
         <source>'&amp;OK'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">107</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:ImportF.O:JvDBGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
         <source>'At least one column must be visible!'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">108</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.EditControls" resname="O:ImportF.O:JvDBGrid1.EditControls">
         <source>&lt;&gt;</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">109</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.RowsHeight" resname="O:ImportF.O:JvDBGrid1.RowsHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">110</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:JvDBGrid1.TitleRowHeight" resname="O:ImportF.O:JvDBGrid1.TitleRowHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">111</prop>
-          <prop prop-type="Type">TJvDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TJvDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.FetchOptions.AssignedValues" resname="O:ImportF.O:ImportT.FetchOptions.AssignedValues">
         <source>[evMode]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">112</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.FetchOptions.Mode" resname="O:ImportF.O:ImportT.FetchOptions.Mode">
         <source>fmAll</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">113</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.ResourceOptions.AssignedValues" resname="O:ImportF.O:ImportT.ResourceOptions.AssignedValues">
         <source>[rvSilentMode]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">114</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.ResourceOptions.SilentMode" resname="O:ImportF.O:ImportT.ResourceOptions.SilentMode">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">115</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.UpdateOptions.AssignedValues" resname="O:ImportF.O:ImportT.UpdateOptions.AssignedValues">
         <source>[uvCheckRequired, uvAutoCommitUpdates]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">116</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.UpdateOptions.CheckRequired" resname="O:ImportF.O:ImportT.UpdateOptions.CheckRequired">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">117</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.UpdateOptions.AutoCommitUpdates" resname="O:ImportF.O:ImportT.UpdateOptions.AutoCommitUpdates">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">118</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.Left" resname="O:ImportF.O:ImportT.Left">
         <source>600</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">119</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportT.Top" resname="O:ImportF.O:ImportT.Top">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">120</prop>
-          <prop prop-type="Type">TFDMemTable</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TFDMemTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:TablaQ.Connection" resname="O:ImportF.O:TablaQ.Connection">
         <source>Kapcs</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">121</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:TablaQ.Left" resname="O:ImportF.O:TablaQ.Left">
         <source>656</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">122</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:TablaQ.Top" resname="O:ImportF.O:TablaQ.Top">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">123</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:OpenDialog1.Left" resname="O:ImportF.O:OpenDialog1.Left">
         <source>816</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">124</prop>
-          <prop prop-type="Type">TOpenDialog</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TOpenDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:OpenDialog1.Top" resname="O:ImportF.O:OpenDialog1.Top">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058102</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">125</prop>
-          <prop prop-type="Type">TOpenDialog</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TOpenDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportDS.DataSet" resname="O:ImportF.O:ImportDS.DataSet">
         <source>ImportT</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">126</prop>
-          <prop prop-type="Type">TDataSource</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportDS.Left" resname="O:ImportF.O:ImportDS.Left">
         <source>600</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">127</prop>
-          <prop prop-type="Type">TDataSource</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:ImportDS.Top" resname="O:ImportF.O:ImportDS.Top">
         <source>264</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">128</prop>
-          <prop prop-type="Type">TDataSource</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Q1.Connection" resname="O:ImportF.O:Q1.Connection">
         <source>Kapcs</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">129</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Q1.Left" resname="O:ImportF.O:Q1.Left">
         <source>712</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">130</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Q1.Top" resname="O:ImportF.O:Q1.Top">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">131</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.ConnectionName" resname="O:ImportF.O:Kapcs.ConnectionName">
         <source>'Kapcs'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">132</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[0]" resname="O:ImportF.O:Kapcs.Params.Strings[0]">
         <source>'Server=127.0.0.1'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">133</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[1]" resname="O:ImportF.O:Kapcs.Params.Strings[1]">
         <source>'Password=MaTt2019'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">134</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[2]" resname="O:ImportF.O:Kapcs.Params.Strings[2]">
         <source>'DriverID=MySQL'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">135</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[3]" resname="O:ImportF.O:Kapcs.Params.Strings[3]">
         <source>'CharacterSet=utf8'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">136</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[4]" resname="O:ImportF.O:Kapcs.Params.Strings[4]">
         <source>'User_Name=knz'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">137</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Params.Strings[5]" resname="O:ImportF.O:Kapcs.Params.Strings[5]">
         <source>'Port=3307'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">138</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.FetchOptions.AssignedValues" resname="O:ImportF.O:Kapcs.FetchOptions.AssignedValues">
         <source>[evDetailCascade]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">139</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.FetchOptions.DetailCascade" resname="O:ImportF.O:Kapcs.FetchOptions.DetailCascade">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">140</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.ResourceOptions.AssignedValues" resname="O:ImportF.O:Kapcs.ResourceOptions.AssignedValues">
         <source>[rvAutoConnect, rvSilentMode]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">141</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.ResourceOptions.SilentMode" resname="O:ImportF.O:Kapcs.ResourceOptions.SilentMode">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">142</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.ResourceOptions.AutoConnect" resname="O:ImportF.O:Kapcs.ResourceOptions.AutoConnect">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">143</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.UpdateOptions.AssignedValues" resname="O:ImportF.O:Kapcs.UpdateOptions.AssignedValues">
         <source>[uvLockMode, uvLockWait]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">144</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.UpdateOptions.LockMode" resname="O:ImportF.O:Kapcs.UpdateOptions.LockMode">
         <source>lmOptimistic</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">145</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.LoginPrompt" resname="O:ImportF.O:Kapcs.LoginPrompt">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">146</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Left" resname="O:ImportF.O:Kapcs.Left">
         <source>528</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">147</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ImportF.O:Kapcs.Top" resname="O:ImportF.O:Kapcs.Top">
         <source>192</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6420058218</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">148</prop>
-          <prop prop-type="Type">TFDConnection</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6420058218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

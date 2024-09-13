@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45532.3453009259</prop>
+        <prop prop-type="SelfDateTime">45546.350787037</prop>
         <prop prop-type="OrigDateTime">44983.6349768518</prop>
-        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">45544.8855324074</prop>
         <prop prop-type="Translated">9</prop>
         <prop prop-type="UnTranslated">84</prop>
       </prop-group>
@@ -16,943 +16,476 @@
       <trans-unit id="O:AlapbemodF.Left" resname="O:AlapbemodF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Top" resname="O:AlapbemodF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Caption" resname="O:AlapbemodF.Caption">
         <source>'Alapbeállítási érték módosítása'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Modify default value'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.ClientHeight" resname="O:AlapbemodF.ClientHeight">
         <source>267</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.ClientWidth" resname="O:AlapbemodF.ClientWidth">
         <source>477</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Color" resname="O:AlapbemodF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Font.Charset" resname="O:AlapbemodF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Font.Color" resname="O:AlapbemodF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Font.Height" resname="O:AlapbemodF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Font.Name" resname="O:AlapbemodF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Font.Style" resname="O:AlapbemodF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.OldCreateOrder" resname="O:AlapbemodF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.Position" resname="O:AlapbemodF.Position">
         <source>poOwnerFormCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.PixelsPerInch" resname="O:AlapbemodF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.TextHeight" resname="O:AlapbemodF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TAlapbemodF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TAlapbemodF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label1.Left" resname="O:AlapbemodF.O:Label1.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label1.Top" resname="O:AlapbemodF.O:Label1.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label1.Width" resname="O:AlapbemodF.O:Label1.Width">
         <source>38</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label1.Height" resname="O:AlapbemodF.O:Label1.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label1.Caption" resname="O:AlapbemodF.O:Label1.Caption">
         <source>'Csoport'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Group'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">1</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label2.Left" resname="O:AlapbemodF.O:Label2.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340741</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label2.Top" resname="O:AlapbemodF.O:Label2.Top">
         <source>64</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label2.Width" resname="O:AlapbemodF.O:Label2.Width">
         <source>62</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label2.Height" resname="O:AlapbemodF.O:Label2.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label2.Caption" resname="O:AlapbemodF.O:Label2.Caption">
         <source>'Tulajdonság:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Property'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">1</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label4.Left" resname="O:AlapbemodF.O:Label4.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label4.Top" resname="O:AlapbemodF.O:Label4.Top">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label4.Width" resname="O:AlapbemodF.O:Label4.Width">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label4.Height" resname="O:AlapbemodF.O:Label4.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label4.Caption" resname="O:AlapbemodF.O:Label4.Caption">
         <source>'Érték'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Value'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">1</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label5.Left" resname="O:AlapbemodF.O:Label5.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label5.Top" resname="O:AlapbemodF.O:Label5.Top">
         <source>169</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label5.Width" resname="O:AlapbemodF.O:Label5.Width">
         <source>61</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label5.Height" resname="O:AlapbemodF.O:Label5.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Label5.Caption" resname="O:AlapbemodF.O:Label5.Caption">
         <source>'Magyarázat:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Description:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.Left" resname="O:AlapbemodF.O:cbxcsoport.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.Top" resname="O:AlapbemodF.O:cbxcsoport.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.Width" resname="O:AlapbemodF.O:cbxcsoport.Width">
         <source>257</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.Height" resname="O:AlapbemodF.O:cbxcsoport.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.MaxLength" resname="O:AlapbemodF.O:cbxcsoport.MaxLength">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.TabOrder" resname="O:AlapbemodF.O:cbxcsoport.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:cbxcsoport.Text" resname="O:AlapbemodF.O:cbxcsoport.Text">
         <source>'cbxcsoport'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TComboBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Left" resname="O:AlapbemodF.O:rgtipus.Left">
         <source>369</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Top" resname="O:AlapbemodF.O:rgtipus.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Width" resname="O:AlapbemodF.O:rgtipus.Width">
         <source>100</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Height" resname="O:AlapbemodF.O:rgtipus.Height">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Caption" resname="O:AlapbemodF.O:rgtipus.Caption">
         <source>'Típus'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Type'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">1</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Enabled" resname="O:AlapbemodF.O:rgtipus.Enabled">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.ItemIndex" resname="O:AlapbemodF.O:rgtipus.ItemIndex">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Items.Strings[0]" resname="O:AlapbemodF.O:rgtipus.Items.Strings[0]">
         <source>'Integer'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Items.Strings[1]" resname="O:AlapbemodF.O:rgtipus.Items.Strings[1]">
         <source>'String'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.Items.Strings[2]" resname="O:AlapbemodF.O:rgtipus.Items.Strings[2]">
         <source>'Boolean'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.TabOrder" resname="O:AlapbemodF.O:rgtipus.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:rgtipus.OnClick" resname="O:AlapbemodF.O:rgtipus.OnClick">
         <source>rgtipusClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TRadioGroup</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.Left" resname="O:AlapbemodF.O:chkigaz.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.Top" resname="O:AlapbemodF.O:chkigaz.Top">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.Width" resname="O:AlapbemodF.O:chkigaz.Width">
         <source>97</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.Height" resname="O:AlapbemodF.O:chkigaz.Height">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.Caption" resname="O:AlapbemodF.O:chkigaz.Caption">
         <source>'Értéke'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Value'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">1</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:chkigaz.TabOrder" resname="O:AlapbemodF.O:chkigaz.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TCheckBox</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.Left" resname="O:AlapbemodF.O:edmagyarazat.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.Top" resname="O:AlapbemodF.O:edmagyarazat.Top">
         <source>188</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.Width" resname="O:AlapbemodF.O:edmagyarazat.Width">
         <source>437</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.Height" resname="O:AlapbemodF.O:edmagyarazat.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.TabOrder" resname="O:AlapbemodF.O:edmagyarazat.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edmagyarazat.Text" resname="O:AlapbemodF.O:edmagyarazat.Text">
         <source>'ed'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">65</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.Left" resname="O:AlapbemodF.O:edertek.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">66</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.Top" resname="O:AlapbemodF.O:edertek.Top">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">67</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.Width" resname="O:AlapbemodF.O:edertek.Width">
         <source>437</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">68</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.Height" resname="O:AlapbemodF.O:edertek.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">69</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.MaxLength" resname="O:AlapbemodF.O:edertek.MaxLength">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">70</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.TabOrder" resname="O:AlapbemodF.O:edertek.TabOrder">
         <source>4</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">71</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edertek.Text" resname="O:AlapbemodF.O:edertek.Text">
         <source>'ed'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">72</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.Left" resname="O:AlapbemodF.O:edtulajdonsag.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">73</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.Top" resname="O:AlapbemodF.O:edtulajdonsag.Top">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">74</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.Width" resname="O:AlapbemodF.O:edtulajdonsag.Width">
         <source>257</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">75</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.Height" resname="O:AlapbemodF.O:edtulajdonsag.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">76</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.MaxLength" resname="O:AlapbemodF.O:edtulajdonsag.MaxLength">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">77</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.TabOrder" resname="O:AlapbemodF.O:edtulajdonsag.TabOrder">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">78</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:edtulajdonsag.Text" resname="O:AlapbemodF.O:edtulajdonsag.Text">
         <source>'edtulajdonsag'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340857</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">79</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.Left" resname="O:AlapbemodF.O:btnok.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">80</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.Top" resname="O:AlapbemodF.O:btnok.Top">
         <source>224</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">81</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.Width" resname="O:AlapbemodF.O:btnok.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">82</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.Height" resname="O:AlapbemodF.O:btnok.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">83</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.Caption" resname="O:AlapbemodF.O:btnok.Caption">
         <source>'Módosít'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">84</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Modify'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">1</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.TabOrder" resname="O:AlapbemodF.O:btnok.TabOrder">
         <source>6</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">85</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:btnok.OnClick" resname="O:AlapbemodF.O:btnok.OnClick">
         <source>btnokClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">86</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.Left" resname="O:AlapbemodF.O:Button2.Left">
         <source>369</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">87</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.Top" resname="O:AlapbemodF.O:Button2.Top">
         <source>224</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">88</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.Width" resname="O:AlapbemodF.O:Button2.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">89</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.Height" resname="O:AlapbemodF.O:Button2.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">90</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.Caption" resname="O:AlapbemodF.O:Button2.Caption">
         <source>'Mégsem'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">91</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Cancel'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">1</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AlapbemodF.O:Button2.TabOrder" resname="O:AlapbemodF.O:Button2.TabOrder">
         <source>7</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6397340972</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">92</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6397340972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

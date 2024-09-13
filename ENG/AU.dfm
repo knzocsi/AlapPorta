@@ -240,10 +240,16 @@ object AF: TAF
     ReportOptions.CreateDate = 44089.561261585700000000
     ReportOptions.LastChange = 45506.718438101900000000
     ScriptLanguage = 'PascalScript'
-    StoreInDFM = False
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
     OnAfterPrint = frxmerlegAfterPrint
     Left = 608
     Top = 240
+    Datasets = <>
+    Variables = <>
+    Style = <>
   end
   object SszQ: TFDQuery
     Connection = Kapcs
@@ -261,9 +267,15 @@ object AF: TAF
     ReportOptions.CreateDate = 44089.754742951400000000
     ReportOptions.LastChange = 45506.711429537000000000
     ScriptLanguage = 'PascalScript'
-    StoreInDFM = False
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
     Left = 640
     Top = 296
+    Datasets = <>
+    Variables = <>
+    Style = <>
   end
   object DBFrxmjegyList: TfrxDBDataset
     UserName = 'frxDBDataset1'
@@ -440,9 +452,284 @@ object AF: TAF
     ReportOptions.CreateDate = 44224.592448159700000000
     ReportOptions.LastChange = 45507.360635949100000000
     ScriptLanguage = 'PascalScript'
-    StoreInDFM = False
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
     Left = 552
     Top = 240
+    Datasets = <
+      item
+        DataSet = frxDBDKeszlet
+        DataSetName = 'frxDBDKeszlet'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000
+      Width = 1000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210
+      PaperHeight = 297
+      PaperSize = 9
+      LeftMargin = 10
+      RightMargin = 10
+      TopMargin = 10
+      BottomMargin = 10
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 41.574830000000000000
+        Top = 16
+        Width = 718.110700000000000000
+        object Memo1: TfrxMemoView
+          Align = baCenter
+          AllowVectorExport = True
+          Left = 257.008040000000000000
+          Top = 11.338590000000000000
+          Width = 204.094620000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'K'#233'szlet lista')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 11.338590000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[DATE]')
+          ParentFont = False
+        end
+      end
+      object ColumnHeader1: TfrxColumnHeader
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 76
+        Width = 718.110700000000000000
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 0.755905510000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Term.k'#243'd')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 120.944960000000000000
+          Top = 0.755905510000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Term.n'#233'v')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 634.488560000000000000
+          Top = 0.755905510000000000
+          Width = 74.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Menny.')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          Align = baWidth
+          AllowVectorExport = True
+          Top = 19.897650000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 296
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Partner n'#233'v')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 504
+          Top = 2
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'T'#225'rol'#243)
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 30.236240000000000000
+        Top = 160
+        Width = 718.110700000000000000
+        DataSet = frxDBDKeszlet
+        DataSetName = 'frxDBDKeszlet'
+        RowCount = 0
+        Stretched = True
+        object frxDBDKeszlettkod: TfrxMemoView
+          AllowVectorExport = True
+          Left = 11.338590000000000000
+          Top = 2
+          Width = 86.929190000000000000
+          Height = 18.897650000000000000
+          DataField = 'Term_kod'
+          DataSet = frxDBDKeszlet
+          DataSetName = 'frxDBDKeszlet'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDKeszlet."Term_kod"]')
+        end
+        object frxDBDKeszlettnev: TfrxMemoView
+          AllowVectorExport = True
+          Left = 117.165430000000000000
+          Top = 2
+          Width = 160.630180000000000000
+          Height = 18.897650000000000000
+          StretchMode = smMaxHeight
+          DataField = 'Term_nev'
+          DataSet = frxDBDKeszlet
+          DataSetName = 'frxDBDKeszlet'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDKeszlet."Term_nev"]')
+        end
+        object frxDBDKeszletmenny: TfrxMemoView
+          AllowVectorExport = True
+          Left = 634.709030000000000000
+          Top = 2
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          DataField = 'menny'
+          DataSet = frxDBDKeszlet
+          DataSetName = 'frxDBDKeszlet'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDKeszlet."menny"]')
+        end
+        object Line2: TfrxLineView
+          Align = baWidth
+          AllowVectorExport = True
+          Top = 26.456710000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object frxDBDKeszletPartner_nev: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 292
+          Top = 2
+          Width = 188
+          Height = 16
+          StretchMode = smMaxHeight
+          DataField = 'Partner_nev'
+          DataSet = frxDBDKeszlet
+          DataSetName = 'frxDBDKeszlet'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDKeszlet."Partner_nev"]')
+        end
+        object frxDBDKeszletTarolo_nev: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 504
+          Top = 2
+          Width = 80
+          Height = 16
+          DataField = 'Tarolo_nev'
+          DataSet = frxDBDKeszlet
+          DataSetName = 'frxDBDKeszlet'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDKeszlet."Tarolo_nev"]')
+        end
+      end
+      object ReportSummary1: TfrxReportSummary
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 36
+        Top = 252
+        Width = 718.110700000000000000
+        object SysMemo2: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 637
+          Top = 8
+          Width = 76
+          Height = 20
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            #214'SSZESEN: [SUM(<frxDBDKeszlet."menny">,MasterData1)]')
+          ParentFont = False
+        end
+      end
+    end
   end
   object frxDBDKeszlet: TfrxDBDataset
     UserName = 'frxDBDKeszlet'
@@ -619,9 +906,15 @@ object AF: TAF
     ReportOptions.CreateDate = 44403.594122963000000000
     ReportOptions.LastChange = 44403.684652152800000000
     ScriptLanguage = 'PascalScript'
-    StoreInDFM = False
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
     Left = 720
     Top = 240
+    Datasets = <>
+    Variables = <>
+    Style = <>
   end
   object Q2: TFDQuery
     Connection = Kapcs

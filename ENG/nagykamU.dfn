@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45533.4360185185</prop>
+        <prop prop-type="SelfDateTime">45546.353912037</prop>
         <prop prop-type="OrigDateTime">44983.6349768518</prop>
-        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">45544.8855555556</prop>
         <prop prop-type="Translated">5</prop>
         <prop prop-type="UnTranslated">43</prop>
       </prop-group>
@@ -16,515 +16,257 @@
       <trans-unit id="O:NagykamF.Left" resname="O:NagykamF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Top" resname="O:NagykamF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Caption" resname="O:NagykamF.Caption">
         <source>'Élő kamera kép'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Live camera capture'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.ClientHeight" resname="O:NagykamF.ClientHeight">
         <source>730</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.ClientWidth" resname="O:NagykamF.ClientWidth">
         <source>1008</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Color" resname="O:NagykamF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Font.Charset" resname="O:NagykamF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Font.Color" resname="O:NagykamF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Font.Height" resname="O:NagykamF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Font.Name" resname="O:NagykamF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.Font.Style" resname="O:NagykamF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OldCreateOrder" resname="O:NagykamF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.StyleElements" resname="O:NagykamF.StyleElements">
         <source>[seFont, seBorder]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnActivate" resname="O:NagykamF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnClose" resname="O:NagykamF.OnClose">
         <source>FormClose</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnCloseQuery" resname="O:NagykamF.OnCloseQuery">
         <source>FormCloseQuery</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnCreate" resname="O:NagykamF.OnCreate">
         <source>FormCreate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnHide" resname="O:NagykamF.OnHide">
         <source>FormHide</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.OnShow" resname="O:NagykamF.OnShow">
         <source>FormShow</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.PixelsPerInch" resname="O:NagykamF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.TextHeight" resname="O:NagykamF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TNagykamF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TNagykamF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.Left" resname="O:NagykamF.O:campagc.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.Top" resname="O:NagykamF.O:campagc.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.Width" resname="O:NagykamF.O:campagc.Width">
         <source>1008</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.Height" resname="O:NagykamF.O:campagc.Height">
         <source>730</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.ActivePage" resname="O:NagykamF.O:campagc.ActivePage">
         <source>cam7</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.Align" resname="O:NagykamF.O:campagc.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.TabOrder" resname="O:NagykamF.O:campagc.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TPageControl</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam4.Caption" resname="O:NagykamF.O:campagc.O:cam4.Caption">
         <source>'Kamera 1'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Cam 1'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam5.Caption" resname="O:NagykamF.O:campagc.O:cam5.Caption">
         <source>'Kamera 2'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Cam 2'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam5.ImageIndex" resname="O:NagykamF.O:campagc.O:cam5.ImageIndex">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam6.Caption" resname="O:NagykamF.O:campagc.O:cam6.Caption">
         <source>'Kamera 3'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Cam 3'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam6.ImageIndex" resname="O:NagykamF.O:campagc.O:cam6.ImageIndex">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam7.Caption" resname="O:NagykamF.O:campagc.O:cam7.Caption">
         <source>'Kamera 4'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Cam 4'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam7.ImageIndex" resname="O:NagykamF.O:campagc.O:cam7.ImageIndex">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TTabSheet</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringTrueValues" resname="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringTrueValues">
         <source>'TRUE, YES, Y'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringFalseValues" resname="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringFalseValues">
         <source>'FALSE, NO, N'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.FileName" resname="O:NagykamF.O:JvAppIniFileStorage1.FileName">
         <source>'ipcamlivesc.ini'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.DefaultSection" resname="O:NagykamF.O:JvAppIniFileStorage1.DefaultSection">
         <source>'General'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[0]" resname="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[0]">
         <source></source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">C:TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">0</prop>
-          <prop prop-type="Open">&lt;item</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[1]" resname="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[1]">
         <source></source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">C:TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">0</prop>
-          <prop prop-type="Open">item</prop>
-          <prop prop-type="Close">end&gt;</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">item</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.Left" resname="O:NagykamF.O:JvAppIniFileStorage1.Left">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158681</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.Top" resname="O:NagykamF.O:JvAppIniFileStorage1.Top">
         <source>87</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TJvAppIniFileStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.AppStorage" resname="O:NagykamF.O:JvFormStorage2.AppStorage">
         <source>JvAppIniFileStorage1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.AppStoragePath" resname="O:NagykamF.O:JvFormStorage2.AppStoragePath">
         <source>'Test\'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[0].Name" resname="O:NagykamF.O:JvFormStorage2.StoredValues[0].Name">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">C:TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">&lt;item</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[1].Name" resname="O:NagykamF.O:JvFormStorage2.StoredValues[1].Name">
         <source>'TestBoolean'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">C:TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[1].Value" resname="O:NagykamF.O:JvFormStorage2.StoredValues[1].Value">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">C:TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end&gt;</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.Left" resname="O:NagykamF.O:JvFormStorage2.Left">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.Top" resname="O:NagykamF.O:JvFormStorage2.Top">
         <source>40</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6422158796</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TJvFormStorage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

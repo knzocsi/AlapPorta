@@ -3,7 +3,7 @@ unit reinit;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, vcl.Dialogs;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, vcl.Dialogs, System.UITypes;
 
 procedure ReinitializeForms;
 function LoadNewResourceModule(Locale: LCID): Longint;

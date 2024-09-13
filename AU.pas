@@ -502,7 +502,6 @@ type
     procedure auto_teszt;
     procedure dijak_lekerese(pid,tid:Integer);
     procedure merlegjegy_lista_tipus_betoltese;
-    function ford(keresett: string):string;
     { Public declarations }
   end;
 
@@ -577,7 +576,7 @@ var
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
-     DMSoapU, FordU ;
+     DMSoapU, UzenetekU ;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -844,20 +843,6 @@ begin
   end;
 end;
 
-function TAF.ford(keresett: string): string;
-begin
- if FordF<>nil then
- with FordF do
-  begin
-
-   try
-    Result:= TLabel(FindComponent(keresett)).Caption;
-   except
-    Result:='';
-   end;
-  end;
-end;
-
 procedure TAF.Forgalom_TimerTimer(Sender: TObject);
 var id,id1:integer;
   function lekerdez(rendszam,irany:string;datum:TDate):Integer;
@@ -1081,7 +1066,7 @@ begin
     //ha sikeres a másolás restart
     if CopyFile(PChar(mappa+'\'+exe_neve),PChar(helyi_mappa+'\'+exe_neve),False) then
      begin
-       ShowMessage(ford('rsFrissites'));
+       ShowMessage(rsFrissites);
        ShellExecute(Application.Handle,'open', PChar(Application.ExeName), nil, nil, SW_SHOWNORMAL) ;
        Application.Terminate;
      end //ha sikertelen a másolás vissza módosítom a nevét eredetire

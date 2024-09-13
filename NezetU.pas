@@ -6,12 +6,11 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, JvExControls,
   JvBitmapButton, System.ImageList, Vcl.ImgList, Vcl.ToolWin, Vcl.ComCtrls,
-  JvExComCtrls, JvToolBar, frxClass, frxPreview, frxCtrls,Vcl.Printers,
-  Vcl.Mask, JvExMask, JvSpin;
+  JvExComCtrls, JvToolBar, frxClass, frxCtrls,Vcl.Printers,
+  Vcl.Mask, JvExMask, JvSpin, frxPreview;
 
 type
   TNezetF = class(TForm)
-    frxNezet: TfrxPreview;
     ImageList1: TImageList;
     JvToolBar1: TJvToolBar;
     Button2: TButton;
@@ -23,6 +22,7 @@ type
     jvpsz: TJvSpinEdit;
     Button5: TButton;
     Button4: TButton;
+    frxNezet: TfrxPreview;
     procedure btNyomtvalasztClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -45,7 +45,7 @@ var
   NezetF: TNezetF;
 
 implementation
-  Uses NyomtatokU,AU;
+  Uses NyomtatokU,AU,UzenetekU;
 {$R *.dfm}
 
 
@@ -63,7 +63,7 @@ procedure TNezetF.Button3Click(Sender: TObject);
 begin
  if (jvpsz.Value<=0)or(jvpsz.Text='') then
   begin
-    Application.MessageBox(PChar(af.ford('rsHibasPeldanyszam')),PChar(af.ford('rsHiba')),MB_OK);
+    Application.MessageBox(PChar(rsHibasPeldanyszam),PChar(rsHiba),MB_OK);
     Exit;
   end;
  valasztott.PrintOptions.Copies:=jvpsz.AsInteger;
@@ -345,7 +345,6 @@ begin
   valasztott:=akt_rep;
   valasztott.PrintOptions.Copies:=psz;
   valasztott.Preview:=frxNezet;
-  //NezetF.frxNezet.Zoom:=meret;
   jvpsz.Value:=psz;
   if valasztott.Name='frxmerleg' then merlegjegy_elokeszitese;
   valasztott.PrepareReport(true);

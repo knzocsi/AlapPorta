@@ -36,7 +36,7 @@ var
   TarolokF: TTarolokF;
 
 implementation
-  uses AU;
+  uses AU,UzenetekU;
 {$R *.dfm}
 
 procedure TTarolokF.btnkilepesClick(Sender: TObject);
@@ -58,12 +58,12 @@ procedure TTarolokF.TarolokTBeforePost(DataSet: TDataSet);
 begin
   if dednev.Text='' then
  begin
-   ShowMessage(af.ford('rsNevetMegKellAdni'));
+   ShowMessage(rsNevetMegKellAdni);
    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
  end;
 if af.nev_foglalt(TarolokTID.AsInteger,dednev.Text,'tarolok') then
  begin
-   ShowMessage(af.ford('rsEzANevMarFoglalt'));
+   ShowMessage(rsEzANevMarFoglalt);
    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
  end;
 end;

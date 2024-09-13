@@ -29,7 +29,7 @@ var
   MerlegkezelokF: TMerlegkezelokF;
 
 implementation
-  uses au;
+  uses au,UzenetekU;
 {$R *.dfm}
 
 procedure TMerlegkezelokF.Button1Click(Sender: TObject);
@@ -42,11 +42,11 @@ var ujnev:string;
     i:Integer;
     sqlsz:string;
 begin
- ujnev:=InputBox(af.ford('rsUjMerlegkezeloFelvitele'),af.ford('rsAdjaMegANevet'),'');
+ ujnev:=InputBox(rsUjMerlegkezeloFelvitele,rsAdjaMegANevet,'');
  if ujnev='' then Exit;
  if aF.merlegkezQ.Locate('nev',ujnev,[locaseinsensitive]) then
   begin
-    ShowMessage(af.ford('rsMerlegkezeloMarLetezik'));
+    ShowMessage(rsMerlegkezeloMarLetezik);
     exit;
   end;
 
@@ -64,7 +64,7 @@ end;
 
 procedure TMerlegkezelokF.Button3Click(Sender: TObject);
 begin
-  if MessageDlg(af.ford('rsMerlegkezeloTorlese'),mtConfirmation,mbYesNo,0)=6 then
+  if MessageDlg(rsMerlegkezeloTorlese,mtConfirmation,mbYesNo,0)=6 then
    begin
     with aF.Q1 do
     begin

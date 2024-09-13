@@ -31,7 +31,7 @@ var
   TipusokF: TTipusokF;
 
 implementation
-  uses AU;
+  uses AU, UzenetekU;
 {$R *.dfm}
 
 procedure TTipusokF.FormActivate(Sender: TObject);
@@ -48,12 +48,12 @@ procedure TTipusokF.tipusQBeforePost(DataSet: TDataSet);
 begin
 if dbednev.Text='' then
  begin
-   ShowMessage(af.ford('rsNevetMegKellAdni'));
+   ShowMessage(rsNevetMegKellAdni);
    if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
  end;
   if af.nev_foglalt(af.tipusqid.AsInteger,dbednev.Text,'tipus') then
   begin
-     ShowMessage(af.ford('rsEzANevMarFoglalt'));
+     ShowMessage(rsEzANevMarFoglalt);
      if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
 end;

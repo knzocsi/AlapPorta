@@ -43,7 +43,7 @@ var
   kezdokeszletF: TkezdokeszletF;
 
 implementation
-  uses AU;
+  uses AU, UzenetekU;
 {$R *.dfm}
 
 procedure TkezdokeszletF.Button1Click(Sender: TObject);
@@ -52,7 +52,7 @@ begin
 //aF.keszletez('b',termeklist.FieldByName('kod').AsString,termeklist.FieldByName('nev').AsString,spbkeszlet.AsInteger);
 with aF.Q1 do
  begin
-    if MessageDlg(af.ford('rsFelulIrAKeszlet'),mtConfirmation,mbYesNo,0)=6 then
+    if MessageDlg(rsFelulIrAKeszlet,mtConfirmation,mbYesNo,0)=6 then
      begin
       Close;
       SQL.Clear;
@@ -68,7 +68,7 @@ with aF.Q1 do
       ParamByName('felhasz').AsString:=felhnev;
       ExecSQL;
      end;
-    if MessageDlg(af.ford('rsFelulIrBKeszlet'),mtConfirmation,mbYesNo,0)=6 then
+    if MessageDlg(rsFelulIrBKeszlet,mtConfirmation,mbYesNo,0)=6 then
      begin
       Close;
       SQL.Clear;

@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45533.3982407407</prop>
-        <prop prop-type="OrigDateTime">44983.6349768518</prop>
-        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="SelfDateTime">45546.3538425926</prop>
+        <prop prop-type="OrigDateTime">45544.8855555556</prop>
+        <prop prop-type="XlatDateTime">45544.8855324074</prop>
         <prop prop-type="Translated">7</prop>
         <prop prop-type="UnTranslated">54</prop>
       </prop-group>
@@ -16,621 +16,314 @@
       <trans-unit id="O:MerlegkezelokF.Left" resname="O:MerlegkezelokF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571296</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Top" resname="O:MerlegkezelokF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571296</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571296</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Caption" resname="O:MerlegkezelokF.Caption">
         <source>'Mérlegkezelők'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Scale operators'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.ClientHeight" resname="O:MerlegkezelokF.ClientHeight">
         <source>580</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.ClientWidth" resname="O:MerlegkezelokF.ClientWidth">
         <source>421</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Color" resname="O:MerlegkezelokF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Font.Charset" resname="O:MerlegkezelokF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Font.Color" resname="O:MerlegkezelokF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Font.Height" resname="O:MerlegkezelokF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Font.Name" resname="O:MerlegkezelokF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Font.Style" resname="O:MerlegkezelokF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.OldCreateOrder" resname="O:MerlegkezelokF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.Position" resname="O:MerlegkezelokF.Position">
         <source>poMainFormCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.OnActivate" resname="O:MerlegkezelokF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.OnClose" resname="O:MerlegkezelokF.OnClose">
         <source>FormClose</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.PixelsPerInch" resname="O:MerlegkezelokF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.TextHeight" resname="O:MerlegkezelokF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TMerlegkezelokF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TMerlegkezelokF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.Left" resname="O:MerlegkezelokF.O:Panel1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.Top" resname="O:MerlegkezelokF.O:Panel1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.Width" resname="O:MerlegkezelokF.O:Panel1.Width">
         <source>421</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.Height" resname="O:MerlegkezelokF.O:Panel1.Height">
         <source>57</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.Align" resname="O:MerlegkezelokF.O:Panel1.Align">
         <source>alTop</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.TabOrder" resname="O:MerlegkezelokF.O:Panel1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.Left" resname="O:MerlegkezelokF.O:Panel1.O:Button1.Left">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.Top" resname="O:MerlegkezelokF.O:Panel1.O:Button1.Top">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.Width" resname="O:MerlegkezelokF.O:Panel1.O:Button1.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.Height" resname="O:MerlegkezelokF.O:Panel1.O:Button1.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.Caption" resname="O:MerlegkezelokF.O:Panel1.O:Button1.Caption">
         <source>'Kilépés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Exit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">1</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.TabOrder" resname="O:MerlegkezelokF.O:Panel1.O:Button1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button1.OnClick" resname="O:MerlegkezelokF.O:Panel1.O:Button1.OnClick">
         <source>Button1Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.Left" resname="O:MerlegkezelokF.O:Panel1.O:Button2.Left">
         <source>224</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.Top" resname="O:MerlegkezelokF.O:Panel1.O:Button2.Top">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.Width" resname="O:MerlegkezelokF.O:Panel1.O:Button2.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.Height" resname="O:MerlegkezelokF.O:Panel1.O:Button2.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.Caption" resname="O:MerlegkezelokF.O:Panel1.O:Button2.Caption">
         <source>'Új'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'New'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.TabOrder" resname="O:MerlegkezelokF.O:Panel1.O:Button2.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button2.OnClick" resname="O:MerlegkezelokF.O:Panel1.O:Button2.OnClick">
         <source>Button2Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.Left" resname="O:MerlegkezelokF.O:Panel1.O:Button3.Left">
         <source>336</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571412</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571412</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.Top" resname="O:MerlegkezelokF.O:Panel1.O:Button3.Top">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.Width" resname="O:MerlegkezelokF.O:Panel1.O:Button3.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.Height" resname="O:MerlegkezelokF.O:Panel1.O:Button3.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.Caption" resname="O:MerlegkezelokF.O:Panel1.O:Button3.Caption">
         <source>'Törlés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Delete'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">1</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.TabOrder" resname="O:MerlegkezelokF.O:Panel1.O:Button3.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:Panel1.O:Button3.OnClick" resname="O:MerlegkezelokF.O:Panel1.O:Button3.OnClick">
         <source>Button3Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Left" resname="O:MerlegkezelokF.O:DBGrid1.Left">
         <source>0</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>80</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">1</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Top" resname="O:MerlegkezelokF.O:DBGrid1.Top">
         <source>57</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>64</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">1</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Width" resname="O:MerlegkezelokF.O:DBGrid1.Width">
         <source>421</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Height" resname="O:MerlegkezelokF.O:DBGrid1.Height">
         <source>523</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Align" resname="O:MerlegkezelokF.O:DBGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.DataSource" resname="O:MerlegkezelokF.O:DBGrid1.DataSource">
-        <source>aF.merlegkezQDs</source>
+        <source>AF.merlegkezQDs</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.ReadOnly" resname="O:MerlegkezelokF.O:DBGrid1.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TabOrder" resname="O:MerlegkezelokF.O:DBGrid1.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TitleFont.Charset" resname="O:MerlegkezelokF.O:DBGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TitleFont.Color" resname="O:MerlegkezelokF.O:DBGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TitleFont.Height" resname="O:MerlegkezelokF.O:DBGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TitleFont.Name" resname="O:MerlegkezelokF.O:DBGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.TitleFont.Style" resname="O:MerlegkezelokF.O:DBGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Columns[0].Expanded" resname="O:MerlegkezelokF.O:DBGrid1.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">C:TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">&lt;item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Columns[0].FieldName" resname="O:MerlegkezelokF.O:DBGrid1.Columns[0].FieldName">
         <source>'Nev'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">C:TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Columns[0].Title.Caption" resname="O:MerlegkezelokF.O:DBGrid1.Columns[0].Title.Caption">
         <source>'Mérlegkezelő'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">C:TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Scale operator name'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">1</prop><prop prop-type="Order">59</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MerlegkezelokF.O:DBGrid1.Columns[0].Visible" resname="O:MerlegkezelokF.O:DBGrid1.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6421571528</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">C:TDBGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end&gt;</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6421571528</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
     </body>
   </file>

@@ -12,7 +12,6 @@ library WinPorta;
 {ITE} {DFMFileType} {EkaerU.dfm}
 {ITE} {DFMFileType} {FelhaszU.dfm}
 {ITE} {DFMFileType} {FelrakCimekU.dfm}
-{ITE} {DFMFileType} {FordU.dfm}
 {ITE} {DFMFileType} {ForgalomU.dfm}
 {ITE} {DFMFileType} {FoU.dfm}
 {ITE} {DFMFileType} {FTP\ftpDlU.dfm}
@@ -66,7 +65,6 @@ library WinPorta;
 {$R 'EkaerU.dfm' 'EkaerF:TForm'}
 {$R 'FelhaszU.dfm' 'FelhaszF:TForm'}
 {$R 'FelrakCimekU.dfm' 'FelrakcimekF:TForm'}
-{$R 'FordU.dfm' 'FordF:TForm'}
 {$R 'ForgalomU.dfm' 'ForgalomF:TForm'}
 {$R 'FoU.dfm' 'FoF:TForm'}
 {$R 'FTP\ftpDlU.dfm' 'ftpF:TForm'}

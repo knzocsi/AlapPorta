@@ -72,7 +72,7 @@ var
   dijszab_termekF: Tdijszab_termekF;
 
 implementation
-  uses AU,dijszabU;
+  uses AU,dijszabU,UzenetekU;
 {$R *.dfm}
 
 procedure Tdijszab_termekF.btnkilepClick(Sender: TObject);
@@ -115,7 +115,7 @@ procedure Tdijszab_termekF.dijak_termekTBeforePost(DataSet: TDataSet);
 begin
   if not ellenorzes  then
   begin
-    ShowMessage(af.ford('rsEzaTermekmerszerepeldijszabkat'));
+    ShowMessage(rsEzaTermekmerszerepeldijszabkat);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end
   else dijak_termekT.FieldByName('t_nev').AsString:=TermekTNev.AsString;

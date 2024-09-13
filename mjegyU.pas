@@ -280,7 +280,7 @@ var
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU;
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -346,9 +346,9 @@ case cbxirany.ItemIndex of
     btnMeres.enabled:=False;
    end;
  1:begin //beszállítás
-    lblpartner.Caption:=af.ford('rsAtado');
+    lblpartner.Caption:=rsAtado;
     partnerlookup.Enabled:=True;
-    lblpartner2.Caption:=af.ford('rsAtvevo');
+    lblpartner2.Caption:=rsAtvevo;
     partnerlookup2.Enabled:=true;
     btnekaer.Enabled:=false;
     partnerlookup.keyvalue:='!';
@@ -356,9 +356,9 @@ case cbxirany.ItemIndex of
     btnMeres.enabled:= True;
    end;
  2:begin //kiszállítás
-    lblpartner.Caption:=af.ford('rsElado');
+    lblpartner.Caption:=rsElado;
     partnerlookup.Enabled:=true;
-    lblpartner2.Caption:=af.ford('rsVevo');
+    lblpartner2.Caption:=rsVevo;
     partnerlookup2.Enabled:=True;
     btnekaer.Enabled:=true;
     partnerlookup2.keyvalue:='!';
@@ -612,7 +612,7 @@ end;
 procedure TMjegyF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if (not mentes_volt) then
-    CanClose:=  ( MessageDlg(af.ford('rsNemVoltMentes'), mtConfirmation, [mbOK,mbCancel], 0) = mrOk)
+    CanClose:=  ( MessageDlg(rsNemVoltMentes, mtConfirmation, [mbOK,mbCancel], 0) = mrOk)
   else   CanClose:=True;
 
 
@@ -622,7 +622,7 @@ procedure TMjegyF.jeloles;
 begin
   if (not jvmemparosparosit.AsBoolean) and (jeloltek_szama=2) then
   begin
-    ShowMessage(af.ford('rsMarKiVanJelolveKetJarmu'));
+    ShowMessage(rsMarKiVanJelolveKetJarmu);
     exit;
   end;
   if (not jvmemparosparosit.AsBoolean)  then jeloltek_szama:=jeloltek_szama+1
@@ -1015,38 +1015,38 @@ procedure TMjegyF.btnekaerClick(Sender: TObject);
 begin
 if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
+    ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
     exit
   end;
  if partnerlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
  if partnerlookup2.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
 
  if termeklookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsTermeketMegKellAdni'));
+    ShowMessage(rsTermeketMegKellAdni);
     exit
   end;
  if cbxirany.ItemIndex<1 then
   begin
-    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
+    ShowMessage(rsMeresIranyatMegKellAdni);
     exit
   end;
  if (cbxrendszam1.Text=''){or(cbxrendszam2.Text='')} then
   begin
-    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
+    ShowMessage(rsRendszamotMegKellAdni);
     exit
   end;
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
   begin
-    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
+    ShowMessage(rsNincsKivalasztvaKetMeres);
     exit
   end;
 
@@ -1185,72 +1185,72 @@ begin
 
   if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
+    ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
     tulajlookup.SetFocus;
     exit
   end;
   if (partnerlookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     partnerlookup.SetFocus;
     exit
   end;
   if (partnerlookup2.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     partnerlookup2.SetFocus;
     exit
   end;
   if (termeklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes))  then
   begin
-    ShowMessage(af.ford('rsTermeketMegKellAdni'));
+    ShowMessage(rsTermeketMegKellAdni);
     termeklookup.SetFocus;
     exit
   end;
   if cbfuvarozo.Visible then
    if (cbfuvarozo.KeyValue=0) and (not (Sender = btnFolytatasos_mentes)) then
     begin
-      ShowMessage(af.ford('rsAdjaMegAFuvarozot'));
+      ShowMessage(rsAdjaMegAFuvarozot);
       exit;
     end;
   if (kezelolookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsMerlegkezelotMegKellAdni'));
+    ShowMessage(rsMerlegkezelotMegKellAdni);
     kezelolookup.SetFocus;
     exit
   end;
   if (cbxirany.ItemIndex<1) and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
+    ShowMessage(rsMeresIranyatMegKellAdni);
     cbxirany.SetFocus;
     exit
   end;
   if (not chkrogzitett.Checked) and (not (Sender = btnFolytatasos_mentes)) then
   if ((r11<>r21)and(r11<>r22))or((r12<>r21)and(r12<>r22)) then
   begin
-    if MessageDlg(af.ford('rsRendszamokElternek'),mtConfirmation,mbYesNo,0)=7 then exit;
+    if MessageDlg(rsRendszamokElternek,mtConfirmation,mbYesNo,0)=7 then exit;
   end;
   if (cbxrendszam1.Text='') then
   begin
-    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
+    ShowMessage(rsRendszamotMegKellAdni);
     cbxrendszam1.SetFocus;
     exit
   end;
   if (not chknincspot.Checked) and (cbxrendszam2.Text='') then
   begin
-    ShowMessage(af.ford('rsPotkocsiRendszamatMegKellAdni'));
+    ShowMessage(rsPotkocsiRendszamatMegKellAdni);
     cbxrendszam2.SetFocus;
     exit
   end;
 
   if ((spBrutto.Value<=0)or(sptara.Value<=0) ) and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
+    ShowMessage(rsNincsKivalasztvaKetMeres);
     exit
   end;
   if (taroloklookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then
   begin
-    ShowMessage(af.ford('rsTarolotMegKellAdni'));
+    ShowMessage(rsTarolotMegKellAdni);
     taroloklookup.SetFocus;
     exit
   end;
@@ -1275,7 +1275,7 @@ begin
   if levonlookup.KeyValue<>'!' then
   if sp_tomeg_levon.Value<=0 then
   begin
-    ShowMessage(af.ford('rsLevonandoTomegetMegKellAdni'));
+    ShowMessage(rsLevonandoTomegetMegKellAdni);
     sp_tomeg_levon.SetFocus;
     Exit
   end;
@@ -1687,7 +1687,7 @@ begin
       Rewrite(tf);
       CloseFile(tf);
     end;
-    if Meres_MerlegjegyenF.chkKezimeres.Checked then kezi:=af.ford('rsKezi') else kezi:='';
+    if Meres_MerlegjegyenF.chkKezimeres.Checked then kezi:=rsKezi else kezi:='';
 
     Append(tf);
     Writeln(tf,DateToStr(Date)+#9+TimeToStr(Time)+#9+cbxRendszam1.Text+#9+IntToStr( Meres_MerlegjegyenF.Mert_eredmeny)+#9+cbxRendszam2.Text+#9+kezi);

@@ -187,7 +187,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495600
+            Time = 0.773554583327495500
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end

@@ -109,7 +109,7 @@ var
 implementation
 
 uses
-  AU, DijakU, dijszabU;
+  AU, DijakU, dijszabU,UzenetekU;
 
 {$R *.dfm}
 
@@ -134,8 +134,8 @@ end;
 
 procedure TPartnerekF.Button2Click(Sender: TObject);
 begin
- if af.tabla_zarolva('partner')=1 then ShowMessage(af.ford('rsTablaZarolva'))
- else ShowMessage(af.ford('rsTablaNincsZarolva'));
+ if af.tabla_zarolva('partner')=1 then ShowMessage(rsTablaZarolva)
+ else ShowMessage(rsTablaNincsZarolva);
 end;
 
 procedure TPartnerekF.Button3Click(Sender: TObject);
@@ -226,19 +226,19 @@ begin
     begin
       try
 
-        TButton(FindComponent('Yes')).Caption:= af.ford('rsIgen');
-        TButton(FindComponent('No')).Caption:= af.ford('rsNem');
+        TButton(FindComponent('Yes')).Caption:= rsIgen;
+        TButton(FindComponent('No')).Caption:= rsNem;
         ShowModal;
       finally
         case ModalResult of
-          mrYes: ShowMessage(af.ford('rsIgen')+'!');
-          mrNo: ShowMessage(af.ford('rsNem')+'!');
-          mrCancel: ShowMessage(af.ford('rsMegsem')+'!');
+          mrYes: ShowMessage(rsIgen+'!');
+          mrNo: ShowMessage(rsNem+'!');
+          mrCancel: ShowMessage(rsMegsem+'!');
         end;
         Free;
       end;
     end;
-  if MessageDlg(PChar(af.ford('rsBiztosanTorli')), mtConfirmation, [mbOK,mbCancel], 0) <> mrOk then
+  if MessageDlg(PChar(rsBiztosanTorli), mtConfirmation, [mbOK,mbCancel], 0) <> mrOk then
   System.SysUtils.Abort;
 end;
 
@@ -253,33 +253,33 @@ begin
   begin
     if (Length(dbeadoazon.Text)<>8) OR (Length(dbeado_kod.Text)<>1) OR (Length(dbeado_megye_kod.Text)<>2)  then
      begin
-      ShowMessage(af.ford('rsHibasAdoszam'));
+      ShowMessage(rsHibasAdoszam);
       if DataSet.State=dsEdit then DataSet.Cancel else  Abort;
      end;
   end;
   if Length(dbedtNev.Text)<5 then
   begin
-    ShowMessage(af.ford('rsNevetMegKellAdni'));
+    ShowMessage(rsNevetMegKellAdni);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if Length(dbedtIrsz.Text)<4 then
   begin
-    ShowMessage(af.ford('rsIrszetMegKellAdni'));
+    ShowMessage(rsIrszetMegKellAdni);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if Length(dbedtTelepules.Text)<3 then
   begin
-    ShowMessage(af.ford('rsTelepulestMegKellAdni'));
+    ShowMessage(rsTelepulestMegKellAdni);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
 if af.kod_foglalt(PartnerT.FieldByName('id').AsInteger,dbedtKod.Text,'partner') then
   begin
-    ShowMessage(af.ford('rsEzAKodMarFoglalt'));
+    ShowMessage(rsEzAKodMarFoglalt);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
   end;
   if af.nev_foglalt(PartnerT.FieldByName('id').AsInteger,dbedtNev.Text,'partner') then
   begin
-    ShowMessage(af.ford('rsEzANevMarFoglalt'));
+    ShowMessage(rsEzANevMarFoglalt);
     if  DataSet.State=dsEdit then DataSet.Cancel else  Abort;
    end;
 end;

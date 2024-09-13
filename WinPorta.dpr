@@ -62,8 +62,8 @@ uses
   ftpDlU in 'FTP\ftpDlU.pas' {ftpF},
   NzelvvalaszTU in 'NzelvvalaszTU.pas' {NyelvF},
   reinit in 'reinit.pas',
-  NezetU in 'NezetU.pas' {NezetF},
-  FordU in 'FordU.pas' {FordF};
+  UzenetekU in 'UzenetekU.pas',
+  NezetU in 'NezetU.pas' {NezetF};
 
 {$R *.res}
 

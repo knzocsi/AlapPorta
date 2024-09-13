@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45532.4247916667</prop>
+        <prop prop-type="SelfDateTime">45546.3538194444</prop>
         <prop prop-type="OrigDateTime">44983.6349768518</prop>
-        <prop prop-type="XlatDateTime">44983.6349768518</prop>
+        <prop prop-type="XlatDateTime">45544.8855324074</prop>
         <prop prop-type="Translated">11</prop>
         <prop prop-type="UnTranslated">143</prop>
       </prop-group>
@@ -16,1571 +16,783 @@
       <trans-unit id="O:ForgalomF.Left" resname="O:ForgalomF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942593</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Top" resname="O:ForgalomF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942593</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942593</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Caption" resname="O:ForgalomF.Caption">
         <source>'Forgalom'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942593</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Trafficc'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419942593</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.ClientHeight" resname="O:ForgalomF.ClientHeight">
         <source>537</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.ClientWidth" resname="O:ForgalomF.ClientWidth">
         <source>1042</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Color" resname="O:ForgalomF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Font.Charset" resname="O:ForgalomF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Font.Color" resname="O:ForgalomF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Font.Height" resname="O:ForgalomF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Font.Name" resname="O:ForgalomF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Font.Style" resname="O:ForgalomF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.OldCreateOrder" resname="O:ForgalomF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.Position" resname="O:ForgalomF.Position">
         <source>poMainFormCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.OnActivate" resname="O:ForgalomF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.PixelsPerInch" resname="O:ForgalomF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.TextHeight" resname="O:ForgalomF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TForgalomF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TForgalomF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.Left" resname="O:ForgalomF.O:Panel1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.Top" resname="O:ForgalomF.O:Panel1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.Width" resname="O:ForgalomF.O:Panel1.Width">
         <source>1042</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.Height" resname="O:ForgalomF.O:Panel1.Height">
         <source>49</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.Align" resname="O:ForgalomF.O:Panel1.Align">
         <source>alTop</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.TabOrder" resname="O:ForgalomF.O:Panel1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.DesignSize[0]" resname="O:ForgalomF.O:Panel1.DesignSize[0]">
         <source>1042</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.DesignSize[1]" resname="O:ForgalomF.O:Panel1.DesignSize[1]">
         <source>49</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label1.Left" resname="O:ForgalomF.O:Panel1.O:Label1.Left">
         <source>152</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label1.Top" resname="O:ForgalomF.O:Panel1.O:Label1.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label1.Width" resname="O:ForgalomF.O:Panel1.O:Label1.Width">
         <source>66</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label1.Height" resname="O:ForgalomF.O:Panel1.O:Label1.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label1.Caption" resname="O:ForgalomF.O:Panel1.O:Label1.Caption">
         <source>'Kezdő dátum:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Date from:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">1</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label2.Left" resname="O:ForgalomF.O:Panel1.O:Label2.Left">
         <source>312</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label2.Top" resname="O:ForgalomF.O:Panel1.O:Label2.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label2.Width" resname="O:ForgalomF.O:Panel1.O:Label2.Width">
         <source>79</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label2.Height" resname="O:ForgalomF.O:Panel1.O:Label2.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Label2.Caption" resname="O:ForgalomF.O:Panel1.O:Label2.Caption">
         <source>'Befejező dátum:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Date to:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.Left" resname="O:ForgalomF.O:Panel1.O:btnKilepes.Left">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.Top" resname="O:ForgalomF.O:Panel1.O:btnKilepes.Top">
         <source>9</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.Width" resname="O:ForgalomF.O:Panel1.O:btnKilepes.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.Height" resname="O:ForgalomF.O:Panel1.O:btnKilepes.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.Caption" resname="O:ForgalomF.O:Panel1.O:btnKilepes.Caption">
         <source>'Kilépés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Exit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">1</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.TabOrder" resname="O:ForgalomF.O:Panel1.O:btnKilepes.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:btnKilepes.OnClick" resname="O:ForgalomF.O:Panel1.O:btnKilepes.OnClick">
         <source>btnKilepesClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Left" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Left">
         <source>152</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Top" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Top">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Width" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Width">
         <source>113</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Height" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Date" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Date">
         <source>43587.7735545833</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.Time" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.Time">
         <source>43587.7735545833</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.TabOrder" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piKezdoDatum.OnChange" resname="O:ForgalomF.O:Panel1.O:piKezdoDatum.OnChange">
         <source>piKezdoDatumChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Left" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Left">
         <source>312</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Top" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Top">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Width" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Width">
         <source>105</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Height" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Date" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Date">
         <source>43587.7741821991</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Time" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.Time">
         <source>43587.7741821991</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.TabOrder" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:piBefejezoDatum.OnChange" resname="O:ForgalomF.O:Panel1.O:piBefejezoDatum.OnChange">
         <source>piKezdoDatumChange</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TDateTimePicker</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Left" resname="O:ForgalomF.O:Panel1.O:Button1.Left">
         <source>896</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Top" resname="O:ForgalomF.O:Panel1.O:Button1.Top">
         <source>18</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Width" resname="O:ForgalomF.O:Panel1.O:Button1.Width">
         <source>137</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Height" resname="O:ForgalomF.O:Panel1.O:Button1.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Anchors" resname="O:ForgalomF.O:Panel1.O:Button1.Anchors">
         <source>[akRight]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Caption" resname="O:ForgalomF.O:Panel1.O:Button1.Caption">
         <source>'Mérlegjegy készítés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Create weighing ticket'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">1</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.TabOrder" resname="O:ForgalomF.O:Panel1.O:Button1.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942708</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942708</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.Visible" resname="O:ForgalomF.O:Panel1.O:Button1.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button1.OnClick" resname="O:ForgalomF.O:Panel1.O:Button1.OnClick">
         <source>Button1Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">65</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.Left" resname="O:ForgalomF.O:Panel1.O:Button2.Left">
         <source>586</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">66</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.Top" resname="O:ForgalomF.O:Panel1.O:Button2.Top">
         <source>18</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">67</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.Width" resname="O:ForgalomF.O:Panel1.O:Button2.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">68</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.Height" resname="O:ForgalomF.O:Panel1.O:Button2.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">69</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.Caption" resname="O:ForgalomF.O:Panel1.O:Button2.Caption">
         <source>'Export'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">70</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.TabOrder" resname="O:ForgalomF.O:Panel1.O:Button2.TabOrder">
         <source>4</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">71</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel1.O:Button2.OnClick" resname="O:ForgalomF.O:Panel1.O:Button2.OnClick">
         <source>Button2Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">72</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.Left" resname="O:ForgalomF.O:Panel2.Left">
         <source>585</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">73</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.Top" resname="O:ForgalomF.O:Panel2.Top">
         <source>49</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">74</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.Width" resname="O:ForgalomF.O:Panel2.Width">
         <source>457</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">75</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.Height" resname="O:ForgalomF.O:Panel2.Height">
         <source>488</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">76</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.Align" resname="O:ForgalomF.O:Panel2.Align">
         <source>alRight</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">77</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.TabOrder" resname="O:ForgalomF.O:Panel2.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">78</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Left" resname="O:ForgalomF.O:Panel2.O:Image1.Left">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">79</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Top" resname="O:ForgalomF.O:Panel2.O:Image1.Top">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">80</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Width" resname="O:ForgalomF.O:Panel2.O:Image1.Width">
         <source>455</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">81</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Height" resname="O:ForgalomF.O:Panel2.O:Image1.Height">
         <source>445</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">82</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Align" resname="O:ForgalomF.O:Panel2.O:Image1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">83</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.Stretch" resname="O:ForgalomF.O:Panel2.O:Image1.Stretch">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">84</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.ExplicitLeft" resname="O:ForgalomF.O:Panel2.O:Image1.ExplicitLeft">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">85</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.ExplicitWidth" resname="O:ForgalomF.O:Panel2.O:Image1.ExplicitWidth">
         <source>261</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">86</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Image1.ExplicitHeight" resname="O:ForgalomF.O:Panel2.O:Image1.ExplicitHeight">
         <source>282</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">87</prop>
-          <prop prop-type="Type">TImage</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TImage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.Left" resname="O:ForgalomF.O:Panel2.O:Panel3.Left">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">88</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.Top" resname="O:ForgalomF.O:Panel2.O:Panel3.Top">
         <source>446</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">89</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.Width" resname="O:ForgalomF.O:Panel2.O:Panel3.Width">
         <source>455</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">90</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.Height" resname="O:ForgalomF.O:Panel2.O:Panel3.Height">
         <source>41</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">91</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.Align" resname="O:ForgalomF.O:Panel2.O:Panel3.Align">
         <source>alBottom</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">92</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.TabOrder" resname="O:ForgalomF.O:Panel2.O:Panel3.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">93</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.DesignSize[0]" resname="O:ForgalomF.O:Panel2.O:Panel3.DesignSize[0]">
         <source>455</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">94</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.DesignSize[1]" resname="O:ForgalomF.O:Panel2.O:Panel3.DesignSize[1]">
         <source>41</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">95</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Left" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Left">
         <source>77</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">96</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Top" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Top">
         <source>6</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">97</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Width" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Width">
         <source>292</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">98</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Height" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">99</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.VisibleButtons" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.VisibleButtons">
         <source>[nbFirst, nbPrior, nbNext, nbLast]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">100</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Anchors" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.Anchors">
         <source>[akLeft, akTop, akRight, akBottom]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">101</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.TabOrder" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">102</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.OnClick" resname="O:ForgalomF.O:Panel2.O:Panel3.O:DBNavigator1.OnClick">
         <source>DBNavigator1Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">103</prop>
-          <prop prop-type="Type">TDBNavigator</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TDBNavigator</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Left" resname="O:ForgalomF.O:JvDBUltimGrid1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">104</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Top" resname="O:ForgalomF.O:JvDBUltimGrid1.Top">
         <source>49</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">105</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Width" resname="O:ForgalomF.O:JvDBUltimGrid1.Width">
         <source>585</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">106</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Height" resname="O:ForgalomF.O:JvDBUltimGrid1.Height">
         <source>488</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">107</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Align" resname="O:ForgalomF.O:JvDBUltimGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">108</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.DataSource" resname="O:ForgalomF.O:JvDBUltimGrid1.DataSource">
         <source>aF.ForgalomDS</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">109</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.ReadOnly" resname="O:ForgalomF.O:JvDBUltimGrid1.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">110</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TabOrder" resname="O:ForgalomF.O:JvDBUltimGrid1.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">111</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Charset" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">112</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Color" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">113</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Height" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">114</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Name" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">115</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Style" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">116</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.OnCellClick" resname="O:ForgalomF.O:JvDBUltimGrid1.OnCellClick">
         <source>DBGrid1CellClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">117</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.OnDblClick" resname="O:ForgalomF.O:JvDBUltimGrid1.OnDblClick">
         <source>DBGrid1DblClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">118</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.OnGesture" resname="O:ForgalomF.O:JvDBUltimGrid1.OnGesture">
         <source>DBGrid1Gesture</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">119</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption">
         <source>'Select columns'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">120</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK" resname="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK">
         <source>'&amp;OK'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">121</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:ForgalomF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
         <source>'At least one column must be visible!'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">122</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.EditControls" resname="O:ForgalomF.O:JvDBUltimGrid1.EditControls">
         <source>&lt;&gt;</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">123</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.RowsHeight" resname="O:ForgalomF.O:JvDBUltimGrid1.RowsHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.6419942824</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">124</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.6419942824</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.TitleRowHeight" resname="O:ForgalomF.O:JvDBUltimGrid1.TitleRowHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">125</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">126</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">&lt;item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">127</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Title.Caption">
         <source>'ID'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">128</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">129</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">130</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].FieldName">
         <source>'mjegy'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">131</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Title.Caption">
         <source>'Mérlegjegy'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">132</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Weighing ticket'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">132</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[1].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">133</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">134</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].FieldName">
         <source>'Datum'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">135</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Title.Caption">
         <source>'Dátum'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">136</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Date'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">136</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[2].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">137</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">138</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].FieldName">
         <source>'ido'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">139</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Title.Caption">
         <source>'Idő'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">140</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Time'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">140</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[3].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">141</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">142</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].FieldName">
         <source>'tomeg'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">143</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Title.Caption">
         <source>'Tömeg'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">144</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Weight'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">144</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[4].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">145</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">146</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].FieldName">
         <source>'Rendszam'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">147</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Title.Caption">
         <source>'Rendszám'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">148</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'License plate'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">148</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[5].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">149</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Expanded" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">150</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].FieldName" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].FieldName">
         <source>'rendszam2'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">151</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Title.Caption" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Title.Caption">
         <source>'Rendszám 2'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">152</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'License plate 2'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">1</prop><prop prop-type="Order">152</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Visible" resname="O:ForgalomF.O:JvDBUltimGrid1.Columns[6].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">45531.641994294</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">153</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end&gt;</prop>
-        </prop-group>
+        <prop prop-type="Created">45531.641994294</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
     </body>
   </file>

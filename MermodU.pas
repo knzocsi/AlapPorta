@@ -204,7 +204,7 @@ var
   Temp_tabla_neve: String;
   regi_ar,akt_ar,mod_ar:Extended;
 implementation
-  uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU;
+  uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU, UzenetekU;
 {$R *.dfm}
 
 { TMermodF }
@@ -259,37 +259,37 @@ procedure TMermodF.btnekaerClick(Sender: TObject);
 begin
 if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
+    ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
     exit
   end;
  if partnerlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
  if partnerlookup2.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
  if termeklookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsTermeketMegKellAdni'));
+    ShowMessage(rsTermeketMegKellAdni);
     exit
   end;
  if cbxirany.ItemIndex<1 then
   begin
-    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
+    ShowMessage(rsMeresIranyatMegKellAdni);
     exit
   end;
  if (cbxrendszam1.Text=''){or(cbxrendszam2.Text='')} then
   begin
-    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
+    ShowMessage(rsRendszamotMegKellAdni);
     exit
   end;
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
   begin
-    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
+    ShowMessage(rsNincsKivalasztvaKetMeres);
     exit
   end;
  EkaerF.fo;
@@ -581,66 +581,65 @@ begin
 //exit;
  if tulajlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsBizonylatKibocsjtotMegKellAdni'));
+    ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
     exit
   end;
  if partnerlookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
  if partnerlookup2.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsAz')+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+af.ford('rsMegKellAdni'));
+    ShowMessage(rsAz+StringReplace(lblpartner2.Caption,':','t',[rfreplaceall])+rsMegKellAdni);
     exit
   end;
  if termeklookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsTermeketMegKellAdni'));
+    ShowMessage(rsTermeketMegKellAdni);
     exit
   end;
  if kezelolookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsMerlegkezelotMegKellAdni'));
+    ShowMessage(rsMerlegkezelotMegKellAdni);
     exit
   end;
  if cbxirany.ItemIndex<1 then
   begin
-    ShowMessage(af.ford('rsMeresIranyatMegKellAdni'));
+    ShowMessage(rsMeresIranyatMegKellAdni);
     exit
   end;
  if (cbxrendszam1.Text='') then
   begin
-    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
+    ShowMessage(rsRendszamotMegKellAdni);
     exit
   end;
  if (not chknincspot.Checked)and(cbxrendszam2.Text='') then
   begin
-    ShowMessage(af.ford('rsRendszamotMegKellAdni'));
+    ShowMessage(rsRendszamotMegKellAdni);
     exit
   end;
 
  if (spBrutto.Value<=0)or(sptara.Value<=0) then
   begin
-    ShowMessage(af.ford('rsNincsKivalasztvaKetMeres'));
+    ShowMessage(rsNincsKivalasztvaKetMeres);
     exit
   end;
   if taroloklookup.KeyValue='!' then
   begin
-    ShowMessage(af.ford('rsTarolotMegKellAdni'));
+    ShowMessage(rsTarolotMegKellAdni);
     exit
   end;
   if levonlookup.KeyValue<>'!' then
    if sp_tomeg_levon.Value<=0 then
     begin
-     ShowMessage(af.ford('rsLevonandoTomegetMegKellAdni'));
+     ShowMessage(rsLevonandoTomegetMegKellAdni);
      Exit
     end;
 
   if regi_ar<>akt_ar then
    begin
-    if MessageDlg(af.ford('rsTermekEgysegaraValtozott'),
-       mtConfirmation, [mbYes,mbNo], 0) = mrNo
+    if MessageDlg(rsTermekEgysegaraValtozott, mtConfirmation, [mbYes,mbNo], 0) = mrNo
     then mod_ar:=regi_ar
     else mod_ar:=akt_ar
    end
@@ -931,18 +930,18 @@ case cbxirany.ItemIndex of
     btnekaer.Enabled:=false;
    end;
  1:begin //beszállítás
-    lblpartner.Caption:=af.ford('rsAtado');
+    lblpartner.Caption:=rsAtado;
     partnerlookup.Enabled:=True;
-    lblpartner2.Caption:=af.ford('rsAtvevo');
+    lblpartner2.Caption:=rsAtvevo;
     partnerlookup2.Enabled:=true;
     btnekaer.Enabled:=false;
     partnerlookup.keyvalue:='!';
     if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
    end;
  2:begin //kiszállítás
-    lblpartner.Caption:=af.ford('rsElado');
+    lblpartner.Caption:=rsElado;
     partnerlookup.Enabled:=true;
-    lblpartner2.Caption:=af.ford('rsVevo');
+    lblpartner2.Caption:=rsVevo;
     partnerlookup2.Enabled:=True;
     btnekaer.Enabled:=true;
     partnerlookup2.keyvalue:='!';

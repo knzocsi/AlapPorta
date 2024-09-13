@@ -130,7 +130,7 @@ object kezdokeszletF: TkezdokeszletF
     Value = 0
   end
   object termeklist: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
     Left = 328

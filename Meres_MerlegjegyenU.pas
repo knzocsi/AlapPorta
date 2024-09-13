@@ -45,7 +45,7 @@ var
   Meres_MerlegjegyenF: TMeres_MerlegjegyenF;
 
 implementation
-uses au,PortU,FoU;
+uses au,PortU,FoU, UzenetekU;
 
 {$R *.dfm}
 
@@ -64,7 +64,7 @@ begin
        (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA6')=0)
       then
     begin
-      ShowMessage(af.ford('rsJarmuNincsAMerlegen'));
+      ShowMessage(rsJarmuNincsAMerlegen);
       exit;
     end;
 
@@ -89,7 +89,7 @@ procedure TMeres_MerlegjegyenF.btnelfogadasClick(Sender: TObject);
 begin
   if spTomeg.Value<0 then
   begin
-    ShowMessage(af.ford('rsMeresEredmenyeNulla'));
+    ShowMessage(rsMeresEredmenyeNulla);
     exit;
   end;
   Mert_eredmeny:=spTomeg.Value;

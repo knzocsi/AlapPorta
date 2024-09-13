@@ -50,7 +50,7 @@ var
   ds:Tdataset;
   aut:Boolean;
 implementation
-  uses AU,ftpDlU;
+  uses AU,ftpDlU,UzenetekU;
 
 {$R *.dfm}
 
@@ -143,7 +143,7 @@ try
   JvMlehet.EnableControls;
   cfg_export_mezokT.Close;
 finally
-  ShowMessage(af.ford('rsBeallitasokMentve'))
+  ShowMessage(rsBeallitasokMentve)
 end;
 end;
 

@@ -68,7 +68,7 @@ object FelhaszF: TFelhaszF
     Width = 304
     Height = 496
     Align = alClient
-    DataSource = aF.FelhaszQDs
+    DataSource = AF.FelhaszQDs
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -98,7 +98,7 @@ object FelhaszF: TFelhaszF
     Width = 331
     Height = 496
     Align = alRight
-    DataSource = aF.felhasznalok_jogaiDs
+    DataSource = AF.felhasznalok_jogaiDs
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -129,7 +129,7 @@ object FelhaszF: TFelhaszF
       end>
   end
   object ajogQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     Left = 376
     Top = 24
   end
