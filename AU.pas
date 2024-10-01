@@ -951,12 +951,12 @@ begin
  akt_tiszt_dij:=0;
 
  nyers_netto_tomege:=brutto-tara;
-
+ szemet_tomeg:=nyers_netto_tomege*(szemet_szazalek/100.0);
  if akt_nedvesseg_szazalek>alap_nedvesseg_szazalek then
  begin
   alap_nedv:=alap_nedvesseg_szazalek;
   akt_nedv:=akt_nedvesseg_szazalek;
-  akt_szar_dij:=((nyers_netto_tomege*(akt_nedv-alap_nedv))/1000)*szaritasi_dij;//szárítási díj csak akkor ha nedv>alapnedv
+  akt_szar_dij:=(((nyers_netto_tomege-szemet_tomeg) *(akt_nedv-alap_nedv))/1000)*szaritasi_dij;//szárítási díj csak akkor ha nedv>alapnedv
  end
  else
  begin
@@ -965,7 +965,7 @@ begin
  end;
  akt_tiszt_dij:=(nyers_netto_tomege/1000)*tisztitasi_dij;
 
- szemet_tomeg:=nyers_netto_tomege*(szemet_szazalek/100.0);
+
  nyers_tort_szemek_tomege:=(nyers_netto_tomege*(tort_szemek_szazalek/100.0));
 
  tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;

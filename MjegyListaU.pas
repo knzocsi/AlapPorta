@@ -351,7 +351,7 @@ begin
      TfrxMemoView(FindObject('frxszar_fok')).Text:=FormatFloat('0.000',atlag_szar_fok)+' °';
      TfrxMemoView(FindObject('frxnetto2')).Text:=FormatFloat('0.000',(o_szar_kiad/1000))+' to x';
      TfrxMemoView(FindObject('frxszar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spSzaritasi_dij.Value);
-     TfrxMemoView(FindObject('frxszar_ar')).Text:=FormatFloat('###,###,##0,- Ft',atlag_szar_fok*(o_szar_kiad/1000)* szaritasi_dij);
+     TfrxMemoView(FindObject('frxszar_ar')).Text:=FormatFloat('###,###,##0,- Ft',atlag_szar_fok*(o_szar_kiad/1000)* spszaritasi_dij.value);
      ossz_netto:=ossz_netto+atlag_szar_fok*(o_szar_kiad/1000)* spSzaritasi_dij.Value;
      TfrxMemoView(FindObject('frxnetto3')).Text:=FormatFloat('0.000',(o_netto/1000))+' to x';
      TfrxMemoView(FindObject('frxbetar_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spBetarolasi_dij.Value);

@@ -187,7 +187,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -832,6 +832,7 @@ object FoF: TFoF
         Anchors = [akTop, akRight]
         Caption = 'Nyelv/Language'
         TabOrder = 0
+        Visible = False
         OnClick = btnnyelvClick
       end
     end
