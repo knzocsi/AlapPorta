@@ -667,6 +667,7 @@ object MermodF: TMermodF
         ParentShowHint = False
         ShowHint = True
         TabOrder = 8
+        OnMouseUp = chkkukMouseUp
       end
       object sptort: TJvSpinEdit
         Tag = 15

@@ -185,6 +185,8 @@ type
     procedure btnMentesClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button4Click(Sender: TObject);
+    procedure chkkukMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
   private
     { Private declarations }
     procedure rendszam_combok;
@@ -957,6 +959,12 @@ if chknincspot.Checked then cbxrendszam2.Text:=cbxrendszam1.Text;
 
   sptara.Value:=aF.tara(cbxrendszam1.Text);
   spnetto.Value:=spbrutto.Value-sptara.Value;
+end;
+
+procedure TMermodF.chkkukMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+//szazalek
 end;
 
 procedure TMermodF.fo(ideje: Integer);
