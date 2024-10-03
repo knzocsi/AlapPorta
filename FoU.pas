@@ -873,7 +873,11 @@ end;
 procedure TFoF.tmrForgalom_frissitesTimer(Sender: TObject);
 begin
   tmrForgalom_frissites.Enabled:=false;
-  if piBefejezoDatum.Date<>Date then piBefejezoDatum.Date:=date;
+  if piBefejezoDatum.Date<>Date then
+  begin
+    piBefejezoDatum.Date:=date;
+    szures;
+  end;
   if AF.ForgalomQ.Active then  AF.ForgalomQ.Refresh;
   tmrForgalom_frissites.Enabled:=true;
 end;
@@ -2875,9 +2879,17 @@ begin
     end;
   end
   else
-    //if vezerles_tipus = 'PLC' then
     begin
-      if Regi_hardver_beallitas then PLC_Ir(Melyik, Mire)
+      if Regi_hardver_beallitas then
+      begin
+        if vezerles_tipus = 'PLC' then PLC_Ir(Melyik, Mire)
+        else
+          if vezerles_tipus = 'IO' then
+          begin
+            IO_Ir(IOmodul_regiszter_iras1,Mire=1);
+          end;
+      end
+
       else
       begin
         af.HardverQ.first;
