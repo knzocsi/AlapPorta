@@ -133,22 +133,22 @@ interface
     'END//' + #13#10 +
     'DELIMITER ;' + #13#10 +
     '' + #13#10 +
-    'CREATE TABLE `keszlet_nezet` (' + #13#10 +
-    '	`Term_id` INT(11) UNSIGNED NOT NULL COMMENT ''termék id'',' + #13#10 +
-    '	`Term_kod` VARCHAR(30) NOT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Term_nev` VARCHAR(100) NOT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Tarolo_id` INT(11) NULL COMMENT ''tároló id'',' + #13#10 +
-    '	`Tarolo_nev` VARCHAR(50) NOT NULL COLLATE ''utf8_general_ci'',' + #13#10 +
-    '	`partner_id` INT(11) NULL COMMENT ''partner id'',' + #13#10 +
-    '	`Partner_kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Partner_nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`felhasznalo_id` INT(11) NULL COMMENT ''felhasználó id'',' + #13#10 +
-    '	`Felhasznalo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`menny` DECIMAL(12,2) NULL,' + #13#10 +
-    '	`modositva` DATETIME NULL COMMENT ''automatikusan beirja az időpontot updaten is '',' + #13#10 +
-    '	`tort` TINYINT(1) NULL' + #13#10 +
-    ') ENGINE=MyISAM;' + #13#10 +
-    '' + #13#10 +
+//    'CREATE TABLE IF NOT EXISTS `keszlet_nezet` (' + #13#10 +
+//    '	`Term_id` INT(11) UNSIGNED NOT NULL COMMENT ''termék id'',' + #13#10 +
+//    '	`Term_kod` VARCHAR(30) NOT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`Term_nev` VARCHAR(100) NOT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`Tarolo_id` INT(11) NULL COMMENT ''tároló id'',' + #13#10 +
+//    '	`Tarolo_nev` VARCHAR(50) NOT NULL COLLATE ''utf8_general_ci'',' + #13#10 +
+//    '	`partner_id` INT(11) NULL COMMENT ''partner id'',' + #13#10 +
+//    '	`Partner_kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`Partner_nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`felhasznalo_id` INT(11) NULL COMMENT ''felhasználó id'',' + #13#10 +
+//    '	`Felhasznalo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`menny` DECIMAL(12,2) NULL,' + #13#10 +
+//    '	`modositva` DATETIME NULL COMMENT ''automatikusan beirja az időpontot updaten is '',' + #13#10 +
+//    '	`tort` TINYINT(1) NULL' + #13#10 +
+//    ') ENGINE=MyISAM;' + #13#10 +
+//    '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `merlegelok` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`Nev` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
@@ -328,14 +328,14 @@ interface
     'PRIMARY KEY (`ID`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
-    'CREATE TABLE `partner_combo` (' + #13#10 +
-    '	`id` INT(11) NOT NULL,' + #13#10 +
-    '	`kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`combo` VARCHAR(121) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`cim` VARCHAR(119) NULL COLLATE ''utf8mb4_general_ci''' + #13#10 +
-    ') ENGINE=MyISAM;' + #13#10 +
-    '' + #13#10 +
+//    'CREATE TABLE `partner_combo` (' + #13#10 +
+//    '	`id` INT(11) NOT NULL,' + #13#10 +
+//    '	`kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`combo` VARCHAR(121) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`cim` VARCHAR(119) NULL COLLATE ''utf8mb4_general_ci''' + #13#10 +
+//    ') ENGINE=MyISAM;' + #13#10 +
+//    '' + #13#10 +
     'DELIMITER //' + #13#10 +
     'CREATE FUNCTION `partner_keszlete`(`p_id_p` INT,' + #13#10 +
     '	`t_id_p` INT,' + #13#10 +
@@ -374,35 +374,35 @@ interface
     'PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
-    'CREATE TABLE `rak_szall_lista_nezet` (' + #13#10 +
-    '	`ID` INT(11) NOT NULL,' + #13#10 +
-    '	`Sorszam` VARCHAR(20) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Ev_ssz` INT(11) NULL,' + #13#10 +
-    '	`Eazon` VARCHAR(30) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Storno` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`K_ID` INT(11) NULL,' + #13#10 +
-    '	`K_Kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`K_Nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`K_Cim` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`k_tarolo_id` INT(11) NULL,' + #13#10 +
-    '	`k_tarolo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`V_ID` INT(11) NULL,' + #13#10 +
-    '	`V_Kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`V_Nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`V_Cim` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`v_tarolo_id` INT(11) NULL,' + #13#10 +
-    '	`v_tarolo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`datum` DATE NULL,' + #13#10 +
-    '	`Felhasznalo` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`megjegyzes` VARCHAR(200) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`rt_id` INT(11) NOT NULL,' + #13#10 +
-    '	`termek_id` INT(11) NULL,' + #13#10 +
-    '	`termek_kod` VARCHAR(30) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`termek_nev` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`mennyiseg` DECIMAL(12,2) NULL,' + #13#10 +
-    '	`tort` TINYINT(1) NULL' + #13#10 +
-    ') ENGINE=MyISAM;' + #13#10 +
-    '' + #13#10 +
+//    'CREATE TABLE `rak_szall_lista_nezet` (' + #13#10 +
+//    '	`ID` INT(11) NOT NULL,' + #13#10 +
+//    '	`Sorszam` VARCHAR(20) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`Ev_ssz` INT(11) NULL,' + #13#10 +
+//    '	`Eazon` VARCHAR(30) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`Storno` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`K_ID` INT(11) NULL,' + #13#10 +
+//    '	`K_Kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`K_Nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`K_Cim` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`k_tarolo_id` INT(11) NULL,' + #13#10 +
+//    '	`k_tarolo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`V_ID` INT(11) NULL,' + #13#10 +
+//    '	`V_Kod` VARCHAR(15) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`V_Nev` VARCHAR(80) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`V_Cim` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`v_tarolo_id` INT(11) NULL,' + #13#10 +
+//    '	`v_tarolo_nev` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`datum` DATE NULL,' + #13#10 +
+//    '	`Felhasznalo` VARCHAR(50) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`megjegyzes` VARCHAR(200) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`rt_id` INT(11) NOT NULL,' + #13#10 +
+//    '	`termek_id` INT(11) NULL,' + #13#10 +
+//    '	`termek_kod` VARCHAR(30) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`termek_nev` VARCHAR(100) NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+//    '	`mennyiseg` DECIMAL(12,2) NULL,' + #13#10 +
+//    '	`tort` TINYINT(1) NULL' + #13#10 +
+//    ') ENGINE=MyISAM;' + #13#10 +
+//    '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `rak_szall_tet` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`RK_ID` int(11) DEFAULT NULL,' + #13#10 +
@@ -479,28 +479,28 @@ interface
     'SET SQL_MODE=@OLDTMP_SQL_MODE;' + #13#10 +
     '' + #13#10 +
     'DROP TABLE IF EXISTS `keszlet_nezet`;' + #13#10 +
-    'CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `keszlet_nezet` AS SELECT k.t_id AS Term_id, term.kod AS Term_kod,term.nev AS Term_nev,' + #13#10 +
+    'CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `keszlet_nezet` AS SELECT k.t_id AS Term_id, term.kod AS Term_kod,term.nev AS Term_nev,' + #13#10 +
     'k.Tarolo_id, tar.nev AS Tarolo_nev,k.partner_id,p.kod AS Partner_kod,p.nev AS Partner_nev,' + #13#10 +
     'k.f_id AS felhasznalo_id,f.nev AS Felhasznalo_nev,k.menny,k.modositva,k.tort' + #13#10 +
-    'FROM keszlet K' + #13#10 +
+    'FROM keszlet k' + #13#10 +
     'INNER JOIN termek term ON term.ID=k.t_id' + #13#10 +
     'INNER JOIN tarolok tar ON tar.id=k.tarolo_id' + #13#10 +
     'INNER JOIN partner p ON p.ID=k.partner_id' + #13#10 +
     'LEFT JOIN felhasz f ON f.id=k.f_id ;' + #13#10 +
     '' + #13#10 +
     'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
-    'CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,' + #13#10 +
+    'CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,' + #13#10 +
     'CONCAT(RPAD(kod,20),'' '',RPAD(nev,100)) As combo,' + #13#10 +
     'CONCAT(irsz,'' '',telepules,'' '', if(kerulet<>'''',CONCAT(kerulet,'' ''),''''),if(kozterulet<>'''',CONCAT(kozterulet),'' ''),' + #13#10 +
     'if(kozt_jelleg<>'''',CONCAT('' '',kozt_jelleg),''''),if(hazszam<>'''',CONCAT('' '',hazszam),''''),if(epulet<>'''',CONCAT('' '',epulet),''''),' + #13#10 +
     'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
-    'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim, magansz' + #13#10 +
+    'if(ajto<>'''',CONCAT('' '',ajto),'''')) AS cim' + #13#10 +
     'from partner ;' + #13#10 +
     '' + #13#10 +
     'DROP TABLE IF EXISTS `rak_szall_lista_nezet`;' + #13#10 +
     'CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `rak_szall_lista_nezet` AS SELECT r.*,rt.id AS rt_id,rt.termek_id,rt.termek_kod,rt.termek_nev,rt.mennyiseg,rt.tort' + #13#10 +
     'FROM rak_szall r' + #13#10 +
-    'INNER JOIN rak_szall_tet rt ON rt.RK_id=R.id ;' + #13#10 +
+    'INNER JOIN rak_szall_tet rt ON rt.RK_ID=R.ID ;' + #13#10 +
     '' + #13#10 +
     '/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '''') */;' + #13#10 +
     '/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;' + #13#10 +

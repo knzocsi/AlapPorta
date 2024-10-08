@@ -500,7 +500,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'K'#233'szlet lista')
+            'List of stock')
           ParentFont = False
         end
         object SysMemo1: TfrxSysMemoView
@@ -539,7 +539,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Term.k'#243'd')
+            'Prod.code')
           ParentFont = False
         end
         object Memo3: TfrxMemoView
@@ -555,7 +555,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Term.n'#233'v')
+            'Prod.name')
           ParentFont = False
         end
         object Memo4: TfrxMemoView
@@ -571,7 +571,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Menny.')
+            'Quantity')
           ParentFont = False
         end
         object Line1: TfrxLineView
@@ -595,7 +595,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Partner n'#233'v')
+            'Partner')
           ParentFont = False
         end
         object Memo6: TfrxMemoView
@@ -611,7 +611,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#225'rol'#243)
+            'Storage')
           ParentFont = False
         end
       end
@@ -725,7 +725,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haRight
           Memo.UTF8W = (
-            #214'SSZESEN: [SUM(<frxDBDKeszlet."menny">,MasterData1)]')
+            'SUM: [SUM(<frxDBDKeszlet."menny">,MasterData1)]')
           ParentFont = False
         end
       end
@@ -892,8 +892,8 @@ object AF: TAF
       'tort=tort')
     DataSource = rktetmDs
     BCDToCurrency = False
-    Left = 720
-    Top = 192
+    Left = 696
+    Top = 304
   end
   object frxrakszall: TfrxReport
     Version = '6.7'
@@ -912,9 +912,315 @@ object AF: TAF
       'end.')
     Left = 720
     Top = 240
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxDBDrakszall
+        DataSetName = 'frxDBDrakszall'
+      end>
     Variables = <>
     Style = <>
+    object Data: TfrxDataPage
+      Height = 1000
+      Width = 1000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210
+      PaperHeight = 297
+      PaperSize = 9
+      LeftMargin = 10
+      RightMargin = 10
+      TopMargin = 10
+      BottomMargin = 10
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 124.724490000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object frxcim: TfrxMemoView
+          Align = baCenter
+          AllowVectorExport = True
+          Left = 166.299320000000000000
+          Top = 18.897650000000000000
+          Width = 385.512060000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'Inter warehouse delivery note')
+          ParentFont = False
+        end
+        object frxbizszam: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 20.456710000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxbizszam')
+          ParentFont = False
+        end
+        object frxdatum: TfrxMemoView
+          AllowVectorExport = True
+          Left = 616.063390000000000000
+          Top = 20.456710000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxdatum')
+          ParentFont = False
+        end
+        object frxk_partner: TfrxMemoView
+          AllowVectorExport = True
+          Left = 113.385900000000000000
+          Top = 60.692950000000000000
+          Width = 377.953000000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxk_partner')
+        end
+        object frxk_tarolo: TfrxMemoView
+          AllowVectorExport = True
+          Left = 506.457020000000000000
+          Top = 60.692950000000000000
+          Width = 204.094620000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxk_tarolo')
+        end
+        object frxf_partner: TfrxMemoView
+          AllowVectorExport = True
+          Left = 112.606370000000000000
+          Top = 94.488250000000000000
+          Width = 377.953000000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxf_partner')
+        end
+        object frxf_tarolo: TfrxMemoView
+          AllowVectorExport = True
+          Left = 506.457020000000000000
+          Top = 94.488250000000000000
+          Width = 204.094620000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'frxf_tarolo')
+        end
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 60.472480000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Sender:')
+          ParentFont = False
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 94.488250000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Receipt:')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          Align = baWidth
+          AllowVectorExport = True
+          Top = 120.944960000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+      end
+      object ColumnHeader1: TfrxColumnHeader
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 26.456710000000000000
+        Top = 166.299320000000000000
+        Width = 718.110700000000000000
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Prod.code')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 117.165430000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Prod.name')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 604.724800000000000000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Quantity')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          Align = baRight
+          AllowVectorExport = True
+          Left = 661.417750000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            'Brok.seed')
+          ParentFont = False
+        end
+        object Line2: TfrxLineView
+          Align = baWidth
+          AllowVectorExport = True
+          Top = 20.456710000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 253.228510000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDrakszall
+        DataSetName = 'frxDBDrakszall'
+        RowCount = 0
+        Stretched = True
+        object frxDBDrakszalltermek_kod: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 1.889763780000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          StretchMode = smMaxHeight
+          DataField = 'termek_kod'
+          DataSet = frxDBDrakszall
+          DataSetName = 'frxDBDrakszall'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDrakszall."termek_kod"]')
+        end
+        object frxDBDrakszalltermek_nev: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 113.385900000000000000
+          Top = 1.889763780000000000
+          Width = 419.527830000000000000
+          Height = 18.897650000000000000
+          StretchMode = smMaxHeight
+          DataField = 'termek_nev'
+          DataSet = frxDBDrakszall
+          DataSetName = 'frxDBDrakszall'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDrakszall."termek_nev"]')
+        end
+        object frxDBDrakszallmenny: TfrxMemoView
+          IndexTag = 1
+          AllowVectorExport = True
+          Left = 540.472790000000000000
+          Top = 1.889763780000000000
+          Width = 113.385900000000000000
+          Height = 18.897650000000000000
+          DataField = 'menny'
+          DataSet = frxDBDrakszall
+          DataSetName = 'frxDBDrakszall'
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[frxDBDrakszall."menny"]')
+        end
+        object CheckBox1: TfrxCheckBoxView
+          AllowVectorExport = True
+          Left = 680.315400000000000000
+          Top = 1.889763780000000000
+          Width = 18.897650000000000000
+          Height = 18.897650000000000000
+          CheckColor = clBlack
+          CheckStyle = csCross
+          DataField = 'tort'
+          DataSet = frxDBDrakszall
+          DataSetName = 'frxDBDrakszall'
+          Frame.Typ = []
+        end
+      end
+    end
   end
   object Q2: TFDQuery
     Connection = Kapcs

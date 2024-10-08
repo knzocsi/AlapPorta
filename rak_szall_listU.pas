@@ -142,11 +142,12 @@ begin
      close
   end;
   //nyomtatva:=false;
-  with aF.frxrakszall do
+  with aF.frxrakszall do     //EZT MÉG MEG KELL CSINÁLNI
    begin
      TfrxMemoView(FindObject('frxbizszam')).Text:=rakszallQSorszam.AsString;
-     if (Sender=btnstorno)or(rakszallQStorno.AsString<>'') then TfrxMemoView(FindObject('frxcim')).Text:='Storno raktárközi szállítólevél'
-     else TfrxMemoView(FindObject('frxcim')).Text:='Raktárközi szállítólevél';
+     if (Sender=btnstorno)or(rakszallQStorno.AsString<>'') then
+         TfrxMemoView(FindObject('frxcim')).Text:='Storno ' + LowerCase(TfrxMemoView(FindObject('frxcim')).Text);
+    //0 else TfrxMemoView(FindObject('frxcim')).Text:='Raktárközi szállítólevél';
      TfrxMemoView(FindObject('frxdatum')).Text:=FormatDateTime('YYYY.MM.DD',rakszallQdatum.AsDateTime);
      TfrxMemoView(FindObject('frxk_partner')).Text:=rakszallQK_Nev.AsString;
      TfrxMemoView(FindObject('frxk_tarolo')).Text:=rakszallQk_tarolo_nev.AsString;

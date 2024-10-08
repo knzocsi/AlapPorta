@@ -110,7 +110,7 @@ var k:Extended;
       with aF.frxrakszall do
        begin
          TfrxMemoView(FindObject('frxbizszam')).Text:=sorsz;
-         TfrxMemoView(FindObject('frxcim')).Text:='Raktárközi szállítólevél';
+         //TfrxMemoView(FindObject('frxcim')).Text:='Raktárközi szállítólevél';
          TfrxMemoView(FindObject('frxdatum')).Text:=FormatDateTime('YYYY.MM.DD',Datuma.Date);
          TfrxMemoView(FindObject('frxk_partner')).Text:=k_partnerlookup.DisplayValue;
          TfrxMemoView(FindObject('frxk_tarolo')).Text:=k_tarololookup.DisplayValue;

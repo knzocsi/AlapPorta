@@ -108,7 +108,7 @@ var
   col_neve,col_felirat:String;
 implementation
 uses
-  AU, kezdokeszletU,UzenetekU;
+  kezdokeszletU,UzenetekU, AU;
 
 {$R *.dfm}
 
@@ -295,3 +295,4 @@ begin
 end;
 
 end.
+

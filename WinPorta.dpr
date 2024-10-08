@@ -55,7 +55,6 @@ uses
   Soap_keresU in 'SOAP\Soap_keresU.pas',
   DijakU in 'DijakU.pas' {DijakF},
   PartnerekU in 'PartnerekU.pas' {PartnerekF},
-  TermekekU in 'TermekekU.pas' {TermekekF},
   KeszletU in 'KeszletU.pas' {KeszletF},
   dijszabU in 'dijszabU.pas' {dijszabF},
   dijszab_termekU in 'dijszab_termekU.pas' {dijszab_termekF},
@@ -63,7 +62,8 @@ uses
   NzelvvalaszTU in 'NzelvvalaszTU.pas' {NyelvF},
   reinit in 'reinit.pas',
   UzenetekU in 'UzenetekU.pas',
-  NezetU in 'NezetU.pas' {NezetF};
+  NezetU in 'NezetU.pas' {NezetF},
+  TermekekU in 'TermekekU.pas' {TermekekF};
 
 {$R *.res}
 
@@ -113,11 +113,11 @@ begin
   Application.CreateForm(TBelepF, BelepF);
   Application.CreateForm(TDijakF, DijakF);
   Application.CreateForm(TPartnerekF, PartnerekF);
-  Application.CreateForm(TTermekekF, TermekekF);
   Application.CreateForm(TKeszletF, KeszletF);
   Application.CreateForm(TdijszabF, dijszabF);
   Application.CreateForm(Tdijszab_termekF, dijszab_termekF);
   Application.CreateForm(TftpF, ftpF);
   Application.CreateForm(TNezetF, NezetF);
+  Application.CreateForm(TTermekekF, TermekekF);
   Application.Run;
 end.

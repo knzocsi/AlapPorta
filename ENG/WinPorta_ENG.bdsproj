@@ -5,7 +5,7 @@
 			<Option Name="Personality">W32ResourceDLL.Personality</Option>
 			<Option Name="ProjectType">ResourceDLL</Option>
 			<Option Name="Version">1.0</Option>
-			<Option Name="GUID">{D0B25661-A793-4B8B-9709-3FF1B0065D83}</Option>
+			<Option Name="GUID">{131BD43A-F449-4774-A760-7804F09F315F}</Option>
 		</Option>
 	</PersonalityInfo>
 	<W32ResourceDLL.Personality>
@@ -29,59 +29,5 @@
 			<Options Name="KeyFile"></Options>
 			<Options Name="KeyName"></Options>
 		</Options>
-		<FileList>
-			<File FileName="AlapbemodU.dfm" ContainerId="W32Form" ModuleName="AlapbemodU.dfm"/>
-			<File FileName="AU.dfm" ContainerId="W32Form" ModuleName="AU.dfm"/>
-			<File FileName="BelepU.dfm" ContainerId="W32Form" ModuleName="BelepU.dfm"/>
-			<File FileName="demotomegU.dfm" ContainerId="W32Form" ModuleName="demotomegU.dfm"/>
-			<File FileName="DijakU.dfm" ContainerId="W32Form" ModuleName="DijakU.dfm"/>
-			<File FileName="dijszab_termekU.dfm" ContainerId="W32Form" ModuleName="dijszab_termekU.dfm"/>
-			<File FileName="dijszabU.dfm" ContainerId="W32Form" ModuleName="dijszabU.dfm"/>
-			<File FileName="EkaerU.dfm" ContainerId="W32Form" ModuleName="EkaerU.dfm"/>
-			<File FileName="FelhaszU.dfm" ContainerId="W32Form" ModuleName="FelhaszU.dfm"/>
-			<File FileName="FelrakCimekU.dfm" ContainerId="W32Form" ModuleName="FelrakCimekU.dfm"/>
-			<File FileName="ForgalomU.dfm" ContainerId="W32Form" ModuleName="ForgalomU.dfm"/>
-			<File FileName="FoU.dfm" ContainerId="W32Form" ModuleName="FoU.dfm"/>
-			<File FileName="FTP\ftpDlU.dfm" ContainerId="W32Form" ModuleName="ftpDlU.dfm"/>
-			<File FileName="Hardver_beallU.dfm" ContainerId="W32Form" ModuleName="Hardver_beallU.dfm"/>
-			<File FileName="ImportU.dfm" ContainerId="W32Form" ModuleName="ImportU.dfm"/>
-			<File FileName="KepekU.dfm" ContainerId="W32Form" ModuleName="KepekU.dfm"/>
-			<File FileName="KeszletU.dfm" ContainerId="W32Form" ModuleName="KeszletU.dfm"/>
-			<File FileName="kezdokeszletU.dfm" ContainerId="W32Form" ModuleName="kezdokeszletU.dfm"/>
-			<File FileName="kodu.dfm" ContainerId="W32Form" ModuleName="kodu.dfm"/>
-			<File FileName="LerakCimekU.dfm" ContainerId="W32Form" ModuleName="LerakCimekU.dfm"/>
-			<File FileName="levon_szovegekU.dfm" ContainerId="W32Form" ModuleName="levon_szovegekU.dfm"/>
-			<File FileName="LibreExcelU.dfm" ContainerId="W32Form" ModuleName="LibreExcelU.dfm"/>
-			<File FileName="Meres_MerlegjegyenU.dfm" ContainerId="W32Form" ModuleName="Meres_MerlegjegyenU.dfm"/>
-			<File FileName="MeresU.dfm" ContainerId="W32Form" ModuleName="MeresU.dfm"/>
-			<File FileName="MerlegelesekU.dfm" ContainerId="W32Form" ModuleName="MerlegelesekU.dfm"/>
-			<File FileName="MerlegkezelokU.dfm" ContainerId="W32Form" ModuleName="MerlegkezelokU.dfm"/>
-			<File FileName="MermodlistU.dfm" ContainerId="W32Form" ModuleName="MermodlistU.dfm"/>
-			<File FileName="MermodU.dfm" ContainerId="W32Form" ModuleName="MermodU.dfm"/>
-			<File FileName="MjegyListaU.dfm" ContainerId="W32Form" ModuleName="MjegyListaU.dfm"/>
-			<File FileName="mjegyU.dfm" ContainerId="W32Form" ModuleName="mjegyU.dfm"/>
-			<File FileName="my_sqlU.dfm" ContainerId="W32Form" ModuleName="my_sqlU.dfm"/>
-			<File FileName="nagykamU.dfm" ContainerId="W32Form" ModuleName="nagykamU.dfm"/>
-			<File FileName="nagykepU.dfm" ContainerId="W32Form" ModuleName="nagykepU.dfm"/>
-			<File FileName="NezetU.dfm" ContainerId="W32Form" ModuleName="NezetU.dfm"/>
-			<File FileName="NzelvvalaszTU.dfm" ContainerId="W32Form" ModuleName="NzelvvalaszTU.dfm"/>
-			<File FileName="NyomtatokU.dfm" ContainerId="W32Form" ModuleName="NyomtatokU.dfm"/>
-			<File FileName="ParositottU.dfm" ContainerId="W32Form" ModuleName="ParositottU.dfm"/>
-			<File FileName="PartnerekU.dfm" ContainerId="W32Form" ModuleName="PartnerekU.dfm"/>
-			<File FileName="PLC_COMU.dfm" ContainerId="W32Form" ModuleName="PLC_COMU.dfm"/>
-			<File FileName="portU.dfm" ContainerId="W32Form" ModuleName="portU.dfm"/>
-			<File FileName="rak_szall_listU.dfm" ContainerId="W32Form" ModuleName="rak_szall_listU.dfm"/>
-			<File FileName="Rak_szallU.dfm" ContainerId="W32Form" ModuleName="Rak_szallU.dfm"/>
-			<File FileName="RendszamokU.dfm" ContainerId="W32Form" ModuleName="RendszamokU.dfm"/>
-			<File FileName="SOAP\DMSoapU.dfm" ContainerId="W32Form" ModuleName="DMSoapU.dfm"/>
-			<File FileName="szoftver_alapU.dfm" ContainerId="W32Form" ModuleName="szoftver_alapU.dfm"/>
-			<File FileName="tarolokU.dfm" ContainerId="W32Form" ModuleName="tarolokU.dfm"/>
-			<File FileName="TermekekU.dfm" ContainerId="W32Form" ModuleName="TermekekU.dfm"/>
-			<File FileName="tesztU.dfm" ContainerId="W32Form" ModuleName="tesztU.dfm"/>
-			<File FileName="tipusokU.dfm" ContainerId="W32Form" ModuleName="tipusokU.dfm"/>
-			<File FileName="Tulajok.dfm" ContainerId="W32Form" ModuleName="Tulajok.dfm"/>
-			<File FileName="VarakozasU.dfm" ContainerId="W32Form" ModuleName="VarakozasU.dfm"/>
-			<File FileName="Win32\Debug\WinPorta_DRC.rc" ContainerId="W32RC" ModuleName="WinPorta_DRC.rc"/>
-		</FileList>
-	</W32ResourceDLL.Personality>
+		<FileList><File FileName="AlapbemodU.dfm" ContainerId="W32Form" ModuleName="AlapbemodU.dfm"/><File FileName="AU.dfm" ContainerId="W32Form" ModuleName="AU.dfm"/><File FileName="BelepU.dfm" ContainerId="W32Form" ModuleName="BelepU.dfm"/><File FileName="demotomegU.dfm" ContainerId="W32Form" ModuleName="demotomegU.dfm"/><File FileName="DijakU.dfm" ContainerId="W32Form" ModuleName="DijakU.dfm"/><File FileName="dijszab_termekU.dfm" ContainerId="W32Form" ModuleName="dijszab_termekU.dfm"/><File FileName="dijszabU.dfm" ContainerId="W32Form" ModuleName="dijszabU.dfm"/><File FileName="EkaerU.dfm" ContainerId="W32Form" ModuleName="EkaerU.dfm"/><File FileName="FelhaszU.dfm" ContainerId="W32Form" ModuleName="FelhaszU.dfm"/><File FileName="FelrakCimekU.dfm" ContainerId="W32Form" ModuleName="FelrakCimekU.dfm"/><File FileName="ForgalomU.dfm" ContainerId="W32Form" ModuleName="ForgalomU.dfm"/><File FileName="FoU.dfm" ContainerId="W32Form" ModuleName="FoU.dfm"/><File FileName="FTP\ftpDlU.dfm" ContainerId="W32Form" ModuleName="ftpDlU.dfm"/><File FileName="Hardver_beallU.dfm" ContainerId="W32Form" ModuleName="Hardver_beallU.dfm"/><File FileName="ImportU.dfm" ContainerId="W32Form" ModuleName="ImportU.dfm"/><File FileName="KepekU.dfm" ContainerId="W32Form" ModuleName="KepekU.dfm"/><File FileName="KeszletU.dfm" ContainerId="W32Form" ModuleName="KeszletU.dfm"/><File FileName="kezdokeszletU.dfm" ContainerId="W32Form" ModuleName="kezdokeszletU.dfm"/><File FileName="kodu.dfm" ContainerId="W32Form" ModuleName="kodu.dfm"/><File FileName="LerakCimekU.dfm" ContainerId="W32Form" ModuleName="LerakCimekU.dfm"/><File FileName="levon_szovegekU.dfm" ContainerId="W32Form" ModuleName="levon_szovegekU.dfm"/><File FileName="LibreExcelU.dfm" ContainerId="W32Form" ModuleName="LibreExcelU.dfm"/><File FileName="Meres_MerlegjegyenU.dfm" ContainerId="W32Form" ModuleName="Meres_MerlegjegyenU.dfm"/><File FileName="MeresU.dfm" ContainerId="W32Form" ModuleName="MeresU.dfm"/><File FileName="MerlegelesekU.dfm" ContainerId="W32Form" ModuleName="MerlegelesekU.dfm"/><File FileName="MerlegkezelokU.dfm" ContainerId="W32Form" ModuleName="MerlegkezelokU.dfm"/><File FileName="MermodlistU.dfm" ContainerId="W32Form" ModuleName="MermodlistU.dfm"/><File FileName="MermodU.dfm" ContainerId="W32Form" ModuleName="MermodU.dfm"/><File FileName="MjegyListaU.dfm" ContainerId="W32Form" ModuleName="MjegyListaU.dfm"/><File FileName="mjegyU.dfm" ContainerId="W32Form" ModuleName="mjegyU.dfm"/><File FileName="my_sqlU.dfm" ContainerId="W32Form" ModuleName="my_sqlU.dfm"/><File FileName="nagykamU.dfm" ContainerId="W32Form" ModuleName="nagykamU.dfm"/><File FileName="nagykepU.dfm" ContainerId="W32Form" ModuleName="nagykepU.dfm"/><File FileName="NezetU.dfm" ContainerId="W32Form" ModuleName="NezetU.dfm"/><File FileName="NzelvvalaszTU.dfm" ContainerId="W32Form" ModuleName="NzelvvalaszTU.dfm"/><File FileName="NyomtatokU.dfm" ContainerId="W32Form" ModuleName="NyomtatokU.dfm"/><File FileName="ParositottU.dfm" ContainerId="W32Form" ModuleName="ParositottU.dfm"/><File FileName="PartnerekU.dfm" ContainerId="W32Form" ModuleName="PartnerekU.dfm"/><File FileName="PLC_COMU.dfm" ContainerId="W32Form" ModuleName="PLC_COMU.dfm"/><File FileName="portU.dfm" ContainerId="W32Form" ModuleName="portU.dfm"/><File FileName="rak_szall_listU.dfm" ContainerId="W32Form" ModuleName="rak_szall_listU.dfm"/><File FileName="Rak_szallU.dfm" ContainerId="W32Form" ModuleName="Rak_szallU.dfm"/><File FileName="RendszamokU.dfm" ContainerId="W32Form" ModuleName="RendszamokU.dfm"/><File FileName="SOAP\DMSoapU.dfm" ContainerId="W32Form" ModuleName="DMSoapU.dfm"/><File FileName="szoftver_alapU.dfm" ContainerId="W32Form" ModuleName="szoftver_alapU.dfm"/><File FileName="tarolokU.dfm" ContainerId="W32Form" ModuleName="tarolokU.dfm"/><File FileName="TermekekU.dfm" ContainerId="W32Form" ModuleName="TermekekU.dfm"/><File FileName="tesztU.dfm" ContainerId="W32Form" ModuleName="tesztU.dfm"/><File FileName="tipusokU.dfm" ContainerId="W32Form" ModuleName="tipusokU.dfm"/><File FileName="Tulajok.dfm" ContainerId="W32Form" ModuleName="Tulajok.dfm"/><File FileName="VarakozasU.dfm" ContainerId="W32Form" ModuleName="VarakozasU.dfm"/><File FileName="Win32\Debug\WinPorta_DRC.rc" ContainerId="W32RC" ModuleName="WinPorta_DRC.rc"/></FileList></W32ResourceDLL.Personality>
 </BorlandProject>

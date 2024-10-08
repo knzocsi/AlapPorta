@@ -99,7 +99,7 @@ object MjegyekF: TMjegyekF
       Width = 113
       Height = 21
       Date = 43587
-      Time = 0.773554583327496100
+      Time = 0.773554583327496000
       TabOrder = 0
       OnChange = piKezdoDatumChange
     end
@@ -769,7 +769,6 @@ object MjegyekF: TMjegyekF
     end
   end
   object mjegyekQ: TFDQuery
-    Connection = AF.Kapcs
     SQL.Strings = (
       '')
     Left = 640
@@ -781,7 +780,6 @@ object MjegyekF: TMjegyekF
     Top = 224
   end
   object termeklist: TFDQuery
-    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from termek ORDER By NEV ASC;')
     Left = 272
@@ -793,7 +791,6 @@ object MjegyekF: TMjegyekF
     Top = 226
   end
   object Partnelist: TFDQuery
-    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner ORDER BY Nev ASC;')
     Left = 448
@@ -805,7 +802,6 @@ object MjegyekF: TMjegyekF
     Top = 224
   end
   object Partnelist2: TFDQuery
-    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * from partner ORDER BY Nev ASC;')
     Left = 448
@@ -818,7 +814,6 @@ object MjegyekF: TMjegyekF
   end
   object tulajT: TFDTable
     IndexFieldNames = 'ID'
-    Connection = AF.Kapcs
     TableName = 'tulajok'
     Left = 192
     Top = 184
@@ -945,7 +940,6 @@ object MjegyekF: TMjegyekF
     Top = 240
   end
   object TarolokT: TFDQuery
-    Connection = AF.Kapcs
     SQL.Strings = (
       'SELECT * FROM tarolok ORDER BY nev ASC')
     Left = 1174

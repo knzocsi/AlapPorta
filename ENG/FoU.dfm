@@ -183,7 +183,7 @@ object FoF: TFoF
           end
           object piKezdoDatum: TDateTimePicker
             Left = 32
-            Top = 22
+            Top = 21
             Width = 113
             Height = 21
             Date = 43587
@@ -832,6 +832,7 @@ object FoF: TFoF
         Anchors = [akTop, akRight]
         Caption = 'Nyelv/Language'
         TabOrder = 0
+        Visible = False
         OnClick = btnnyelvClick
       end
     end

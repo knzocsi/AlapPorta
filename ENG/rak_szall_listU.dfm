@@ -85,7 +85,7 @@ object rak_szall_listF: Trak_szall_listF
       Width = 113
       Height = 21
       Date = 43587
-      Time = 0.773554583327496100
+      Time = 0.773554583327496000
       TabOrder = 1
       OnChange = piKezdoDatumChange
     end
@@ -327,11 +327,9 @@ object rak_szall_listF: Trak_szall_listF
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitLeft = 64
-    ExplicitWidth = 185
   end
   object rakszallQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from  rak_szall_lista_nezet')
     Left = 752
@@ -490,7 +488,7 @@ object rak_szall_listF: Trak_szall_listF
     Top = 304
   end
   object k_partnerQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from partner_combo order by nev ASC')
     Left = 48
@@ -502,7 +500,7 @@ object rak_szall_listF: Trak_szall_listF
     Top = 50
   end
   object k_taroloQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from tarolok order by nev ASC')
     Left = 576
@@ -519,7 +517,7 @@ object rak_szall_listF: Trak_szall_listF
     Top = 90
   end
   object f_taroloQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from tarolok order by nev ASC')
     Left = 576
@@ -531,14 +529,14 @@ object rak_szall_listF: Trak_szall_listF
     Top = 90
   end
   object f_partnerQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select * from partner_combo order by nev ASC')
     Left = 48
     Top = 90
   end
   object TermekekQ: TFDQuery
-    Connection = aF.Kapcs
+    Connection = AF.Kapcs
     SQL.Strings = (
       'select id,kod,nev from termek order by nev ASC')
     Left = 160
@@ -941,7 +939,7 @@ object rak_szall_listF: Trak_szall_listF
           IndexTag = 1
           AllowVectorExport = True
           Left = 109.606370000000000000
-          Top = 20.787401574803100000
+          Top = 20.787401574803200000
           Width = 294.803340000000000000
           Height = 18.897650000000000000
           DataField = 'K_Nev'
