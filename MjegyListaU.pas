@@ -11,7 +11,8 @@ uses
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
   frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup, JvMemoryDataset,
   JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet, Vcl.Mask, JvExMask, JvSpin,
-  JvSplitter, JvSplit;
+  JvSplitter, JvSplit, FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Phys, FireDAC.VCLUI.Wait;
 
 type
   TMjegyekF = class(TForm)
@@ -137,6 +138,7 @@ type
     mlistaGrid: TJvDBUltimGrid;
     Kep3: TImage;
     Kep4: TImage;
+    FDTable1: TFDTable;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);

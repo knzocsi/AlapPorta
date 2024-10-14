@@ -766,6 +766,506 @@ object MjegyekF: TMjegyekF
       EditControls = <>
       RowsHeight = 17
       TitleRowHeight = 17
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Sorszam'
+          Title.Caption = 'Sorsz'#225'm'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Ev_ssz'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Eazon'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Storno'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Rendszam'
+          Title.Caption = 'Rendsz'#225'm'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Rendszam2'
+          Title.Caption = 'Rendsz'#225'm 2'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P_ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P_Kod'
+          Title.Caption = 'Part.k'#243'd'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P_Nev'
+          Title.Caption = 'Part.n'#233'v'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P_Cim'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Termek_ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Termek_Kod'
+          Title.Caption = 'Term'#233'k k'#243'd'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Termek_Nev'
+          Title.Caption = 'Term'#233'k n'#233'v'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Termek_afa'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'termek_ar'
+          Title.Caption = 'Term'#233'k '#225'r'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Szallitolev'
+          Title.Caption = 'Sz'#225'll'#237't'#243'lev'#233'l'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Megjegyzes'
+          Title.Caption = 'Megjegyz'#233's'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tomegbe'
+          Title.Caption = 'T'#246'meg be'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tomegki'
+          Title.Caption = 'T'#246'meg ki'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Erkdatum'
+          Title.Caption = #201'rk.d'#225'tum'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Erkido'
+          Title.Caption = #201'rk.id'#337
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tavdatum'
+          Title.Caption = 'T'#225'v.datum'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tavido'
+          Title.Caption = 'T'#225'v.id'#337
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Felhasznalo'
+          Title.Caption = 'Felhaszn'#225'l'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'irany'
+          Title.Caption = 'Ir'#225'ny'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Brutto'
+          Title.Caption = 'Brutt'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Tara'
+          Title.Caption = 'T'#225'ra'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Netto'
+          Title.Caption = 'Nett'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SzNetto'
+          Title.Caption = 'Sz.Nett'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'merlegelo'
+          Title.Caption = 'M'#233'rlegel'#337
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'kuj'
+          Title.Caption = 'K'#220'J'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ktj'
+          Title.Caption = 'KTJ'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ekaer'
+          Title.Caption = 'EK'#193'ER'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'psz'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'alapnedv'
+          Title.Caption = 'Alapnedv'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'nedv'
+          Title.Caption = 'Nedv.'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'tisztasag'
+          Title.Caption = 'Tisztas'#225'g'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'tortszaz'
+          Title.Caption = 'T'#246'rt%'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'feherje'
+          Title.Caption = 'Feh'#233'rje%'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'olaj'
+          Title.Caption = 'Olaj%'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'esesszam'
+          Title.Caption = 'Es'#233'ssz'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'hekto'
+          Title.Caption = 'Hekt'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'egysegtomeg'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'kerekites'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'kukorica'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'buzaminoseg'
+          Title.Caption = 'B'#250'zamin'#337's'#233'g'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'mennyiseg'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tarolasi_dij'
+          Title.Caption = 'T'#225'rol'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'szaritasi_dij'
+          Title.Caption = 'Sz'#225'r'#237't'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'tisztitasi_dij'
+          Title.Caption = 'Tiszt'#237't'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'tarolo_id'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'tarolo'
+          Title.Caption = 'T'#225'rol'#243
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'elso_kezi'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'masodik_kezi'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_id'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_nev'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_cim'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_adoszam'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_kuj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_ktj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_elotag'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_Kod'
+          Title.Caption = 'Part.k'#243'd2'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_Nev'
+          Title.Caption = 'Part.n'#233'v2'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_Cim'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_kuj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P2_ktj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'levon_szoveg'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'levon_tomeg'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'ewc'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'tul_cjsz'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'szaraz_tort_szemek'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Szabalyos_meres'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Kepnev1'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Kepnev2'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Kepnev3'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'Kepnev4'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'betarolasi_dij'
+          Title.Caption = 'Bet'#225'rol'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'kitarolasi_dij'
+          Title.Caption = 'Kit'#225'rol'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'szallitasi_dij'
+          Title.Caption = 'Sz'#225'll'#237't'#225'si d'#237'j'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_ID'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_Kod'
+          Title.Caption = 'Part.k'#243'd3'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_Nev'
+          Title.Caption = 'Part.n'#233'v3'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_Cim'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_kuj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'P3_ktj'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'itj'
+          Title.Caption = 'VTSZ/ITJ'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'szarmazasi_hely'
+          Title.Caption = 'Sz'#225'rmaz'#225'si hely'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'siker'
+          Title.Caption = 'Sik'#233'r'
+          Visible = True
+        end>
     end
   end
   object mjegyekQ: TFDQuery
@@ -2143,5 +2643,12 @@ object MjegyekF: TMjegyekF
         end
       end
     end
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'ID'
+    Connection = AF.Kapcs
+    TableName = 'merlegjegy'
+    Left = 80
+    Top = 225
   end
 end

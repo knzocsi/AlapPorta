@@ -665,6 +665,22 @@ procedure TAF.DataModuleCreate(Sender: TObject);
    if irszQ.IsEmpty then IrszScript.ExecuteAll;
    irszQ.Close;
   end;
+
+  procedure nyelv_valasztas;
+  var    h:THandle;
+  const
+    ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
+  begin
+   if nyelv_index=0 then exit;
+   try
+    //FordF:=FordF.Create(Application);
+   finally
+    case nyelv_index of
+     0: if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
+     1: if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
+    end;
+   end;
+  end;
 begin
   bit:=9;
   kapcs_ini_kezel;
@@ -718,6 +734,7 @@ begin
   modok_vegrehajt;//  SQL_text unitba kell
   if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
   ini_kezel;
+  nyelv_valasztas;
   if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';

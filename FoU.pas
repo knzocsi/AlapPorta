@@ -1190,25 +1190,9 @@ var
         end;
       end;
   end;
-  procedure nyelv_valasztas;
-  var    h:THandle;
-  const
-    ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
-  begin
-   try
-    //FordF:=FordF.Create(Application);
-   finally
-    case nyelv_index of
-     0: if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
-     1: if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
-    end;
-   end;
-  end;
-
 
 begin
   onActivate := nil;
- // nyelv_valasztas;
  // AF.auto_teszt;
   if not Regi_hardver_beallitas then af.HardverQ.Open
   else pnlJobbAlso.Visible:=true;

@@ -85,7 +85,7 @@ object TermekekF: TTermekekF
           item
             Expanded = False
             FieldName = 'Nev'
-            Title.Caption = 'N'#233'v'
+            Title.Caption = 'Name'
             Visible = True
           end
           item
