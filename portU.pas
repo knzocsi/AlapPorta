@@ -169,7 +169,7 @@ begin
   db:=0;
   //mertertek:='-4';
 
-  if uppercase( ParamStr(1))='/LOG' then Append(tf) ;
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then Append(tf) ;
 
 
   if Active then
@@ -754,6 +754,7 @@ begin
       mert:=StrToFloat(ertek);
       ertek:=FloatToStr(mert);
       hibaszamlalo[merlegszam]:=0;
+      if (uppercase( ParamStr(1))='/LOGM') and (mert>mintomeg) then  Writeln(tf,DateTimeToStr(now)+' '+ertek);
     except
       hibaszamlalo[merlegszam]:=hibaszamlalo[merlegszam]+1;
       ertek:='-0'
@@ -773,7 +774,8 @@ begin
   begin
     memEredmeny.Text:='M�rt �rt�k: ('+Merleg_tipus[merlegszam]+IntToStr(mtip)+')'+ertek+#13#10+memEredmeny.text;
   end;
-  if uppercase( ParamStr(1))='/LOG' then CloseFile(tf);
+
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then CloseFile(tf);
   if (hibaszamlalo[merlegszam]=0) or (hibaszamlalo[merlegszam]>hibamaximum) then Result:=ertek
   else Result:=mertertekek[merlegszam];
   if (hibaszamlalo[merlegszam]=0) then  merlegszamlalo[merlegszam]:=merlegszamlalo[merlegszam]+1;
@@ -906,7 +908,7 @@ end;
 procedure TPortF.IP1_Start;
 begin
   Client_Timer1.Enabled:=False;
-  if uppercase( ParamStr(1))='/LOG' then
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then
   begin
     ForceDirectories(konyvtar+'LOG');
     AssignFile(tf,konyvtar+'LOG\1IP'+datum_szoveg(Now,True)+'.txt');
@@ -924,7 +926,7 @@ end;
 procedure TPortF.IP2_Start;
 begin
   Client_Timer2.Enabled:=False;
-  if uppercase( ParamStr(1))='/LOG' then
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then
   begin
     ForceDirectories(konyvtar+'\LOG');
     AssignFile(tf,konyvtar+'LOG\2IP'+datum_szoveg(Now,True)+'.txt');
@@ -942,7 +944,7 @@ end;
 procedure TPortF.IP3_Start;
 begin
   Client_Timer3.Enabled:=False;
-  if uppercase( ParamStr(1))='/LOG' then
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then
   begin
     ForceDirectories(konyvtar+'\LOG');
     AssignFile(tf,konyvtar+'LOG\3IP'+datum_szoveg(Now,True)+'.txt');
@@ -1019,7 +1021,7 @@ end;
 
 procedure TPortF.port2open;
 begin
-  if uppercase( ParamStr(1))='/LOG' then
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then
   begin
     ForceDirectories(konyvtar+'\LOG');
     AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');
@@ -1054,7 +1056,7 @@ end;
 
 procedure TPortF.portopen;
 begin
-  if uppercase( ParamStr(1))='/LOG' then
+  if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then
   begin
     ForceDirectories(konyvtar+'LOG');
     AssignFile(tf,konyvtar+'LOG\'+datum_szoveg(Now,True)+'.txt');

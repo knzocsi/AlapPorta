@@ -300,6 +300,12 @@ object FoF: TFoF
               Title.Caption = 'M'#233'rlegjegy'
               Width = 70
               Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'soap_code'
+              Title.Caption = 'Soap'
+              Visible = True
             end>
         end
       end
@@ -1592,5 +1598,19 @@ object FoF: TFoF
     OnTimer = tmrForgalom_frissitesTimer
     Left = 229
     Top = 196
+  end
+  object JvFormStorage1: TJvFormStorage
+    AppStorage = IniFile
+    AppStoragePath = '%FORM_NAME%\'
+    StoredValues = <>
+    Left = 657
+    Top = 360
+  end
+  object IniFile: TJvAppIniFileStorage
+    StorageOptions.BooleanStringTrueValues = 'TRUE, YES, Y'
+    StorageOptions.BooleanStringFalseValues = 'FALSE, NO, N'
+    SubStorages = <>
+    Left = 432
+    Top = 352
   end
 end

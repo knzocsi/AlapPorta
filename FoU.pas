@@ -13,7 +13,7 @@ uses
   IdTCPConnection, IdTCPClient, IdModBusClient, vcl.imaging.jpeg,
   Vcl.Imaging.pngimage, System.inifiles,System.Contnrs,Winapi.ShellAPI,
   ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons, JvExControls,
-  JvLED,AU;
+  JvLED,AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement;
 
 type
   PCKommunikacio_thread=class(TThread)
@@ -42,7 +42,7 @@ type
   end;
 
   PLC_Lekerdezes_Thread  = class(TThread)
-
+     procedure kijelez;
   protected
     procedure Execute; override;
   end;
@@ -208,6 +208,8 @@ type
     lblThRendszam1: TLabel;
     lblThRendszam2: TLabel;
     btnnyelv: TButton;
+    JvFormStorage1: TJvFormStorage;
+    IniFile: TJvAppIniFileStorage;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -369,6 +371,7 @@ var
   ThPLC_Lekerdezes:PLC_Lekerdezes_Thread;
   Sorompok:array[1..maxmerleg,1..2] of Soromporec;
   iranyok:array[1..maxmerleg] of string[2];
+  PLC_lekerdezes_szamlalo:integer;
 
 implementation
 
@@ -794,7 +797,7 @@ end;
 
 procedure TFoF.Djak1Click(Sender: TObject);
 begin
-DijakF.showmodal;
+  DijakF.showmodal;
 end;
 
 procedure TFoF.Djszabsikategrik1Click(Sender: TObject);
@@ -878,7 +881,15 @@ begin
     piBefejezoDatum.Date:=date;
     szures;
   end;
-  if AF.ForgalomQ.Active then  AF.ForgalomQ.Refresh;
+  if AF.ForgalomQ.Active then
+  begin
+    AF.ForgalomQ.Refresh;
+    if felhnev='Automata' then
+    begin
+      af.ForgalomQ.First;
+      kepbetolt;
+    end;
+  end;
   tmrForgalom_frissites.Enabled:=true;
 end;
 
@@ -1251,7 +1262,7 @@ begin
   //piBefejezoDatum.Date := date;
   StatusBar1.panels[0].text := verzio;
   StatusBar1.panels[2].text := rsBejelentkezve + felhnev;
-  WindowState:=wsMaximized;
+  if not automata_kezelo then  WindowState:=wsMaximized;
   if ideiglenes_latszik then
   begin
     AF.NyitbeQ.Close;
@@ -1508,7 +1519,10 @@ procedure TFoF.FormCreate(Sender: TObject);
 var
   i: Integer;
   sL: TStringList;
+  dir:string;
 begin
+  dir:= ExtractFileDir(Application.Exename)+'\';
+  IniFile.FileName:=dir+'form_beallitas.ini';
   kepernyo_kezel;
 
  //nagykamera:=True;
@@ -2767,7 +2781,7 @@ begin
 
       end;
     end;
-    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+' '+nyugalmi_szoveg; //szamlalo_szoveg+':'+nyomtatas_szamlalo.ToString;
+    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont+' '+nyugalmi_szoveg+ szamlalo_szoveg+':'+nyomtatas_szamlalo.ToString+PLC_Lekerdezes_szamlalo.ToString;
     lblIrany.caption:=meresirany;
     try
       if TryStrToInt(mertertekek[1],trint) then tomeg:=trint else tomeg:=0;
@@ -3784,13 +3798,19 @@ end;
 
 { ThPLC_Lekerdezes }
 
+procedure PLC_Lekerdezes_Thread.kijelez;
+begin
+  FoF.mctPLC.ReadCoils(1,16,PLC_Lekerdezett_Valasz);
+end;
+
 procedure PLC_Lekerdezes_Thread.Execute;
 var i:integer;
 begin
   inherited;
+  PLC_lekerdezes_szamlalo:=0;
   repeat
      try
-       FoF.mctPLC.ReadCoils(1,16,PLC_Lekerdezett_Valasz);
+       Synchronize(kijelez);
      finally
 
      end;
@@ -3800,6 +3820,7 @@ begin
        Application.ProcessMessages;
      end;
      //Synchronize(kijelez);
+     PLC_lekerdezes_szamlalo:=PLC_lekerdezes_szamlalo+1;
    until programvege;
 
 
@@ -3844,5 +3865,7 @@ begin
   hwKap.Connected:=False;
   hwKap.Free;
 end;
+
+
 
 end.

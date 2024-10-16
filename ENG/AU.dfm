@@ -223,7 +223,6 @@ object AF: TAF
     ResourceOptions.AutoConnect = False
     UpdateOptions.AssignedValues = [uvLockMode, uvLockWait]
     UpdateOptions.LockMode = lmOptimistic
-    Connected = True
     LoginPrompt = False
     OnLost = KapcsLost
     BeforeCommit = KapcsBeforeCommit
