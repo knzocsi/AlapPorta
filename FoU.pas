@@ -3591,7 +3591,7 @@ begin
           if tomeg>elozotomeg[thmerleg]+20 then
           begin
             elozotomeg[thmerleg]:=tomeg;
-            maxtomeg[thmerleg]:=tomeg;
+            if maxtomeg[thmerleg]<tomeg then maxtomeg[thmerleg]:=tomeg;
             nyugalmiszamlalo[thmerleg]:=0;
             //iranymehhatarozas
             if rendszamleker then

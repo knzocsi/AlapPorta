@@ -112,6 +112,7 @@ var
   hivoszamkijezo_valasz,PC_kommunikacio:string;
   pc_kom_resz:string;
   thElet: array [1..MaxMerleg] of integer;
+  elozo_mert_tomeg:Integer=0;
 
 
 
@@ -754,7 +755,12 @@ begin
       mert:=StrToFloat(ertek);
       ertek:=FloatToStr(mert);
       hibaszamlalo[merlegszam]:=0;
-      if (uppercase( ParamStr(1))='/LOGM') and (mert>mintomeg) then  Writeln(tf,DateTimeToStr(now)+' '+ertek);
+      if (uppercase( ParamStr(1))='/LOGM') and (mert<>elozo_mert_tomeg) then
+      begin
+        Writeln(tf,DateTimeToStr(now)+' '+ertek);
+        elozo_mert_tomeg:=Round(mert);
+      end;
+
     except
       hibaszamlalo[merlegszam]:=hibaszamlalo[merlegszam]+1;
       ertek:='-0'
