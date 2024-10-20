@@ -263,9 +263,9 @@ object FoF: TFoF
             end
             item
               Expanded = False
-              FieldName = 'Rendszam2'
-              Title.Caption = 'Rendsz'#225'm 2'
-              Width = 60
+              FieldName = 'Irany'
+              Title.Caption = 'Ir'#225'ny'
+              Width = 20
               Visible = True
             end
             item
@@ -273,6 +273,13 @@ object FoF: TFoF
               FieldName = 'Tomeg'
               Title.Caption = 'T'#246'meg'
               Width = 50
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Rendszam2'
+              Title.Caption = 'Rendsz'#225'm 2'
+              Width = 60
               Visible = True
             end
             item
@@ -286,13 +293,6 @@ object FoF: TFoF
               FieldName = 'Kod'
               Title.Caption = 'K'#243'd'
               Visible = False
-            end
-            item
-              Expanded = False
-              FieldName = 'Irany'
-              Title.Caption = 'Ir'#225'ny'
-              Width = 20
-              Visible = True
             end
             item
               Expanded = False
@@ -1005,8 +1005,8 @@ object FoF: TFoF
         OnClick = btnElsoClick
       end
       object btnKamerakep: TButton
-        Left = 16
-        Top = 80
+        Left = 21
+        Top = 81
         Width = 75
         Height = 25
         Caption = 'Kamera k'#233'p'
@@ -1546,7 +1546,7 @@ object FoF: TFoF
     ConnectTimeout = 0
     OnResponseError = mctPLCResponseError
     Left = 657
-    Top = 192
+    Top = 200
   end
   object kapcsfriss: TTimer
     Enabled = False
@@ -1565,7 +1565,7 @@ object FoF: TFoF
   object mcIOmodul: TIdModBusClient
     ConnectTimeout = 0
     OnResponseError = mcIOmodulResponseError
-    Left = 705
+    Left = 713
     Top = 192
   end
   object tmrElokep: TTimer

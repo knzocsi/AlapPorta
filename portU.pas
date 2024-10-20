@@ -1047,16 +1047,16 @@ end;
 
 procedure TPortF.portclose;
 begin
- ComPort1.OnRxChar:=nil;
- while  sorosvetelben do
- begin
-   Sleep(10);
-   Application.ProcessMessages;
- end;
- try
-   if ComPort1.Connected then ComPort1.close;
- except
- end;
+  ComPort1.OnRxChar:=nil;
+  while  sorosvetelben do
+  begin
+    Sleep(10);
+    Application.ProcessMessages;
+  end;
+  try
+    if ComPort1.Connected then ComPort1.close;
+  except
+  end;
 end;
 
 

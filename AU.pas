@@ -426,6 +426,14 @@ type
     FDQuery1Felhasznalo_nev: TWideStringField;
     FDQuery1modositva: TDateTimeField;
     FDQuery1tort: TBooleanField;
+    mtPLC_Feladat: TJvMemoryData;
+    mtPLC_FeladatIPCim: TStringField;
+    mtPLC_FeladatPort: TIntegerField;
+    mtPLC_FeladatSorszam: TAutoIncField;
+    mtPLC_FeladatTipus: TStringField;
+    mtPLC_FeladatMuvelet: TStringField;
+    mtPLC_FeladatErtek: TSmallintField;
+    mtPLC_FeladatIO: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

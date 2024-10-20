@@ -420,14 +420,14 @@ object AF: TAF
     ResourceOptions.AssignedValues = [rvMacroCreate, rvMacroExpand, rvDirectExecute, rvPersistent]
     ResourceOptions.MacroCreate = False
     ResourceOptions.DirectExecute = True
-    Left = 856
-    Top = 64
+    Left = 832
+    Top = 48
   end
   object ModScriptDialog: TFDGUIxScriptDialog
     Provider = 'Forms'
     Options = [ssCallstack, ssConsole]
-    Left = 856
-    Top = 112
+    Left = 832
+    Top = 104
   end
   object KeszletQDs: TDataSource
     DataSet = KeszletQ
@@ -856,7 +856,7 @@ object AF: TAF
         Name = 'tort'
         DataType = ftBoolean
       end>
-    Left = 640
+    Left = 616
     Top = 160
     object rktetmtermek_id: TIntegerField
       FieldName = 'termek_id'
@@ -14974,6 +14974,39 @@ object AF: TAF
       AutoGenerateValue = arDefault
       FieldName = 'tort'
       Origin = 'tort'
+    end
+  end
+  object mtPLC_Feladat: TJvMemoryData
+    FieldDefs = <
+      item
+        Name = 'tort'
+        DataType = ftBoolean
+      end>
+    Left = 920
+    Top = 48
+    object mtPLC_FeladatSorszam: TAutoIncField
+      FieldName = 'Sorszam'
+    end
+    object mtPLC_FeladatIPCim: TStringField
+      FieldName = 'IPCim'
+      Size = 15
+    end
+    object mtPLC_FeladatPort: TIntegerField
+      FieldName = 'Port'
+    end
+    object mtPLC_FeladatIO: TIntegerField
+      FieldName = 'IO'
+    end
+    object mtPLC_FeladatTipus: TStringField
+      FieldName = 'Tipus'
+      Size = 1
+    end
+    object mtPLC_FeladatMuvelet: TStringField
+      FieldName = 'Muvelet'
+      Size = 1
+    end
+    object mtPLC_FeladatErtek: TSmallintField
+      FieldName = 'Ertek'
     end
   end
 end

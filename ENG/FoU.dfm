@@ -1601,7 +1601,7 @@ object FoF: TFoF
   end
   object JvFormStorage1: TJvFormStorage
     AppStorage = IniFile
-    AppStoragePath = '%FORM_NAME%'
+    AppStoragePath = '%FORM_NAME%\'
     StoredValues = <>
     Left = 657
     Top = 360

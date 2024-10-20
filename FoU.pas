@@ -306,6 +306,7 @@ type
     procedure Djszabsikategrik1Click(Sender: TObject);
     procedure tmrForgalom_frissitesTimer(Sender: TObject);
     procedure btnnyelvClick(Sender: TObject);
+    procedure PLC_feladatok(IPCim:string;Port,IO:integer;Tipus,Muvelet:string;Ertek:integer);
 
 
   private
@@ -720,8 +721,9 @@ begin
   begin
     if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
       begin
-        PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-        PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,1);
+        //PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+        //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,1);
+        PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',1);
       end
       else
         if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
@@ -1068,12 +1070,13 @@ var
         if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['INFRA'+infraszam.ToString,'M'+merlegszam.ToString]),[]))
             and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
             and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)        then
-          { TODO -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
+          { DONE -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
           if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
           begin
             PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
             if af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger<>0 then
-               PLC_Ir_Coil(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger=1);
+               //PLC_Ir_Coil(af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Hibas').AsInteger=1);
+               PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Hibas_Kimenet_szam').AsInteger,'C','I',af.HardverQ.FieldbyName('Hibas').AsInteger);
             if thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]='' then
             begin
               thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
@@ -1124,11 +1127,12 @@ var
         if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['LAMPA'+lampaszam.ToString,'M'+merlegszam.ToString]),[]))
             and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
             and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)        then
-          { TODO -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
+          { DONE -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
           if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
           begin
             PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-            PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger=1);
+            //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger=1);
+            PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger,'C','I',1);
             //thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
           end
           else
@@ -1332,7 +1336,7 @@ begin
         infrak;
         kamerak;
       end;
-    { TODO -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
+    { DONE -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
       if Regi_hardver_beallitas then
       begin
         if Elso_lampa <> 0 then Lampakapcs(Elso_lampa, Lampa_Zold);
@@ -1461,6 +1465,7 @@ begin
   soap_programvege:=true;
   StatusBar1.panels[1].Text:=rsKilepesFolyamatban;
   Tomeg_Timer.Enabled:=false;
+  if af.mtPLC_Feladat.Active then  af.mtPLC_Feladat.close;
   if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS') and (felhnev<>'') then
   begin
     PortF.portclose;
@@ -1707,9 +1712,10 @@ begin
 end;
 
 procedure TFoF.JvLED1DblClick(Sender: TObject);
-var szam:integer;
+var szam,allapot:integer;
 begin
   szam:=0;
+  allapot:=0;
   if  sender = JvLED1 then  szam:=1
   else
     if sender = JvLED2 then  szam:=2
@@ -1734,8 +1740,11 @@ begin
       if af.HardverQ.FieldbyName('Tipus').AsString='PLC' then
       begin
         PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-        PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status);
         //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
+        //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status);
+        if TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status then allapot:=1;
+        PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',allapot);
+
       end
       else
         if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
@@ -2523,9 +2532,11 @@ begin
           PLC_IP:=FieldbyName('Port_v_IP_Cim').AsString;
           if nyit then
           begin
-            PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,True);
+            //PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,True);
+            PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('IP_Port').AsInteger,FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',1);
             Sleep(100);
-            PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,False);
+            //PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,False);
+            PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('IP_Port').AsInteger,FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',0);
             Sorompok[merleg,sorompo].nyitva:=True;
             Sorompok[merleg,sorompo].nyitas_idopont:=Time;
             Sorompok[merleg,sorompo].varakozas:=FieldbyName('Varakozas_ms').AsInteger/24/60/60/1000;
@@ -2536,9 +2547,11 @@ begin
           end
           else
           begin
-            PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,True);
+            //PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,True);
+            PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('IP_Port').AsInteger,FieldbyName('Kikapcs_Kimenet_szam').AsInteger,'C','I',1);
             Sleep(100);
-            PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,False);
+            //PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,False);
+            PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString,FieldbyName('IP_Port').AsInteger,FieldbyName('Kikapcs_Kimenet_szam').AsInteger,'C','I',0);
             Sorompok[merleg,sorompo].nyitva:=False;
             if felhnev='Programozó' then
             begin
@@ -2898,8 +2911,11 @@ begin
             begin
               PLC_Zold:=Mire<>Lampa_Zold;
               PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-              PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,PLC_Zold);
+
               //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
+              //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,PLC_Zold);
+              //if Mire=Lampa_Zold then Zold:=1 else Zold:=0;
+              PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',Mire);
             end
             else
               if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
@@ -2911,9 +2927,6 @@ begin
           end;
         end;
       end;
-
-
-
 end;
 
 procedure TFoF.ledLampaDblClick(Sender: TObject);
@@ -3163,7 +3176,7 @@ var
       rendszamvolt[merleg] := true;
       mentes;
       if Elso_Gomb_Meres_Utan=1 then btnElsoClick(Sender);
-      { TODO -oKNZ -c : Ide kell a lampa befelé fordulas 2021. 10. 19. 17:57:26 }
+      { DONE -oKNZ -c : Ide kell a lampa befelé fordulas 2021. 10. 19. 17:57:26 }
       if Elso_lampa <> 0 then
       Lampakapcs(Elso_lampa, Lampa_Zold);
       //Felnyitja a soropmót a lehajtáshoz
@@ -3233,7 +3246,7 @@ var
             PLC_Ir(Infra_BE_Cim, 0);
             PLC_Ir(Infra_KI_Cim, 0);
           end;
-      { TODO -oKNZ -c : Ide kell a lampa kifelefordulas 2021. 10. 19. 17:58:03 }
+      { DONE -oKNZ -c : Ide kell a lampa kifelefordulas 2021. 10. 19. 17:58:03 }
       if (not (ledLampa.Kind = lkGreenLight))  then
       begin
         Lampakapcs(Elso_lampa, Lampa_Zold);
@@ -3330,6 +3343,27 @@ begin
   end;
 end;
 
+procedure TFoF.PLC_feladatok(IPCim: string; Port,IO: integer; Tipus,
+  Muvelet: string; Ertek: integer);
+begin
+  //Port mindig a táblából jön
+  //Tipus:C vagy R  (Coil vagy Register)
+  //Muvelet: I vagy O
+  //Az érték mindig numerikus, ha kell a tényleges hívásnál átváltjuk
+  with   AF.mtPLC_Feladat do
+  begin
+    if not Active then open;
+     Append;
+     FieldByName('IPCim').AsString:= IPCim;
+     FieldByName('Port').AsInteger:=Port;
+     FieldByName('IO').AsInteger:=IO;
+     FieldByName('Tipus').AsString:= Tipus;
+     FieldByName('Muvelet').AsString:= Muvelet;
+     FieldByName('Ertek').AsInteger:=Ertek;
+     Post;
+  end;
+end;
+
 function TFoF.PLC_Ir(cim, ertek: Integer): boolean;
 
 begin
@@ -3361,12 +3395,16 @@ end;
 
 function TFoF.PLC_Ir_Coil(cim:integer; ertek: Boolean): boolean;
 begin
+  //Minden aPLC_Lekerdezes_Thread.kijelez szálban fut le
+
+  (*
   mctPLC.Host := PLC_IP;
   mctPLC.WriteCoil(cim+1,Ertek);
   if felhnev='Programozó' then
   begin
     memlog.Lines.Insert(0,'Cim: '+cim.ToString+' '+ertek.ToString);
   end;
+  *)
 end;
 
 function TFoF.PLC_Olvas(cim: integer): integer;
@@ -3800,7 +3838,27 @@ end;
 
 procedure PLC_Lekerdezes_Thread.kijelez;
 begin
+  with af.mtPLC_Feladat do
+    while (Active) and (not IsEmpty) do
+    begin
+      FoF.mctPLC.Host:=FieldByName('IPCim').AsString;
+      if FieldByName('Port').AsInteger=0 then FoF.mctPLC.Port:=502
+      else  FoF.mctPLC.Port:=FieldByName('Port').AsInteger;
+      if FieldByName('Tipus').AsString='C' then
+      begin
+        if FieldByName('Muvelet').AsString='I' then FoF.mctPLC.WriteCoil(FieldByName('IO').AsInteger+1,FieldByName('Ertek').AsInteger=1);
+        if felhnev='Programozó' then
+        begin
+          Fof.memlog.Lines.Insert(0,'Cim: '+IntToStr(FieldByName('IO').AsInteger+1)+' '+FieldByName('Ertek').AsString);
+        end;
+        //if FieldByName('Muvelet').AsString='O' then FoF.mctPLC.ReadCoil(FieldByName('IO').AsInteger,FieldByName('Ertek').AsInteger=1);
+      end;
+
+      Delete;
+    end;
+  { TODO -oKNZ -c : Több PLC-t itt kell megcsinálni  2024.10.20. 20:15:55 }
   FoF.mctPLC.ReadCoils(1,16,PLC_Lekerdezett_Valasz);
+
 end;
 
 procedure PLC_Lekerdezes_Thread.Execute;
