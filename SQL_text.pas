@@ -500,7 +500,7 @@ interface
     'DROP TABLE IF EXISTS `rak_szall_lista_nezet`;' + #13#10 +
     'CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `rak_szall_lista_nezet` AS SELECT r.*,rt.id AS rt_id,rt.termek_id,rt.termek_kod,rt.termek_nev,rt.mennyiseg,rt.tort' + #13#10 +
     'FROM rak_szall r' + #13#10 +
-    'INNER JOIN rak_szall_tet rt ON rt.RK_ID=R.ID ;' + #13#10 +
+    'INNER JOIN rak_szall_tet rt ON rt.RK_ID=r.ID ;' + #13#10 +
     '' + #13#10 +
     '/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '''') */;' + #13#10 +
     '/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;' + #13#10 +
