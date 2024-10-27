@@ -38,7 +38,6 @@ object FoF: TFoF
         Width = 200
       end
       item
-        Text = 'K'#225'rtya:'
         Width = 150
       end
       item
