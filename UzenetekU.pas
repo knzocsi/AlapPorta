@@ -89,6 +89,10 @@ interface
  resourcestring rsVevo = 'Vevõ:';
  resourcestring rsElado = 'Eladó:';
  resourcestring rsAtado = 'Átadó:';
+ resourcestring rsSzallito = 'Szállító:';
+ resourcestring rsFuvarozo = 'Fuvarozó:';
+ resourcestring rsMegrendelo = 'Megrendelõ:';
+ resourcestring rsErtekesito = 'Értékesítõ:';
  resourcestring rsTermekEgysegaraValtozott = 'A termék egységára megváltozott. Módosítja a mérlegjegyen?';
  resourcestring rsStornozza = 'Biztosan sztornózza?';
  resourcestring rsBiztosanTorliElszamolasbol = 'Biztisan törli az elszámolásból?';

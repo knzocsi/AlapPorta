@@ -238,7 +238,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 45506.718438101850000000
+    ReportOptions.LastChange = 45593.546568506940000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -250,6 +250,867 @@ object AF: TAF
     Datasets = <>
     Variables = <>
     Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 5.000000000000000000
+      BottomMargin = 5.000000000000000000
+      MirrorMargins = True
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Height = 559.984540000000000000
+        ParentFont = False
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object memcim: TfrxMemoView
+          Align = baCenter
+          AllowVectorExport = True
+          Left = 236.220625000000000000
+          Top = 15.118120000000000000
+          Width = 245.669450000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'M'#233'rlegjegy')
+          ParentFont = False
+        end
+        object SysMemo1: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 6.338590000000000000
+          Top = 4.559060000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[DATE]')
+          ParentFont = False
+        end
+        object SysMemo2: TfrxSysMemoView
+          AllowVectorExport = True
+          Left = 6.338590000000000000
+          Top = 27.236240000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[TIME]')
+          ParentFont = False
+        end
+        object Line1: TfrxLineView
+          AllowVectorExport = True
+          Top = 52.913420000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Top = 60.472480000000000000
+          Width = 117.165430000000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'M'#233'rlegel'#233's helye:')
+          ParentFont = False
+        end
+        object memtulaj: TfrxMemoView
+          AllowVectorExport = True
+          Left = 114.165430000000000000
+          Top = 60.472480000000000000
+          Width = 294.803340000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memtulaj')
+          ParentFont = False
+        end
+        object mempartner: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 111.047310000000000000
+          Width = 84.472480000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #201'rt'#233'kes'#237't'#337':')
+          ParentFont = False
+        end
+        object mempartnerneve: TfrxMemoView
+          AllowVectorExport = True
+          Left = 104.031540000000000000
+          Top = 111.047310000000000000
+          Width = 304.157700000000000000
+          Height = 41.574830000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Neve')
+          ParentFont = False
+        end
+        object mempartnercime: TfrxMemoView
+          AllowVectorExport = True
+          Left = 419.527830000000000000
+          Top = 111.047310000000000000
+          Width = 291.023810000000000000
+          Height = 41.574830000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object memtulajcime: TfrxMemoView
+          AllowVectorExport = True
+          Left = 411.968770000000000000
+          Top = 59.897650000000000000
+          Width = 302.362400000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memtulajcime')
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 342.535560000000000000
+          Width = 147.401670000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Els'#337' m'#233'r'#233's id'#337'pontja:')
+          ParentFont = False
+        end
+        object memelsoido: TfrxMemoView
+          AllowVectorExport = True
+          Left = 162.519790000000000000
+          Top = 342.535560000000000000
+          Width = 173.858380000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 359.055350000000000000
+          Top = 342.535560000000000000
+          Width = 173.858380000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'M'#225'sodik m'#233'r'#233's id'#337'pontja:')
+          ParentFont = False
+        end
+        object memmasodikido: TfrxMemoView
+          AllowVectorExport = True
+          Left = 540.472790000000000000
+          Top = 342.535560000000000000
+          Width = 170.078850000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object membizszam: TfrxMemoView
+          AllowVectorExport = True
+          Left = 529.134200000000000000
+          Top = 3.118120000000000000
+          Width = 181.417440000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          HAlign = haRight
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.779530000000000000
+          Top = 364.787570000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Rendsz'#225'mok:')
+          ParentFont = False
+        end
+        object memrendszamok: TfrxMemoView
+          AllowVectorExport = True
+          Left = 104.826840000000000000
+          Top = 364.787570000000000000
+          Width = 185.196970000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'ASDTRTZUIOP'#201'LREERTEE')
+          ParentFont = False
+        end
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 430.228510000000000000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Brutt'#243':')
+          ParentFont = False
+        end
+        object membrutto: TfrxMemoView
+          AllowVectorExport = True
+          Left = 60.472480000000000000
+          Top = 430.126160000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 285.346630000000000000
+          Top = 430.228510000000000000
+          Width = 41.574830000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'T'#225'ra:')
+          ParentFont = False
+        end
+        object memtara: TfrxMemoView
+          AllowVectorExport = True
+          Left = 326.921460000000000000
+          Top = 430.228510000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 532.913730000000000000
+          Top = 430.228510000000000000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Nett'#243':')
+          ParentFont = False
+        end
+        object memnetto: TfrxMemoView
+          AllowVectorExport = True
+          Left = 585.827150000000000000
+          Top = 430.228510000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Line2: TfrxLineView
+          AllowVectorExport = True
+          Left = 37.795300000000000000
+          Top = 533.307360000000000000
+          Width = 226.771800000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Line3: TfrxLineView
+          AllowVectorExport = True
+          Left = 453.543600000000000000
+          Top = 533.307360000000000000
+          Width = 226.771800000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object memmerlegkezelo: TfrxMemoView
+          AllowVectorExport = True
+          Left = 94.488250000000000000
+          Top = 537.086890000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          AutoWidth = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'M'#233'rlegkezel'#337)
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          AllowVectorExport = True
+          Left = 520.913730000000000000
+          Top = 537.866420000000000000
+          Width = 94.488250000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          HAlign = haCenter
+          Memo.UTF8W = (
+            'Fuvaroz'#243)
+          ParentFont = False
+        end
+        object Memo12: TfrxMemoView
+          AllowVectorExport = True
+          Left = 438.425480000000000000
+          Top = 363.874150000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'M'#233'r'#233's ir'#225'nya:')
+          ParentFont = False
+        end
+        object memirany: TfrxMemoView
+          AllowVectorExport = True
+          Left = 540.472790000000000000
+          Top = 363.874150000000000000
+          Width = 138.488250000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+        end
+        object Memo13: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 320.535560000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Megjegyz'#233's:')
+          ParentFont = False
+        end
+        object memmegjegy: TfrxMemoView
+          AllowVectorExport = True
+          Left = 102.047310000000000000
+          Top = 320.535560000000000000
+          Width = 608.504330000000000000
+          Height = 18.897650000000000000
+          AutoWidth = True
+          Frame.Typ = []
+        end
+        object memtermkodlbl: TfrxMemoView
+          AllowVectorExport = True
+          Left = 7.559060000000000000
+          Top = 387.700990000000000000
+          Width = 50.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'VTSZ:')
+          ParentFont = False
+        end
+        object memtermkod: TfrxMemoView
+          AllowVectorExport = True
+          Left = 62.047310000000000000
+          Top = 387.622047240000000000
+          Width = 112.472480000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Memo16: TfrxMemoView
+          AllowVectorExport = True
+          Left = 185.055350000000000000
+          Top = 387.622047240000000000
+          Width = 91.149660000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Megnevez'#233's:')
+          ParentFont = False
+        end
+        object memtermnev: TfrxMemoView
+          AllowVectorExport = True
+          Left = 281.102660000000000000
+          Top = 387.622047240000000000
+          Width = 397.669450000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+        end
+        object Memo19: TfrxMemoView
+          AllowVectorExport = True
+          Left = 414.803340000000000000
+          Top = 271.653680000000000000
+          Width = 90.708720000000000000
+          Height = 18.897650000000000000
+          Font.Charset = EASTEUROPE_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Sz'#225'll'#237't'#243'lev'#233'l:')
+          ParentFont = False
+        end
+        object memszallev: TfrxMemoView
+          AllowVectorExport = True
+          Left = 505.071120000000000000
+          Top = 271.653680000000000000
+          Width = 205.480520000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -9
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object frxpsz: TfrxMemoView
+          AllowVectorExport = True
+          Left = 619.842920000000000000
+          Top = 30.236240000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          HAlign = haRight
+        end
+        object frxekaerlbl: TfrxMemoView
+          AllowVectorExport = True
+          Left = 8.338590000000000000
+          Top = 271.330860000000000000
+          Width = 58.929190000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'EK'#193'ER:')
+          ParentFont = False
+        end
+        object frxekaer: TfrxMemoView
+          AllowVectorExport = True
+          Left = 70.047310000000000000
+          Top = 271.330860000000000000
+          Width = 137.637910000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+        end
+        object Memo29: TfrxMemoView
+          AllowVectorExport = True
+          Left = 249.448980000000000000
+          Top = 471.748300000000000000
+          Width = 219.212740000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Sz'#225'm'#237'tott nett'#243' t'#246'meg: ')
+          ParentFont = False
+        end
+        object memsznetto: TfrxMemoView
+          AllowVectorExport = True
+          Left = 476.220780000000000000
+          Top = 471.748300000000000000
+          Width = 117.165430000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memsznetto')
+          ParentFont = False
+        end
+        object Line4: TfrxLineView
+          AllowVectorExport = True
+          Top = 108.267780000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Line5: TfrxLineView
+          AllowVectorExport = True
+          Left = -3.779530000000000000
+          Top = 158.740260000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object mempartner2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 162.519790000000000000
+          Width = 76.472480000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Vev'#337':')
+          ParentFont = False
+        end
+        object mempartnerneve2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 104.031540000000000000
+          Top = 162.519790000000000000
+          Width = 304.157700000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Neve')
+          ParentFont = False
+        end
+        object mempartnercime2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 419.527830000000000000
+          Top = 162.519790000000000000
+          Width = 291.023810000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Line6: TfrxLineView
+          AllowVectorExport = True
+          Top = 211.653680000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object Memo93: TfrxMemoView
+          AllowVectorExport = True
+          Left = 1.606370000000000000
+          Top = 85.149660000000000000
+          Width = 68.031540000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Ad'#243'sz'#225'm:')
+          ParentFont = False
+        end
+        object memtuladosz: TfrxMemoView
+          AllowVectorExport = True
+          Left = 73.417440000000000000
+          Top = 85.149660000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memtuladosz')
+        end
+        object Memo95: TfrxMemoView
+          AllowVectorExport = True
+          Left = 175.464750000000000000
+          Top = 85.149660000000000000
+          Width = 120.944960000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'C'#233'gjegyz'#233'ksz'#225'm:')
+          ParentFont = False
+        end
+        object memtulcjsz: TfrxMemoView
+          AllowVectorExport = True
+          Left = 296.409710000000000000
+          Top = 85.149660000000000000
+          Width = 105.826840000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memtulcjsz')
+        end
+        object Memo94: TfrxMemoView
+          AllowVectorExport = True
+          Left = 411.189240000000000000
+          Top = 85.149660000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'M'#233'rleg t'#237'pusa:')
+          ParentFont = False
+        end
+        object memmerlegtipusa: TfrxMemoView
+          AllowVectorExport = True
+          Left = 505.677490000000000000
+          Top = 85.149660000000000000
+          Width = 207.874150000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'memmerlegtipusa')
+          ParentFont = False
+        end
+        object mempartner3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 216.000000000000000000
+          Width = 68.472480000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Sz'#225'll'#237't'#243':')
+          ParentFont = False
+        end
+        object mempartnerneve3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 104.031540000000000000
+          Top = 216.000000000000000000
+          Width = 304.157700000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Neve')
+          ParentFont = False
+        end
+        object mempartnercime3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 419.527830000000000000
+          Top = 216.000000000000000000
+          Width = 291.023810000000000000
+          Height = 45.354360000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          ParentFont = False
+        end
+        object Line7: TfrxLineView
+          AllowVectorExport = True
+          Top = 265.133890000000000000
+          Width = 718.110700000000000000
+          Color = clBlack
+          Frame.Typ = []
+          Diagonal = True
+        end
+        object memszarhelylbl: TfrxMemoView
+          AllowVectorExport = True
+          Left = 8.000000000000000000
+          Top = 295.000000000000000000
+          Width = 114.929190000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Sz'#225'rmaz'#225'si hely:')
+          ParentFont = False
+        end
+        object memszarhely: TfrxMemoView
+          AllowVectorExport = True
+          Left = 128.000000000000000000
+          Top = 295.000000000000000000
+          Width = 377.637910000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+        end
+      end
+    end
   end
   object SszQ: TFDQuery
     Connection = Kapcs
@@ -892,8 +1753,8 @@ object AF: TAF
       'tort=tort')
     DataSource = rktetmDs
     BCDToCurrency = False
-    Left = 696
-    Top = 304
+    Left = 720
+    Top = 288
   end
   object frxrakszall: TfrxReport
     Version = '6.7'
@@ -14902,13 +15763,13 @@ object AF: TAF
   end
   object dijkatQ: TFDQuery
     Connection = Kapcs
-    Left = 784
+    Left = 824
     Top = 480
   end
   object FDQuery1: TFDQuery
     Connection = Kapcs
     Left = 632
-    Top = 472
+    Top = 456
     object FDQuery1Term_id: TLongWordField
       AutoGenerateValue = arDefault
       FieldName = 'Term_id'

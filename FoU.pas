@@ -1460,6 +1460,7 @@ begin
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
+var i:integer;
 begin
   programvege:=true;
   soap_programvege:=true;
@@ -1472,6 +1473,11 @@ begin
     PortF.port2close;
     PortF.pc_komm_port_close;
   end;
+  for i:=1 to 100 do
+    begin
+      Application.ProcessMessages();
+      Sleep(10);
+    end;
 end;
 
 procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);

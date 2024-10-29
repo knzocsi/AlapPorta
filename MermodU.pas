@@ -335,6 +335,7 @@ procedure elokeszit;
        Tulaj_adosz:=tulajTAdoszam.AsString;
        Tulaj_cjsz:=tulajTcjsz.AsString;
        Tulaj_telefon:=tulajTTelefon.AsString;
+       Tulaj_KUJKTJ:=tulajTkuj.AsString+'/'+tulajTktj.AsString;
        Partner1_felirat:=lblpartner.Caption;
        Partner1_nev:=Partnelist.FieldByName('nev').AsString;
        Partner1_cim:=Partnelist.FieldByName('cim').AsString;

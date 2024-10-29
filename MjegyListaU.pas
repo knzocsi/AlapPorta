@@ -527,6 +527,7 @@ begin
        Tulaj_adosz:=mjegyekQ.FieldByName('tul_adoszam').AsString;
        Tulaj_cjsz:=mjegyekQ.FieldByName('tul_cjsz').AsString;
        Tulaj_telefon:=tulajTTelefon.AsString;
+       Tulaj_KUJKTJ:=tulajTkuj.AsString+'/'+tulajTktj.AsString;
        case mjegyekQ.FieldByName('irany').AsString[1] of
        'B':begin
             Partner1_felirat:='Átadó:';

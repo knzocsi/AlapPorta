@@ -120,6 +120,7 @@ type
      Fs_Tulaj_adosz: string;
      Fs_Tulaj_cjsz: string;
      Fs_Tulaj_telefon: string;
+     Fs_Tulaj_KUJKTJ: string;
 
      Fs_Partner1_felirat: string;
      Fs_Partner1_nev: string;
@@ -207,6 +208,8 @@ type
         write Fs_Tulaj_cjsz;
     property Tulaj_telefon: string read Fs_Tulaj_telefon
         write Fs_Tulaj_telefon;
+    property Tulaj_KUJKTJ: string read Fs_Tulaj_KUJKTJ
+        write Fs_Tulaj_KUJKTJ;
 
     property Partner1_felirat: string read Fs_Partner1_felirat
         write Fs_Partner1_felirat;

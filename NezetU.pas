@@ -130,8 +130,11 @@ begin
     if TfrxMemoView(FindObject('memTelefon'))<>nil then
      TfrxMemoView(FindObject('memTelefon')).Text:=Mjegy_nyom_rec.Tulaj_telefon;
     //merleg neve
-    if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then
-     TfrxMemoView(FindObject('memmerlegtipusa')).Text:=merleg_neve;
+     if TfrxMemoView(FindObject('memmerlegtipusa'))<>nil then
+       if not Clean_Way then
+         TfrxMemoView(FindObject('memmerlegtipusa')).Text:=merleg_neve
+       else
+         TfrxMemoView(FindObject('memmerlegtipusa')).Text:=Mjegy_nyom_rec.Tulaj_KUJKTJ;
     //partner adatok
     if not Clean_Way then
      if TfrxMemoView(FindObject('mempartner'))<>nil then
