@@ -798,8 +798,7 @@ begin
   Sleep(10);
   comport1.readstr(sadat,Count);
   mertertekek[merleg_szam('RS1')]:=merleg_kiolvasas(sadat,merleg_szam('RS1'));
-  ComPort1.OnRXChar:= ComPort1RxChar ;
-
+  ComPort1.OnRXChar:= ComPort1RxChar;
 end;
 
 procedure TPortF.ComPort2RxChar(Sender: TObject; Count: Integer);

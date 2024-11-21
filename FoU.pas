@@ -1538,7 +1538,6 @@ begin
 
  //nagykamera:=True;
  // teszt :=  paramStr(1) = '/D'; //demo
-  //showmessage(ExtractFileDir(ExtractFilePath(application.exename))+'\plugins');
   van_plugin:=DirectoryExists(ExtractFileDir(ExtractFilePath(application.exename))+'\plugins');
   if not lejatszas then exit;
   if van_plugin then

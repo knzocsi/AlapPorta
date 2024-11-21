@@ -1827,8 +1827,8 @@ begin
            Close
          end;
       end;
-     //if Automata_merlegjegy_parositaskor then
-     // begin
+     if Automata_merlegjegy_parositaskor then
+      begin
         With AF.Auto_mjegyQ do
          begin
            Close;
@@ -1855,7 +1855,7 @@ begin
            EnableControls;
            Close
          end;
-      //end;
+      end;
    end;
    Af.Auto_mjegy_kapcs.Close;
 end;
@@ -2658,7 +2658,9 @@ begin
      then TfrxMemoView(FindObject('memnetto')).Text:=Automata_mjegy_Rec.Netto.ToString;
      PrintOptions.Copies:=1;
      PrepareReport();
-     if UpperCase(ParamStr(1)) = '/PDFTESZT' then
+     if not Parositva then nyomt_volt(0);
+
+     if UpperCase(ParamStr(2)) = '/PDFTESZT' then
       begin
         mappaja:=ExtractFilePath(Application.ExeName)+'AMJ_PDF\'+etagja+'\';
         ForceDirectories(mappaja);
@@ -2667,7 +2669,7 @@ begin
         Export(Af.frxPDFTeszthez);
       end
      else
-       if Automata_mjegy_Rec.Irany='BESZÁLLÍTÁS' then
+       if (Automata_mjegy_Rec.Irany='BESZÁLLÍTÁS') and (Parositva) then
        begin
          nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
          PrintOptions.ShowDialog := False;
@@ -2729,8 +2731,6 @@ begin
   Auto_mjegy_kapcs.Connected:=true;
   Auto_mjegyQ.Connection:= Auto_mjegy_kapcs;
   repeat
-
-
 
    if Auto_mjegy_kapcs.Connected then
    begin

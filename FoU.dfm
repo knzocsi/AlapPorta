@@ -304,6 +304,7 @@ object FoF: TFoF
               Expanded = False
               FieldName = 'soap_code'
               Title.Caption = 'Soap'
+              Width = 78
               Visible = True
             end>
         end
@@ -1564,8 +1565,8 @@ object FoF: TFoF
   object mcIOmodul: TIdModBusClient
     ConnectTimeout = 0
     OnResponseError = mcIOmodulResponseError
-    Left = 713
-    Top = 192
+    Left = 721
+    Top = 200
   end
   object tmrElokep: TTimer
     Enabled = False

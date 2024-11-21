@@ -179,6 +179,7 @@ begin
       SaveDialog.Execute;
       fn:=SaveDialog.FileName;
      end
+    else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
    end
   else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
   if fn='' then exit;
