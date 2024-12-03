@@ -459,7 +459,7 @@ end;
 
 procedure TMjegyekF.Button4Click(Sender: TObject);
 begin
- LibreExcelF.mezo_nevek(mlistaGrid,nil);
+  LibreExcelF.mezo_nevek(mlistaGrid,nil);
 end;
 
 procedure TMjegyekF.Button6Click(Sender: TObject);
@@ -647,6 +647,7 @@ begin
  spBetarolasi_dij.Value:=be_tarolasi_dij;
  spKitarolasi_dij.Value:=ki_tarolasi_dij;
  spSzallitasi_dij.Value:=szallitasi_dij;
+
  edmegjegy.Clear;
  chkKepek.Checked:=false;
  pnlKepek.Visible:=false;

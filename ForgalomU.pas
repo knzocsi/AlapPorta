@@ -42,6 +42,7 @@ type
     procedure DBGrid1KeyPress(Sender: TObject; var Key: Char);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -110,7 +111,14 @@ begin
  // Button1.enabled:=aF.van_joga('4');
   piKezdoDatum.Date:=date;
   piBefejezoDatum.Date:=date;
+   //párosítás látszon
+
   szures;
+end;
+
+procedure TForgalomF.FormShow(Sender: TObject);
+begin
+  JvDBUltimGrid1.Columns[1].Visible:=f_ide=1;
 end;
 
 procedure TForgalomF.piKezdoDatumChange(Sender: TObject);

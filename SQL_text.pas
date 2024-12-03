@@ -1039,7 +1039,8 @@ interface
       'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
       'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' //+ #13#10 +
       ,
-      'UPDATE forgalom SET aut_nyom=1 WHERE datum<''2024-11-19''; '
+      'UPDATE forgalom SET aut_nyom=1 WHERE datum<CURDATE() AND aut_nyom=0; '
+
     );
 
 

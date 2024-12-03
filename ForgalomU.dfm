@@ -13,6 +13,7 @@ object ForgalomF: TForgalomF
   OldCreateOrder = False
   Position = poMainFormCenter
   OnActivate = FormActivate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -53,8 +54,8 @@ object ForgalomF: TForgalomF
       Top = 22
       Width = 113
       Height = 21
-      Date = 43587.773554583330000000
-      Time = 43587.773554583330000000
+      Date = 43587.000000000000000000
+      Time = 0.773554583327495500
       TabOrder = 1
       OnChange = piKezdoDatumChange
     end
@@ -63,8 +64,8 @@ object ForgalomF: TForgalomF
       Top = 22
       Width = 105
       Height = 21
-      Date = 43587.774182199070000000
-      Time = 43587.774182199070000000
+      Date = 43587.000000000000000000
+      Time = 0.774182199071219700
       TabOrder = 2
       OnChange = piKezdoDatumChange
     end
@@ -135,7 +136,7 @@ object ForgalomF: TForgalomF
     Width = 585
     Height = 488
     Align = alClient
-    DataSource = aF.ForgalomDS
+    DataSource = AF.ForgalomDS
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -157,6 +158,18 @@ object ForgalomF: TForgalomF
         Expanded = False
         FieldName = 'id'
         Title.Caption = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'parositott'
+        Title.Caption = 'P'#225'rja'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'irany'
+        Title.Caption = 'Ir'#225'ny'
         Visible = True
       end
       item

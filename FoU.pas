@@ -1464,6 +1464,7 @@ var i:integer;
 begin
   programvege:=true;
   soap_programvege:=true;
+  StatusBar1.panels[1].Bevel:=pbRaised;
   StatusBar1.panels[1].Text:=rsKilepesFolyamatban;
   Tomeg_Timer.Enabled:=false;
   if af.mtPLC_Feladat.Active then  af.mtPLC_Feladat.close;
@@ -3695,7 +3696,7 @@ begin
               if not mentesvolt[thmerleg] then mentes;
 
             end;
-
+            maxtomeg[thmerleg]:=0;
             mentesvolt[thmerleg]:=false;
             //leengedõ lámpák zöldre váltanak
             if FoF.bemenet_lekerdezes('M'+thmerleg.ToString,'LAMPA1')=Lampa_Piros then FoF.lampakapcs(1,Lampa_Zold);

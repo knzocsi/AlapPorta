@@ -179,9 +179,17 @@ begin
       SaveDialog.Execute;
       fn:=SaveDialog.FileName;
      end
-    else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
+    else
+    begin
+      if ex then fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2)+'.xlsx'
+      else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2)+'.ods';
+    end;
    end
-  else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2);
+  else
+  begin
+     if ex then fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2)+'.xlsx'
+     else fn:=libre_mappa+formatDatetime('YYYYMMDD',Now)+'_'+RightStr(StringOfChar('0', 2) + IntToStr(mentesido), 2)+'.ods'
+  end;
   if fn='' then exit;
 
   if ex then HCalc:= THojaCalc.create(thcExcel, False,false)//ha excel

@@ -2657,8 +2657,9 @@ begin
      if TfrxMemoView(FindObject('memnetto'))<>nil
      then TfrxMemoView(FindObject('memnetto')).Text:=Automata_mjegy_Rec.Netto.ToString;
      PrintOptions.Copies:=1;
+     PrintOptions.ShowDialog := False;
      PrepareReport();
-     if not Parositva then nyomt_volt(0);
+
 
      if UpperCase(ParamStr(2)) = '/PDFTESZT' then
       begin
@@ -2667,16 +2668,26 @@ begin
         Af.frxPDFTeszthez.DefaultPath:=mappaja;
         Af.frxPDFTeszthez.FileName:=Automata_mjegy_Rec.Mjegysorszam+'.pdf';
         Export(Af.frxPDFTeszthez);
+        nyomt_volt(0);
       end
      else
-       if (Automata_mjegy_Rec.Irany='BESZÁLLÍTÁS') and (Parositva) then
+      begin
+       if Parositva then
        begin
-         nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
-         PrintOptions.ShowDialog := False;
-         Print;
-         nyomt_volt(2);
+         if (Automata_mjegy_Rec.Irany='BESZÁLLÍTÁS') then
+         begin
+           nyomtatas_szamlalo:=nyomtatas_szamlalo+1;
+           nyomt_volt(2);
+           Print;
+         end
+         else  nyomt_volt(3);
        end
-       else  nyomt_volt(3);
+       else
+       begin
+        nyomt_volt(0);
+        Print;
+       end;
+      end;
      Free
    end;
 
