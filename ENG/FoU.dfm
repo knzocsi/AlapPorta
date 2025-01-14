@@ -38,7 +38,6 @@ object FoF: TFoF
         Width = 200
       end
       item
-        Text = 'Card:'
         Width = 150
       end
       item
@@ -263,9 +262,9 @@ object FoF: TFoF
             end
             item
               Expanded = False
-              FieldName = 'Rendszam2'
-              Title.Caption = 'License plate 2'
-              Width = 60
+              FieldName = 'Irany'
+              Title.Caption = 'Ir'#225'ny'
+              Width = 20
               Visible = True
             end
             item
@@ -277,22 +276,22 @@ object FoF: TFoF
             end
             item
               Expanded = False
+              FieldName = 'Rendszam2'
+              Title.Caption = 'Rendsz'#225'm 2'
+              Width = 60
+              Visible = True
+            end
+            item
+              Expanded = False
               FieldName = 'Szallitolev'
-              Title.Caption = 'Deliv. note'
+              Title.Caption = 'Sz'#225'll'#237't'#243'lev'
               Visible = False
             end
             item
               Expanded = False
-              FieldName = 'Code'
+              FieldName = 'Kod'
               Title.Caption = 'K'#243'd'
               Visible = False
-            end
-            item
-              Expanded = False
-              FieldName = 'Irany'
-              Title.Caption = 'Dir.'
-              Width = 20
-              Visible = True
             end
             item
               Expanded = False
@@ -305,6 +304,7 @@ object FoF: TFoF
               Expanded = False
               FieldName = 'soap_code'
               Title.Caption = 'Soap'
+              Width = 78
               Visible = True
             end>
         end
@@ -1005,8 +1005,8 @@ object FoF: TFoF
         OnClick = btnElsoClick
       end
       object btnKamerakep: TButton
-        Left = 16
-        Top = 80
+        Left = 21
+        Top = 81
         Width = 75
         Height = 25
         Caption = 'Camera picture'
@@ -1546,7 +1546,7 @@ object FoF: TFoF
     ConnectTimeout = 0
     OnResponseError = mctPLCResponseError
     Left = 657
-    Top = 192
+    Top = 200
   end
   object kapcsfriss: TTimer
     Enabled = False
@@ -1565,8 +1565,8 @@ object FoF: TFoF
   object mcIOmodul: TIdModBusClient
     ConnectTimeout = 0
     OnResponseError = mcIOmodulResponseError
-    Left = 705
-    Top = 192
+    Left = 721
+    Top = 200
   end
   object tmrElokep: TTimer
     Enabled = False

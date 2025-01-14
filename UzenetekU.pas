@@ -130,7 +130,7 @@ interface
  resourcestring rsKod = 'Kód';
  resourcestring rsKodotMegKellAdni = 'Adja meg a kódot!';
  resourcestring rsAdjaMegME = 'Adja meg a mértékegységet!';
-
+ resourcestring rsFeltolt = 'Szeretné most feltölteni a mérlegjegyeket?';
 implementation
 
 end.

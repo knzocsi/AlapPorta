@@ -1485,28 +1485,37 @@ procedure TFoF.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if (Clean_way) and (Automata_Ftp_feltoltes) then
    begin
-    CanClose:=false;
-    try
-     StatusBar1.panels[1].Text:='Mérlegjegyek feltöltése folyamatban...';
-     with MjegyekF.mjegyekQ do
-      begin
-       try
-        Close;
-        SQL.Clear;
-        SQL.Add(' select * from merlegjegy ');
-        SQL.Add(' where (Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1) and tul_id=:p2 ');
-        ParamByName('p0').AsDate:=Date;//StrToDate('2021.01.01');
-        ParamByName('p1').AsDate:=Date;//StrToDate('2024.05.01');
-        ParamByName('p2').AsInteger:=1;
-        open;
-       finally
-         LibreExcelF.mezo_nevek(MjegyekF.mlistaGrid,nil,True)//automata
-       end
+    if MessageDlg(rsFeltolt,mtConfirmation,mbYesNo,0)=6 then
+    begin
+      try
+        try
+         StatusBar1.panels[1].Text:='Mérlegjegyek feltöltése folyamatban...';
+         with MjegyekF.mjegyekQ do
+          begin
+           try
+            Close;
+            SQL.Clear;
+            SQL.Add(' select * from merlegjegy ');
+            SQL.Add(' where (Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1) and tul_id=:p2 ');
+            ParamByName('p0').AsDate:=(*Date;*)StrToDate('2025.01.08');
+            ParamByName('p1').AsDate:=(*Date;*)StrToDate('2025.01.08');
+            ParamByName('p2').AsInteger:=1;
+            open;
+           finally
+             LibreExcelF.mezo_nevek(MjegyekF.mlistaGrid,nil,True)//automata
+           end
+          end;
+        finally
+          //StatusBar1.panels[1].Text:='Mérlegjegyek feltöltve.';
+          CanClose:=True
+        end;
+      except
+        StatusBar1.panels[1].Text:='Mérlegjegyek feltöltése sikertelen.';
+        Sleep(2000);
+        CanClose:=True
       end;
-    finally
-      //StatusBar1.panels[1].Text:='Mérlegjegyek feltöltve.';
-      CanClose:=True
-    end;
+    end
+    else CanClose:=True;
    end
   else
   if torzsiport_folyamatban then CanClose:=false
@@ -2730,8 +2739,8 @@ end;
 
 procedure TFoF.Szoftverbelltsok1Click(Sender: TObject);
 begin
- if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
- szoftver_alapF.fo
+  if InputBox('Adja meg jelszót',#31'Jelszó:', 'aaaaaaaaa')<>'csoki' then exit;
+  szoftver_alapF.fo
 end;
 
 procedure TFoF.szures;
@@ -3401,7 +3410,7 @@ end;
 
 function TFoF.PLC_Ir_Coil(cim:integer; ertek: Boolean): boolean;
 begin
-  //Minden aPLC_Lekerdezes_Thread.kijelez szálban fut le
+  //Minden a PLC_Lekerdezes_Thread.kijelez szálban fut le
 
   (*
   mctPLC.Host := PLC_IP;
@@ -3886,9 +3895,7 @@ begin
      //Synchronize(kijelez);
      PLC_lekerdezes_szamlalo:=PLC_lekerdezes_szamlalo+1;
    until programvege;
-
-
-end;
+ end;
 
 { SQL_Lekerdezes_Thread }
 

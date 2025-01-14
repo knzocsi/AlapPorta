@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45581.4155324074</prop>
-        <prop prop-type="OrigDateTime">45581.337037037</prop>
-        <prop prop-type="XlatDateTime">45581.337037037</prop>
-        <prop prop-type="Translated">92</prop>
-        <prop prop-type="UnTranslated">718</prop>
+        <prop prop-type="SelfDateTime">45671.4144212963</prop>
+        <prop prop-type="OrigDateTime">45614.9494675926</prop>
+        <prop prop-type="XlatDateTime">45588.6081944444</prop>
+        <prop prop-type="Translated">86</prop>
+        <prop prop-type="UnTranslated">724</prop>
       </prop-group>
     </header>
     <body>
@@ -164,904 +164,913 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:FoF.O:StatusBar1.Panels[3].Text" resname="O:FoF.O:StatusBar1.Panels[3].Text">
-        <source>'Kártya:'</source>
-        <target>'Card:'</target>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">30</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[3].Width" resname="O:FoF.O:StatusBar1.Panels[3].Width">
         <source>150</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[4].Text" resname="O:FoF.O:StatusBar1.Panels[4].Text">
         <source>'Tömeg: '</source>
         <target>'Weight: '</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">32</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">31</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[4].Width" resname="O:FoF.O:StatusBar1.Panels[4].Width">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[5].Text" resname="O:FoF.O:StatusBar1.Panels[5].Text">
         <source>'Élőkép(1):'</source>
         <target>'Live capture(1):'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[5].Width" resname="O:FoF.O:StatusBar1.Panels[5].Width">
         <source>150</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[6].Text" resname="O:FoF.O:StatusBar1.Panels[6].Text">
         <source>'Élőkép(2):'</source>
         <target>'Live capture(2):'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">36</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">35</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[6].Width" resname="O:FoF.O:StatusBar1.Panels[6].Width">
         <source>150</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[7].Text" resname="O:FoF.O:StatusBar1.Panels[7].Text">
         <source>'SOAP'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:StatusBar1.Panels[7].Width" resname="O:FoF.O:StatusBar1.Panels[7].Width">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">C:TStatusBar</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.Left" resname="O:FoF.O:pnlBaloldal.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.Top" resname="O:FoF.O:pnlBaloldal.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.Width" resname="O:FoF.O:pnlBaloldal.Width">
         <source>800</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.Height" resname="O:FoF.O:pnlBaloldal.Height">
         <source>617</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.Align" resname="O:FoF.O:pnlBaloldal.Align">
         <source>alLeft</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.TabOrder" resname="O:FoF.O:pnlBaloldal.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.Left">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.Top">
         <source>60</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.Width">
         <source>798</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.Height">
         <source>284</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.ActivePage" resname="O:FoF.O:pnlBaloldal.O:pcTablak.ActivePage">
         <source>tbForgalom</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.Align" resname="O:FoF.O:pnlBaloldal.O:pcTablak.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.MultiLine" resname="O:FoF.O:pnlBaloldal.O:pcTablak.MultiLine">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.Caption">
         <source>'Ideiglenes'</source>
         <target>'Temporary'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.ImageIndex" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.ImageIndex">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Width">
         <source>790</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Height">
         <source>256</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Align" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Color">
         <source>clDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.DataSource" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.DataSource">
         <source>AF.NyitbeDS</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.FixedColor" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.FixedColor">
         <source>clSilver</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.GradientEndColor" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.GradientEndColor">
         <source>clSilver</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.GradientStartColor" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.GradientStartColor">
         <source>clSilver</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Charset" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Name" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Style" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.OnCellClick" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.OnCellClick">
         <source>dbgNyitbeCellClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.OnDrawColumnCell" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.OnDrawColumnCell">
         <source>dbgNyitbeDrawColumnCell</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].FieldName">
         <source>'Hivo_sorszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">75</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">1</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].FieldName">
         <source>'Rendszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[1].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952431</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].FieldName">
         <source>'Rendszam2'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[2].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].FieldName">
         <source>'Erkdatum'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[3].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].FieldName">
         <source>'Erkido'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[4].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].FieldName">
         <source>'Netto'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[5].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].FieldName">
         <source>'irany'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[6].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].FieldName">
         <source>'P_Nev'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Width">
         <source>252</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[7].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Color">
         <source>clLime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].FieldName">
         <source>'P2_Nev'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Width">
         <source>185</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[8].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].FieldName">
         <source>'Megjegyzes'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbIdeiglenes.O:dbgNyitbe.Columns[9].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.Caption">
         <source>'Forgalom'</source>
         <target>'Trafficc'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Width">
         <source>790</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Height">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Align" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.Align">
         <source>alTop</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Width">
         <source>66</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label1.Caption">
         <source>'Kezdő dátum:'</source>
         <target>'Date from:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Left">
         <source>168</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Width">
         <source>79</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:Label2.Caption">
         <source>'Befejező dátum:'</source>
         <target>'Date to:'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">1</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Top">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Width">
         <source>113</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Date" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Date">
         <source>43587</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Time" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.Time">
         <source>0.773554583327496</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.OnChange" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piKezdoDatum.OnChange">
         <source>piKezdoDatumChange</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952546</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Left">
         <source>168</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Top">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Width">
         <source>105</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Date" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Date">
         <source>43587</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Time" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.Time">
         <source>0.77418219907122</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.OnChange" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:piBefejezoDatum.OnChange">
         <source>piBefejezoDatumChange</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Left">
         <source>168</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Top">
         <source>49</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Width">
         <source>105</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Caption">
         <source>'Mérés módosítás'</source>
         <target>'Modify measure'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.OnClick" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeresmodositas.OnClick">
         <source>btnMeresmodositasClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Top">
         <source>48</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Width">
         <source>113</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Caption">
         <source>'Mérés'</source>
         <target>'Measure'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.OnClick" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:Panel1.O:btnMeres.OnClick">
         <source>btnMeresClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Left" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Top" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Top">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Width">
         <source>790</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Height">
         <source>176</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Align" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.DataSource" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.DataSource">
         <source>AF.ForgalomDS</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.ReadOnly" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TabOrder" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Charset" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Color" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Height" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Name" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Style" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnKeyUp" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnKeyUp">
         <source>DBGrid1KeyUp</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnMouseUp" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnMouseUp">
         <source>DBGrid1MouseUp</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnMouseWheel" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.OnMouseWheel">
         <source>DBGrid1MouseWheel</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].FieldName">
         <source>'Datum'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">179</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">178</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Title.Caption">
         <source>'Dátum'</source>
         <target>'Date'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">180</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">179</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Width">
         <source>60</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].FieldName">
         <source>'Ido'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">184</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">183</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Title.Caption">
         <source>'Idő'</source>
         <target>'Time'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">185</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">184</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Width">
         <source>55</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[1].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].FieldName">
         <source>'Rendszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">189</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">188</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Title.Caption">
         <source>'Rendszám'</source>
         <target>'License plate'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">190</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">189</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Width">
         <source>60</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[2].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].FieldName">
-        <source>'Rendszam2'</source>
+        <source>'Irany'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">194</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Rendszam2'</source>
+          <target>'Rendszam2'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45671.3727580093</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Title.Caption">
-        <source>'Rendszám 2'</source>
-        <target>'License plate 2'</target>
+        <source>'Irány'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">195</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Rendszám 2'</source>
+          <target>'License plate 2'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45671.3727580093</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Width">
-        <source>60</source>
+        <source>20</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[3].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].FieldName">
         <source>'Tomeg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">199</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952662</prop><prop prop-type="Status">1</prop><prop prop-type="Order">198</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Title.Caption">
         <source>'Tömeg'</source>
         <target>'Mass'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">200</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45533.3783254514</prop><prop prop-type="Status">1</prop><prop prop-type="Order">199</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Width">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[4].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">201</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">202</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].FieldName">
-        <source>'Szallitolev'</source>
+        <source>'Rendszam2'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">203</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Title.Caption">
-        <source>'Szállítólev'</source>
-        <target>'Deliv. note'</target>
+        <source>'Rendszám 2'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.378325463</prop><prop prop-type="Status">1</prop><prop prop-type="Order">205</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45533.378325463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">204</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Szállítólev'</source>
+          <target>'Deliv. note'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45671.3727580093</prop></prop-group>
+        </alt-trans></trans-unit>
+      <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45671.4144246759</prop><prop prop-type="Status">0</prop><prop prop-type="Order">205</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[5].Visible">
-        <source>False</source>
+        <source>True</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">206</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
@@ -1071,13 +1080,16 @@
         <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">207</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[6].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[6].FieldName">
-        <source>'Kod'</source>
-        <target>'Code'</target>
+        <source>'Szallitolev'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">1</prop><prop prop-type="Order">208</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">208</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Kod'</source>
+          <target>'Code'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45671.3727580208</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[6].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[6].Title.Caption">
-        <source>'Kód'</source>
+        <source>'Szállítólev'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45533.378325463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">209</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -1092,67 +1104,70 @@
         <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">211</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].FieldName">
-        <source>'Irany'</source>
+        <source>'Kod'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">212</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Title.Caption">
-        <source>'Irány'</source>
-        <target>'Dir.'</target>
+        <source>'Kód'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45533.378325463</prop><prop prop-type="Status">1</prop><prop prop-type="Order">213</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Width">
-        <source>20</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45533.378325463</prop><prop prop-type="Status">0</prop><prop prop-type="Order">213</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Irány'</source>
+          <target>'Dir.'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45671.3727580208</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[7].Visible">
-        <source>True</source>
+        <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">214</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">216</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">215</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].FieldName">
         <source>'mjegy'</source>
         <target>'Weigh.ticket'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">1</prop><prop prop-type="Order">217</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">1</prop><prop prop-type="Order">216</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Title.Caption">
         <source>'Mérlegjegy'</source>
         <target>'Weighn.ticket'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">1</prop><prop prop-type="Order">218</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">1</prop><prop prop-type="Order">217</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Width">
         <source>70</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">218</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[8].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6419952778</prop><prop prop-type="Status">0</prop><prop prop-type="Order">219</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Expanded" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45580.3618302083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45580.3618302083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">220</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].FieldName" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].FieldName">
         <source>'soap_code'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45580.3618302083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45580.3618302083</prop><prop prop-type="Status">0</prop><prop prop-type="Order">221</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Title.Caption" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Title.Caption">
         <source>'Soap'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45580.3618302199</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45580.3618302199</prop><prop prop-type="Status">0</prop><prop prop-type="Order">222</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Width" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Width">
+        <source>78</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45671.4144246875</prop><prop prop-type="Status">0</prop><prop prop-type="Order">223</prop><prop prop-type="Type">C:TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Visible" resname="O:FoF.O:pnlBaloldal.O:pcTablak.O:tbForgalom.O:DBGrid1.Columns[9].Visible">
         <source>True</source>
@@ -2019,12 +2034,12 @@
         <prop prop-type="Created">45531.6419953125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">391</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlJobboldal.O:pnlJobbAlso.O:btnKamerakep.Left" resname="O:FoF.O:pnlJobboldal.O:pnlJobbAlso.O:btnKamerakep.Left">
-        <source>16</source>
+        <source>21</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419953125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">392</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:pnlJobboldal.O:pnlJobbAlso.O:btnKamerakep.Top" resname="O:FoF.O:pnlJobboldal.O:pnlJobbAlso.O:btnKamerakep.Top">
-        <source>80</source>
+        <source>81</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419953125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">393</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3928,7 +3943,7 @@
         <prop prop-type="Created">45531.6419953819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">763</prop><prop prop-type="Type">TIdModBusClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:mctPLC.Top" resname="O:FoF.O:mctPLC.Top">
-        <source>192</source>
+        <source>200</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419953819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">764</prop><prop prop-type="Type">TIdModBusClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -3993,12 +4008,12 @@
         <prop prop-type="Created">45531.6419953819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">776</prop><prop prop-type="Type">TIdModBusClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:mcIOmodul.Left" resname="O:FoF.O:mcIOmodul.Left">
-        <source>705</source>
+        <source>721</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419953819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">777</prop><prop prop-type="Type">TIdModBusClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:FoF.O:mcIOmodul.Top" resname="O:FoF.O:mcIOmodul.Top">
-        <source>192</source>
+        <source>200</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419953819</prop><prop prop-type="Status">0</prop><prop prop-type="Order">778</prop><prop prop-type="Type">TIdModBusClient</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

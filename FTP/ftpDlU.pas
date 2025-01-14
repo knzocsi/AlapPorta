@@ -139,7 +139,7 @@ begin
       begin
        if Pos('!',LList[i])=0 then
         begin
-          idftp1.Put(LList[i],ExtractFileName(LList[i]), True, 0);
+          idftp1.Put(LList[i],ExtractFileName(LList[i]), false, 0);
           AssignFile(f,llist[i]);
           if FileExists(Ftp_helyi_dir+'!'+ExtractFileName(LList[i]))then
              TFile.Delete(Ftp_helyi_dir+'!'+ExtractFileName(LList[i]));

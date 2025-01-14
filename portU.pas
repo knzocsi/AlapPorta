@@ -195,7 +195,8 @@ begin
                 else if Merleg_tipus[merlegszam]='D400' then mtip:=9
                    else if Merleg_tipus[merlegszam]='EntechSartorius' then mtip:=10
                       else if Merleg_tipus[merlegszam]='S120' then mtip:=11
-                         else if (Merleg_tipus[merlegszam]='CZNEWTON') or (Merleg_tipus[merlegszam]='BW') or (Merleg_tipus[merlegszam]='TScale') then mtip:=12;     //BW is   �s T-Scale is
+                         else if (Merleg_tipus[merlegszam]='CZNEWTON') or (Merleg_tipus[merlegszam]='BW') or (Merleg_tipus[merlegszam]='TScale') then mtip:=12     //BW is   �s T-Scale is
+                           else if Merleg_tipus[merlegszam]='Ohaus16' then mtip:=13;    //  T31P tipus
 
 
 
@@ -742,6 +743,48 @@ begin
 
         end;
 
+    13:  begin // Ohaus16  T31P tipus
+
+          si:=0;
+          if Active then
+          begin
+            memTeszt.Text:=sadat+memTeszt.text;
+            memHexa.Text:= memHexa.Text+hexaszov(sadat);
+          end;
+          repeat
+            si:=si+1;
+
+            adat:=sadat[si];
+
+            if (adat<>#10) then ertek:=ertek+adat
+            else
+              if Length(ertek)=16 then
+              begin
+                ertek:=ertek_tisztitas(ertek);
+                mertekek[merlegszam]:='';
+                kilep:=true;
+              end
+              else ertek:=''
+          until (kilep) or (si=Length(sadat));
+
+
+           // portolvas�s v�ge
+
+
+
+          if Not(kilep) then mertekek[merlegszam]:=ertek;
+
+          if kilep then
+            try
+              if ertek='' then ertek:='-1';
+              if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
+              StrToFloat(ertek);
+            except
+              ertek:='-0';
+            end;
+          if ertek='-1' then ertek:='-0';
+       end;
+
 
   end;
 
@@ -1069,7 +1112,6 @@ begin
     Writeln(tf, konyvtar+'srport.dat');
     Writeln(tf, Comport1.port+' OPEN');
     CloseFile(tf);
-
   end;
 
   ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );

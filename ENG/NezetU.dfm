@@ -130,16 +130,12 @@ object NezetF: TNezetF
     Width = 1032
     Height = 623
     Align = alClient
-    OutlineVisible = True
-    OutlineWidth = 121
+    OutlineVisible = False
+    OutlineWidth = 120
     ThumbnailVisible = False
     FindFmVisible = False
     UseReportHints = True
     HideScrolls = False
-    ExplicitLeft = 264
-    ExplicitTop = 264
-    ExplicitWidth = 100
-    ExplicitHeight = 100
   end
   object ImageList1: TImageList
     DrawingStyle = dsTransparent

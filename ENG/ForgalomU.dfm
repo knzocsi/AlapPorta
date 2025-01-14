@@ -13,6 +13,7 @@ object ForgalomF: TForgalomF
   OldCreateOrder = False
   Position = poMainFormCenter
   OnActivate = FormActivate
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -53,8 +54,8 @@ object ForgalomF: TForgalomF
       Top = 22
       Width = 113
       Height = 21
-      Date = 43587.773554583300000000
-      Time = 43587.773554583300000000
+      Date = 43587
+      Time = 0.773554583327496000
       TabOrder = 1
       OnChange = piKezdoDatumChange
     end
@@ -63,8 +64,8 @@ object ForgalomF: TForgalomF
       Top = 22
       Width = 105
       Height = 21
-      Date = 43587.774182199100000000
-      Time = 43587.774182199100000000
+      Date = 43587
+      Time = 0.774182199071220000
       TabOrder = 2
       OnChange = piKezdoDatumChange
     end
@@ -135,7 +136,7 @@ object ForgalomF: TForgalomF
     Width = 585
     Height = 488
     Align = alClient
-    DataSource = aF.ForgalomDS
+    DataSource = AF.ForgalomDS
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -161,38 +162,50 @@ object ForgalomF: TForgalomF
       end
       item
         Expanded = False
+        FieldName = 'parositott'
+        Title.Caption = 'P'#225'rja'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'irany'
+        Title.Caption = 'Ir'#225'ny'
+        Visible = True
+      end
+      item
+        Expanded = False
         FieldName = 'mjegy'
-        Title.Caption = 'Weighing ticket'
+        Title.Caption = 'M'#233'rlegjegy'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Datum'
-        Title.Caption = 'Date'
+        Title.Caption = 'D'#225'tum'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ido'
-        Title.Caption = 'Time'
+        Title.Caption = 'Id'#337
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tomeg'
-        Title.Caption = 'Weight'
+        Title.Caption = 'T'#246'meg'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Rendszam'
-        Title.Caption = 'License plate'
+        Title.Caption = 'Rendsz'#225'm'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'rendszam2'
-        Title.Caption = 'License plate 2'
+        Title.Caption = 'Rendsz'#225'm 2'
         Visible = True
       end>
   end
