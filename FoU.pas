@@ -1468,7 +1468,7 @@ begin
   StatusBar1.panels[1].Text:=rsKilepesFolyamatban;
   Tomeg_Timer.Enabled:=false;
   if af.mtPLC_Feladat.Active then  af.mtPLC_Feladat.close;
-  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'NINCS') and (felhnev<>'') then
+  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1])<>'N') and (felhnev<>'') then
   begin
     PortF.portclose;
     PortF.port2close;

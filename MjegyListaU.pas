@@ -577,17 +577,21 @@ begin
           end;
         end;
        Merlegkezelo:=mjegyekQ.FieldByName('merlegelo').AsString;
-       Nedvesseg_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger, 'b_nedv');
+       Nedvesseg_latszik:=
+        jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger, 'b_nedv')and (Irany[1]='B');
        Alapnedv:=mjegyekQ.FieldByName('alapnedv').AsString+' %';
        Nedv:=mjegyekQ.FieldByName('nedv').AsString+' %';
        Nedvlevon:=nedvesseg_vesztes_tomege.ToString+' kg';
-       Tisztasag_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tisztasag');
+       Tisztasag_latszik:=
+        jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tisztasag') and (Irany[1]='B');
        Tisztasag:=mjegyekQ.FieldByName('tisztasag').AsString+' %';
        Szemet_levon:=szemet_tomeg.ToString+' kg';
-       Tort_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tort');
+       Tort_latszik:=
+        jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_tort') and (Irany[1]='B');
        Tort:=mjegyekQ.FieldByName('tortszaz').AsString+' %';
        Tort_tomeg:=IntToStr(Round(nyers_tort_szemek_tomege))+' kg';
-       Hekto_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_hekto');
+       Hekto_latszik:=
+        jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_hekto') and (Irany[1]='B');
        Hekto:=mjegyekQ.FieldByName('hekto').AsString;
        Brutto:=mjegyekQ.FieldByName('Brutto').AsString+' kg';
        Tara:=mjegyekQ.FieldByName('Tara').AsString+' kg';
@@ -596,7 +600,8 @@ begin
        Termek_ar:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
        Tomeg_levon_ny:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';
        Tomeg_levon_szoveg:=mjegyekQ.FieldByName('levon_szoveg').AsString;
-       Siker_latszik:=jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_siker');
+       Siker_latszik:=
+        jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_siker') and (Irany[1]='B');
        Siker:=mjegyekQ.FieldByName('siker').AsString+' %';
        Tisztitasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat))+' -Ft';
        Szaritasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('szaritasi_dij').AsFloat))+' -Ft';
