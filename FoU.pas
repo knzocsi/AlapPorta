@@ -373,7 +373,7 @@ var
   Sorompok:array[1..maxmerleg,1..2] of Soromporec;
   iranyok:array[1..maxmerleg] of string[2];
   PLC_lekerdezes_szamlalo:integer;
-
+  socket_hiba: Boolean=False;
 implementation
 
 uses
@@ -382,7 +382,7 @@ uses
   tipusokU, tarolokU,Rak_szallU, rak_szall_listU,MeresU, Tulajok,Ping2U, tesztU,
   levon_szovegekU, demotomegU, nagykepU, szoftver_alapU,Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU,DMSoapU, DijakU, dijszabU, ftpDlU,
-  LibreExcelU, NzelvvalaszTU,reinit, UzenetekU;
+  LibreExcelU, NzelvvalaszTU,reinit, UzenetekU, DmDbMentU;
 
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
@@ -762,6 +762,7 @@ procedure TFoF.ClientSocketError(Sender: TObject; Socket: TCustomWinSocket; Erro
 begin
   StatusBar1.Panels[1].Text := rsKliensHiba + inttostr(ErrorCode);
   ErrorCode := 0;
+  socket_hiba:=True;
 end;
 
 procedure TFoF.dbgNyitbeCellClick(Column: TColumn);
@@ -1533,6 +1534,7 @@ begin
      else CanClose:=true;
     end;
   end;
+  if (db_mentes_inditaskor) and (not db_mentes_kesz) then CanClose:=False;
 
 end;
 
@@ -3087,15 +3089,17 @@ var
     begin
       socketrendszam := '';
       socketkep := '';
-      FoF.ClientSocket.Socket.SendText('<H' + kepszam + '=1>');
-      sza := 0;
-
-      repeat
-        Sleep(100);
-        Application.ProcessMessages;
-        sza := sza + 1;
-      until (sza > 100) or (socketrendszam <> '');
-
+      try
+        fof.ClientSocket.Socket.Connect(9001);
+      finally
+        FoF.ClientSocket.Socket.SendText('<H' + kepszam + '=1>');
+        sza := 0;
+        repeat
+          Sleep(100);
+          Application.ProcessMessages;
+          sza := sza + 1;
+        until (sza > 100) or (socketrendszam <> '');
+      end;
     end;
 
   //iprendszamleker
@@ -3767,6 +3771,82 @@ var kilep:boolean;
     var
       sza: integer;
       kepszam:string;
+
+
+      procedure socketconnect;
+        var
+          i,kliens_port,szerver_port,merlegszam,socketszam: integer;
+
+               procedure thread_hv;
+               var SQL_LekTH:SQL_Lekerdezes_Thread;
+                   hwQ: TFDQuery;
+                   hwKap:TFDConnection;
+                begin
+                  inherited;
+                  try
+                    hwQ:= TFDQuery.Create(nil);
+                    hwKap :=TFDConnection.Create(nil);
+                    hwKap.Params:=Af.Kapcs.Params;
+                    hwKap.Connected:=true;
+                    hwQ.Connection:= hwKap;
+                    if hwKap.Connected then
+                    with hwQ do
+                    begin
+                      close;
+                      SQL.Text:= af.HardverQ.SQL.Text;
+                      open;
+                      // RENDSZAM_KLIENS1 RENDSZAM_SZERVER1
+                        if (hwq.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_KLIENS'+socketszam.ToString,'M'+merlegszam.ToString]),[]))
+                                and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+                                and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+                          then kliens_port:=af.HardverQ.FieldbyName('IP_Port').AsInteger;
+                        if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_SZERVER'+socketszam.ToString,'M'+merlegszam.ToString]),[]))
+                                and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+                                and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+                          then szerver_port:=af.HardverQ.FieldbyName('IP_Port').AsInteger;
+                      close;
+                      free;
+                    end;
+                   hwKap.Connected:=False;
+                   hwKap.Free;
+                  finally
+
+                  end;
+                end;
+
+        begin
+         with fof do
+          begin
+            if ClientSocket.Active then  ClientSocket.Active := False;
+            if ServerSocket.Active then ServerSocket.Active := False;
+            kliens_port:=9001;
+            szerver_port:=9002;
+            if not Regi_hardver_beallitas then
+            begin
+              merlegszam:=1;
+              socketszam:=1;
+              thread_hv;
+            end;
+            with ClientSocket do
+            begin
+              //Host := edIp.Text;
+              Port:=kliens_port;
+              socket_hiba:=False;
+              Active := True;
+              i := 0;
+              varakozas;
+              while (not Active) and (i < 5) do
+              begin
+                varakozas;
+                Active := True;
+                i := i + 1;
+              end;
+            end;
+            ServerSocket.Port:=szerver_port;
+            ServerSocket.Active := True;
+
+          end;
+        end;
     begin
       SocketTomb[thmerleg,thkamera].rendszam:='';
       SocketTomb[thmerleg,thkamera].kep:='';
@@ -3781,6 +3861,8 @@ var kilep:boolean;
               if (thmerleg=3) and  (thkamera=1) then kepszam:='5'
                 else
                 if (thmerleg=3) and  (thkamera=2) then kepszam:='6';
+
+      if socket_hiba then socketconnect;
 
       FoF.ClientSocket.Socket.SendText('<H' + kepszam + '=1>');
       sza := 0;
@@ -3873,7 +3955,6 @@ begin
     end;
   { TODO -oKNZ -c : Több PLC-t itt kell megcsinálni  2024.10.20. 20:15:55 }
   FoF.mctPLC.ReadCoils(1,16,PLC_Lekerdezett_Valasz);
-
 end;
 
 procedure PLC_Lekerdezes_Thread.Execute;

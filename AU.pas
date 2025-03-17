@@ -21,7 +21,7 @@ uses
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
   Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000, System.Actions,
-  Vcl.ActnList, Vcl.StdActns,reinit;
+  Vcl.ActnList, Vcl.StdActns,reinit,DmDbMentU;
 
  
   const ini_nev='porta_beallit.ini';
@@ -584,7 +584,9 @@ var
   nyomtatas_szamlalo:Integer=2;
   //0-hun, 1-eng
   nyelv_index:Integer=0;
-
+  db_mentes_inditaskor: Boolean=False;
+  db_tavoli_mappa: string;
+  db_ftp_tavoli_mappa: string;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
      DMSoapU, UzenetekU ;
@@ -773,6 +775,13 @@ begin
   if Mjegy_nyom_rec=nil then Mjegy_nyom_rec := Tmjegy_rec_nyom.Create;
  // FordF:=FordF.Create(Application);//azért van itt mert angol alatt ezen kiakad és nem fordul le
 //  ShowMessage(nyelv_index.ToString);
+ if db_mentes_inditaskor then
+  begin
+   db_mentes_kesz:=False;
+   DmDbMentF.vegrehajt(port ,szerver,adatbazis,user,passwd,
+                     FormatDateTime('YYYY_MM_DD', Date),db_tavoli_mappa,db_ftp_tavoli_mappa);
+  end
+ else db_mentes_kesz:=True;
 
 end;
 
@@ -1455,6 +1464,10 @@ begin
   automata_Ftp_feltoltes:= cfg_kezel('Automatikus feltöltés az FTP szerverre','FTP','Automata_Ftp_feltoltes','Boolean', Automata_Ftp_feltoltes);
 
   nyelv_index:=cfg_kezel('0-magyat; 1-angol','ALAP','Nyelv','Integer',nyelv_index);
+
+  db_mentes_inditaskor:= cfg_kezel('Automatikus adatbázis mentés a program indításakor','DB','db_mentes_inditaskor','Boolean', db_mentes_inditaskor);
+  db_tavoli_mappa:=cfg_kezel('Adatbázis mentéshez távoli mappa','DB','db_tavoli_mappa','String', db_tavoli_mappa);
+  db_ftp_tavoli_mappa:=cfg_kezel('Adatbázis mentéshez távoli FTP mappa','DB','db_ftp_tavoli_mappa','String',db_ftp_tavoli_mappa);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);

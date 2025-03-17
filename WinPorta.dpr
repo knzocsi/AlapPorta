@@ -63,7 +63,8 @@ uses
   reinit in 'reinit.pas',
   UzenetekU in 'UzenetekU.pas',
   NezetU in 'NezetU.pas' {NezetF},
-  TermekekU in 'TermekekU.pas' {TermekekF};
+  TermekekU in 'TermekekU.pas' {TermekekF},
+  DmDbMentU in '..\..\Egyeb\MySQLDBExport\DmDbMentU.pas' {DmDbMentF: TDataModule};
 
 {$R *.res}
 
@@ -71,6 +72,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDMSoapF, DMSoapF);
+  Application.CreateForm(TDmDbMentF, DmDbMentF);
   Application.CreateForm(TAF, AF);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
