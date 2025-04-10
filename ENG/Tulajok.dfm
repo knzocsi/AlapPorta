@@ -55,7 +55,7 @@ object TulajokF: TTulajokF
     Top = 40
     Width = 772
     Height = 347
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet

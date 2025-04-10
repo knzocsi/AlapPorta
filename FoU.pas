@@ -210,6 +210,7 @@ type
     btnnyelv: TButton;
     JvFormStorage1: TJvFormStorage;
     IniFile: TJvAppIniFileStorage;
+    moxaTeszttmr: TTimer;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -307,7 +308,8 @@ type
     procedure tmrForgalom_frissitesTimer(Sender: TObject);
     procedure btnnyelvClick(Sender: TObject);
     procedure PLC_feladatok(IPCim:string;Port,IO:integer;Tipus,Muvelet:string;Ertek:integer);
-
+    function Ping_teszt_moxa(IP:string):boolean;
+    procedure moxaTeszttmrTimer(Sender: TObject);
 
   private
     { Private declarations }
@@ -360,7 +362,7 @@ var
 
     // A VLC plugin maPPÁja iskell a dll/ek mellett!!!!
   vlcLib: integer;
-  pingprobak,kamprobak:Integer;
+  pingprobak,kamprobak, pingprobak_moxa:Integer;
   ThPC_Komm:PCKommunikacio_thread;
   //ThRendszamLampa1,ThRendszamLampa2,ThRendszamLampa3,ThRendszamLampa4:Rendszam_lampa_thread;
   ThRendszamLampa:array[1..maxmerleg] of Rendszam_lampa_thread;
@@ -725,7 +727,7 @@ begin
         //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,1);
         PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',1);
       end
-      else
+    else
         if af.HardverQ.FieldbyName('Tipus').AsString='PLC485' then
         begin
           PLC_COMF.ModBusIrBit(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,1);
@@ -1001,8 +1003,9 @@ var
     begin
       aktiv_merlegek[merlegszam]:=0;
          if (af.HardverQ.locate('Eszkoznev','MERLEG'+merlegszam.ToString,[]))
-        and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
-        and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)        then
+          and (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)
+          and (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+         then
           begin
             if automata_meres then  aktiv_merlegek[merlegszam]:=merlegszam;
             aktualis_merlegszam:=aktualis_merlegszam+1;
@@ -1043,20 +1046,23 @@ var
                    1 :  begin
                           moxa_ip1:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
                           moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          if Ping_teszt_moxa(moxa_ip1) then
                           PortF.IP1_Start;
                         end;
                    2 :  begin
                           moxa_ip2:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
                           moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          if Ping_teszt_moxa(moxa_ip2) then
                           PortF.IP2_Start;
                         end;
                    3 :  begin
                           moxa_ip3:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
                           moxa_port:= af.HardverQ.FieldbyName('IP_port').AsInteger;
+                          if Ping_teszt_moxa(moxa_ip3) then
                           PortF.IP3_Start;
                         end;
                  end;
-
+                 moxaTeszttmr.Enabled:=True;
                end;
           end;
     end;
@@ -1214,6 +1220,7 @@ begin
   else pnlJobbAlso.Visible:=true;
   meresirany:='-';
   pingprobak:=5;
+  pingprobak_moxa:=5;
   kamprobak:=5;
   lblRendszam_elso.Caption := '';
   lblRendszam_hatso.Caption := '';
@@ -2784,7 +2791,9 @@ begin
   Tomeg_Timer.Enabled:=false;
   //af.ForgalomQ.Refresh;
   pont:=' ';
-  if (StatusBar1.panels[4].text<>'') and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)]=' ') then pont:='.';
+  if (StatusBar1.panels[4].text<>'')
+   and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)]=' ')
+  then pont:='.';
   try
 
     tomeg_szoveg:='';
@@ -3057,6 +3066,14 @@ begin
   end;
 
 
+end;
+
+procedure TFoF.moxaTeszttmrTimer(Sender: TObject);
+begin
+moxaTeszttmr.Enabled:=False;
+ if (moxa_ip1<>'') and (not portf.IdTCPClient1.Connected) then
+  if Ping_teszt_moxa(moxa_ip1) then PortF.IP1_Start;
+moxaTeszttmr.Enabled:=true;
 end;
 
 procedure TFoF.Mrlegelseklistja1Click(Sender: TObject);
@@ -3351,6 +3368,53 @@ begin
     else Sleep(100)
   end;
 
+end;
+
+function TFoF.Ping_teszt_moxa(IP: string): boolean;
+var i,k:integer;
+begin
+  Result:=False;
+  //if UpperCase(IP)='LOCAL' then exit;
+// for I := 1 to pingprobak_moxa do
+//  begin
+//    if pingprobak_moxa=i then
+//    begin
+//     StatusBar1.panels[3].text := rsMoxaHiba;
+//     memlog.Lines.Insert(0,rsMoxaOlvasasiHiba);
+//     Application.ProcessMessages;
+//     Exit;
+//    end;
+//    Inc(pingproba_moxa);
+    StatusBar1.panels[3].text := rsMoxaTeszt;
+    memlog.Lines.Insert(0,rsMoxaTeszt);
+    Application.ProcessMessages;
+    for k := 1 to Ping_varakozas do
+    begin
+     try
+      if PingHost(IP) then
+      begin
+        //pingproba_moxa:=1;
+        memlog.Lines.Insert(0,'Moxa IP: ' + ip + ' OK');
+        Application.ProcessMessages;
+        Result:=true;
+        Break
+      end
+      else
+      begin
+        StatusBar1.panels[3].text := rsMoxaHiba;
+        memlog.Lines.Insert(0,rsMoxaOlvasasiHiba);
+        Result:=false;
+        Application.ProcessMessages;
+        Sleep(100)
+      end;
+     except
+      StatusBar1.panels[3].text := rsMoxaHiba;
+      memlog.Lines.Insert(0,rsMoxaOlvasasiHiba);
+      Result:=false;
+      Application.ProcessMessages;
+     end;
+    end;
+//  end;
 end;
 
 procedure TFoF.PLCsorosportbellts1Click(Sender: TObject);

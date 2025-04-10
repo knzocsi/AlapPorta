@@ -540,7 +540,7 @@ var
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
   Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
   ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
-  Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba,Merlegjegy_lista_tipus:Integer;
+  Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba,Merlegjegy_lista_tipus,pingproba_moxa:Integer;
   Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa,dijszab_csoportok:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
   torzsiport_folyamatban: Boolean=False;
@@ -584,9 +584,11 @@ var
   nyomtatas_szamlalo:Integer=2;
   //0-hun, 1-eng
   nyelv_index:Integer=0;
+
   db_mentes_inditaskor: Boolean=False;
   db_tavoli_mappa: string;
   db_ftp_tavoli_mappa: string;
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
      DMSoapU, UzenetekU ;

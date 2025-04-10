@@ -61,6 +61,15 @@ object FelhaszF: TFelhaszF
       TabOrder = 3
       OnClick = Button4Click
     end
+    object Button5: TButton
+      Left = 376
+      Top = 21
+      Width = 113
+      Height = 25
+      Caption = 'Jelsz'#243' m'#243'dos'#237't'#225'sa'
+      TabOrder = 4
+      OnClick = Button5Click
+    end
   end
   object JvDBUltimGrid1: TJvDBUltimGrid
     Left = 0
@@ -130,7 +139,7 @@ object FelhaszF: TFelhaszF
   end
   object ajogQ: TFDQuery
     Connection = AF.Kapcs
-    Left = 376
-    Top = 24
+    Left = 400
+    Top = 80
   end
 end

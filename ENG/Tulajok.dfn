@@ -5,8 +5,8 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45671.4145601852</prop>
-        <prop prop-type="OrigDateTime">44983.5933101852</prop>
+        <prop prop-type="SelfDateTime">45734.421712963</prop>
+        <prop prop-type="OrigDateTime">45701.4233333333</prop>
         <prop prop-type="XlatDateTime">45581.294537037</prop>
         <prop prop-type="Translated">0</prop>
         <prop prop-type="UnTranslated">432</prop>
@@ -249,7 +249,7 @@
         <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:TulajokF.O:pcListaReszlet.ActivePage" resname="O:TulajokF.O:pcListaReszlet.ActivePage">
-        <source>tbLista</source>
+        <source>tbReszlet</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.642349919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

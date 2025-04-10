@@ -20,6 +20,7 @@ type
     JvDBUltimGrid1: TJvDBUltimGrid;
     JvDBUltimGrid2: TJvDBUltimGrid;
     ajogQ: TFDQuery;
+    Button5: TButton;
     procedure FormActivate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure JvDBUltimGrid1CellClick(Column: TColumn);
@@ -33,6 +34,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
     procedure jogok_szur(fid:Integer);
@@ -164,6 +166,53 @@ if not aktjogle('j2')then
     aF.jogok_beolvasasa;//ezeket is frissiteni kell törlés után
     jogok_szur(aF.FelhaszQ.Fields[0].AsInteger);
    end;
+end;
+
+procedure TFelhaszF.Button5Click(Sender: TObject);
+var
+  regi, uj, ujra: string;
+begin
+//  regi := InputBox(rsAdjaMegAJelenlegiJelszavat, #31+PChar(rsJelszo), 'aaaaaaaa');
+//  if not aF.FelhaszQ.locate('id;jelszo', VarArrayOf([f_ide, aF.Transform(regi)]), []) then
+//  begin
+//    ShowMessage(rsHibasJelszo);
+//    Exit
+//  end;
+  if not aktjogle('j2')then
+   begin
+    ShowMessage(rsNincsJogosultsaga);
+    exit;
+   end;
+  if aF.FelhaszQ.Fields[0].AsInteger=1 then exit;
+
+  uj := InputBox(rsAdjaMegAzUjJelszavat,  #31+PChar(rsJelszo), '');
+  if uj = '' then
+  begin
+    ShowMessage(rsHibasJelszo);
+    Exit
+  end;
+  ujra := InputBox(rsErositseMegAzUjJelszavat,  #31+PChar(rsJelszo), '');
+  if ujra = '' then
+  begin
+    ShowMessage(rsHibasJelszo);
+    Exit
+  end;
+  if uj <> ujra then
+  begin
+    ShowMessage(rsAKetJelszoNemEgyezik);
+    Exit
+  end;
+  with aF.Q1 do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('UPDATE felhasz SET jelszo=' + #39 + aF.Transform(ujra) + #39);
+    SQL.Add(' Where id=' + aF.FelhaszQ.Fields[0].AsString);
+    ExecSQL;
+    Close;
+  end;
+  aF.FelhaszQ.Refresh;
+  ShowMessage(rsJelszoModositva);
 end;
 
 procedure TFelhaszF.FormActivate(Sender: TObject);

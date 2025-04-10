@@ -2,6 +2,7 @@
 
 library WinPorta;
 
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm}
 {ITE} {DFMFileType} {AlapbemodU.dfm}
 {ITE} {DFMFileType} {AU.dfm}
 {ITE} {DFMFileType} {BelepU.dfm}
@@ -55,6 +56,7 @@ library WinPorta;
 {ITE} {DFMFileType} {VarakozasU.dfm}
 {ITE} {RCFileType} {Win32\Debug\WinPorta_DRC.rc}
 
+{$R 'N\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm' 'DmDbMentF:TDataModule'}
 {$R 'AlapbemodU.dfm' 'AlapbemodF:TForm'}
 {$R 'AU.dfm' 'AF:TDataModule'}
 {$R 'BelepU.dfm' 'BelepF:TForm'}

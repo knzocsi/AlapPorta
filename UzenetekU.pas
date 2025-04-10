@@ -131,6 +131,9 @@ interface
  resourcestring rsKodotMegKellAdni = 'Adja meg a kódot!';
  resourcestring rsAdjaMegME = 'Adja meg a mértékegységet!';
  resourcestring rsFeltolt = 'Szeretné most feltölteni a mérlegjegyeket?';
+ resourcestring rsMoxaTeszt = 'Mérleg IP teszt';
+ resourcestring rsMoxaHiba = 'Mérleg IP hiba!';
+ resourcestring rsMoxaOlvasasiHiba = 'Mérleg IP olvasási hiba!';
 implementation
 
 end.

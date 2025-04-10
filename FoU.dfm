@@ -1613,4 +1613,10 @@ object FoF: TFoF
     Left = 432
     Top = 352
   end
+  object moxaTeszttmr: TTimer
+    Enabled = False
+    OnTimer = moxaTeszttmrTimer
+    Left = 337
+    Top = 360
+  end
 end
