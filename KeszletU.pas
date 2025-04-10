@@ -33,12 +33,14 @@ type
     btnexport: TButton;
     chknullas: TCheckBox;
     Panel2: TPanel;
+    btnkeszlet_torol: TButton;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnNyomtatasClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure termeklookupChange(Sender: TObject);
     procedure btnexportClick(Sender: TObject);
+    procedure btnkeszlet_torolClick(Sender: TObject);
   private
     { Private declarations }
     procedure szures;
@@ -51,8 +53,22 @@ var
   KeszletF: TKeszletF;
   nyomtat:Boolean=False;
 implementation
-  uses AU,NezetU, LibreExcelU;
+  uses AU,NezetU, LibreExcelU, UzenetekU;
 {$R *.dfm}
+
+procedure TKeszletF.btnkeszlet_torolClick(Sender: TObject);
+begin
+if not aF.van_joga('j10') then  exit;
+if MessageDlg(rsBiztosantorli, mtConfirmation, [mbOK,mbCancel], 0) = mrCancel then  exit;
+with AF.Q1 do
+ begin
+   Close;
+   SQL.Clear;
+   SQL.Add('DELETE FROM keszlet');
+   ExecSQL
+ end;
+ szures;
+end;
 
 procedure TKeszletF.btnKilepesClick(Sender: TObject);
 begin
@@ -86,6 +102,7 @@ begin
  termeklist.Open;
  Partnelist.open;
  TarolokT.Open;
+ btnkeszlet_torol.Visible:=keszlet_torles;
  szures;
 end;
 

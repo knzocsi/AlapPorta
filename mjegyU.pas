@@ -216,6 +216,7 @@ type
     spsiker: TJvSpinEdit;
     Label16: TLabel;
     termeklistb_siker: TBooleanField;
+    chkidegen: TCheckBox;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -346,17 +347,17 @@ case cbxirany.ItemIndex of
     btnekaer.Enabled:=false;
     btnMeres.enabled:=False;
    end;
- 1:begin //beszállítás
-    lblpartner.Caption:=rsMegrendelo;
-    partnerlookup.Enabled:=True;
-    lblpartner2.Caption:=rsAtvevo;
-    partnerlookup2.Enabled:=true;
-    lblfuvarozo.Caption:=rsSzallito;
-    btnekaer.Enabled:=false;
-    partnerlookup.keyvalue:='!';
-    if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
-    btnMeres.enabled:= True;
-   end;
+ 1,3:begin //beszállítás, idegen mérés
+      lblpartner.Caption:=rsMegrendelo;
+      partnerlookup.Enabled:=True;
+      lblpartner2.Caption:=rsAtvevo;
+      partnerlookup2.Enabled:=true;
+      lblfuvarozo.Caption:=rsSzallito;
+      btnekaer.Enabled:=false;
+      partnerlookup.keyvalue:='!';
+      if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
+      btnMeres.enabled:= True;
+     end;
  2:begin //kiszállítás
     lblpartner.Caption:=rsErtekesito;
     partnerlookup.Enabled:=true;
@@ -523,6 +524,8 @@ begin
   szarcb_feltoltese;
   for i:= 1 to maxkep do kepek_tomb[i]:='';
   jeloltek_szama:=0;
+  chkidegen.Checked:=False;
+  chkidegen.Visible:=idegen_meres;
   if Folytatas then
   with af.NyitbeQ do
   begin
@@ -589,6 +592,7 @@ begin
         end;
     end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
+    chkidegen.Checked:=FieldByName('idegen_meres').AsBoolean;
   end;
  end;
 
@@ -1384,7 +1388,7 @@ begin
       if cbxirany.ItemIndex in [1,2] then
 
         case cbxirany.Text[1] of
-         'B','I':
+         'B':
              begin
               ParamByName('tomegbe').AsInteger:=spsznetto.Value;
               ParamByName('tomegki').AsInteger:=0;
@@ -1491,7 +1495,7 @@ begin
        // ParamByName('kitarolasi_dij').AsFloat:=spszNetto.Value*ki_tarolasi_dij;
         ParamByName('szallitasi_dij').AsFloat:=spszNetto.Value*szallitasi_dij;
         case cbxirany.Text[1] of
-         'B','I':
+         'B':
              begin
               ParamByName('betarolasi_dij').AsFloat:=spszNetto.Value*be_tarolasi_dij;
               //ShowMessage(VarToStr(spszNetto.Value*be_tarolasi_dij));
@@ -1561,6 +1565,7 @@ begin
        ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
        ParamByName('siker').value:=spsiker.Value;
+       //ParamByName('idegen_meres').AsBoolean:=chkidegen.Checked;
       ExecSQL;
 
       if Folytatas then
@@ -1575,7 +1580,7 @@ begin
       //keszletezes
       if Sender <>btnFolytatasos_mentes then
         case cbxirany.Text[1] of
-         'B','I':
+         'B':
              begin
               aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,0,keszmenny);
               //tört szemek készletezése

@@ -722,6 +722,10 @@ begin
             ParamByName('tomegki').AsInteger:=spsznetto.Value;
             ParamByName('tomegbe').AsInteger:=0;
            end;
+       'I':begin
+            ParamByName('tomegki').AsInteger:=0;
+            ParamByName('tomegbe').AsInteger:=0;
+           end;
       end;
       ParamByName('brutto').AsInteger:=spbrutto.Value;
       ParamByName('tara').AsInteger:=sptara.Value;

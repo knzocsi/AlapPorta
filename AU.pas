@@ -27,7 +27,7 @@ uses
   const ini_nev='porta_beallit.ini';
   joga: array [1..20] of string=
    ('Dolgozó felvitele','Dolgozó módosítása','Mérlegjegy módosítás','Mérlegjegy készítés','Mérlegelõk módosítása',
-   'Mérés','Kezdõ készlet felv.','Kézi mérés','Táramegadás','',
+   'Mérés','Kezdõ készlet felv.','Kézi mérés','Táramegadás','Készlet törlés',
    '','', '','','',
    '','','','','');
 
@@ -588,6 +588,10 @@ var
   db_mentes_inditaskor: Boolean=False;
   db_tavoli_mappa: string;
   db_ftp_tavoli_mappa: string;
+
+  keszlet_torles: Boolean=False;
+
+  idegen_meres: Boolean=False;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -1470,6 +1474,10 @@ begin
   db_mentes_inditaskor:= cfg_kezel('Automatikus adatbázis mentés a program indításakor','DB','db_mentes_inditaskor','Boolean', db_mentes_inditaskor);
   db_tavoli_mappa:=cfg_kezel('Adatbázis mentéshez távoli mappa','DB','db_tavoli_mappa','String', db_tavoli_mappa);
   db_ftp_tavoli_mappa:=cfg_kezel('Adatbázis mentéshez távoli FTP mappa','DB','db_ftp_tavoli_mappa','String',db_ftp_tavoli_mappa);
+
+  keszlet_torles:= cfg_kezel('Készlet törlésének engedélyezése','ALAP','keszlet_torles','Boolean', keszlet_torles);
+
+    idegen_meres:= cfg_kezel('Idegen mérés engedélyezése','ALAP','idegen_meres','Boolean', idegen_meres);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);

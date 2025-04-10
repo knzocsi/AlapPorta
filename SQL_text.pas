@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=33;
+      maxSQL=34;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1040,7 +1040,11 @@ interface
       'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `siker` DECIMAL(12,2) NOT NULL DEFAULT 0;' //+ #13#10 +
       ,
       'UPDATE forgalom SET aut_nyom=1 WHERE datum<CURDATE() AND aut_nyom=0; '
-
+      ,//idegen mérés
+      ''
+//      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `idegen_meres` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+//      'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `idegen_meres` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+//      'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `idegen_meres` TINYINT(1) NOT NULL DEFAULT 0;' //+ #13#10 +
     );
 
 
