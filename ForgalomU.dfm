@@ -49,26 +49,6 @@ object ForgalomF: TForgalomF
       TabOrder = 0
       OnClick = btnKilepesClick
     end
-    object piKezdoDatum: TDateTimePicker
-      Left = 152
-      Top = 22
-      Width = 113
-      Height = 21
-      Date = 43587.000000000000000000
-      Time = 0.773554583327495500
-      TabOrder = 1
-      OnChange = piKezdoDatumChange
-    end
-    object piBefejezoDatum: TDateTimePicker
-      Left = 312
-      Top = 22
-      Width = 105
-      Height = 21
-      Date = 43587.000000000000000000
-      Time = 0.774182199071219700
-      TabOrder = 2
-      OnChange = piKezdoDatumChange
-    end
     object Button1: TButton
       Left = 896
       Top = 18
@@ -76,7 +56,7 @@ object ForgalomF: TForgalomF
       Height = 25
       Anchors = [akRight]
       Caption = 'M'#233'rlegjegy k'#233'sz'#237't'#233's'
-      TabOrder = 3
+      TabOrder = 1
       Visible = False
       OnClick = Button1Click
     end
@@ -86,8 +66,32 @@ object ForgalomF: TForgalomF
       Width = 75
       Height = 25
       Caption = 'Export'
-      TabOrder = 4
+      TabOrder = 2
       OnClick = Button2Click
+    end
+    object piBefejezoDatum: TJvDateEdit
+      Left = 312
+      Top = 23
+      Width = 88
+      Height = 21
+      DateFormat = 'YYYY.MM.DD.'
+      DefaultToday = True
+      DialogTitle = 'V'#225'lasszon d'#225'tumot'
+      ShowNullDate = False
+      TabOrder = 3
+      OnChange = piKezdoDatumChange
+    end
+    object piKezdoDatum: TJvDateEdit
+      Left = 152
+      Top = 23
+      Width = 88
+      Height = 21
+      DateFormat = 'YYYY.MM.DD.'
+      DefaultToday = True
+      DialogTitle = 'V'#225'lasszon d'#225'tumot'
+      ShowNullDate = False
+      TabOrder = 4
+      OnChange = piKezdoDatumChange
     end
   end
   object Panel2: TPanel

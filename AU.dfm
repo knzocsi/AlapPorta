@@ -17346,4 +17346,9 @@ object AF: TAF
       FieldName = 'Ertek'
     end
   end
+  object ipcam_merleghezQ: TFDQuery
+    Connection = Kapcs
+    Left = 528
+    Top = 528
+  end
 end

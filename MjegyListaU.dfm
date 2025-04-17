@@ -93,33 +93,13 @@ object MjegyekF: TMjegyekF
       Height = 13
       Caption = 'Megjegyz'#233's r'#233'szletre sz'#369'r'#233's:'
     end
-    object piKezdoDatum: TDateTimePicker
-      Left = 152
-      Top = 22
-      Width = 113
-      Height = 21
-      Date = 43587.000000000000000000
-      Time = 0.773554583327495500
-      TabOrder = 0
-      OnChange = piKezdoDatumChange
-    end
-    object piBefejezoDatum: TDateTimePicker
-      Left = 312
-      Top = 22
-      Width = 105
-      Height = 21
-      Date = 43587.000000000000000000
-      Time = 0.774182199071219700
-      TabOrder = 1
-      OnChange = piBefejezoDatumChange
-    end
     object btnKilepes: TButton
       Left = 16
       Top = 21
       Width = 75
       Height = 25
       Caption = 'Kil'#233'p'#233's'
-      TabOrder = 2
+      TabOrder = 0
       OnClick = btnKilepesClick
     end
     object btnUjranyomtatas: TButton
@@ -128,7 +108,7 @@ object MjegyekF: TMjegyekF
       Width = 98
       Height = 25
       Caption = #218'jranyomtat'#225's'
-      TabOrder = 3
+      TabOrder = 1
       OnClick = btnUjranyomtatasClick
     end
     object btnListanyomtatas: TButton
@@ -137,7 +117,7 @@ object MjegyekF: TMjegyekF
       Width = 97
       Height = 25
       Caption = 'Lista nyomtat'#225's'
-      TabOrder = 4
+      TabOrder = 2
       OnClick = btnListanyomtatasClick
     end
     object btnStorno: TButton
@@ -146,7 +126,7 @@ object MjegyekF: TMjegyekF
       Width = 75
       Height = 25
       Caption = 'Storno'
-      TabOrder = 5
+      TabOrder = 3
       OnClick = btnStornoClick
     end
     object termeklookup: TJvDBLookupCombo
@@ -162,7 +142,7 @@ object MjegyekF: TMjegyekF
       LookupField = 'ID'
       LookupDisplay = 'Nev;Kod;'
       LookupSource = termeklistDs
-      TabOrder = 6
+      TabOrder = 4
       OnChange = cbxrendszChange
     end
     object partnerlookup: TJvDBLookupCombo
@@ -177,7 +157,7 @@ object MjegyekF: TMjegyekF
       LookupField = 'ID'
       LookupDisplay = 'Nev;Kod;'
       LookupSource = PartnelistDs
-      TabOrder = 7
+      TabOrder = 5
       OnChange = cbxrendszChange
     end
     object cbxirany: TComboBox
@@ -187,7 +167,7 @@ object MjegyekF: TMjegyekF
       Height = 22
       Style = csOwnerDrawFixed
       ItemIndex = 0
-      TabOrder = 8
+      TabOrder = 6
       Text = '*Nincs sz'#369'rve*'
       OnChange = cbxrendszChange
       Items.Strings = (
@@ -200,7 +180,7 @@ object MjegyekF: TMjegyekF
       Top = 23
       Width = 96
       Height = 21
-      TabOrder = 9
+      TabOrder = 7
       Text = 'cbxrendsz'
       OnChange = cbxrendszChange
     end
@@ -214,7 +194,7 @@ object MjegyekF: TMjegyekF
       LookupField = 'Id'
       LookupDisplay = 'Nev'
       LookupSource = tulajDs
-      TabOrder = 10
+      TabOrder = 8
       OnChange = piKezdoDatumChange
     end
     object chkstorno: TCheckBox
@@ -223,7 +203,7 @@ object MjegyekF: TMjegyekF
       Width = 97
       Height = 17
       Caption = 'Storn'#243' is l'#225'tszik'
-      TabOrder = 11
+      TabOrder = 9
       OnClick = piKezdoDatumChange
     end
     object btnModositas: TButton
@@ -232,7 +212,7 @@ object MjegyekF: TMjegyekF
       Width = 75
       Height = 25
       Caption = 'M'#243'dos'#237't'#225's'
-      TabOrder = 12
+      TabOrder = 10
       OnClick = btnModositasClick
     end
     object taroloklookup: TJvDBLookupCombo
@@ -245,7 +225,7 @@ object MjegyekF: TMjegyekF
       LookupField = 'id'
       LookupDisplay = 'nev'
       LookupSource = TarolokDs
-      TabOrder = 13
+      TabOrder = 11
       OnChange = cbxrendszChange
     end
     object edmegjegy: TEdit
@@ -253,7 +233,7 @@ object MjegyekF: TMjegyekF
       Top = 110
       Width = 296
       Height = 21
-      TabOrder = 14
+      TabOrder = 12
       OnChange = cbxrendszChange
     end
     object chkKepek: TCheckBox
@@ -262,8 +242,32 @@ object MjegyekF: TMjegyekF
       Width = 126
       Height = 17
       Caption = 'K'#233'pek megjelen'#237't'#233'se'
-      TabOrder = 15
+      TabOrder = 13
       OnClick = chkKepekClick
+    end
+    object piKezdoDatum: TJvDateEdit
+      Left = 152
+      Top = 23
+      Width = 88
+      Height = 21
+      DateFormat = 'YYYY.MM.DD.'
+      DefaultToday = True
+      DialogTitle = 'V'#225'lasszon d'#225'tumot'
+      ShowNullDate = False
+      TabOrder = 14
+      OnChange = piKezdoDatumChange
+    end
+    object piBefejezoDatum: TJvDateEdit
+      Left = 312
+      Top = 23
+      Width = 88
+      Height = 21
+      DateFormat = 'YYYY.MM.DD.'
+      DefaultToday = True
+      DialogTitle = 'V'#225'lasszon d'#225'tumot'
+      ShowNullDate = False
+      TabOrder = 15
+      OnChange = piBefejezoDatumChange
     end
   end
   object Panel2: TPanel

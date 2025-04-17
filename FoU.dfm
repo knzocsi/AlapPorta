@@ -862,7 +862,7 @@ object FoF: TFoF
           Top = 1
           Width = 794
           Height = 227
-          ActivePage = cam0
+          ActivePage = cam5
           Align = alBottom
           TabOrder = 0
           object cam0: TTabSheet
@@ -879,6 +879,14 @@ object FoF: TFoF
           object cam3: TTabSheet
             Caption = 'Kamera 4'
             ImageIndex = 3
+          end
+          object cam4: TTabSheet
+            Caption = 'Kamera 5'
+            ImageIndex = 4
+          end
+          object cam5: TTabSheet
+            Caption = 'Kamera 6'
+            ImageIndex = 5
           end
         end
       end
@@ -1155,6 +1163,7 @@ object FoF: TFoF
     Height = 55
     Align = alBottom
     TabOrder = 3
+    Visible = False
     object JvLED1: TJvLED
       Left = 32
       Top = 6
@@ -1616,7 +1625,7 @@ object FoF: TFoF
   object moxaTeszttmr: TTimer
     Enabled = False
     OnTimer = moxaTeszttmrTimer
-    Left = 337
-    Top = 360
+    Left = 361
+    Top = 320
   end
 end

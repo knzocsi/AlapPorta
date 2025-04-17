@@ -13,7 +13,8 @@ uses
   IdTCPConnection, IdTCPClient, IdModBusClient, vcl.imaging.jpeg,
   Vcl.Imaging.pngimage, System.inifiles,System.Contnrs,Winapi.ShellAPI,
   ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons, JvExControls,
-  JvLED,AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement;
+  JvLED,AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
+  System.StrUtils;
 
 type
   PCKommunikacio_thread=class(TThread)
@@ -211,6 +212,8 @@ type
     JvFormStorage1: TJvFormStorage;
     IniFile: TJvAppIniFileStorage;
     moxaTeszttmr: TTimer;
+    cam4: TTabSheet;
+    cam5: TTabSheet;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -318,6 +321,8 @@ type
   public
     { Public declarations }
     procedure Play_Panel_letrehozasa(F:Tform; szulo, neve: string);
+    procedure stop_1_nagy(melyik:integer);
+    procedure play_1_nagy(melyik:integer);
   end;
 
 type
@@ -348,15 +353,19 @@ var
  // RtspURLs: array [0..3] of string;
   Panelek: TObjectList;
   P: TPanel;
-  vlcInstance0, vlcInstance1, vlcInstance2, vlcInstance3: plibvlc_instance_t;
+  vlcInstance0, vlcInstance1, vlcInstance2, vlcInstance3,vlcInstance4,vlcInstance5: plibvlc_instance_t;
   //nagy
-  vlcInstance4, vlcInstance5, vlcInstance6, vlcInstance7: plibvlc_instance_t;
-  vlcMedia0, vlcMedia1, vlcMedia2, vlcMedia3: plibvlc_media_t;
+  vlcInstance6, vlcInstance7, vlcInstance8, vlcInstance9,vlcInstance10,vlcInstance11: plibvlc_instance_t;
+
+  vlcMedia0, vlcMedia1, vlcMedia2, vlcMedia3,vlcMedia4,vlcMedia5: plibvlc_media_t;
   //nagy
-  vlcMedia4, vlcMedia5, vlcMedia6, vlcMedia7: plibvlc_media_t;
-  vlcMediaPlayer0, vlcMediaPlayer1, vlcMediaPlayer2, vlcMediaPlayer3: plibvlc_media_player_t;
+  vlcMedia6, vlcMedia7, vlcMedia8, vlcMedia9,vlcMedia10,vlcMedia11: plibvlc_media_t;
+
+  vlcMediaPlayer0, vlcMediaPlayer1, vlcMediaPlayer2, vlcMediaPlayer3,
+  vlcMediaPlayer4,vlcMediaPlayer5 : plibvlc_media_player_t;
   //nagy
-  vlcMediaPlayer4, vlcMediaPlayer5, vlcMediaPlayer6, vlcMediaPlayer7: plibvlc_media_player_t;
+  vlcMediaPlayer6, vlcMediaPlayer7, vlcMediaPlayer8, vlcMediaPlayer9,
+  vlcMediaPlayer10,vlcMediaPlayer11: plibvlc_media_player_t;
 
   teszt, van_cam, indult: Boolean;
 
@@ -1213,6 +1222,20 @@ var
       end;
   end;
 
+  procedure rtsp_ip_kamerak_beallitasa;
+  var k:Integer;
+  begin
+   for k := 0 to 5 do
+    begin
+     if af.HardverQ.Locate('Eszkoznev','URL Cam '+k.ToString) and
+      (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) and
+       (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
+     then
+      rtspurls[k]:=af.HardverQ.FieldbyName('Rtsp').AsString
+     else rtspurls[k]:='';
+    end;
+  end;
+
 begin
   onActivate := nil;
  // AF.auto_teszt;
@@ -1284,14 +1307,15 @@ begin
   if forgalom_latszik then pcTablak.ActivePage:=tbForgalom;
 
   if ( rendszamleker)or (lejatszas) then   kepatmeretez;
-  // vlc_betolt;
+  //if (lejatszas) then vlc_betolt;
   // showmessage(teszt.ToString);
   szures;
   //teszt:=True;
+  if (lejatszas)and(not Regi_hardver_beallitas) then rtsp_ip_kamerak_beallitasa;
 
   try
     if (not nagykamera)and (lejatszas) then play(False);
-    application.processmessages;
+    //application.processmessages;
   except
     Showmessage(rsKamerakepBetolteseSikertelen);
   // Exit
@@ -1561,7 +1585,7 @@ begin
   if not lejatszas then exit;
   if van_plugin then
    begin
-     for i := 0 to 3 do Play_panel_letrehozasa(FoF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
+     for i := 0 to 5 do Play_panel_letrehozasa(FoF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
 
       vlclib := LoadVLCLibrary(GetVLCLibPath());
       if vlclib = 0 then
@@ -1613,7 +1637,7 @@ var
   Key: PWideChar;
 begin
   Result := '';
-  Result :=ExtractFileDir(ExtractFilePath(application.exename)); //'H:\Delphi\ipcam\Win32\Debug';
+ Result :=ExtractFileDir(ExtractFilePath(application.exename));//}'c:\Porta';
  { Key := 'Software\VideoLAN\VLC';
   if RegOpenKeyEx(HKEY_LOCAL_MACHINE, Key, 0, KEY_READ, Handle) = ERROR_SUCCESS then
   begin
@@ -1627,7 +1651,7 @@ begin
     RegCloseKey(Handle); }
  // showmessage(result);
   Result := string(PChar(Result));
-//  end;
+ // end;
 end;
 
 procedure TFoF.imgFelsokepClick(Sender: TObject);
@@ -1926,315 +1950,254 @@ begin
  if not lejatszas then Exit;
   // create new vlc instance
   if not van_plugin then  Exit;//ha nincs plugin kilép
-  //ShowMessage(Panelek.Count.ToString);
-  //ShowMessage(rtspURLs[0]);
-  hany_kamera:=Round(Panelek.Count/2);
-  case hany_kamera of
-    1:
-      begin
-        try
-          if not nagy then
-           begin
-            try
-              stop(nagy);
-            finally
-              vlcInstance0 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[0] <> '' then
-                vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
-              libvlc_media_release(vlcMedia0);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer0);
-              af.camlog('play próba cam0');
-            end;
-           end;
-           if nagy then
-           begin
-            try
-              stop(not nagy);
-            finally
-              vlcInstance4 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia4 := libvlc_media_new_path(vlcInstance4, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[0] <> '' then
-                vlcMedia4 := libvlc_media_new_location(vlcInstance4, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer4 := libvlc_media_player_new_from_media(vlcMedia4);
-              libvlc_media_release(vlcMedia4);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer4, Pointer((panelek[4] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer4);
-              af.camlog('play próba cam4');
-            end;
-           end;
-
-           //showmessage('cam 0 lejatszas:'+rtspUrls[0]);
-        except
-          // showmessage('cam 0 lejatszas hiba:'+rtspUrls[0]);          //
-        end;
-      end;
-    2:
-      begin
-        try //cam0
-          // showmessage(rtspURLS[0]);
-          // showmessage(rtspURLS[1]);
-         if not nagy then
-          begin
-            try
-              stop(nagy);
-            finally
-              vlcInstance0 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
-              libvlc_media_release(vlcMedia0);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer0);
-              //af.camlog('play próba cam0');
-               //cam1
-              vlcInstance1 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
-              libvlc_media_release(vlcMedia1);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer1);
-              //af.camlog('play próba cam1');
-            end;
-          end;
-         if nagy then
-          begin
-            try
-              stop(not nagy);
-            finally
-              vlcInstance4 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia4 := libvlc_media_new_path(vlcInstance4, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia4 := libvlc_media_new_location(vlcInstance4, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer4 := libvlc_media_player_new_from_media(vlcMedia4);
-              libvlc_media_release(vlcMedia4);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer4, Pointer((panelek[4] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer4);
-              //af.camlog('play próba cam0');
-               //cam1
-              vlcInstance5 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia5 := libvlc_media_new_path(vlcInstance5, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia5 := libvlc_media_new_location(vlcInstance5, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer5 := libvlc_media_player_new_from_media(vlcMedia5);
-              libvlc_media_release(vlcMedia5);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer5, Pointer((panelek[5] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer1);
-              //af.camlog('play próba cam1');
-            end;
-          end;
-
-         //else ;
-        except
-         // showmessage('cam 0 lejatszas hiba:'+rtspUrls[0]);
-        end;
-
-      end;
-      //Nagy kamera lejatszas
-   3: begin
-         try
-         if not nagy then
-           begin
-            try
-              stop( nagy);
-            finally
-              vlcInstance0 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
-              libvlc_media_release(vlcMedia0);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer0);
-               //cam1
-              vlcInstance1 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
-              libvlc_media_release(vlcMedia1);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer1);
-              //cam2
-              vlcInstance2 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia2 := libvlc_media_new_path(vlcInstance2, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[2] <> '' then
-                vlcMedia2 := libvlc_media_new_location(vlcInstance2, PAnsiChar(AnsiString(rtspURLs[2])));
-              vlcMediaPlayer2 := libvlc_media_player_new_from_media(vlcMedia2);
-              libvlc_media_release(vlcMedia2);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer2, Pointer((panelek[2] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer2);
-            end;
-           end;
-           if nagy then
-           begin
-            try
-              stop( not nagy);
-            finally
-              vlcInstance4 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia4 := libvlc_media_new_path(vlcInstance4, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia4 := libvlc_media_new_location(vlcInstance4, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer4 := libvlc_media_player_new_from_media(vlcMedia4);
-              libvlc_media_release(vlcMedia4);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer4, Pointer((panelek[4] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer4);
-               //cam1
-              vlcInstance5 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia5 := libvlc_media_new_path(vlcInstance5, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia5 := libvlc_media_new_location(vlcInstance5, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer5 := libvlc_media_player_new_from_media(vlcMedia5);
-              libvlc_media_release(vlcMedia5);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer5, Pointer((panelek[5] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer5);
-              //cam2
-              vlcInstance6 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia6 := libvlc_media_new_path(vlcInstance6, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[2] <> '' then
-                vlcMedia6 := libvlc_media_new_location(vlcInstance6, PAnsiChar(AnsiString(rtspURLs[2])));
-              vlcMediaPlayer6 := libvlc_media_player_new_from_media(vlcMedia6);
-              libvlc_media_release(vlcMedia6);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer6, Pointer((panelek[6] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer6);
-            end;
-           end;
-         except
-           //
-         end;
-
-      end;
-   4: begin
+  try
+   if not nagy then
+    begin
+      try
+        stop(nagy);
+      finally
+       //cam 0
        try
-         if not nagy then
-           begin
-            try
-              stop( nagy);
-            finally
-              vlcInstance0 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
-              libvlc_media_release(vlcMedia0);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer0);
-               //cam1
-              vlcInstance1 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
-              libvlc_media_release(vlcMedia1);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer1);
-              //cam2
-              vlcInstance2 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia2 := libvlc_media_new_path(vlcInstance2, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[2] <> '' then
-                vlcMedia2 := libvlc_media_new_location(vlcInstance2, PAnsiChar(AnsiString(rtspURLs[2])));
-              vlcMediaPlayer2 := libvlc_media_player_new_from_media(vlcMedia2);
-              libvlc_media_release(vlcMedia2);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer2, Pointer((panelek[2] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer2);
-              //cam3
-              vlcInstance3 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia3 := libvlc_media_new_path(vlcInstance3, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[3] <> '' then
-                vlcMedia3 := libvlc_media_new_location(vlcInstance3, PAnsiChar(AnsiString(rtspURLs[3])));
-              vlcMediaPlayer3 := libvlc_media_player_new_from_media(vlcMedia3);
-              libvlc_media_release(vlcMedia3);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer3, Pointer((panelek[3] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer3);
-            end;
-           end;
-           if nagy then
-           begin
-            try
-              stop( not nagy);
-            finally
-              vlcInstance4 := libvlc_new(0, nil);
-              if teszt then
-              begin
-                vlcMedia4 := libvlc_media_new_path(vlcInstance4, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              end
-              else if rtspURLs[0] <> '' then
-                vlcMedia4 := libvlc_media_new_location(vlcInstance4, PAnsiChar(AnsiString(rtspURLs[0])));
-              vlcMediaPlayer4 := libvlc_media_player_new_from_media(vlcMedia4);
-              libvlc_media_release(vlcMedia4);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer4, Pointer((panelek[4] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer4);
-               //cam1
-              vlcInstance5 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia5 := libvlc_media_new_path(vlcInstance5, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[1] <> '' then
-                vlcMedia5 := libvlc_media_new_location(vlcInstance5, PAnsiChar(AnsiString(rtspURLs[1])));
-              vlcMediaPlayer5 := libvlc_media_player_new_from_media(vlcMedia5);
-              libvlc_media_release(vlcMedia5);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer5, Pointer((panelek[5] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer5);
-              //cam2
-              vlcInstance6 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia6 := libvlc_media_new_path(vlcInstance6, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[2] <> '' then
-                vlcMedia6 := libvlc_media_new_location(vlcInstance6, PAnsiChar(AnsiString(rtspURLs[2])));
-              vlcMediaPlayer6 := libvlc_media_player_new_from_media(vlcMedia6);
-              libvlc_media_release(vlcMedia6);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer6, Pointer((panelek[6] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer6);
-              //cam3
-              vlcInstance7 := libvlc_new(0, nil);
-              if teszt then
-                vlcMedia7 := libvlc_media_new_path(vlcInstance7, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
-              else if rtspURLs[3] <> '' then
-                vlcMedia7 := libvlc_media_new_location(vlcInstance7, PAnsiChar(AnsiString(rtspURLs[3])));
-              vlcMediaPlayer7 := libvlc_media_player_new_from_media(vlcMedia7);
-              libvlc_media_release(vlcMedia7);
-              libvlc_media_player_set_hwnd(vlcMediaPlayer7, Pointer((panelek[7] as TPanel).handle));
-              libvlc_media_player_play(vlcMediaPlayer7);
-            end;
-           end;
+       if (teszt) or (rtspURLs[0] <> '') then
+        begin
+          vlcInstance0 := libvlc_new(0, nil);
+          if teszt then vlcMedia0 := libvlc_media_new_path(vlcInstance0, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia0 := libvlc_media_new_location(vlcInstance0, PAnsiChar(AnsiString(rtspURLs[0])));
+          vlcMediaPlayer0 := libvlc_media_player_new_from_media(vlcMedia0);
+          libvlc_media_release(vlcMedia0);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer0, Pointer((panelek[0] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer0);
+        end;
        except
-           //
+        af.camlog('kis cam0 indítási hiba');
+       end;
+       //cam 1
+       try
+       if (teszt) or (rtspURLs[1] <> '') then
+        begin
+          vlcInstance1 := libvlc_new(0, nil);
+          if teszt then vlcMedia1 := libvlc_media_new_path(vlcInstance1, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia1 := libvlc_media_new_location(vlcInstance1, PAnsiChar(AnsiString(rtspURLs[1])));
+          vlcMediaPlayer1 := libvlc_media_player_new_from_media(vlcMedia1);
+          libvlc_media_release(vlcMedia1);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer1, Pointer((panelek[1] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer1);
+        end;
+       except
+        af.camlog('kis cam1 indítási hiba');
        end;
 
+        //cam 2
+      try
+       if (teszt) or (rtspURLs[2] <> '') then
+        begin
+          vlcInstance2 := libvlc_new(0, nil);
+          if teszt then vlcMedia2 := libvlc_media_new_path(vlcInstance2, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia2 := libvlc_media_new_location(vlcInstance2, PAnsiChar(AnsiString(rtspURLs[2])));
+          vlcMediaPlayer2 := libvlc_media_player_new_from_media(vlcMedia2);
+          libvlc_media_release(vlcMedia2);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer2, Pointer((panelek[2] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer2);
+        end;
+      except
+       af.camlog('kis cam2 indítási hiba');
       end;
-
+       //cam 3
+      try
+       if (teszt) or (rtspURLs[3] <> '') then
+        begin
+          vlcInstance3 := libvlc_new(0, nil);
+          if teszt then vlcMedia3 := libvlc_media_new_path(vlcInstance3, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia3 := libvlc_media_new_location(vlcInstance3, PAnsiChar(AnsiString(rtspURLs[3])));
+          vlcMediaPlayer3 := libvlc_media_player_new_from_media(vlcMedia3);
+          libvlc_media_release(vlcMedia3);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer3, Pointer((panelek[3] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer3);
+        end;
+      except
+       af.camlog('kis cam3 indítási hiba');
+      end;
+        //cam 4
+      try
+       if (teszt) or (rtspURLs[4] <> '') then
+        begin
+          vlcInstance4 := libvlc_new(0, nil);
+          if teszt then vlcMedia4 := libvlc_media_new_path(vlcInstance4, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia4 := libvlc_media_new_location(vlcInstance4, PAnsiChar(AnsiString(rtspURLs[4])));
+          vlcMediaPlayer4 := libvlc_media_player_new_from_media(vlcMedia4);
+          libvlc_media_release(vlcMedia4);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer4, Pointer((panelek[4] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer4);
+        end;
+      except
+       af.camlog('kis cam4 indítási hiba');
+      end;
+        //cam 5
+      try
+       if (teszt) or (rtspURLs[5] <> '') then
+        begin
+          vlcInstance5 := libvlc_new(0, nil);
+          if teszt then vlcMedia5 := libvlc_media_new_path(vlcInstance5, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+          else vlcMedia5 := libvlc_media_new_location(vlcInstance5, PAnsiChar(AnsiString(rtspURLs[5])));
+          vlcMediaPlayer5 := libvlc_media_player_new_from_media(vlcMedia5);
+          libvlc_media_release(vlcMedia5);
+          libvlc_media_player_set_hwnd(vlcMediaPlayer5, Pointer((panelek[5] as TPanel).handle));
+          libvlc_media_player_play(vlcMediaPlayer5);
+        end;
+      except
+       af.camlog('kis cam5 indítási hiba');
+      end;
+      end;
+    end;
+   if nagy then
+    begin
+      try
+        stop(not nagy);
+      finally
+       //nagy cam0
+        try
+         if (teszt) or (rtspURLs[0] <> '') then
+          begin
+            vlcInstance6 := libvlc_new(0, nil);
+            if teszt then vlcMedia6 := libvlc_media_new_path(vlcInstance6, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+            else vlcMedia6 := libvlc_media_new_location(vlcInstance6, PAnsiChar(AnsiString(rtspURLs[0])));
+            vlcMediaPlayer6 := libvlc_media_player_new_from_media(vlcMedia6);
+            libvlc_media_release(vlcMedia6);
+            libvlc_media_player_set_hwnd(vlcMediaPlayer6, Pointer((panelek[6] as TPanel).handle));
+            //libvlc_media_player_play(vlcMediaPlayer6);
+          end;
+        except
+          af.camlog('nagy cam0 indítási hiba');
+        end;
+       //nagy cam1
+        try
+        if (teszt) or (rtspURLs[1] <> '') then
+          begin
+            vlcInstance7 := libvlc_new(0, nil);
+            if teszt then vlcMedia7 := libvlc_media_new_path(vlcInstance7, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+            else vlcMedia7 := libvlc_media_new_location(vlcInstance7, PAnsiChar(AnsiString(rtspURLs[1])));
+            vlcMediaPlayer7 := libvlc_media_player_new_from_media(vlcMedia7);
+            libvlc_media_release(vlcMedia7);
+            libvlc_media_player_set_hwnd(vlcMediaPlayer7, Pointer((panelek[7] as TPanel).handle));
+            //libvlc_media_player_play(vlcMediaPlayer7);
+          end;
+        except
+         af.camlog('nagy cam1 indítási hiba');
+        end;
+       //nagy cam2
+        try
+         if (teszt) or (rtspURLs[2] <> '') then
+          begin
+            vlcInstance8 := libvlc_new(0, nil);
+            if teszt then vlcMedia8 := libvlc_media_new_path(vlcInstance8, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+            else vlcMedia8 := libvlc_media_new_location(vlcInstance8, PAnsiChar(AnsiString(rtspURLs[2])));
+            vlcMediaPlayer8 := libvlc_media_player_new_from_media(vlcMedia8);
+            libvlc_media_release(vlcMedia8);
+            libvlc_media_player_set_hwnd(vlcMediaPlayer8, Pointer((panelek[8] as TPanel).handle));
+            //libvlc_media_player_play(vlcMediaPlayer8);
+          end;
+        except
+         af.camlog('nagy cam2 indítási hiba');
+        end;
+        //af.camlog('play próba cam0');
+        //nagy cam3
+         try
+           if (teszt) or (rtspURLs[3] <> '') then
+            begin
+              vlcInstance9 := libvlc_new(0, nil);
+              if teszt then vlcMedia9 := libvlc_media_new_path(vlcInstance9, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+              else vlcMedia9 := libvlc_media_new_location(vlcInstance9, PAnsiChar(AnsiString(rtspURLs[3])));
+              vlcMediaPlayer9 := libvlc_media_player_new_from_media(vlcMedia9);
+              libvlc_media_release(vlcMedia9);
+              libvlc_media_player_set_hwnd(vlcMediaPlayer9, Pointer((panelek[9] as TPanel).handle));
+              //libvlc_media_player_play(vlcMediaPlayer9);
+            end;
+         except
+           af.camlog('nagy cam3 indítási hiba');
+         end;
+       //nagy cam4
+         try
+         if (teszt) or (rtspURLs[4] <> '') then
+            begin
+              vlcInstance10 := libvlc_new(0, nil);
+              if teszt then vlcMedia10 := libvlc_media_new_path(vlcInstance10, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+              else vlcMedia10 := libvlc_media_new_location(vlcInstance10, PAnsiChar(AnsiString(rtspURLs[4])));
+              vlcMediaPlayer10 := libvlc_media_player_new_from_media(vlcMedia10);
+              libvlc_media_release(vlcMedia10);
+              libvlc_media_player_set_hwnd(vlcMediaPlayer10, Pointer((panelek[10] as TPanel).handle));
+              //libvlc_media_player_play(vlcMediaPlayer10);
+            end;
+         except
+          af.camlog('nagy cam4 indítási hiba');
+         end;
+       //nagy cam5
+         try
+           if (teszt) or (rtspURLs[5] <> '') then
+            begin
+              vlcInstance11 := libvlc_new(0, nil);
+              if teszt then vlcMedia11 := libvlc_media_new_path(vlcInstance11, PAnsiChar(AnsiString('c:\Users\Public\Videos\Sample Videos\Wildlife.wmv')))
+              else vlcMedia11 := libvlc_media_new_location(vlcInstance11, PAnsiChar(AnsiString(rtspURLs[5])));
+              vlcMediaPlayer11 := libvlc_media_player_new_from_media(vlcMedia11);
+              libvlc_media_release(vlcMedia11);
+              libvlc_media_player_set_hwnd(vlcMediaPlayer11, Pointer((panelek[11] as TPanel).handle));
+              //libvlc_media_player_play(vlcMediaPlayer11);
+            end;
+         except
+          af.camlog('nagy cam5 indítási hiba');
+         end;
+      end;
+    end;
+  except
+   // showmessage('cam 0 lejatszas hiba:'+rtspUrls[0]);
   end;
-  //lejatszas:=True;
+end;
+
+procedure TFoF.play_1_nagy(melyik: integer);
+begin
+ case melyik of
+  6:begin
+     if Assigned(vlcMediaPlayer6) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer6) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer6);
+      end;
+    end;
+  7:begin
+     if Assigned(vlcMediaPlayer7) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer7) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer7);
+      end;
+    end;
+  8:begin
+     if Assigned(vlcMediaPlayer8) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer8) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer8);
+      end;
+    end;
+  9:begin
+     if Assigned(vlcMediaPlayer9) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer9) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer9);
+      end;
+    end;
+  10:begin
+     if Assigned(vlcMediaPlayer10) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer10) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer10);
+      end;
+     end;
+  11:begin
+     if Assigned(vlcMediaPlayer11) then
+      begin
+       if libvlc_media_player_is_playing(vlcMediaPlayer11) = 0 then
+        libvlc_media_player_play(vlcMediaPlayer11);
+      end;
+     end;
+ end;
 end;
 
 procedure TFoF.pnlFelsokepResize(Sender: TObject);
@@ -2413,6 +2376,18 @@ function TFoF.snapshot(p: string): string;
     end;
   end;
 
+  procedure merleghez_tartozo_ip_camok;
+   begin
+    with AF.ipcam_merleghezQ do
+     begin
+      Close;
+      SQL.Clear;
+      SQL.Add('SELECT Eszkoznev FROM harver_beallitasok ');
+      SQL.Add('WHERE Merleg=M'+p+' AND UPPER(Szamitogep) LIKE UPPER('+#39+'%'+PC_Szam+'%'+#39+'');
+      open;
+     end;
+   end;
+
 var
   fn: string;
   i: Integer;
@@ -2428,31 +2403,42 @@ begin
    //insert('1',fn,8); //beszurom h a masodik fele mindig egyessel induljon
     try
       try
-        case p[1] of
-          '0':begin
-               //kis camera pillanat felvétel
-               if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-               //nagy camera pillanat felvétel
-               if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-              end;
-          '1':begin
-               //kis camera pillanat felvétel
-               if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-               //nagy camera pillanat felvétel
-               if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-              end;
-          '2':begin
-               //kis camera pillanat felvétel
-               if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-               //nagy camera pillanat felvétel
-               if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-              end;
-          '3':begin
-               //kis camera pillanat felvétel
-               if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-               //nagy camera pillanat felvétel
-               if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-              end;
+       if Regi_hardver_beallitas then
+        begin
+          case p[1] of
+            '0':begin
+                 //kis camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                 //nagy camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                end;
+            '1':begin
+                 //kis camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                 //nagy camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                end;
+            '2':begin
+                 //kis camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                 //nagy camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                end;
+            '3':begin
+                 //kis camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                 //nagy camera pillanat felvétel
+                 if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                end;
+          end;
+        end
+       else
+        begin //új
+          merleghez_tartozo_ip_camok;
+         with af.ipcam_merleghezQ do
+          begin
+            ShowMessage(RightStr(Fields[0].AsString,1));
+          end;
         end;
         for i := 0 to 9 do
         begin
@@ -2706,10 +2692,6 @@ begin
       vlcMediaPlayer3 := nil;
       libvlc_release(vlcInstance3);
     end;
-   end;
-   //nagykam
-   if nagy then
-    begin
     if Assigned(vlcMediaPlayer4) then
       begin
        libvlc_media_player_stop(vlcMediaPlayer4);
@@ -2718,7 +2700,7 @@ begin
         vlcMediaPlayer4 := nil;
         libvlc_release(vlcInstance4);
       end;
-      if Assigned(vlcMediaPlayer5) then
+    if Assigned(vlcMediaPlayer5) then
       begin
        libvlc_media_player_stop(vlcMediaPlayer5);
        while libvlc_media_player_is_playing(vlcMediaPlayer5) = 1 do  Sleep(100);
@@ -2726,6 +2708,11 @@ begin
         vlcMediaPlayer5 := nil;
         libvlc_release(vlcInstance5);
       end;
+   end;
+   //nagykam
+   if nagy then
+    begin
+
      if Assigned(vlcMediaPlayer6) then
       begin
        libvlc_media_player_stop(vlcMediaPlayer6);
@@ -2742,8 +2729,92 @@ begin
         vlcMediaPlayer7 := nil;
         libvlc_release(vlcInstance7);
       end;
+      if Assigned(vlcMediaPlayer8) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer8);
+        while libvlc_media_player_is_playing(vlcMediaPlayer8) = 1 do
+          Sleep(100);
+        libvlc_media_player_release(vlcMediaPlayer8);
+        vlcMediaPlayer8 := nil;
+        libvlc_release(vlcInstance8);
+      end;
+      if Assigned(vlcMediaPlayer9) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer9);
+        while libvlc_media_player_is_playing(vlcMediaPlayer9) = 1 do
+          Sleep(100);
+        libvlc_media_player_release(vlcMediaPlayer9);
+        vlcMediaPlayer9 := nil;
+        libvlc_release(vlcInstance9);
+      end;
+      if Assigned(vlcMediaPlayer10) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer10);
+        while libvlc_media_player_is_playing(vlcMediaPlayer10) = 1 do
+          Sleep(100);
+        libvlc_media_player_release(vlcMediaPlayer10);
+        vlcMediaPlayer10 := nil;
+        libvlc_release(vlcInstance10);
+      end;
+      if Assigned(vlcMediaPlayer11) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer11);
+        while libvlc_media_player_is_playing(vlcMediaPlayer11) = 1 do
+          Sleep(100);
+        libvlc_media_player_release(vlcMediaPlayer11);
+        vlcMediaPlayer11 := nil;
+        libvlc_release(vlcInstance11);
+      end;
     end;
  // lejatszas:=False;
+end;
+
+procedure TFoF.stop_1_nagy(melyik: integer);
+begin
+ case melyik of
+  6:begin
+     if Assigned(vlcMediaPlayer6) then
+      begin
+       libvlc_media_player_stop(vlcMediaPlayer6);
+       while libvlc_media_player_is_playing(vlcMediaPlayer6) = 1 do  Sleep(100);
+      end;
+    end;
+  7:begin
+     if Assigned(vlcMediaPlayer7) then
+      begin
+       libvlc_media_player_stop(vlcMediaPlayer7);
+       while libvlc_media_player_is_playing(vlcMediaPlayer7) = 1 do  Sleep(100);
+      end;
+    end;
+  8:begin
+     if Assigned(vlcMediaPlayer8) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer8);
+        while libvlc_media_player_is_playing(vlcMediaPlayer8) = 1 do Sleep(100);
+      end;
+    end;
+  9:begin
+     if Assigned(vlcMediaPlayer9) then
+      begin
+        libvlc_media_player_stop(vlcMediaPlayer9);
+        while libvlc_media_player_is_playing(vlcMediaPlayer9) = 1 do Sleep(100);
+      end;
+    end;
+  10:begin
+      if Assigned(vlcMediaPlayer10) then
+        begin
+          libvlc_media_player_stop(vlcMediaPlayer10);
+          while libvlc_media_player_is_playing(vlcMediaPlayer10) = 1 do Sleep(100);
+        end;
+     end;
+  11:begin
+      if Assigned(vlcMediaPlayer11) then
+       begin
+        libvlc_media_player_stop(vlcMediaPlayer11);
+        while libvlc_media_player_is_playing(vlcMediaPlayer11) = 1 do Sleep(100);
+       end;
+     end;
+ end;
 end;
 
 procedure TFoF.Szoftverbelltsok1Click(Sender: TObject);
@@ -3318,7 +3389,7 @@ begin
     if (F.Name+neve=(TObject(panelek[I]) as TPanel).name) then
     begin
       panelek.Delete(I);
-      af.camlog('Panel törölve:'+F.Name+neve );
+      //af.camlog('Panel törölve:'+F.Name+neve );
       Break
     end;
   end;
@@ -3334,7 +3405,7 @@ begin
           p.caption := 'Kamera nem elérhetõ';// af.ford('rsKamerNemElerheto');
           p.align := TAlign.alClient;
           panelek.Add(p);
-          af.camlog('Panel létrehozva:'+F.Name+neve );
+         // af.camlog('Panel létrehozva:'+F.Name+neve );
          end;
       end;
    end;

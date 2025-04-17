@@ -175,11 +175,12 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
     Left = 128
     Top = 91
     Width = 108
-    Height = 49
+    Height = 63
     Caption = 'M'#233'rleg sz'#225'ma'
     Items.Strings = (
       '1. m'#233'rleg'
-      '2. m'#233'rleg')
+      '2. m'#233'rleg'
+      '3. m'#233'rleg')
     TabOrder = 3
   end
   object btnMeres: TButton
@@ -225,7 +226,7 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   end
   object chkKezimeres: TCheckBox
     Left = 128
-    Top = 146
+    Top = 162
     Width = 97
     Height = 17
     Caption = 'K'#233'zi m'#233'r'#233's'

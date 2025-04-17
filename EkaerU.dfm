@@ -1307,24 +1307,6 @@ object EkaerF: TEkaerF
       'ZRE'
       'ZW')
   end
-  object fel_datum: TDateTimePicker
-    Left = 17
-    Top = 415
-    Width = 81
-    Height = 21
-    Date = 44460.000000000000000000
-    Time = 0.422771053243195600
-    TabOrder = 31
-  end
-  object le_datum: TDateTimePicker
-    Left = 222
-    Top = 415
-    Width = 81
-    Height = 21
-    Date = 44460.000000000000000000
-    Time = 0.422771053243195600
-    TabOrder = 32
-  end
   object fel_ido: TDateTimePicker
     Left = 104
     Top = 415
@@ -1333,7 +1315,7 @@ object EkaerF: TEkaerF
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
     Kind = dtkTime
-    TabOrder = 33
+    TabOrder = 31
   end
   object le_ido: TDateTimePicker
     Left = 309
@@ -1343,7 +1325,7 @@ object EkaerF: TEkaerF
     Date = 44460.000000000000000000
     Time = 0.422771053243195600
     Kind = dtkTime
-    TabOrder = 34
+    TabOrder = 32
   end
   object cbx_fuvok: TComboBox
     Left = 17
@@ -1351,7 +1333,7 @@ object EkaerF: TEkaerF
     Width = 121
     Height = 22
     Style = csOwnerDrawFixed
-    TabOrder = 35
+    TabOrder = 33
     Items.Strings = (
       '(S) '#201'rt'#233'kes'#237't'#233's'
       '(A) Beszerz'#233's'
@@ -1363,7 +1345,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 36
+    TabOrder = 34
     Text = 'ed_termeknev'
   end
   object ed_adr: TEdit
@@ -1371,7 +1353,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 37
+    TabOrder = 35
     Text = 'ed_adr'
   end
   object ed_tomeg: TEdit
@@ -1379,7 +1361,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 69
     Height = 21
-    TabOrder = 38
+    TabOrder = 36
     Text = 'ed_tomeg'
   end
   object ed_ertek: TEdit
@@ -1387,7 +1369,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 39
+    TabOrder = 37
     Text = 'ed_ertek'
   end
   object ed_engedelyszam: TEdit
@@ -1395,7 +1377,7 @@ object EkaerF: TEkaerF
     Top = 463
     Width = 121
     Height = 21
-    TabOrder = 40
+    TabOrder = 38
     Text = 'ed_engedelyszam'
   end
   object btnkuldes: TButton
@@ -1411,7 +1393,7 @@ object EkaerF: TEkaerF
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 41
+    TabOrder = 39
     OnClick = btnkuldesClick
   end
   object felcimlookup: TJvDBLookupCombo
@@ -1424,7 +1406,7 @@ object EkaerF: TEkaerF
     LookupField = 'id'
     LookupDisplay = 'cim'
     LookupSource = felcimekQDs
-    TabOrder = 42
+    TabOrder = 40
     OnCloseUp = felcimlookupCloseUp
   end
   object btnkitolt: TButton
@@ -1433,7 +1415,7 @@ object EkaerF: TEkaerF
     Width = 75
     Height = 25
     Caption = 'Kit'#246'lt'
-    TabOrder = 43
+    TabOrder = 41
     Visible = False
     OnClick = btnkitoltClick
   end
@@ -1443,7 +1425,7 @@ object EkaerF: TEkaerF
     Width = 81
     Height = 21
     MaxLength = 8
-    TabOrder = 44
+    TabOrder = 42
     Text = 'ed_vtsz'
   end
   object Button2: TButton
@@ -1452,7 +1434,7 @@ object EkaerF: TEkaerF
     Width = 91
     Height = 25
     Caption = 'Felrakod'#225'si c'#237'mek'
-    TabOrder = 45
+    TabOrder = 43
     OnClick = Button2Click
   end
   object lecimlookup: TJvDBLookupCombo
@@ -1465,7 +1447,7 @@ object EkaerF: TEkaerF
     LookupField = 'id'
     LookupDisplay = 'cim'
     LookupSource = lecimekQDs
-    TabOrder = 46
+    TabOrder = 44
     OnCloseUp = lecimlookupCloseUp
   end
   object Button1: TButton
@@ -1474,8 +1456,26 @@ object EkaerF: TEkaerF
     Width = 91
     Height = 25
     Caption = 'Lerakod'#225'si c'#237'mek'
-    TabOrder = 47
+    TabOrder = 45
     OnClick = Button1Click
+  end
+  object fel_datum: TJvDateEdit
+    Left = 9
+    Top = 416
+    Width = 89
+    Height = 21
+    DateFormat = 'YYYY.MM.DD.'
+    ShowNullDate = False
+    TabOrder = 46
+  end
+  object le_datum: TJvDateEdit
+    Left = 217
+    Top = 415
+    Width = 89
+    Height = 21
+    DateFormat = 'YYYY.MM.DD.'
+    ShowNullDate = False
+    TabOrder = 47
   end
   object felcimekQ: TFDQuery
     Connection = AF.Kapcs

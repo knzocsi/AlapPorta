@@ -437,6 +437,7 @@ type
     mtPLC_FeladatMuvelet: TStringField;
     mtPLC_FeladatErtek: TSmallintField;
     mtPLC_FeladatIO: TIntegerField;
+    ipcam_merleghezQ: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -529,7 +530,7 @@ var
   Sorompo_nyit_cim_BE,Sorompo_Infra_Hiba_cim_BE,sorompo_infra_hibas_BE,Sorompo_Nyitas_Volt_Cim_BE:integer;
   Sorompo_nyit_cim_KI,Sorompo_Infra_Hiba_cim_KI,sorompo_infra_hibas_KI,Sorompo_Nyitas_Volt_Cim_KI,Ping_varakozas,Merleg_Nullaz_Cim:integer;
   lehajtasivarakozas:integer;
-  rtspURLs: array [0..3] of string;
+  rtspURLs: array [0..5] of string;
   soapXML:string;
   lejatszas,nyelvvalaszt: Boolean;
   libre_mappa:string;
@@ -592,6 +593,8 @@ var
   keszlet_torles: Boolean=False;
 
   idegen_meres: Boolean=False;
+
+  kivalasztott_merleg:integer=0;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -1329,7 +1332,7 @@ begin
   { TODO -oKNZ -c : Az Rtspket itt kell betölteni 2023. 03. 21. 17:55:47 }
 
 
-  for k := 0 to 3 do
+  for k := 0 to 5 do
     begin
      rtspurls[k]:=inif.ReadString('Rtsp','URL Cam '+k.ToString,'');
     // rtspurls[k]:=cfg_kezel('','RTSP','URL Cam '+k.ToString,'String',rtspurls[k]);

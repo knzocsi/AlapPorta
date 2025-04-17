@@ -10,18 +10,22 @@ uses
 type
   TNagykamF = class(TForm)
     campagc: TPageControl;
-    cam4: TTabSheet;
-    cam5: TTabSheet;
-    JvAppIniFileStorage1: TJvAppIniFileStorage;
-    JvFormStorage2: TJvFormStorage;
     cam6: TTabSheet;
     cam7: TTabSheet;
+    JvAppIniFileStorage1: TJvAppIniFileStorage;
+    JvFormStorage2: TJvFormStorage;
+    cam8: TTabSheet;
+    cam9: TTabSheet;
+    cam10: TTabSheet;
+    cam11: TTabSheet;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormHide(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure cam6Show(Sender: TObject);
+    procedure cam6Hide(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +40,16 @@ implementation
   uses fou,AU;
 {$R *.dfm}
 
+procedure TNagykamF.cam6Hide(Sender: TObject);
+begin
+  FoF.stop_1_nagy((Sender as TTabSheet).Tag);
+end;
+
+procedure TNagykamF.cam6Show(Sender: TObject);
+begin
+ FoF.play_1_nagy((Sender as TTabSheet).Tag);
+end;
+
 procedure TNagykamF.fo;
 begin
  try
@@ -47,7 +61,7 @@ end;
 
 procedure TNagykamF.FormActivate(Sender: TObject);
 begin
-  campagc.ActivePage:=cam4;
+  campagc.ActivePage:=cam6;
 end;
 
 procedure TNagykamF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -74,7 +88,7 @@ procedure TNagykamF.FormCreate(Sender: TObject);
 var i:Integer;
 begin
  //exit;
- for i := 4 to 7 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
+ for i := 6 to 11 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
 end;
 
 procedure TNagykamF.FormHide(Sender: TObject);

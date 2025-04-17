@@ -93,6 +93,7 @@ begin
     exit;
   end;
   Mert_eredmeny:=spTomeg.Value;
+  kivalasztott_merleg:=rgMerlegszama.ItemIndex+1;
   Close;
 end;
 

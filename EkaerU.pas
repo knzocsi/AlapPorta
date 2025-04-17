@@ -10,7 +10,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, JvExControls, JvDBLookup,
   System.Net.URLClient, System.Net.HttpClient, System.Net.HttpClientComponent,
-  System.DateUtils;
+  System.DateUtils, Vcl.Mask, JvExMask, JvToolEdit;
 
 type
   TEkaerF = class(TForm)
@@ -76,8 +76,6 @@ type
     Label45: TLabel;
     Label46: TLabel;
     Label47: TLabel;
-    fel_datum: TDateTimePicker;
-    le_datum: TDateTimePicker;
     fel_ido: TDateTimePicker;
     le_ido: TDateTimePicker;
     cbx_fuvok: TComboBox;
@@ -140,6 +138,8 @@ type
     lecimekQtelefon: TWideStringField;
     lecimekQcim: TWideStringField;
     Label9: TLabel;
+    fel_datum: TJvDateEdit;
+    le_datum: TJvDateEdit;
     procedure btnkuldesClick(Sender: TObject);
     procedure felcimlookupCloseUp(Sender: TObject);
     procedure btnkilepesClick(Sender: TObject);

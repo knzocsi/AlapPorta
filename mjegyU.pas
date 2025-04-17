@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
   Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg,
-  Vcl.ComCtrls, Vcl.Buttons;
+  Vcl.ComCtrls, Vcl.Buttons,Vcl.Imaging.pngimage, System.StrUtils;
 
 type
 
@@ -281,7 +281,7 @@ var
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU;
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -529,7 +529,7 @@ begin
   if Folytatas then
   with af.NyitbeQ do
   begin
-     jeloltek_szama:=2;
+    jeloltek_szama:=2;
     if FieldByName('tul_id').AsInteger<>0 then  tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
     cbxirany.ItemIndex:=cbxirany.Items.IndexOf(FieldByName('irany').AsString);
     cbxiranyChange(Sender);
@@ -592,7 +592,7 @@ begin
         end;
     end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
-    chkidegen.Checked:=FieldByName('idegen_meres').AsBoolean;
+
   end;
  end;
 
@@ -1654,6 +1654,304 @@ end;
 procedure TMjegyF.btnMeresClick(Sender: TObject);
 var tf:textfile;
     fnev,kezi:string;
+    e:integer;
+
+ procedure kep_konvertalasa(keputja: string);
+  var
+    png: TPNGImage;
+    bmp: TBitmap;
+    jpg: TJPEGImage;
+  begin
+    png := TPNGImage.Create;
+    bmp := TBitmap.Create;
+    jpg := TJPEGImage.Create;
+    try
+      png.LoadFromFile(keputja);
+
+      bmp.Width := png.Width;
+      bmp.Height := png.Height;
+      png.Draw(bmp.Canvas, bmp.Canvas.ClipRect);
+
+      jpg.Assign(bmp);
+      jpg.SaveToFile(StringReplace(keputja, 'png', 'jpg', [rfReplaceAll]));
+      DeleteFile(keputja);
+      application.processmessages
+    finally
+      png.Free;
+      bmp.Free;
+      jpg.Free;
+    end;
+  end;
+
+  procedure merleghez_tartozo_ip_camok;
+   begin
+    with AF.ipcam_merleghezQ do
+     begin
+      Close;
+      SQL.Clear;
+      SQL.Add('SELECT Eszkoznev FROM hardver_beallitasok ');
+      SQL.Add('WHERE Merleg='+#39+'M'+kivalasztott_merleg.ToString+#39
+      +' AND UPPER(Szamitogep) LIKE UPPER('+#39+'%'+PC_Szam+'%'+#39+')'
+      +' AND UPPER(Eszkoznev) LIKE UPPER('+#39+'%'+'URL Cam'+'%'+#39+')');
+      af.camlog(SQL.Text);
+      open;
+     end;
+   end;
+procedure lejatszas_ellenorzese;
+ begin
+    //kis kamera lejatszas van
+    Fof.tmrElokep.Enabled:=false;
+    if (Assigned(vlcMediaPlayer0))and (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0)
+       or (Assigned(vlcMediaPlayer1))and (libvlc_media_player_is_playing(vlcMediaPlayer1) = 0)
+       or (Assigned(vlcMediaPlayer2))and (libvlc_media_player_is_playing(vlcMediaPlayer2) = 0)
+       or (Assigned(vlcMediaPlayer3))and (libvlc_media_player_is_playing(vlcMediaPlayer3) = 0)
+       or (Assigned(vlcMediaPlayer4))and (libvlc_media_player_is_playing(vlcMediaPlayer4) = 0)
+       or (Assigned(vlcMediaPlayer5))and (libvlc_media_player_is_playing(vlcMediaPlayer5) = 0)
+    then
+    begin
+       try
+         FoF.stop(false);
+       finally
+         Fof.play(false);
+       end;
+       af.camlog('Újraindítás kellett')
+    end
+    else af.camlog('NEM kellett újraindítás ');
+    //nagykamera lejátszás van
+    if (Assigned(vlcMediaPlayer6))and (libvlc_media_player_is_playing(vlcMediaPlayer6) = 0)
+       or (Assigned(vlcMediaPlayer7))and (libvlc_media_player_is_playing(vlcMediaPlayer7) = 0)
+       or(Assigned(vlcMediaPlayer8))and (libvlc_media_player_is_playing(vlcMediaPlayer8) = 0)
+       or (Assigned(vlcMediaPlayer9))and (libvlc_media_player_is_playing(vlcMediaPlayer9) = 0)
+       or(Assigned(vlcMediaPlayer10))and (libvlc_media_player_is_playing(vlcMediaPlayer10) = 0)
+       or (Assigned(vlcMediaPlayer11))and (libvlc_media_player_is_playing(vlcMediaPlayer11) = 0)
+    then
+    begin
+       try
+         FoF.stop(true);
+       finally
+         Fof.play(true);
+       end;
+       af.camlog('Újraindítás kellett')
+    end
+    else af.camlog('NEM kellett újraindítás ');
+   Fof.tmrElokep.Enabled:=true;
+  end;
+
+  procedure snapshot;
+  var fn,eredmeny: string;
+      i,akt_cam: Integer;
+
+      procedure kep_kitesz;
+      var     JPEGImg: TJPEGImage;
+      begin
+        if Meres_MerlegjegyenF.rgMeresszama.ItemIndex=0 then
+          begin
+            kep1.Picture:=nil;
+            kep2.Picture:=nil;
+            Okep1.Picture:=nil;
+            Okep2.Picture:=nil;
+            if AF.ipcam_merleghezQ.RecNo=1 then
+             begin
+              lblKep1.Caption:=eredmeny;
+              kepek_tomb[1]:=eredmeny;
+             end
+             else
+             begin
+              lblKep2.Caption:=eredmeny;
+              kepek_tomb[2]:=eredmeny;
+             end;
+            if FileExists( lblKep1.Caption) then
+             begin
+              JPEGImg := TJpegImage.Create;
+              try
+               JPEGImg.LoadFromFile( lblKep1.Caption);
+               if JPEGImg.Width<600 then
+                JPEGImg.Scale:=jsFullSize
+               else
+                if JPEGImg.Width<1200 then
+                 JPEGImg.Scale:=jsHalf
+                else
+                 if JPEGImg.Width<2000 then
+                  JPEGImg.Scale:=jsQuarter
+                 else
+                  JPEGImg.Scale:=jsEighth;
+              finally
+               kep1.Picture.Assign(JPEGImg);
+               Okep1.Picture.Assign(JPEGImg);
+               JPEGImg.Free;
+              end;
+             end;
+             if FileExists(lblKep2.Caption) then
+             begin
+              JPEGImg := TJpegImage.Create;
+              try
+               JPEGImg.LoadFromFile(lblKep2.Caption);
+               if JPEGImg.Width<600 then
+                JPEGImg.Scale:=jsFullSize
+               else
+                if JPEGImg.Width<1200 then
+                 JPEGImg.Scale:=jsHalf
+                else
+                 if JPEGImg.Width<2000 then
+                  JPEGImg.Scale:=jsQuarter
+                 else
+                  JPEGImg.Scale:=jsEighth;
+              finally
+               kep2.Picture.Assign(JPEGImg);
+               Okep2.Picture.Assign(JPEGImg);
+               JPEGImg.Free;
+              end;
+             end;
+            lblKep1.Visible:=kep1.Picture=nil;
+            lblKep2.Visible:=kep2.Picture=nil;
+          end
+        else
+          begin
+            kep3.Picture:=nil;
+            kep4.Picture:=nil;
+            Okep3.Picture:=nil;
+            Okep4.Picture:=nil;
+            if AF.ipcam_merleghezQ.RecNo=1 then
+             begin
+              lblKep3.Caption:=eredmeny;
+              kepek_tomb[3]:=eredmeny;
+             end
+            else
+             begin
+              lblKep4.Caption:=eredmeny;
+              kepek_tomb[4]:=eredmeny;
+             end;
+            if FileExists( lblKep3.Caption) then
+             begin
+              JPEGImg := TJpegImage.Create;
+              try
+               JPEGImg.LoadFromFile( lblKep3.Caption);
+               if JPEGImg.Width<600 then
+                JPEGImg.Scale:=jsFullSize
+               else
+                if JPEGImg.Width<1200 then
+                 JPEGImg.Scale:=jsHalf
+                else
+                 if JPEGImg.Width<2000 then
+                  JPEGImg.Scale:=jsQuarter
+                 else
+                  JPEGImg.Scale:=jsEighth;
+              finally
+               kep3.Picture.Assign(JPEGImg);
+               Okep3.Picture.Assign(JPEGImg);
+               JPEGImg.Free;
+              end;
+             end;
+             if FileExists(lblKep4.Caption) then
+             begin
+              JPEGImg := TJpegImage.Create;
+              try
+               JPEGImg.LoadFromFile(lblKep4.Caption);
+               if JPEGImg.Width<600 then
+                JPEGImg.Scale:=jsFullSize
+               else
+                if JPEGImg.Width<1200 then
+                 JPEGImg.Scale:=jsHalf
+                else
+                 if JPEGImg.Width<2000 then
+                  JPEGImg.Scale:=jsQuarter
+                 else
+                  JPEGImg.Scale:=jsEighth;
+              finally
+               kep4.Picture.Assign(JPEGImg);
+               Okep4.Picture.Assign(JPEGImg);
+               JPEGImg.Free;
+              end;
+             end;
+            lblKep3.Visible:=kep1.Picture=nil;
+            lblKep4.Visible:=kep2.Picture=nil;
+          end;
+      end;
+  begin
+    if (not van_plugin)or(not lejatszas) then exit;
+    eredmeny := 'Pillanat felvétel sikertelen';
+    try
+     lejatszas_ellenorzese //ha hozzá van rendelve de nincs lejátszás újraindítja
+    finally
+      FormatSettings.ShortDateFormat := 'yyyy.mm.dd';
+      //af.camlog('snapshot finally ');
+      try
+         merleghez_tartozo_ip_camok;
+         af.camlog('merleghez tartozó ipkamok ');
+         af.ipcam_merleghezQ.first;
+           with af.ipcam_merleghezQ do
+            begin
+             while not Eof do
+              begin
+               try
+                if TryStrToInt(RightStr(Fields[0].AsString,1),akt_cam) then
+                 begin
+                  fn := FormatDateTime('YYYMMDDHHnnss',Now);
+                  fn := StringReplace(kivalasztott_merleg.ToString + '_' +akt_cam.ToString
+                        +'_' + fn, ' ', '', [rfreplaceAll]);
+                  case akt_cam of
+                   0:begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                   1:begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                   2:begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                   3 :begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                   4:begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer10)then libvlc_video_take_snapshot(vlcMediaPlayer10, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                   5 :begin
+                       //kis camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                       //nagy camera pillanat felvétel
+                       if Assigned(vlcMediaPlayer11)then libvlc_video_take_snapshot(vlcMediaPlayer11, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                      end;
+                  end;
+                   for i := 0 to 9 do
+                    begin
+                      if fileExists(kepmappa + fn + '.png') then
+                      begin
+                        kep_konvertalasa(kepmappa + fn + '.png');
+                        break
+                      end
+                      else  sleep(200);
+                    end;
+                 end;
+               finally
+                if fileExists(kepmappa + fn + '.jpg') then eredmeny := kepmappa + fn + '.jpg'
+                else eredmeny := 'Pillanat felvétel sikertelen';
+                kep_kitesz;
+                //ShowMessage(eredmeny)
+               end;
+                next;
+              end;
+            end;
+      except
+        eredmeny := 'Pillanat felvétel sikertelen';
+      end;
+    end;
+  end;
+
 begin
   Meres_MerlegjegyenF.lblelsodat.Caption:=lblelsodat.Caption;
   Meres_MerlegjegyenF.lblelsoido.Caption:=lblelsoido.Caption;
@@ -1670,24 +1968,29 @@ begin
       0 :
           begin
             lblTomeg1.Caption:=IntToStr( Meres_MerlegjegyenF.Mert_eredmeny);
+            FormatSettings.DateSeparator := '.';
+            FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
             lblelsodat.Caption:=DateToStr(Date);
             lblelsoido.Caption:=TimeToStr(Time);
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
-            if cbxirany.ItemIndex=1 then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
-              else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+            if cbxirany.ItemIndex in [1,3] then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
+            else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
             if chkRogzitett.Checked then spTara.Value:=af.tara(cbxrendszam1.text);
            end;
 
       1 :
           begin
             lblTomeg2.Caption:=IntToStr( Meres_MerlegjegyenF.Mert_eredmeny);
+            FormatSettings.DateSeparator := '.';
+            FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
             lblmasdat.Caption:=DateToStr(Date);
             lblmasido.Caption:=TimeToStr(Time);
             chkmasodik_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
-            if cbxirany.ItemIndex=1 then spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny
+            if cbxirany.ItemIndex in [1,3] then spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny
             else if cbxirany.ItemIndex=2 then  spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
           end;
     end;
+    snapshot;
 
     fnev:=ExtractFileDir(ExtractFilePath(application.exename))+'\LOG\m'+af.datum_szoveg(Now,false)+'.txt';
     Assignfile(tf,fnev);
@@ -1701,6 +2004,12 @@ begin
     Append(tf);
     Writeln(tf,DateToStr(Date)+#9+TimeToStr(Time)+#9+cbxRendszam1.Text+#9+IntToStr( Meres_MerlegjegyenF.Mert_eredmeny)+#9+cbxRendszam2.Text+#9+kezi);
     CloseFile(tf);
+    if sptara.Value>spBrutto.Value then
+     begin
+       e:=sptara.Value;
+       spTara.Value:=spBrutto.Value;
+       spBrutto.Value:=e;
+     end;
     spnetto.Value:=spBrutto.Value-spTara.Value;
     szazalek;
   end;

@@ -221,7 +221,13 @@ object Hardver_beallF: THardver_beallF
           'HANG_MERES_UTAN'
           'PC_KOMMUNIKACIO'
           'RENDSZAM_KLIENS1'
-          'RENDSZAM_SZERVER1')
+          'RENDSZAM_SZERVER1'
+          'URL Cam 0'
+          'URL Cam 1'
+          'URL Cam 2'
+          'URL Cam 3'
+          'URL Cam 4'
+          'URL Cam 5')
         TabOrder = 5
       end
       object DBNavigator1: TDBNavigator

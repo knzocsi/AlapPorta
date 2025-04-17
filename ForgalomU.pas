@@ -11,14 +11,12 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, JvExControls, JvDBLookup,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, JvExDBGrids, JvDBGrid,
-  JvDBUltimGrid;
+  JvDBUltimGrid, Vcl.Mask, JvExMask, JvToolEdit;
 
 type
   TForgalomF = class(TForm)
     Panel1: TPanel;
     btnKilepes: TButton;
-    piKezdoDatum: TDateTimePicker;
-    piBefejezoDatum: TDateTimePicker;
     Label1: TLabel;
     Label2: TLabel;
     Panel2: TPanel;
@@ -28,6 +26,8 @@ type
     JvDBUltimGrid1: TJvDBUltimGrid;
     Button1: TButton;
     Button2: TButton;
+    piBefejezoDatum: TJvDateEdit;
+    piKezdoDatum: TJvDateEdit;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure szures;
