@@ -122,6 +122,7 @@ object MeresF: TMeresF
     Caption = 'M'#233'r'#233's 3. m'#233'rleg'
     TabOrder = 8
     Visible = False
+    OnClick = btnMeres1Click
   end
   object btnMeres4: TButton
     Left = 329

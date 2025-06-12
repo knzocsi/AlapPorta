@@ -1249,6 +1249,7 @@ begin
   tbIdeiglenes.TabVisible:=ideiglenes_latszik;
   btnMeres.Visible:=meresgomb_kell;
   btnMeresmodositas.Visible:=meresgomb_kell;
+  sbtnFolytatas.Visible:=ideiglenes_latszik;
   if ideiglenes_latszik then  pcTablak.ActivePageIndex:=0;
   for i:=0 to 15 do PLC_Lekerdezett_Valasz[i]:=false;
 

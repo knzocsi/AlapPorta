@@ -507,7 +507,10 @@ begin
   //lblSorszam.Visible:=Hivoszamhasznalat;
   //speSorszam.Visible:=Hivoszamhasznalat;
   //speSorszam.Enabled:=Not Folytatas;
+  speSorszam.Visible:=Hivoszamhasznalat;
+  lblSorszam.Visible:=Hivoszamhasznalat;
   speSorszam.Value:=0;
+
  // magassagok;
   af.tipusQ.Open;
   lucTipus.KeyValue:='!';
