@@ -1232,7 +1232,6 @@ end;
 procedure TPortF.Client_Timer3Timer(Sender: TObject);
 var s:string;
 begin
-
   Client_Timer3.Enabled:=False;
   if IdTCPClient3.Connected then
     if not IdTCPClient3.Socket.InputBufferIsEmpty then

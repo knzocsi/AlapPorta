@@ -662,6 +662,7 @@ interface
       '	`Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'');'+ #13#10 +
       ''+ #13#10 +
       //lerakodasi_cimek_nezet
+      'DROP TABLE IF EXISTS lerakodasi_cimek_nezet;'+ #13#10 +
       ' CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `lerakodasi_cimek_nezet`'+ #13#10 +
       ' AS SELECT id,tul_id,' + #13#10 +
       'irsz,telepules,kozterulet,kozt_jelleg,hazszam,epulet,lepcsohaz,emelet,ajto,hrsz,' + #13#10 +

@@ -1163,10 +1163,10 @@ object FoF: TFoF
     Height = 55
     Align = alBottom
     TabOrder = 3
-    Visible = False
+    ExplicitLeft = -1
     object JvLED1: TJvLED
-      Left = 32
-      Top = 6
+      Left = 37
+      Top = 5
       Width = 30
       Height = 25
       Hint = 'Dupla katttint'#225'ssal v'#225'lthat'

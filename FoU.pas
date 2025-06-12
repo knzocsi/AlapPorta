@@ -71,6 +71,7 @@ type
     ip_cim:string;
     port:integer;
     rtsp:string;
+    rtspszam:integer;
   end;
 
   Soromporec=record
@@ -561,11 +562,11 @@ begin
     ShowMessage(rsEbbolAMeresbolMarKeszultMjegy);
     exit;
   end;
-
+  if af.ForgalomQ.IsEmpty then exit;
 
   Rendszam_Lampa_Timer.Enabled := false;
-  meresF.rendszam1:=lblRendszam_elso.Caption ;
-  meresF.rendszam2:=lblRendszam_Hatso.Caption ;
+  meresF.rendszam1:=af.ForgalomQ.FieldByName('Rendszam').AsString ;
+  meresF.rendszam2:=af.ForgalomQ.FieldByName('Rendszam2').AsString ;
   meresF.ShowModal;
   if not meresF.mentes then exit;
 
@@ -1104,11 +1105,15 @@ var
 
 
   procedure Kamerak;
-  var merlegszam,kameraszam:integer;
+  var merlegszam,kameraszam,rtspszam:integer;
   begin
+    for rtspszam := 0 to 5 do rtspURLs[rtspszam]:='';
+    rtspszam:=0;
     for merlegszam :=1 to Maxmerleg do
       for kameraszam := 1 to Maxkamera do
       begin
+        //ezt nézi majd a káp mentésnél, ezért az IP címet mindig meg kell adni
+        KameraTomb[merlegszam,kameraszam].ip_cim:='';
         if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['KAMERA'+kameraszam.ToString,'M'+merlegszam.ToString]),[])) then
           if (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0)  then
             if (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)  then
@@ -1116,6 +1121,10 @@ var
               KameraTomb[merlegszam,kameraszam].ip_cim:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
               KameraTomb[merlegszam,kameraszam].port:=af.HardverQ.FieldbyName('IP_port').AsInteger;
               KameraTomb[merlegszam,kameraszam].rtsp:=af.HardverQ.FieldbyName('Rtsp').AsString;
+              KameraTomb[merlegszam,kameraszam].rtspszam:=rtspszam;
+              rtspURLs[rtspszam]:= af.HardverQ.FieldbyName('Rtsp').AsString;;
+
+              rtspszam:=rtspszam+1;
               if (rendszamleker) and (kameraszam<3) then
               begin
                 RendszamTomb[merlegszam,kameraszam].rendszam:='';
@@ -1222,19 +1231,7 @@ var
       end;
   end;
 
-  procedure rtsp_ip_kamerak_beallitasa;
-  var k:Integer;
-  begin
-   for k := 0 to 5 do
-    begin
-     if af.HardverQ.Locate('Eszkoznev','URL Cam '+k.ToString) and
-      (POS(PC_Szam,af.HardverQ.FieldbyName('Szamitogep').AsString )<>0) and
-       (af.HardverQ.FieldbyName('Aktiv').AsInteger=1)
-     then
-      rtspurls[k]:=af.HardverQ.FieldbyName('Rtsp').AsString
-     else rtspurls[k]:='';
-    end;
-  end;
+
 
 begin
   onActivate := nil;
@@ -1250,6 +1247,8 @@ begin
   btnElso.Visible:= Elso_Gomb_Szoveg<>'' ;
   btnElso.Caption:=Elso_Gomb_Szoveg;
   tbIdeiglenes.TabVisible:=ideiglenes_latszik;
+  btnMeres.Visible:=meresgomb_kell;
+  btnMeresmodositas.Visible:=meresgomb_kell;
   if ideiglenes_latszik then  pcTablak.ActivePageIndex:=0;
   for i:=0 to 15 do PLC_Lekerdezett_Valasz[i]:=false;
 
@@ -1311,15 +1310,6 @@ begin
   // showmessage(teszt.ToString);
   szures;
   //teszt:=True;
-  if (lejatszas)and(not Regi_hardver_beallitas) then rtsp_ip_kamerak_beallitasa;
-
-  try
-    if (not nagykamera)and (lejatszas) then play(False);
-    //application.processmessages;
-  except
-    Showmessage(rsKamerakepBetolteseSikertelen);
-  // Exit
-  end;
   try
     if UpperCase(ParamStr(1)) <> '/D' then
     begin
@@ -1367,6 +1357,13 @@ begin
       begin
         infrak;
         kamerak;
+      end;
+      try
+        if (not nagykamera)and (lejatszas) then play(False);
+        //application.processmessages;
+      except
+        Showmessage(rsKamerakepBetolteseSikertelen);
+      // Exit
       end;
     { DONE -oKNZ -c : Ide kell a lámpa kifeléfordulás 2021. 10. 19. 17:53:39 }
       if Regi_hardver_beallitas then
@@ -1790,7 +1787,7 @@ begin
         PLC_IP:=af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
         //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
         //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status);
-        if TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status then allapot:=1;
+        if not TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status then allapot:=1;
         PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString,af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,'C','I',allapot);
 
       end
@@ -1947,14 +1944,14 @@ var
   i: Integer;
   hany_kamera:integer;
 begin
- if not lejatszas then Exit;
+ //if not lejatszas then Exit;
   // create new vlc instance
   if not van_plugin then  Exit;//ha nincs plugin kilép
   try
    if not nagy then
     begin
       try
-        stop(nagy);
+        stop(not nagy);
       finally
        //cam 0
        try
@@ -2052,7 +2049,7 @@ begin
    if nagy then
     begin
       try
-        stop(not nagy);
+        stop(nagy);
       finally
        //nagy cam0
         try
@@ -2376,18 +2373,7 @@ function TFoF.snapshot(p: string): string;
     end;
   end;
 
-  procedure merleghez_tartozo_ip_camok;
-   begin
-    with AF.ipcam_merleghezQ do
-     begin
-      Close;
-      SQL.Clear;
-      SQL.Add('SELECT Eszkoznev FROM harver_beallitasok ');
-      SQL.Add('WHERE Merleg=M'+p+' AND UPPER(Szamitogep) LIKE UPPER('+#39+'%'+PC_Szam+'%'+#39+'');
-      open;
-     end;
-   end;
-
+ 
 var
   fn: string;
   i: Integer;
@@ -2434,11 +2420,8 @@ begin
         end
        else
         begin //új
-          merleghez_tartozo_ip_camok;
-         with af.ipcam_merleghezQ do
-          begin
-            ShowMessage(RightStr(Fields[0].AsString,1));
-          end;
+
+         
         end;
         for i := 0 to 9 do
         begin
@@ -2710,9 +2693,8 @@ begin
       end;
    end;
    //nagykam
-   if nagy then
+   if (nagy) and (nagykamera) then
     begin
-
      if Assigned(vlcMediaPlayer6) then
       begin
        libvlc_media_player_stop(vlcMediaPlayer6);

@@ -59,7 +59,6 @@ begin
 end;
 
 procedure TMeresF.btnMeres1Click(Sender: TObject);
-
 begin
   if Sender=btnMeres1 then merleg:=1;
   if Sender=btnMeres2 then merleg:=2;

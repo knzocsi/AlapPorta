@@ -1656,6 +1656,7 @@ var tf:textfile;
     fnev,kezi:string;
     e:integer;
 
+
  procedure kep_konvertalasa(keputja: string);
   var
     png: TPNGImage;
@@ -1683,22 +1684,9 @@ var tf:textfile;
     end;
   end;
 
-  procedure merleghez_tartozo_ip_camok;
-   begin
-    with AF.ipcam_merleghezQ do
-     begin
-      Close;
-      SQL.Clear;
-      SQL.Add('SELECT Eszkoznev FROM hardver_beallitasok ');
-      SQL.Add('WHERE Merleg='+#39+'M'+kivalasztott_merleg.ToString+#39
-      +' AND UPPER(Szamitogep) LIKE UPPER('+#39+'%'+PC_Szam+'%'+#39+')'
-      +' AND UPPER(Eszkoznev) LIKE UPPER('+#39+'%'+'URL Cam'+'%'+#39+')');
-      af.camlog(SQL.Text);
-      open;
-     end;
-   end;
-procedure lejatszas_ellenorzese;
- begin
+
+  procedure lejatszas_ellenorzese;
+  begin
     //kis kamera lejatszas van
     Fof.tmrElokep.Enabled:=false;
     if (Assigned(vlcMediaPlayer0))and (libvlc_media_player_is_playing(vlcMediaPlayer0) = 0)
@@ -1740,6 +1728,7 @@ procedure lejatszas_ellenorzese;
   procedure snapshot;
   var fn,eredmeny: string;
       i,akt_cam: Integer;
+      kamera:integer;
 
       procedure kep_kitesz;
       var     JPEGImg: TJPEGImage;
@@ -1750,7 +1739,7 @@ procedure lejatszas_ellenorzese;
             kep2.Picture:=nil;
             Okep1.Picture:=nil;
             Okep2.Picture:=nil;
-            if AF.ipcam_merleghezQ.RecNo=1 then
+            if kamera=1 then
              begin
               lblKep1.Caption:=eredmeny;
               kepek_tomb[1]:=eredmeny;
@@ -1811,7 +1800,7 @@ procedure lejatszas_ellenorzese;
             kep4.Picture:=nil;
             Okep3.Picture:=nil;
             Okep4.Picture:=nil;
-            if AF.ipcam_merleghezQ.RecNo=1 then
+            if kamera=1 then
              begin
               lblKep3.Caption:=eredmeny;
               kepek_tomb[3]:=eredmeny;
@@ -1867,85 +1856,83 @@ procedure lejatszas_ellenorzese;
             lblKep4.Visible:=kep2.Picture=nil;
           end;
       end;
+
+
+
   begin
     if (not van_plugin)or(not lejatszas) then exit;
     eredmeny := 'Pillanat felvétel sikertelen';
     try
-     lejatszas_ellenorzese //ha hozzá van rendelve de nincs lejátszás újraindítja
+      lejatszas_ellenorzese //ha hozzá van rendelve de nincs lejátszás újraindítja
     finally
       FormatSettings.ShortDateFormat := 'yyyy.mm.dd';
       //af.camlog('snapshot finally ');
       try
-         merleghez_tartozo_ip_camok;
-         af.camlog('merleghez tartozó ipkamok ');
-         af.ipcam_merleghezQ.first;
-           with af.ipcam_merleghezQ do
+        for kamera := 1 to Maxkamera do
+        begin
+          try
+            if KameraTomb[kivalasztott_merleg,kamera].ip_cim<>'' then
             begin
-             while not Eof do
-              begin
-               try
-                if TryStrToInt(RightStr(Fields[0].AsString,1),akt_cam) then
-                 begin
-                  fn := FormatDateTime('YYYMMDDHHnnss',Now);
-                  fn := StringReplace(kivalasztott_merleg.ToString + '_' +akt_cam.ToString
-                        +'_' + fn, ' ', '', [rfreplaceAll]);
-                  case akt_cam of
-                   0:begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
-                   1:begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
-                   2:begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
-                   3 :begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
-                   4:begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer10)then libvlc_video_take_snapshot(vlcMediaPlayer10, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
-                   5 :begin
-                       //kis camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                       //nagy camera pillanat felvétel
-                       if Assigned(vlcMediaPlayer11)then libvlc_video_take_snapshot(vlcMediaPlayer11, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
-                      end;
+              akt_cam:=KameraTomb[kivalasztott_merleg,kamera].rtspszam;
+              fn := FormatDateTime('YYYMMDDHHnnss',Now);
+              fn := StringReplace(kivalasztott_merleg.ToString + '_' +akt_cam.ToString
+                    +'_' + fn, ' ', '', [rfreplaceAll]);
+              case akt_cam of
+               0:begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
                   end;
-                   for i := 0 to 9 do
-                    begin
-                      if fileExists(kepmappa + fn + '.png') then
-                      begin
-                        kep_konvertalasa(kepmappa + fn + '.png');
-                        break
-                      end
-                      else  sleep(200);
-                    end;
-                 end;
-               finally
-                if fileExists(kepmappa + fn + '.jpg') then eredmeny := kepmappa + fn + '.jpg'
-                else eredmeny := 'Pillanat felvétel sikertelen';
-                kep_kitesz;
-                //ShowMessage(eredmeny)
-               end;
-                next;
+               1:begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                  end;
+               2:begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                  end;
+               3 :begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                  end;
+               4:begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer10)then libvlc_video_take_snapshot(vlcMediaPlayer10, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                  end;
+               5 :begin
+                   //kis camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   //nagy camera pillanat felvétel
+                   if Assigned(vlcMediaPlayer11)then libvlc_video_take_snapshot(vlcMediaPlayer11, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                  end;
               end;
-            end;
+               for i := 0 to 9 do
+                begin
+                  if fileExists(kepmappa + fn + '.png') then
+                  begin
+                    kep_konvertalasa(kepmappa + fn + '.png');
+                    break
+                  end
+                  else  sleep(200);
+                end;
+             end;
+          finally
+            if fileExists(kepmappa + fn + '.jpg') then eredmeny := kepmappa + fn + '.jpg'
+            else eredmeny := 'Pillanat felvétel sikertelen';
+            kep_kitesz;
+            //ShowMessage(eredmeny)
+          end;
+
+        end;
       except
         eredmeny := 'Pillanat felvétel sikertelen';
       end;
@@ -2022,16 +2009,16 @@ end;
 
 procedure TMjegyF.partnerlookup2Change(Sender: TObject);
 begin
- if not Visible then exit;
- if ActiveControl.Name='partnerlookup2' then
- if chkpartnerekegy.Checked then partnerlookup.KeyValue:=partnerlookup2.KeyValue;
+  if not Visible then exit;
+  if ActiveControl.Name='partnerlookup2' then
+  if chkpartnerekegy.Checked then partnerlookup.KeyValue:=partnerlookup2.KeyValue;
 end;
 
 procedure TMjegyF.partnerlookupChange(Sender: TObject);
 begin
- if not Visible then exit;
- if ActiveControl.Name='partnerlookup' then
- if chkpartnerekegy.Checked then partnerlookup2.KeyValue:=partnerlookup.KeyValue;
+  if not Visible then exit;
+  if ActiveControl.Name='partnerlookup' then
+  if chkpartnerekegy.Checked then partnerlookup2.KeyValue:=partnerlookup.KeyValue;
 end;
 
 procedure TMjegyF.rendszam_combok;

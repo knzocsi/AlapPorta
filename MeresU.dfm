@@ -2,8 +2,8 @@ object MeresF: TMeresF
   Left = 0
   Top = 0
   Caption = 'M'#233'r'#233's'
-  ClientHeight = 272
-  ClientWidth = 439
+  ClientHeight = 240
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -69,8 +69,8 @@ object MeresF: TMeresF
     OnEnter = spTomegEnter
   end
   object btnMentes: TButton
-    Left = 40
-    Top = 222
+    Left = 41
+    Top = 190
     Width = 75
     Height = 25
     Caption = 'Ment'#233's'
@@ -78,8 +78,8 @@ object MeresF: TMeresF
     OnClick = btnMentesClick
   end
   object btnKilepes: TButton
-    Left = 256
-    Top = 222
+    Left = 248
+    Top = 190
     Width = 75
     Height = 25
     Caption = 'Kil'#233'p'#233's'
@@ -97,7 +97,7 @@ object MeresF: TMeresF
   end
   object btnMeres1: TButton
     Left = 41
-    Top = 135
+    Top = 134
     Width = 90
     Height = 25
     Caption = 'M'#233'r'#233's 1. m'#233'rleg'

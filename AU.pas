@@ -437,7 +437,6 @@ type
     mtPLC_FeladatMuvelet: TStringField;
     mtPLC_FeladatErtek: TSmallintField;
     mtPLC_FeladatIO: TIntegerField;
-    ipcam_merleghezQ: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -595,6 +594,7 @@ var
   idegen_meres: Boolean=False;
 
   kivalasztott_merleg:integer=0;
+  meresgomb_kell:boolean;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -716,14 +716,14 @@ begin
 
  // exit;
   if adatbazis='' then
-   begin
+  begin
     try
      MySQLF:=TMySQLF.Create(Application);
      MySQLF.ShowModal
     finally
      MySQLF.Free;
     end;
-   end
+  end
   else
   with Kapcs do
   begin
@@ -1368,6 +1368,7 @@ begin
 
   nedvesseg_beolvasasa:=inif.ReadBool('ALAP','Nedvesseg_beolvasasa',False);
   nedvesseg_beolvasasa:=cfg_kezel('','ALAP','Nedvesség beolvasása','Boolean',Nedvesseg_beolvasasa);
+  meresgomb_kell:=cfg_kezel('Legyen e mérés gomb a fõ form forgalom fülén','ALAP','Mérés gomb kell','Boolean',Nedvesseg_beolvasasa);
   //inif.WriteBool('ALAP','Nedvesseg_beolvasasa',nedvesseg_beolvasasa);
   alap_tarolo:=inif.ReadInteger('ALAP','Alap_tarolo',0);
   alap_tarolo:=cfg_kezel('','ALAP','Alapértelmezett tároló','Integer',alap_tarolo);

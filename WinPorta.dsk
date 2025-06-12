@@ -1,36 +1,37 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,1,46,12,0,0,,
-File_1=TSourceModule,'C:\Program Files (x86)\FastReports\LibD27\fs_isysrtti.pas',0,1,608,1,625,0,0,,
-File_2=TSourceModule,'C:\Kompon\Comport\Source\CPortCtl.pas',0,1,2705,1,2721,0,0,,
-File_3=TSourceModule,'C:\Kompon\Delphi-SpreadSheets-master\UHojaCalc.pas',0,1,143,1,189,0,0,,
-File_4=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\ModbusConsts.pas',0,1,60,1,78,0,0,,
-File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas',0,1,49,31,60,0,0,,{1
-File_6=TSourceModule,'C:\Program Files (x86)\FastReports\LibD27\fs_iformsrtti.pas',0,1,423,40,435,0,0,,
-File_7=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\SOURCE\VCL\Vcl.Forms.pas',0,1,11159,39,11176,0,0,{{1891,4}
-File_8=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\UzenetekU.pas',0,1,19,1,132,0,0,,
-File_9=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\WinPortaResource.rc',0,1,1,1,9,0,0,,
+File_0=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\nagykepU.pas',0,1,1,1,26,0,0,,
+File_1=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\LibreExcelU.pas',0,1,1,46,12,0,0,,
+File_2=TSourceModule,'C:\Program Files (x86)\FastReports\LibD27\fs_isysrtti.pas',0,1,608,1,625,0,0,,
+File_3=TSourceModule,'C:\Kompon\Comport\Source\CPortCtl.pas',0,1,2705,1,2721,0,0,,
+File_4=TSourceModule,'C:\Kompon\Delphi-SpreadSheets-master\UHojaCalc.pas',0,1,143,1,189,0,0,,
+File_5=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\ModbusConsts.pas',0,1,60,1,78,0,0,,
+File_6=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas',0,1,49,31,60,0,0,,{1
+File_7=TSourceModule,'C:\Program Files (x86)\FastReports\LibD27\fs_iformsrtti.pas',0,1,423,40,435,0,0,,
+File_8=TSourceModule,'c:\program files (x86)\embarcadero\studio\21.0\SOURCE\VCL\Vcl.Forms.pas',0,1,11159,39,11176,0,0,{{1891,4}
+File_9=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\UzenetekU.pas',0,1,19,1,132,0,0,,
+File_10=TSourceModule,'N:\Delphi_10_4\Merleges\Alap\WinPortaResource.rc',0,1,1,1,9,0,0,,
 
 [Modules]
 Module0=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
-Module2=N:\Delphi_10_4\Merleges\Alap\AU.pas
-Module3=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module1=N:\Delphi_10_4\Merleges\Alap\AU.pas
+Module2=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
+Module3=N:\Delphi_10_4\Merleges\Alap\Meres_MerlegjegyenU.pas
 Module4=N:\Delphi_10_4\Merleges\Alap\Rak_szallU.pas
-Module5=C:\Kompon\Comport\Source\CPortEsc.pas
-Module6=N:\Delphi_10_4\Merleges\Alap\dijszabU.pas
-Module7=N:\Delphi_10_4\Merleges\Alap\rak_szall_listU.pas
-Module8=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
-Module9=N:\Delphi_10_4\Merleges\Alap\MermodU.pas
-Module10=N:\Delphi_10_4\Merleges\Alap\TermekekU.pas
-Module11=N:\Delphi_10_4\Merleges\Alap\KeszletU.pas
-Module12=N:\Delphi_10_4\Merleges\Alap\NyomtatokU.pas
-Count=13
+Module5=N:\Delphi_10_4\Merleges\Alap\portU.pas
+Module6=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
+Module7=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
+Module8=C:\Kompon\Comport\Source\CPortEsc.pas
+Module9=N:\Delphi_10_4\Merleges\Alap\dijszabU.pas
+Module10=N:\Delphi_10_4\Merleges\Alap\rak_szall_listU.pas
+Module11=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
+Module12=N:\Delphi_10_4\Merleges\Alap\MermodU.pas
+Module13=N:\Delphi_10_4\Merleges\Alap\TermekekU.pas
+Module14=N:\Delphi_10_4\Merleges\Alap\KeszletU.pas
+Module15=N:\Delphi_10_4\Merleges\Alap\NyomtatokU.pas
+Count=16
 EditWindowCount=1
 
 [N:\Delphi_10_4\Merleges\Alap\FoU.pas]
-ModuleType=TSourceModule
-
-[N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
 ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\AU.pas]
@@ -39,7 +40,19 @@ ModuleType=TSourceModule
 [N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas]
 ModuleType=TSourceModule
 
+[N:\Delphi_10_4\Merleges\Alap\Meres_MerlegjegyenU.pas]
+ModuleType=TSourceModule
+
 [N:\Delphi_10_4\Merleges\Alap\Rak_szallU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\portU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\MeresU.pas]
+ModuleType=TSourceModule
+
+[N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
 ModuleType=TSourceModule
 
 [C:\Kompon\Comport\Source\CPortEsc.pas]
@@ -67,7 +80,7 @@ ModuleType=TSourceModule
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=13
+ViewCount=16
 CurrentEditView=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 View0=0
 View1=1
@@ -82,6 +95,9 @@ View9=9
 View10=10
 View11=11
 View12=12
+View13=13
+View14=14
+View15=15
 PercentageSizes=1
 Create=1
 Visible=1
@@ -114,26 +130,48 @@ BottomMiddelPanelData=0000080001000100000010000000477261706844726177696E67566965
 [View0]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\FoU.pas
-CursorX=12
-CursorY=162
-TopLine=145
+CursorX=1
+CursorY=1241
+TopLine=1224
 LeftCol=1
 Elisions=
-Bookmarks={0,3328,1}{1,3696,1}{2,3492,1}{3,3492,1}{4,3733,1}{5,2306,1}{6,2958,1}{7,2227,1}{8,354,1}{9,1742,1}
-EditViewName=Borland.FormDesignerView
+Bookmarks={0,3330,1}{1,2165,2}{2,3494,1}{3,3494,1}{4,3735,1}{5,2308,1}{6,2960,1}{7,2229,1}{8,354,1}{9,1744,1}
+EditViewName=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 
 [View1]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\AU.pas
-CursorX=1
-CursorY=760
-TopLine=761
+CursorX=17
+CursorY=1371
+TopLine=1347
 LeftCol=1
 Elisions=
-Bookmarks={0,754,1}{1,753,1}{2,733,1}{3,660,1}{4,171,1}{5,689,1}{6,2503,1}{7,2410,1}{8,2560,1}{9,2590,1}
-EditViewName=Borland.FormDesignerView
+Bookmarks={0,755,1}{1,1193,35}{2,734,1}{3,661,1}{4,171,1}{5,690,1}{6,2505,1}{7,2412,1}{8,2562,1}{9,2592,1}
+EditViewName=N:\Delphi_10_4\Merleges\Alap\AU.pas
 
 [View2]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
+CursorX=1
+CursorY=67
+TopLine=46
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\Merleges\Alap\MeresU.pas
+
+[View3]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\portU.pas
+CursorX=1
+CursorY=1235
+TopLine=1223
+LeftCol=1
+Elisions=
+Bookmarks={1,1172,1}{2,943,1}{3,608,1}{4,668,1}{5,159,1}{6,679,1}{7,786,1}{8,764,1}
+EditViewName=N:\Delphi_10_4\Merleges\Alap\portU.pas
+
+[View4]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\Rak_szallU.pas
 CursorX=12
@@ -144,7 +182,18 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\Rak_szallU.pas
 
-[View3]
+[View5]
+CustomEditViewType=TEditView
+Module=N:\Delphi_10_4\Merleges\Alap\Meres_MerlegjegyenU.pas
+CursorX=13
+CursorY=75
+TopLine=70
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=N:\Delphi_10_4\Merleges\Alap\Meres_MerlegjegyenU.pas
+
+[View6]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\rak_szall_listU.pas
 CursorX=95
@@ -155,7 +204,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\rak_szall_listU.pas
 
-[View4]
+[View7]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\dijszabU.pas
 CursorX=1
@@ -166,7 +215,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\dijszabU.pas
 
-[View5]
+[View8]
 CustomEditViewType=TEditView
 Module=C:\Kompon\Comport\Source\CPortEsc.pas
 CursorX=31
@@ -177,7 +226,7 @@ Elisions=
 Bookmarks=
 EditViewName=C:\Kompon\Comport\Source\CPortEsc.pas
 
-[View6]
+[View9]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\MermodU.pas
 CursorX=1
@@ -188,7 +237,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\MermodU.pas
 
-[View7]
+[View10]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\TermekekU.pas
 CursorX=41
@@ -199,7 +248,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\TermekekU.pas
 
-[View8]
+[View11]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
 CursorX=27
@@ -210,7 +259,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
 
-[View9]
+[View12]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\NyomtatokU.pas
 CursorX=5
@@ -221,7 +270,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\NyomtatokU.pas
 
-[View10]
+[View13]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 CursorX=5
@@ -232,7 +281,7 @@ Elisions=
 Bookmarks={1,1482,1}{2,1875,1}{3,1851,1}{4,866,1}{5,690,1}{6,632,1}{7,351,1}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 
-[View11]
+[View14]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
 CursorX=30
@@ -243,7 +292,7 @@ Elisions=
 Bookmarks=
 EditViewName=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
 
-[View12]
+[View15]
 CustomEditViewType=TEditView
 Module=N:\Delphi_10_4\Merleges\Alap\KeszletU.pas
 CursorX=20
@@ -269,11 +318,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=212
 LRDockWidth=13604
 Dockable=1
@@ -281,7 +330,7 @@ StayOnTop=0
 
 [Breakpoints]
 Count=1
-Breakpoint0='N:\Delphi_10_4\Merleges\Alap\AU.pas',741,'',0,1,'',1,0,0,'',1,'','','',0,''
+Breakpoint0='N:\Delphi_10_4\Merleges\Alap\FoU.pas',1241,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=1
@@ -428,11 +477,6 @@ Dockable=1
 StayOnTop=0
 SplitPos=93
 
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Action,CustomHint
-ExpandedItems=LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,Touch=0,Anchors=0,BevelEdges=0,Constraints=0,Font=1,Colors=0,Buffer=0,Events=0,FlowControl=0,Parity=1,StoredProps=0,Timeouts=0,ImageMargins=0,Connection=0,FetchOptions=0,FormatOptions=0,ResourceOptions=0,ScriptOptions=0,Font.Style=1,BorderIcons=0,Padding=0
-
 [frmDesignPreview]
 PercentageSizes=1
 Create=1
@@ -442,11 +486,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=7990
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=7990
+ClientHeight=5923
 TBDockHeight=5962
 LRDockWidth=2510
 Dockable=1
@@ -458,8 +502,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=-1528
+Top=196
 Width=276
 Height=365
 MaxLeft=-1
@@ -483,11 +527,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=413
 LRDockWidth=4953
 Dockable=1
@@ -502,11 +546,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=212
 LRDockWidth=7406
 Dockable=1
@@ -525,11 +569,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=1538
 LRDockWidth=3484
 Dockable=1
@@ -544,11 +588,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=2067
 LRDockWidth=3484
 Dockable=1
@@ -628,11 +672,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=7990
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=7990
+ClientHeight=5923
 TBDockHeight=4885
 LRDockWidth=7151
 Dockable=1
@@ -644,8 +688,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=380
+Top=817
 Width=2854
 Height=3212
 MaxLeft=-1
@@ -663,8 +707,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-298
-Top=-373
+Left=-8
+Top=-173
 Width=1849
 Height=3144
 MaxLeft=-1
@@ -684,12 +728,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=667
-Height=7990
+Width=1000
+Height=5923
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=667
-ClientHeight=7990
+ClientWidth=1000
+ClientHeight=5923
 TBDockHeight=4837
 LRDockWidth=3562
 Dockable=1
@@ -703,12 +747,12 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=667
-Height=7990
+Width=1000
+Height=5923
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=667
-ClientHeight=7990
+ClientWidth=1000
+ClientHeight=5923
 TBDockHeight=4837
 LRDockWidth=3562
 Dockable=1
@@ -723,11 +767,11 @@ State=0
 Left=0
 Top=0
 Width=3823
-Height=1154
+Height=1115
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1154
+ClientHeight=1115
 TBDockHeight=1548
 LRDockWidth=8740
 Dockable=1
@@ -768,11 +812,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=7990
+Height=5923
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=7990
+ClientHeight=5923
 TBDockHeight=4885
 LRDockWidth=5307
 Dockable=1
@@ -832,15 +876,15 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=8
-Top=8
+Left=0
+Top=28
 Width=3823
-Height=1423
+Height=1385
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3823
-ClientHeight=1423
-TBDockHeight=1423
+ClientHeight=1385
+TBDockHeight=1385
 LRDockWidth=3823
 Dockable=1
 StayOnTop=0
@@ -865,7 +909,7 @@ MaxTop=-1
 ClientWidth=516
 ClientHeight=4510
 TBDockHeight=4510
-LRDockWidth=2000
+LRDockWidth=958
 Dockable=1
 StayOnTop=0
 TabPosition=1
