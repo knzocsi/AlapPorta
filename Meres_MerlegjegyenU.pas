@@ -59,7 +59,6 @@ var tomeg:integer;
 begin
   if szabalyos_merlegen_tartozkodas_figyeles then
   begin
-
     if (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA5')=0)  or
        (Fof.bemenet_lekerdezes('M'+(rgMerlegszama.ItemIndex+1).ToString,'INFRA6')=0)
       then

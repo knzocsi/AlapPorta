@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45671.4144444444</prop>
-        <prop prop-type="OrigDateTime">45581.2953935185</prop>
-        <prop prop-type="XlatDateTime">45581.2953703704</prop>
+        <prop prop-type="SelfDateTime">45873.3559953704</prop>
+        <prop prop-type="OrigDateTime">45763.4108333333</prop>
+        <prop prop-type="XlatDateTime">45581.337037037</prop>
         <prop prop-type="Translated">16</prop>
-        <prop prop-type="UnTranslated">184</prop>
+        <prop prop-type="UnTranslated">185</prop>
       </prop-group>
     </header>
     <body>
@@ -753,7 +753,7 @@
         <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:rgMerlegszama.Height" resname="O:Meres_MerlegjegyenF.O:rgMerlegszama.Height">
-        <source>49</source>
+        <source>63</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -773,261 +773,266 @@
         <source>'2. mérleg'</source>
         <target>'2. scale'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">1</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">1</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Meres_MerlegjegyenF.O:rgMerlegszama.Items.Strings[2]" resname="O:Meres_MerlegjegyenF.O:rgMerlegszama.Items.Strings[2]">
+        <source>'3. mérleg'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3559996065</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:rgMerlegszama.TabOrder" resname="O:Meres_MerlegjegyenF.O:rgMerlegszama.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Left" resname="O:Meres_MerlegjegyenF.O:btnMeres.Left">
         <source>258</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Top" resname="O:Meres_MerlegjegyenF.O:btnMeres.Top">
         <source>137</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Width" resname="O:Meres_MerlegjegyenF.O:btnMeres.Width">
         <source>88</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Height" resname="O:Meres_MerlegjegyenF.O:btnMeres.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Caption" resname="O:Meres_MerlegjegyenF.O:btnMeres.Caption">
         <source>'Mérés'</source>
         <target>'Weighning'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">1</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">1</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Font.Charset" resname="O:Meres_MerlegjegyenF.O:btnMeres.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">156</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Font.Color" resname="O:Meres_MerlegjegyenF.O:btnMeres.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">157</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Font.Height" resname="O:Meres_MerlegjegyenF.O:btnMeres.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">158</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Font.Name" resname="O:Meres_MerlegjegyenF.O:btnMeres.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">159</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.Font.Style" resname="O:Meres_MerlegjegyenF.O:btnMeres.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">160</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.ParentFont" resname="O:Meres_MerlegjegyenF.O:btnMeres.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">161</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.TabOrder" resname="O:Meres_MerlegjegyenF.O:btnMeres.TabOrder">
         <source>4</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">162</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnMeres.OnClick" resname="O:Meres_MerlegjegyenF.O:btnMeres.OnClick">
         <source>btnMeresClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">163</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Left" resname="O:Meres_MerlegjegyenF.O:spTomeg.Left">
         <source>258</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">164</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Top" resname="O:Meres_MerlegjegyenF.O:spTomeg.Top">
         <source>88</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">165</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Width" resname="O:Meres_MerlegjegyenF.O:spTomeg.Width">
         <source>151</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">166</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Height" resname="O:Meres_MerlegjegyenF.O:spTomeg.Height">
         <source>43</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">167</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Font.Charset" resname="O:Meres_MerlegjegyenF.O:spTomeg.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">168</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Font.Color" resname="O:Meres_MerlegjegyenF.O:spTomeg.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">169</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Font.Height" resname="O:Meres_MerlegjegyenF.O:spTomeg.Font.Height">
         <source>-27</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">170</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Font.Name" resname="O:Meres_MerlegjegyenF.O:spTomeg.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">171</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Font.Style" resname="O:Meres_MerlegjegyenF.O:spTomeg.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">172</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.MaxValue" resname="O:Meres_MerlegjegyenF.O:spTomeg.MaxValue">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">173</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.MinValue" resname="O:Meres_MerlegjegyenF.O:spTomeg.MinValue">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">174</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122801</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.ParentFont" resname="O:Meres_MerlegjegyenF.O:spTomeg.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">175</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.TabOrder" resname="O:Meres_MerlegjegyenF.O:spTomeg.TabOrder">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">176</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:spTomeg.Value" resname="O:Meres_MerlegjegyenF.O:spTomeg.Value">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">177</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Left" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Left">
         <source>258</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">178</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Top" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Top">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">179</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Width" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Width">
         <source>88</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">180</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Height" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">181</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Hint" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Hint">
         <source>'Close'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">182</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.Caption" resname="O:Meres_MerlegjegyenF.O:btnKilepes.Caption">
         <source>'Kilépés'</source>
         <target>'Exit'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">1</prop><prop prop-type="Order">183</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">1</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.TabOrder" resname="O:Meres_MerlegjegyenF.O:btnKilepes.TabOrder">
         <source>6</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">184</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnKilepes.OnClick" resname="O:Meres_MerlegjegyenF.O:btnKilepes.OnClick">
         <source>btnKilepesClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">185</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.Left" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.Left">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">186</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.Top" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.Top">
-        <source>146</source>
+        <source>162</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">187</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.Width" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.Width">
         <source>97</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">188</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.Height" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.Height">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">189</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.Caption" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.Caption">
         <source>'Kézi mérés'</source>
         <target>'Manual weighning'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">1</prop><prop prop-type="Order">190</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">1</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.TabOrder" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.TabOrder">
         <source>7</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">191</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:chkKezimeres.OnClick" resname="O:Meres_MerlegjegyenF.O:chkKezimeres.OnClick">
         <source>chkKezimeresClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">192</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420122917</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.Left" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.Left">
         <source>91</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">193</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.Top" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.Top">
         <source>201</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">194</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.Width" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">195</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.Height" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">196</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.Caption" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.Caption">
         <source>'Elfogadás'</source>
         <target>'Accept'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">197</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">1</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.TabOrder" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.TabOrder">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">198</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Meres_MerlegjegyenF.O:btnelfogadas.OnClick" resname="O:Meres_MerlegjegyenF.O:btnelfogadas.OnClick">
         <source>btnelfogadasClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">199</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45532.5152447222</prop><prop prop-type="Status">0</prop><prop prop-type="Order">200</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

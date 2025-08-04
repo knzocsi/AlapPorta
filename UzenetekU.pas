@@ -134,6 +134,7 @@ interface
  resourcestring rsMoxaTeszt = 'Mérleg IP teszt';
  resourcestring rsMoxaHiba = 'Mérleg IP hiba!';
  resourcestring rsMoxaOlvasasiHiba = 'Mérleg IP olvasási hiba!';
+ resourcestring rsMoxaOK = 'Mérleg IP OK';
 implementation
 
 end.

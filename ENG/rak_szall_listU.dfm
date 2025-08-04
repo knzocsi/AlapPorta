@@ -85,7 +85,7 @@ object rak_szall_listF: Trak_szall_listF
       Width = 113
       Height = 21
       Date = 43587
-      Time = 0.773554583327496000
+      Time = 0.773554583327496100
       TabOrder = 1
       OnChange = piKezdoDatumChange
     end
@@ -939,7 +939,7 @@ object rak_szall_listF: Trak_szall_listF
           IndexTag = 1
           AllowVectorExport = True
           Left = 109.606370000000000000
-          Top = 20.787401574803200000
+          Top = 20.787401574803100000
           Width = 294.803340000000000000
           Height = 18.897650000000000000
           DataField = 'K_Nev'

@@ -25,23 +25,49 @@ object NagykamF: TNagykamF
     Top = 0
     Width = 1008
     Height = 730
-    ActivePage = cam7
+    ActivePage = cam6
     Align = alClient
     TabOrder = 0
-    object cam4: TTabSheet
-      Caption = 'Cam 1'
-    end
-    object cam5: TTabSheet
-      Caption = 'Cam 2'
-      ImageIndex = 1
-    end
     object cam6: TTabSheet
-      Caption = 'Cam 3'
-      ImageIndex = 2
+      Tag = 6
+      Caption = 'Kamera 1'
+      OnHide = cam6Hide
+      OnShow = cam6Show
     end
     object cam7: TTabSheet
-      Caption = 'Cam 4'
+      Tag = 7
+      Caption = 'Kamera 2'
+      ImageIndex = 1
+      OnHide = cam6Hide
+      OnShow = cam6Show
+    end
+    object cam8: TTabSheet
+      Tag = 8
+      Caption = 'Kamera 3'
+      ImageIndex = 2
+      OnHide = cam6Hide
+      OnShow = cam6Show
+    end
+    object cam9: TTabSheet
+      Tag = 9
+      Caption = 'Kamera 4'
       ImageIndex = 3
+      OnHide = cam6Hide
+      OnShow = cam6Show
+    end
+    object cam10: TTabSheet
+      Tag = 10
+      Caption = 'Kamera 5'
+      ImageIndex = 4
+      OnHide = cam6Hide
+      OnShow = cam6Show
+    end
+    object cam11: TTabSheet
+      Tag = 11
+      Caption = 'Kamera 6'
+      ImageIndex = 5
+      OnHide = cam6Hide
+      OnShow = cam6Show
     end
   end
   object JvAppIniFileStorage1: TJvAppIniFileStorage

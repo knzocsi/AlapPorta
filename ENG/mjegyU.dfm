@@ -472,13 +472,14 @@ object MjegyF: TMjegyF
       Width = 145
       Height = 22
       Style = csOwnerDrawFixed
-      DropDownCount = 3
+      DropDownCount = 10
       TabOrder = 0
       OnChange = cbxIranyChange
       Items.Strings = (
         '----Not selected----'
         'In'
-        'Out')
+        'Out'
+        'Idegen m'#233'r'#233's')
     end
     object btnMentes: TButton
       Left = 1032
@@ -1124,6 +1125,14 @@ object MjegyF: TMjegyF
       Height = 21
       TabOrder = 38
       Text = 'cbxszar'
+    end
+    object chkidegen: TCheckBox
+      Left = 598
+      Top = 6
+      Width = 97
+      Height = 17
+      Caption = 'IDEGEN M'#201'R'#201'S'
+      TabOrder = 39
     end
   end
   object pnlFelso: TPanel

@@ -186,7 +186,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -1163,7 +1163,6 @@ object FoF: TFoF
     Height = 55
     Align = alBottom
     TabOrder = 3
-    ExplicitLeft = -1
     object JvLED1: TJvLED
       Left = 37
       Top = 5
@@ -1624,6 +1623,7 @@ object FoF: TFoF
   end
   object moxaTeszttmr: TTimer
     Enabled = False
+    Interval = 5000
     OnTimer = moxaTeszttmrTimer
     Left = 361
     Top = 320

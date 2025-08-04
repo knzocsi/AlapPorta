@@ -292,13 +292,14 @@ object MermodF: TMermodF
       Width = 145
       Height = 22
       Style = csOwnerDrawFixed
-      DropDownCount = 3
+      DropDownCount = 10
       TabOrder = 0
       OnChange = cbxiranyChange
       Items.Strings = (
         '---Not selected----'
         'In'
-        'Out')
+        'Out'
+        'Idegen m'#233'r'#233's')
     end
     object btnMentes: TButton
       Left = 424

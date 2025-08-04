@@ -682,6 +682,7 @@ begin
     hwQ:= TFDQuery.Create(nil);
     hwKap :=TFDConnection.Create(nil);
     hwKap.Params:=Af.Kapcs.Params;
+    hwKap.LoginPrompt:=false;
     hwKap.Connected:=true;
     hwQ.Connection:= hwKap;
     if hwKap.Connected then
@@ -3124,10 +3125,15 @@ end;
 
 procedure TFoF.moxaTeszttmrTimer(Sender: TObject);
 begin
-moxaTeszttmr.Enabled:=False;
- if (moxa_ip1<>'') and (not portf.IdTCPClient1.Connected) then
-  if Ping_teszt_moxa(moxa_ip1) then PortF.IP1_Start;
-moxaTeszttmr.Enabled:=true;
+  moxaTeszttmr.Enabled:=False;
+
+  if (moxa_ip1<>'') and (not portf.IdTCPClient1.Connected) and (moxa_ip1<>'Local') then
+    if Ping_teszt_moxa(moxa_ip1) then PortF.IP1_Start;
+  if (moxa_ip2<>'') and (not portf.IdTCPClient2.Connected) and (moxa_ip2<>'Local') then
+    if Ping_teszt_moxa(moxa_ip2) then PortF.IP2_Start;
+  if (moxa_ip3<>'') and (not portf.IdTCPClient3.Connected) and (moxa_ip3<>'Local') then
+    if Ping_teszt_moxa(moxa_ip3) then PortF.IP3_Start;
+  moxaTeszttmr.Enabled:=true;
 end;
 
 procedure TFoF.Mrlegelseklistja1Click(Sender: TObject);
@@ -3448,7 +3454,8 @@ begin
       if PingHost(IP) then
       begin
         //pingproba_moxa:=1;
-        memlog.Lines.Insert(0,'Moxa IP: ' + ip + ' OK');
+        StatusBar1.panels[3].text := 'Mérleg:'+ ip + ' OK';
+        memlog.Lines.Insert(0,': ' + ip + ' OK');
         Application.ProcessMessages;
         Result:=true;
         Break

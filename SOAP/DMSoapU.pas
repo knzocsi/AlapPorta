@@ -227,8 +227,8 @@ var fn,Vn,stcode,
        Result:=x;
      end;
 begin
-  fn:=soap_kuldve+intToStr(ForgQ_tread.FieldByName('id').AsInteger+30000000)+'.xml';
-  vn:=soap_valasz+intToStr(ForgQ_tread.FieldByName('id').AsInteger+30000000)+'.xml';
+  fn:=soap_kuldve+intToStr(ForgQ_tread.FieldByName('id').AsInteger+40000000)+'.xml';
+  vn:=soap_valasz+intToStr(ForgQ_tread.FieldByName('id').AsInteger+40000000)+'.xml';
   utct(tms,tmsj,rid);
   GenQuery:= NewGenIfQueryRoot;
   {XmlDoc.Version:='1.0';
@@ -257,7 +257,7 @@ XMLDoc.Encoding:='utf-8';}
      soap_gyar:='2010';
      with UserSpecXMLs.MerlegXMLs.MerlegXML do
       begin
-        id:=ForgQ_tread.FieldByName('id').AsInteger+30000000;//mérés id
+        id:=ForgQ_tread.FieldByName('id').AsInteger+40000000;//mérés id
         WERKS:=StrToInt(soap_gyar);
         MERLEG:='M'+soap_gyar+ForgQ_tread.FieldByName('soap_merleg_azonosito').AsString;//vmi mérleg azonosító
         if ForgQ_tread.FieldByName('rendszam').AsString='' then  Rendszam:='******'

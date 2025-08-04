@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45671.414375</prop>
-        <prop prop-type="OrigDateTime">45581.2953703704</prop>
-        <prop prop-type="XlatDateTime">45581.2953472222</prop>
+        <prop prop-type="SelfDateTime">45873.3559490741</prop>
+        <prop prop-type="OrigDateTime">45757.7456944444</prop>
+        <prop prop-type="XlatDateTime">45581.3370138889</prop>
         <prop prop-type="Translated">128</prop>
         <prop prop-type="UnTranslated">1307</prop>
       </prop-group>
@@ -5895,695 +5895,695 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1152</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Left" resname="O:EkaerF.O:fel_datum.Left">
-        <source>17</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1153</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Top" resname="O:EkaerF.O:fel_datum.Top">
-        <source>415</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1154</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Width" resname="O:EkaerF.O:fel_datum.Width">
-        <source>81</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1155</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Height" resname="O:EkaerF.O:fel_datum.Height">
-        <source>21</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1156</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Date" resname="O:EkaerF.O:fel_datum.Date">
-        <source>44460</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1157</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.Time" resname="O:EkaerF.O:fel_datum.Time">
-        <source>0.422771053243196</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1158</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:fel_datum.TabOrder" resname="O:EkaerF.O:fel_datum.TabOrder">
-        <source>31</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1159</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Left" resname="O:EkaerF.O:le_datum.Left">
-        <source>222</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1160</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Top" resname="O:EkaerF.O:le_datum.Top">
-        <source>415</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1161</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Width" resname="O:EkaerF.O:le_datum.Width">
-        <source>81</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1162</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Height" resname="O:EkaerF.O:le_datum.Height">
-        <source>21</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1163</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Date" resname="O:EkaerF.O:le_datum.Date">
-        <source>44460</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1164</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.Time" resname="O:EkaerF.O:le_datum.Time">
-        <source>0.422771053243196</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1165</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:le_datum.TabOrder" resname="O:EkaerF.O:le_datum.TabOrder">
-        <source>32</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1166</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Left" resname="O:EkaerF.O:fel_ido.Left">
         <source>104</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1167</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1153</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Top" resname="O:EkaerF.O:fel_ido.Top">
         <source>415</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1168</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1154</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Width" resname="O:EkaerF.O:fel_ido.Width">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1169</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1155</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Height" resname="O:EkaerF.O:fel_ido.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1170</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1156</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Date" resname="O:EkaerF.O:fel_ido.Date">
         <source>44460</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1171</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1157</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Time" resname="O:EkaerF.O:fel_ido.Time">
         <source>0.422771053243196</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1172</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1158</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.Kind" resname="O:EkaerF.O:fel_ido.Kind">
         <source>dtkTime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1173</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1159</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:fel_ido.TabOrder" resname="O:EkaerF.O:fel_ido.TabOrder">
-        <source>33</source>
+        <source>31</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1174</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1160</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Left" resname="O:EkaerF.O:le_ido.Left">
         <source>309</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1175</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1161</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Top" resname="O:EkaerF.O:le_ido.Top">
         <source>415</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1176</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1162</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Width" resname="O:EkaerF.O:le_ido.Width">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1177</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1163</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Height" resname="O:EkaerF.O:le_ido.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1178</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1164</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Date" resname="O:EkaerF.O:le_ido.Date">
         <source>44460</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1179</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1165</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Time" resname="O:EkaerF.O:le_ido.Time">
         <source>0.422771053243196</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1180</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1166</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.Kind" resname="O:EkaerF.O:le_ido.Kind">
         <source>dtkTime</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1181</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1167</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:le_ido.TabOrder" resname="O:EkaerF.O:le_ido.TabOrder">
-        <source>34</source>
+        <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1182</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1168</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Left" resname="O:EkaerF.O:cbx_fuvok.Left">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1183</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1169</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Top" resname="O:EkaerF.O:cbx_fuvok.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1184</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1170</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Width" resname="O:EkaerF.O:cbx_fuvok.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1185</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1171</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Height" resname="O:EkaerF.O:cbx_fuvok.Height">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1186</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1172</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Style" resname="O:EkaerF.O:cbx_fuvok.Style">
         <source>csOwnerDrawFixed</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1187</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1173</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.TabOrder" resname="O:EkaerF.O:cbx_fuvok.TabOrder">
-        <source>35</source>
+        <source>33</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1188</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1174</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Items.Strings[0]" resname="O:EkaerF.O:cbx_fuvok.Items.Strings[0]">
         <source>'(S) Értékesítés'</source>
         <target>'(S) Selling'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1189</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1175</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Items.Strings[1]" resname="O:EkaerF.O:cbx_fuvok.Items.Strings[1]">
         <source>'(A) Beszerzés'</source>
         <target>'(A) Acquisition'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1190</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1176</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Items.Strings[2]" resname="O:EkaerF.O:cbx_fuvok.Items.Strings[2]">
         <source>'(W) Bérmunka'</source>
         <target>'(W) Wage work'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1191</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1177</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:cbx_fuvok.Items.Strings[3]" resname="O:EkaerF.O:cbx_fuvok.Items.Strings[3]">
         <source>'(O) Egyéb'</source>
         <target>'(O) Other'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1192</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1178</prop><prop prop-type="Type">TComboBox</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.Left" resname="O:EkaerF.O:ed_termeknev.Left">
         <source>231</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1193</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1179</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.Top" resname="O:EkaerF.O:ed_termeknev.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1194</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1180</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.Width" resname="O:EkaerF.O:ed_termeknev.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1195</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1181</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.Height" resname="O:EkaerF.O:ed_termeknev.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1196</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1182</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.TabOrder" resname="O:EkaerF.O:ed_termeknev.TabOrder">
-        <source>36</source>
+        <source>34</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1197</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1183</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_termeknev.Text" resname="O:EkaerF.O:ed_termeknev.Text">
         <source>'ed_termeknev'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1198</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1184</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.Left" resname="O:EkaerF.O:ed_adr.Left">
         <source>358</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1199</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1185</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.Top" resname="O:EkaerF.O:ed_adr.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1200</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1186</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.Width" resname="O:EkaerF.O:ed_adr.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1201</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1187</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.Height" resname="O:EkaerF.O:ed_adr.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1202</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1188</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.TabOrder" resname="O:EkaerF.O:ed_adr.TabOrder">
-        <source>37</source>
+        <source>35</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1203</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1189</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_adr.Text" resname="O:EkaerF.O:ed_adr.Text">
         <source>'ed_adr'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1204</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1190</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.Left" resname="O:EkaerF.O:ed_tomeg.Left">
         <source>612</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1205</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1191</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.Top" resname="O:EkaerF.O:ed_tomeg.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1206</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1192</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.Width" resname="O:EkaerF.O:ed_tomeg.Width">
         <source>69</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1207</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1193</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.Height" resname="O:EkaerF.O:ed_tomeg.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1208</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1194</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.TabOrder" resname="O:EkaerF.O:ed_tomeg.TabOrder">
-        <source>38</source>
+        <source>36</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1209</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1195</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_tomeg.Text" resname="O:EkaerF.O:ed_tomeg.Text">
         <source>'ed_tomeg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1210</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1196</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.Left" resname="O:EkaerF.O:ed_ertek.Left">
         <source>687</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1211</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1197</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.Top" resname="O:EkaerF.O:ed_ertek.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1212</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1198</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.Width" resname="O:EkaerF.O:ed_ertek.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1213</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1199</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.Height" resname="O:EkaerF.O:ed_ertek.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1214</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1200</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.TabOrder" resname="O:EkaerF.O:ed_ertek.TabOrder">
-        <source>39</source>
+        <source>37</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1215</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1201</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_ertek.Text" resname="O:EkaerF.O:ed_ertek.Text">
         <source>'ed_ertek'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1216</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1202</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.Left" resname="O:EkaerF.O:ed_engedelyszam.Left">
         <source>485</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1217</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1203</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.Top" resname="O:EkaerF.O:ed_engedelyszam.Top">
         <source>463</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1218</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1204</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.Width" resname="O:EkaerF.O:ed_engedelyszam.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1219</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1205</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.Height" resname="O:EkaerF.O:ed_engedelyszam.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1220</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1206</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.TabOrder" resname="O:EkaerF.O:ed_engedelyszam.TabOrder">
-        <source>40</source>
+        <source>38</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1221</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1207</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_engedelyszam.Text" resname="O:EkaerF.O:ed_engedelyszam.Text">
         <source>'ed_engedelyszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1222</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1208</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Left" resname="O:EkaerF.O:btnkuldes.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1223</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1209</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Top" resname="O:EkaerF.O:btnkuldes.Top">
         <source>500</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1224</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1210</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Width" resname="O:EkaerF.O:btnkuldes.Width">
         <source>815</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1225</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1211</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Height" resname="O:EkaerF.O:btnkuldes.Height">
         <source>46</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1226</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1212</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Align" resname="O:EkaerF.O:btnkuldes.Align">
         <source>alBottom</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1227</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1213</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Caption" resname="O:EkaerF.O:btnkuldes.Caption">
         <source>'Küldés'</source>
         <target>'Send'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1228</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1214</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Font.Charset" resname="O:EkaerF.O:btnkuldes.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1229</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1215</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Font.Color" resname="O:EkaerF.O:btnkuldes.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1230</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1216</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Font.Height" resname="O:EkaerF.O:btnkuldes.Font.Height">
         <source>-21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1231</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1217</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Font.Name" resname="O:EkaerF.O:btnkuldes.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1232</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1218</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.Font.Style" resname="O:EkaerF.O:btnkuldes.Font.Style">
         <source>[fsBold]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1233</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1219</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.ParentFont" resname="O:EkaerF.O:btnkuldes.ParentFont">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1234</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1220</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.TabOrder" resname="O:EkaerF.O:btnkuldes.TabOrder">
-        <source>41</source>
+        <source>39</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1235</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1221</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkuldes.OnClick" resname="O:EkaerF.O:btnkuldes.OnClick">
         <source>btnkuldesClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1236</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1222</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.Left" resname="O:EkaerF.O:felcimlookup.Left">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1237</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1223</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.Top" resname="O:EkaerF.O:felcimlookup.Top">
         <source>233</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1238</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1224</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.Width" resname="O:EkaerF.O:felcimlookup.Width">
         <source>768</source>
         <target>887</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1239</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1225</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.Height" resname="O:EkaerF.O:felcimlookup.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1240</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1226</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.DisplayEmpty" resname="O:EkaerF.O:felcimlookup.DisplayEmpty">
         <source>'---Válasszon felrakodási címet----'</source>
         <target>'---Select uploading address----'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1241</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1227</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.EmptyValue" resname="O:EkaerF.O:felcimlookup.EmptyValue">
         <source>'!'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1242</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1228</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.LookupField" resname="O:EkaerF.O:felcimlookup.LookupField">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1243</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1229</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.LookupDisplay" resname="O:EkaerF.O:felcimlookup.LookupDisplay">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1244</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1230</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.LookupSource" resname="O:EkaerF.O:felcimlookup.LookupSource">
         <source>felcimekQDs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1245</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1231</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.TabOrder" resname="O:EkaerF.O:felcimlookup.TabOrder">
-        <source>42</source>
+        <source>40</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1246</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1232</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimlookup.OnCloseUp" resname="O:EkaerF.O:felcimlookup.OnCloseUp">
         <source>felcimlookupCloseUp</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1247</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1233</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Left" resname="O:EkaerF.O:btnkitolt.Left">
         <source>97</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1248</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1234</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Top" resname="O:EkaerF.O:btnkitolt.Top">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1249</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1235</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Width" resname="O:EkaerF.O:btnkitolt.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1250</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1236</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Height" resname="O:EkaerF.O:btnkitolt.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1251</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1237</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Caption" resname="O:EkaerF.O:btnkitolt.Caption">
         <source>'Kitölt'</source>
         <target>'Fill'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1252</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1238</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.TabOrder" resname="O:EkaerF.O:btnkitolt.TabOrder">
-        <source>43</source>
+        <source>41</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1253</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1239</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.Visible" resname="O:EkaerF.O:btnkitolt.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1254</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1240</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:btnkitolt.OnClick" resname="O:EkaerF.O:btnkitolt.OnClick">
         <source>btnkitoltClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1255</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419709954</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1241</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.Left" resname="O:EkaerF.O:ed_vtsz.Left">
         <source>144</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1256</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1242</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.Top" resname="O:EkaerF.O:ed_vtsz.Top">
         <source>464</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1257</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1243</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.Width" resname="O:EkaerF.O:ed_vtsz.Width">
         <source>81</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1258</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1244</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.Height" resname="O:EkaerF.O:ed_vtsz.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1259</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1245</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.MaxLength" resname="O:EkaerF.O:ed_vtsz.MaxLength">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1260</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1246</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.TabOrder" resname="O:EkaerF.O:ed_vtsz.TabOrder">
-        <source>44</source>
+        <source>42</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1261</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1247</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:ed_vtsz.Text" resname="O:EkaerF.O:ed_vtsz.Text">
         <source>'ed_vtsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1262</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1248</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.Left" resname="O:EkaerF.O:Button2.Left">
         <source>694</source>
         <target>816</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1263</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1249</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.Top" resname="O:EkaerF.O:Button2.Top">
         <source>202</source>
         <target>200</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1264</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1250</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.Width" resname="O:EkaerF.O:Button2.Width">
         <source>91</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1265</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1251</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.Height" resname="O:EkaerF.O:Button2.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1266</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1252</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.Caption" resname="O:EkaerF.O:Button2.Caption">
         <source>'Felrakodási címek'</source>
         <target>'Load addresses'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1267</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1253</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.TabOrder" resname="O:EkaerF.O:Button2.TabOrder">
-        <source>45</source>
+        <source>43</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1268</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1254</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button2.OnClick" resname="O:EkaerF.O:Button2.OnClick">
         <source>Button2Click</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1269</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1255</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.Left" resname="O:EkaerF.O:lecimlookup.Left">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1270</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1256</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.Top" resname="O:EkaerF.O:lecimlookup.Top">
         <source>321</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1271</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1257</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.Width" resname="O:EkaerF.O:lecimlookup.Width">
         <source>768</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1272</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1258</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.Height" resname="O:EkaerF.O:lecimlookup.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1273</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1259</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.DisplayEmpty" resname="O:EkaerF.O:lecimlookup.DisplayEmpty">
         <source>'---Válasszon lerakodási címet----'</source>
         <target>'---Select unloading address----'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1274</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1260</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.EmptyValue" resname="O:EkaerF.O:lecimlookup.EmptyValue">
         <source>'!'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1275</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1261</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.LookupField" resname="O:EkaerF.O:lecimlookup.LookupField">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1276</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1262</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.LookupDisplay" resname="O:EkaerF.O:lecimlookup.LookupDisplay">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1277</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1263</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.LookupSource" resname="O:EkaerF.O:lecimlookup.LookupSource">
         <source>lecimekQDs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1278</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1264</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.TabOrder" resname="O:EkaerF.O:lecimlookup.TabOrder">
-        <source>46</source>
+        <source>44</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1279</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1265</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimlookup.OnCloseUp" resname="O:EkaerF.O:lecimlookup.OnCloseUp">
         <source>lecimlookupCloseUp</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1280</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1266</prop><prop prop-type="Type">TJvDBLookupCombo</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.Left" resname="O:EkaerF.O:Button1.Left">
         <source>694</source>
         <target>816</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1281</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1267</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.Top" resname="O:EkaerF.O:Button1.Top">
         <source>290</source>
         <target>288</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1282</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1268</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.Width" resname="O:EkaerF.O:Button1.Width">
         <source>91</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1283</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1269</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.Height" resname="O:EkaerF.O:Button1.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1284</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1270</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.Caption" resname="O:EkaerF.O:Button1.Caption">
         <source>'Lerakodási címek'</source>
         <target>'Unload addresses'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1285</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">1</prop><prop prop-type="Order">1271</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.TabOrder" resname="O:EkaerF.O:Button1.TabOrder">
-        <source>47</source>
+        <source>45</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1286</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1272</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:Button1.OnClick" resname="O:EkaerF.O:Button1.OnClick">
         <source>Button1Click</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1287</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6419710069</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1273</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.Left" resname="O:EkaerF.O:fel_datum.Left">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1274</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.Top" resname="O:EkaerF.O:fel_datum.Top">
+        <source>416</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1275</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.Width" resname="O:EkaerF.O:fel_datum.Width">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1276</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.Height" resname="O:EkaerF.O:fel_datum.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1277</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.DateFormat" resname="O:EkaerF.O:fel_datum.DateFormat">
+        <source>'YYYY.MM.DD.'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.355954213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1278</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.ShowNullDate" resname="O:EkaerF.O:fel_datum.ShowNullDate">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.355954213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1279</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:fel_datum.TabOrder" resname="O:EkaerF.O:fel_datum.TabOrder">
+        <source>46</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1280</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.Left" resname="O:EkaerF.O:le_datum.Left">
+        <source>217</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1281</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.Top" resname="O:EkaerF.O:le_datum.Top">
+        <source>415</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1282</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.Width" resname="O:EkaerF.O:le_datum.Width">
+        <source>89</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1283</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.Height" resname="O:EkaerF.O:le_datum.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1284</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.DateFormat" resname="O:EkaerF.O:le_datum.DateFormat">
+        <source>'YYYY.MM.DD.'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.355954213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1285</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.ShowNullDate" resname="O:EkaerF.O:le_datum.ShowNullDate">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.355954213</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1286</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:EkaerF.O:le_datum.TabOrder" resname="O:EkaerF.O:le_datum.TabOrder">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45531.6419709838</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1287</prop><prop prop-type="Type">TJvDateEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.Connection" resname="O:EkaerF.O:felcimekQ.Connection">
         <source>AF.Kapcs</source>

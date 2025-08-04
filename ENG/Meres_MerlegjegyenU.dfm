@@ -175,11 +175,12 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
     Left = 128
     Top = 91
     Width = 108
-    Height = 49
+    Height = 63
     Caption = 'Number of scale'
     Items.Strings = (
       '1. scale'
-      '2. scale')
+      '2. scale'
+      '3. m'#233'rleg')
     TabOrder = 3
   end
   object btnMeres: TButton
@@ -225,7 +226,7 @@ object Meres_MerlegjegyenF: TMeres_MerlegjegyenF
   end
   object chkKezimeres: TCheckBox
     Left = 128
-    Top = 146
+    Top = 162
     Width = 97
     Height = 17
     Caption = 'Manual weighning'

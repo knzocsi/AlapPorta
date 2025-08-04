@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45671.4145138889</prop>
-        <prop prop-type="OrigDateTime">44983.5933101852</prop>
-        <prop prop-type="XlatDateTime">45581.2953703704</prop>
-        <prop prop-type="Translated">5</prop>
-        <prop prop-type="UnTranslated">43</prop>
+        <prop prop-type="SelfDateTime">45873.3560648148</prop>
+        <prop prop-type="OrigDateTime">45764.3752314815</prop>
+        <prop prop-type="XlatDateTime">45581.337037037</prop>
+        <prop prop-type="Translated">1</prop>
+        <prop prop-type="UnTranslated">69</prop>
       </prop-group>
     </header>
     <body>
@@ -140,7 +140,7 @@
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.ActivePage" resname="O:NagykamF.O:campagc.ActivePage">
-        <source>cam7</source>
+        <source>cam6</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -154,119 +154,233 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:NagykamF.O:campagc.O:cam4.Caption" resname="O:NagykamF.O:campagc.O:cam4.Caption">
-        <source>'Kamera 1'</source>
-        <target>'Cam 1'</target>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam6.Tag" resname="O:NagykamF.O:campagc.O:cam6.Tag">
+        <source>6</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:NagykamF.O:campagc.O:cam5.Caption" resname="O:NagykamF.O:campagc.O:cam5.Caption">
-        <source>'Kamera 2'</source>
-        <target>'Cam 2'</target>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:NagykamF.O:campagc.O:cam5.ImageIndex" resname="O:NagykamF.O:campagc.O:cam5.ImageIndex">
-        <source>1</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam6.Caption" resname="O:NagykamF.O:campagc.O:cam6.Caption">
-        <source>'Kamera 3'</source>
-        <target>'Cam 3'</target>
+        <source>'Kamera 1'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Kamera 3'</source>
+          <target>'Cam 3'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45873.2727426042</prop></prop-group>
+        </alt-trans></trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam6.OnHide" resname="O:NagykamF.O:campagc.O:cam6.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:NagykamF.O:campagc.O:cam6.ImageIndex" resname="O:NagykamF.O:campagc.O:cam6.ImageIndex">
-        <source>2</source>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam6.OnShow" resname="O:NagykamF.O:campagc.O:cam6.OnShow">
+        <source>cam6Show</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam7.Tag" resname="O:NagykamF.O:campagc.O:cam7.Tag">
+        <source>7</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam7.Caption" resname="O:NagykamF.O:campagc.O:cam7.Caption">
-        <source>'Kamera 4'</source>
-        <target>'Cam 4'</target>
+        <source>'Kamera 2'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">1</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      <alt-trans>  <source>'Kamera 4'</source>
+          <target>'Cam 4'</target>
+          <prop-group name="ITEFieldProp">
+          <prop prop-type="Modified">45873.2727426042</prop></prop-group>
+        </alt-trans></trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.O:cam7.ImageIndex" resname="O:NagykamF.O:campagc.O:cam7.ImageIndex">
-        <source>3</source>
+        <source>1</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam7.OnHide" resname="O:NagykamF.O:campagc.O:cam7.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam7.OnShow" resname="O:NagykamF.O:campagc.O:cam7.OnShow">
+        <source>cam6Show</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam8.Tag" resname="O:NagykamF.O:campagc.O:cam8.Tag">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam8.Caption" resname="O:NagykamF.O:campagc.O:cam8.Caption">
+        <source>'Kamera 3'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam8.ImageIndex" resname="O:NagykamF.O:campagc.O:cam8.ImageIndex">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam8.OnHide" resname="O:NagykamF.O:campagc.O:cam8.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam8.OnShow" resname="O:NagykamF.O:campagc.O:cam8.OnShow">
+        <source>cam6Show</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam9.Tag" resname="O:NagykamF.O:campagc.O:cam9.Tag">
+        <source>9</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam9.Caption" resname="O:NagykamF.O:campagc.O:cam9.Caption">
+        <source>'Kamera 4'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam9.ImageIndex" resname="O:NagykamF.O:campagc.O:cam9.ImageIndex">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam9.OnHide" resname="O:NagykamF.O:campagc.O:cam9.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam9.OnShow" resname="O:NagykamF.O:campagc.O:cam9.OnShow">
+        <source>cam6Show</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam10.Tag" resname="O:NagykamF.O:campagc.O:cam10.Tag">
+        <source>10</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam10.Caption" resname="O:NagykamF.O:campagc.O:cam10.Caption">
+        <source>'Kamera 5'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam10.ImageIndex" resname="O:NagykamF.O:campagc.O:cam10.ImageIndex">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam10.OnHide" resname="O:NagykamF.O:campagc.O:cam10.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam10.OnShow" resname="O:NagykamF.O:campagc.O:cam10.OnShow">
+        <source>cam6Show</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759375</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam11.Tag" resname="O:NagykamF.O:campagc.O:cam11.Tag">
+        <source>11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam11.Caption" resname="O:NagykamF.O:campagc.O:cam11.Caption">
+        <source>'Kamera 6'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam11.ImageIndex" resname="O:NagykamF.O:campagc.O:cam11.ImageIndex">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam11.OnHide" resname="O:NagykamF.O:campagc.O:cam11.OnHide">
+        <source>cam6Hide</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagykamF.O:campagc.O:cam11.OnShow" resname="O:NagykamF.O:campagc.O:cam11.OnShow">
+        <source>cam6Show</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3560759491</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TTabSheet</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringTrueValues" resname="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringTrueValues">
         <source>'TRUE, YES, Y'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringFalseValues" resname="O:NagykamF.O:JvAppIniFileStorage1.StorageOptions.BooleanStringFalseValues">
         <source>'FALSE, NO, N'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.FileName" resname="O:NagykamF.O:JvAppIniFileStorage1.FileName">
         <source>'ipcamlivesc.ini'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.DefaultSection" resname="O:NagykamF.O:JvAppIniFileStorage1.DefaultSection">
         <source>'General'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[0]" resname="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[0]">
         <source></source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[1]" resname="O:NagykamF.O:JvAppIniFileStorage1.SubStorages[1]">
         <source></source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">item</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">C:TJvAppIniFileStorage</prop><prop prop-type="Localize">0</prop><prop prop-type="Open">item</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.Left" resname="O:NagykamF.O:JvAppIniFileStorage1.Left">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvAppIniFileStorage1.Top" resname="O:NagykamF.O:JvAppIniFileStorage1.Top">
         <source>87</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TJvAppIniFileStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.AppStorage" resname="O:NagykamF.O:JvFormStorage2.AppStorage">
         <source>JvAppIniFileStorage1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.AppStoragePath" resname="O:NagykamF.O:JvFormStorage2.AppStoragePath">
         <source>'Test\'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[0].Name" resname="O:NagykamF.O:JvFormStorage2.StoredValues[0].Name">
         <source>'Name'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[1].Name" resname="O:NagykamF.O:JvFormStorage2.StoredValues[1].Name">
         <source>'TestBoolean'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.StoredValues[1].Value" resname="O:NagykamF.O:JvFormStorage2.StoredValues[1].Value">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TJvFormStorage</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.Left" resname="O:NagykamF.O:JvFormStorage2.Left">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:JvFormStorage2.Top" resname="O:NagykamF.O:JvFormStorage2.Top">
         <source>40</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422158796</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TJvFormStorage</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>
