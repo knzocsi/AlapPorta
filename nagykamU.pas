@@ -30,7 +30,7 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure fo;
+    procedure fo(melyik:Integer);
   end;
 
 var
@@ -50,18 +50,18 @@ begin
  FoF.play_1_nagy((Sender as TTabSheet).Tag);
 end;
 
-procedure TNagykamF.fo;
+procedure TNagykamF.fo(melyik:Integer);
 begin
  try
-  // fof.play(true);
+   campagc.ActivePageIndex:=melyik
  finally
-  // Show
+   Show
  end;
 end;
 
 procedure TNagykamF.FormActivate(Sender: TObject);
 begin
-  campagc.ActivePage:=cam6;
+  //campagc.ActivePage:=cam6;
 end;
 
 procedure TNagykamF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -88,7 +88,8 @@ procedure TNagykamF.FormCreate(Sender: TObject);
 var i:Integer;
 begin
  //exit;
- for i := 6 to 11 do FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
+ for i := 6 to 11 do
+  FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString,i-6);
 end;
 
 procedure TNagykamF.FormHide(Sender: TObject);

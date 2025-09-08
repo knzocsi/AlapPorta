@@ -314,6 +314,7 @@ type
     procedure PLC_feladatok(IPCim:string;Port,IO:integer;Tipus,Muvelet:string;Ertek:integer);
     function Ping_teszt_moxa(IP:string):boolean;
     procedure moxaTeszttmrTimer(Sender: TObject);
+    procedure pclick(Sender:TObject);
 
   private
     { Private declarations }
@@ -321,7 +322,7 @@ type
 
   public
     { Public declarations }
-    procedure Play_Panel_letrehozasa(F:Tform; szulo, neve: string);
+    procedure Play_Panel_letrehozasa(F:Tform; szulo, neve: string;taga:integer);
     procedure stop_1_nagy(melyik:integer);
     procedure play_1_nagy(melyik:integer);
   end;
@@ -491,7 +492,7 @@ for i := 0 to 1 do Play_panel_letrehozasa('cam' + i.ToString, 'Cam_kepe' + i.ToS
  try
    try
      FoF.stop(false);
-    finally
+   finally
      Fof.play(true);
     end;
  finally
@@ -1584,7 +1585,7 @@ begin
   if not lejatszas then exit;
   if van_plugin then
    begin
-     for i := 0 to 5 do Play_panel_letrehozasa(FoF,'cam' + i.ToString, 'cam_kepe' + i.ToString);
+     for i := 0 to 5 do Play_panel_letrehozasa(FoF,'cam' + i.ToString, 'cam_kepe' + i.ToString,i);
 
       vlclib := LoadVLCLibrary(GetVLCLibPath());
       if vlclib = 0 then
@@ -1928,6 +1929,11 @@ end;
 procedure TFoF.Partnerek1Click(Sender: TObject);
 begin
   PartnerekF.showmodal;
+end;
+
+procedure TFoF.pclick(Sender: TObject);
+begin
+ NagykamF.fo((Sender as TPanel).Tag);
 end;
 
 procedure TFoF.piBefejezoDatumChange(Sender: TObject);
@@ -3364,7 +3370,7 @@ begin
   Rendszam_Lampa_Timer.Enabled := true;
 end;
 
-procedure TFoF.Play_Panel_letrehozasa(F:Tform;szulo, neve: string);
+procedure TFoF.Play_Panel_letrehozasa(F:Tform;szulo, neve: string;taga:integer);
 var
   I: Integer;
   tts: TTabSheet;
@@ -3393,6 +3399,8 @@ begin
           p.Name :=F.Name+neve;
           p.caption := 'Kamera nem elérhetõ';// af.ford('rsKamerNemElerheto');
           p.align := TAlign.alClient;
+          p.Tag:=taga;
+          if f.Name[1]='F' then p.OnClick:=pclick;//csak a kis panelekhez
           panelek.Add(p);
          // af.camlog('Panel létrehozva:'+F.Name+neve );
          end;
