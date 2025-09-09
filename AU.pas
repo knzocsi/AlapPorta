@@ -521,7 +521,7 @@ var
   visszanap:integer;
   port,szerver,adatbazis,user,passwd,telephely,rtspURL,felhnev,PLC_IP,meresirany:string;
   f_ide,utolso_sql,mentesido:Integer;
-  jogmod,rendszamleker,nagykamera,mezgaz,kozponti_prg:Boolean;
+  jogmod,rendszamleker,nagykamera,mezgaz,kozponti_prg,nagykameraval_indul:Boolean;
   bit:integer;
   konyvtar,verzio,tulajcime,tulajneve,adosz,pdfmappa,kuj,ktj,vezerles_tipus,kepmappa:string;
   sorompo_vezerles:boolean;
@@ -1236,6 +1236,7 @@ begin
   //inif.WriteInteger('ALAP','Lehajtasivarakozas',lehajtasivarakozas);
   nagykamera:=inif.ReadBool('ALAP','Nagy_kamera_kep',False);
   nagykamera:=cfg_kezel('','ALAP','Nagy kamera kép','Boolean',nagykamera);
+  nagykameraval_indul :=cfg_kezel('','ALAP','Nagy kamera kép indításkor','Boolean',nagykameraval_indul);
   //inif.WriteBool('ALAP','Nagy_kamera_kep',nagykamera);
   Merleg_tipus[1]:=inif.ReadString('Merleg','Merleg_tipus','Dibal');
   //Merleg_tipus:=cfg_kezel('','Merleg','Mérleg típus','String',Merleg_tipus[1]);

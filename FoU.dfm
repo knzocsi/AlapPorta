@@ -186,7 +186,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -863,31 +863,58 @@ object FoF: TFoF
           Width = 794
           Height = 227
           ActivePage = cam5
-          Align = alBottom
+          Align = alTop
           TabOrder = 0
+          ExplicitWidth = 752
           object cam0: TTabSheet
             Caption = 'Kamera 1'
+            OnShow = cam1Show
           end
           object cam1: TTabSheet
             Caption = 'Kamera 2'
             ImageIndex = 1
+            OnShow = cam1Show
           end
           object cam2: TTabSheet
             Caption = 'Kamera 3'
             ImageIndex = 2
+            OnShow = cam1Show
           end
           object cam3: TTabSheet
             Caption = 'Kamera 4'
             ImageIndex = 3
+            OnShow = cam1Show
           end
           object cam4: TTabSheet
             Caption = 'Kamera 5'
             ImageIndex = 4
+            OnShow = cam1Show
           end
           object cam5: TTabSheet
             Caption = 'Kamera 6'
             ImageIndex = 5
+            OnShow = cam1Show
           end
+        end
+        object btnnagykamkep: TButton
+          Left = 1
+          Top = 189
+          Width = 794
+          Height = 39
+          Align = alBottom
+          Caption = 'NAGY'#205'TOTT N'#201'ZET'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -21
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+          WordWrap = True
+          OnClick = btnnagykamkepClick
+          ExplicitLeft = 756
+          ExplicitTop = 228
+          ExplicitWidth = 0
         end
       end
     end

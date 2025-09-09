@@ -25,7 +25,7 @@ object NagykamF: TNagykamF
     Top = 0
     Width = 1008
     Height = 730
-    ActivePage = cam6
+    ActivePage = cam7
     Align = alClient
     TabOrder = 0
     object cam6: TTabSheet

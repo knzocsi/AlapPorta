@@ -53,7 +53,7 @@ end;
 procedure TNagykamF.fo(melyik:Integer);
 begin
  try
-   campagc.ActivePageIndex:=melyik
+   campagc.ActivePageIndex:=melyik;
  finally
    Show
  end;
@@ -75,12 +75,12 @@ begin
  if (lejatszas) then
   begin
     try
-      FoF.stop(true);
+      FoF.stop_1_nagy(campagc.ActivePage.Tag);
     finally
-      Fof.play(False);
+      //Fof.play(False);
+      CanClose:=True;
     end;
   end;
-
  //Application.ProcessMessages
 end;
 
@@ -88,8 +88,12 @@ procedure TNagykamF.FormCreate(Sender: TObject);
 var i:Integer;
 begin
  //exit;
+try
  for i := 6 to 11 do
-  FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString,i-6);
+  FoF.Play_panel_letrehozasa(NagykamF,'cam' + i.ToString, 'cam_kepe' + i.ToString,i);
+finally
+
+end;
 end;
 
 procedure TNagykamF.FormHide(Sender: TObject);

@@ -215,6 +215,7 @@ type
     moxaTeszttmr: TTimer;
     cam4: TTabSheet;
     cam5: TTabSheet;
+    btnnagykamkep: TButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -314,7 +315,8 @@ type
     procedure PLC_feladatok(IPCim:string;Port,IO:integer;Tipus,Muvelet:string;Ertek:integer);
     function Ping_teszt_moxa(IP:string):boolean;
     procedure moxaTeszttmrTimer(Sender: TObject);
-    procedure pclick(Sender:TObject);
+    procedure btnnagykamkepClick(Sender: TObject);
+    procedure cam1Show(Sender: TObject);
 
   private
     { Private declarations }
@@ -612,6 +614,11 @@ end;
 
 
 
+procedure TFoF.btnnagykamkepClick(Sender: TObject);
+begin
+NagykamF.fo(campagc.ActivePageIndex);
+end;
+
 procedure TFoF.btnnyelvClick(Sender: TObject);
 var m:Integer;
     h:THandle;
@@ -649,6 +656,11 @@ begin
    Application.Terminate;
  end;
    nyelvvalaszt:=false;
+end;
+
+procedure TFoF.cam1Show(Sender: TObject);
+begin
+btnnagykamkep.Caption:=UpperCase((Sender as TTabSheet).Caption)+' NAGYÍTOTT NÉZETE';
 end;
 
 procedure TFoF.chkToroltek_mutatasaClick(Sender: TObject);
@@ -1362,7 +1374,7 @@ begin
         kamerak;
       end;
       try
-        if (not nagykamera)and (lejatszas) then play(False);
+        if (not nagykameraval_indul)and (lejatszas) then play(False);
         //application.processmessages;
       except
         Showmessage(rsKamerakepBetolteseSikertelen);
@@ -1403,22 +1415,24 @@ begin
     Tomeg_Timer.Enabled := true;
     Rendszam_Lampa_Timer.Enabled := Regi_hardver_beallitas;
   finally
-    btnKamerakep.visible:=nagykamera;
+    btnKamerakep.visible:=false;
     // tmrElokep.Enabled:=lejatszas;
     StatusBar1.panels[5].Text:='';
     StatusBar1.panels[6].Text:='';
     if UpperCase(ParamStr(1)) = '/D' then demotomegF.show;
-    if (nagykamera)and(lejatszas) then
+    if nagykamera then fof.play(true);//létrehozza a lejátszókat
+
+    if (nagykamera)and(nagykameraval_indul)and(lejatszas) then
     begin
       try
        // NagykamF:=TNagykamF.Create(Self);
         try
           FoF.stop(false);
         finally
-          Fof.play(true);
+          NagykamF.fo(1);
         end;
       finally
-        nagykamF.show;
+       // nagykamF.show;
       end;
     end;
   end;
@@ -1931,10 +1945,6 @@ begin
   PartnerekF.showmodal;
 end;
 
-procedure TFoF.pclick(Sender: TObject);
-begin
- NagykamF.fo((Sender as TPanel).Tag);
-end;
 
 procedure TFoF.piBefejezoDatumChange(Sender: TObject);
 begin
@@ -1991,7 +2001,6 @@ begin
        except
         af.camlog('kis cam1 indítási hiba');
        end;
-
         //cam 2
       try
        if (teszt) or (rtspURLs[2] <> '') then
@@ -3400,7 +3409,6 @@ begin
           p.caption := 'Kamera nem elérhetõ';// af.ford('rsKamerNemElerheto');
           p.align := TAlign.alClient;
           p.Tag:=taga;
-          if f.Name[1]='F' then p.OnClick:=pclick;//csak a kis panelekhez
           panelek.Add(p);
          // af.camlog('Panel létrehozva:'+F.Name+neve );
          end;
