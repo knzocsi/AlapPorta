@@ -538,8 +538,8 @@ var
   IOmodul_IP:string;
   IOmodul_regiszter_iras1:integer;
   bizkibocsajto_id,Elso_Gomb_Varakozas,alap_tarolo,alap_irany,Elso_Gomb_Meres_Utan:Integer;
-  Elso_Gomb_Szoveg,Elso_Gomb_Tipus,ekaer_felhasz,ekaer_jsz,
-  ekaer_mappa,ekaer_csk,kpmappa,merleg_neve,torzs_import_mappa:String;
+  Elso_Gomb_Szoveg,Elso_Gomb_Tipus,
+  kpmappa,merleg_neve,torzs_import_mappa:String;
   Merlegjegy_tipus,alap_atvevo,alap_elado,lado,pingproba,kamproba,Merlegjegy_lista_tipus,pingproba_moxa:Integer;
   Infra_Figyeles,automata_torzsimport,termenyszaritas_elszamolasa,dijszab_csoportok:boolean;
   Infra_BE_Cim,Infra_KI_Cim:integer;
@@ -598,7 +598,7 @@ var
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
-     DMSoapU, UzenetekU ;
+     DMSoapU, UzenetekU,DmEKAERU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -791,7 +791,11 @@ begin
                      FormatDateTime('YYYY_MM_DD', Date),db_tavoli_mappa,db_ftp_tavoli_mappa);
   end
  else db_mentes_kesz:=True;
-
+ ekaer_adatbazis:='ekaer';
+ ekaer_szerver:=szerver;
+ ekaer_port:=port;
+ ekaer_user:=user;
+ ekaer_passwd:=passwd;
 end;
 
 function TAF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -1351,8 +1355,8 @@ begin
   libre_mappa:=inif.ReadString('ALAP','Libre_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\Libre_export');
   libre_mappa:=cfg_kezel('','MAPPAK','Libre mappa','String',Libre_mappa);
   //  inif.writeString('ALAP','Libre_mappa',libre_mappa);
-  ekaer_mappa:=inif.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
-  ekaer_mappa:=cfg_kezel('','MAPPAK','Ekaer mappa','String',Ekaer_mappa);
+//  ekaer_mappa:=inif.ReadString('Mappak','Ekaer_mappa',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
+//  ekaer_mappa:=cfg_kezel('','MAPPAK','Ekaer mappa','String',Ekaer_mappa);
   //inif.writeString('Mappak','Ekaer_mappa',ekaer_mappa);
   mentesido:=inif.ReadInteger('ALAP','Mentesido',20);
   mentesido:=cfg_kezel('','ALAP','Mentésidõ','Integer',Mentesido);
@@ -1398,15 +1402,7 @@ begin
   tomeg_levon:=inif.ReadBool('ALAP','Tomeg_levon',False);
   tomeg_levon:=cfg_kezel('','ALAP','Tömeg levonás','Boolean',Tomeg_levon);
   //inif.WriteBool('ALAP','Tomeg_levon',tomeg_levon);
-  ekaer_felhasz:=inif.ReadString('EKAER','ekaer_felhasz','');
-  ekaer_felhasz:=cfg_kezel('','EKAER','Ekaer felhasználó','String',ekaer_felhasz);
- // inif.writeString('EKAER','ekaer_felhasz',ekaer_felhasz);
-  ekaer_jsz:=inif.ReadString('EKAER','ekaer_jsz','');
-  ekaer_jsz:=cfg_kezel('','EKAER','Ekaer jelszó','String',ekaer_jsz);
- // inif.writeString('EKAER','ekaer_jsz',ekaer_jsz);
-  ekaer_csk:=inif.ReadString('EKAER','ekaer_alakulcs','');
-  ekaer_csk:=cfg_kezel('','EKAER','Ekaer kulcs','String',ekaer_csk);
-  //inif.writeString('EKAER','ekaer_alakulcs',ekaer_csk);
+
   lado:=inif.ReadInteger('ALAP','Lado',0);
   lado:=cfg_kezel('Ha nagyobb mint egy, akkor logolja a mintomeg feletti értékeket','ALAP','Ladorec','Integer',lado);
  // inif.WriteInteger('ALAP','Lado',lado);
@@ -1484,6 +1480,12 @@ begin
 
     idegen_meres:= cfg_kezel('Idegen mérés engedélyezése','ALAP','idegen_meres','Boolean', idegen_meres);
 
+  ekaer_teszt:=cfg_kezel('EKÁER teszt üzemmód','EKÁER','EKÁER teszt','Boolean',True);
+  ekaer_felhasz:=cfg_kezel('EKÁER felhasználó','EKÁER','EKÁER felhasználó','String','');
+  ekaer_jsz:=cfg_kezel('EKÁER jelszó','EKÁER','EKÁER jelszó','String','');
+  ekaer_adosz:=cfg_kezel('EKÁER adószám','EKÁER','EKÁER adószám','String','');
+  ekaer_csk:=cfg_kezel('EKÁER cserekulcs','EKÁER','EKÁER cserekulcs','String','');
+  ekaer_mappa:=cfg_kezel('EKÁER mappa','EKÁER','Ekaer mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1491,9 +1493,7 @@ begin
   ForceDirectories(libre_mappa);
   libre_mappa:=libre_mappa+'\';
   ForceDirectories(ekaer_mappa);
-  ekaer_mappa:=ekaer_mappa+'\';
-  ForceDirectories(ekaer_mappa+'\kuldes');
-  ForceDirectories(ekaer_mappa+'\valasz');
+
   if automata_torzsimport then
    begin
     ForceDirectories(torzs_import_mappa);

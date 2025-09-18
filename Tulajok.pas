@@ -99,7 +99,7 @@ var
   TulajokF: TTulajokF;
 
 implementation
-  uses au, FelrakCimekU;
+  uses au, Ekaer_FelrakCimekU;
 {$R *.dfm}
 
 procedure TTulajokF.btnkilepesClick(Sender: TObject);

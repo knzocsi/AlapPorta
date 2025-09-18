@@ -281,7 +281,7 @@ var
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU;
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU,DmEKAERU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -1022,6 +1022,7 @@ begin
 end;
 
 procedure TMjegyF.btnekaerClick(Sender: TObject);
+var keszmenny:Extended;
 begin
 if tulajlookup.KeyValue='!' then
   begin
@@ -1060,7 +1061,92 @@ if tulajlookup.KeyValue='!' then
     exit
   end;
 
- EkaerF.fo;
+  try
+    with EkaerF do
+    begin
+      uresre;
+      edmegrend_azon.Text := StringReplace(af.bizszam(6,'0','merlegjegy',MjegyF.tulajTElotag.AsString,MjegyF.tulajTID.AsInteger),'/','_',[rfReplaceAll]);
+      cbxtipus.ItemIndex := 3;
+     //fuvarozót nem tudom egyenlõre
+      ed_fuvneve.Text := Partnerlist3.FieldByName('nev').AsString;
+      ed_fuvekaer.Text := '';
+
+     //szállító, gondolom kiszállításkor ez az eladó
+      ed_szallneve.Text := Partnelist.FieldByName('nev').AsString;
+      ed_szalladosz.Text := Copy(Partnelist.FieldByName('adoszam').AsString,1,8);
+    // Application.ProcessMessages;
+      cbx_szallojel.ItemIndex := cbx_szallojel.Items.IndexOf('HU');
+      ed_szallcim1.Text := Partnelist.FieldByName('cim').AsString;
+     //vevõ
+      ed_vevoneve.Text := Partnerlist2.FieldByName('nev').AsString;
+      ed_vevadosz.Text := Copy(Partnerlist2.FieldByName('adoszam').AsString,1,8);
+    // Application.ProcessMessages;
+      cbx_vevojel.ItemIndex := cbx_vevojel.Items.IndexOf('HU');
+      ed_vevocim1.Text := Partnerlist2.FieldByName('cim').AsString;
+     //felrakodási cég
+      ed_felceg.Text := tulajTNev.AsString;
+      ed_felcegadosz.Text := Copy(tulajTadoszam.AsString,1,8);
+    // Application.ProcessMessages;
+      cbx_felcegojel.ItemIndex := cbx_felcegojel.Items.IndexOf('HU');
+
+     //lerakodasi cég
+      ed_leceg.Text := Partnerlist2.FieldByName('nev').AsString;
+      ed_lecegadosz.Text := Copy(MjegyF.Partnerlist2.FieldByName('adoszam').AsString,1,8);
+    // Application.ProcessMessages;
+      cbx_lecegojel.ItemIndex := cbx_lecegojel.Items.IndexOf('HU');
+
+
+     //jarmû
+      ed_vontato_rsz.Text := cbxrendszam1.Text;;
+      cbx_vontato_jel.ItemIndex := cbx_vontato_jel.Items.IndexOf('H');
+      ed_vont1_rsz.Text := cbxrendszam2.Text;
+      cbx_vont1_jel.ItemIndex := cbx_vont1_jel.Items.IndexOf('H');
+      ed_vont2_rsz.Text := '';
+      cbx_vont2_jel.ItemIndex := cbx_vont2_jel.Items.IndexOf('H');
+
+     //tételek
+      DmEkaer.memtet.Edit;
+      DmEkaer.memtet.Append;
+      DmEkaer.memtetdeliveryPlan_id.AsString := '';
+      DmEkaer.memtetid.AsString := '';
+      DmEkaer.memtetitemExternalId.AsString := edmegrend_azon.Text + '_' + termeklistKod.AsString;
+      DmEkaer.memtetitemoperation.AsString := 'create';
+      DmEkaer.memtettradereason.AsString := 'S';
+      DmEkaer.memtetTradeReasonText.AsString := 'Termék értékesítés';
+      DmEkaer.memtetproductVtsz.AsString := termeklistitj.AsString;
+      DmEkaer.memtetproductName.AsString := termeklistNev.AsString;
+      DmEkaer.memtetadrNumber.AsString := '';
+      DmEkaer.memtettransportLicence.AsString := '';
+      DmEkaer.memtetnetto_weight.value := spnetto.Value;
+      DmEkaer.memtetweight.value := spnetto.Value;
+      keszmenny:=0;
+      if MjegyF.spEgysegtomeg.Value=1 then keszmenny:=MjegyF.spsznetto.Value
+      else
+      if MjegyF.chkkerekites.Checked then keszmenny:=Round(MjegyF.spszNetto.Value/MjegyF.spEgysegtomeg.Value)
+      else keszmenny:=MjegyF.spszNetto.Value/MjegyF.spEgysegtomeg.Value;
+      DmEkaer.memtetvalue.AsFloat:=Round(keszmenny*mjegyf.termeklistar.Value);
+      //DmEkaer.memtetvalue.AsFloat := 0;
+      DmEkaer.memtetvalueModReasontext.AsString := '';
+      DmEkaer.memtetweightModReasontext.AsString := '';
+      DmEkaer.memtetfactoryItemnumber.AsString := '';
+      DmEkaer.memtetimporterItemNumber.AsString := '';
+      DmEkaer.memtetexpirationDate.AsString := '';
+      DmEkaer.memtetbatchNumber.AsString := '';
+      DmEkaer.memtetstatusModReasontext.AsString := '';
+      DmEkaer.memtetproductModReasontext.AsString := '';
+      DmEkaer.memtetvatRateAssuranceExemption.AsBoolean := False;
+      DmEkaer.memtetinsUser.AsString := '';
+      DmEkaer.memtetinsDate.AsString := '';
+      DmEkaer.memtetmodUser.AsString := '';
+      DmEkaer.memtetmoddate.AsString := '';
+      DmEkaer.memtet.Post;
+      ShowModal
+    end;
+  finally
+   if (ekaerRc <> nil) and (EkaerRc.Tcn <> '') then edekaer.text:= EkaerRc.Tcn;
+    EkaerRc.rec_ures;
+  end;
+
 end;
 
 procedure TMjegyF.btnlevon_szovegClick(Sender: TObject);
@@ -1965,7 +2051,11 @@ begin
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
             if cbxirany.ItemIndex in [1,3] then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
             else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
-            if chkRogzitett.Checked then spTara.Value:=af.tara(cbxrendszam1.text);
+            if chkRogzitett.Checked then
+            begin
+              spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+              spTara.Value:=af.tara(cbxrendszam1.text);
+            end;
            end;
 
       1 :

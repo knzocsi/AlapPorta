@@ -30,13 +30,10 @@ uses
   MeresU in 'MeresU.pas' {MeresF},
   NyomtatokU in 'NyomtatokU.pas' {NyomtatokF},
   Tulajok in 'Tulajok.pas' {TulajokF},
-  EkaerU in 'EkaerU.pas' {EkaerF},
   Ping2U in 'Ping2U.pas',
   tesztU in 'tesztU.pas' {tesztF},
   levon_szovegekU in 'levon_szovegekU.pas' {levon_szovegekF},
-  FelrakCimekU in 'FelrakCimekU.pas' {felrakcimekF},
   demotomegU in 'demotomegU.pas' {DemotomegF},
-  LerakCimekU in 'LerakCimekU.pas' {LerakCimekF},
   VarakozasU in 'VarakozasU.pas' {VarF},
   szoftver_alapU in 'szoftver_alapU.pas' {szoftver_alapF},
   AlapbemodU in 'AlapbemodU.pas' {AlapbemodF},
@@ -64,7 +61,19 @@ uses
   UzenetekU in 'UzenetekU.pas',
   NezetU in 'NezetU.pas' {NezetF},
   TermekekU in 'TermekekU.pas' {TermekekF},
-  DmDbMentU in '..\..\Egyeb\MySQLDBExport\DmDbMentU.pas' {DmDbMentF: TDataModule};
+  DmDbMentU in '..\..\Egyeb\MySQLDBExport\DmDbMentU.pas' {DmDbMentF: TDataModule},
+  Arfoly_ekaerU in '..\..\Egyeb\EKAER\Arfoly_ekaerU.pas' {Arfoly_ekaerF},
+  DmEKAERU in '..\..\Egyeb\EKAER\DmEKAERU.pas' {DmEkaer: TDataModule},
+  Ekaer_commonU in '..\..\Egyeb\EKAER\Ekaer_commonU.pas',
+  Ekaer_DlgU in '..\..\Egyeb\EKAER\Ekaer_DlgU.pas' {ekaer_dlgF},
+  Ekaer_ekaermanagementU in '..\..\Egyeb\EKAER\Ekaer_ekaermanagementU.pas',
+  Ekaer_FelrakCimekU in '..\..\Egyeb\EKAER\Ekaer_FelrakCimekU.pas' {felrakcimekF},
+  Ekaer_hibakU in '..\..\Egyeb\EKAER\Ekaer_hibakU.pas' {Ekaer_hibakF},
+  Ekaer_LerakCimekU in '..\..\Egyeb\EKAER\Ekaer_LerakCimekU.pas' {LerakCimekF},
+  ekaer_lezarasU in '..\..\Egyeb\EKAER\ekaer_lezarasU.pas' {ekaer_lezarasF},
+  Ekaer_my_sqlU in '..\..\Egyeb\EKAER\Ekaer_my_sqlU.pas' {Ekaer_MySQLF},
+  Ekaer_MySQL_Adatbazis_letrehozasaU in '..\..\Egyeb\EKAER\Ekaer_MySQL_Adatbazis_letrehozasaU.pas',
+  EkaerU in '..\..\Egyeb\EKAER\EkaerU.pas' {EkaerF};
 
 {$R *.res}
 
@@ -74,6 +83,7 @@ begin
   Application.CreateForm(TDMSoapF, DMSoapF);
   Application.CreateForm(TDmDbMentF, DmDbMentF);
   Application.CreateForm(TAF, AF);
+  Application.CreateForm(TDmEkaer, DmEkaer);
   Application.CreateForm(TFoF, FoF);
   Application.CreateForm(TNagykamF, NagykamF);
   Application.CreateForm(TMeresF, MeresF);
@@ -96,12 +106,9 @@ begin
   Application.CreateForm(TMjegyekF, MjegyekF);
   Application.CreateForm(TNyomtatokF, NyomtatokF);
   Application.CreateForm(TTulajokF, TulajokF);
-  Application.CreateForm(TEkaerF, EkaerF);
   Application.CreateForm(TtesztF, tesztF);
   Application.CreateForm(Tlevon_szovegekF, levon_szovegekF);
-  Application.CreateForm(TfelrakcimekF, felrakcimekF);
   Application.CreateForm(TDemotomegF, DemotomegF);
-  Application.CreateForm(TLerakCimekF, LerakCimekF);
   Application.CreateForm(TVarF, VarF);
   Application.CreateForm(Tszoftver_alapF, szoftver_alapF);
   Application.CreateForm(TAlapbemodF, AlapbemodF);
@@ -121,5 +128,13 @@ begin
   Application.CreateForm(TftpF, ftpF);
   Application.CreateForm(TNezetF, NezetF);
   Application.CreateForm(TTermekekF, TermekekF);
+  Application.CreateForm(TArfoly_ekaerF, Arfoly_ekaerF);
+  Application.CreateForm(Tekaer_dlgF, ekaer_dlgF);
+  Application.CreateForm(TfelrakcimekF, felrakcimekF);
+  Application.CreateForm(TEkaer_hibakF, Ekaer_hibakF);
+  Application.CreateForm(TLerakCimekF, LerakCimekF);
+  Application.CreateForm(Tekaer_lezarasF, ekaer_lezarasF);
+  Application.CreateForm(TEkaer_MySQLF, Ekaer_MySQLF);
+  Application.CreateForm(TEkaerF, EkaerF);
   Application.Run;
 end.

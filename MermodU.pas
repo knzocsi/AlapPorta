@@ -206,7 +206,7 @@ var
   Temp_tabla_neve: String;
   regi_ar,akt_ar,mod_ar:Extended;
 implementation
-  uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU, UzenetekU;
+  uses AU,RendszamokU,TermekekU,EkaerU, levon_szovegekU,NezetU, UzenetekU,DmEKAERU;
 {$R *.dfm}
 
 { TMermodF }

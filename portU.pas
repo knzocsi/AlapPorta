@@ -113,6 +113,7 @@ var
   pc_kom_resz:string;
   thElet: array [1..MaxMerleg] of integer;
   elozo_mert_tomeg:Integer=0;
+  port1zaras,port2zaras:boolean;
 
 
 
@@ -841,7 +842,7 @@ begin
   Sleep(10);
   comport1.readstr(sadat,Count);
   mertertekek[merleg_szam('RS1')]:=merleg_kiolvasas(sadat,merleg_szam('RS1'));
-  ComPort1.OnRXChar:= ComPort1RxChar;
+  if not port1zaras then ComPort1.OnRXChar:= ComPort1RxChar;
 end;
 
 procedure TPortF.ComPort2RxChar(Sender: TObject; Count: Integer);
@@ -852,7 +853,7 @@ begin
   Sleep(10);
   comport2.readstr(sadat,Count);
   mertertekek[merleg_szam('RS2')]:=merleg_kiolvasas(sadat,merleg_szam('RS2'));
-  ComPort2.OnRXChar:= ComPort2RxChar ;
+  if not port2zaras then ComPort2.OnRXChar:= ComPort2RxChar ;
  end;
 
 function TPortF.datum_szoveg(datum: TDateTime; idokell: boolean): string;
@@ -1009,6 +1010,7 @@ end;
 
 procedure TPortF.pc_komm_port_close;
 begin
+
   comPC_Kommunikacio.OnRxChar:=nil;
   try
     if comPC_Kommunikacio.Connected then comPC_Kommunikacio.close;
@@ -1055,6 +1057,7 @@ end;
 
 procedure TPortF.port2close;
 begin
+  port2zaras:=true;
   ComPort2.OnRxChar:=nil;
   while  sorosvetelben do
   begin
@@ -1079,7 +1082,7 @@ begin
     CloseFile(tf);
 
   end;
-
+  port2zaras:=false;
   ComPort2.LoadSettings(stIniFile, konyvtar+'\srport2.dat' );
 // portolvas�s
   ComPort2.open;
@@ -1089,6 +1092,7 @@ end;
 
 procedure TPortF.portclose;
 begin
+  port1zaras:=true;
   ComPort1.OnRxChar:=nil;
   while  sorosvetelben do
   begin
@@ -1113,12 +1117,14 @@ begin
     Writeln(tf, Comport1.port+' OPEN');
     CloseFile(tf);
   end;
-
+  port1zaras:=false;
   ComPort1.LoadSettings(stIniFile, konyvtar+'srport.dat' );
 // portolvas�s
+
   ComPort1.open;
   ComPort1.ClearBuffer(true,true);
   //ComPort1.WriteStr('XA/B?'+#13+#10);
+
 
 end;
 

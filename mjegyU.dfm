@@ -1116,7 +1116,6 @@ object MjegyF: TMjegyF
       LookupDisplay = 'nev;cim;'
       LookupSource = Partnerlist3Ds
       TabOrder = 37
-      OnChange = partnerlookup2Change
     end
     object cbxszar: TComboBox
       Left = 752
