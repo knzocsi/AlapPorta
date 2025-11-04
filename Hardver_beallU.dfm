@@ -37,7 +37,7 @@ object Hardver_beallF: THardver_beallF
     Top = 41
     Width = 1112
     Height = 433
-    ActivePage = tsReszletek
+    ActivePage = tsLista
     Align = alClient
     TabOrder = 1
     OnChange = pcAdatokChange
@@ -56,6 +56,7 @@ object Hardver_beallF: THardver_beallF
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnDrawColumnCell = DBGrid1DrawColumnCell
       end
     end
     object tsReszletek: TTabSheet
@@ -233,10 +234,10 @@ object Hardver_beallF: THardver_beallF
       object DBNavigator1: TDBNavigator
         Left = 406
         Top = 3
-        Width = 215
+        Width = 210
         Height = 25
         DataSource = AF.HardverDS
-        VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+        VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
         TabOrder = 0
         OnClick = DBNavigator1Click
       end

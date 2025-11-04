@@ -73,7 +73,8 @@ uses
   ekaer_lezarasU in '..\..\Egyeb\EKAER\ekaer_lezarasU.pas' {ekaer_lezarasF},
   Ekaer_my_sqlU in '..\..\Egyeb\EKAER\Ekaer_my_sqlU.pas' {Ekaer_MySQLF},
   Ekaer_MySQL_Adatbazis_letrehozasaU in '..\..\Egyeb\EKAER\Ekaer_MySQL_Adatbazis_letrehozasaU.pas',
-  EkaerU in '..\..\Egyeb\EKAER\EkaerU.pas' {EkaerF};
+  EkaerU in '..\..\Egyeb\EKAER\EkaerU.pas' {EkaerF},
+  MeresTipusValasztasU in 'MeresTipusValasztasU.pas' {MeresTipusValasztasF};
 
 {$R *.res}
 
@@ -136,5 +137,6 @@ begin
   Application.CreateForm(Tekaer_lezarasF, ekaer_lezarasF);
   Application.CreateForm(TEkaer_MySQLF, Ekaer_MySQLF);
   Application.CreateForm(TEkaerF, EkaerF);
+  Application.CreateForm(TMeresTipusValasztasF, MeresTipusValasztasF);
   Application.Run;
 end.

@@ -281,7 +281,8 @@ var
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU,DmEKAERU;
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU,DmEKAERU,
+  MeresTipusValasztasU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -595,9 +596,19 @@ begin
         end;
     end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
+  end;
+  if (taramegadas) and (forgalom_latszik) then
+  begin
+    MeresTipus:=-1;
+    MeresTipusValasztasF.showmodal;
+    case MeresTipus of
+      -1,0 : chkRogzitett.Checked:=False;
+       1 : chkRogzitett.Checked:=true;
+    end;
 
   end;
- end;
+
+end;
 
 procedure TMjegyF.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -790,13 +801,18 @@ begin
         if FieldByName('parosit').AsBoolean=true then
         begin
           if (t1=0) then
-           begin
+          begin
             t1:=FieldByName('tomeg').AsInteger;
             rc:=RecNo;
             lblelsodat.Caption:=FieldByName('datum').AsString;
             lblelsoido.Caption:=FieldByName('ido').AsString;
             chkelso_kezi.Checked:=FieldByName('kezi').AsBoolean;
-           end;
+            r11:=jvmemparos.FieldByName('rendszam').AsString;
+            r12:=jvmemparos.FieldByName('rendszam2').AsString;
+            cbxrendszam1.Text:=jvmemparos.FieldByName('rendszam').AsString;
+            cbxrendszam2.Text:=jvmemparos.FieldByName('rendszam2').AsString;
+            cbxRendszam1Change(Sender);
+          end;
         end;
         next
       end;
@@ -1283,7 +1299,7 @@ begin
   if tulajlookup.KeyValue='!' then
   begin
     ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
-    tulajlookup.SetFocus;
+    if tulajlookup.Visible  then tulajlookup.SetFocus;
     exit
   end;
   if (partnerlookup.KeyValue='!') and (not (Sender = btnFolytatasos_mentes)) then

@@ -117,6 +117,7 @@ var
 
 
 
+
 implementation
 uses  foU;
 
@@ -174,7 +175,7 @@ begin
   if (uppercase( ParamStr(1))='/LOG') or (uppercase( ParamStr(1))='/LOGM')  then Append(tf) ;
 
 
-  if Active then
+  if Aktiv then
   begin
     memTeszt.Text:=sadat+memTeszt.text;
     memHexa.Text:= memHexa.Text+hexaszov(sadat);
@@ -694,8 +695,7 @@ begin
             si:=si+1;
             if ParamStr(1)='/CT4' then ShowMessage('2s:'+sadat);
             adat:=sadat[si];
-
-            if (adat<>#10) then ertek:=ertek+adat
+        if (adat<>#10) then ertek:=ertek+adat
             else
             begin
               //if ParamStr(1)='/CT1' then ShowMessage('2e:'+inttostr(Length(ertek)));
@@ -706,15 +706,16 @@ begin
               if (Length(ertek)=bit) and (ertek[1] in ['S','U']) then
               begin
                 if ParamStr(1)='/CT1' then ShowMessage('3e:'+ertek);
-                //stabil_tomeg:=Pos('S',ertek)=1;
+                stabil_tomeg:=Pos('S',ertek)=1;
+                ertek:=Copy(ertek,7,8);
+                if (pos(',',ertek)<>0)  then  Ertek[pos(',',ertek)]:='.';
                 ertek:=ertek_tisztitas(ertek);
+                if pos('.',ertek)<>0 then  Ertek[pos('.',ertek)]:=FormatSettings.decimalseparator;
                 if (Aktiv) and (chkErtek_feld.Checked) then
                 begin
                   memEredmeny.Text:='�rt�k feld: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                 end;
-
                 mertekek[merlegszam]:='';
-
                 kilep:=true;
               end
               else

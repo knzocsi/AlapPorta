@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">45873.3525694444</prop>
+        <prop prop-type="OrigDateTime">45758.4916203704</prop>
+        <prop prop-type="XlatDateTime">45729.8124537037</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">146</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:DmDbMentF.OldCreateOrder" resname="O:DmDbMentF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TDmDbMentF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.OnCreate" resname="O:DmDbMentF.OnCreate">
+        <source>DataModuleCreate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TDmDbMentF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.Height" resname="O:DmDbMentF.Height">
+        <source>473</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TDmDbMentF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.Width" resname="O:DmDbMentF.Width">
+        <source>529</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TDmDbMentF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.Connection" resname="O:DmDbMentF.O:TablakMetaQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TFDMetaInfoQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.Transaction" resname="O:DmDbMentF.O:TablakMetaQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TFDMetaInfoQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.TableKinds" resname="O:DmDbMentF.O:TablakMetaQ.TableKinds">
+        <source>[tkSynonym, tkTable]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TFDMetaInfoQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.Left" resname="O:DmDbMentF.O:TablakMetaQ.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TFDMetaInfoQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.Top" resname="O:DmDbMentF.O:TablakMetaQ.Top">
+        <source>128</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TFDMetaInfoQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.DisplayWidth" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.DisplayWidth">
+        <source>36</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.FieldName" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.FieldName">
+        <source>'TABLE_NAME'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.ReadOnly" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.Size" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_NAME.Size">
+        <source>128</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_TYPE.FieldName" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_TYPE.FieldName">
+        <source>'TABLE_TYPE'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_TYPE.ReadOnly" resname="O:DmDbMentF.O:TablakMetaQ.O:TablakMetaQTABLE_TYPE.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ConnectionName" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ConnectionName">
+        <source>'Kapcs'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[0]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[0]">
+        <source>'DriverID=MySQL'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[1]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[1]">
+        <source>'LockingMode=Normal'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[2]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[2]">
+        <source>'DateTimeFormat=String'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[3]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[3]">
+        <source>'StringFormat=Unicode'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[4]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[4]">
+        <source>'CharacterSet=Utf8mb4'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[5]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[5]">
+        <source>'Database=clean_way_porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[6]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[6]">
+        <source>'Port=3307'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[7]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[7]">
+        <source>'Server=192.168.50.81'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[8]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[8]">
+        <source>'Password=MaTt2019'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[9]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[9]">
+        <source>'User_Name=knz'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[10]" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Params.Strings[10]">
+        <source>'TinyIntFormat=Integer'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.FetchOptions.AssignedValues" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.FetchOptions.AssignedValues">
+        <source>[evRowsetSize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.FetchOptions.RowsetSize" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.FetchOptions.RowsetSize">
+        <source>200</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.418575787</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.FormatOptions.AssignedValues" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.FormatOptions.AssignedValues">
+        <source>[fvFmtDisplayDate]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AssignedValues" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AssignedValues">
+        <source>[rvParamCreate, rvMacroCreate, rvMacroExpand, rvParamExpand, rvAutoConnect, rvAutoReconnect, rvSilentMode]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.MacroCreate" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.MacroCreate">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.MacroExpand" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.MacroExpand">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.SilentMode" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.SilentMode">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AutoConnect" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AutoConnect">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AutoReconnect" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.ResourceOptions.AutoReconnect">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.LoginPrompt" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.LoginPrompt">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Left" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:MySQLKapcsDbMentTread.Top" resname="O:DmDbMentF.O:MySQLKapcsDbMentTread.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQDs.DataSet" resname="O:DmDbMentF.O:TablakMetaQDs.DataSet">
+        <source>FunkciokQ</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQDs.Left" resname="O:DmDbMentF.O:TablakMetaQDs.Left">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablakMetaQDs.Top" resname="O:DmDbMentF.O:TablakMetaQDs.Top">
+        <source>192</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.Connection" resname="O:DmDbMentF.O:TablaMezokMetaQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.Transaction" resname="O:DmDbMentF.O:TablaMezokMetaQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[0]" resname="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[0]">
+        <source>'SELECT COLUMN_NAME,IFNULL(COLUMN_DEFAULT, '#39'NULL'#39')  AS COLUMN_DEFAULT,'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[1]" resname="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[1]">
+        <source>'IS_NULLABLE,COLUMN_TYPE,COLUMN_KEY,EXTRA,DATA_TYPE'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[2]" resname="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[2]">
+        <source>' FROM information_schema.columns '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[3]" resname="O:DmDbMentF.O:TablaMezokMetaQ.SQL.Strings[3]">
+        <source>'WHERE information_schema.columns.TABLE_SCHEMA=:DB AND information_schema.columns.TABLE_NAME=:TB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.Left" resname="O:DmDbMentF.O:TablaMezokMetaQ.Left">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.Top" resname="O:DmDbMentF.O:TablaMezokMetaQ.Top">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[0].Name" resname="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[1].Name" resname="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[1].Name">
+        <source>'TB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[1].ParamType" resname="O:DmDbMentF.O:TablaMezokMetaQ.ParamData[1].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.Connection" resname="O:DmDbMentF.O:AdatokQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.Transaction" resname="O:DmDbMentF.O:AdatokQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.FetchOptions.AssignedValues" resname="O:DmDbMentF.O:AdatokQ.FetchOptions.AssignedValues">
+        <source>[evRecordCountMode]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.FetchOptions.RecordCountMode" resname="O:DmDbMentF.O:AdatokQ.FetchOptions.RecordCountMode">
+        <source>cmTotal</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.Left" resname="O:DmDbMentF.O:AdatokQ.Left">
+        <source>128</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:AdatokQ.Top" resname="O:DmDbMentF.O:AdatokQ.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:KerQ.Connection" resname="O:DmDbMentF.O:KerQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:KerQ.Transaction" resname="O:DmDbMentF.O:KerQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:KerQ.Left" resname="O:DmDbMentF.O:KerQ.Left">
+        <source>248</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:KerQ.Top" resname="O:DmDbMentF.O:KerQ.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:memstr.FieldDefs" resname="O:DmDbMentF.O:memstr.FieldDefs">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TJvMemoryData</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:memstr.Left" resname="O:DmDbMentF.O:memstr.Left">
+        <source>344</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TJvMemoryData</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:memstr.Top" resname="O:DmDbMentF.O:memstr.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TJvMemoryData</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:memstr.O:memstrkell.FieldName" resname="O:DmDbMentF.O:memstr.O:memstrkell.FieldName">
+        <source>'kell'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TBooleanField</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.Connection" resname="O:DmDbMentF.O:TriggerekQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.Transaction" resname="O:DmDbMentF.O:TriggerekQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.SQL.Strings[0]" resname="O:DmDbMentF.O:TriggerekQ.SQL.Strings[0]">
+        <source>'SELECT  t.TRIGGER_NAME, t.EVENT_MANIPULATION,t.EVENT_OBJECT_TABLE,t.ACTION_STATEMENT,t.ACTION_TIMING, t.SQL_MODE '</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.SQL.Strings[1]" resname="O:DmDbMentF.O:TriggerekQ.SQL.Strings[1]">
+        <source>'FROM information_schema.TRIGGERS t'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.SQL.Strings[2]" resname="O:DmDbMentF.O:TriggerekQ.SQL.Strings[2]">
+        <source>'WHERE t.TRIGGER_SCHEMA=:DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.Left" resname="O:DmDbMentF.O:TriggerekQ.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.Top" resname="O:DmDbMentF.O:TriggerekQ.Top">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.ParamData[0].Name" resname="O:DmDbMentF.O:TriggerekQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:TriggerekQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:TriggerekQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.Connection" resname="O:DmDbMentF.O:NezetekQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.Transaction" resname="O:DmDbMentF.O:NezetekQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.SQL.Strings[0]" resname="O:DmDbMentF.O:NezetekQ.SQL.Strings[0]">
+        <source>'SELECT  t.TABLE_NAME, t.VIEW_DEFINITION'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.SQL.Strings[1]" resname="O:DmDbMentF.O:NezetekQ.SQL.Strings[1]">
+        <source>'FROM information_schema.VIEWS t'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.SQL.Strings[2]" resname="O:DmDbMentF.O:NezetekQ.SQL.Strings[2]">
+        <source>'WHERE t.TABLE_SCHEMA=:DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.Left" resname="O:DmDbMentF.O:NezetekQ.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.Top" resname="O:DmDbMentF.O:NezetekQ.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.ParamData[0].Name" resname="O:DmDbMentF.O:NezetekQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185757986</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:NezetekQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:NezetekQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:DbMentTransaction.Connection" resname="O:DmDbMentF.O:DbMentTransaction.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:DbMentTransaction.Left" resname="O:DmDbMentF.O:DbMentTransaction.Left">
+        <source>160</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:DbMentTransaction.Top" resname="O:DmDbMentF.O:DbMentTransaction.Top">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.OnStatus" resname="O:DmDbMentF.O:IdFTP1.OnStatus">
+        <source>IdFTP1Status</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Host" resname="O:DmDbMentF.O:IdFTP1.Host">
+        <source>'ftp.knzsoft.hu.maxer.hu'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Passive" resname="O:DmDbMentF.O:IdFTP1.Passive">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.ConnectTimeout" resname="O:DmDbMentF.O:IdFTP1.ConnectTimeout">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Password" resname="O:DmDbMentF.O:IdFTP1.Password">
+        <source>'oKnNlZ18'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.TransferType" resname="O:DmDbMentF.O:IdFTP1.TransferType">
+        <source>ftBinary</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Username" resname="O:DmDbMentF.O:IdFTP1.Username">
+        <source>'knzsoft_hu_invoice'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.NATKeepAlive.UseKeepAlive" resname="O:DmDbMentF.O:IdFTP1.NATKeepAlive.UseKeepAlive">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.NATKeepAlive.IdleTimeMS" resname="O:DmDbMentF.O:IdFTP1.NATKeepAlive.IdleTimeMS">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.NATKeepAlive.IntervalMS" resname="O:DmDbMentF.O:IdFTP1.NATKeepAlive.IntervalMS">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.ProxySettings.ProxyType" resname="O:DmDbMentF.O:IdFTP1.ProxySettings.ProxyType">
+        <source>fpcmNone</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.ProxySettings.Port" resname="O:DmDbMentF.O:IdFTP1.ProxySettings.Port">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Left" resname="O:DmDbMentF.O:IdFTP1.Left">
+        <source>441</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:IdFTP1.Top" resname="O:DmDbMentF.O:IdFTP1.Top">
+        <source>40</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45734.4185758102</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TIdFTP</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.Connection" resname="O:DmDbMentF.O:EljarasokQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.Transaction" resname="O:DmDbMentF.O:EljarasokQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.SQL.Strings[0]" resname="O:DmDbMentF.O:EljarasokQ.SQL.Strings[0]">
+        <source>'SELECT ROUTINE_NAME, ROUTINE_DEFINITION'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.SQL.Strings[1]" resname="O:DmDbMentF.O:EljarasokQ.SQL.Strings[1]">
+        <source>'FROM information_schema.ROUTINES'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.SQL.Strings[2]" resname="O:DmDbMentF.O:EljarasokQ.SQL.Strings[2]">
+        <source>'WHERE ROUTINE_SCHEMA=:db AND ROUTINE_TYPE='#39'PROCEDURE'#39</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.Left" resname="O:DmDbMentF.O:EljarasokQ.Left">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.Top" resname="O:DmDbMentF.O:EljarasokQ.Top">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.ParamData[0].Name" resname="O:DmDbMentF.O:EljarasokQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">110</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.ParamData[0].DataType" resname="O:DmDbMentF.O:EljarasokQ.ParamData[0].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:EljarasokQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:EljarasokQ.ParamData[0].Value" resname="O:DmDbMentF.O:EljarasokQ.ParamData[0].Value">
+        <source>'clean_way_porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.Connection" resname="O:DmDbMentF.O:FunkciokQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.Transaction" resname="O:DmDbMentF.O:FunkciokQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.SQL.Strings[0]" resname="O:DmDbMentF.O:FunkciokQ.SQL.Strings[0]">
+        <source>'SELECT ROUTINE_NAME, ROUTINE_DEFINITION, IS_DETERMINISTIC'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.SQL.Strings[1]" resname="O:DmDbMentF.O:FunkciokQ.SQL.Strings[1]">
+        <source>'FROM information_schema.ROUTINES'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.SQL.Strings[2]" resname="O:DmDbMentF.O:FunkciokQ.SQL.Strings[2]">
+        <source>'WHERE ROUTINE_SCHEMA=:db AND ROUTINE_TYPE='#39'FUNCTION'#39</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.Left" resname="O:DmDbMentF.O:FunkciokQ.Left">
+        <source>312</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.Top" resname="O:DmDbMentF.O:FunkciokQ.Top">
+        <source>184</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.ParamData[0].Name" resname="O:DmDbMentF.O:FunkciokQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.ParamData[0].DataType" resname="O:DmDbMentF.O:FunkciokQ.ParamData[0].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:FunkciokQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:FunkciokQ.ParamData[0].Value" resname="O:DmDbMentF.O:FunkciokQ.ParamData[0].Value">
+        <source>'clean_way_porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.Connection" resname="O:DmDbMentF.O:ParamokQ.Connection">
+        <source>MySQLKapcsDbMentTread</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.Transaction" resname="O:DmDbMentF.O:ParamokQ.Transaction">
+        <source>DbMentTransaction</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.352572662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.SQL.Strings[0]" resname="O:DmDbMentF.O:ParamokQ.SQL.Strings[0]">
+        <source>'SELECT PARAMETER_MODE,PARAMETER_NAME,DTD_IDENTIFIER,'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.SQL.Strings[1]" resname="O:DmDbMentF.O:ParamokQ.SQL.Strings[1]">
+        <source>'DATA_TYPE, ORDINAL_POSITION'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.SQL.Strings[2]" resname="O:DmDbMentF.O:ParamokQ.SQL.Strings[2]">
+        <source>'FROM information_schema.PARAMETERS'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.SQL.Strings[3]" resname="O:DmDbMentF.O:ParamokQ.SQL.Strings[3]">
+        <source>'WHERE SPECIFIC_SCHEMA=:db AND SPECIFIC_NAME=:nev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.SQL.Strings[4]" resname="O:DmDbMentF.O:ParamokQ.SQL.Strings[4]">
+        <source>'AND ROUTINE_TYPE=:tipus'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.Left" resname="O:DmDbMentF.O:ParamokQ.Left">
+        <source>384</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.Top" resname="O:DmDbMentF.O:ParamokQ.Top">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[0].Name" resname="O:DmDbMentF.O:ParamokQ.ParamData[0].Name">
+        <source>'DB'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[0].DataType" resname="O:DmDbMentF.O:ParamokQ.ParamData[0].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[0].ParamType" resname="O:DmDbMentF.O:ParamokQ.ParamData[0].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[0].Value" resname="O:DmDbMentF.O:ParamokQ.ParamData[0].Value">
+        <source>'clean_way_porta'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[1].Name" resname="O:DmDbMentF.O:ParamokQ.ParamData[1].Name">
+        <source>'NEV'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[1].DataType" resname="O:DmDbMentF.O:ParamokQ.ParamData[1].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[1].ParamType" resname="O:DmDbMentF.O:ParamokQ.ParamData[1].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[1].Value" resname="O:DmDbMentF.O:ParamokQ.ParamData[1].Value">
+        <source>'partner_keszlete'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[2].Name" resname="O:DmDbMentF.O:ParamokQ.ParamData[2].Name">
+        <source>'TIPUS'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[2].DataType" resname="O:DmDbMentF.O:ParamokQ.ParamData[2].DataType">
+        <source>ftString</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[2].ParamType" resname="O:DmDbMentF.O:ParamokQ.ParamData[2].ParamType">
+        <source>ptInput</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:DmDbMentF.O:ParamokQ.ParamData[2].Value" resname="O:DmDbMentF.O:ParamokQ.ParamData[2].Value">
+        <source>'FUNCTION'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">45873.3525726852</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

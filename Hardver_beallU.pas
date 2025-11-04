@@ -60,6 +60,8 @@ type
     procedure FormActivate(Sender: TObject);
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
     procedure pcAdatokChange(Sender: TObject);
+    procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
   public
@@ -77,6 +79,18 @@ uses au;
 procedure THardver_beallF.btnKilepesClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure THardver_beallF.DBGrid1DrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  with AF.HardverQ do
+  begin
+    if RecordCount=0 then exit;
+     if (FieldByName('Aktiv').AsInteger=0) then DBGrid1.Canvas.Brush.Color:=clWhite
+     else DBGrid1.Canvas.Brush.Color:=clLime;
+  end;
+  DBGrid1.DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure THardver_beallF.DBNavigator1Click(Sender: TObject;

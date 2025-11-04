@@ -39,6 +39,10 @@ uses
   Maxmerleg=4;  // ha változás van, akkor a hardver_beall formon az eszkoz kombóban is kell változtatmi
   Maxkamera=4 ; // ha változás van, akkor a hardver_beall formon az eszkoz kombóban is kell változtatmi
 
+  MeresTipusNormal=0;
+  MeresTipusRogzitett=1;
+
+
 type
    esemeny_rec=record
     ev:word;
@@ -595,6 +599,8 @@ var
 
   kivalasztott_merleg:integer=0;
   meresgomb_kell:boolean;
+  stabil_tomeg:Boolean;
+  MeresTipus:integer;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -791,6 +797,7 @@ begin
                      FormatDateTime('YYYY_MM_DD', Date),db_tavoli_mappa,db_ftp_tavoli_mappa);
   end
  else db_mentes_kesz:=True;
+
  ekaer_adatbazis:='ekaer';
  ekaer_szerver:=szerver;
  ekaer_port:=port;
