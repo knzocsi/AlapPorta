@@ -164,7 +164,7 @@ begin
     SQL.Clear;
     SQL.Add(' UPDATE forgalom SET ');
     SQL.Add(' soap_allapot=:soap_allapot, soap_code=:soap_code');
-    SQL.Add(' WHERE id='+#39+IntToStr(StrToInt(merid)-30000000)+#39);
+    SQL.Add(' WHERE id='+#39+IntToStr(StrToInt(merid)-40000000)+#39);
     ParamByName('soap_allapot').AsString:=GenResFuncCode;
     ParamByName('soap_code').AsString:=SOAP_CODE;
     ExecSQL;
