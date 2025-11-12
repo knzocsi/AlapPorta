@@ -316,6 +316,8 @@ object FoF: TFoF
       Height = 59
       Align = alTop
       TabOrder = 1
+      ExplicitLeft = -2
+      ExplicitTop = -1
       DesignSize = (
         798
         59)

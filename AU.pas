@@ -1452,11 +1452,11 @@ begin
   Soap_aktiv:=cfg_kezel('SOAP beküldés aktiv e','SOAP','Soap_aktiv','Boolean', False);
   soap_kepet_kuld:=cfg_kezel('SOAP rendszerbe küldjön e képet','SOAP','Soap_kep_kuldes','Boolean', False);
   soap_xml_teszt:=cfg_kezel('SOAP teszt xmlt hozza csak létre, de nem küldi be','SOAP','Soap_xml_teszt','Boolean', False);
-  soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String', 'merlegtestelek');
-  soap_passhash:=cfg_kezel('SOAP password hash','SOAP','Soap_passHash','String', 'S@Pmerlego$$ze');
+  soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String','' {'merlegtestelek'});
+  soap_passhash:=cfg_kezel('SOAP password hash','SOAP','Soap_passHash','String','' {'S@Pmerlego$$ze'});
   soap_alakulcs:=cfg_kezel('SOAP XML aláíró kulcs','SOAP','Soap_alairo_kulcs','String', 'Al@|rashoz szükséges_kulcs');
-  soap_szapcim:=cfg_kezel('SOAP végpont elérési címe','SOAP','Soap_cim','String', 'http://192.168.16.15:40080/test/merleg/?');
-  soap_ip:=cfg_kezel('SOAP végpont ip címe','SOAP','Soap_ip','String', '192.168.16.06');
+  soap_szapcim:=cfg_kezel('SOAP végpont elérési címe','SOAP','Soap_cim','String', ''{'http://192.168.16.15:40080/test/merleg/?'});
+  soap_ip:=cfg_kezel('SOAP végpont ip címe','SOAP','Soap_ip','String','' {'192.168.16.06'});
   soap_kapcs_idokorlat:=cfg_kezel('SOAP szerverhez kapcsolódási idõkorlát(ms)','SOAP','Soap_kapcs_idokorlat','Integer', 300000);
   soap_valaszadasi_idokorlat:=cfg_kezel('SOAP szerver válaszadási idõkorlát(ms)','SOAP','Soap_szerver_idokorlat','Integer', 300000);
   soap_kuldes_gyakorisaga:=cfg_kezel('SOAP küldés gyakorisága, ennyi sleepet teszek a szálba(ms)','SOAP','Soap_kuldes_gyak','Integer', 5000);
