@@ -80,6 +80,7 @@ object ImportF: TImportF
       Height = 21
       Style = csDropDownList
       TabOrder = 2
+      OnChange = cbMezoChange
     end
     object btnBetoltes: TButton
       Left = 136
@@ -116,6 +117,14 @@ object ImportF: TImportF
       Caption = 'Import'
       TabOrder = 6
       OnClick = btnImportClick
+    end
+    object chkCimbontas: TCheckBox
+      Left = 456
+      Top = 52
+      Width = 241
+      Height = 17
+      Caption = 'C'#237'm bont'#225'sa (Irsz, Telep'#252'l'#233's, K'#246'zter'#252'let)'
+      TabOrder = 7
     end
   end
   object JvDBGrid1: TJvDBGrid

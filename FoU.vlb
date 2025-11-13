@@ -334,17 +334,11 @@ Coordinates=283,608,65,58
 [Lista1]
 Coordinates=1137,1156,49,36
 
-[pnlFelso_jobb]
-Coordinates=879,676,95,58
-
 [KISorompnyitinfrahiba1]
 Coordinates=1137,1211,149,36
 
 [MjegyekF.tulajT]
 Coordinates=342,10,106,520
-
-[sbtnUjmerlegjegy]
-Coordinates=1080,744,114,36
 
 [ClientSocket]
 Coordinates=1137,1321,87,36
@@ -413,5 +407,5 @@ Coordinates=1137,1706,76,36
 Coordinates=1289,540,128,58
 
 []
-Coordinates=827,540,70,58
+Coordinates=879,676,95,58
 
