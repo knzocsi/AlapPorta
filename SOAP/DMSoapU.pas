@@ -254,7 +254,7 @@ XMLDoc.Encoding:='utf-8';}
      Op_mode:=0;
      Sql_name:='';
      Params:='';
-     soap_gyar:='2010';
+     //soap_gyar:='2010';
      with UserSpecXMLs.MerlegXMLs.MerlegXML do
       begin
         id:=ForgQ_tread.FieldByName('id').AsInteger+40000000;//mérés id

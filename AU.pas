@@ -1460,6 +1460,7 @@ begin
   soap_kapcs_idokorlat:=cfg_kezel('SOAP szerverhez kapcsolódási idõkorlát(ms)','SOAP','Soap_kapcs_idokorlat','Integer', 300000);
   soap_valaszadasi_idokorlat:=cfg_kezel('SOAP szerver válaszadási idõkorlát(ms)','SOAP','Soap_szerver_idokorlat','Integer', 300000);
   soap_kuldes_gyakorisaga:=cfg_kezel('SOAP küldés gyakorisága, ennyi sleepet teszek a szálba(ms)','SOAP','Soap_kuldes_gyak','Integer', 5000);
+  soap_gyar:=cfg_kezel('SOAP gyár','SOAP','Soap_gyar','String', '2010');
 
   Automata_irany_meghatarozas:=cfg_kezel('Meghatározza az irányt a kamerából és abból, hogy bent van e a jármû','ALAP','Automata_irany_meghatarozas','Boolean', False);
   Automata_parositas:= cfg_kezel('A forgalom táblában lévõ adatokat párosítja','ALAP','Automata_parositas','Boolean', False);
@@ -1485,7 +1486,7 @@ begin
 
   keszlet_torles:= cfg_kezel('Készlet törlésének engedélyezése','ALAP','keszlet_torles','Boolean', keszlet_torles);
 
-    idegen_meres:= cfg_kezel('Idegen mérés engedélyezése','ALAP','idegen_meres','Boolean', idegen_meres);
+  idegen_meres:= cfg_kezel('Idegen mérés engedélyezése','ALAP','idegen_meres','Boolean', idegen_meres);
 
   ekaer_teszt:=cfg_kezel('EKÁER teszt üzemmód','EKÁER','EKÁER teszt','Boolean',True);
   ekaer_felhasz:=cfg_kezel('EKÁER felhasználó','EKÁER','EKÁER felhasználó','String','');
@@ -1493,6 +1494,8 @@ begin
   ekaer_adosz:=cfg_kezel('EKÁER adószám','EKÁER','EKÁER adószám','String','');
   ekaer_csk:=cfg_kezel('EKÁER cserekulcs','EKÁER','EKÁER cserekulcs','String','');
   ekaer_mappa:=cfg_kezel('EKÁER mappa','EKÁER','Ekaer mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
+
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';

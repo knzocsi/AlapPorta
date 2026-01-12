@@ -37,7 +37,7 @@ object Hardver_beallF: THardver_beallF
     Top = 41
     Width = 1112
     Height = 433
-    ActivePage = tsLista
+    ActivePage = tbSegitseg
     Align = alClient
     TabOrder = 1
     OnChange = pcAdatokChange

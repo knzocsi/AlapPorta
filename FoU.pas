@@ -1528,7 +1528,8 @@ begin
         ThRendszamLampa[i].Resume;
         memlog.Lines.Insert(0, 'RendszamLampaIndul ' + i.ToString);
       end;
-      Sorompok[i][1].nyitva := False;
+      sorompo_kezeles(i, 1, True);
+      Sorompok[i][1].nyitva := True;
       Sorompok[i][2].nyitva := False;
     end;
   if Soap_aktiv then
@@ -3043,10 +3044,11 @@ begin
         tomeg_szoveg := tomeg_szoveg + mertertekek[i] + ' kg   ';
         szamlalo_szoveg := szamlalo_szoveg + merlegszamlalo[i].ToString + '  ';
         nyugalmi_szoveg := nyugalmi_szoveg + nyugalmiszamlalo[i].ToString + ':';
-        if (Sorompok[i][1].nyitva) and (Time > Sorompok[i][1].nyitas_idopont + Sorompok[i][1].varakozas) and (mertertekek[i].ToInteger < 100) then
+        //Sorompókat lezárja várakozás után, ha az nem 0
+        if (Sorompok[i][1].varakozas<>0) and (Sorompok[i][1].nyitva) and (Time > Sorompok[i][1].nyitas_idopont + Sorompok[i][1].varakozas) and (mertertekek[i].ToInteger < 100) then
           sorompo_kezeles(i, 1, False);
 
-        if (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas) and (mertertekek[i].ToInteger < 100) then
+        if (Sorompok[i][2].varakozas<>0) and (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas) and (mertertekek[i].ToInteger < 100) then
           sorompo_kezeles(i, 2, False);
       end;
       try
@@ -3990,7 +3992,10 @@ begin
             if (FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'INFRA4') = 0) and (FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'INFRA3') = 1) then
               iranyok[thmerleg] := 'BE'
             else if (FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'INFRA4') = 1) and (FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'INFRA3') = 0) then
-              iranyok[thmerleg] := 'KI'
+              iranyok[thmerleg] := 'KI';
+            //Lengedõ sorompót lecsuk
+            if Sorompok[thmerleg][1].nyitva then FoF.sorompo_kezeles(thmerleg, 1, False);
+
 
           end;
           if tomeg > elozotomeg[thmerleg] + 20 then

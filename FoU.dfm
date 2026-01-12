@@ -63,8 +63,6 @@ object FoF: TFoF
     Height = 560
     Align = alLeft
     TabOrder = 1
-    ExplicitTop = 0
-    ExplicitHeight = 617
     object pcTablak: TPageControl
       Left = 1
       Top = 1
@@ -74,8 +72,6 @@ object FoF: TFoF
       Align = alClient
       MultiLine = True
       TabOrder = 0
-      ExplicitTop = 60
-      ExplicitHeight = 284
       object tbIdeiglenes: TTabSheet
         Caption = 'Ideiglenes'
         ImageIndex = 1
@@ -189,7 +185,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -320,7 +316,6 @@ object FoF: TFoF
       Height = 231
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 385
       object ipcamPanel: TPanel
         Left = 1
         Top = 1
@@ -393,7 +388,6 @@ object FoF: TFoF
       Height = 41
       Align = alBottom
       TabOrder = 2
-      ExplicitTop = 344
       object btnTorles: TButton
         Left = 32
         Top = 6
@@ -421,8 +415,6 @@ object FoF: TFoF
     Height = 560
     Align = alClient
     TabOrder = 2
-    ExplicitTop = 0
-    ExplicitHeight = 617
     object pnlJobbAlso: TPanel
       Left = 1
       Top = 448
@@ -432,7 +424,6 @@ object FoF: TFoF
       TabOrder = 0
       Visible = False
       OnClick = pnlJobbAlsoClick
-      ExplicitTop = 505
       object lbl1: TLabel
         Left = 24
         Top = 24
@@ -528,7 +519,6 @@ object FoF: TFoF
       Height = 447
       Align = alClient
       TabOrder = 1
-      ExplicitHeight = 504
       object pnlFelsokep: TPanel
         Left = 1
         Top = 1
@@ -537,7 +527,6 @@ object FoF: TFoF
         Align = alClient
         TabOrder = 0
         OnResize = pnlFelsokepResize
-        ExplicitHeight = 281
         DesignSize = (
           303
           224)
@@ -568,7 +557,6 @@ object FoF: TFoF
             'memLog')
           TabOrder = 0
           Visible = False
-          ExplicitHeight = 279
         end
         object pnlSzamlalok: TPanel
           Left = 87
@@ -577,7 +565,6 @@ object FoF: TFoF
           Height = 222
           Align = alRight
           TabOrder = 1
-          ExplicitHeight = 279
           object lblThElo1: TLabel
             Left = 4
             Top = 0
@@ -635,7 +622,6 @@ object FoF: TFoF
         Height = 221
         Align = alBottom
         TabOrder = 1
-        ExplicitTop = 282
         DesignSize = (
           303
           221)
@@ -666,8 +652,6 @@ object FoF: TFoF
     Height = 55
     Align = alBottom
     TabOrder = 3
-    ExplicitLeft = 1
-    ExplicitTop = 616
     object JvLED1: TJvLED
       Left = 37
       Top = 5
@@ -876,8 +860,6 @@ object FoF: TFoF
     Height = 57
     Align = alTop
     TabOrder = 4
-    ExplicitLeft = 2
-    ExplicitTop = 8
     DesignSize = (
       1107
       57)
