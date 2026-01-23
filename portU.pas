@@ -103,7 +103,6 @@ var
   sorosvetelben,Aktiv:boolean;
   mertdarab,mertek:string;
   tf:textfile;
-
   merlegek,mertertekek,mertekek,merleg_tipus: array [1..maxmerleg]of String;       // A maxmerleg az auban van, hogy másik unit is elérje
   elozotomeg,maxtomeg,nyugalmiszamlalo:array [1..maxmerleg]of integer;
   nullszintvolt,rendszamvolt,mentesvolt :array [1..maxmerleg] of boolean;
@@ -840,9 +839,10 @@ var sadat:string;
 begin
   ComPort1.OnRXChar:=nil;
   sadat:='';
-  Sleep(10);
+  Application.ProcessMessages;
+  //Sleep(10);
   comport1.readstr(sadat,Count);
-  mertertekek[merleg_szam('RS1')]:=merleg_kiolvasas(sadat,merleg_szam('RS1'));
+  if count<>0 then mertertekek[merleg_szam('RS1')]:=merleg_kiolvasas(sadat,merleg_szam('RS1'));
   if not port1zaras then ComPort1.OnRXChar:= ComPort1RxChar;
 end;
 
@@ -851,9 +851,10 @@ var sadat:string;
 begin
   ComPort2.OnRXChar:=nil;
   sadat:='';
-  Sleep(10);
+  Application.ProcessMessages;
+  //Sleep(10);
   comport2.readstr(sadat,Count);
-  mertertekek[merleg_szam('RS2')]:=merleg_kiolvasas(sadat,merleg_szam('RS2'));
+  if count<>0 then mertertekek[merleg_szam('RS2')]:=merleg_kiolvasas(sadat,merleg_szam('RS2'));
   if not port2zaras then ComPort2.OnRXChar:= ComPort2RxChar ;
  end;
 
@@ -1066,7 +1067,7 @@ begin
     Application.ProcessMessages;
   end;
   try
-    if ComPort2.Connected then  ComPort2.close;
+    //if ComPort2.Connected then  ComPort2.close;
   except
   end;
 end;
@@ -1101,7 +1102,7 @@ begin
     Application.ProcessMessages;
   end;
   try
-    if ComPort1.Connected then ComPort1.close;
+    //if ComPort1.Connected then ComPort1.close;
   except
   end;
 end;

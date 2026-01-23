@@ -1528,8 +1528,9 @@ begin
         ThRendszamLampa[i].Resume;
         memlog.Lines.Insert(0, 'RendszamLampaIndul ' + i.ToString);
       end;
-      sorompo_kezeles(i, 1, True);
-      Sorompok[i][1].nyitva := True;
+      //Alaphelyzetben lecsukja induláskor a sorompókat
+      sorompo_kezeles(i, 1, False);
+      Sorompok[i][1].nyitva := False;
       Sorompok[i][2].nyitva := False;
     end;
   if Soap_aktiv then
@@ -2697,6 +2698,7 @@ begin
           PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', 1);
           Sleep(100);
             //PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,False);
+
           PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', 0);
           Sorompok[merleg, sorompo].nyitva := True;
           Sorompok[merleg, sorompo].nyitas_idopont := Time;
@@ -3041,17 +3043,7 @@ begin
     begin
       if mertertekek[i] <> '' then
       begin
-        tomeg_szoveg := tomeg_szoveg + mertertekek[i] + ' kg   ';
-        szamlalo_szoveg := szamlalo_szoveg + merlegszamlalo[i].ToString + '  ';
-        nyugalmi_szoveg := nyugalmi_szoveg + nyugalmiszamlalo[i].ToString + ':';
-        //Sorompókat lezárja várakozás után, ha az nem 0
-        if (Sorompok[i][1].varakozas<>0) and (Sorompok[i][1].nyitva) and (Time > Sorompok[i][1].nyitas_idopont + Sorompok[i][1].varakozas) and (mertertekek[i].ToInteger < 100) then
-          sorompo_kezeles(i, 1, False);
-
-        if (Sorompok[i][2].varakozas<>0) and (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas) and (mertertekek[i].ToInteger < 100) then
-          sorompo_kezeles(i, 2, False);
-      end;
-      try
+        try
         if TryStrToInt(mertertekek[i], trint) then
           tomeg := trint
         else
@@ -3059,9 +3051,23 @@ begin
 
         if (lado = 1) and (tomeg > mintomeg) then
           AF.tomeglog('M' + IntTosTr(i) + ':' + mertertekek[i]);
-      except
+        except
+          tomeg := -1;
+        end;
+        tomeg_szoveg := tomeg_szoveg + mertertekek[i] + ' kg   ';
+        szamlalo_szoveg := szamlalo_szoveg + merlegszamlalo[i].ToString + '  ';
+        nyugalmi_szoveg := nyugalmi_szoveg + nyugalmiszamlalo[i].ToString + ':';
+        //Sorompókat lezárja várakozás után, ha az nem 0
+        if (tomeg<100) and (tomeg<>-1) then
+        begin
+          if (Sorompok[i][1].varakozas<>0) and (Sorompok[i][1].nyitva) and (Time > Sorompok[i][1].nyitas_idopont + Sorompok[i][1].varakozas)  then
+            sorompo_kezeles(i, 1, False);
 
+          if (Sorompok[i][2].varakozas<>0) and (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas)  then
+            sorompo_kezeles(i, 2, False);
+        end;
       end;
+
     end;
     StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont + ' ' + nyugalmi_szoveg + szamlalo_szoveg + ':' + nyomtatas_szamlalo.ToString + PLC_Lekerdezes_szamlalo.ToString;
     lblIrany.caption := meresirany;
@@ -4079,6 +4085,7 @@ begin
             FoF.lampakapcs(3, Lampa_Zold);
           if FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'LAMPA4') = Lampa_Piros then
             FoF.lampakapcs(4, Lampa_Zold);
+           
         end;
 
       end
