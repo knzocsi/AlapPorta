@@ -2699,10 +2699,10 @@ begin
           Sleep(100);
             //PLC_Ir_Coil(FieldbyName('Bekapcs_Kimenet_szam').AsInteger,False);
 
-          PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', 0);
+          //PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', 0);
           Sorompok[merleg, sorompo].nyitva := True;
           Sorompok[merleg, sorompo].nyitas_idopont := Time;
-          Sorompok[merleg, sorompo].varakozas := FieldbyName('Varakozas_ms').AsInteger / 24 / 60 / 60 / 1000;
+          Sorompok[merleg, sorompo].varakozas := FieldbyName('Varakozas_ms').AsInteger / 24 / 60 / 60 /1000;
           if felhnev = 'Programozó' then
           begin
             memlog.Lines.Insert(0, 'Merleg: ' + merleg.ToString + ' nyit sorompo:' + sorompo.ToString);
@@ -2714,7 +2714,7 @@ begin
           PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Kikapcs_Kimenet_szam').AsInteger, 'C', 'I', 1);
           Sleep(100);
             //PLC_Ir_Coil(FieldbyName('Kikapcs_Kimenet_szam').AsInteger,False);
-          PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Kikapcs_Kimenet_szam').AsInteger, 'C', 'I', 0);
+          //PLC_feladatok(FieldbyName('Port_v_IP_Cim').AsString, FieldbyName('IP_Port').AsInteger, FieldbyName('Kikapcs_Kimenet_szam').AsInteger, 'C', 'I', 0);
           Sorompok[merleg, sorompo].nyitva := False;
           if felhnev = 'Programozó' then
           begin
@@ -3035,7 +3035,6 @@ begin
   if (StatusBar1.panels[4].text <> '') and (StatusBar1.panels[4].text[Length(StatusBar1.panels[4].text)] = ' ') then
     pont := '.';
   try
-
     tomeg_szoveg := '';
     szamlalo_szoveg := '';
     nyugalmi_szoveg := '';
@@ -3065,6 +3064,14 @@ begin
 
           if (Sorompok[i][2].varakozas<>0) and (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas)  then
             sorompo_kezeles(i, 2, False);
+        end
+        else
+        begin
+          if (Sorompok[i][1].varakozas<>0) and (Sorompok[i][1].nyitva) and (Time > Sorompok[i][1].nyitas_idopont + Sorompok[i][1].varakozas)  then
+            Sorompok[i][1].nyitas_idopont:=Time;
+
+          if (Sorompok[i][2].varakozas<>0) and (Sorompok[i][2].nyitva) and (Time > Sorompok[i][2].nyitas_idopont + Sorompok[i][2].varakozas)  then
+            Sorompok[i][1].nyitas_idopont:=Time;
         end;
       end;
 
@@ -3899,14 +3906,24 @@ var
       kepnev2 := Rendszamtomb[thmerleg, 2].kep;
       if (iranyok[thmerleg] = '-') and (Automata_irany_meghatarozas) then
       begin
-
+        //Ha csak egy egy kamera van egy mérlegen, akkor az irányok egyértelmûek
         if (Rendszamtomb[thmerleg, 1].van_kamera) and (not (Rendszamtomb[thmerleg, 2].van_kamera)) then
           iranyok[thmerleg] := 'BE'
         else if (not Rendszamtomb[thmerleg, 1].van_kamera) and ((Rendszamtomb[thmerleg, 2].van_kamera)) then
-          iranyok[thmerleg] := 'KI'
+          begin
+            //Ha csak egy kamera van és két mérleg, akkor az egyes renszám üres lesz, ezért kell cserélni
+            if (rendszam1='')  and (rendszam2<>'') then
+            begin
+              rendszam1:=rendszam2;
+              rendszam2:='';
+              kepnev1:=kepnev2;
+              kepnev2:='';
+            end;
+            iranyok[thmerleg] := 'KI';
+          end
         else
             //Hosszú teherautók esetén
-          if maxtomeg[thmerleg] > 10000 then
+        if maxtomeg[thmerleg] > 10000 then
         begin
               //ha az elsõ kamera ismeri fel elõbb
           if Rendszamtomb[thmerleg, 1].Ido < Rendszamtomb[thmerleg, 2].Ido then
@@ -4246,13 +4263,13 @@ var
       Sleep(100);
       Application.ProcessMessages;
       sza := sza + 1;
-    until (sza > 40) or (SocketTomb[thmerleg, thkamera].rendszam <> '');
+    until (sza > 100) or (SocketTomb[thmerleg, thkamera].rendszam <> '');
       // a Sigmoidban 5s-nek kell lennie a lezárásnak
 
     szoveg := SocketTomb[thmerleg, thkamera].rendszam;
     Result := false;
       //Itt van a kiértékelõ rész
-      // a még nincs rendszám beírja az elsõ nem üres adatait
+      // ha még nincs rendszám beírja az elsõ nem üres adatait
     if (RendszamTomb[thmerleg, thkamera].rendszam = '') then
     begin
       RendszamTomb[thmerleg, thkamera].rendszam := SocketTomb[thmerleg, thkamera].rendszam;
