@@ -48,6 +48,12 @@ type
     procedure Execute; override;
   end;
 
+   RD_Lekerdezes_Thread = class(TThread)        //RelayDroid
+    procedure kijelez;
+  protected
+    procedure Execute; override;
+  end;
+
   SQL_Lekerdezes_Thread = class(TThread)
     szmerleg: string;
     eszkoz: string;
@@ -224,6 +230,7 @@ type
     sbtnLista: TSpeedButton;
     sbtnSorszamhivas: TSpeedButton;
     btnnyelv: TButton;
+    csRelayDroid: TClientSocket;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -318,10 +325,12 @@ type
     procedure tmrForgalom_frissitesTimer(Sender: TObject);
     procedure btnnyelvClick(Sender: TObject);
     procedure PLC_feladatok(IPCim: string; Port, IO: integer; Tipus, Muvelet: string; Ertek: integer);
+    procedure RD_feladatok(IPCim: string; Port, IO: integer; Tipus, Muvelet: string; Ertek: integer);
     function Ping_teszt_moxa(IP: string): boolean;
     procedure moxaTeszttmrTimer(Sender: TObject);
     procedure btnnagykamkepClick(Sender: TObject);
     procedure cam1Show(Sender: TObject);
+    procedure csRelayDroidRead(Sender: TObject; Socket: TCustomWinSocket);
 
   private
     { Private declarations }
@@ -383,13 +392,15 @@ var
   RendszamTomb: array[1..maxmerleg, 1..2] of Rendszamrec;     //csak az elsõ két kamera lehet rendszám felismerõ
   SocketTomb: array[1..maxmerleg, 1..2] of Rendszamrec;     //csak az elsõ két kamera lehet rendszám felismerõ
   KameraTomb: array[1..maxmerleg, 1..maxkamera] of Kamerarec;
-  PLC_Lekerdezett_Valasz: array[0..15] of Boolean;
+  PLC_Lekerdezett_Valasz,RD_Lekerdezett_Valasz: array[0..15] of Boolean;
   ThPLC_Lekerdezes: PLC_Lekerdezes_Thread;
+  ThRD_Lekerdezes: RD_Lekerdezes_Thread;
   Sorompok: array[1..maxmerleg, 1..2] of Soromporec;
   iranyok: array[1..maxmerleg] of string[2];
-  PLC_lekerdezes_szamlalo: integer;
+  PLC_lekerdezes_szamlalo,RD_lekerdezes_szamlalo: integer;
   socket_hiba: Boolean = False;
   MerlegInfrak: array[1..Maxmerleg, 1..Maxinfra] of Infrarec;
+  relayDroidValasz:string;
 
 implementation
 
@@ -733,6 +744,13 @@ begin
               Result := 1
             else
               Result := 0;
+          end
+          else if FieldbyName('Tipus').AsString = 'RELAYDROID' then
+          begin
+            if RD_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger] then
+              Result := 1
+            else
+              Result := 0;
           end;
         end
         else
@@ -806,6 +824,11 @@ begin
   StatusBar1.Panels[1].Text := rsKliensHiba + inttostr(ErrorCode);
   ErrorCode := 0;
   socket_hiba := True;
+end;
+
+procedure TFoF.csRelayDroidRead(Sender: TObject; Socket: TCustomWinSocket);
+begin
+  relayDroidValasz:=Socket.ReceiveText;
 end;
 
 procedure TFoF.dbgNyitbeCellClick(Column: TColumn);
@@ -1198,20 +1221,27 @@ var
     for merlegszam := 1 to Maxmerleg do
       for lampaszam := 1 to 4 do
       begin
-        if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['LAMPA' + lampaszam.ToString, 'M' + merlegszam.ToString]), [])) and (POS(PC_Szam, af.HardverQ.FieldbyName('Szamitogep').AsString) <> 0) and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) then
+        if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['LAMPA' + lampaszam.ToString, 'M' + merlegszam.ToString]), []))
+          and (POS(PC_Szam, af.HardverQ.FieldbyName('Szamitogep').AsString) <> 0)
+          and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) then
           { DONE -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
           if af.HardverQ.FieldbyName('Tipus').AsString = 'PLC' then
           begin
             PLC_IP := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-            //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,af.HardverQ.FieldbyName('Alaphelyzet').AsInteger=1);
-            PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger, af.HardverQ.FieldbyName('Alaphelyzet').AsInteger, 'C', 'I', 1);
+            PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', af.HardverQ.FieldbyName('Alaphelyzet').AsInteger);
             //thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
           end
           else if af.HardverQ.FieldbyName('Tipus').AsString = 'PLC485' then
           begin
             PLC_COMF.ModBusIrBit(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, af.HardverQ.FieldbyName('Alaphelyzet').AsInteger);
             thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
-          end;
+          end
+          else if (af.HardverQ.FieldbyName('Tipus').AsString = 'RELAYDROID') and (thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] = '') then
+          begin
+            RD_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger,af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I',  af.HardverQ.FieldbyName('Alaphelyzet').AsInteger);
+            thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            ThRD_Lekerdezes := RD_Lekerdezes_Thread.Create(False);
+          end
       end;
   end;
 
@@ -1254,6 +1284,11 @@ var
           PLC_COMF.threadrun(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString);
           thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
         end;
+      end
+      else if (af.HardverQ.FieldbyName('Tipus').AsString = 'RELAYDROID') and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) and (thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] = '') then
+      begin
+        thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+        Thrd_Lekerdezes := RD_Lekerdezes_Thread.Create(False);
       end;
       af.HardverQ.next;
     end;
@@ -1296,7 +1331,10 @@ begin
   if ideiglenes_latszik then
     pcTablak.ActivePageIndex := 0;
   for i := 0 to 15 do
+  begin
     PLC_Lekerdezett_Valasz[i] := false;
+    RD_Lekerdezett_Valasz[i] := false;
+  end;
 
   tbForgalom.TabVisible := forgalom_latszik;
   tmrForgalom_frissites.Enabled := forgalom_latszik;
@@ -1871,7 +1909,17 @@ begin
       else if af.HardverQ.FieldbyName('Tipus').AsString = 'PLC485' then
       begin
         PLC_COMF.ModBusIrBit(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, TJvLed(FindComponent('JvLED' + IntToStr(szam))).Status.ToInteger);
-      end;
+      end
+      else if af.HardverQ.FieldbyName('Tipus').AsString = 'RELAYDROID' then
+      begin
+        PLC_IP := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+        //PLC_Ir(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status.ToInteger);
+        //PLC_Ir_Coil(af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger,TJvLed(FindComponent('JvLED'+IntToStr(szam))).Status);
+        if not TJvLed(FindComponent('JvLED' + IntToStr(szam))).Status then
+          allapot := 1;
+        RD_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', allapot);
+
+      end
     end;
   end;
 end;
@@ -3128,6 +3176,10 @@ begin
             begin
               TJvLED(Fof.FindComponent('JvLED' + IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status := not PLC_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger];
             end;
+            if FieldbyName('Tipus').AsString = 'RELAYDROID' then
+            begin
+              TJvLED(Fof.FindComponent('JvLED' + IntToStr(FieldbyName('Felirat_szam').AsInteger))).Status := not RD_Lekerdezett_Valasz[FieldbyName('Bekapcs_Kimenet_szam').AsInteger];
+            end;
           end;
           next;
         end;
@@ -3211,7 +3263,13 @@ begin
             else
               Zold := 0;
             PLC_COMF.ModBusIrBit(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, Zold);
-          end;
+          end
+          else if af.HardverQ.FieldbyName('Tipus').AsString = 'RELAYDROID' then
+          begin
+            PLC_Zold := Mire <> Lampa_Zold;
+            PLC_IP := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            RD_Feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', Mire);
+          end
       end;
     end;
   end;
@@ -3354,6 +3412,28 @@ begin
   if not aF.van_joga('j5') then
     exit;
   MerlegkezelokF.ShowModal;
+end;
+
+procedure TFoF.RD_feladatok(IPCim: string; Port, IO: integer; Tipus,
+  Muvelet: string; Ertek: integer);
+begin
+  //Port mindig a táblából jön
+  //Tipus:C vagy R  (Coil vagy Register)
+  //Muvelet: I vagy O
+  //Az érték mindig numerikus, ha kell a tényleges hívásnál átváltjuk
+  with AF.mtRD_Feladat do
+  begin
+    if not Active then
+      open;
+    Append;
+    FieldByName('IPCim').AsString := IPCim;
+    FieldByName('Port').AsInteger := Port;
+    FieldByName('IO').AsInteger := IO;
+    FieldByName('Tipus').AsString := Tipus;
+    FieldByName('Muvelet').AsString := Muvelet;
+    FieldByName('Ertek').AsInteger := Ertek;
+    Post;
+  end;
 end;
 
 procedure TFoF.Rendszam_Lampa_TimerTimer(Sender: TObject);
@@ -4418,6 +4498,100 @@ begin
   end;
   hwKap.Connected := False;
   hwKap.Free;
+end;
+
+{ RD_Lekerdezes_Thread }
+
+procedure RD_Lekerdezes_Thread.Execute;
+var i: integer;
+begin
+  inherited;
+  PLC_lekerdezes_szamlalo := 0;
+  repeat
+    try
+      Synchronize(kijelez);
+    finally
+
+    end;
+    for i := 1 to 25 do
+    begin
+      Sleep(20);
+      Application.ProcessMessages;
+    end;
+     //Synchronize(kijelez);
+    PLC_lekerdezes_szamlalo := PLC_lekerdezes_szamlalo + 1;
+  until programvege;
+
+end;
+
+procedure RD_Lekerdezes_Thread.kijelez;
+
+  function csatlakozik(IP:string;HostPort:integer):boolean;
+  begin
+    with Fof.csRelayDroid do
+    begin
+      if Active then Active:=false;
+      Host := IP;
+      Port := HostPort;
+      Active := True;
+      i := 0;
+      varakozas;
+      while (not Active) and (i < 5) do
+      begin
+        varakozas;
+        Active := True;
+        i := i + 1;
+      end;
+      Result:=Active;
+    end;
+  end;
+
+  function kapcsol(relek:string):Boolean;
+  var i:integer;
+
+  begin
+    relayDroidValasz:='NINCS RD Valasz';
+    FoF.csRelayDroid.Socket.SendText('rx '+relek+' RadminKNZ1234!'+#13#10);
+    i:=1;
+    while (relayDroidValasz='NINCS RD Valasz') and (i<5) do varakozas;
+    if  felhnev = 'Programozó' then Fof.memlog.Lines.Insert(0, 'RD Cim: '+ relayDroidValasz);
+    if (relayDroidValasz<>'NINCS RD Valasz') and  (relayDroidValasz<>'NO')
+      and (Length(relayDroidValasz)>=3)   then
+    begin
+      Result:=true;
+      for I := 1 to Length(relayDroidValasz) do   RD_Lekerdezett_Valasz[i]:=relayDroidValasz[i]='1';
+    end
+    else Result:=False;
+
+  end;
+
+  var port:integer;
+      relek:string;
+
+begin
+  with af.mtRD_Feladat do
+    while (Active) and (not IsEmpty) do
+    begin
+      relek:='---';
+      if FieldByName('Port').AsInteger = 0 then
+        Port := 80
+      else
+        Port := FieldByName('Port').AsInteger;
+
+      if (csatlakozik(FieldByName('IPCim').AsString,port)) then
+        if FieldByName('Tipus').AsString = 'C' then
+        begin
+          if FieldByName('Muvelet').AsString = 'I' then
+            relek[FieldByName('IO').AsInteger]:= FieldByName('Ertek').AsString[1];
+          if felhnev = 'Programozó' then
+          begin
+            Fof.memlog.Lines.Insert(0, 'RD Cim: ' + IntToStr(FieldByName('IO').AsInteger ) + ' ' + FieldByName('Ertek').AsString);
+          end;
+
+        end;
+      kapcsol(relek);
+      Delete;
+    end;
 end;
 
 end.

@@ -441,6 +441,14 @@ type
     mtPLC_FeladatMuvelet: TStringField;
     mtPLC_FeladatErtek: TSmallintField;
     mtPLC_FeladatIO: TIntegerField;
+    mtRD_Feladat: TJvMemoryData;
+    AutoIncField1: TAutoIncField;
+    StringField1: TStringField;
+    IntegerField1: TIntegerField;
+    IntegerField2: TIntegerField;
+    StringField2: TStringField;
+    StringField3: TStringField;
+    SmallintField1: TSmallintField;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

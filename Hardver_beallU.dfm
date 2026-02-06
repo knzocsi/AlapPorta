@@ -265,7 +265,8 @@ object Hardver_beallF: THardver_beallF
           'PLC485'
           'IO_Panel'
           'USB'
-          'KAMERA')
+          'KAMERA'
+          'RELAYDROID')
         TabOrder = 8
       end
       object dcbEgyedi: TDBComboBox

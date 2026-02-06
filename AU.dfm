@@ -18239,4 +18239,37 @@ object AF: TAF
       FieldName = 'Ertek'
     end
   end
+  object mtRD_Feladat: TJvMemoryData
+    FieldDefs = <
+      item
+        Name = 'tort'
+        DataType = ftBoolean
+      end>
+    Left = 920
+    Top = 104
+    object AutoIncField1: TAutoIncField
+      FieldName = 'Sorszam'
+    end
+    object StringField1: TStringField
+      FieldName = 'IPCim'
+      Size = 15
+    end
+    object IntegerField1: TIntegerField
+      FieldName = 'Port'
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'IO'
+    end
+    object StringField2: TStringField
+      FieldName = 'Tipus'
+      Size = 1
+    end
+    object StringField3: TStringField
+      FieldName = 'Muvelet'
+      Size = 1
+    end
+    object SmallintField1: TSmallintField
+      FieldName = 'Ertek'
+    end
+  end
 end

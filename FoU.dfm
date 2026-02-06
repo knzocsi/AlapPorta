@@ -1906,4 +1906,12 @@ object FoF: TFoF
     Left = 361
     Top = 320
   end
+  object csRelayDroid: TClientSocket
+    Active = False
+    ClientType = ctNonBlocking
+    Port = 80
+    OnRead = csRelayDroidRead
+    Left = 677
+    Top = 138
+  end
 end
