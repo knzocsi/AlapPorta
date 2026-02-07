@@ -1225,11 +1225,12 @@ var
           and (POS(PC_Szam, af.HardverQ.FieldbyName('Szamitogep').AsString) <> 0)
           and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) then
           { DONE -oKNZ -c : A TCP PLC-t még tesztelni jell az új hardver beállításokkal 2023. 03. 30. 11:25:16 }
-          if af.HardverQ.FieldbyName('Tipus').AsString = 'PLC' then
+          if (af.HardverQ.FieldbyName('Tipus').AsString = 'PLC') and (thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])] = '') then
           begin
             PLC_IP := af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
             PLC_feladatok(af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString, af.HardverQ.FieldbyName('IP_Port').AsInteger, af.HardverQ.FieldbyName('Bekapcs_Kimenet_szam').AsInteger, 'C', 'I', af.HardverQ.FieldbyName('Alaphelyzet').AsInteger);
-            //thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            thread_futtatva[StrToInt(af.HardverQ.FieldbyName('Merleg').AsString[2])]:= af.HardverQ.FieldbyName('Port_v_IP_Cim').AsString;
+            ThPLC_Lekerdezes := PLC_Lekerdezes_Thread.Create(False);
           end
           else if af.HardverQ.FieldbyName('Tipus').AsString = 'PLC485' then
           begin
@@ -1824,47 +1825,50 @@ begin
   imgFelsokep.Picture := nil;
   imgAlsokep.Picture := nil;
   //if not jvmemparosparosit.AsBoolean then Exit;
+  try
+    lblKep1.Caption := kepnev1;
+    lblKep2.Caption := kepnev2;
+    if FileExists(lblKep1.Caption) then
+    begin
+      JPEGImg := TJpegImage.Create;
+      try
+        JPEGImg.LoadFromFile(lblKep1.Caption);
+        if JPEGImg.Width < 600 then
+          JPEGImg.Scale := jsFullSize
+        else if JPEGImg.Width < 1200 then
+          JPEGImg.Scale := jsHalf
+        else if JPEGImg.Width < 2000 then
+          JPEGImg.Scale := jsQuarter
+        else
+          JPEGImg.Scale := jsEighth;
+      finally
+        imgFelsokep.Picture.Assign(JPEGImg);
+        JPEGImg.Free;
+      end;
+    end;
+    if FileExists(lblKep2.Caption) then
+    begin
+      JPEGImg := TJpegImage.Create;
+      try
+        JPEGImg.LoadFromFile(lblKep2.Caption);
+        if JPEGImg.Width < 600 then
+          JPEGImg.Scale := jsFullSize
+        else if JPEGImg.Width < 1200 then
+          JPEGImg.Scale := jsHalf
+        else if JPEGImg.Width < 2000 then
+          JPEGImg.Scale := jsQuarter
+        else
+          JPEGImg.Scale := jsEighth;
+      finally
+        imgAlsokep.Picture.Assign(JPEGImg);
+        JPEGImg.Free;
+      end;
+    end;
+  finally
+    lblKep1.Visible := imgFelsokep.Picture = nil;
+    lblKep2.Visible := imgAlsokep.Picture = nil;
+  end;
 
-  lblKep1.Caption := kepnev1;
-  lblKep2.Caption := kepnev2;
-  if FileExists(lblKep1.Caption) then
-  begin
-    JPEGImg := TJpegImage.Create;
-    try
-      JPEGImg.LoadFromFile(lblKep1.Caption);
-      if JPEGImg.Width < 600 then
-        JPEGImg.Scale := jsFullSize
-      else if JPEGImg.Width < 1200 then
-        JPEGImg.Scale := jsHalf
-      else if JPEGImg.Width < 2000 then
-        JPEGImg.Scale := jsQuarter
-      else
-        JPEGImg.Scale := jsEighth;
-    finally
-      imgFelsokep.Picture.Assign(JPEGImg);
-      JPEGImg.Free;
-    end;
-  end;
-  if FileExists(lblKep2.Caption) then
-  begin
-    JPEGImg := TJpegImage.Create;
-    try
-      JPEGImg.LoadFromFile(lblKep2.Caption);
-      if JPEGImg.Width < 600 then
-        JPEGImg.Scale := jsFullSize
-      else if JPEGImg.Width < 1200 then
-        JPEGImg.Scale := jsHalf
-      else if JPEGImg.Width < 2000 then
-        JPEGImg.Scale := jsQuarter
-      else
-        JPEGImg.Scale := jsEighth;
-    finally
-      imgAlsokep.Picture.Assign(JPEGImg);
-      JPEGImg.Free;
-    end;
-  end;
-  lblKep1.Visible := imgFelsokep.Picture = nil;
-  lblKep2.Visible := imgAlsokep.Picture = nil;
 end;
 
 procedure TFoF.JvLED1DblClick(Sender: TObject);
@@ -1960,16 +1964,6 @@ end;
 procedure TFoF.kepbetolt;
 begin
   jpgbetolt(aF.ForgalomQ.FieldByName('Kepnev1').AsString, aF.ForgalomQ.FieldByName('Kepnev2').AsString);
-  exit;
-  if FileExists(aF.ForgalomQ.FieldByName('Kepnev1').AsString) then
-    imgFelsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev1').AsString)
-  else
-    imgFelsokep.Picture := nil;
-  if FileExists(aF.ForgalomQ.FieldByName('Kepnev2').AsString) then
-    imgAlsokep.Picture.LoadFromFile(aF.ForgalomQ.FieldByName('Kepnev2').AsString)
-  else
-    imgAlsokep.Picture := nil;
-  //kepatmeretez;
 end;
 
 procedure TFoF.kepernyo_kezel;
