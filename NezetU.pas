@@ -337,6 +337,13 @@ begin
       TfrxMemoView(FindObject('memszaritasi_dij')).Text:=Mjegy_nyom_rec.Szaritasi_dij_rec;
      if TfrxMemoView(FindObject('memertek'))<>nil then
       TfrxMemoView(FindObject('memertek')).Text:=Mjegy_nyom_rec.Ertek;
+     if TfrxPictureView(FindObject('ce_kep'))<>nil then
+      TfrxPictureView(FindObject('ce_kep')).Visible:=
+      (Mjegy_nyom_rec.Termek_nev='Tégla darálék') or (Mjegy_nyom_rec.Termek_nev='Beton darálék');
+     if TfrxPictureView(FindObject('qr_kep'))<>nil then
+      TfrxPictureView(FindObject('qr_kep')).Visible:=
+      (Mjegy_nyom_rec.Termek_nev='Tégla darálék') or (Mjegy_nyom_rec.Termek_nev='Beton darálék');
+
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
      if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
   end;

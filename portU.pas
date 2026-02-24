@@ -900,7 +900,7 @@ begin
     merlegszamlalo[k]:=0;
     elozomerlegszamlalo[k]:=0;
   end;
-  btnHivoszamkijezobeallitas.Visible:=Hivoszamhasznalat;
+  //btnHivoszamkijezobeallitas.Visible:=Hivoszamhasznalat;
 end;
 
 procedure TPortF.hivoszamkijelzore_ir(szam:string);
