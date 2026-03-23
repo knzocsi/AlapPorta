@@ -1133,6 +1133,15 @@ object MjegyF: TMjegyF
       Caption = 'IDEGEN M'#201'R'#201'S'
       TabOrder = 39
     end
+    object btngongy: TButton
+      Left = 601
+      Top = 41
+      Width = 75
+      Height = 25
+      Caption = 'G'#246'ngy'#246'legek'
+      TabOrder = 40
+      OnClick = btngongyClick
+    end
   end
   object pnlFelso: TPanel
     Left = 0

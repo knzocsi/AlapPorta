@@ -499,6 +499,8 @@ procedure TMjegyekF.elokeszit(stfelirat: String);
 begin
  if mjegyekQ.IsEmpty then exit;
  AF.merlegjegy_tipus_betoltese;
+ af.csat_gongy_betolt('merlegjegy',mjegyekQ.FieldByName('ID').AsInteger);
+ af.gongy_osszevon_nyom;
  try
   AF.fo_szazalek(mjegyekQ.FieldByName('Brutto').Value, mjegyekQ.FieldByName('tara').Value,
    mjegyekQ.FieldByName('tisztasag').Value,mjegyekQ.FieldByName('nedv').Value,
@@ -593,8 +595,20 @@ begin
        Hekto_latszik:=
         jegyen_latszik(mjegyekQ.FieldByName('termek_id').AsInteger,'b_hekto') and (Irany[1]='B');
        Hekto:=mjegyekQ.FieldByName('hekto').AsString;
-       Brutto:=mjegyekQ.FieldByName('Brutto').AsString+' kg';
-       Tara:=mjegyekQ.FieldByName('Tara').AsString+' kg';
+
+       elso_gongy_tomeg:=FloatToStr(af.gongy_osszead('1'));
+       masodik_gongy_tomeg:=FloatToStr(af.gongy_osszead('2'));
+       if not gongyolegek_latszanak then
+        begin
+         Brutto:=mjegyekQ.FieldByName('Brutto').AsString+' kg';
+         Tara:=mjegyekQ.FieldByName('Tara').AsString+' kg';
+        end
+        else
+        begin
+         Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
+         Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
+        end;
+
        Sz_netto:=mjegyekQ.FieldByName('SzNetto').AsString+' kg';
        Netto:=mjegyekQ.FieldByName('Netto').AsString+' kg';
        Termek_ar:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
@@ -607,6 +621,7 @@ begin
        Szaritasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('szaritasi_dij').AsFloat))+' -Ft';
        Ertek:=IntToStr(Round(mjegyekQ.FieldByName('SzNetto').value*mjegyekQ.FieldByName('termek_ar').Value
        -(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat+mjegyekQ.FieldByName('szaritasi_dij').AsFloat))) +' -Ft';
+
       end;
 
 //     NezetF.rep_valaszt(aF.frxmerleg,1);

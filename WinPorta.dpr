@@ -74,7 +74,9 @@ uses
   Ekaer_my_sqlU in '..\..\Egyeb\EKAER\Ekaer_my_sqlU.pas' {Ekaer_MySQLF},
   Ekaer_MySQL_Adatbazis_letrehozasaU in '..\..\Egyeb\EKAER\Ekaer_MySQL_Adatbazis_letrehozasaU.pas',
   EkaerU in '..\..\Egyeb\EKAER\EkaerU.pas' {EkaerF},
-  MeresTipusValasztasU in 'MeresTipusValasztasU.pas' {MeresTipusValasztasF};
+  MeresTipusValasztasU in 'MeresTipusValasztasU.pas' {MeresTipusValasztasF},
+  GongyoloegekFU in 'GongyoloegekFU.pas' {GongyoloegekF},
+  GongyCsatU in 'GongyCsatU.pas' {GongyCsatF};
 
 {$R *.res}
 
@@ -138,5 +140,7 @@ begin
   Application.CreateForm(TEkaer_MySQLF, Ekaer_MySQLF);
   Application.CreateForm(TEkaerF, EkaerF);
   Application.CreateForm(TMeresTipusValasztasF, MeresTipusValasztasF);
+  Application.CreateForm(TGongyoloegekF, GongyoloegekF);
+  Application.CreateForm(TGongyCsatF, GongyCsatF);
   Application.Run;
 end.

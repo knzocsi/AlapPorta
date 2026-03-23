@@ -190,6 +190,8 @@ type
 
      Fs_Ertek:string;
 
+     Fs_elso_gongy_tomeg:string;
+     Fs_masodik_gongy_tomeg:string;
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -316,6 +318,13 @@ type
         write Fs_Szaritasi_dij_rec;
     property Ertek: string read Fs_Ertek
         write Fs_ertek;
+    property elso_gongy_tomeg: string read Fs_elso_gongy_tomeg
+        write Fs_elso_gongy_tomeg;
+    property masodik_gongy_tomeg: string read Fs_masodik_gongy_tomeg
+        write Fs_masodik_gongy_tomeg;
+        {     Fs_elso_gongy_tomeg:string;
+     Fs_masodik_gongy_tomeg:string;}
+
   end;
 
   TAF = class(TDataModule)
@@ -420,19 +429,7 @@ type
     Auto_mjegyINUPQ: TFDQuery;
     frxPDFTeszthez: TfrxPDFExport;
     dijkatQ: TFDQuery;
-    FDQuery1: TFDQuery;
-    FDQuery1Term_id: TLongWordField;
-    FDQuery1Term_kod: TWideStringField;
-    FDQuery1Term_nev: TWideStringField;
-    FDQuery1Tarolo_id: TIntegerField;
-    FDQuery1Tarolo_nev: TWideStringField;
-    FDQuery1partner_id: TIntegerField;
-    FDQuery1Partner_kod: TWideStringField;
-    FDQuery1Partner_nev: TWideStringField;
-    FDQuery1felhasznalo_id: TIntegerField;
-    FDQuery1Felhasznalo_nev: TWideStringField;
-    FDQuery1modositva: TDateTimeField;
-    FDQuery1tort: TBooleanField;
+    CsatGongyQ: TFDQuery;
     mtPLC_Feladat: TJvMemoryData;
     mtPLC_FeladatIPCim: TStringField;
     mtPLC_FeladatPort: TIntegerField;
@@ -449,6 +446,25 @@ type
     StringField2: TStringField;
     StringField3: TStringField;
     SmallintField1: TSmallintField;
+    gongyQ: TFDQuery;
+    gongyQDs: TDataSource;
+    mem_csatgongy: TJvMemoryData;
+    mem_csatgongyg_id: TIntegerField;
+    mem_csatgongyg_nev: TStringField;
+    mem_csatgongyg_tomeg: TFloatField;
+    mem_csatgongyg_menny: TFloatField;
+    mem_csatgongyossztomeg: TFloatField;
+    mem_csatgongyDs: TDataSource;
+    mem_csatgongyelso: TBooleanField;
+    mam_csovon: TJvMemoryData;
+    IntegerField3: TIntegerField;
+    StringField4: TStringField;
+    FloatField1: TFloatField;
+    mam_csovong_menny_1: TFloatField;
+    mam_csovonossztomeg_1: TFloatField;
+    mam_csovong_menny_2: TFloatField;
+    mam_csovonossztomeg_2: TFloatField;
+    frxDBmam_csovon: TfrxDBDataset;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -458,6 +474,7 @@ type
     procedure AutomentesTimer(Sender: TObject);
     procedure autotorzsTimer(Sender: TObject);
     procedure frissites(mappa:string);
+    procedure mem_csatgongyCalcFields(DataSet: TDataSet);
 
 
   private
@@ -525,6 +542,11 @@ type
     procedure auto_teszt;
     procedure dijak_lekerese(pid,tid:Integer);
     procedure merlegjegy_lista_tipus_betoltese;
+    procedure csat_gongy_ures;
+    procedure csat_gongy_betolt(honnan:string;azon:Integer);
+    procedure csat_gongy_ment(hova: string; azon: Integer);
+    function gongy_osszead(hanyadik:string):Extended;
+    procedure gongy_osszevon_nyom;
     { Public declarations }
   end;
 
@@ -609,6 +631,10 @@ var
   meresgomb_kell:boolean;
   stabil_tomeg:Boolean;
   MeresTipus:integer;
+
+  gongyolegek_latszanak: Boolean= False;
+
+  csatgongy_masol:Boolean;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -1169,6 +1195,79 @@ begin
   FreeMem(VerInfo, VerInfoSize);
 end;
 
+function TAF.gongy_osszead(hanyadik: string):Extended;
+var o:Extended;
+begin
+ o:=0;
+ with mam_csovon do
+  begin
+    first;
+    while not Eof do
+    begin
+      o:=o+fieldbyName('ossztomeg_'+hanyadik).AsFloat;
+      next;
+    end;
+    First
+  end;
+  Result:=o;
+end;
+
+procedure TAF.gongy_osszevon_nyom;
+begin
+ if not AF.mem_csatgongy.Active then Exit;
+
+ af.mam_csovon.Active:=False;
+ af.mam_csovon.EmptyTable;
+ af.mam_csovon.Active:=True;
+ with AF.mem_csatgongy do
+  begin
+    first;
+    DisableControls;
+    while not Eof do
+    begin
+     if af.mam_csovon.Locate('g_id',FieldByName('g_id').AsInteger,[]) then
+      begin
+        af.mam_csovon.Edit;
+        if FieldByName('elso').AsBoolean then
+        begin
+         af.mam_csovong_menny_1.AsFloat:=af.mam_csovong_menny_1.AsFloat+fieldbyName('g_menny').AsFloat;
+         af.mam_csovonossztomeg_1.AsFloat:=af.mam_csovonossztomeg_1.AsFloat+fieldbyName('ossztomeg').AsFloat;
+        end
+        else
+        begin
+         af.mam_csovong_menny_2.AsFloat:=af.mam_csovong_menny_2.AsFloat+fieldbyName('g_menny').AsFloat;
+         af.mam_csovonossztomeg_2.AsFloat:=af.mam_csovonossztomeg_2.AsFloat+fieldbyName('ossztomeg').AsFloat;
+        end;
+      end
+     else
+      begin
+        af.mam_csovon.Append;
+        af.mam_csovon.FieldByName('g_id').AsInteger:=FieldByName('g_id').AsInteger;
+        af.mam_csovon.FieldByName('g_nev').AsString:=FieldByName('g_nev').AsString;
+        af.mam_csovon.FieldByName('g_tomeg').AsFloat:=FieldByName('g_tomeg').AsFloat;
+        if FieldByName('elso').AsBoolean then
+        begin
+         af.mam_csovong_menny_1.AsFloat:=fieldbyName('g_menny').AsFloat;
+         af.mam_csovonossztomeg_1.AsFloat:=fieldbyName('ossztomeg').AsFloat;
+         af.mam_csovong_menny_2.AsFloat:=0;
+         af.mam_csovonossztomeg_2.AsFloat:=0;//ha append van
+        end
+        else
+        begin
+         af.mam_csovong_menny_1.AsFloat:=0;
+         af.mam_csovonossztomeg_1.AsFloat:=0;
+         af.mam_csovong_menny_2.AsFloat:=fieldbyName('g_menny').AsFloat;
+         af.mam_csovonossztomeg_2.AsFloat:=fieldbyName('ossztomeg').AsFloat;
+        end;
+      end;
+     af.mam_csovon.Post;
+     next;
+    end;
+    First;
+    EnableControls;
+  end;
+end;
+
 procedure TAF.import_log(S: string);
 var tf : TextFile;
     m:string;
@@ -1503,6 +1602,7 @@ begin
   ekaer_csk:=cfg_kezel('EKÁER cserekulcs','EKÁER','EKÁER cserekulcs','String','');
   ekaer_mappa:=cfg_kezel('EKÁER mappa','EKÁER','Ekaer mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
 
+  gongyolegek_latszanak:=cfg_kezel('','ALAP','Göngyölegek látszanak','Boolean',gongyolegek_latszanak);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -1683,6 +1783,12 @@ Result:=true;
     open;
     Result:=(Fields[0].AsInteger<>ide) and (Fields[1].AsInteger>0);
   end;
+end;
+
+procedure TAF.mem_csatgongyCalcFields(DataSet: TDataSet);
+begin
+ if csatgongy_masol then exit;
+ mem_csatgongyossztomeg.AsFloat:=mem_csatgongyg_menny.AsFloat*mem_csatgongyg_tomeg.AsFloat;
 end;
 
 procedure TAF.merlegjegy_lista_tipus_betoltese;
@@ -1986,6 +2092,68 @@ begin
      close
   end;
 
+end;
+
+procedure TAF.csat_gongy_betolt(honnan: string; azon: Integer);
+var i:Integer;
+begin
+ csat_gongy_ures;
+ with CsatGongyQ do
+  begin
+    Close;
+    SQL.Clear;
+    Open('SELECT g_id,g_nev,g_tomeg,g_menny,elso FROM '+honnan+'_gongyoleg'
+    +' WHERE m_id='+azon.ToString);
+    First;
+    csatgongy_masol:=True;
+    while not Eof do
+    begin
+     mem_csatgongy.Append;
+     for I := 0 to FieldCount-1 do mem_csatgongy.Fields[i].Value:=fields[i].Value;
+     mem_csatgongy.Post;
+     Next;
+    end;
+    csatgongy_masol:=False;
+    Close;
+  end;
+end;
+
+procedure TAF.csat_gongy_ment(hova: string; azon: Integer);
+
+begin
+ with CsatGongyQ do
+  begin
+    Close; //elõzõek törlése, így a legegyszerûbb ha változás volt
+    SQL.Clear;
+    SQL.Add('DELETE FROM '+hova+'_gongyoleg');
+    SQL.Add('WHERE ID='+azon.ToString);
+    ExecSQL;
+    mem_csatgongy.First;
+    while not mem_csatgongy.Eof do
+    begin
+     Close;
+     SQL.Clear;
+     SQL.Add('INSERT INTO '+hova+'_gongyoleg');
+     SQL.Add('(m_id,g_id,g_nev,g_tomeg,g_menny,elso)');
+     SQL.Add(' VALUES ');
+     SQL.Add('(:m_id,:g_id,:g_nev,:g_tomeg,:g_menny,:elso)');
+     ParamByName('m_id').AsInteger:=azon;
+     ParamByName('g_id').AsInteger:=mem_csatgongyg_id.AsInteger;
+     ParamByName('g_nev').AsString:=mem_csatgongyg_nev.AsString;
+     ParamByName('g_tomeg').AsFloat:=mem_csatgongyg_tomeg.AsFloat;
+     ParamByName('g_menny').AsFloat:=mem_csatgongyg_menny.AsFloat;
+     ParamByName('elso').AsBoolean:=mem_csatgongyelso.AsBoolean;
+     ExecSQL;
+     mem_csatgongy.Next;
+    end;
+  end;
+end;
+
+procedure TAF.csat_gongy_ures;
+begin
+ mem_csatgongy.Active:=False;
+ mem_csatgongy.EmptyTable;
+ mem_csatgongy.Active:=True;
 end;
 
 function TAF.partner_kesz(tid, tarid, pid: Integer; tort: ShortInt): Extended;
@@ -2959,6 +3127,9 @@ begin
      Tisztitasi_dij_rec:='';
 
      Ertek:='';
+
+     elso_gongy_tomeg:='0';
+     masodik_gongy_tomeg:='0';
     end;
 end;
 

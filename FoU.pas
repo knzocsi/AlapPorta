@@ -231,6 +231,7 @@ type
     sbtnSorszamhivas: TSpeedButton;
     btnnyelv: TButton;
     csRelayDroid: TClientSocket;
+    Gngylegek1: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -331,6 +332,7 @@ type
     procedure btnnagykamkepClick(Sender: TObject);
     procedure cam1Show(Sender: TObject);
     procedure csRelayDroidRead(Sender: TObject; Socket: TCustomWinSocket);
+    procedure Gngylegek1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -410,7 +412,7 @@ uses
   tipusokU, tarolokU, Rak_szallU, rak_szall_listU, MeresU, Tulajok, Ping2U,
   tesztU, levon_szovegekU, demotomegU, nagykepU, szoftver_alapU, Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU, DMSoapU, DijakU, dijszabU, ftpDlU,
-  LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU;
+  LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU,GongyoloegekFU;
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
 
@@ -816,7 +818,7 @@ end;
 
 procedure TFoF.ClientSocketConnect(Sender: TObject; Socket: TCustomWinSocket);
 begin
-  StatusBar1.Panels[1].Text := rsCsatlakoztatva + Socket.RemoteHost;
+  StatusBar1.Panels[1].Text := rsCsatlakoztatva + Socket.RemoteHost+':'+Socket.RemotePort.ToString;
 end;
 
 procedure TFoF.ClientSocketError(Sender: TObject; Socket: TCustomWinSocket; ErrorEvent: TErrorEvent; var ErrorCode: Integer);
@@ -1379,8 +1381,10 @@ begin
   aF.jogok_beolvasasa;
   tomeg_levon_szovegek_m.visible := tomeg_levon;
   Antheratrzsimport1.Visible := automata_torzsimport;
-  if rendszamleker then
-    socketconnect;
+
+  Gngylegek1.Visible:=gongyolegek_latszanak;
+
+  if rendszamleker then  socketconnect;
   piKezdoDatum.Date := date;
   //piBefejezoDatum.Date := date;
   StatusBar1.panels[0].text := verzio;
@@ -1763,6 +1767,11 @@ begin
  // showmessage(result);
   Result := string(PChar(Result));
  // end;
+end;
+
+procedure TFoF.Gngylegek1Click(Sender: TObject);
+begin
+ GongyoloegekF.Showmodal;
 end;
 
 procedure TFoF.imgFelsokepClick(Sender: TObject);
@@ -2689,6 +2698,7 @@ begin
     merlegszam := 1;
     socketszam := 1;
     // RENDSZAM_KLIENS1 RENDSZAM_SZERVER1
+    { TODO -oKNZ -c : A mérlegnek mindig 1-esnek kell lennie? 2026.03.05. 22:12:38 }
     if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_KLIENS' + socketszam.ToString, 'M' + merlegszam.ToString]), [])) and (POS(PC_Szam, af.HardverQ.FieldbyName('Szamitogep').AsString) <> 0) and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) then
       kliens_port := af.HardverQ.FieldbyName('IP_Port').AsInteger;
     if (af.HardverQ.locate('Eszkoznev;Merleg', VarArrayOf(['RENDSZAM_SZERVER' + socketszam.ToString, 'M' + merlegszam.ToString]), [])) and (POS(PC_Szam, af.HardverQ.FieldbyName('Szamitogep').AsString) <> 0) and (af.HardverQ.FieldbyName('Aktiv').AsInteger = 1) then

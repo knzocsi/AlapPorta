@@ -345,7 +345,13 @@ begin
       (Mjegy_nyom_rec.Termek_nev='Tégla darálék') or (Mjegy_nyom_rec.Termek_nev='Beton darálék');
 
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
-     if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
+     if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then
+      TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy or gongyolegek_latszanak;
+
+     if TfrxMemoView(FindObject('memkezdogongykg'))<>nil then
+      TfrxMemoView(FindObject('memkezdogongykg')).text:=Mjegy_nyom_rec.elso_gongy_tomeg;
+     if TfrxMemoView(FindObject('memzarogongykg'))<>nil then
+      TfrxMemoView(FindObject('memzarogongykg')).text:=Mjegy_nyom_rec.masodik_gongy_tomeg;
   end;
 end;
 

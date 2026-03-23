@@ -5595,7 +5595,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 44624.389487534700000000
+    ReportOptions.LastChange = 46104.523372534720000000
     ScriptLanguage = 'PascalScript'
     StoreInDFM = False
     Left = 664
@@ -19216,76 +19216,10 @@ object AF: TAF
     Left = 824
     Top = 480
   end
-  object FDQuery1: TFDQuery
+  object CsatGongyQ: TFDQuery
     Connection = Kapcs
-    Left = 632
-    Top = 456
-    object FDQuery1Term_id: TLongWordField
-      AutoGenerateValue = arDefault
-      FieldName = 'Term_id'
-      Origin = 'Term_id'
-    end
-    object FDQuery1Term_kod: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Term_kod'
-      Origin = 'Term_kod'
-      Size = 30
-    end
-    object FDQuery1Term_nev: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Term_nev'
-      Origin = 'Term_nev'
-      Size = 100
-    end
-    object FDQuery1Tarolo_id: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'Tarolo_id'
-      Origin = 'Tarolo_id'
-    end
-    object FDQuery1Tarolo_nev: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Tarolo_nev'
-      Origin = 'Tarolo_nev'
-      Size = 50
-    end
-    object FDQuery1partner_id: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'partner_id'
-      Origin = 'partner_id'
-    end
-    object FDQuery1Partner_kod: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Partner_kod'
-      Origin = 'Partner_kod'
-      Size = 15
-    end
-    object FDQuery1Partner_nev: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Partner_nev'
-      Origin = 'Partner_nev'
-      Size = 80
-    end
-    object FDQuery1felhasznalo_id: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'felhasznalo_id'
-      Origin = 'felhasznalo_id'
-    end
-    object FDQuery1Felhasznalo_nev: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'Felhasznalo_nev'
-      Origin = 'Felhasznalo_nev'
-      Size = 50
-    end
-    object FDQuery1modositva: TDateTimeField
-      AutoGenerateValue = arDefault
-      FieldName = 'modositva'
-      Origin = 'modositva'
-    end
-    object FDQuery1tort: TBooleanField
-      AutoGenerateValue = arDefault
-      FieldName = 'tort'
-      Origin = 'tort'
-    end
+    Left = 1008
+    Top = 504
   end
   object mtPLC_Feladat: TJvMemoryData
     FieldDefs = <
@@ -19352,5 +19286,85 @@ object AF: TAF
     object SmallintField1: TSmallintField
       FieldName = 'Ertek'
     end
+  end
+  object gongyQ: TFDQuery
+    Connection = Kapcs
+    SQL.Strings = (
+      'select * from gongyoleg ORDER BY nev ASC')
+    Left = 920
+    Top = 408
+  end
+  object gongyQDs: TDataSource
+    DataSet = gongyQ
+    Left = 920
+    Top = 464
+  end
+  object mem_csatgongy: TJvMemoryData
+    FieldDefs = <>
+    OnCalcFields = mem_csatgongyCalcFields
+    Left = 920
+    Top = 512
+    object mem_csatgongyg_id: TIntegerField
+      FieldName = 'g_id'
+    end
+    object mem_csatgongyg_nev: TStringField
+      FieldName = 'g_nev'
+      Size = 50
+    end
+    object mem_csatgongyg_tomeg: TFloatField
+      FieldName = 'g_tomeg'
+    end
+    object mem_csatgongyg_menny: TFloatField
+      FieldName = 'g_menny'
+    end
+    object mem_csatgongyelso: TBooleanField
+      FieldName = 'elso'
+    end
+    object mem_csatgongyossztomeg: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'ossztomeg'
+      Calculated = True
+    end
+  end
+  object mem_csatgongyDs: TDataSource
+    DataSet = mem_csatgongy
+    Left = 920
+    Top = 560
+  end
+  object mam_csovon: TJvMemoryData
+    FieldDefs = <>
+    OnCalcFields = mem_csatgongyCalcFields
+    Left = 832
+    Top = 536
+    object IntegerField3: TIntegerField
+      FieldName = 'g_id'
+    end
+    object StringField4: TStringField
+      FieldName = 'g_nev'
+      Size = 50
+    end
+    object FloatField1: TFloatField
+      FieldName = 'g_tomeg'
+    end
+    object mam_csovong_menny_1: TFloatField
+      FieldName = 'g_menny_1'
+    end
+    object mam_csovonossztomeg_1: TFloatField
+      FieldName = 'ossztomeg_1'
+    end
+    object mam_csovong_menny_2: TFloatField
+      FieldName = 'g_menny_2'
+    end
+    object mam_csovonossztomeg_2: TFloatField
+      FieldName = 'ossztomeg_2'
+    end
+  end
+  object frxDBmam_csovon: TfrxDBDataset
+    UserName = 'frxDBmam_csovon'
+    CloseDataSource = False
+    DataSet = mam_csovon
+    BCDToCurrency = False
+    Left = 640
+    Top = 408
   end
 end

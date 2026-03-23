@@ -1681,6 +1681,10 @@ object FoF: TFoF
         Caption = 'D'#237'jszab'#225'si kateg'#243'ri'#225'k'
         OnClick = Djszabsikategrik1Click
       end
+      object Gngylegek1: TMenuItem
+        Caption = 'G'#246'ngy'#246'legek'
+        OnClick = Gngylegek1Click
+      end
     end
     object Listk1: TMenuItem
       Caption = 'List'#225'k'

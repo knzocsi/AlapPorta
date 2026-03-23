@@ -217,6 +217,7 @@ type
     Label16: TLabel;
     termeklistb_siker: TBooleanField;
     chkidegen: TCheckBox;
+    btngongy: TButton;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -250,6 +251,7 @@ type
     procedure btnMeresClick(Sender: TObject);
     procedure lucTipusChange(Sender: TObject);
     procedure tsOsszeskepResize(Sender: TObject);
+    procedure btngongyClick(Sender: TObject);
 
 
   private
@@ -282,7 +284,7 @@ var
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
   tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU,DmEKAERU,
-  MeresTipusValasztasU;
+  MeresTipusValasztasU,GongyCsatU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -530,8 +532,11 @@ begin
   jeloltek_szama:=0;
   chkidegen.Checked:=False;
   chkidegen.Visible:=idegen_meres;
+  btngongy.Visible:=gongyolegek_latszanak;
+  //af.csat_gongy_ures;
+
   if Folytatas then
-  with af.NyitbeQ do
+  with af.NyitbeQ do //itt kell visszatölteni a gongyöket is
   begin
     jeloltek_szama:=2;
     if FieldByName('tul_id').AsInteger<>0 then  tulajlookup.KeyValue:=FieldByName('tul_id').AsInteger;
@@ -583,8 +588,11 @@ begin
     jpeg_betoltese(kepek_tomb[3],kep3,okep3);
     kepek_tomb[4]:=FieldByName('kepnev4').AsString;
     jpeg_betoltese(kepek_tomb[4],kep4,okep4);
-    case cbxIrany.Itemindex of
-      1 :
+    //ÖCSI 26.03.23
+//    lblTomeg1.Caption:=spBrutto.Text;
+//    lblTomeg2.Caption:=spTara.Text;
+    case cbxIrany.Itemindex of // EZT NEM ÉRTEM, ATTÓl AZ 1. MÉRÉS MÉG AZ ELSÕ
+      1 :                      //ELÉG LENNE CSAK SZÁMOLÁSKOR MEGCSERÉLNI
         begin
           lblTomeg1.Caption:=spBrutto.Text;
           lblTomeg2.Caption:=spTara.Text;
@@ -596,6 +604,7 @@ begin
         end;
     end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
+    af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
   end;
   if (taramegadas) and (forgalom_latszik) then
   begin
@@ -1165,6 +1174,29 @@ if tulajlookup.KeyValue='!' then
 
 end;
 
+procedure TMjegyF.btngongyClick(Sender: TObject);
+var glevon:Extended;
+begin
+// OnActivate:=nil;
+ GongyCsatF.fo(lblmasdat.Caption='');
+
+ glevon:=0;
+ with AF.mem_csatgongy do
+  begin
+    first;
+    DisableControls;
+    while not Eof do
+    begin
+     glevon:=glevon+fieldbyName('ossztomeg').AsFloat;
+     next;
+    end;
+    First;
+    EnableControls;
+  end;
+  sp_tomeg_levon.Value:=Round(glevon);
+//  OnActivate:=MjegyF.OnActivate;
+end;
+
 procedure TMjegyF.btnlevon_szovegClick(Sender: TObject);
 begin
  try
@@ -1191,7 +1223,7 @@ var sorsz,pcime,tablaneve:String;
      Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //üresre teszem mindig
     end;
      while Mjegy_nyom_rec=nil do Sleep(200);
-
+     AF.gongy_osszevon_nyom;
      with Mjegy_nyom_rec do
       begin
        Id:=0;
@@ -1257,8 +1289,21 @@ var sorsz,pcime,tablaneve:String;
        Tort_tomeg:=IntToStr(Round(nyers_tort_szemek_tomege))+' kg';
        Hekto_latszik:=sphekto.Visible and (Irany[1]='B');
        Hekto:=sphekto.Value.ToString;
-       Brutto:=spBrutto.Value.ToString+' kg';
-       Tara:=sptara.Value.ToString+' kg';
+
+       elso_gongy_tomeg:=FloatToStr(af.gongy_osszead('1'));
+       masodik_gongy_tomeg:=FloatToStr(af.gongy_osszead('2'));
+       if gongyolegek_latszanak then
+        begin
+//          Brutto:=spBrutto.Value.ToString;
+//          Tara:=sptara.Value.ToString;
+         Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(elso_gongy_tomeg))));
+         Tara:=IntToStr(sptara.Value-(Round(StrToFloat(masodik_gongy_tomeg))));
+        end
+        else
+        begin
+         Brutto:=spBrutto.Value.ToString+' kg';
+         Tara:=sptara.Value.ToString+' kg';
+        end;
        Sz_netto:=Spsznetto.Value.ToString+' kg';
        Netto:=spnetto.Value.ToString+' kg';
        Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
@@ -1284,7 +1329,7 @@ var sorsz,pcime,tablaneve:String;
         begin
           Close;
           SQL.Clear;
-          SQL.Add('SELECT id,Sorszam from merlegjegy WHERE Eazon='+#39+ea+#39);
+          SQL.Add('SELECT id,Sorszam from '+tablaneve+' WHERE Eazon='+#39+ea+#39);
           Open();
           result:=FieldByName('Sorszam').AsString;
           ujid:=FieldByName('id').AsInteger;
@@ -1540,7 +1585,7 @@ begin
            ParamByName('tavido').AsTime:=Time;
          end;
        end
-       else
+      else
        begin
          ParamByName('tavdatum').AsDate:=StrToDate(lblelsodat.Caption);
          ParamByName('tavido').AsTime:=StrToTime(lblelsoido.Caption);
@@ -1681,6 +1726,11 @@ begin
         SQL.Add('DELETE FROM nyitbe');
         SQL.Add('WHERE eazon= '+#39+AF.NyitbeQ.FieldByName('Eazon').AsString+#39);
         ExecSQL;
+        Close;
+        SQL.Clear;
+        SQL.Add('DELETE FROM nyitbe_gongyoleg');
+        SQL.Add('WHERE m_id= '+#39+AF.NyitbeQ.FieldByName('ID').AsString+#39);
+        ExecSQL;
       end;
       //keszletezes
       if Sender <>btnFolytatasos_mentes then
@@ -1701,6 +1751,9 @@ begin
              end;
         end;
       sorsz:=mentett_sorsz_lekerese(egyedi_azonosito);
+      //göngyölegek mentése
+      if gongyolegek_latszanak then AF.csat_gongy_ment(tablaneve,ujid);
+
       if Sender=btnNyomtatas then
       begin
         psz:=0;
@@ -2173,7 +2226,7 @@ begin
   AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
                  SpAlapnedv.Value, Sptort.Value,sp_tomeg_levon.Value,chkkuk.Checked);
  finally
-  spSznetto.Value:=Round(szaritott_netto_tomege);
+  spSznetto.Value:=Round(szaritott_netto_tomege);//-sp_tomeg_levon.Value;
  end;
 
   exit;
@@ -2342,6 +2395,7 @@ begin
   end;
   levonlookup.KeyValue:='!';
   levonlookupChange(self);
+  af.csat_gongy_ures;
 end;
 
 end.
