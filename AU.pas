@@ -2114,6 +2114,7 @@ begin
      Next;
     end;
     csatgongy_masol:=False;
+    mem_csatgongy.Refresh;
     Close;
   end;
 end;

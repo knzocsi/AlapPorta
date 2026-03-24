@@ -602,14 +602,23 @@ begin
         begin
          Brutto:=mjegyekQ.FieldByName('Brutto').AsString+' kg';
          Tara:=mjegyekQ.FieldByName('Tara').AsString+' kg';
+         Sz_netto:=mjegyekQ.FieldByName('SzNetto').AsString+' kg';
         end
         else
         begin
-         Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
-         Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
-        end;
+         case mjegyekQ.FieldByName('irany').AsString[1] of
+           'B' : begin
+                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
+                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
 
-       Sz_netto:=mjegyekQ.FieldByName('SzNetto').AsString+' kg';
+                 end;
+           'K' : begin
+                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
+                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
+                 end;
+         end;
+         Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
+        end;
        Netto:=mjegyekQ.FieldByName('Netto').AsString+' kg';
        Termek_ar:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
        Tomeg_levon_ny:=mjegyekQ.FieldByName('levon_tomeg').AsString+' kg';

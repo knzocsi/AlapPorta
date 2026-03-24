@@ -302,10 +302,30 @@ begin
       end;
      end;
      //tömegek
-     if TfrxMemoView(FindObject('membrutto'))<>nil then
-      TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
-     if TfrxMemoView(FindObject('memtara'))<>nil then
-      TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+     if not gongyolegek_latszanak then
+      begin
+       if TfrxMemoView(FindObject('membrutto'))<>nil then
+        TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+       if TfrxMemoView(FindObject('memtara'))<>nil then
+        TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+      end
+     else
+      begin
+       case Mjegy_nyom_rec.Irany[1] of
+        'B':begin
+             if TfrxMemoView(FindObject('membrutto'))<>nil then
+              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+             if TfrxMemoView(FindObject('memtara'))<>nil then
+              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+            end;
+        'K':begin
+             if TfrxMemoView(FindObject('membrutto'))<>nil then
+              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Tara;
+             if TfrxMemoView(FindObject('memtara'))<>nil then
+              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Brutto;
+            end;
+       end;
+      end;
      if TfrxMemoView(FindObject('memnetto'))<>nil then
       TfrxMemoView(FindObject('memnetto')).Text:=Mjegy_nyom_rec.Netto;
      if TfrxMemoView(FindObject('memsznetto'))<>nil then
@@ -347,6 +367,21 @@ begin
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
      if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then
       TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy or gongyolegek_latszanak;
+
+//      case Mjegy_nyom_rec.Irany[1] of
+//        'B':begin
+//             if TfrxMemoView(FindObject('membrutto'))<>nil then
+//              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+//             if TfrxMemoView(FindObject('memtara'))<>nil then
+//              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+//            end;
+//        'K':begin
+//             if TfrxMemoView(FindObject('membrutto'))<>nil then
+//              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Tara;
+//             if TfrxMemoView(FindObject('memtara'))<>nil then
+//              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Brutto;
+//            end;
+//       end;
 
      if TfrxMemoView(FindObject('memkezdogongykg'))<>nil then
       TfrxMemoView(FindObject('memkezdogongykg')).text:=Mjegy_nyom_rec.elso_gongy_tomeg;

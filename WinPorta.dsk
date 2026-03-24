@@ -15,9 +15,9 @@ File_12=TSourceModule,'C:\Program Files (x86)\FastReports\LibD27\fs_isysrtti.pas
 
 [Modules]
 Module0=N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas
-Module1=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
-Module2=default.htm
-Module3=N:\Delphi_10_4\Merleges\Alap\WinPorta.dproj
+Module1=default.htm
+Module2=N:\Delphi_10_4\Merleges\Alap\WinPorta.dproj
+Module3=N:\Delphi_10_4\Merleges\Alap\NezetU.pas
 Module4=N:\Delphi_10_4\Merleges\Alap\mjegyU.pas
 Module5=N:\Delphi_10_4\Merleges\Alap\AU.pas
 Module6=N:\Delphi_10_4\Merleges\Alap\MjegyListaU.pas
@@ -37,14 +37,14 @@ EditWindowCount=1
 [N:\Delphi_10_4\Merleges\Alap\SOAP\DMSoapU.pas]
 ModuleType=TSourceModule
 
-[N:\Delphi_10_4\Merleges\Alap\NezetU.pas]
-ModuleType=TSourceModule
-
 [default.htm]
 ModuleType=TURLModule
 
 [N:\Delphi_10_4\Merleges\Alap\WinPorta.dproj]
 ModuleType=TBaseProject
+
+[N:\Delphi_10_4\Merleges\Alap\NezetU.pas]
+ModuleType=TSourceModule
 
 [N:\Delphi_10_4\Merleges\Alap\mjegyU.pas]
 ModuleType=TSourceModule
@@ -113,20 +113,20 @@ State=0
 Left=0
 Top=0
 Width=9917
-Height=8117
+Height=8408
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=9917
-ClientHeight=8117
+ClientHeight=8408
 DockedToMainForm=1
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
 LeftPanelSize=1589
 LeftPanelClients=PropertyInspector,DockSite3
-LeftPanelData=00000800010100000000790C00000000000001350600000000000001000000005C0E000009000000446F636B53697465330100000000EC1700001100000050726F7065727479496E73706563746F72FFFFFFFF
+LeftPanelData=000008000101000000000B0D00000000000001350600000000000001000000005C0E000009000000446F636B53697465330100000000041900001100000050726F7065727479496E73706563746F72FFFFFFFF
 RightPanelSize=2000
 RightPanelClients=DockSite2,DockSite4,DockSite0
-RightPanelData=00000800010100000000790C00000000000001D0070000000000000100000002431200000000000002000000004D0A000009000000446F636B53697465300200000000FC0E000009000000446F636B53697465320100000000EC17000009000000446F636B5369746534FFFFFFFF
+RightPanelData=000008000101000000000B0D00000000000001D0070000000000000100000002431200000000000002000000004D0A000009000000446F636B53697465300200000000FC0E000009000000446F636B536974653201000000000419000009000000446F636B5369746534FFFFFFFF
 BottomPanelSize=1588
 BottomPanelClients=DockSite1,MessageView
 BottomPanelData=0000080001020100000009000000446F636B53697465314D4A00000000000002340600000000000001000000004D4A00000F0000004D65737361676556696577466F726DFFFFFFFF
@@ -146,7 +146,7 @@ CursorY=2692
 TopLine=2678
 LeftCol=1
 Elisions=
-Bookmarks={0,3605,1}{1,1257,6}{2,3986,1}{3,3774,1}{4,4031,1}{5,2449,1}{6,3199,1}{7,2369,1}{8,368,1}{9,1843,11}
+Bookmarks={0,3605,1}{1,1257,6}{2,3986,1}{3,3774,1}{4,4031,1}{5,2449,1}{6,3199,1}{7,2369,1}{8,368,1}{9,1843,10}
 EditViewName=N:\Delphi_10_4\Merleges\Alap\FoU.pas
 
 [View2]
@@ -380,7 +380,7 @@ MaxWidth=5078
 MaxHeight=8512
 ClientWidth=10000
 ClientHeight=10083
-BottomPanelSize=7792
+BottomPanelSize=8072
 BottomPanelClients=EditWindow0
 BottomPanelData=0000080000000000000000000000000000000000000000000000000100000000000000000C0000004564697457696E646F775F30FFFFFFFF
 
@@ -457,11 +457,11 @@ State=0
 Left=0
 Top=0
 Width=2000
-Height=1217
+Height=1509
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=1217
+ClientHeight=1509
 TBDockHeight=7159
 LRDockWidth=2000
 Dockable=1
@@ -476,11 +476,11 @@ State=0
 Left=0
 Top=396
 Width=1589
-Height=2258
+Height=2549
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1589
-ClientHeight=2258
+ClientHeight=2549
 TBDockHeight=8117
 LRDockWidth=1589
 Dockable=1
@@ -961,11 +961,11 @@ State=0
 Left=0
 Top=496
 Width=2000
-Height=1217
+Height=1509
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=2000
-ClientHeight=1217
+ClientHeight=1509
 TBDockHeight=8117
 LRDockWidth=2000
 Dockable=1

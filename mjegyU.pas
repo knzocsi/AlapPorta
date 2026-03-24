@@ -568,11 +568,27 @@ begin
     sptort.Value:=FieldByName('tortszaz').Value;
     edmegjegy.text:=FieldByName('megjegyzes').AsString;
     edekaer.Text:=FieldByName('ekaer').AsString;
-    spbrutto.Value:=FieldByName('brutto').AsInteger;
-    sptara.Value:=FieldByName('tara').AsInteger;
-    spnetto.Value:=FieldByName('netto').AsInteger;
-    sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
-    spsznetto.Value:=FieldByName('sznetto').AsInteger;
+
+    case cbxIrany.Itemindex of
+    1:begin
+       spbrutto.Value:=FieldByName('brutto').AsInteger;
+       sptara.Value:=FieldByName('tara').AsInteger;
+       lblTomeg1.Caption:=spBrutto.Text;
+       lblTomeg2.Caption:=spTara.Text;
+       spnetto.Value:=FieldByName('netto').AsInteger;
+       sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+       spsznetto.Value:=0;
+      end;
+    2:begin
+       spbrutto.Value:=FieldByName('tara').AsInteger;
+       sptara.Value:=FieldByName('brutto').AsInteger;
+       lblTomeg1.Caption:=sptara.Text;
+       lblTomeg2.Caption:=spbrutto.Text;
+       spnetto.Value:=0;
+       sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+       spsznetto.Value:=0;
+      end;
+    end;
     edszallev.text:=FieldByName('szallitolev').AsString;
     cbxRendszam1.Text:=FieldByName('rendszam').AsString;
     cbxRendszam2.Text:=FieldByName('rendszam2').AsString;
@@ -589,20 +605,19 @@ begin
     kepek_tomb[4]:=FieldByName('kepnev4').AsString;
     jpeg_betoltese(kepek_tomb[4],kep4,okep4);
     //ÖCSI 26.03.23
-//    lblTomeg1.Caption:=spBrutto.Text;
-//    lblTomeg2.Caption:=spTara.Text;
-    case cbxIrany.Itemindex of // EZT NEM ÉRTEM, ATTÓl AZ 1. MÉRÉS MÉG AZ ELSÕ
-      1 :                      //ELÉG LENNE CSAK SZÁMOLÁSKOR MEGCSERÉLNI
-        begin
-          lblTomeg1.Caption:=spBrutto.Text;
-          lblTomeg2.Caption:=spTara.Text;
-        end;
-      2 :
-        begin
-          lblTomeg2.Caption:=spBrutto.Text;
-          lblTomeg1.Caption:=spTara.Text;
-        end;
-    end;
+
+//    case cbxIrany.Itemindex of // EZT NEM ÉRTEM, ATTÓl AZ 1. MÉRÉS MÉG AZ ELSÕ
+//      1 :                      //ELÉG LENNE CSAK SZÁMOLÁSKOR MEGCSERÉLNI
+//        begin
+//          lblTomeg1.Caption:=spBrutto.Text;
+//          lblTomeg2.Caption:=spTara.Text;
+//        end;
+//      2 :
+//        begin
+//          lblTomeg2.Caption:=spBrutto.Text;
+//          lblTomeg1.Caption:=spTara.Text;
+//        end;
+//    end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
     af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
   end;
@@ -1187,6 +1202,7 @@ begin
     DisableControls;
     while not Eof do
     begin
+     if FieldByName('elso').AsBoolean=(lblmasdat.Caption='') then
      glevon:=glevon+fieldbyName('ossztomeg').AsFloat;
      next;
     end;
@@ -1294,17 +1310,26 @@ var sorsz,pcime,tablaneve:String;
        masodik_gongy_tomeg:=FloatToStr(af.gongy_osszead('2'));
        if gongyolegek_latszanak then
         begin
-//          Brutto:=spBrutto.Value.ToString;
-//          Tara:=sptara.Value.ToString;
-         Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(elso_gongy_tomeg))));
-         Tara:=IntToStr(sptara.Value-(Round(StrToFloat(masodik_gongy_tomeg))));
+         case cbxIrany.Text[1] of
+           'B' : begin
+                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(elso_gongy_tomeg))));
+                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(masodik_gongy_tomeg))));
+
+                 end;
+           'K' : begin
+                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(masodik_gongy_tomeg))));
+                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(elso_gongy_tomeg))));
+                 end;
+         end;
+         Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
         end
         else
         begin
          Brutto:=spBrutto.Value.ToString+' kg';
          Tara:=sptara.Value.ToString+' kg';
+         Sz_netto:=Spsznetto.Value.ToString+' kg';
         end;
-       Sz_netto:=Spsznetto.Value.ToString+' kg';
+
        Netto:=spnetto.Value.ToString+' kg';
        Termek_ar:=termeklist.FieldByName('ar').AsString+' Ft';
        Tomeg_levon_ny:=Sp_tomeg_levon.Value.ToString+' kg';
