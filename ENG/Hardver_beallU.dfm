@@ -56,6 +56,7 @@ object Hardver_beallF: THardver_beallF
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
+        OnDrawColumnCell = DBGrid1DrawColumnCell
       end
     end
     object tsReszletek: TTabSheet
@@ -233,10 +234,10 @@ object Hardver_beallF: THardver_beallF
       object DBNavigator1: TDBNavigator
         Left = 406
         Top = 3
-        Width = 215
+        Width = 210
         Height = 25
         DataSource = AF.HardverDS
-        VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+        VisibleButtons = [nbPrior, nbNext, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
         TabOrder = 0
         OnClick = DBNavigator1Click
       end
@@ -264,7 +265,8 @@ object Hardver_beallF: THardver_beallF
           'PLC485'
           'IO_Panel'
           'USB'
-          'KAMERA')
+          'KAMERA'
+          'RELAYDROID')
         TabOrder = 8
       end
       object dcbEgyedi: TDBComboBox

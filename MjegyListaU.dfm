@@ -269,6 +269,15 @@ object MjegyekF: TMjegyekF
       TabOrder = 15
       OnChange = piBefejezoDatumChange
     end
+    object Button4: TButton
+      Left = 1046
+      Top = 21
+      Width = 75
+      Height = 25
+      Caption = 'Export'
+      TabOrder = 16
+      OnClick = Button4Click
+    end
   end
   object Panel2: TPanel
     Left = 0
@@ -311,22 +320,13 @@ object MjegyekF: TMjegyekF
       TabOrder = 1
       Value = 0
     end
-    object Button4: TButton
-      Left = 904
-      Top = 8
-      Width = 75
-      Height = 25
-      Caption = 'Export'
-      TabOrder = 2
-      OnClick = Button4Click
-    end
     object btnelozmenyek: TButton
       Left = 752
       Top = 8
       Width = 123
       Height = 25
       Caption = 'M'#233'rlegjegy el'#337'zm'#233'nyei'
-      TabOrder = 3
+      TabOrder = 2
       OnClick = btnelozmenyekClick
     end
     object btntermenyszaritas: TButton
@@ -335,7 +335,7 @@ object MjegyekF: TMjegyekF
       Width = 186
       Height = 25
       Caption = 'Term'#233'nysz'#225'r'#237't'#225's elsz'#225'mol'#225'sa'
-      TabOrder = 4
+      TabOrder = 3
       OnClick = btntermenyszaritasClick
     end
   end
@@ -763,6 +763,7 @@ object MjegyekF: TMjegyekF
       TitleFont.Style = []
       OnCellClick = mlistaGridCellClick
       OnDblClick = mlistaGridDblClick
+      OnKeyUp = mlistaGridKeyUp
       OnMouseUp = mlistaGridMouseUp
       SelectColumnsDialogStrings.Caption = 'Select columns'
       SelectColumnsDialogStrings.OK = '&OK'
@@ -780,6 +781,7 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'Sorszam'
           Title.Caption = 'Sorsz'#225'm'
+          Width = 80
           Visible = True
         end
         item
@@ -795,18 +797,21 @@ object MjegyekF: TMjegyekF
         item
           Expanded = False
           FieldName = 'Storno'
+          Width = 50
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Rendszam'
           Title.Caption = 'Rendsz'#225'm'
+          Width = 60
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Rendszam2'
           Title.Caption = 'Rendsz'#225'm 2'
+          Width = 60
           Visible = True
         end
         item
@@ -818,12 +823,14 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'P_Kod'
           Title.Caption = 'Part.k'#243'd'
+          Width = 50
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'P_Nev'
           Title.Caption = 'Part.n'#233'v'
+          Width = 120
           Visible = True
         end
         item
@@ -840,12 +847,14 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'Termek_Kod'
           Title.Caption = 'Term'#233'k k'#243'd'
+          Width = 60
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Termek_Nev'
           Title.Caption = 'Term'#233'k n'#233'v'
+          Width = 120
           Visible = True
         end
         item
@@ -863,108 +872,126 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'Szallitolev'
           Title.Caption = 'Sz'#225'll'#237't'#243'lev'#233'l'
+          Width = 80
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Megjegyzes'
           Title.Caption = 'Megjegyz'#233's'
+          Width = 80
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Tomegbe'
           Title.Caption = 'T'#246'meg be'
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Tomegki'
           Title.Caption = 'T'#246'meg ki'
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Erkdatum'
           Title.Caption = #201'rk.d'#225'tum'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Erkido'
           Title.Caption = #201'rk.id'#337
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Tavdatum'
           Title.Caption = 'T'#225'v.datum'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Tavido'
           Title.Caption = 'T'#225'v.id'#337
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Felhasznalo'
           Title.Caption = 'Felhaszn'#225'l'#243
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'irany'
           Title.Caption = 'Ir'#225'ny'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Brutto'
           Title.Caption = 'Brutt'#243
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Tara'
           Title.Caption = 'T'#225'ra'
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'Netto'
           Title.Caption = 'Nett'#243
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'SzNetto'
           Title.Caption = 'Sz.Nett'#243
+          Width = 70
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'merlegelo'
           Title.Caption = 'M'#233'rlegel'#337
+          Width = 100
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'kuj'
           Title.Caption = 'K'#220'J'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'ktj'
           Title.Caption = 'KTJ'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'ekaer'
           Title.Caption = 'EK'#193'ER'
+          Width = 80
           Visible = True
         end
         item
@@ -976,48 +1003,56 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'alapnedv'
           Title.Caption = 'Alapnedv'
+          Width = 55
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'nedv'
           Title.Caption = 'Nedv.'
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tisztasag'
           Title.Caption = 'Tisztas'#225'g'
+          Width = 60
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tortszaz'
           Title.Caption = 'T'#246'rt%'
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'feherje'
           Title.Caption = 'Feh'#233'rje%'
+          Width = 52
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'olaj'
           Title.Caption = 'Olaj%'
+          Width = 40
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'esesszam'
           Title.Caption = 'Es'#233'ssz'
+          Width = 50
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'hekto'
           Title.Caption = 'Hekt'#243
+          Width = 50
           Visible = True
         end
         item
@@ -1039,6 +1074,7 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'buzaminoseg'
           Title.Caption = 'B'#250'zamin'#337's'#233'g'
+          Width = 66
           Visible = True
         end
         item
@@ -1050,29 +1086,33 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'tarolasi_dij'
           Title.Caption = 'T'#225'rol'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'szaritasi_dij'
           Title.Caption = 'Sz'#225'r'#237't'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tisztitasi_dij'
           Title.Caption = 'Tiszt'#237't'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'tarolo_id'
-          Visible = True
+          Visible = False
         end
         item
           Expanded = False
           FieldName = 'tarolo'
           Title.Caption = 'T'#225'rol'#243
+          Width = 65
           Visible = True
         end
         item
@@ -1129,12 +1169,14 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'P2_Kod'
           Title.Caption = 'Part.k'#243'd2'
+          Width = 60
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'P2_Nev'
           Title.Caption = 'Part.n'#233'v2'
+          Width = 100
           Visible = True
         end
         item
@@ -1206,18 +1248,21 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'betarolasi_dij'
           Title.Caption = 'Bet'#225'rol'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'kitarolasi_dij'
           Title.Caption = 'Kit'#225'rol'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'szallitasi_dij'
           Title.Caption = 'Sz'#225'll'#237't'#225'si d'#237'j'
+          Width = 65
           Visible = True
         end
         item
@@ -1229,12 +1274,14 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'P3_Kod'
           Title.Caption = 'Part.k'#243'd3'
+          Width = 60
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'P3_Nev'
           Title.Caption = 'Part.n'#233'v3'
+          Width = 100
           Visible = True
         end
         item
@@ -1256,18 +1303,21 @@ object MjegyekF: TMjegyekF
           Expanded = False
           FieldName = 'itj'
           Title.Caption = 'VTSZ/ITJ'
+          Width = 65
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'szarmazasi_hely'
           Title.Caption = 'Sz'#225'rmaz'#225'si hely'
+          Width = 100
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'siker'
           Title.Caption = 'Sik'#233'r'
+          Width = 40
           Visible = True
         end>
     end

@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">45873.3560648148</prop>
-        <prop prop-type="OrigDateTime">45764.3752314815</prop>
-        <prop prop-type="XlatDateTime">45581.337037037</prop>
+        <prop prop-type="SelfDateTime">46106.4017824074</prop>
+        <prop prop-type="OrigDateTime">45909.4206944444</prop>
+        <prop prop-type="XlatDateTime">45581.2953703704</prop>
         <prop prop-type="Translated">1</prop>
         <prop prop-type="UnTranslated">69</prop>
       </prop-group>
@@ -140,7 +140,7 @@
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:NagykamF.O:campagc.ActivePage" resname="O:NagykamF.O:campagc.ActivePage">
-        <source>cam6</source>
+        <source>cam7</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422158681</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TPageControl</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

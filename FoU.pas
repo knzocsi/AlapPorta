@@ -1396,6 +1396,7 @@ begin
     AF.NyitbeQ.Close;
     AF.NyitbeQ.MacroByName('SZURES').AsRaw := 'WHERE Torolve=0';
     AF.NyitbeQ.open;
+    dbgNyitbe.Columns[0].Visible:=Hivoszamhasznalat;
   end;
   if forgalom_latszik then
     pcTablak.ActivePage := tbForgalom;

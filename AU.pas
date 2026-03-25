@@ -635,7 +635,7 @@ var
   gongyolegek_latszanak: Boolean= False;
 
   csatgongy_masol:Boolean;
-
+  beszallito_beszallitaskor:Boolean=False;
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
      DMSoapU, UzenetekU,DmEKAERU;
@@ -1603,6 +1603,9 @@ begin
   ekaer_mappa:=cfg_kezel('EKÁER mappa','EKÁER','Ekaer mappa','String',ExtractFileDir(ExtractFilePath(application.exename))+'\EKAER');
 
   gongyolegek_latszanak:=cfg_kezel('','ALAP','Göngyölegek látszanak','Boolean',gongyolegek_latszanak);
+
+  beszallito_beszallitaskor :=cfg_kezel('Mérlegjegyen beszállításkor megrendelõ helyett beszállító',
+   'ALAP','Beszállító beszállításkor','Boolean',beszallito_beszallitaskor);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);

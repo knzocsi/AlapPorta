@@ -2,6 +2,15 @@
 
 library WinPorta;
 
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Arfoly_ekaerU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\DmEKAERU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Ekaer_DlgU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Ekaer_FelrakCimekU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Ekaer_hibakU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Ekaer_LerakCimekU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\ekaer_lezarasU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\Ekaer_my_sqlU.dfm}
+{ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\EKAER\EkaerU.dfm}
 {ITE} {DFMFileType} {N\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm}
 {ITE} {DFMFileType} {AlapbemodU.dfm}
 {ITE} {DFMFileType} {AU.dfm}
@@ -10,22 +19,22 @@ library WinPorta;
 {ITE} {DFMFileType} {DijakU.dfm}
 {ITE} {DFMFileType} {dijszab_termekU.dfm}
 {ITE} {DFMFileType} {dijszabU.dfm}
-{ITE} {DFMFileType} {EkaerU.dfm}
 {ITE} {DFMFileType} {FelhaszU.dfm}
-{ITE} {DFMFileType} {FelrakCimekU.dfm}
 {ITE} {DFMFileType} {ForgalomU.dfm}
 {ITE} {DFMFileType} {FoU.dfm}
 {ITE} {DFMFileType} {FTP\ftpDlU.dfm}
+{ITE} {DFMFileType} {GongyCsatU.dfm}
+{ITE} {DFMFileType} {GongyoloegekFU.dfm}
 {ITE} {DFMFileType} {Hardver_beallU.dfm}
 {ITE} {DFMFileType} {ImportU.dfm}
 {ITE} {DFMFileType} {KepekU.dfm}
 {ITE} {DFMFileType} {KeszletU.dfm}
 {ITE} {DFMFileType} {kezdokeszletU.dfm}
 {ITE} {DFMFileType} {kodu.dfm}
-{ITE} {DFMFileType} {LerakCimekU.dfm}
 {ITE} {DFMFileType} {levon_szovegekU.dfm}
 {ITE} {DFMFileType} {LibreExcelU.dfm}
 {ITE} {DFMFileType} {Meres_MerlegjegyenU.dfm}
+{ITE} {DFMFileType} {MeresTipusValasztasU.dfm}
 {ITE} {DFMFileType} {MeresU.dfm}
 {ITE} {DFMFileType} {MerlegelesekU.dfm}
 {ITE} {DFMFileType} {MerlegkezelokU.dfm}
@@ -56,6 +65,15 @@ library WinPorta;
 {ITE} {DFMFileType} {VarakozasU.dfm}
 {ITE} {RCFileType} {Win32\Debug\WinPorta_DRC.rc}
 
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Arfoly_ekaerU.dfm' 'Arfoly_ekaerF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\DmEKAERU.dfm' 'DmEkaer:TDataModule'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Ekaer_DlgU.dfm' 'ekaer_dlgF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Ekaer_FelrakCimekU.dfm' 'felrakcimekF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Ekaer_hibakU.dfm' 'Ekaer_hibakF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Ekaer_LerakCimekU.dfm' 'LerakCimekF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\ekaer_lezarasU.dfm' 'ekaer_lezarasF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\Ekaer_my_sqlU.dfm' 'Ekaer_MySQLF:TForm'}
+{$R 'N\Delphi_10_4\Egyeb\EKAER\EkaerU.dfm' 'EkaerF:TForm'}
 {$R 'N\Delphi_10_4\Egyeb\MySQLDBExport\DmDbMentU.dfm' 'DmDbMentF:TDataModule'}
 {$R 'AlapbemodU.dfm' 'AlapbemodF:TForm'}
 {$R 'AU.dfm' 'AF:TDataModule'}
@@ -64,22 +82,22 @@ library WinPorta;
 {$R 'DijakU.dfm' 'DijakF:TForm'}
 {$R 'dijszab_termekU.dfm' 'dijszab_termekF:TForm'}
 {$R 'dijszabU.dfm' 'dijszabF:TForm'}
-{$R 'EkaerU.dfm' 'EkaerF:TForm'}
 {$R 'FelhaszU.dfm' 'FelhaszF:TForm'}
-{$R 'FelrakCimekU.dfm' 'FelrakcimekF:TForm'}
 {$R 'ForgalomU.dfm' 'ForgalomF:TForm'}
 {$R 'FoU.dfm' 'FoF:TForm'}
 {$R 'FTP\ftpDlU.dfm' 'ftpF:TForm'}
+{$R 'GongyCsatU.dfm' 'GongyCsatF:TForm'}
+{$R 'GongyoloegekFU.dfm' 'GongyoloegekF:TForm'}
 {$R 'Hardver_beallU.dfm' 'Hardver_beallF:TForm'}
 {$R 'ImportU.dfm' 'ImportF:TForm'}
 {$R 'KepekU.dfm' 'KepekF:TForm'}
 {$R 'KeszletU.dfm' 'KeszletF:TForm'}
 {$R 'kezdokeszletU.dfm' 'kezdokeszletF:TForm'}
 {$R 'kodu.dfm' 'kodF:TForm'}
-{$R 'LerakCimekU.dfm' 'LerakCimekF:TForm'}
 {$R 'levon_szovegekU.dfm' 'levon_szovegekF:TForm'}
 {$R 'LibreExcelU.dfm' 'LibreExcelF:TForm'}
 {$R 'Meres_MerlegjegyenU.dfm' 'Meres_MerlegjegyenF:TForm'}
+{$R 'MeresTipusValasztasU.dfm' 'MeresTipusValasztasF:TForm'}
 {$R 'MeresU.dfm' 'MeresF:TForm'}
 {$R 'MerlegelesekU.dfm' 'MerlegelesekF:TForm'}
 {$R 'MerlegkezelokU.dfm' 'MerlegkezelokF:TForm'}

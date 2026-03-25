@@ -83,6 +83,18 @@
 			<File FileName="Tulajok.dfm" ContainerId="W32Form" ModuleName="Tulajok.dfm"/>
 			<File FileName="VarakozasU.dfm" ContainerId="W32Form" ModuleName="VarakozasU.dfm"/>
 			<File FileName="Win32\Debug\WinPorta_DRC.rc" ContainerId="W32RC" ModuleName="WinPorta_DRC.rc"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Arfoly_ekaerU.dfm" ContainerId="W32Form" ModuleName="Arfoly_ekaerU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\DmEKAERU.dfm" ContainerId="W32Form" ModuleName="DmEKAERU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Ekaer_DlgU.dfm" ContainerId="W32Form" ModuleName="Ekaer_DlgU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Ekaer_FelrakCimekU.dfm" ContainerId="W32Form" ModuleName="Ekaer_FelrakCimekU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Ekaer_hibakU.dfm" ContainerId="W32Form" ModuleName="Ekaer_hibakU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Ekaer_LerakCimekU.dfm" ContainerId="W32Form" ModuleName="Ekaer_LerakCimekU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\ekaer_lezarasU.dfm" ContainerId="W32Form" ModuleName="ekaer_lezarasU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\Ekaer_my_sqlU.dfm" ContainerId="W32Form" ModuleName="Ekaer_my_sqlU.dfm"/>
+			<File FileName="N\Delphi_10_4\Egyeb\EKAER\EkaerU.dfm" ContainerId="W32Form" ModuleName="EkaerU.dfm"/>
+			<File FileName="GongyCsatU.dfm" ContainerId="W32Form" ModuleName="GongyCsatU.dfm"/>
+			<File FileName="GongyoloegekFU.dfm" ContainerId="W32Form" ModuleName="GongyoloegekFU.dfm"/>
+			<File FileName="MeresTipusValasztasU.dfm" ContainerId="W32Form" ModuleName="MeresTipusValasztasU.dfm"/>
 		</FileList>
 	</W32ResourceDLL.Personality>
 </BorlandProject>

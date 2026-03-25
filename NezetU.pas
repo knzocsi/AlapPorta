@@ -312,12 +312,12 @@ begin
      else
       begin
        case Mjegy_nyom_rec.Irany[1] of
-        'B':begin
-             if TfrxMemoView(FindObject('membrutto'))<>nil then
-              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
-             if TfrxMemoView(FindObject('memtara'))<>nil then
-              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
-            end;
+        'B','T':begin
+                 if TfrxMemoView(FindObject('membrutto'))<>nil then
+                  TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+                 if TfrxMemoView(FindObject('memtara'))<>nil then
+                  TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+                end;
         'K':begin
              if TfrxMemoView(FindObject('membrutto'))<>nil then
               TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Tara;

@@ -479,7 +479,8 @@ object MjegyF: TMjegyF
         '----Not selected----'
         'In'
         'Out'
-        'Idegen m'#233'r'#233's')
+        'Idegen m'#233'r'#233's'
+        'T'#246'meg m'#233'r'#233's')
     end
     object btnMentes: TButton
       Left = 1032
@@ -1116,7 +1117,6 @@ object MjegyF: TMjegyF
       LookupDisplay = 'nev;cim;'
       LookupSource = Partnerlist3Ds
       TabOrder = 37
-      OnChange = partnerlookup2Change
     end
     object cbxszar: TComboBox
       Left = 752
@@ -1133,6 +1133,15 @@ object MjegyF: TMjegyF
       Height = 17
       Caption = 'IDEGEN M'#201'R'#201'S'
       TabOrder = 39
+    end
+    object btngongy: TButton
+      Left = 600
+      Top = 29
+      Width = 75
+      Height = 25
+      Caption = 'G'#246'ngy'#246'legek'
+      TabOrder = 40
+      OnClick = btngongyClick
     end
   end
   object pnlFelso: TPanel

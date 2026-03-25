@@ -104,12 +104,28 @@ object FoF: TFoF
               Color = clLime
               Expanded = False
               FieldName = 'Rendszam'
+              Width = 70
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
               FieldName = 'Rendszam2'
+              Width = 70
+              Visible = True
+            end
+            item
+              Color = clLime
+              Expanded = False
+              FieldName = 'P_Nev'
+              Width = 120
+              Visible = True
+            end
+            item
+              Color = clLime
+              Expanded = False
+              FieldName = 'P2_Nev'
+              Width = 120
               Visible = True
             end
             item
@@ -133,20 +149,6 @@ object FoF: TFoF
               Color = clLime
               Expanded = False
               FieldName = 'irany'
-              Visible = True
-            end
-            item
-              Color = clLime
-              Expanded = False
-              FieldName = 'P_Nev'
-              Width = 252
-              Visible = True
-            end
-            item
-              Color = clLime
-              Expanded = False
-              FieldName = 'P2_Nev'
-              Width = 185
               Visible = True
             end
             item

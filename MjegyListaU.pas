@@ -42,7 +42,6 @@ type
     cbxirany: TComboBox;
     Label8: TLabel;
     cbxrendsz: TComboBox;
-    Button4: TButton;
     tulajlookup: TJvDBLookupCombo;
     lblbizki: TLabel;
     chkstorno: TCheckBox;
@@ -139,6 +138,7 @@ type
     FDTable1: TFDTable;
     piKezdoDatum: TJvDateEdit;
     piBefejezoDatum: TJvDateEdit;
+    Button4: TButton;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -161,12 +161,15 @@ type
     procedure Button1Click(Sender: TObject);
     procedure chkKepekClick(Sender: TObject);
     procedure mlistaGridCellClick(Column: TColumn);
+    procedure mlistaGridKeyUp(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     { Private declarations }
     procedure szures;
     procedure szazalek;
     procedure elokeszit(stfelirat:String);
     procedure partnerek_intervallomra;
+    procedure kepek_betoltese;
   public
     { Public declarations }
   end;
@@ -530,16 +533,29 @@ begin
        Tulaj_cjsz:=mjegyekQ.FieldByName('tul_cjsz').AsString;
        Tulaj_telefon:=tulajTTelefon.AsString;
        Tulaj_KUJKTJ:=tulajTkuj.AsString+'/'+tulajTktj.AsString;
+       {if not beszallito_beszallitaskor then lblpartner.Caption:=rsMegrendelo
+        else lblpartner.Caption:=rsBeszallito;}
        case mjegyekQ.FieldByName('irany').AsString[1] of
        'B':begin
-            Partner1_felirat:='Átadó:';
-            Partner2_felirat:='Átvevõ:';
+            if not beszallito_beszallitaskor then Partner1_felirat:=rsMegrendelo
+            else Partner1_felirat:=rsBeszallito;
+            Partner2_felirat:=rsAtvevo;
            end;
        'K':begin
-            Partner1_felirat:='Eladó:';
-            Partner2_felirat:='Vevõ:';
+            Partner1_felirat:=rsErtekesito;
+            Partner2_felirat:=rsVevo;
            end;
        end;
+//       case mjegyekQ.FieldByName('irany').AsString[1] of
+//       'B':begin
+//            Partner1_felirat:='Átadó:';
+//            Partner2_felirat:='Átvevõ:';
+//           end;
+//       'K':begin
+//            Partner1_felirat:='Eladó:';
+//            Partner2_felirat:='Vevõ:';
+//           end;
+//       end;
        Partner1_nev:=mjegyekQ.FieldByName('P_Nev').AsString;
        Partner1_cim:=mjegyekQ.FieldByName('P_Cim').AsString;
        Partner2_nev:=mjegyekQ.FieldByName('P2_Nev').AsString;
@@ -606,18 +622,20 @@ begin
         end
         else
         begin
-         case mjegyekQ.FieldByName('irany').AsString[1] of
-           'B' : begin
-                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
-                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
-
-                 end;
-           'K' : begin
-                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
-                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
-                 end;
-         end;
-         Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
+//         case mjegyekQ.FieldByName('irany').AsString[1] of
+//           'B' : begin
+//                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
+//                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
+//
+//                 end;
+//           'K' : begin
+//                  Brutto:=IntToStr(mjegyekQ.FieldByName('Brutto').AsInteger-(Round(StrToFloat(masodik_gongy_tomeg))));
+//                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
+//                 end;
+//         end;
+         Brutto:=mjegyekQ.FieldByName('Brutto').AsString;
+         Tara:=mjegyekQ.FieldByName('Tara').AsString;
+         Sz_netto:=mjegyekQ.FieldByName('SzNetto').AsString+' kg';
         end;
        Netto:=mjegyekQ.FieldByName('Netto').AsString+' kg';
        Termek_ar:=mjegyekQ.FieldByName('termek_ar').AsString+' Ft';
@@ -689,7 +707,7 @@ termeklist.close;
 Partnelist.close;
 end;
 
-procedure TMjegyekF.mlistaGridCellClick(Column: TColumn);
+procedure TMjegyekF.kepek_betoltese;
 var esemeny:esemeny_rec;
     kep_teljes_nev:string;
 
@@ -697,8 +715,8 @@ var esemeny:esemeny_rec;
   begin
      if kepnev<>'' then
      try
-       esemeny:=af.esemeny_kibont(Now,kepnev);
-       kep_teljes_nev:=Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\'+kepnev;
+       //esemeny:=af.esemeny_kibont(dt,''); //Now volt benne
+       kep_teljes_nev:=kepnev;//Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\'+kepnev;
        if FileExists(kep_teljes_nev) then kep.Picture.LoadFromFile(kep_teljes_nev);
      except
 
@@ -706,6 +724,10 @@ var esemeny:esemeny_rec;
   end;
 
 begin
+  Kep1.Picture:=nil;
+  Kep2.Picture:=nil;
+  Kep3.Picture:=nil;
+  Kep4.Picture:=nil;
   if chkKepek.Checked then
   begin
     kepbetolt(mjegyekQ.FieldByName('Kepnev1').AsString ,Kep1);
@@ -713,6 +735,11 @@ begin
     kepbetolt(mjegyekQ.FieldByName('Kepnev3').AsString ,Kep3);
     kepbetolt(mjegyekQ.FieldByName('Kepnev4').AsString ,Kep4);
   end;
+end;
+
+procedure TMjegyekF.mlistaGridCellClick(Column: TColumn);
+begin
+kepek_betoltese
 end;
 
 procedure TMjegyekF.mlistaGridDblClick(Sender: TObject);
@@ -767,6 +794,12 @@ begin
     memszamol.Post;
   end;
 
+end;
+
+procedure TMjegyekF.mlistaGridKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+if (Key=VK_DOWN)or(Key=VK_UP) then kepek_betoltese
 end;
 
 procedure TMjegyekF.mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;

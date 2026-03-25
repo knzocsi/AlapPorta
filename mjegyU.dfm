@@ -479,7 +479,8 @@ object MjegyF: TMjegyF
         '---Nincs megadva----'
         'Besz'#225'll'#237't'#225's'
         'Kisz'#225'll'#237't'#225's'
-        'Idegen m'#233'r'#233's')
+        'Idegen m'#233'r'#233's'
+        'T'#246'meg m'#233'r'#233's')
     end
     object btnMentes: TButton
       Left = 1032
@@ -1134,8 +1135,8 @@ object MjegyF: TMjegyF
       TabOrder = 39
     end
     object btngongy: TButton
-      Left = 601
-      Top = 41
+      Left = 600
+      Top = 29
       Width = 75
       Height = 25
       Caption = 'G'#246'ngy'#246'legek'

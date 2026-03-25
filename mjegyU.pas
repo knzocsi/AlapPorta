@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
   Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg,
-  Vcl.ComCtrls, Vcl.Buttons,Vcl.Imaging.pngimage, System.StrUtils;
+  Vcl.ComCtrls, Vcl.Buttons,Vcl.Imaging.pngimage, System.StrUtils,System.IOUtils;
 
 type
 
@@ -338,41 +338,60 @@ end;
 
 procedure TMjegyF.cbxiranyChange(Sender: TObject);
 begin
-case cbxirany.ItemIndex of
- 0:begin //nincs kiválasztva
-    lblpartner.Caption:='Partner:';
-    partnerlookup.KeyValue:='!';
-    partnerlookup.Enabled:=false;
-    lblpartner2.Caption:='Partner 2:';
-    lblfuvarozo.Caption:=rsFuvarozo;
-    partnerlookup2.KeyValue:='!';
-    partnerlookup2.Enabled:=false;
-    btnekaer.Enabled:=false;
-    btnMeres.enabled:=False;
-   end;
- 1,3:begin //beszállítás, idegen mérés
-      lblpartner.Caption:=rsMegrendelo;
-      partnerlookup.Enabled:=True;
-      lblpartner2.Caption:=rsAtvevo;
-      partnerlookup2.Enabled:=true;
-      lblfuvarozo.Caption:=rsSzallito;
-      btnekaer.Enabled:=false;
-      partnerlookup.keyvalue:='!';
-      if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
-      btnMeres.enabled:= True;
-     end;
- 2:begin //kiszállítás
-    lblpartner.Caption:=rsErtekesito;
-    partnerlookup.Enabled:=true;
-    lblpartner2.Caption:=rsVevo;
-    partnerlookup2.Enabled:=True;
-    lblfuvarozo.Caption:=rsSzallito;
-    btnekaer.Enabled:=true;
-    partnerlookup2.keyvalue:='!';
-    if alap_elado<>0 then  partnerlookup.keyvalue:=alap_elado;
-    btnMeres.enabled:= True;
-   end;
-end;
+  case cbxirany.ItemIndex of
+    0:
+      begin //nincs kiválasztva
+        lblpartner.Caption:='Partner:';
+        partnerlookup.KeyValue:='!';
+        partnerlookup.Enabled:=false;
+        lblpartner2.Caption:='Partner 2:';
+        lblfuvarozo.Caption:=rsFuvarozo;
+        partnerlookup2.KeyValue:='!';
+        partnerlookup2.Enabled:=false;
+        btnekaer.Enabled:=false;
+        btnMeres.enabled:=False;
+      end;
+    1,3:
+      begin //beszállítás, idegen mérés
+        if not beszallito_beszallitaskor then lblpartner.Caption:=rsMegrendelo
+        else lblpartner.Caption:=rsBeszallito;
+        partnerlookup.Enabled:=True;
+        lblpartner2.Caption:=rsAtvevo;
+        partnerlookup2.Enabled:=true;
+        lblfuvarozo.Caption:=rsSzallito;
+        btnekaer.Enabled:=false;
+        partnerlookup.keyvalue:='!';
+        if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
+        btnMeres.enabled:= True;
+      end;
+    2:
+      begin //kiszállítás
+        lblpartner.Caption:=rsErtekesito;
+        partnerlookup.Enabled:=true;
+        lblpartner2.Caption:=rsVevo;
+        partnerlookup2.Enabled:=True;
+        lblfuvarozo.Caption:=rsSzallito;
+        btnekaer.Enabled:=true;
+        partnerlookup2.keyvalue:='!';
+        if alap_elado<>0 then  partnerlookup.keyvalue:=alap_elado;
+        btnMeres.enabled:= True;
+      end;
+
+    4:
+      begin //tömeg mérés
+        if not beszallito_beszallitaskor then lblpartner.Caption:=rsMegrendelo
+        else lblpartner.Caption:=rsBeszallito;
+        partnerlookup.Enabled:=True;
+        lblpartner2.Caption:=rsAtvevo;
+        partnerlookup2.Enabled:=true;
+        lblfuvarozo.Caption:=rsSzallito;
+        btnekaer.Enabled:=false;
+        partnerlookup.keyvalue:='!';
+        partnerlookup2.keyvalue:='!';
+        btnMeres.enabled:= True;
+        cbxRendszam1.Text:='NINCS';
+      end;
+  end;
 end;
 
 procedure TMjegyF.cbxrendszam1Change(Sender: TObject);
@@ -576,7 +595,8 @@ begin
        lblTomeg1.Caption:=spBrutto.Text;
        lblTomeg2.Caption:=spTara.Text;
        spnetto.Value:=FieldByName('netto').AsInteger;
-       sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+       if not gongyolegek_latszanak then
+         sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
        spsznetto.Value:=0;
       end;
     2:begin
@@ -585,7 +605,8 @@ begin
        lblTomeg1.Caption:=sptara.Text;
        lblTomeg2.Caption:=spbrutto.Text;
        spnetto.Value:=0;
-       sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+       if not gongyolegek_latszanak then
+        sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
        spsznetto.Value:=0;
       end;
     end;
@@ -1190,11 +1211,14 @@ if tulajlookup.KeyValue='!' then
 end;
 
 procedure TMjegyF.btngongyClick(Sender: TObject);
-var glevon:Extended;
+var glevon,egyes,kettes:Extended;
+   emeres:Boolean;
 begin
 // OnActivate:=nil;
- GongyCsatF.fo(lblmasdat.Caption='');
-
+ emeres:=(lblmasdat.Caption='')or (cbxIrany.ItemIndex in [3,4]);
+ GongyCsatF.fo(emeres);
+ egyes:=0;
+ kettes:=0;
  glevon:=0;
  with AF.mem_csatgongy do
   begin
@@ -1202,14 +1226,15 @@ begin
     DisableControls;
     while not Eof do
     begin
-     if FieldByName('elso').AsBoolean=(lblmasdat.Caption='') then
-     glevon:=glevon+fieldbyName('ossztomeg').AsFloat;
+     if FieldByName('elso').AsBoolean then egyes:=egyes+fieldbyName('ossztomeg').AsFloat
+     else kettes:=kettes+fieldbyName('ossztomeg').AsFloat;
      next;
     end;
     First;
     EnableControls;
   end;
-  sp_tomeg_levon.Value:=Round(glevon);
+  //glevon:=Abs((StrToInt(lblTomeg1.Caption)-egyes)-(StrToInt(lblTomeg2.Caption)-kettes));
+  sp_tomeg_levon.Value:=Round(egyes-kettes);
 //  OnActivate:=MjegyF.OnActivate;
 end;
 
@@ -1258,7 +1283,7 @@ var sorsz,pcime,tablaneve:String;
        Partner2_felirat:=lblpartner2.Caption;
        Partner2_nev:=Partnerlist2.FieldByName('nev').AsString;
        Partner2_cim:=Partnerlist2.FieldByName('cim').AsString;;
-       Partner3_felirat:='Fuvarozó';
+       Partner3_felirat:='Fuvarozó:';
        Partner3_nev:=Partnerlist3.FieldByName('nev').AsString;
        Partner3_cim:=Partnerlist3.FieldByName('cim').AsString;
        Ekaer:=edekaer.Text;
@@ -1268,7 +1293,7 @@ var sorsz,pcime,tablaneve:String;
        Rendszam:=cbxrendszam1.text+' '+cbxrendszam2.text;
        Erkdatum:=StrToDate(lblelsodat.Caption);
        Erkido:=StrToTime(lblelsoido.Caption);
-       if not chkrogzitett.checked then
+       if (not chkrogzitett.checked) and (cbxIrany.itemindex<>4) then
         begin
          Tavdatum:=StrToDate(lblmasdat.Caption);;
          Tavido:=StrToTime(lblmasido.Caption);
@@ -1283,9 +1308,9 @@ var sorsz,pcime,tablaneve:String;
         begin
           case cbxIrany.Text[1] of
            'B' : begin
-                   Termek_kod:=termeklist.FieldByName('ewc').AsString;
-                   Termek_nev:=termeklist.FieldByName('nev').AsString;
-                 end;
+                       Termek_kod:=termeklist.FieldByName('ewc').AsString;
+                       Termek_nev:=termeklist.FieldByName('nev').AsString;
+                     end;
            'K' : begin
                    Termek_kod:=termeklist.FieldByName('itj').AsString;
                    Termek_nev:=termeklist.FieldByName('nev').AsString;
@@ -1310,20 +1335,27 @@ var sorsz,pcime,tablaneve:String;
        masodik_gongy_tomeg:=FloatToStr(af.gongy_osszead('2'));
        if gongyolegek_latszanak then
         begin
-         case cbxIrany.Text[1] of
-           'B' : begin
-                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(elso_gongy_tomeg))));
-                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(masodik_gongy_tomeg))));
-
-                 end;
-           'K' : begin
-                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(masodik_gongy_tomeg))));
-                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(elso_gongy_tomeg))));
-                 end;
-         end;
-         Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
+//         case cbxIrany.Text[1] of
+//           'B' : begin
+//                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(elso_gongy_tomeg))));
+//                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(masodik_gongy_tomeg))));
+//                  Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
+//                 end;
+//           'K' : begin
+//                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(masodik_gongy_tomeg))));
+//                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(elso_gongy_tomeg))));
+//                 end;
+//           'T' : begin
+//                  Brutto:=IntToStr(spBrutto.value-(Round(StrToFloat(masodik_gongy_tomeg))));
+//                  Tara:=IntToStr(sptara.Value-(Round(StrToFloat(elso_gongy_tomeg))));
+//                 end;
+//         end;
+//         Sz_netto:=IntToStr((StrToInt(Brutto)-StrToInt(Tara)))+' kg';
+         Brutto:=spBrutto.Value.ToString;
+         Tara:=sptara.Value.ToString;
+         Sz_netto:=Spsznetto.Value.ToString+' kg';
         end
-        else
+       else
         begin
          Brutto:=spBrutto.Value.ToString+' kg';
          Tara:=sptara.Value.ToString+' kg';
@@ -1426,7 +1458,7 @@ begin
     exit
   end;
 
-  if ((spBrutto.Value<=0)or(sptara.Value<=0) ) and (not (Sender = btnFolytatasos_mentes)) then
+  if ((spBrutto.Value<=0)or(sptara.Value<=0) ) and (not (Sender = btnFolytatasos_mentes)) and (cbxIrany.ItemIndex<>4) then
   begin
     ShowMessage(rsNincsKivalasztvaKetMeres);
     exit
@@ -1909,9 +1941,10 @@ var tf:textfile;
   end;
 
   procedure snapshot;
-  var fn,eredmeny: string;
+  var fn,eredmeny,akt_mappa: string;
       i,akt_cam: Integer;
       kamera:integer;
+      esemeny:esemeny_rec;
 
       procedure kep_kitesz;
       var     JPEGImg: TJPEGImage;
@@ -2060,56 +2093,61 @@ var tf:textfile;
               fn := FormatDateTime('YYYMMDDHHnnss',Now);
               fn := StringReplace(kivalasztott_merleg.ToString + '_' +akt_cam.ToString
                     +'_' + fn, ' ', '', [rfreplaceAll]);
+
+              esemeny:= AF.esemeny_kibont(now,'');
+              akt_mappa:=Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
+              ForceDirectories(akt_mappa);
+
               case akt_cam of
                0:begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer0)then libvlc_video_take_snapshot(vlcMediaPlayer0, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer6)then libvlc_video_take_snapshot(vlcMediaPlayer6, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
                1:begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer1)then libvlc_video_take_snapshot(vlcMediaPlayer1, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer7)then libvlc_video_take_snapshot(vlcMediaPlayer7, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
                2:begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer2)then libvlc_video_take_snapshot(vlcMediaPlayer2, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer8)then libvlc_video_take_snapshot(vlcMediaPlayer8, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
                3 :begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer3)then libvlc_video_take_snapshot(vlcMediaPlayer3, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer9)then libvlc_video_take_snapshot(vlcMediaPlayer9, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
                4:begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer4)then libvlc_video_take_snapshot(vlcMediaPlayer4, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer10)then libvlc_video_take_snapshot(vlcMediaPlayer10, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer10)then libvlc_video_take_snapshot(vlcMediaPlayer10, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
                5 :begin
                    //kis camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer5)then libvlc_video_take_snapshot(vlcMediaPlayer5, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                    //nagy camera pillanat felvétel
-                   if Assigned(vlcMediaPlayer11)then libvlc_video_take_snapshot(vlcMediaPlayer11, 0, PAnsiChar(AnsiString(kepmappa + fn + '.png')), 0, 0);
+                   if Assigned(vlcMediaPlayer11)then libvlc_video_take_snapshot(vlcMediaPlayer11, 0, PAnsiChar(AnsiString(akt_mappa + fn + '.png')), 0, 0);
                   end;
               end;
                for i := 0 to 9 do
                 begin
-                  if fileExists(kepmappa + fn + '.png') then
+                  if fileExists(akt_mappa + fn + '.png') then
                   begin
-                    kep_konvertalasa(kepmappa + fn + '.png');
+                    kep_konvertalasa(akt_mappa + fn + '.png');
                     break
                   end
                   else  sleep(200);
                 end;
              end;
           finally
-            if fileExists(kepmappa + fn + '.jpg') then eredmeny := kepmappa + fn + '.jpg'
+            if fileExists(akt_mappa + fn + '.jpg') then eredmeny := akt_mappa + fn + '.jpg'
             else eredmeny := 'Pillanat felvétel sikertelen';
             kep_kitesz;
             //ShowMessage(eredmeny)
@@ -2143,7 +2181,7 @@ begin
             lblelsodat.Caption:=DateToStr(Date);
             lblelsoido.Caption:=TimeToStr(Time);
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
-            if cbxirany.ItemIndex in [1,3] then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
+            if cbxirany.ItemIndex in [1,3,4] then spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny
             else if cbxirany.ItemIndex=2 then  spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
             if chkRogzitett.Checked then
             begin
