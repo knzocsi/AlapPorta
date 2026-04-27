@@ -480,8 +480,11 @@ end;
 procedure TMjegyekF.chkKepekClick(Sender: TObject);
 begin
   pnlKepek.Visible:=chkKepek.Checked;
-  if pnlKepek.Visible then PageControl1.ActivePage:=tabKep1;
-
+  if pnlKepek.Visible then
+  begin
+   PageControl1.ActivePage:=tabKep1;
+   kepek_betoltese
+  end;
 end;
 
 procedure TMjegyekF.elokeszit(stfelirat: String);

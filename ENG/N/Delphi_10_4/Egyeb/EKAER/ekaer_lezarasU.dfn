@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Egyeb\EKAER\ekaer_lezarasU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Egyeb\EKAER\ekaer_lezarasU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46106.3981481481</prop>
+        <prop prop-type="OrigDateTime">44915.4375462963</prop>
+        <prop prop-type="XlatDateTime">44915.4375462963</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">68</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:ekaer_lezarasF.Left" resname="O:ekaer_lezarasF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Top" resname="O:ekaer_lezarasF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.BorderIcons" resname="O:ekaer_lezarasF.BorderIcons">
+        <source>[biMinimize, biMaximize]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.BorderStyle" resname="O:ekaer_lezarasF.BorderStyle">
+        <source>bsDialog</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Caption" resname="O:ekaer_lezarasF.Caption">
+        <source>'Fuvar befejezése'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.ClientHeight" resname="O:ekaer_lezarasF.ClientHeight">
+        <source>176</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.ClientWidth" resname="O:ekaer_lezarasF.ClientWidth">
+        <source>459</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Color" resname="O:ekaer_lezarasF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Font.Charset" resname="O:ekaer_lezarasF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Font.Color" resname="O:ekaer_lezarasF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Font.Height" resname="O:ekaer_lezarasF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Font.Name" resname="O:ekaer_lezarasF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Font.Style" resname="O:ekaer_lezarasF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.OldCreateOrder" resname="O:ekaer_lezarasF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.Position" resname="O:ekaer_lezarasF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.PixelsPerInch" resname="O:ekaer_lezarasF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.TextHeight" resname="O:ekaer_lezarasF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">Tekaer_lezarasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Left" resname="O:ekaer_lezarasF.O:lblekaer.Left">
+        <source>18</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Top" resname="O:ekaer_lezarasF.O:lblekaer.Top">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Width" resname="O:ekaer_lezarasF.O:lblekaer.Width">
+        <source>84</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Height" resname="O:ekaer_lezarasF.O:lblekaer.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Caption" resname="O:ekaer_lezarasF.O:lblekaer.Caption">
+        <source>'lblekaer'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Font.Charset" resname="O:ekaer_lezarasF.O:lblekaer.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Font.Color" resname="O:ekaer_lezarasF.O:lblekaer.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Font.Height" resname="O:ekaer_lezarasF.O:lblekaer.Font.Height">
+        <source>-21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Font.Name" resname="O:ekaer_lezarasF.O:lblekaer.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.Font.Style" resname="O:ekaer_lezarasF.O:lblekaer.Font.Style">
+        <source>[fsBold]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:lblekaer.ParentFont" resname="O:ekaer_lezarasF.O:lblekaer.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Label47.Left" resname="O:ekaer_lezarasF.O:Label47.Left">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Label47.Top" resname="O:ekaer_lezarasF.O:Label47.Top">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Label47.Width" resname="O:ekaer_lezarasF.O:Label47.Width">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Label47.Height" resname="O:ekaer_lezarasF.O:Label47.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Label47.Caption" resname="O:ekaer_lezarasF.O:Label47.Caption">
+        <source>'Lerakodás ideje:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Left" resname="O:ekaer_lezarasF.O:le_datum.Left">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.39817</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Top" resname="O:ekaer_lezarasF.O:le_datum.Top">
+        <source>86</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Width" resname="O:ekaer_lezarasF.O:le_datum.Width">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Height" resname="O:ekaer_lezarasF.O:le_datum.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Date" resname="O:ekaer_lezarasF.O:le_datum.Date">
+        <source>44460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.Time" resname="O:ekaer_lezarasF.O:le_datum.Time">
+        <source>0.422771053243196</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_datum.TabOrder" resname="O:ekaer_lezarasF.O:le_datum.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Left" resname="O:ekaer_lezarasF.O:le_ido.Left">
+        <source>108</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Top" resname="O:ekaer_lezarasF.O:le_ido.Top">
+        <source>86</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Width" resname="O:ekaer_lezarasF.O:le_ido.Width">
+        <source>81</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Height" resname="O:ekaer_lezarasF.O:le_ido.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Date" resname="O:ekaer_lezarasF.O:le_ido.Date">
+        <source>44460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Time" resname="O:ekaer_lezarasF.O:le_ido.Time">
+        <source>0.422771053243196</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.Kind" resname="O:ekaer_lezarasF.O:le_ido.Kind">
+        <source>dtkTime</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:le_ido.TabOrder" resname="O:ekaer_lezarasF.O:le_ido.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.Left" resname="O:ekaer_lezarasF.O:Button1.Left">
+        <source>72</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.Top" resname="O:ekaer_lezarasF.O:Button1.Top">
+        <source>143</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.Width" resname="O:ekaer_lezarasF.O:Button1.Width">
+        <source>131</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.Height" resname="O:ekaer_lezarasF.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.Caption" resname="O:ekaer_lezarasF.O:Button1.Caption">
+        <source>'Fuvar befejezése'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.TabOrder" resname="O:ekaer_lezarasF.O:Button1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button1.OnClick" resname="O:ekaer_lezarasF.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.Left" resname="O:ekaer_lezarasF.O:Button2.Left">
+        <source>240</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.Top" resname="O:ekaer_lezarasF.O:Button2.Top">
+        <source>143</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.Width" resname="O:ekaer_lezarasF.O:Button2.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.Height" resname="O:ekaer_lezarasF.O:Button2.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.Caption" resname="O:ekaer_lezarasF.O:Button2.Caption">
+        <source>'Mégsem'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.ModalResult" resname="O:ekaer_lezarasF.O:Button2.ModalResult">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:Button2.TabOrder" resname="O:ekaer_lezarasF.O:Button2.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.Left" resname="O:ekaer_lezarasF.O:chkcsakdatum.Left">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.Top" resname="O:ekaer_lezarasF.O:chkcsakdatum.Top">
+        <source>113</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.Width" resname="O:ekaer_lezarasF.O:chkcsakdatum.Width">
+        <source>97</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.Height" resname="O:ekaer_lezarasF.O:chkcsakdatum.Height">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.Caption" resname="O:ekaer_lezarasF.O:chkcsakdatum.Caption">
+        <source>'Csak dátum'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:ekaer_lezarasF.O:chkcsakdatum.TabOrder" resname="O:ekaer_lezarasF.O:chkcsakdatum.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981700116</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TCheckBox</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

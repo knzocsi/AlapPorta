@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MeresTipusValasztasU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MeresTipusValasztasU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46106.4016898148</prop>
+        <prop prop-type="OrigDateTime">45965.4185185185</prop>
+        <prop prop-type="XlatDateTime">45965.4185185185</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">36</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MeresTipusValasztasF.Left" resname="O:MeresTipusValasztasF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Top" resname="O:MeresTipusValasztasF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088773</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Caption" resname="O:MeresTipusValasztasF.Caption">
+        <source>'Mérés módja'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.ClientHeight" resname="O:MeresTipusValasztasF.ClientHeight">
+        <source>156</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.ClientWidth" resname="O:MeresTipusValasztasF.ClientWidth">
+        <source>319</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Color" resname="O:MeresTipusValasztasF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Font.Charset" resname="O:MeresTipusValasztasF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Font.Color" resname="O:MeresTipusValasztasF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Font.Height" resname="O:MeresTipusValasztasF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Font.Name" resname="O:MeresTipusValasztasF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Font.Style" resname="O:MeresTipusValasztasF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.OldCreateOrder" resname="O:MeresTipusValasztasF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.Position" resname="O:MeresTipusValasztasF.Position">
+        <source>poScreenCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.OnActivate" resname="O:MeresTipusValasztasF.OnActivate">
+        <source>FormActivate</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.PixelsPerInch" resname="O:MeresTipusValasztasF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.TextHeight" resname="O:MeresTipusValasztasF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TMeresTipusValasztasF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Left" resname="O:MeresTipusValasztasF.O:RadioGroup1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Top" resname="O:MeresTipusValasztasF.O:RadioGroup1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Width" resname="O:MeresTipusValasztasF.O:RadioGroup1.Width">
+        <source>319</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Height" resname="O:MeresTipusValasztasF.O:RadioGroup1.Height">
+        <source>156</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Align" resname="O:MeresTipusValasztasF.O:RadioGroup1.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Caption" resname="O:MeresTipusValasztasF.O:RadioGroup1.Caption">
+        <source>'Kiválasztás'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Font.Charset" resname="O:MeresTipusValasztasF.O:RadioGroup1.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Font.Color" resname="O:MeresTipusValasztasF.O:RadioGroup1.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Font.Height" resname="O:MeresTipusValasztasF.O:RadioGroup1.Font.Height">
+        <source>-21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Font.Name" resname="O:MeresTipusValasztasF.O:RadioGroup1.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Font.Style" resname="O:MeresTipusValasztasF.O:RadioGroup1.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Items.Strings[0]" resname="O:MeresTipusValasztasF.O:RadioGroup1.Items.Strings[0]">
+        <source>'Normál mérés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.Items.Strings[1]" resname="O:MeresTipusValasztasF.O:RadioGroup1.Items.Strings[1]">
+        <source>'Rögzített tárás mérés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.ParentFont" resname="O:MeresTipusValasztasF.O:RadioGroup1.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.TabOrder" resname="O:MeresTipusValasztasF.O:RadioGroup1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.OnClick" resname="O:MeresTipusValasztasF.O:RadioGroup1.OnClick">
+        <source>RadioGroup1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitLeft" resname="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitLeft">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitTop" resname="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitTop">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitWidth" resname="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitWidth">
+        <source>265</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitHeight" resname="O:MeresTipusValasztasF.O:RadioGroup1.ExplicitHeight">
+        <source>129</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4017088889</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

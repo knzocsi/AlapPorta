@@ -552,6 +552,15 @@ begin
   chkidegen.Checked:=False;
   chkidegen.Visible:=idegen_meres;
   btngongy.Visible:=gongyolegek_latszanak;
+  Kep1.Picture:=nil;
+  OKep1.Picture:=nil;
+  Kep2.Picture:=nil;
+  OKep2.Picture:=nil;
+  Kep3.Picture:=nil;
+  OKep3.Picture:=nil;
+  Kep4.Picture:=nil;
+  OKep4.Picture:=nil;
+
   //af.csat_gongy_ures;
 
   if Folytatas then
@@ -570,7 +579,8 @@ begin
     chkmasodik_kezi.Checked:=FieldByName('masodik_kezi').AsBoolean;
     partnerlookup.KeyValue:=FieldByName('p_id').AsInteger;
     partnerlookup2.KeyValue:=FieldByName('p2_id').AsInteger;
-    cbfuvarozo.KeyValue:=FieldByName('p3_id').AsInteger;
+    if fuvarozo_merlegjegyen then  cbfuvarozo.KeyValue:=FieldByName('p3_id').AsInteger
+    else  cbfuvarozo.KeyValue:=-1;
     termeklookup.KeyValue:=FieldByName('termek_id').AsInteger;
     termeklookupCloseUp(self);
     chkkerekites.Checked:=FieldByName('kerekites').AsBoolean;
@@ -704,11 +714,11 @@ var     JPEGImg: TJPEGImage;
 begin
   kep.Picture:=nil;
   Okep.Picture:=nil;
-  if FileExists( kepnev) then
-     begin
-      JPEGImg := TJpegImage.Create;
+  if FileExists(kepnev) then
+    begin
       try
-       JPEGImg.LoadFromFile( kepnev);
+       JPEGImg := TJpegImage.Create;
+       JPEGImg.LoadFromFile(kepnev);
        if JPEGImg.Width<600 then
         JPEGImg.Scale:=jsFullSize
        else
@@ -719,12 +729,14 @@ begin
           JPEGImg.Scale:=jsQuarter
          else
           JPEGImg.Scale:=jsEighth;
+         kep.Picture.Assign(JPEGImg);
+         Okep.Picture.Assign(JPEGImg);
+         Okep.Visible:=true;
       finally
-       kep.Picture.Assign(JPEGImg);
-       Okep.Picture.Assign(JPEGImg);
        JPEGImg.Free;
       end;
     end;
+    Application.ProcessMessages;
 end;
 
 procedure TMjegyF.levonlookupChange(Sender: TObject);
@@ -885,9 +897,9 @@ end;
 
 procedure TMjegyF.kep1Click(Sender: TObject);
 begin
-  if Sender=kep1 then NagykepF.kepnev:=lblKep1.Caption
-  else NagykepF.kepnev:=lblKep2.Caption ;
-  NagykepF.Showmodal;
+ // ShowMessage(Copy((Sender AS TImage).Name,Length((Sender AS TImage).Name),1));
+  if FileExists(kepek_tomb[StrToInt(Copy((Sender AS TImage).Name,Length((Sender AS TImage).Name),1))]) then
+   NagykepF.kep_betoltese(kepek_tomb[StrToInt(Copy((Sender AS TImage).Name,Length((Sender AS TImage).Name),1))]);
 end;
 
 procedure TMjegyF.kepek_betoltese;
@@ -1284,8 +1296,11 @@ var sorsz,pcime,tablaneve:String;
        Partner2_nev:=Partnerlist2.FieldByName('nev').AsString;
        Partner2_cim:=Partnerlist2.FieldByName('cim').AsString;;
        Partner3_felirat:='Fuvarozó:';
-       Partner3_nev:=Partnerlist3.FieldByName('nev').AsString;
-       Partner3_cim:=Partnerlist3.FieldByName('cim').AsString;
+       if fuvarozo_merlegjegyen then
+       begin
+         Partner3_nev:=Partnerlist3.FieldByName('nev').AsString;
+         Partner3_cim:=Partnerlist3.FieldByName('cim').AsString;
+       end;
        Ekaer:=edekaer.Text;
        Szallev:=edszallev.Text;
        Szarmazasi_hely:=cbxszar.Text;
@@ -1951,133 +1966,44 @@ var tf:textfile;
       begin
         if Meres_MerlegjegyenF.rgMeresszama.ItemIndex=0 then
           begin
-            kep1.Picture:=nil;
-            kep2.Picture:=nil;
-            Okep1.Picture:=nil;
-            Okep2.Picture:=nil;
             if kamera=1 then
              begin
               lblKep1.Caption:=eredmeny;
               kepek_tomb[1]:=eredmeny;
+              jpeg_betoltese(eredmeny, kep1,Okep1);
              end
-             else
+            else
              begin
               lblKep2.Caption:=eredmeny;
               kepek_tomb[2]:=eredmeny;
-             end;
-            if FileExists( lblKep1.Caption) then
-             begin
-              JPEGImg := TJpegImage.Create;
-              try
-               JPEGImg.LoadFromFile( lblKep1.Caption);
-               if JPEGImg.Width<600 then
-                JPEGImg.Scale:=jsFullSize
-               else
-                if JPEGImg.Width<1200 then
-                 JPEGImg.Scale:=jsHalf
-                else
-                 if JPEGImg.Width<2000 then
-                  JPEGImg.Scale:=jsQuarter
-                 else
-                  JPEGImg.Scale:=jsEighth;
-              finally
-               kep1.Picture.Assign(JPEGImg);
-               Okep1.Picture.Assign(JPEGImg);
-               JPEGImg.Free;
-              end;
-             end;
-             if FileExists(lblKep2.Caption) then
-             begin
-              JPEGImg := TJpegImage.Create;
-              try
-               JPEGImg.LoadFromFile(lblKep2.Caption);
-               if JPEGImg.Width<600 then
-                JPEGImg.Scale:=jsFullSize
-               else
-                if JPEGImg.Width<1200 then
-                 JPEGImg.Scale:=jsHalf
-                else
-                 if JPEGImg.Width<2000 then
-                  JPEGImg.Scale:=jsQuarter
-                 else
-                  JPEGImg.Scale:=jsEighth;
-              finally
-               kep2.Picture.Assign(JPEGImg);
-               Okep2.Picture.Assign(JPEGImg);
-               JPEGImg.Free;
-              end;
+              jpeg_betoltese(eredmeny, kep2,Okep2);
              end;
             lblKep1.Visible:=kep1.Picture=nil;
             lblKep2.Visible:=kep2.Picture=nil;
           end
         else
           begin
-            kep3.Picture:=nil;
-            kep4.Picture:=nil;
-            Okep3.Picture:=nil;
-            Okep4.Picture:=nil;
             if kamera=1 then
              begin
               lblKep3.Caption:=eredmeny;
               kepek_tomb[3]:=eredmeny;
+              jpeg_betoltese(eredmeny, kep3,Okep3);
              end
             else
              begin
               lblKep4.Caption:=eredmeny;
               kepek_tomb[4]:=eredmeny;
+              jpeg_betoltese(eredmeny, kep4,Okep4);
              end;
-            if FileExists( lblKep3.Caption) then
-             begin
-              JPEGImg := TJpegImage.Create;
-              try
-               JPEGImg.LoadFromFile( lblKep3.Caption);
-               if JPEGImg.Width<600 then
-                JPEGImg.Scale:=jsFullSize
-               else
-                if JPEGImg.Width<1200 then
-                 JPEGImg.Scale:=jsHalf
-                else
-                 if JPEGImg.Width<2000 then
-                  JPEGImg.Scale:=jsQuarter
-                 else
-                  JPEGImg.Scale:=jsEighth;
-              finally
-               kep3.Picture.Assign(JPEGImg);
-               Okep3.Picture.Assign(JPEGImg);
-               JPEGImg.Free;
-              end;
-             end;
-             if FileExists(lblKep4.Caption) then
-             begin
-              JPEGImg := TJpegImage.Create;
-              try
-               JPEGImg.LoadFromFile(lblKep4.Caption);
-               if JPEGImg.Width<600 then
-                JPEGImg.Scale:=jsFullSize
-               else
-                if JPEGImg.Width<1200 then
-                 JPEGImg.Scale:=jsHalf
-                else
-                 if JPEGImg.Width<2000 then
-                  JPEGImg.Scale:=jsQuarter
-                 else
-                  JPEGImg.Scale:=jsEighth;
-              finally
-               kep4.Picture.Assign(JPEGImg);
-               Okep4.Picture.Assign(JPEGImg);
-               JPEGImg.Free;
-              end;
-             end;
-            lblKep3.Visible:=kep1.Picture=nil;
-            lblKep4.Visible:=kep2.Picture=nil;
+            lblKep3.Visible:=kep3.Picture=nil;
+            lblKep4.Visible:=kep4.Picture=nil;
           end;
       end;
 
 
-
   begin
     if (not van_plugin)or(not lejatszas) then exit;
-    eredmeny := 'Pillanat felvétel sikertelen';
+    //eredmeny := 'Pillanat felvétel sikertelen';
     try
       lejatszas_ellenorzese //ha hozzá van rendelve de nincs lejátszás újraindítja
     finally
@@ -2086,7 +2012,7 @@ var tf:textfile;
       try
         for kamera := 1 to Maxkamera do
         begin
-          try
+          eredmeny := '';
             if KameraTomb[kivalasztott_merleg,kamera].ip_cim<>'' then
             begin
               akt_cam:=KameraTomb[kivalasztott_merleg,kamera].rtspszam;
@@ -2097,7 +2023,6 @@ var tf:textfile;
               esemeny:= AF.esemeny_kibont(now,'');
               akt_mappa:=Kepek_Mappa+esemeny.evs+'\'+esemeny.hos+'\'+esemeny.naps+'\'+esemeny.oras+'\';
               ForceDirectories(akt_mappa);
-
               case akt_cam of
                0:begin
                    //kis camera pillanat felvétel
@@ -2145,13 +2070,13 @@ var tf:textfile;
                   end
                   else  sleep(200);
                 end;
-             end;
-          finally
-            if fileExists(akt_mappa + fn + '.jpg') then eredmeny := akt_mappa + fn + '.jpg'
-            else eredmeny := 'Pillanat felvétel sikertelen';
-            kep_kitesz;
-            //ShowMessage(eredmeny)
-          end;
+               if fileExists(akt_mappa + fn + '.jpg') then
+                 eredmeny := akt_mappa + fn + '.jpg'
+               else eredmeny := 'Pillanat felvétel sikertelen';
+               //ShowMessage(eredmeny);
+               kep_kitesz;
+            end
+            else eredmeny := 'Nincs';
 
         end;
       except

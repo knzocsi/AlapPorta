@@ -97,6 +97,7 @@ begin
 end;
 
 procedure TMeres_MerlegjegyenF.FormActivate(Sender: TObject);
+var tomeg:integer;
 begin
   Mert_eredmeny:=-1;
   if lblTomeg1.Caption='0' then
@@ -114,6 +115,14 @@ begin
   chkKezimeres.Checked:=false;
   chkKezimeres.Enabled:=  aF.van_joga('j8') ;  //kezi meres
   spTomeg.Enabled:=chkKezimeres.Checked;
+  try
+    tomeg :=StrToInt(mertertekek[rgMerlegszama.itemindex+1]);
+    if tomeg < 0 then
+      tomeg := 0;
+  except
+    tomeg := 0;
+  end;
+  spTomeg.Value:=tomeg;
 end;
 
 end.

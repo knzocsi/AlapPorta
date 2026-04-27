@@ -17,9 +17,11 @@ type
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+
   public
     kepnev:string ;
     { Public declarations }
+    procedure kep_betoltese(fnev:string);
   end;
 
 var
@@ -36,7 +38,7 @@ end;
 
 procedure TNagykepF.FormActivate(Sender: TObject);
 begin
-  imgnagy.Picture.LoadFromFile(kepnev);
+//  imgnagy.Picture.LoadFromFile(kepnev);
 end;
 
 procedure TNagykepF.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -55,6 +57,14 @@ procedure TNagykepF.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   if Key=VK_ESCAPE then close
+end;
+
+procedure TNagykepF.kep_betoltese(fnev:string);
+begin
+ imgnagy.Picture:=nil;
+ imgnagy.Picture.LoadFromFile(fnev);
+ //imgnagy.Picture.Assign(aktkep.Picture);
+ ShowModal;
 end;
 
 end.

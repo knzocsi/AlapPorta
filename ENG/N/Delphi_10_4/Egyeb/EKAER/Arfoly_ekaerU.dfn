@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Egyeb\EKAER\Arfoly_ekaerU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Egyeb\EKAER\Arfoly_ekaerU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46106.3981481481</prop>
+        <prop prop-type="OrigDateTime">45160.4476157407</prop>
+        <prop prop-type="XlatDateTime">45160.4476157407</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">92</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:Arfoly_ekaerF.Left" resname="O:Arfoly_ekaerF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Top" resname="O:Arfoly_ekaerF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Caption" resname="O:Arfoly_ekaerF.Caption">
+        <source>'Árfolyam EKÁER-hez'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.ClientHeight" resname="O:Arfoly_ekaerF.ClientHeight">
+        <source>422</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.ClientWidth" resname="O:Arfoly_ekaerF.ClientWidth">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Color" resname="O:Arfoly_ekaerF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Font.Charset" resname="O:Arfoly_ekaerF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Font.Color" resname="O:Arfoly_ekaerF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Font.Height" resname="O:Arfoly_ekaerF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Font.Name" resname="O:Arfoly_ekaerF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Font.Style" resname="O:Arfoly_ekaerF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.OldCreateOrder" resname="O:Arfoly_ekaerF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.Position" resname="O:Arfoly_ekaerF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.PixelsPerInch" resname="O:Arfoly_ekaerF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.TextHeight" resname="O:Arfoly_ekaerF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TArfoly_ekaerF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.Left" resname="O:Arfoly_ekaerF.O:Panel1.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.Top" resname="O:Arfoly_ekaerF.O:Panel1.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.Width" resname="O:Arfoly_ekaerF.O:Panel1.Width">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.Height" resname="O:Arfoly_ekaerF.O:Panel1.Height">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.Align" resname="O:Arfoly_ekaerF.O:Panel1.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.TabOrder" resname="O:Arfoly_ekaerF.O:Panel1.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515741</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:Label2.Left" resname="O:Arfoly_ekaerF.O:Panel1.O:Label2.Left">
+        <source>233</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:Label2.Top" resname="O:Arfoly_ekaerF.O:Panel1.O:Label2.Top">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:Label2.Width" resname="O:Arfoly_ekaerF.O:Panel1.O:Label2.Width">
+        <source>47</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:Label2.Height" resname="O:Arfoly_ekaerF.O:Panel1.O:Label2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:Label2.Caption" resname="O:Arfoly_ekaerF.O:Panel1.O:Label2.Caption">
+        <source>'Árfolyam:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Left" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Top" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Width" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Height" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Caption" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.TabOrder" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.OnClick" resname="O:Arfoly_ekaerF.O:Panel1.O:btnkilep.OnClick">
+        <source>btnkilepClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Left" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Left">
+        <source>233</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Top" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Top">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Width" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Height" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.CheckOptions" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.CheckOptions">
+        <source>[coCheckOnExit]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.ValueType" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.ValueType">
+        <source>vtFloat</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.TabOrder" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.OnKeyPress" resname="O:Arfoly_ekaerF.O:Panel1.O:arfoly_spin.OnKeyPress">
+        <source>arfoly_spinKeyPress</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.Left" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.Left">
+        <source>368</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.Top" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.Top">
+        <source>15</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.Width" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.Height" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.Caption" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.Caption">
+        <source>'Mentés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.TabOrder" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel1.O:btnment.OnClick" resname="O:Arfoly_ekaerF.O:Panel1.O:btnment.OnClick">
+        <source>btnmentClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Left" resname="O:Arfoly_ekaerF.O:arfolygrid.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Top" resname="O:Arfoly_ekaerF.O:arfolygrid.Top">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Width" resname="O:Arfoly_ekaerF.O:arfolygrid.Width">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Height" resname="O:Arfoly_ekaerF.O:arfolygrid.Height">
+        <source>320</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Align" resname="O:Arfoly_ekaerF.O:arfolygrid.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.DataSource" resname="O:Arfoly_ekaerF.O:arfolygrid.DataSource">
+        <source>DmEkaer.arfoly_ekaerQDs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.ReadOnly" resname="O:Arfoly_ekaerF.O:arfolygrid.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TabOrder" resname="O:Arfoly_ekaerF.O:arfolygrid.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Charset" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Color" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Height" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Name" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Style" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.Caption" resname="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.OK" resname="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:Arfoly_ekaerF.O:arfolygrid.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.EditControls" resname="O:Arfoly_ekaerF.O:arfolygrid.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.RowsHeight" resname="O:Arfoly_ekaerF.O:arfolygrid.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.TitleRowHeight" resname="O:Arfoly_ekaerF.O:arfolygrid.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Expanded" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].FieldName" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].FieldName">
+        <source>'penznem'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Title.Caption" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Title.Caption">
+        <source>'Pénznem'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Visible" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Expanded" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].FieldName" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].FieldName">
+        <source>'ev'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Title.Caption" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Title.Caption">
+        <source>'Év'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Visible" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Expanded" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515857</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].FieldName" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].FieldName">
+        <source>'arfolyam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Title.Caption" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Title.Caption">
+        <source>'Árfolyam'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Visible" resname="O:Arfoly_ekaerF.O:arfolygrid.Columns[2].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.Left" resname="O:Arfoly_ekaerF.O:Panel2.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.Top" resname="O:Arfoly_ekaerF.O:Panel2.Top">
+        <source>381</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.Width" resname="O:Arfoly_ekaerF.O:Panel2.Width">
+        <source>460</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.Height" resname="O:Arfoly_ekaerF.O:Panel2.Height">
+        <source>41</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">82</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.Align" resname="O:Arfoly_ekaerF.O:Panel2.Align">
+        <source>alBottom</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.TabOrder" resname="O:Arfoly_ekaerF.O:Panel2.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Left" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Left">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Top" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">86</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Width" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Height" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Caption" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.Caption">
+        <source>'Töröl'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.TabOrder" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:Arfoly_ekaerF.O:Panel2.O:btntorol.OnClick" resname="O:Arfoly_ekaerF.O:Panel2.O:btntorol.OnClick">
+        <source>btntorolClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.3981515972</prop><prop prop-type="Status">0</prop><prop prop-type="Order">91</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
