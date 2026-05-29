@@ -547,6 +547,7 @@ type
     procedure csat_gongy_ment(hova: string; azon: Integer);
     function gongy_osszead(hanyadik:string):Extended;
     procedure gongy_osszevon_nyom;
+    function kartyaszam_foglalt(ide: Integer; neve, tbl: String): Boolean;
     { Public declarations }
   end;
 
@@ -636,6 +637,9 @@ var
 
   csatgongy_masol:Boolean;
   beszallito_beszallitaskor:Boolean=False;
+
+  kartyak_hasznalata:Boolean=False;
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
      DMSoapU, UzenetekU,DmEKAERU;
@@ -1607,6 +1611,9 @@ begin
   beszallito_beszallitaskor :=cfg_kezel('Mérlegjegyen beszállításkor megrendelõ helyett beszállító',
    'ALAP','Beszállító beszállításkor','Boolean',beszallito_beszallitaskor);
 
+  kartyak_hasznalata :=cfg_kezel('Kártyák használata sorompó nyitáshoz',
+   'ALAP','Kártyák használata','Boolean',kartyak_hasznalata);
+
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
   kepmappa:=kepmappa+'\';
@@ -1696,6 +1703,22 @@ begin
 
   i.UpdateFile;
   i.Free;
+end;
+
+function TAF.kartyaszam_foglalt(ide: Integer; neve, tbl: String): Boolean;
+begin
+Result:=true;
+ with FoglaltQ do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add(' SELECT IF(id IS null,0,id) AS ID,COUNT(kartyaszam) FROM '+tbl);
+    SQL.Add(' WHERE kartyaszam=:kodja ');
+    SQL.Add(' GROUP BY ID');
+    ParamByName('kodja').AsString:=neve;
+    open;
+    Result:=(Fields[0].AsInteger<>ide) and (Fields[1].AsInteger>0);
+  end;
 end;
 
 function TAF.kepkeres(im:TImage):string;

@@ -232,6 +232,8 @@ type
     btnnyelv: TButton;
     csRelayDroid: TClientSocket;
     Gngylegek1: TMenuItem;
+    kartyak_m: TMenuItem;
+    mozgasok_m: TMenuItem;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -333,7 +335,9 @@ type
     procedure cam1Show(Sender: TObject);
     procedure csRelayDroidRead(Sender: TObject; Socket: TCustomWinSocket);
     procedure Gngylegek1Click(Sender: TObject);
-
+    procedure kartyak_mClick(Sender: TObject);
+    procedure mozgas_mentese(ksz:string;kozp_szam,iranya:Integer);
+    procedure mozgasok_mClick(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -412,7 +416,8 @@ uses
   tipusokU, tarolokU, Rak_szallU, rak_szall_listU, MeresU, Tulajok, Ping2U,
   tesztU, levon_szovegekU, demotomegU, nagykepU, szoftver_alapU, Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU, DMSoapU, DijakU, dijszabU, ftpDlU,
-  LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU,GongyoloegekFU;
+  LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU,GongyoloegekFU,
+  KartyakU,MozgasokTesztU,MozgasokListajaU;
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
 
@@ -1023,7 +1028,8 @@ end;
 
 procedure TFoF.teszt_mClick(Sender: TObject);
 begin
-  tesztF.showmodal;
+//  tesztF.showmodal;
+MozgasokTesztF.ShowModal;
 end;
 
 procedure TFoF.tomeg_levon_szovegek_mClick(Sender: TObject);
@@ -1331,6 +1337,9 @@ begin
   btnMeres.Visible := meresgomb_kell;
   btnMeresmodositas.Visible := meresgomb_kell;
   sbtnFolytatas.Visible := ideiglenes_latszik;
+  kartyak_m.Visible:=kartyak_hasznalata;
+  mozgasok_m.Visible:=kartyak_hasznalata;
+
   if ideiglenes_latszik then
     pcTablak.ActivePageIndex := 0;
   for i := 0 to 15 do
@@ -1948,6 +1957,11 @@ begin
     Application.Terminate;
   end;
   // or, if this is the main form, simply Close;
+end;
+
+procedure TFoF.kartyak_mClick(Sender: TObject);
+begin
+ KartyakF.showmodal
 end;
 
 procedure TFoF.kepatmeretez;
@@ -3400,6 +3414,47 @@ begin
     if Ping_teszt_moxa(moxa_ip3) then
       PortF.IP3_Start;
   moxaTeszttmr.Enabled := true;
+end;
+
+procedure TFoF.mozgasok_mClick(Sender: TObject);
+begin
+ MozgasokListajaF.fo
+end;
+
+procedure TFoF.mozgas_mentese(ksz: string; kozp_szam, iranya: Integer);
+var kQ:TFDQuery;
+begin
+//NEM TUDOM MI LESZ EZEKBÕL HASZNÁLVA, MAJD BE TESZED A SZÁLBA
+  try
+    af.MentesKapcs.Connected := false;
+    af.MentesKapcs.Connected := true;
+    kQ := TFDQuery.Create(Application);
+    with kq do
+    begin
+      close;
+      Connection := af.MentesKapcs;
+      SQL.Clear;
+      Close;
+      SQL.Clear;
+      Open('SELECT COUNT(*) FROM kartyak WHERE kartyaszam='+#39+ksz+#39);
+      if Fields[0].AsInteger>0 then //van ilyen kártya
+       begin
+        Close;
+        SQL.Clear;
+        SQL.Add('INSERT INTO mozgasok ');
+        SQL.Add('(kozp_szam,kartya_szam,irany) ');
+        SQL.Add('VALUES ');
+        SQL.Add('(:kozp_szam,:kartya_szam,:irany) ');
+        ParamByName('kozp_szam').AsInteger:=kozp_szam;
+        ParamByName('kartya_szam').AsString:=ksz;
+        ParamByName('irany').AsInteger:=iranya;
+        ExecSQL;
+       end;
+    end;
+  finally
+   af.MentesKapcs.Connected := false;
+   kQ.Free
+  end;
 end;
 
 procedure TFoF.Mrlegelseklistja1Click(Sender: TObject);

@@ -76,7 +76,10 @@ uses
   EkaerU in '..\..\Egyeb\EKAER\EkaerU.pas' {EkaerF},
   MeresTipusValasztasU in 'MeresTipusValasztasU.pas' {MeresTipusValasztasF},
   GongyoloegekFU in 'GongyoloegekFU.pas' {GongyoloegekF},
-  GongyCsatU in 'GongyCsatU.pas' {GongyCsatF};
+  GongyCsatU in 'GongyCsatU.pas' {GongyCsatF},
+  KartyakU in 'KartyakU.pas' {KartyakF},
+  MozgasokTesztU in 'MozgasokTesztU.pas' {MozgasokTesztF},
+  MozgasokListajaU in 'MozgasokListajaU.pas' {MozgasokListajaF};
 
 {$R *.res}
 
@@ -142,5 +145,8 @@ begin
   Application.CreateForm(TMeresTipusValasztasF, MeresTipusValasztasF);
   Application.CreateForm(TGongyoloegekF, GongyoloegekF);
   Application.CreateForm(TGongyCsatF, GongyCsatF);
+  Application.CreateForm(TKartyakF, KartyakF);
+  Application.CreateForm(TMozgasokTesztF, MozgasokTesztF);
+  Application.CreateForm(TMozgasokListajaF, MozgasokListajaF);
   Application.Run;
 end.

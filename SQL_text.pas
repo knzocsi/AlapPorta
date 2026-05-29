@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=34;
+      maxSQL=35;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1079,6 +1079,38 @@ interface
       '	PRIMARY KEY (`id`) USING BTREE' + #13#10 +
       ')' + #13#10 +
       'ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+      ,
+      '/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;' + #13#10 +
+      '/*!40101 SET NAMES utf8 */;' + #13#10 +
+      '/*!50503 SET NAMES utf8mb4 */;' + #13#10 +
+      '/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;' + #13#10 +
+      '/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=''NO_AUTO_VALUE_ON_ZERO'' */;' + #13#10 +
+      '' + #13#10 +
+      'CREATE TABLE IF NOT EXISTS `kartyak` (' + #13#10 +
+        '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
+        '`kartyaszam` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
+        '`nev` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
+        '`ceg_nev` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
+        '`extra` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
+        '`aktiv` TINYINT(1) NOT NULL DEFAULT 1,' + #13#10 +
+        'PRIMARY KEY (`id`) USING BTREE,' + #13#10 +
+        'UNIQUE KEY `ID_UNIQUE` (`id`) USING BTREE' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        '' + #13#10 +
+        'CREATE TABLE IF NOT EXISTS `mozgasok` (' + #13#10 +
+        '`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
+        '`kozp_szam` INT(11) NOT NULL,' + #13#10 +
+        '`kartya_szam` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,' + #13#10 +
+        '`idobelyeg` timestamp NOT NULL DEFAULT current_timestamp(),' + #13#10 +
+        '`irany` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
+        'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        '' + #13#10 +
+        '/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;' + #13#10 +
+        '/*!40101 SET NAMES utf8 */;' + #13#10 +
+        '/*!50503 SET NAMES utf8mb4 */;' + #13#10 +
+        '/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;' + #13#10 +
+        '/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=''NO_AUTO_VALUE_ON_ZERO'' */;'
 
     );
 

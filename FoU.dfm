@@ -1687,6 +1687,10 @@ object FoF: TFoF
         Caption = 'G'#246'ngy'#246'legek'
         OnClick = Gngylegek1Click
       end
+      object kartyak_m: TMenuItem
+        Caption = 'K'#225'rty'#225'k'
+        OnClick = kartyak_mClick
+      end
     end
     object Listk1: TMenuItem
       Caption = 'List'#225'k'
@@ -1710,6 +1714,10 @@ object FoF: TFoF
       object Mrlegelseklistja1: TMenuItem
         Caption = 'M'#233'rlegel'#233'sek list'#225'ja'
         OnClick = Mrlegelseklistja1Click
+      end
+      object mozgasok_m: TMenuItem
+        Caption = 'Mozg'#225'sok list'#225'ja'
+        OnClick = mozgasok_mClick
       end
     end
     object Raktrkziszlltlevl1: TMenuItem
