@@ -50,7 +50,7 @@ var
   GongyoloegekF: TGongyoloegekF;
 
 implementation
-  uses AU;
+  uses AU,UzenetekU;
 {$R *.dfm}
 
 procedure TGongyoloegekF.beolvas;
@@ -60,7 +60,7 @@ begin
  edvkod.Text:=aF.gongyQ.FieldByName('v_kod').AsString;
  edszovege.Text:=aF.gongyQ.FieldByName('nev').AsString;
  sptomeg.value:=aF.gongyQ.FieldByName('tomeg').value;
- btnfelvesz.Caption:='Módosít';
+ btnfelvesz.Caption:=rsModosit;
  btnfelvesz.tag:=aF.gongyQ.FieldByName('id').AsInteger;
 end;
 
@@ -79,7 +79,7 @@ begin
   if AF.gongyQ.Locate('nev',edszovege.Text,[locaseinsensitive]) then
   if AF.gongyQ.FieldByName('id').AsInteger<>(sender as TButton).Tag then
   begin
-    ShowMessage('Ilyen göngyöleg már léterzik!');
+    ShowMessage('Ilyen göngyöleg már létezik!');
     exit;
   end;
   if Length(edvkod.Text)<4 then
@@ -200,7 +200,7 @@ begin
  //edvkod.Clear;
  edszovege.Clear;
  sptomeg.Value:=0;
- btnfelvesz.Caption:='Felvesz';
+ btnfelvesz.Caption:=rsfelvesz;
  btnfelvesz.tag:=0;
 end;
 

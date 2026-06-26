@@ -31,10 +31,9 @@ object DMSoapF: TDMSoapF
     Transaction = Soap_tread_transaction
     SQL.Strings = (
       
-        'SELECT id,soap_merleg_azonosito, if(irany='#39'K'#39','#39'OUT'#39','#39'IN'#39') AS ira' +
-        'ny,'
-      'IF(irany='#39'K'#39',rendszam2,rendszam) AS rendszam,'
-      'IF(irany='#39'K'#39',kepnev2,kepnev1) AS kepnev,tomeg,datum,ido'
+        'SELECT id,soap_merleg_azonosito, if(irany='#39'KI'#39','#39'OUT'#39','#39'IN'#39') AS ir' +
+        'any,'
+      'rendszam, kepnev1 AS kepnev,tomeg,datum,ido'
       'FROM forgalom'
       'WHERE soap_allapot='#39'SEND'#39';')
     Left = 128

@@ -69,7 +69,7 @@ object PartnerekF: TPartnerekF
     Top = 41
     Width = 824
     Height = 328
-    ActivePage = tbReszlet
+    ActivePage = tbLista
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet

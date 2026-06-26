@@ -97,61 +97,63 @@ object FoF: TFoF
           Columns = <
             item
               Expanded = False
-              FieldName = 'Hivo_sorszam'
+              FieldName = 'Call number'
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Rendszam'
+              FieldName = 'License plate'
+              Width = 70
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Rendszam2'
+              FieldName = 'License plate 2'
+              Width = 70
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Erkdatum'
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Erkido'
+              FieldName = 'Partner'
+              Width = 120
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'Netto'
+              FieldName = 'Partner 2'
+              Width = 120
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'irany'
+              FieldName = 'Date in'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'Time in'
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'P_Nev'
-              Width = 252
+              FieldName = 'Net'
               Visible = True
             end
             item
               Color = clLime
               Expanded = False
-              FieldName = 'P2_Nev'
-              Width = 185
+              FieldName = 'Direction'
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Megjegyzes'
+              FieldName = 'Note'
               Visible = True
             end>
         end
@@ -262,13 +264,13 @@ object FoF: TFoF
             item
               Expanded = False
               FieldName = 'Irany'
-              Title.Caption = 'Ir'#225'ny'
+              Title.Caption = 'Direction'
               Width = 20
               Visible = True
             end
             item
               Expanded = False
-              FieldName = 'Tomeg'
+              FieldName = 'Mass'
               Title.Caption = 'Mass'
               Width = 50
               Visible = True
@@ -276,7 +278,7 @@ object FoF: TFoF
             item
               Expanded = False
               FieldName = 'Rendszam2'
-              Title.Caption = 'Rendsz'#225'm 2'
+              Title.Caption = 'License plate 2'
               Width = 60
               Visible = True
             end
@@ -352,12 +354,12 @@ object FoF: TFoF
             OnShow = cam1Show
           end
           object cam4: TTabSheet
-            Caption = 'Kamera 5'
+            Caption = 'Camera 5'
             ImageIndex = 4
             OnShow = cam1Show
           end
           object cam5: TTabSheet
-            Caption = 'Kamera 6'
+            Caption = 'Camera 6'
             ImageIndex = 5
             OnShow = cam1Show
           end
@@ -368,7 +370,7 @@ object FoF: TFoF
           Width = 794
           Height = 39
           Align = alBottom
-          Caption = 'NAGY'#205'TOTT N'#201'ZET'
+          Caption = 'ZOOMED-IN VIEW'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -21
@@ -941,9 +943,9 @@ object FoF: TFoF
     object sbtnUjmerlegjegy: TSpeedButton
       Left = 79
       Top = 2
-      Width = 146
+      Width = 152
       Height = 51
-      Caption = #218'j m'#233'rlegjegy'
+      Caption = 'New weight ticket'
       Glyph.Data = {
         CA130000424DCA13000000000000420000002800000032000000320000000100
         10000300000088130000D8050000D8050000000000000000000000F80000E007
@@ -1107,11 +1109,11 @@ object FoF: TFoF
       OnClick = sbtnUjmerlegjegyClick
     end
     object sbtnFolytatas: TSpeedButton
-      Left = 231
+      Left = 243
       Top = 2
-      Width = 153
+      Width = 169
       Height = 51
-      Caption = 'M'#233'rlegjegy folytat'#225'sa'
+      Caption = 'Continue weight ticket'
       Glyph.Data = {
         CA130000424DCA13000000000000420000002800000032000000320000000100
         100003000000881300008905000089050000000000000000000000F80000E007
@@ -1275,11 +1277,11 @@ object FoF: TFoF
       OnClick = sbtnUjmerlegjegyClick
     end
     object sbtnLista: TSpeedButton
-      Left = 396
+      Left = 424
       Top = 2
-      Width = 129
+      Width = 152
       Height = 51
-      Caption = 'M'#233'r'#233'sek list'#225'ja'
+      Caption = 'List of measuring'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1682,8 +1684,12 @@ object FoF: TFoF
         OnClick = Djszabsikategrik1Click
       end
       object Gngylegek1: TMenuItem
-        Caption = 'G'#246'ngy'#246'legek'
+        Caption = 'Packings'
         OnClick = Gngylegek1Click
+      end
+      object kartyak_m: TMenuItem
+        Caption = 'Cards'
+        OnClick = kartyak_mClick
       end
     end
     object Listk1: TMenuItem
@@ -1708,6 +1714,10 @@ object FoF: TFoF
       object Mrlegelseklistja1: TMenuItem
         Caption = 'List of measuring'
         OnClick = Mrlegelseklistja1Click
+      end
+      object mozgasok_m: TMenuItem
+        Caption = 'List of movements'
+        OnClick = mozgasok_mClick
       end
     end
     object Raktrkziszlltlevl1: TMenuItem

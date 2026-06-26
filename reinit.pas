@@ -104,7 +104,7 @@ begin                   { avoid possible EResNotFound exception }
        on E:Exception do
         begin
         // log(Instance.Name+': '+E.Message);
-         //Instance := Instance;
+         Instance := Instance;
         end;
       end;
     finally
@@ -128,11 +128,11 @@ function ReloadInheritedComponent(Instance: TComponent; RootAncestor: TClass): B
   end;
 
 begin
- //try
+ try
   Result := InitComponent(Instance.ClassType);
-// except
-//  Result :=False
-// end;
+ except
+  Result :=False
+ end;
 end;
 
 procedure ReinitializeForms;

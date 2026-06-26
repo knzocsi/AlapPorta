@@ -27,6 +27,7 @@ library WinPorta;
 {ITE} {DFMFileType} {GongyoloegekFU.dfm}
 {ITE} {DFMFileType} {Hardver_beallU.dfm}
 {ITE} {DFMFileType} {ImportU.dfm}
+{ITE} {DFMFileType} {KartyakU.dfm}
 {ITE} {DFMFileType} {KepekU.dfm}
 {ITE} {DFMFileType} {KeszletU.dfm}
 {ITE} {DFMFileType} {kezdokeszletU.dfm}
@@ -42,6 +43,8 @@ library WinPorta;
 {ITE} {DFMFileType} {MermodU.dfm}
 {ITE} {DFMFileType} {MjegyListaU.dfm}
 {ITE} {DFMFileType} {mjegyU.dfm}
+{ITE} {DFMFileType} {MozgasokListajaU.dfm}
+{ITE} {DFMFileType} {MozgasokTesztU.dfm}
 {ITE} {DFMFileType} {my_sqlU.dfm}
 {ITE} {DFMFileType} {nagykamU.dfm}
 {ITE} {DFMFileType} {nagykepU.dfm}
@@ -90,6 +93,7 @@ library WinPorta;
 {$R 'GongyoloegekFU.dfm' 'GongyoloegekF:TForm'}
 {$R 'Hardver_beallU.dfm' 'Hardver_beallF:TForm'}
 {$R 'ImportU.dfm' 'ImportF:TForm'}
+{$R 'KartyakU.dfm' 'KartyakF:TForm'}
 {$R 'KepekU.dfm' 'KepekF:TForm'}
 {$R 'KeszletU.dfm' 'KeszletF:TForm'}
 {$R 'kezdokeszletU.dfm' 'kezdokeszletF:TForm'}
@@ -105,6 +109,8 @@ library WinPorta;
 {$R 'MermodU.dfm' 'MermodF:TForm'}
 {$R 'MjegyListaU.dfm' 'MjegyekF:TForm'}
 {$R 'mjegyU.dfm' 'MjegyF:TForm'}
+{$R 'MozgasokListajaU.dfm' 'MozgasokListajaF:TForm'}
+{$R 'MozgasokTesztU.dfm' 'MozgasokTesztF:TForm'}
 {$R 'my_sqlU.dfm' 'MySQLF:TForm'}
 {$R 'nagykamU.dfm' 'NagykamF:TForm'}
 {$R 'nagykepU.dfm' 'NagykepF:TForm'}

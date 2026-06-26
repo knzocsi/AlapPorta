@@ -3796,7 +3796,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.754742951400000000
-    ReportOptions.LastChange = 45506.711429537000000000
+    ReportOptions.LastChange = 46199.500575219910000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -3835,9 +3835,9 @@ object AF: TAF
         object Memo1: TfrxMemoView
           Align = baCenter
           AllowVectorExport = True
-          Left = 421.417595000000000000
+          Left = 398.740415000000000000
           Top = 7.559060000000000000
-          Width = 204.094620000000000000
+          Width = 249.448980000000000000
           Height = 26.456710000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -3847,7 +3847,7 @@ object AF: TAF
           Frame.Typ = []
           HAlign = haCenter
           Memo.UTF8W = (
-            'M'#233'rlegjegyek list'#225'ja')
+            'List of weighing tickets')
           ParentFont = False
         end
         object SysMemo1: TfrxSysMemoView
@@ -3886,7 +3886,7 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Sorsz'#225'm')
+            'No.')
           ParentFont = False
         end
         object Memo3: TfrxMemoView
@@ -3901,12 +3901,12 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Id'#337'pont')
+            '1. measure')
           ParentFont = False
         end
-        object Memo5: TfrxMemoView
+        object Memo4: TfrxMemoView
           AllowVectorExport = True
-          Left = 169.008040000000000000
+          Left = 162.519790000000000000
           Width = 86.929190000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3916,12 +3916,27 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Rendszamok')
+            '2. measure')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 257.008040000000000000
+          Width = 86.929190000000000000
+          Height = 30.236240000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'License plates')
           ParentFont = False
         end
         object Memo6: TfrxMemoView
           AllowVectorExport = True
-          Left = 261.496290000000000000
+          Left = 351.496290000000000000
           Width = 60.472480000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3931,12 +3946,12 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Brutt'#243)
+            'Gross')
           ParentFont = False
         end
         object Memo7: TfrxMemoView
           AllowVectorExport = True
-          Left = 335.527830000000000000
+          Left = 419.527830000000000000
           Width = 60.472480000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3946,12 +3961,12 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'T'#225'ra')
+            'Tare')
           ParentFont = False
         end
         object Memo8: TfrxMemoView
           AllowVectorExport = True
-          Left = 403.559370000000000000
+          Left = 487.559370000000000000
           Width = 71.811070000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3961,12 +3976,27 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Sz.nett'#243)
+            'Calc.Net')
+          ParentFont = False
+        end
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 563.149970000000000000
+          Width = 56.692950000000000000
+          Height = 15.118120000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            'Pcode')
           ParentFont = False
         end
         object Memo10: TfrxMemoView
           AllowVectorExport = True
-          Left = 487.622450000000000000
+          Left = 623.622450000000000000
           Width = 94.488250000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3976,12 +4006,12 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Term'#233'k n'#233'v')
+            'Product')
           ParentFont = False
         end
         object Memo11: TfrxMemoView
           AllowVectorExport = True
-          Left = 597.228820000000000000
+          Left = 733.228820000000000000
           Width = 117.165430000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -3996,8 +4026,8 @@ object AF: TAF
         end
         object Memo12: TfrxMemoView
           AllowVectorExport = True
-          Left = 800.662030000000000000
-          Width = 50.488250000000000000
+          Left = 948.662030000000000000
+          Width = 94.488250000000000000
           Height = 15.118120000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -4006,86 +4036,24 @@ object AF: TAF
           Font.Style = []
           Frame.Typ = []
           Memo.UTF8W = (
-            'Ir'#225'ny')
+            'Direction')
           ParentFont = False
         end
         object Memo17: TfrxMemoView
           AllowVectorExport = True
-          Left = 261.716760000000000000
+          Left = 349.716760000000000000
           Top = 18.897650000000000000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Frame.Typ = []
           Memo.UTF8W = (
-            'Megjegyz'#233's')
-        end
-        object Memo19: TfrxMemoView
-          AllowVectorExport = True
-          Left = 488.000000000000000000
-          Top = 19.000000000000000000
-          Width = 106.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'Term'#233'k egys.'#225'r')
-          ParentFont = False
-        end
-        object Memo20: TfrxMemoView
-          AllowVectorExport = True
-          Left = 884.000000000000000000
-          Width = 74.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'Sz'#225'r'#237't'#225'si d'#237'j')
-          ParentFont = False
-        end
-        object Memo21: TfrxMemoView
-          AllowVectorExport = True
-          Left = 884.000000000000000000
-          Top = 20.000000000000000000
-          Width = 74.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'Tiszt'#237't'#225'si d'#237'j')
-          ParentFont = False
-        end
-        object Memo22: TfrxMemoView
-          AllowVectorExport = True
-          Left = 964.000000000000000000
-          Width = 74.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          Memo.UTF8W = (
-            #201'rt'#233'k')
-          ParentFont = False
+            'Note')
         end
       end
       object MasterData1: TfrxMasterData
         FillType = ftBrush
         Frame.Typ = []
-        Height = 49.574830000000000000
+        Height = 41.574830000000000000
         Top = 181.417440000000000000
         Width = 1046.929810000000000000
         DataSet = DBFrxmjegyList
@@ -4147,9 +4115,46 @@ object AF: TAF
             '[frxDBDataset1."erkido"]')
           ParentFont = False
         end
+        object frxDBDataset1tavdatum: TfrxMemoView
+          AllowVectorExport = True
+          Left = 170.078850000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          DataField = 'tavdatum'
+          DataSet = DBFrxmjegyList
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDataset1."tavdatum"]')
+          ParentFont = False
+        end
+        object frxDBDataset1tavido: TfrxMemoView
+          AllowVectorExport = True
+          Left = 170.078850000000000000
+          Top = 18.897650000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          DataField = 'tavido'
+          DataSet = DBFrxmjegyList
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDataset1."tavido"]')
+          ParentFont = False
+        end
         object frxDBDataset1rendszam: TfrxMemoView
           AllowVectorExport = True
-          Left = 169.008040000000000000
+          Left = 257.008040000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
           DataField = 'rendszam'
@@ -4167,7 +4172,7 @@ object AF: TAF
         end
         object frxDBDataset1rendszam2: TfrxMemoView
           AllowVectorExport = True
-          Left = 169.008040000000000000
+          Left = 257.008040000000000000
           Top = 18.897650000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
@@ -4186,7 +4191,7 @@ object AF: TAF
         end
         object frxDBDataset1brutto: TfrxMemoView
           AllowVectorExport = True
-          Left = 259.716760000000000000
+          Left = 347.716760000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
           DataField = 'brutto'
@@ -4198,8 +4203,8 @@ object AF: TAF
         end
         object frxDBDataset1tara: TfrxMemoView
           AllowVectorExport = True
-          Left = 335.527830000000000000
-          Width = 63.370130000000000000
+          Left = 419.527830000000000000
+          Width = 79.370130000000000000
           Height = 18.897650000000000000
           DataField = 'tara'
           DataSet = DBFrxmjegyList
@@ -4210,7 +4215,7 @@ object AF: TAF
         end
         object frxDBDataset1sznetto: TfrxMemoView
           AllowVectorExport = True
-          Left = 403.559370000000000000
+          Left = 487.559370000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
           DataField = 'sznetto'
@@ -4220,29 +4225,34 @@ object AF: TAF
           Memo.UTF8W = (
             '[frxDBDataset1."sznetto"]')
         end
+        object frxDBDataset1termek_kod: TfrxMemoView
+          AllowVectorExport = True
+          Left = 563.149970000000000000
+          Width = 56.692950000000000000
+          Height = 18.897650000000000000
+          DataField = 'termek_kod'
+          DataSet = DBFrxmjegyList
+          DataSetName = 'frxDBDataset1'
+          Frame.Typ = []
+          Memo.UTF8W = (
+            '[frxDBDataset1."termek_kod"]')
+        end
         object frxDBDataset1termek_nev: TfrxMemoView
           AllowVectorExport = True
-          Left = 488.842920000000000000
+          Left = 624.842920000000000000
           Width = 98.267780000000000000
           Height = 18.897650000000000000
           StretchMode = smMaxHeight
           DataField = 'termek_nev'
           DataSet = DBFrxmjegyList
           DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
           Frame.Typ = []
-          HAlign = haCenter
           Memo.UTF8W = (
             '[frxDBDataset1."termek_nev"]')
-          ParentFont = False
         end
         object frxDBDataset1p_nev: TfrxMemoView
           AllowVectorExport = True
-          Left = 597.669760000000000000
+          Left = 733.669760000000000000
           Width = 204.094620000000000000
           Height = 18.897650000000000000
           StretchMode = smMaxHeight
@@ -4255,8 +4265,8 @@ object AF: TAF
         end
         object frxDBDataset1irany: TfrxMemoView
           AllowVectorExport = True
-          Left = 805.102970000000000000
-          Width = 74.708720000000000000
+          Left = 941.102970000000000000
+          Width = 90.708720000000000000
           Height = 18.897650000000000000
           DataField = 'irany'
           DataSet = DBFrxmjegyList
@@ -4276,11 +4286,10 @@ object AF: TAF
         object frxDBDataset1megjegyzes: TfrxMemoView
           IndexTag = 1
           AllowVectorExport = True
-          Left = 259.716760000000000000
+          Left = 347.716760000000000000
           Top = 18.897650000000000000
-          Width = 223.213050000000000000
+          Width = 699.213050000000000000
           Height = 18.897650000000000000
-          StretchMode = smMaxHeight
           DataField = 'megjegyzes'
           DataSet = DBFrxmjegyList
           DataSetName = 'frxDBDataset1'
@@ -4290,7 +4299,7 @@ object AF: TAF
         end
         object Memo18: TfrxMemoView
           AllowVectorExport = True
-          Left = 597.228820000000000000
+          Left = 733.228820000000000000
           Top = 18.897650000000000000
           Width = 204.094620000000000000
           Height = 18.897650000000000000
@@ -4301,100 +4310,12 @@ object AF: TAF
           Memo.UTF8W = (
             '[frxDBDataset1."p2_nev"]')
         end
-        object frxDBDataset1termek_ar: TfrxMemoView
-          IndexTag = 1
-          AllowVectorExport = True
-          Left = 500.000000000000000000
-          Top = 20.000000000000000000
-          Width = 80.000000000000000000
-          Height = 16.000000000000000000
-          DataField = 'termek_ar'
-          DataSet = DBFrxmjegyList
-          DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."termek_ar"]')
-          ParentFont = False
-        end
-        object frxDBDataset1szaritasi_dij: TfrxMemoView
-          IndexTag = 1
-          AllowVectorExport = True
-          Left = 884.000000000000000000
-          Width = 80.000000000000000000
-          Height = 16.000000000000000000
-          DataField = 'szaritasi_dij'
-          DataSet = DBFrxmjegyList
-          DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = '%2.0f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."szaritasi_dij"]')
-          ParentFont = False
-        end
-        object frxDBDataset1tisztitasi_dij: TfrxMemoView
-          IndexTag = 1
-          AllowVectorExport = True
-          Left = 884.000000000000000000
-          Top = 20.000000000000000000
-          Width = 80.000000000000000000
-          Height = 16.000000000000000000
-          DataField = 'tisztitasi_dij'
-          DataSet = DBFrxmjegyList
-          DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = '%2.0f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."tisztitasi_dij"]')
-          ParentFont = False
-        end
-        object Memo23: TfrxMemoView
-          AllowVectorExport = True
-          Left = 968.000000000000000000
-          Width = 79.370130000000000000
-          Height = 18.897650000000000000
-          DataSet = DBFrxmjegyList
-          DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = '%2.0f'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
-          HAlign = haRight
-          Memo.UTF8W = (
-            
-              '[(<frxDBDataset1."sznetto">*<frxDBDataset1."termek_ar">)-<frxDBD' +
-              'ataset1."tisztitasi_dij">-<frxDBDataset1."szaritasi_dij">]')
-          ParentFont = False
-        end
       end
       object ReportSummary1: TfrxReportSummary
         FillType = ftBrush
         Frame.Typ = []
-        Height = 129.606370000000000000
-        Top = 291.023810000000000000
+        Height = 109.606370000000000000
+        Top = 283.464750000000000000
         Width = 1046.929810000000000000
         object Memo13: TfrxMemoView
           AllowVectorExport = True
@@ -4409,14 +4330,14 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Be:')
+            'IN:')
           ParentFont = False
         end
         object Memo14: TfrxMemoView
           AllowVectorExport = True
-          Left = 30.236240000000000000
+          Left = 5.559060000000000000
           Top = 37.795300000000000000
-          Width = 30.236240000000000000
+          Width = 56.692950000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -4425,7 +4346,7 @@ object AF: TAF
           Font.Style = [fsBold]
           Frame.Typ = []
           Memo.UTF8W = (
-            'Ki:')
+            'OUT:')
           ParentFont = False
         end
         object Memo15: TfrxMemoView
@@ -4460,129 +4381,6 @@ object AF: TAF
           Frame.Typ = []
           Memo.UTF8W = (
             '[SUM(<frxDBDataset1."tomegki">,MasterData1)]')
-          ParentFont = False
-        end
-        object Memo24: TfrxMemoView
-          AllowVectorExport = True
-          Left = 798.000000000000000000
-          Top = 4.000000000000000000
-          Width = 120.000000000000000000
-          Height = 20.000000000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            #214'SSZES'#205'T'#201'S')
-          ParentFont = False
-        end
-        object Memo25: TfrxMemoView
-          AllowVectorExport = True
-          Left = 798.000000000000000000
-          Top = 33.000000000000000000
-          Width = 102.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'Sz'#225'r'#237't'#225'si d'#237'j:')
-          ParentFont = False
-        end
-        object Memo26: TfrxMemoView
-          AllowVectorExport = True
-          Left = 798.000000000000000000
-          Top = 69.000000000000000000
-          Width = 102.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            'Tiszt'#237't'#225'si d'#237'j:')
-          ParentFont = False
-        end
-        object Memo27: TfrxMemoView
-          AllowVectorExport = True
-          Left = 798.000000000000000000
-          Top = 101.000000000000000000
-          Width = 102.488250000000000000
-          Height = 19.118120000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            #201'rt'#233'k:')
-          ParentFont = False
-        end
-        object Memo28: TfrxMemoView
-          AllowVectorExport = True
-          Left = 908.000000000000000000
-          Top = 33.000000000000000000
-          Width = 128.000000000000000000
-          Height = 20.000000000000000000
-          DisplayFormat.FormatStr = '%2.0n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            '[SUM(<frxDBDataset1."szaritasi_dij">,MasterData1)] -Ft ')
-          ParentFont = False
-        end
-        object Memo29: TfrxMemoView
-          AllowVectorExport = True
-          Left = 908.000000000000000000
-          Top = 70.000000000000000000
-          Width = 128.000000000000000000
-          Height = 20.000000000000000000
-          DisplayFormat.FormatStr = '%2.0n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            '[SUM(<frxDBDataset1."tisztitasi_dij">,MasterData1)] -Ft')
-          ParentFont = False
-        end
-        object Memo30: TfrxMemoView
-          AllowVectorExport = True
-          Left = 908.000000000000000000
-          Top = 100.000000000000000000
-          Width = 127.370130000000000000
-          Height = 22.897650000000000000
-          DataSet = DBFrxmjegyList
-          DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = '%2.0n'
-          DisplayFormat.Kind = fkNumeric
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Frame.Typ = []
-          Memo.UTF8W = (
-            
-              '[SUM((<frxDBDataset1."sznetto">*<frxDBDataset1."termek_ar">)-<fr' +
-              'xDBDataset1."tisztitasi_dij">-<frxDBDataset1."szaritasi_dij">)] ' +
-              '-Ft ')
           ParentFont = False
         end
       end
@@ -5595,7 +5393,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 46106.425424386570000000
+    ReportOptions.LastChange = 45454.392347500000000000
     ScriptLanguage = 'PascalScript'
     StoreInDFM = False
     Left = 664

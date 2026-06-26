@@ -1,7 +1,7 @@
 object GongyoloegekF: TGongyoloegekF
   Left = 0
   Top = 0
-  Caption = 'G'#246'ngy'#246'legek'
+  Caption = 'Packages'
   ClientHeight = 336
   ClientWidth = 628
   Color = clBtnFace
@@ -30,7 +30,7 @@ object GongyoloegekF: TGongyoloegekF
       Top = 21
       Width = 75
       Height = 25
-      Caption = 'Kil'#233'p'#233's'
+      Caption = 'Exit'
       TabOrder = 0
       OnClick = Button1Click
     end
@@ -40,7 +40,7 @@ object GongyoloegekF: TGongyoloegekF
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      Caption = #218'j'
+      Caption = 'New'
       TabOrder = 1
       OnClick = Button2Click
     end
@@ -50,7 +50,7 @@ object GongyoloegekF: TGongyoloegekF
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      Caption = 'M'#243'dos'#237't'
+      Caption = 'Modify'
       TabOrder = 2
       OnClick = Button3Click
     end
@@ -60,7 +60,7 @@ object GongyoloegekF: TGongyoloegekF
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      Caption = 'T'#246'r'#246'l'
+      Caption = 'Delete'
       TabOrder = 3
       OnClick = Button4Click
     end
@@ -91,26 +91,26 @@ object GongyoloegekF: TGongyoloegekF
       item
         Expanded = False
         FieldName = 'id'
-        Title.Caption = 'Sorsz'
+        Title.Caption = 'No.'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'v_kod'
-        Title.Caption = 'Vonalk'#243'd'
+        Title.Caption = 'Barcode'
         Visible = False
       end
       item
         Expanded = False
         FieldName = 'nev'
-        Title.Caption = 'G'#246'ngy'#246'leg'
+        Title.Caption = 'Package'
         Width = 326
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tomeg'
-        Title.Caption = 'T'#246'meg'
+        Title.Caption = 'Mass'
         Visible = True
       end>
   end
@@ -120,7 +120,7 @@ object GongyoloegekF: TGongyoloegekF
     Width = 628
     Height = 82
     Align = alBottom
-    Caption = 'R'#233'szletek'
+    Caption = 'Details'
     TabOrder = 2
     DesignSize = (
       628
@@ -134,21 +134,21 @@ object GongyoloegekF: TGongyoloegekF
       Top = 31
       Width = 82
       Height = 13
-      Caption = 'G'#246'ngy'#246'leg neve:'
+      Caption = 'Package:'
     end
     object Label2: TLabel
       Left = 428
       Top = 31
       Width = 56
       Height = 13
-      Caption = 'T'#246'meg(Kg):'
+      Caption = 'Mass(Kg):'
     end
     object Label3: TLabel
       Left = 8
       Top = 31
       Width = 47
       Height = 13
-      Caption = 'Vonalk'#243'd:'
+      Caption = 'Barcode:'
       Visible = False
     end
     object edszovege: TEdit

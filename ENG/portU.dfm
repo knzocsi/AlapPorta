@@ -120,6 +120,7 @@ object PortF: TPortF
       'Soros teszt'
       '')
     TabOrder = 1
+    ExplicitLeft = -5
   end
   object memHexa: TMemo
     Left = 0

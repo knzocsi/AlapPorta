@@ -690,7 +690,7 @@ end;
 
 procedure TFoF.cam1Show(Sender: TObject);
 begin
-  btnnagykamkep.Caption := UpperCase((Sender as TTabSheet).Caption) + ' NAGYÍTOTT NÉZETE';
+  btnnagykamkep.Caption := UpperCase((Sender as TTabSheet).Caption) + rsNagyitott_nezet;
 end;
 
 procedure TFoF.chkToroltek_mutatasaClick(Sender: TObject);
@@ -701,7 +701,7 @@ begin
   if chkToroltek_mutatasa.Checked then
     AF.NyitbeQ.MacroByName('SZURES').AsRaw := ''
   else
-    AF.NyitbeQ.MacroByName('SZURES').AsRaw := 'WHERE Torolve=0';
+  AF.NyitbeQ.MacroByName('SZURES').AsRaw := 'WHERE Torolve=0';
   AF.NyitbeQ.open;
 end;
 

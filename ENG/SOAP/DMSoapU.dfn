@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46106.4018055556</prop>
-        <prop prop-type="OrigDateTime">45973.3730555556</prop>
-        <prop prop-type="XlatDateTime">45581.294537037</prop>
+        <prop prop-type="SelfDateTime">46197.4081018519</prop>
+        <prop prop-type="OrigDateTime">46192.386875</prop>
+        <prop prop-type="XlatDateTime">45581.3362037037</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">42</prop>
+        <prop prop-type="UnTranslated">41</prop>
       </prop-group>
     </header>
     <body>
@@ -129,99 +129,94 @@
         <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.SQL.Strings[0]" resname="O:DMSoapF.O:ForgQ_tread.SQL.Strings[0]">
-        <source>'SELECT id,soap_merleg_azonosito, if(irany='#39'K'#39','#39'OUT'#39','#39'IN'#39') AS irany,'</source>
+        <source>'SELECT id,soap_merleg_azonosito, if(irany='#39'KI'#39','#39'OUT'#39','#39'IN'#39') AS irany,'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.SQL.Strings[1]" resname="O:DMSoapF.O:ForgQ_tread.SQL.Strings[1]">
-        <source>'IF(irany='#39'K'#39',rendszam2,rendszam) AS rendszam,'</source>
+        <source>'rendszam, kepnev1 AS kepnev,tomeg,datum,ido'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.SQL.Strings[2]" resname="O:DMSoapF.O:ForgQ_tread.SQL.Strings[2]">
-        <source>'IF(irany='#39'K'#39',kepnev2,kepnev1) AS kepnev,tomeg,datum,ido'</source>
+        <source>'FROM forgalom'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.SQL.Strings[3]" resname="O:DMSoapF.O:ForgQ_tread.SQL.Strings[3]">
-        <source>'FROM forgalom'</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:DMSoapF.O:ForgQ_tread.SQL.Strings[4]" resname="O:DMSoapF.O:ForgQ_tread.SQL.Strings[4]">
         <source>'WHERE soap_allapot='#39'SEND'#39';'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">45531.6422432639</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.Left" resname="O:DMSoapF.O:ForgQ_tread.Left">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:ForgQ_tread.Top" resname="O:DMSoapF.O:ForgQ_tread.Top">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:InupQ_tread.Connection" resname="O:DMSoapF.O:InupQ_tread.Connection">
         <source>Soap_tread_kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:InupQ_tread.Transaction" resname="O:DMSoapF.O:InupQ_tread.Transaction">
         <source>Soap_tread_transaction</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:InupQ_tread.Left" resname="O:DMSoapF.O:InupQ_tread.Left">
         <source>208</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:InupQ_tread.Top" resname="O:DMSoapF.O:InupQ_tread.Top">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_kapcs.Params.Strings[0]" resname="O:DMSoapF.O:Soap_tread_kapcs.Params.Strings[0]">
         <source>'DriverID=MySQL'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_kapcs.LoginPrompt" resname="O:DMSoapF.O:Soap_tread_kapcs.LoginPrompt">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_kapcs.Transaction" resname="O:DMSoapF.O:Soap_tread_kapcs.Transaction">
         <source>Soap_tread_transaction</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_kapcs.Left" resname="O:DMSoapF.O:Soap_tread_kapcs.Left">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_kapcs.Top" resname="O:DMSoapF.O:Soap_tread_kapcs.Top">
         <source>24</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TFDConnection</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_transaction.Connection" resname="O:DMSoapF.O:Soap_tread_transaction.Connection">
         <source>Soap_tread_kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_transaction.Left" resname="O:DMSoapF.O:Soap_tread_transaction.Left">
         <source>128</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:DMSoapF.O:Soap_tread_transaction.Top" resname="O:DMSoapF.O:Soap_tread_transaction.Top">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6422432755</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TFDTransaction</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46106.399212963</prop>
-        <prop prop-type="OrigDateTime">46104.5199537037</prop>
-        <prop prop-type="XlatDateTime">45581.2953472222</prop>
+        <prop prop-type="SelfDateTime">46197.4052314815</prop>
+        <prop prop-type="OrigDateTime">46169.5322222222</prop>
+        <prop prop-type="XlatDateTime">45581.3370138889</prop>
         <prop prop-type="Translated">14</prop>
         <prop prop-type="UnTranslated">2627</prop>
       </prop-group>
@@ -11513,7 +11513,7 @@
         <prop prop-type="Created">45531.6397352662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2296</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:AF.O:frxtesztrep.ReportOptions.LastChange" resname="O:AF.O:frxtesztrep.ReportOptions.LastChange">
-        <source>46104.5233725347</source>
+        <source>46106.4254243866</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6397352662</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2297</prop><prop prop-type="Type">TfrxReport</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
