@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MozgasokTesztU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MozgasokTesztU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46197.4080555556</prop>
+        <prop prop-type="OrigDateTime">46171.3859953704</prop>
+        <prop prop-type="XlatDateTime">46171.3859953704</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">42</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MozgasokTesztF.Left" resname="O:MozgasokTesztF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Top" resname="O:MozgasokTesztF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Caption" resname="O:MozgasokTesztF.Caption">
+        <source>'Mozgások teszt'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.ClientHeight" resname="O:MozgasokTesztF.ClientHeight">
+        <source>91</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.ClientWidth" resname="O:MozgasokTesztF.ClientWidth">
+        <source>461</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Color" resname="O:MozgasokTesztF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Font.Charset" resname="O:MozgasokTesztF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Font.Color" resname="O:MozgasokTesztF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Font.Height" resname="O:MozgasokTesztF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Font.Name" resname="O:MozgasokTesztF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Font.Style" resname="O:MozgasokTesztF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.OldCreateOrder" resname="O:MozgasokTesztF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.Position" resname="O:MozgasokTesztF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.PixelsPerInch" resname="O:MozgasokTesztF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.TextHeight" resname="O:MozgasokTesztF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TMozgasokTesztF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Label1.Left" resname="O:MozgasokTesztF.O:Label1.Left">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Label1.Top" resname="O:MozgasokTesztF.O:Label1.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Label1.Width" resname="O:MozgasokTesztF.O:Label1.Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Label1.Height" resname="O:MozgasokTesztF.O:Label1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Label1.Caption" resname="O:MozgasokTesztF.O:Label1.Caption">
+        <source>'Kártyaszám:'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Left" resname="O:MozgasokTesztF.O:rgirany.Left">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Top" resname="O:MozgasokTesztF.O:rgirany.Top">
+        <source>8</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Width" resname="O:MozgasokTesztF.O:rgirany.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Height" resname="O:MozgasokTesztF.O:rgirany.Height">
+        <source>65</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Caption" resname="O:MozgasokTesztF.O:rgirany.Caption">
+        <source>'Irány'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Columns" resname="O:MozgasokTesztF.O:rgirany.Columns">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Items.Strings[0]" resname="O:MozgasokTesztF.O:rgirany.Items.Strings[0]">
+        <source>'Be'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.Items.Strings[1]" resname="O:MozgasokTesztF.O:rgirany.Items.Strings[1]">
+        <source>'Ki'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:rgirany.TabOrder" resname="O:MozgasokTesztF.O:rgirany.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TRadioGroup</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.Left" resname="O:MozgasokTesztF.O:Edit1.Left">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.Top" resname="O:MozgasokTesztF.O:Edit1.Top">
+        <source>27</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.Width" resname="O:MozgasokTesztF.O:Edit1.Width">
+        <source>121</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.Height" resname="O:MozgasokTesztF.O:Edit1.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.TabOrder" resname="O:MozgasokTesztF.O:Edit1.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Edit1.Text" resname="O:MozgasokTesztF.O:Edit1.Text">
+        <source>'Edit1'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.Left" resname="O:MozgasokTesztF.O:Button1.Left">
+        <source>304</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.Top" resname="O:MozgasokTesztF.O:Button1.Top">
+        <source>24</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.Width" resname="O:MozgasokTesztF.O:Button1.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.Height" resname="O:MozgasokTesztF.O:Button1.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.Caption" resname="O:MozgasokTesztF.O:Button1.Caption">
+        <source>'Mentés'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.TabOrder" resname="O:MozgasokTesztF.O:Button1.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokTesztF.O:Button1.OnClick" resname="O:MozgasokTesztF.O:Button1.OnClick">
+        <source>Button1Click</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46197.4080749653</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

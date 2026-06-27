@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\MozgasokListajaU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\MozgasokListajaU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46197.4999537037</prop>
+        <prop prop-type="OrigDateTime">46171.4977314815</prop>
+        <prop prop-type="XlatDateTime">46171.4977314815</prop>
+        <prop prop-type="Translated">16</prop>
+        <prop prop-type="UnTranslated">151</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:MozgasokListajaF.Left" resname="O:MozgasokListajaF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">0</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Top" resname="O:MozgasokListajaF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">1</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Caption" resname="O:MozgasokListajaF.Caption">
+        <source>'Mozgások listája'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">2</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'List of movements'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.ClientHeight" resname="O:MozgasokListajaF.ClientHeight">
+        <source>408</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">3</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.ClientWidth" resname="O:MozgasokListajaF.ClientWidth">
+        <source>1022</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">4</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Color" resname="O:MozgasokListajaF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">5</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Font.Charset" resname="O:MozgasokListajaF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">6</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Font.Color" resname="O:MozgasokListajaF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">7</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Font.Height" resname="O:MozgasokListajaF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">8</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Font.Name" resname="O:MozgasokListajaF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">9</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Font.Style" resname="O:MozgasokListajaF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">10</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.OldCreateOrder" resname="O:MozgasokListajaF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">11</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.Position" resname="O:MozgasokListajaF.Position">
+        <source>poMainFormCenter</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">12</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.OnCreate" resname="O:MozgasokListajaF.OnCreate">
+        <source>FormCreate</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">13</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.PixelsPerInch" resname="O:MozgasokListajaF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">14</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.TextHeight" resname="O:MozgasokListajaF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">15</prop>
+          <prop prop-type="Type">TMozgasokListajaF</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.Left" resname="O:MozgasokListajaF.O:fpanel.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">16</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.Top" resname="O:MozgasokListajaF.O:fpanel.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">17</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.Width" resname="O:MozgasokListajaF.O:fpanel.Width">
+        <source>1022</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">18</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.Height" resname="O:MozgasokListajaF.O:fpanel.Height">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">19</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.Align" resname="O:MozgasokListajaF.O:fpanel.Align">
+        <source>alTop</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738194</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">20</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.TabOrder" resname="O:MozgasokListajaF.O:fpanel.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">21</prop>
+          <prop prop-type="Type">TPanel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label7.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label7.Left">
+        <source>672</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">22</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label7.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label7.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">23</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label7.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label7.Width">
+        <source>39</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">24</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label7.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label7.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">25</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label7.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label7.Caption">
+        <source>'Szűrés: '</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">26</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Filter: '</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:lblmire.Left" resname="O:MozgasokListajaF.O:fpanel.O:lblmire.Left">
+        <source>712</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">27</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:lblmire.Top" resname="O:MozgasokListajaF.O:fpanel.O:lblmire.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">28</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:lblmire.Width" resname="O:MozgasokListajaF.O:fpanel.O:lblmire.Width">
+        <source>56</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">29</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:lblmire.Height" resname="O:MozgasokListajaF.O:fpanel.O:lblmire.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">30</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:lblmire.Caption" resname="O:MozgasokListajaF.O:fpanel.O:lblmire.Caption">
+        <source>'Kártyaszám'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">31</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Cardnumber'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label1.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label1.Left">
+        <source>551</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">32</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label1.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label1.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">33</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label1.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label1.Width">
+        <source>30</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">34</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label1.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label1.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">35</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label1.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label1.Caption">
+        <source>'Irány:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">36</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Direction:'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label2.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label2.Left">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">37</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label2.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label2.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">38</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label2.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label2.Width">
+        <source>66</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">39</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label2.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label2.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">40</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label2.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label2.Caption">
+        <source>'Kezdő dátum:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">41</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Date from:'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label3.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label3.Left">
+        <source>247</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">42</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label3.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label3.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">43</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label3.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label3.Width">
+        <source>50</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">44</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label3.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label3.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">45</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label3.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label3.Caption">
+        <source>'Kezdő idő:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">46</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Time from:'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label4.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label4.Left">
+        <source>337</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">47</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label4.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label4.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">48</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label4.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label4.Width">
+        <source>79</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">49</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label4.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label4.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">50</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label4.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label4.Caption">
+        <source>'Befejező dátum:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">51</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Date to:'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label5.Left" resname="O:MozgasokListajaF.O:fpanel.O:Label5.Left">
+        <source>448</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">52</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label5.Top" resname="O:MozgasokListajaF.O:fpanel.O:Label5.Top">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">53</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label5.Width" resname="O:MozgasokListajaF.O:fpanel.O:Label5.Width">
+        <source>63</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">54</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label5.Height" resname="O:MozgasokListajaF.O:fpanel.O:Label5.Height">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">55</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:Label5.Caption" resname="O:MozgasokListajaF.O:fpanel.O:Label5.Caption">
+        <source>'Befejező idő:'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">56</prop>
+          <prop prop-type="Type">TLabel</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Time to:'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Left" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Left">
+        <source>32</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">57</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Top" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Top">
+        <source>16</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">58</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Width" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Width">
+        <source>75</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">59</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Height" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Height">
+        <source>25</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">60</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Caption" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.Caption">
+        <source>'Kilépés'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">61</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Exit'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.TabOrder">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">62</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:btnkilepes.OnClick" resname="O:MozgasokListajaF.O:fpanel.O:btnkilepes.OnClick">
+        <source>btnkilepesClick</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">63</prop>
+          <prop prop-type="Type">TButton</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Left" resname="O:MozgasokListajaF.O:fpanel.O:kd.Left">
+        <source>136</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">64</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Top" resname="O:MozgasokListajaF.O:fpanel.O:kd.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">65</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Width" resname="O:MozgasokListajaF.O:fpanel.O:kd.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">66</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Height" resname="O:MozgasokListajaF.O:fpanel.O:kd.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">67</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Date" resname="O:MozgasokListajaF.O:fpanel.O:kd.Date">
+        <source>46171</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">68</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.Time" resname="O:MozgasokListajaF.O:fpanel.O:kd.Time">
+        <source>0.404061585650197</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">69</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:kd.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">70</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kd.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:kd.OnChange">
+        <source>kdChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">71</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Left" resname="O:MozgasokListajaF.O:fpanel.O:kt.Left">
+        <source>247</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">72</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Top" resname="O:MozgasokListajaF.O:fpanel.O:kt.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">73</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Width" resname="O:MozgasokListajaF.O:fpanel.O:kt.Width">
+        <source>74</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.408073831</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">74</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Height" resname="O:MozgasokListajaF.O:fpanel.O:kt.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">75</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Date" resname="O:MozgasokListajaF.O:fpanel.O:kt.Date">
+        <source>46171</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">76</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Time" resname="O:MozgasokListajaF.O:fpanel.O:kt.Time">
+        <source>0.404061585650197</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">77</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.Kind" resname="O:MozgasokListajaF.O:fpanel.O:kt.Kind">
+        <source>dtkTime</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">78</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:kt.TabOrder">
+        <source>2</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">79</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:kt.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:kt.OnChange">
+        <source>ktChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">80</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Left" resname="O:MozgasokListajaF.O:fpanel.O:bd.Left">
+        <source>337</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">81</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Top" resname="O:MozgasokListajaF.O:fpanel.O:bd.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">82</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Width" resname="O:MozgasokListajaF.O:fpanel.O:bd.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">83</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Height" resname="O:MozgasokListajaF.O:fpanel.O:bd.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">84</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Date" resname="O:MozgasokListajaF.O:fpanel.O:bd.Date">
+        <source>46171</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">85</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.Time" resname="O:MozgasokListajaF.O:fpanel.O:bd.Time">
+        <source>0.404061585650197</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">86</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:bd.TabOrder">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">87</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bd.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:bd.OnChange">
+        <source>kdChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">88</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Left" resname="O:MozgasokListajaF.O:fpanel.O:bt.Left">
+        <source>448</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">89</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Top" resname="O:MozgasokListajaF.O:fpanel.O:bt.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">90</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Width" resname="O:MozgasokListajaF.O:fpanel.O:bt.Width">
+        <source>74</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">91</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Height" resname="O:MozgasokListajaF.O:fpanel.O:bt.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">92</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Date" resname="O:MozgasokListajaF.O:fpanel.O:bt.Date">
+        <source>46171</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">93</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Time" resname="O:MozgasokListajaF.O:fpanel.O:bt.Time">
+        <source>0.404061585650197</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">94</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.Kind" resname="O:MozgasokListajaF.O:fpanel.O:bt.Kind">
+        <source>dtkTime</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">95</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:bt.TabOrder">
+        <source>4</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">96</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:bt.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:bt.OnChange">
+        <source>btChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">97</prop>
+          <prop prop-type="Type">TDateTimePicker</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.Left" resname="O:MozgasokListajaF.O:fpanel.O:edszures.Left">
+        <source>672</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">98</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.Top" resname="O:MozgasokListajaF.O:fpanel.O:edszures.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">99</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.Width" resname="O:MozgasokListajaF.O:fpanel.O:edszures.Width">
+        <source>242</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">100</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.Height" resname="O:MozgasokListajaF.O:fpanel.O:edszures.Height">
+        <source>21</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">101</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:edszures.TabOrder">
+        <source>5</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">102</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:edszures.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:edszures.OnChange">
+        <source>kdChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">103</prop>
+          <prop prop-type="Type">TEdit</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Left" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Left">
+        <source>552</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">104</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Top" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Top">
+        <source>20</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">105</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Width" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Width">
+        <source>105</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">106</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Height" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Height">
+        <source>22</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">107</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Style" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Style">
+        <source>csOwnerDrawFixed</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">108</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.ItemIndex" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.ItemIndex">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">109</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.TabOrder" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.TabOrder">
+        <source>6</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">110</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Text" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Text">
+        <source>'---Nincs szűrve---'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">111</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'---Not filtered---'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.OnChange" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.OnChange">
+        <source>kdChange</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">112</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[0]" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[0]">
+        <source>'---Nincs szűrve---'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">113</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">(</prop>
+        </prop-group>
+        <target>'---Not filtered---'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[1]" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[1]">
+        <source>'BE'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">114</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[2]" resname="O:MozgasokListajaF.O:fpanel.O:cbirany.Items.Strings[2]">
+        <source>'KI'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">115</prop>
+          <prop prop-type="Type">TComboBox</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">)</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Left" resname="O:MozgasokListajaF.O:listaGrid.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">116</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Top" resname="O:MozgasokListajaF.O:listaGrid.Top">
+        <source>57</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">117</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Width" resname="O:MozgasokListajaF.O:listaGrid.Width">
+        <source>1022</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">118</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Height" resname="O:MozgasokListajaF.O:listaGrid.Height">
+        <source>351</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">119</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Align" resname="O:MozgasokListajaF.O:listaGrid.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">120</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.DataSource" resname="O:MozgasokListajaF.O:listaGrid.DataSource">
+        <source>ListaQDs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">121</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Options" resname="O:MozgasokListajaF.O:listaGrid.Options">
+        <source>[dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">122</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.ReadOnly" resname="O:MozgasokListajaF.O:listaGrid.ReadOnly">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">123</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TabOrder" resname="O:MozgasokListajaF.O:listaGrid.TabOrder">
+        <source>1</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">124</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleFont.Charset" resname="O:MozgasokListajaF.O:listaGrid.TitleFont.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">125</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleFont.Color" resname="O:MozgasokListajaF.O:listaGrid.TitleFont.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">126</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleFont.Height" resname="O:MozgasokListajaF.O:listaGrid.TitleFont.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">127</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleFont.Name" resname="O:MozgasokListajaF.O:listaGrid.TitleFont.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">128</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleFont.Style" resname="O:MozgasokListajaF.O:listaGrid.TitleFont.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">129</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.OnMouseUp" resname="O:MozgasokListajaF.O:listaGrid.OnMouseUp">
+        <source>listaGridMouseUp</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738426</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">130</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.Caption" resname="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.Caption">
+        <source>'Select columns'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">131</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.OK" resname="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.OK">
+        <source>'&amp;OK'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">132</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:MozgasokListajaF.O:listaGrid.SelectColumnsDialogStrings.NoSelectionWarning">
+        <source>'At least one column must be visible!'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">133</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.EditControls" resname="O:MozgasokListajaF.O:listaGrid.EditControls">
+        <source>&lt;&gt;</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">134</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.RowsHeight" resname="O:MozgasokListajaF.O:listaGrid.RowsHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">135</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.TitleRowHeight" resname="O:MozgasokListajaF.O:listaGrid.TitleRowHeight">
+        <source>17</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">136</prop>
+          <prop prop-type="Type">TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[0].Expanded" resname="O:MozgasokListajaF.O:listaGrid.Columns[0].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">137</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">&lt;item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[0].FieldName" resname="O:MozgasokListajaF.O:listaGrid.Columns[0].FieldName">
+        <source>'kartya_szam'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">138</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[0].Title.Caption" resname="O:MozgasokListajaF.O:listaGrid.Columns[0].Title.Caption">
+        <source>'Kártyaszám'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">139</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Card num.'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[0].Visible" resname="O:MozgasokListajaF.O:listaGrid.Columns[0].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">140</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[1].Expanded" resname="O:MozgasokListajaF.O:listaGrid.Columns[1].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">141</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[1].FieldName" resname="O:MozgasokListajaF.O:listaGrid.Columns[1].FieldName">
+        <source>'nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">142</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[1].Title.Caption" resname="O:MozgasokListajaF.O:listaGrid.Columns[1].Title.Caption">
+        <source>'Név'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">143</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Name'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[1].Width" resname="O:MozgasokListajaF.O:listaGrid.Columns[1].Width">
+        <source>300</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">144</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[1].Visible" resname="O:MozgasokListajaF.O:listaGrid.Columns[1].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">145</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[2].Expanded" resname="O:MozgasokListajaF.O:listaGrid.Columns[2].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">146</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[2].FieldName" resname="O:MozgasokListajaF.O:listaGrid.Columns[2].FieldName">
+        <source>'ceg_nev'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">147</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[2].Title.Caption" resname="O:MozgasokListajaF.O:listaGrid.Columns[2].Title.Caption">
+        <source>'Cég'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">148</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Company'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[2].Width" resname="O:MozgasokListajaF.O:listaGrid.Columns[2].Width">
+        <source>150</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">149</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[2].Visible" resname="O:MozgasokListajaF.O:listaGrid.Columns[2].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">150</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[3].Expanded" resname="O:MozgasokListajaF.O:listaGrid.Columns[3].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">151</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[3].FieldName" resname="O:MozgasokListajaF.O:listaGrid.Columns[3].FieldName">
+        <source>'irany_szov'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">152</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[3].Title.Caption" resname="O:MozgasokListajaF.O:listaGrid.Columns[3].Title.Caption">
+        <source>'Irány'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">153</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Direction'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[3].Width" resname="O:MozgasokListajaF.O:listaGrid.Columns[3].Width">
+        <source>60</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">154</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[3].Visible" resname="O:MozgasokListajaF.O:listaGrid.Columns[3].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">155</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[4].Expanded" resname="O:MozgasokListajaF.O:listaGrid.Columns[4].Expanded">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">156</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Open">item</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[4].FieldName" resname="O:MozgasokListajaF.O:listaGrid.Columns[4].FieldName">
+        <source>'idobelyeg'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">157</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[4].Title.Caption" resname="O:MozgasokListajaF.O:listaGrid.Columns[4].Title.Caption">
+        <source>'Időpont'</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">1</prop>
+          <prop prop-type="Order">158</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+        <target>'Timestamp'</target>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[4].Width" resname="O:MozgasokListajaF.O:listaGrid.Columns[4].Width">
+        <source>120</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">159</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:listaGrid.Columns[4].Visible" resname="O:MozgasokListajaF.O:listaGrid.Columns[4].Visible">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">160</prop>
+          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
+          <prop prop-type="Localize">1</prop>
+          <prop prop-type="Close">end&gt;</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQ.Connection" resname="O:MozgasokListajaF.O:ListaQ.Connection">
+        <source>AF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">161</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQ.Left" resname="O:MozgasokListajaF.O:ListaQ.Left">
+        <source>360</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">162</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQ.Top" resname="O:MozgasokListajaF.O:ListaQ.Top">
+        <source>152</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">163</prop>
+          <prop prop-type="Type">TFDQuery</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQDs.DataSet" resname="O:MozgasokListajaF.O:ListaQDs.DataSet">
+        <source>ListaQ</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">164</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQDs.Left" resname="O:MozgasokListajaF.O:ListaQDs.Left">
+        <source>360</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">165</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+      <trans-unit id="O:MozgasokListajaF.O:ListaQDs.Top" resname="O:MozgasokListajaF.O:ListaQDs.Top">
+        <source>216</source>
+        <prop-group name="ITEFieldProp">
+          <prop prop-type="Created">46197.4080738542</prop>
+          <prop prop-type="Status">0</prop>
+          <prop prop-type="Order">166</prop>
+          <prop prop-type="Type">TDataSource</prop>
+          <prop prop-type="Localize">1</prop>
+        </prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
