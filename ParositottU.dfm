@@ -50,8 +50,8 @@ object ParositottF: TParositottF
       Top = 22
       Width = 113
       Height = 21
-      Date = 43587.773554583330000000
-      Time = 43587.773554583330000000
+      Date = 43587.000000000000000000
+      Time = 0.773554583327495500
       TabOrder = 1
       OnChange = piKezdoDatumChange
     end
@@ -60,8 +60,8 @@ object ParositottF: TParositottF
       Top = 22
       Width = 105
       Height = 21
-      Date = 43587.774182199070000000
-      Time = 43587.774182199070000000
+      Date = 43587.000000000000000000
+      Time = 0.774182199071219700
       TabOrder = 2
       OnChange = piKezdoDatumChange
     end
@@ -72,7 +72,7 @@ object ParositottF: TParositottF
     Width = 329
     Height = 325
     Align = alLeft
-    DataSource = aF.ParositottDS
+    DataSource = AF.ParositottDS
     ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

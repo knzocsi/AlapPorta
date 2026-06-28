@@ -23,7 +23,6 @@ object KartyakF: TKartyakF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 635
     object btnkilepes: TButton
       Left = 24
       Top = 8
@@ -41,7 +40,6 @@ object KartyakF: TKartyakF
     Height = 98
     Align = alBottom
     TabOrder = 1
-    ExplicitWidth = 635
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -78,7 +76,6 @@ object KartyakF: TKartyakF
       DataSource = kartyakDs
       Align = alTop
       TabOrder = 0
-      ExplicitWidth = 633
     end
     object DBEd_id: TDBEdit
       Left = 16

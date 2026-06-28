@@ -23,9 +23,6 @@ object MerlegelesekF: TMerlegelesekF
     Height = 89
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = 136
-    ExplicitTop = 32
-    ExplicitWidth = 185
     object btnKilepes: TButton
       Left = 40
       Top = 32
@@ -45,9 +42,5 @@ object MerlegelesekF: TMerlegelesekF
     Lines.Strings = (
       'Memo1')
     TabOrder = 1
-    ExplicitLeft = 304
-    ExplicitTop = 248
-    ExplicitWidth = 185
-    ExplicitHeight = 89
   end
 end

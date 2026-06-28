@@ -23,8 +23,6 @@ object levon_szovegekF: Tlevon_szovegekF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitLeft = -199
-    ExplicitWidth = 862
     object btnKilepes: TButton
       Left = 16
       Top = 9
@@ -43,10 +41,6 @@ object levon_szovegekF: Tlevon_szovegekF
     ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = -199
-    ExplicitTop = -68
-    ExplicitWidth = 862
-    ExplicitHeight = 414
     object tbLista: TTabSheet
       Caption = 'Lista'
       object DBGrid1: TDBGrid
@@ -104,7 +98,6 @@ object levon_szovegekF: Tlevon_szovegekF
         Height = 21
         DataField = 'Szoveg'
         DataSource = levon_szovegDs
-        MaxLength = 100
         TabOrder = 1
       end
     end
@@ -120,6 +113,7 @@ object levon_szovegekF: Tlevon_szovegekF
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object levon_szovegTSzoveg: TWideStringField
       AutoGenerateValue = arDefault
