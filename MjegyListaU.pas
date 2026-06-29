@@ -1,4 +1,4 @@
-unit MjegyListaU;
+ï»¿unit MjegyListaU;
 
 interface
 
@@ -220,8 +220,8 @@ begin
    begin
     for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
      begin
-       TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
-       if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
+       TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. pÃ©ldÃ¡ny';
+       if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. pÃ©ldÃ¡ny';
        PrepareReport(true);
        Print;
        if duplex_mjegy then Inc(psz)
@@ -353,7 +353,7 @@ begin
      TfrxMemoView(FindObject('frxtiszt_to')).Text:=FormatFloat('###,###,##0,- Ft/to', spTisztitasi_dij.Value);
      TfrxMemoView(FindObject('frxtiszt_ar')).Text:=FormatFloat('###,###,##0,- Ft', (o_netto/1000)* spTisztitasi_dij.Value);
      ossz_netto:=((o_netto/1000)* spTisztitasi_dij.Value);
-     TfrxMemoView(FindObject('frxszar_fok')).Text:=FormatFloat('0.000',atlag_szar_fok)+' °';
+     TfrxMemoView(FindObject('frxszar_fok')).Text:=FormatFloat('0.000',atlag_szar_fok)+' Â°';
      TfrxMemoView(FindObject('frxszar_fok')).Visible:=atlag_szar_fok>0;
      TfrxMemoView(FindObject('frxnetto2')).Text:=FormatFloat('0.000',(o_szar_kiad/1000))+' to x';
      if atlag_szar_fok=0 then atlag_szar_fok:=1;
@@ -381,7 +381,7 @@ begin
      PrepareReport(true);
      ShowReport(true);
    end;
-end;   {'0.###'  °C }
+end;   {'0.###'  Â°C }
 
 procedure TMjegyekF.Button2Click(Sender: TObject);
 begin
@@ -442,9 +442,9 @@ if MessageDlg(rsStornozza,mtConfirmation,mbYesNo,0)=6 then
          begin
           if TfrxMemoView(FindObject('frxpsz'))<>nil then
            begin
-            TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
+            TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. pÃ©ldÃ¡ny';
              if (duplex_mjegy) and (TfrxMemoView(FindObject('frxpsz2'))<>nil) then
-              TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
+              TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. pÃ©ldÃ¡ny';
              PrepareReport(true);
              Print;
              if duplex_mjegy then Inc(psz)
@@ -515,12 +515,12 @@ begin
  finally
   nyomtat:=True;
   try
-   if not Clean_way then AF.merlegjegy_tipus_betoltese//azért kell mindig betölteni hogy a cím jó legyen (ha esetleg stornóztak)
+   if not Clean_way then AF.merlegjegy_tipus_betoltese//azÃ©rt kell mindig betÃ¶lteni hogy a cÃ­m jÃ³ legyen (ha esetleg stornÃ³ztak)
    else AF.merlegjegy_tipus_betoltese_clean(UpperCase(Copy(mjegyekQ.FieldByName('irany').AsString,1,2)));
   finally
-   af.merlegjegy_mezgaz;//mezõgazdasági
-   AF.merlegjegy_tomeglevonas;// tömeg levonás
-   Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //üresre teszem mindig
+   af.merlegjegy_mezgaz;//mezÅ‘gazdasÃ¡gi
+   AF.merlegjegy_tomeglevonas;// tÃ¶meg levonÃ¡s
+   Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //Ã¼resre teszem mindig
   end;
    while Mjegy_nyom_rec=nil do Sleep(200);
 
@@ -538,32 +538,43 @@ begin
        Tulaj_KUJKTJ:=tulajTkuj.AsString+'/'+tulajTktj.AsString;
        {if not beszallito_beszallitaskor then lblpartner.Caption:=rsMegrendelo
         else lblpartner.Caption:=rsBeszallito;}
-       case mjegyekQ.FieldByName('irany').AsString[1] of
-       'B':begin
-            if not beszallito_beszallitaskor then Partner1_felirat:=rsMegrendelo
-            else Partner1_felirat:=rsBeszallito;
-            Partner2_felirat:=rsAtvevo;
-           end;
-       'K':begin
-            Partner1_felirat:=rsErtekesito;
-            Partner2_felirat:=rsVevo;
-           end;
+       if merlegjegy_tipus<>9 then
+       begin
+         case mjegyekQ.FieldByName('irany').AsString[1] of
+         'B':begin
+              if not beszallito_beszallitaskor then Partner1_felirat:=rsMegrendelo
+              else Partner1_felirat:=rsBeszallito;
+              Partner2_felirat:=rsAtvevo;
+             end;
+         'K':begin
+              Partner1_felirat:=rsErtekesito;
+              Partner2_felirat:=rsVevo;
+             end;
+         end;
+         Partner3_felirat:='FuvarozÃ³';
+       end
+       else
+       begin
+         Partner1_felirat:='Furnizor:';
+         Partner2_felirat:='Beneficiar:';
+         Partner3_felirat:='Transportator:';
+
        end;
 //       case mjegyekQ.FieldByName('irany').AsString[1] of
 //       'B':begin
-//            Partner1_felirat:='Átadó:';
-//            Partner2_felirat:='Átvevõ:';
+//            Partner1_felirat:='ÃtadÃ³:';
+//            Partner2_felirat:='ÃtvevÅ‘:';
 //           end;
 //       'K':begin
-//            Partner1_felirat:='Eladó:';
-//            Partner2_felirat:='Vevõ:';
+//            Partner1_felirat:='EladÃ³:';
+//            Partner2_felirat:='VevÅ‘:';
 //           end;
 //       end;
        Partner1_nev:=mjegyekQ.FieldByName('P_Nev').AsString;
        Partner1_cim:=mjegyekQ.FieldByName('P_Cim').AsString;
        Partner2_nev:=mjegyekQ.FieldByName('P2_Nev').AsString;
        Partner2_cim:=mjegyekQ.FieldByName('P2_Cim').AsString;;
-       Partner3_felirat:='Fuvarozó';
+
        Partner3_nev:=mjegyekQ.FieldByName('P3_Nev').AsString;
        Partner3_cim:=mjegyekQ.FieldByName('P3_Cim').AsString;
        Ekaer:=mjegyekQ.FieldByName('ekaer').AsString;
@@ -578,7 +589,7 @@ begin
          Tavdatum:=mjegyekQ.FieldByName('Tavdatum').AsDateTime;
          Tavido:=mjegyekQ.FieldByName('Tavido').AsDateTime;
         end;
-       Irany:=mjegyekQ.FieldByName('irany').AsString;                  //nincs megadva
+       Irany:=mjegyekQ.FieldByName('irany_kiiras').AsString;                  //nincs megadva
        if (not Clean_way) or (mjegyekQ.FieldByName('irany').AsString[1]='-') then
         begin
           Termek_kod:=mjegyekQ.FieldByName('Termek_Kod').AsString;
@@ -784,14 +795,14 @@ begin
     memszamolnetto.value:=mjegyekQ.FieldByName('netto').value;
     memszamolalapnedv.value:=mjegyekQ.FieldByName('alapnedv').value;
     memszamolnedv.value:=mjegyekQ.FieldByName('nedv').value;
-    memszamolnedvlevon.value:=nedvesseg_vesztes_tomege;//számolni
+    memszamolnedvlevon.value:=nedvesseg_vesztes_tomege;//szÃ¡molni
     memszamoltisztasag.value:=mjegyekQ.FieldByName('tisztasag').value;
-    memszamoltisztasaglevon.value:=szemet_tomeg;//számolni
+    memszamoltisztasaglevon.value:=szemet_tomeg;//szÃ¡molni
     memszamoltortszaz.value:=mjegyekQ.FieldByName('tortszaz').value;
     memszamolszNetto.value:=mjegyekQ.FieldByName('szNetto').value;
-    memszamolszart_tort.value:=szaritott_tort_szemek_tomege;//tört szemek tömege számolni
+    memszamolszart_tort.value:=szaritott_tort_szemek_tomege;//tÃ¶rt szemek tÃ¶mege szÃ¡molni
     memszamoltavdat.asString:=mjegyekQ.FieldByName('tavdatum').AsString;
-    memszamolszaritasra_kiad.value:=tisztitott_nyers_netto_tomege;//mjegyekQ.FieldByName('netto').value-StrToFloat(tisztasag);//netto-szemét tömeg számolni
+    memszamolszaritasra_kiad.value:=tisztitott_nyers_netto_tomege;//mjegyekQ.FieldByName('netto').value-StrToFloat(tisztasag);//netto-szemÃ©t tÃ¶meg szÃ¡molni
     memszamolszar_hofok.value:=0;
     memszamolszall_km.value:=0;
     memszamol.Post;
@@ -809,14 +820,14 @@ procedure TMjegyekF.mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
 try
- {if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk és title küldi(0 az Y) akkor erre szûr
+ {if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then              //ha jobb klikk Ã©s title kÃ¼ldi(0 az Y) akkor erre szÅ±r
   begin
     {Col_neve:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName;
    col_felirat:=(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].Title.Caption;
    lblmire.Caption:=col_felirat;
    edszures.SetFocus; }
  // end;
-  if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk és title küldi akkor sort
+  if (button= mbRight) and (mlistaGrid.MouseCoord(X,Y).Y=0)then                //ha bal klikk Ã©s title kÃ¼ldi akkor sort
     af.rendez(mjegyekQ,(Sender as TDBGrid).Columns[mlistaGrid.MouseCoord(X,Y).X-1].FieldName);
 except
  //
@@ -835,7 +846,7 @@ begin
      ParamByName('p1').AsDate:=piBefejezoDatum.Date;
      Open();
      cbxrendsz.Clear;
-     cbxrendsz.Items.Add('*Nincs szûrve*');
+     cbxrendsz.Items.Add('*Nincs szÅ±rve*');
      First;
      DisableControls;
      while not eof do
@@ -933,12 +944,12 @@ begin
   //nyers tort szemek tomege
   ttom:=(round((br-tr)*(tsz/100.0)));
 
-  //Öcsi
+  //Ã–csi
   tt:=round((br-tr-(round((br-tr)*((tisz+tsz)/100.0)))));
 
  // sze:=1-((tisz+tsz+ned)/100);
   //szu:=1-((tisz+tsz+aned)/100);
-  //Öcsi
+  //Ã–csi
   tisztitott_tomeg:=round((br-tr-(round((br-tr)*((tisz+tsz)/100.0)))));
   sze:=1-(ned/100);
   szu:=1-(aned/100);
@@ -947,7 +958,7 @@ begin
        begin
          sznetto :=Round((tisztitott_tomeg*(1-ned/100))/(1-aned/100));
          nedvelvon:=FloatToStr(Round(tisztitott_tomeg-sznetto));
-         //száraz tört szemek tömege
+         //szÃ¡raz tÃ¶rt szemek tÃ¶mege
          //ttom:=Round(levsz*tortszemtomeg);
        end
       else
@@ -970,7 +981,10 @@ begin
   begin
     Close;
     SQL.Clear;
-    SQL.Add(' select * from merlegjegy ');
+    SQL.Add(' select m.*, ');
+    if Merlegjegy_tipus=9 then SQL.Add(' if(SUBSTRING(irany,1)=''K'',''Livrare'',''RecepÈ›ionare'') AS irany_kiiras' )
+    else SQL.Add('irany as irany_kiiras ');
+    SQL.Add(' from merlegjegy m');
     SQL.Add(' where (Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1) and tul_id=:p2 ');
     ParamByName('p0').AsDate:=piKezdoDatum.Date;
     ParamByName('p1').AsDate:=piBefejezoDatum.Date;

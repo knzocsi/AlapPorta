@@ -933,7 +933,7 @@ object MjegyekF: TMjegyekF
         end
         item
           Expanded = False
-          FieldName = 'irany'
+          FieldName = 'irany_kiiras'
           Title.Caption = 'Ir'#225'ny'
           Width = 65
           Visible = True

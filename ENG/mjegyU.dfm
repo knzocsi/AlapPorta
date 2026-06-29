@@ -477,8 +477,8 @@ object MjegyF: TMjegyF
       OnChange = cbxIranyChange
       Items.Strings = (
         '----Not selected----'
-        'In'
-        'Out'
+        'B_In'
+        'K_Out'
         'Idegen m'#233'r'#233's'
         'T'#246'meg m'#233'r'#233's')
     end
