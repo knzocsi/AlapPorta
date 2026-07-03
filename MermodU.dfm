@@ -172,7 +172,7 @@ object MermodF: TMermodF
     end
     object Label13: TLabel
       Left = 768
-      Top = 201
+      Top = 195
       Width = 62
       Height = 13
       Caption = 'M'#233'rlegkezel'#337
@@ -286,6 +286,13 @@ object MermodF: TMermodF
       Height = 13
       Caption = 'Sz'#225'rzmaz'#225'si hely:'
     end
+    object lblsofor: TLabel
+      Left = 768
+      Top = 228
+      Width = 30
+      Height = 13
+      Caption = 'Sof'#337'r:'
+    end
     object cbxirany: TComboBox
       Left = 60
       Top = 45
@@ -395,7 +402,7 @@ object MermodF: TMermodF
     end
     object kezelolookup: TJvDBLookupCombo
       Left = 768
-      Top = 214
+      Top = 208
       Width = 305
       Height = 21
       DisplayEmpty = '----Nincs kiv'#225'lasztva----'
@@ -407,7 +414,7 @@ object MermodF: TMermodF
     end
     object Button2: TButton
       Left = 936
-      Top = 241
+      Top = 235
       Width = 137
       Height = 20
       Caption = 'M'#233'rlegkezel'#337'k list'#225'ja'
@@ -458,7 +465,7 @@ object MermodF: TMermodF
     end
     object cbxrendszam2: TComboBox
       Left = 952
-      Top = 176
+      Top = 173
       Width = 121
       Height = 21
       CharCase = ecUpperCase
@@ -902,6 +909,14 @@ object MermodF: TMermodF
       Height = 21
       TabOrder = 36
       Text = 'cbxszar'
+    end
+    object edsofor: TEdit
+      Left = 768
+      Top = 240
+      Width = 121
+      Height = 21
+      TabOrder = 37
+      Text = 'edsofor'
     end
   end
   object TempQ: TFDQuery

@@ -48,6 +48,7 @@ library WinPorta;
 {ITE} {DFMFileType} {my_sqlU.dfm}
 {ITE} {DFMFileType} {nagykamU.dfm}
 {ITE} {DFMFileType} {nagykepU.dfm}
+{ITE} {DFMFileType} {NagyTomegU.dfm}
 {ITE} {DFMFileType} {NezetU.dfm}
 {ITE} {DFMFileType} {NzelvvalaszTU.dfm}
 {ITE} {DFMFileType} {NyomtatokU.dfm}
@@ -114,6 +115,7 @@ library WinPorta;
 {$R 'my_sqlU.dfm' 'MySQLF:TForm'}
 {$R 'nagykamU.dfm' 'NagykamF:TForm'}
 {$R 'nagykepU.dfm' 'NagykepF:TForm'}
+{$R 'NagyTomegU.dfm' 'NagyTomegF:TForm'}
 {$R 'NezetU.dfm' 'NezetF:TForm'}
 {$R 'NzelvvalaszTU.dfm' 'NyelvF:TForm'}
 {$R 'NyomtatokU.dfm' 'NyomtatokF:TForm'}

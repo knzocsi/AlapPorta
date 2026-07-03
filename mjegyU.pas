@@ -218,6 +218,8 @@ type
     termeklistb_siker: TBooleanField;
     chkidegen: TCheckBox;
     btngongy: TButton;
+    lblsofor: TLabel;
+    edsofor: TEdit;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -532,7 +534,9 @@ begin
   speSorszam.Visible:=Hivoszamhasznalat;
   lblSorszam.Visible:=Hivoszamhasznalat;
   speSorszam.Value:=0;
-
+  lblsofor.visible:=sofor_merlegjegyen;
+  edsofor.Visible:=sofor_merlegjegyen;
+  edsofor.Clear;
  // magassagok;
   af.tipusQ.Open;
   lucTipus.KeyValue:='!';
@@ -650,6 +654,7 @@ begin
 //        end;
 //    end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
+    edsofor.Text:=FieldByName('sofor').AsString;
     af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
   end;
   if (taramegadas) and (forgalom_latszik) then
@@ -1336,7 +1341,7 @@ var sorsz,pcime,tablaneve:String;
                  end;
           end;
         end;
-       Merlegkezelo:='';
+       Merlegkezelo:=kezelolookup.DisplayValue;
        Nedvesseg_latszik:=spnedv.Visible and (Irany[1]='B');
        Alapnedv:=spalapnedv.Value.ToString+' %';
        Nedv:=spnedv.Value.ToString+' %';
@@ -1402,7 +1407,12 @@ var sorsz,pcime,tablaneve:String;
                  end;
           end;
        end;
+       Partner1_tel:=Partnelist.FieldByName('telefon').AsString;
+       Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
+       Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
+       Sofor:=edsofor.text;
       end;
+
    end;
 
     function eazon_letrehozasa:string;
@@ -1579,7 +1589,7 @@ begin
       SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek,kepnev1,kepnev2,kepnev3,kepnev4  ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
       SQL.Add(',betarolasi_dij,kitarolasi_dij,szallitasi_dij,');
-      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj,siker');
+      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj,siker,sofor');
       SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
@@ -1599,7 +1609,7 @@ begin
         ParamByName('Hivo_sorszam').AsString:=speSorszam.Text;
       end;
       SQL.Add(',:betarolasi_dij,:kitarolasi_dij,:szallitasi_dij,');
-      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj,:siker');
+      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj,:siker,:sofor');
       SQL.Add(');');
       {ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
         ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
@@ -1802,6 +1812,7 @@ begin
        ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
        ParamByName('siker').value:=spsiker.Value;
+       ParamByName('sofor').AsString:=edsofor.text;
        //ParamByName('idegen_meres').AsBoolean:=chkidegen.Checked;
       ExecSQL;
 

@@ -120,7 +120,6 @@ object PortF: TPortF
       'Soros teszt'
       '')
     TabOrder = 1
-    ExplicitLeft = -5
   end
   object memHexa: TMemo
     Left = 0
@@ -330,8 +329,8 @@ object PortF: TPortF
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     OnRxChar = comHivoszamkijelzoRxChar
-    Left = 184
-    Top = 320
+    Left = 200
+    Top = 328
   end
   object comPC_Kommunikacio: TComPort
     BaudRate = br9600
@@ -349,8 +348,8 @@ object PortF: TPortF
     StoredProps = [spBasic]
     TriggersOnRxChar = True
     OnRxChar = comPC_KommunikacioRxChar
-    Left = 296
-    Top = 314
+    Left = 320
+    Top = 322
   end
   object IdTCPClient3: TIdTCPClient
     OnDisconnected = IdTCPClient3Disconnected

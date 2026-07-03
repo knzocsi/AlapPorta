@@ -976,7 +976,7 @@ interface
       'if(lepcsohaz<>'''',CONCAT('' '',lepcsohaz),''''),if(emelet<>'''',CONCAT('' '',emelet ),''''),' + #13#10 +
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim, magansz,' + #13#10 +
       'if(ado_azon<>0,CONCAT(CAST(ado_azon AS CHAR),''-'',CAST(ado_kod AS CHAR),''-'',CAST(ado_megye_kod AS CHAR)),'''') AS adoszam, ado_azon, ado_kod,ado_megye_kod, ' + #13#10 +
-      'd_id from partner ;'
+      'd_id, Adoszam as kozadosz from partner ;'
       ,//partner 3 fuvarozó
      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
@@ -1117,7 +1117,12 @@ interface
          'AS select `m`.`id` AS `id`,`m`.`kozp_szam` AS `kozp_szam`,`m`.`kartya_szam` AS `kartya_szam`,' + #13#10 +
          '`m`.`idobelyeg` AS `idobelyeg`,`m`.`irany` AS `irany`,ifnull(`k`.`nev`,''TÖRÖLT KÁRTYA'') AS `nev`,' + #13#10 +
          'ifnull(`k`.`ceg_nev`,'''') AS `ceg_nev`,ifnull(`k`.`extra`,'''') AS `extra`' + #13#10 +
-         'from (`mozgasok` `m` left join `kartyak` `k` on(`k`.`kartyaszam` = `m`.`kartya_szam`));'
+         'from (`mozgasok` `m` left join `kartyak` `k` on(`k`.`kartyaszam` = `m`.`kartya_szam`));' + #13#10 +
+         ''+ #13#10 +
+        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '//+ #13#10 +
+        //modositott_merlegjegyek
     );
 
 

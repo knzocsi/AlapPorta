@@ -69,7 +69,7 @@ object PartnerekF: TPartnerekF
     Top = 41
     Width = 824
     Height = 328
-    ActivePage = tbLista
+    ActivePage = tbReszlet
     Align = alClient
     TabOrder = 1
     object tbLista: TTabSheet
@@ -218,6 +218,12 @@ object PartnerekF: TPartnerekF
             FieldName = 'ktj'
             Title.Caption = 'KTJ'
             Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Adoszam'
+            Title.Caption = 'EU adoszam'
+            Visible = True
           end>
       end
       object Panel2: TPanel
@@ -345,11 +351,10 @@ object PartnerekF: TPartnerekF
       object lbl12: TLabel
         Left = 272
         Top = 211
-        Width = 124
+        Width = 62
         Height = 13
-        Caption = 'Ad'#243'sz'#225'm(nem megfelel'#337'):'
+        Caption = 'EU ad'#243'sz'#225'm:'
         FocusControl = dbedtAdoszam
-        Visible = False
       end
       object Label1: TLabel
         Left = 423
@@ -537,9 +542,7 @@ object PartnerekF: TPartnerekF
         Height = 21
         DataField = 'Adoszam'
         DataSource = PartnerDS
-        ReadOnly = True
         TabOrder = 12
-        Visible = False
       end
       object DBEdtkuj: TDBEdit
         Left = 423

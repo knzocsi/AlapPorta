@@ -55,14 +55,14 @@ object MjegyF: TMjegyF
     end
     object Label6: TLabel
       Left = 752
-      Top = 120
+      Top = 116
       Width = 53
       Height = 13
       Caption = 'License plate:'
     end
     object Label7: TLabel
       Left = 936
-      Top = 120
+      Top = 116
       Width = 62
       Height = 13
       Caption = 'License plate 2:'
@@ -175,7 +175,7 @@ object MjegyF: TMjegyF
     end
     object Label13: TLabel
       Left = 752
-      Top = 164
+      Top = 156
       Width = 62
       Height = 13
       Caption = 'Scale operator'
@@ -189,7 +189,7 @@ object MjegyF: TMjegyF
     end
     object Label27: TLabel
       Left = 752
-      Top = 224
+      Top = 227
       Width = 34
       Height = 13
       Caption = 'Storage:'
@@ -466,6 +466,13 @@ object MjegyF: TMjegyF
       Height = 13
       Caption = 'Place of origin:'
     end
+    object lblsofor: TLabel
+      Left = 752
+      Top = 193
+      Width = 30
+      Height = 13
+      Caption = 'Driver:'
+    end
     object cbxIrany: TComboBox
       Left = 60
       Top = 6
@@ -568,7 +575,7 @@ object MjegyF: TMjegyF
     end
     object kezelolookup: TJvDBLookupCombo
       Left = 752
-      Top = 177
+      Top = 169
       Width = 305
       Height = 21
       DisplayEmpty = '----Not selected----'
@@ -580,7 +587,7 @@ object MjegyF: TMjegyF
     end
     object btnMerlegkezelok_listaja: TButton
       Left = 920
-      Top = 204
+      Top = 195
       Width = 137
       Height = 20
       Caption = 'List of scale op.'
@@ -621,7 +628,7 @@ object MjegyF: TMjegyF
     end
     object cbxRendszam1: TComboBox
       Left = 752
-      Top = 136
+      Top = 132
       Width = 145
       Height = 21
       CharCase = ecUpperCase
@@ -632,7 +639,7 @@ object MjegyF: TMjegyF
     end
     object cbxRendszam2: TComboBox
       Left = 936
-      Top = 139
+      Top = 132
       Width = 121
       Height = 21
       CharCase = ecUpperCase
@@ -1142,6 +1149,14 @@ object MjegyF: TMjegyF
       Caption = 'G'#246'ngy'#246'legek'
       TabOrder = 40
       OnClick = btngongyClick
+    end
+    object edsofor: TEdit
+      Left = 752
+      Top = 205
+      Width = 121
+      Height = 21
+      TabOrder = 41
+      Text = 'edsofor'
     end
   end
   object pnlFelso: TPanel

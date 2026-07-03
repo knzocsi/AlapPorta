@@ -139,6 +139,7 @@ type
     piKezdoDatum: TJvDateEdit;
     piBefejezoDatum: TJvDateEdit;
     Button4: TButton;
+    plq: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);
@@ -183,7 +184,7 @@ var
   ttom:Real;
   nyomtat:Boolean;
 implementation
-  uses au, NezetU,LibreExcelU, MermodU, MermodlistU, UzenetekU;
+  uses AU, NezetU,LibreExcelU, MermodU, MermodlistU, UzenetekU;
 {$R *.dfm}
 
 { TMjegyekF }
@@ -203,12 +204,10 @@ procedure TMjegyekF.btnUjranyomtatasClick(Sender: TObject);
 var p,psz:Integer;
 begin
   if mjegyekQ.IsEmpty then exit;
+  nyomtat:=True;
+  elokeszit(mjegyekQ.FieldByName('storno').AsString);
+  NezetF.rep_valaszt(aF.frxmerleg,1);
 
-   try
-    elokeszit(mjegyekQ.FieldByName('storno').AsString);
-   finally
-    NezetF.rep_valaszt(aF.frxmerleg,1);
-   end;
 
    if not NezetF.nyomtatva then
    begin
@@ -220,8 +219,11 @@ begin
    begin
     for p :=mjegyekQ.FieldByName('psz').AsInteger+1  to mjegyekQ.FieldByName('psz').AsInteger+PrintOptions.Copies do
      begin
+     if TfrxMemoView(FindObject('frxpsz'))<>nil then
        TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
-       if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
+       if duplex_mjegy then
+       if TfrxMemoView(FindObject('frxpsz'))<>nil
+       then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
        PrepareReport(true);
        Print;
        if duplex_mjegy then Inc(psz)
@@ -589,7 +591,7 @@ begin
          Tavdatum:=mjegyekQ.FieldByName('Tavdatum').AsDateTime;
          Tavido:=mjegyekQ.FieldByName('Tavido').AsDateTime;
         end;
-       Irany:=mjegyekQ.FieldByName('irany_kiiras').AsString;                  //nincs megadva
+       Irany:=mjegyekQ.FieldByName('irany').AsString;                  //nincs megadva
        if (not Clean_way) or (mjegyekQ.FieldByName('irany').AsString[1]='-') then
         begin
           Termek_kod:=mjegyekQ.FieldByName('Termek_Kod').AsString;
@@ -647,8 +649,8 @@ begin
 //                  Tara:=IntToStr(mjegyekQ.FieldByName('Tara').AsInteger-(Round(StrToFloat(elso_gongy_tomeg))));
 //                 end;
 //         end;
-         Brutto:=mjegyekQ.FieldByName('Brutto').AsString;
-         Tara:=mjegyekQ.FieldByName('Tara').AsString;
+         Brutto:=mjegyekQ.FieldByName('Brutto').AsString+' kg';
+         Tara:=mjegyekQ.FieldByName('Tara').AsString+' kg';
          Sz_netto:=mjegyekQ.FieldByName('SzNetto').AsString+' kg';
         end;
        Netto:=mjegyekQ.FieldByName('Netto').AsString+' kg';
@@ -662,7 +664,15 @@ begin
        Szaritasi_dij_rec:=IntToStr(Round(mjegyekQ.FieldByName('szaritasi_dij').AsFloat))+' -Ft';
        Ertek:=IntToStr(Round(mjegyekQ.FieldByName('SzNetto').value*mjegyekQ.FieldByName('termek_ar').Value
        -(mjegyekQ.FieldByName('tisztitasi_dij').AsFloat+mjegyekQ.FieldByName('szaritasi_dij').AsFloat))) +' -Ft';
-
+       plq.Open;
+       plq.locate('id', mjegyekQ.FieldByName('P_ID').AsInteger,[]);
+       Partner1_tel:=plq.FieldByName('Telefon').AsString;
+       Partner1_adosz:=plq.FieldByName('kozadosz').AsString;;
+       plq.locate('id', mjegyekQ.FieldByName('P2_ID').AsInteger,[]);
+       Partner2_adosz:=plq.FieldByName('kozadosz').AsString;;
+       plq.Close;
+       Irany:=mjegyekQ.FieldByName('irany_kiiras').AsString;
+       Sofor:=mjegyekQ.FieldByName('sofor').AsString;
       end;
 
 //     NezetF.rep_valaszt(aF.frxmerleg,1);
@@ -675,9 +685,10 @@ begin
 
  termeklist.close;
  termeklist.Open();
- Partnelist.close;
- Partnelist.Open();
-
+// Partnelist.close;
+// Partnelist.Open();
+// Partnelist2.close;
+// Partnelist2.Open();
  piKezdoDatum.Date:=date;
  piBefejezoDatum.Date:=date;
 
@@ -865,7 +876,8 @@ begin
   begin
    Close;
    sql.Clear;
-   SQL.Add(' select distinct(p_id) as id,p_kod as kod ,p_nev as nev from merlegjegy');
+   SQL.Add(' select distinct(p_id) as id,p_kod as kod ,p_nev as nev');
+   SQL.Add(' from merlegjegy');
    SQL.Add(' where Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1 ');
    ParamByName('p0').AsDate:=piKezdoDatum.Date;
    ParamByName('p1').AsDate:=piBefejezoDatum.Date;

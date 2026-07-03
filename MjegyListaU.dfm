@@ -2705,4 +2705,11 @@ object MjegyekF: TMjegyekF
     Left = 80
     Top = 225
   end
+  object plq: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner_combo ORDER BY Nev ASC;')
+    Left = 360
+    Top = 280
+  end
 end

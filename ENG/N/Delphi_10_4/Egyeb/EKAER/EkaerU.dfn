@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.4040740741</prop>
-        <prop prop-type="OrigDateTime">45917.6813425926</prop>
-        <prop prop-type="XlatDateTime">45917.6813425926</prop>
+        <prop prop-type="SelfDateTime">46202.617962963</prop>
+        <prop prop-type="OrigDateTime">46200.6297916667</prop>
+        <prop prop-type="XlatDateTime">46201.9206481481</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">1557</prop>
+        <prop prop-type="UnTranslated">1551</prop>
       </prop-group>
     </header>
     <body>
@@ -6713,1090 +6713,1060 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1339</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[5].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[5].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1340</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[5].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[5].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1341</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1340</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1342</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1341</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].FieldName">
         <source>'productVtsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1343</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1342</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Title.Caption">
         <source>'VTSZ'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1344</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1345</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1343</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[6].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1346</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1344</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1347</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1345</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].FieldName">
         <source>'productName'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1348</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1346</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Title.Caption">
         <source>'Termék megnevezése'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1349</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1347</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Width">
         <source>200</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1350</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1348</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[7].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1351</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1349</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1352</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1350</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].FieldName">
         <source>'adrNumber'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1353</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1351</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Title.Caption">
         <source>'ADR szám'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1354</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1352</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Width">
         <source>100</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1355</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1353</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[8].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1356</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1354</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1357</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1355</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].FieldName">
         <source>'transportLicence'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1358</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1356</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Title.Caption">
         <source>'Engedélyszám'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1359</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1360</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1357</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[9].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1361</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1358</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1362</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1359</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].FieldName">
         <source>'netto_weight'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1363</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1360</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Title.Caption">
         <source>'Nettó tömeg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1364</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1361</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[10].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1365</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1362</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1366</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1363</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].FieldName">
         <source>'weight'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1367</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1364</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Title.Caption">
         <source>'Tömeg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1368</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1365</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[11].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1369</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1366</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1370</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1367</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].FieldName">
         <source>'value'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1371</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1368</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Title.Caption">
         <source>'Érték'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1372</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1369</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[12].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1373</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1370</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1374</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1371</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].FieldName">
         <source>'vatRateAssuranceExemption'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1375</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1372</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Title.Caption">
         <source>'Biztosíték mentes (5%)'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1376</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1377</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1373</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[13].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1378</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1374</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1379</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1375</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].FieldName">
         <source>'valueModReasontext'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1380</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1376</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[14].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1381</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1377</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1382</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1378</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].FieldName">
         <source>'weightModReasonText'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1383</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1379</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[15].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1384</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1380</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1385</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1381</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].FieldName">
         <source>'factoryItemNumber'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1386</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1382</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Title.Caption">
         <source>'Gyári szám'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1387</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723264</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1383</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Width">
         <source>50</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1388</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1384</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[16].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1389</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1385</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1390</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1386</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].FieldName">
         <source>'importerItemNumber'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1391</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1387</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[17].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1392</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1388</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1393</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1389</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].FieldName">
         <source>'expirationDate'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1394</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1390</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Title.Caption">
         <source>'Szavatosság'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1395</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1396</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1391</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[18].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1397</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1392</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1398</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1393</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].FieldName">
         <source>'batchNumber'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1399</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1394</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Title.Caption" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Title.Caption">
         <source>'Gyártási azon.'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1400</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Width" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Width">
-        <source>64</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1401</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1395</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[19].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1402</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1396</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1403</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1397</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].FieldName">
         <source>'statusModReasonText'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1404</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1398</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[20].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1405</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1399</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1406</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1400</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].FieldName">
         <source>'productModReasonText'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1407</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1401</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[21].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1408</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1402</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1409</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1403</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].FieldName">
         <source>'insUser'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1410</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1404</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[22].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1411</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1405</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1412</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1406</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].FieldName">
         <source>'insDate'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1413</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1407</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[23].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1414</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1408</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1415</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1409</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].FieldName">
         <source>'modUser'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1416</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1410</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[24].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1417</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1411</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].Expanded" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1418</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1412</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].FieldName" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].FieldName">
         <source>'modDate'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1419</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1413</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].Visible" resname="O:EkaerF.O:PC1.O:tetelek_tab.O:JvDBUltimGrid1.Columns[25].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1420</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1414</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.Connection" resname="O:EkaerF.O:felcimekQ.Connection">
         <source>DmEkaer.EKAERKapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1421</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1415</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.SQL.Strings[0]" resname="O:EkaerF.O:felcimekQ.SQL.Strings[0]">
         <source>'select * from felrakodasi_cimek_nezet where tul_id=:t'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1422</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1416</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.Left" resname="O:EkaerF.O:felcimekQ.Left">
         <source>688</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1423</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1417</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.Top" resname="O:EkaerF.O:felcimekQ.Top">
         <source>88</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1424</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1418</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.ParamData[0].Name" resname="O:EkaerF.O:felcimekQ.ParamData[0].Name">
         <source>'T'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1425</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1419</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.ParamData[0].DataType" resname="O:EkaerF.O:felcimekQ.ParamData[0].DataType">
         <source>ftInteger</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1426</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1420</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.ParamData[0].ParamType" resname="O:EkaerF.O:felcimekQ.ParamData[0].ParamType">
         <source>ptInput</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1427</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1421</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.ParamData[0].Value" resname="O:EkaerF.O:felcimekQ.ParamData[0].Value">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1428</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1422</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQid.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQid.FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1429</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1423</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQid.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQid.Origin">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1430</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1424</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQid.ReadOnly" resname="O:EkaerF.O:felcimekQ.O:felcimekQid.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1431</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1425</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.FieldName">
         <source>'tul_id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1432</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1426</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.Origin">
         <source>'tul_id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1433</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1427</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.Required" resname="O:EkaerF.O:felcimekQ.O:felcimekQtul_id.Required">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1434</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1428</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQirsz.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQirsz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1435</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1429</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQirsz.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQirsz.FieldName">
         <source>'irsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1436</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1430</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQirsz.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQirsz.Origin">
         <source>'irsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1437</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1431</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQirsz.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQirsz.Size">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1438</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1432</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1439</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1433</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.FieldName">
         <source>'telepules'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1440</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1434</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.Origin">
         <source>'telepules'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1441</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1435</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelepules.Size">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1442</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1436</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1443</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1437</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.FieldName">
         <source>'kozterulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1444</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1438</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.Origin">
         <source>'kozterulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1445</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1439</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozterulet.Size">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1446</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398172338</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1440</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1447</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1441</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.FieldName">
         <source>'kozt_jelleg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1448</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1442</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.Origin">
         <source>'kozt_jelleg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1449</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1443</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQkozt_jelleg.Size">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1450</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1444</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1451</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1445</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.FieldName">
         <source>'hazszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1452</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1446</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.Origin">
         <source>'hazszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1453</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1447</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQhazszam.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1454</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1448</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQepulet.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQepulet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1455</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1449</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQepulet.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQepulet.FieldName">
         <source>'epulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1456</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1450</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQepulet.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQepulet.Origin">
         <source>'epulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1457</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1451</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQepulet.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQepulet.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1458</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1452</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1459</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1453</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.FieldName">
         <source>'lepcsohaz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1460</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1454</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.Origin">
         <source>'lepcsohaz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1461</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1455</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQlepcsohaz.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1462</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1456</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemelet.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQemelet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1463</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1457</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemelet.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQemelet.FieldName">
         <source>'emelet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1464</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1458</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemelet.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQemelet.Origin">
         <source>'emelet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1465</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1459</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemelet.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQemelet.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1466</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1460</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQajto.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQajto.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1467</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1461</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQajto.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQajto.FieldName">
         <source>'ajto'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1468</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1462</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQajto.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQajto.Origin">
         <source>'ajto'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1469</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1463</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQajto.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQajto.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1470</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1464</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1471</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1465</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.FieldName">
         <source>'hrsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1472</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1466</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQhrsz.Origin">
         <source>'hrsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1473</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1467</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemail.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQemail.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1474</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1468</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemail.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQemail.FieldName">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1475</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1469</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQemail.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQemail.Origin">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1476</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1470</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1477</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1471</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.FieldName">
         <source>'telefon'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1478</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1472</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQtelefon.Origin">
         <source>'telefon'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1479</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1473</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.AutoGenerateValue" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1480</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1474</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.FieldName" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.FieldName">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1481</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1475</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.Origin" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.Origin">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1482</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1476</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.ProviderFlags" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.ProviderFlags">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1483</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1477</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.ReadOnly" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1484</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1478</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQ.O:felcimekQcim.Size" resname="O:EkaerF.O:felcimekQ.O:felcimekQcim.Size">
         <source>134</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1485</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1479</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQDs.DataSet" resname="O:EkaerF.O:felcimekQDs.DataSet">
         <source>felcimekQ</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1486</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1480</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQDs.Left" resname="O:EkaerF.O:felcimekQDs.Left">
         <source>768</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1487</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1481</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:felcimekQDs.Top" resname="O:EkaerF.O:felcimekQDs.Top">
         <source>80</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1488</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1482</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.Connection" resname="O:EkaerF.O:lecimekQ.Connection">
         <source>DmEkaer.EKAERKapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1489</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1483</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.SQL.Strings[0]" resname="O:EkaerF.O:lecimekQ.SQL.Strings[0]">
         <source>'select * from lerakodasi_cimek_nezet where tul_id=:t'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1490</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1484</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.Left" resname="O:EkaerF.O:lecimekQ.Left">
         <source>696</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1491</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1485</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.Top" resname="O:EkaerF.O:lecimekQ.Top">
         <source>176</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1492</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1486</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.ParamData[0].Name" resname="O:EkaerF.O:lecimekQ.ParamData[0].Name">
         <source>'T'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1493</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1487</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.ParamData[0].DataType" resname="O:EkaerF.O:lecimekQ.ParamData[0].DataType">
         <source>ftInteger</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1494</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1488</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.ParamData[0].ParamType" resname="O:EkaerF.O:lecimekQ.ParamData[0].ParamType">
         <source>ptInput</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1495</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1489</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.ParamData[0].Value" resname="O:EkaerF.O:lecimekQ.ParamData[0].Value">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1496</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1490</prop><prop prop-type="Type">C:TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQid.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQid.FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1497</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1491</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQid.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQid.Origin">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1498</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1492</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQid.ReadOnly" resname="O:EkaerF.O:lecimekQ.O:lecimekQid.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1499</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1493</prop><prop prop-type="Type">TFDAutoIncField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.FieldName">
         <source>'tul_id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1500</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1494</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.Origin">
         <source>'tul_id'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1501</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1495</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.Required" resname="O:EkaerF.O:lecimekQ.O:lecimekQtul_id.Required">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1502</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1496</prop><prop prop-type="Type">TIntegerField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQirsz.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQirsz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1503</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1497</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQirsz.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQirsz.FieldName">
         <source>'irsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1504</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723495</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1498</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQirsz.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQirsz.Origin">
         <source>'irsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1505</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1499</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQirsz.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQirsz.Size">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1506</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1500</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1507</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1501</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.FieldName">
         <source>'telepules'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1508</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1502</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.Origin">
         <source>'telepules'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1509</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1503</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelepules.Size">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1510</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1504</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1511</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1505</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.FieldName">
         <source>'kozterulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1512</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1506</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.Origin">
         <source>'kozterulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1513</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1507</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozterulet.Size">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1514</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1508</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1515</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1509</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.FieldName">
         <source>'kozt_jelleg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1516</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1510</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.Origin">
         <source>'kozt_jelleg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1517</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1511</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQkozt_jelleg.Size">
         <source>10</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1518</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1512</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1519</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1513</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.FieldName">
         <source>'hazszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1520</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1514</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.Origin">
         <source>'hazszam'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1521</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1515</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQhazszam.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1522</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1516</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQepulet.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQepulet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1523</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1517</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQepulet.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQepulet.FieldName">
         <source>'epulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1524</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1518</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQepulet.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQepulet.Origin">
         <source>'epulet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1525</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1519</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQepulet.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQepulet.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1526</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1520</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1527</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1521</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.FieldName">
         <source>'lepcsohaz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1528</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1522</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.Origin">
         <source>'lepcsohaz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1529</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1523</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQlepcsohaz.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1530</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1524</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemelet.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQemelet.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1531</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1525</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemelet.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQemelet.FieldName">
         <source>'emelet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1532</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1526</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemelet.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQemelet.Origin">
         <source>'emelet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1533</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1527</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemelet.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQemelet.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1534</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1528</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQajto.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQajto.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1535</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1529</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQajto.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQajto.FieldName">
         <source>'ajto'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1536</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1530</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQajto.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQajto.Origin">
         <source>'ajto'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1537</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1531</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQajto.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQajto.Size">
         <source>5</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1538</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1532</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1539</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1533</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.FieldName">
         <source>'hrsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1540</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1534</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQhrsz.Origin">
         <source>'hrsz'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1541</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1535</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemail.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQemail.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1542</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1536</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemail.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQemail.FieldName">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1543</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1537</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQemail.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQemail.Origin">
         <source>'email'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1544</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1538</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1545</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1539</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.FieldName">
         <source>'telefon'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1546</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1540</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQtelefon.Origin">
         <source>'telefon'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1547</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1541</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.AutoGenerateValue" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.AutoGenerateValue">
         <source>arDefault</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1548</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1542</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.FieldName" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.FieldName">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1549</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1543</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.Origin" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.Origin">
         <source>'cim'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1550</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1544</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.ProviderFlags" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.ProviderFlags">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1551</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1545</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.ReadOnly" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1552</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1546</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQ.O:lecimekQcim.Size" resname="O:EkaerF.O:lecimekQ.O:lecimekQcim.Size">
         <source>134</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1553</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1547</prop><prop prop-type="Type">TWideStringField</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQDs.DataSet" resname="O:EkaerF.O:lecimekQDs.DataSet">
         <source>lecimekQ</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1554</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1548</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQDs.Left" resname="O:EkaerF.O:lecimekQDs.Left">
         <source>744</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1555</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1549</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:EkaerF.O:lecimekQDs.Top" resname="O:EkaerF.O:lecimekQDs.Top">
         <source>176</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1556</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981723611</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1550</prop><prop prop-type="Type">TDataSource</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

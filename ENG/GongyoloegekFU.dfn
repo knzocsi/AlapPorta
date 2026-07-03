@@ -5,9 +5,9 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.5932638889</prop>
-        <prop prop-type="OrigDateTime">46099.6034259259</prop>
-        <prop prop-type="XlatDateTime">46099.6034259259</prop>
+        <prop prop-type="SelfDateTime">46202.6216666667</prop>
+        <prop prop-type="OrigDateTime">46201.9206481481</prop>
+        <prop prop-type="XlatDateTime">46201.9206481481</prop>
         <prop prop-type="Translated">13</prop>
         <prop prop-type="UnTranslated">143</prop>
       </prop-group>
@@ -16,1589 +16,795 @@
       <trans-unit id="O:GongyoloegekF.Left" resname="O:GongyoloegekF.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">0</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Top" resname="O:GongyoloegekF.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">1</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Caption" resname="O:GongyoloegekF.Caption">
         <source>'Göngyölegek'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">2</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Packages'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">1</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.ClientHeight" resname="O:GongyoloegekF.ClientHeight">
         <source>336</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">3</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.ClientWidth" resname="O:GongyoloegekF.ClientWidth">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">4</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Color" resname="O:GongyoloegekF.Color">
         <source>clBtnFace</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">5</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Font.Charset" resname="O:GongyoloegekF.Font.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">6</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Font.Color" resname="O:GongyoloegekF.Font.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">7</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Font.Height" resname="O:GongyoloegekF.Font.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">8</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Font.Name" resname="O:GongyoloegekF.Font.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">9</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Font.Style" resname="O:GongyoloegekF.Font.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">10</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.OldCreateOrder" resname="O:GongyoloegekF.OldCreateOrder">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">11</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.Position" resname="O:GongyoloegekF.Position">
         <source>poOwnerFormCenter</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">12</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.OnActivate" resname="O:GongyoloegekF.OnActivate">
         <source>FormActivate</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">13</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.PixelsPerInch" resname="O:GongyoloegekF.PixelsPerInch">
         <source>96</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">14</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.TextHeight" resname="O:GongyoloegekF.TextHeight">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">15</prop>
-          <prop prop-type="Type">TGongyoloegekF</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TGongyoloegekF</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.Left" resname="O:GongyoloegekF.O:Panel1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">16</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.Top" resname="O:GongyoloegekF.O:Panel1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">17</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.Width" resname="O:GongyoloegekF.O:Panel1.Width">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">18</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.Height" resname="O:GongyoloegekF.O:Panel1.Height">
         <source>65</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">19</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.Align" resname="O:GongyoloegekF.O:Panel1.Align">
         <source>alTop</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">20</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.TabOrder" resname="O:GongyoloegekF.O:Panel1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">21</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.DesignSize[0]" resname="O:GongyoloegekF.O:Panel1.DesignSize[0]">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">22</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.DesignSize[1]" resname="O:GongyoloegekF.O:Panel1.DesignSize[1]">
         <source>65</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">23</prop>
-          <prop prop-type="Type">TPanel</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.Left" resname="O:GongyoloegekF.O:Panel1.O:Button1.Left">
         <source>16</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">24</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.Top" resname="O:GongyoloegekF.O:Panel1.O:Button1.Top">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">25</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.Width" resname="O:GongyoloegekF.O:Panel1.O:Button1.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">26</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.Height" resname="O:GongyoloegekF.O:Panel1.O:Button1.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">27</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.Caption" resname="O:GongyoloegekF.O:Panel1.O:Button1.Caption">
         <source>'Kilépés'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">28</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Exit'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">1</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.TabOrder" resname="O:GongyoloegekF.O:Panel1.O:Button1.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">29</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button1.OnClick" resname="O:GongyoloegekF.O:Panel1.O:Button1.OnClick">
         <source>Button1Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">30</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Left" resname="O:GongyoloegekF.O:Panel1.O:Button2.Left">
         <source>323</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">31</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Top" resname="O:GongyoloegekF.O:Panel1.O:Button2.Top">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">32</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Width" resname="O:GongyoloegekF.O:Panel1.O:Button2.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">33</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Height" resname="O:GongyoloegekF.O:Panel1.O:Button2.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">34</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Anchors" resname="O:GongyoloegekF.O:Panel1.O:Button2.Anchors">
         <source>[akTop, akRight]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">35</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.Caption" resname="O:GongyoloegekF.O:Panel1.O:Button2.Caption">
         <source>'Új'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">36</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'New'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">1</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.TabOrder" resname="O:GongyoloegekF.O:Panel1.O:Button2.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">37</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button2.OnClick" resname="O:GongyoloegekF.O:Panel1.O:Button2.OnClick">
         <source>Button2Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">38</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Left" resname="O:GongyoloegekF.O:Panel1.O:Button3.Left">
         <source>427</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">39</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Top" resname="O:GongyoloegekF.O:Panel1.O:Button3.Top">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">40</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Width" resname="O:GongyoloegekF.O:Panel1.O:Button3.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">41</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Height" resname="O:GongyoloegekF.O:Panel1.O:Button3.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016962963</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">42</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016962963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Anchors" resname="O:GongyoloegekF.O:Panel1.O:Button3.Anchors">
         <source>[akTop, akRight]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">43</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.Caption" resname="O:GongyoloegekF.O:Panel1.O:Button3.Caption">
         <source>'Módosít'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">44</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Modify'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.TabOrder" resname="O:GongyoloegekF.O:Panel1.O:Button3.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">45</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button3.OnClick" resname="O:GongyoloegekF.O:Panel1.O:Button3.OnClick">
         <source>Button3Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">46</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Left" resname="O:GongyoloegekF.O:Panel1.O:Button4.Left">
         <source>533</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">47</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Top" resname="O:GongyoloegekF.O:Panel1.O:Button4.Top">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">48</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Width" resname="O:GongyoloegekF.O:Panel1.O:Button4.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">49</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Height" resname="O:GongyoloegekF.O:Panel1.O:Button4.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">50</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Anchors" resname="O:GongyoloegekF.O:Panel1.O:Button4.Anchors">
         <source>[akTop, akRight]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">51</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.Caption" resname="O:GongyoloegekF.O:Panel1.O:Button4.Caption">
         <source>'Töröl'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">52</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Delete'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.TabOrder" resname="O:GongyoloegekF.O:Panel1.O:Button4.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">53</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:Panel1.O:Button4.OnClick" resname="O:GongyoloegekF.O:Panel1.O:Button4.OnClick">
         <source>Button4Click</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">54</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Left" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">55</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Top" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Top">
         <source>65</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">56</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Width" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Width">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">57</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Height" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Height">
         <source>189</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">58</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Align" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">59</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.DataSource" resname="O:GongyoloegekF.O:JvDBUltimGrid1.DataSource">
         <source>AF.gongyQDs</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">60</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.ReadOnly" resname="O:GongyoloegekF.O:JvDBUltimGrid1.ReadOnly">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">61</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TabOrder" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">62</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">62</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Charset" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">63</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">63</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Color" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">64</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">64</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Height" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">65</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">65</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Name" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">66</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">66</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Style" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">67</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">67</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.OnCellClick" resname="O:GongyoloegekF.O:JvDBUltimGrid1.OnCellClick">
         <source>JvDBUltimGrid1CellClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">68</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">68</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.OnKeyUp" resname="O:GongyoloegekF.O:JvDBUltimGrid1.OnKeyUp">
         <source>JvDBUltimGrid1KeyUp</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">69</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">69</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption" resname="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption">
         <source>'Select columns'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">70</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">70</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK" resname="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK">
         <source>'&amp;OK'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">71</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">71</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:GongyoloegekF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
         <source>'At least one column must be visible!'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">72</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">72</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.EditControls" resname="O:GongyoloegekF.O:JvDBUltimGrid1.EditControls">
         <source>&lt;&gt;</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">73</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">73</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.RowsHeight" resname="O:GongyoloegekF.O:JvDBUltimGrid1.RowsHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">74</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">74</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.TitleRowHeight" resname="O:GongyoloegekF.O:JvDBUltimGrid1.TitleRowHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">75</prop>
-          <prop prop-type="Type">TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">75</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Expanded" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">76</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">&lt;item</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">76</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].FieldName" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].FieldName">
         <source>'id'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">77</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">77</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Title.Caption" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Title.Caption">
         <source>'Sorsz'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">78</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'No.'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">78</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Visible" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">79</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">79</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Expanded" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">80</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">80</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].FieldName" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].FieldName">
         <source>'v_kod'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">81</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">81</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Title.Caption" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Title.Caption">
         <source>'Vonalkód'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">82</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Barcode'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">82</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Visible" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[1].Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">83</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">83</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Expanded" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">84</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">84</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].FieldName" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].FieldName">
         <source>'nev'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">85</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">85</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Title.Caption" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Title.Caption">
         <source>'Göngyöleg'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">86</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Package'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">86</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Width" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Width">
         <source>326</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">87</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">87</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Visible" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[2].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">88</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">88</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Expanded" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">89</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">item</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">89</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].FieldName" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].FieldName">
         <source>'tomeg'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">90</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">90</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Title.Caption" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Title.Caption">
         <source>'Tömeg'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">91</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Mass'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">91</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Visible" resname="O:GongyoloegekF.O:JvDBUltimGrid1.Columns[3].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">92</prop>
-          <prop prop-type="Type">C:TJvDBUltimGrid</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">end&gt;</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">92</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Left" resname="O:GongyoloegekF.O:reszletekroll.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">93</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">93</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Top" resname="O:GongyoloegekF.O:reszletekroll.Top">
         <source>254</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">94</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">94</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Width" resname="O:GongyoloegekF.O:reszletekroll.Width">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">95</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">95</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Height" resname="O:GongyoloegekF.O:reszletekroll.Height">
         <source>82</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">96</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">96</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Align" resname="O:GongyoloegekF.O:reszletekroll.Align">
         <source>alBottom</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">97</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">97</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.Caption" resname="O:GongyoloegekF.O:reszletekroll.Caption">
         <source>'Részletek'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">98</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Details'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">1</prop><prop prop-type="Order">98</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.TabOrder" resname="O:GongyoloegekF.O:reszletekroll.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">99</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">99</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.DesignSize[0]" resname="O:GongyoloegekF.O:reszletekroll.DesignSize[0]">
         <source>628</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">100</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">100</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.DesignSize[1]" resname="O:GongyoloegekF.O:reszletekroll.DesignSize[1]">
         <source>82</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">101</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">101</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.FAWidth" resname="O:GongyoloegekF.O:reszletekroll.FAWidth">
         <source>145</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963079</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">102</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">102</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.FAHeight" resname="O:GongyoloegekF.O:reszletekroll.FAHeight">
         <source>82</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">103</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">103</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.FCWidth" resname="O:GongyoloegekF.O:reszletekroll.FCWidth">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">104</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">104</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.FCHeight" resname="O:GongyoloegekF.O:reszletekroll.FCHeight">
         <source>22</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">105</prop>
-          <prop prop-type="Type">TJvRollOut</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">105</prop><prop prop-type="Type">TJvRollOut</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label1.Left" resname="O:GongyoloegekF.O:reszletekroll.O:Label1.Left">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">106</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">106</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label1.Top" resname="O:GongyoloegekF.O:reszletekroll.O:Label1.Top">
         <source>31</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">107</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">107</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label1.Width" resname="O:GongyoloegekF.O:reszletekroll.O:Label1.Width">
         <source>82</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">108</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">108</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label1.Height" resname="O:GongyoloegekF.O:reszletekroll.O:Label1.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">109</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">109</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label1.Caption" resname="O:GongyoloegekF.O:reszletekroll.O:Label1.Caption">
         <source>'Göngyöleg neve:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">110</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Package:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">1</prop><prop prop-type="Order">110</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label2.Left" resname="O:GongyoloegekF.O:reszletekroll.O:Label2.Left">
         <source>428</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">111</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">111</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label2.Top" resname="O:GongyoloegekF.O:reszletekroll.O:Label2.Top">
         <source>31</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">112</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">112</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label2.Width" resname="O:GongyoloegekF.O:reszletekroll.O:Label2.Width">
         <source>56</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">113</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">113</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label2.Height" resname="O:GongyoloegekF.O:reszletekroll.O:Label2.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">114</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">114</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label2.Caption" resname="O:GongyoloegekF.O:reszletekroll.O:Label2.Caption">
         <source>'Tömeg(Kg):'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">115</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Mass(Kg):'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">1</prop><prop prop-type="Order">115</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Left" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">116</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">116</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Top" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Top">
         <source>31</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">117</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">117</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Width" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Width">
         <source>47</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">118</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">118</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Height" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Height">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">119</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">119</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Caption" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Caption">
         <source>'Vonalkód:'</source>
-        <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">1</prop>
-          <prop prop-type="Order">120</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
         <target>'Barcode:'</target>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">1</prop><prop prop-type="Order">120</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:Label3.Visible" resname="O:GongyoloegekF.O:reszletekroll.O:Label3.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">121</prop>
-          <prop prop-type="Type">TLabel</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">121</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.Left" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.Left">
         <source>140</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">122</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">122</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.Top" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.Top">
         <source>47</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">123</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">123</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.Width" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.Width">
         <source>265</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">124</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">124</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.Height" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">125</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">125</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.MaxLength" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.MaxLength">
         <source>30</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">126</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">126</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.TabOrder" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">127</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">127</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edszovege.Text" resname="O:GongyoloegekF.O:reszletekroll.O:edszovege.Text">
         <source>'edszovege'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">128</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">128</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Left" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Left">
         <source>533</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">129</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">129</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Top" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Top">
         <source>43</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">130</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">130</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Width" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">131</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">131</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Height" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">132</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">132</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Anchors" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Anchors">
         <source>[akTop, akRight]</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">133</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">133</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Caption" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.Caption">
         <source>'btnfelvesz'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">134</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">134</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.TabOrder" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.TabOrder">
         <source>3</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">135</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">135</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.OnClick" resname="O:GongyoloegekF.O:reszletekroll.O:btnfelvesz.OnClick">
         <source>btnfelveszClick</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">136</prop>
-          <prop prop-type="Type">TButton</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">136</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Left" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Left">
         <source>428</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">137</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">137</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Top" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Top">
         <source>47</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">138</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">138</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Width" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Width">
         <source>73</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">139</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">139</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Height" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">140</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">140</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.ValueType" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.ValueType">
         <source>vtFloat</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">141</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">141</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.TabOrder" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.TabOrder">
         <source>2</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">142</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">142</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:sptomeg.OnKeyPress" resname="O:GongyoloegekF.O:reszletekroll.O:sptomeg.OnKeyPress">
         <source>sptomegKeyPress</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">143</prop>
-          <prop prop-type="Type">TJvSpinEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">143</prop><prop prop-type="Type">TJvSpinEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Left" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Left">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">144</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">144</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Top" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Top">
         <source>47</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">145</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">145</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Width" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Width">
         <source>121</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">146</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">146</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Height" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Height">
         <source>21</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">147</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">147</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.MaxLength" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.MaxLength">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">148</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">148</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.TabOrder" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">149</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">149</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Text" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Text">
         <source>'edvkod'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">150</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">150</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:reszletekroll.O:edvkod.Visible" resname="O:GongyoloegekF.O:reszletekroll.O:edvkod.Visible">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">151</prop>
-          <prop prop-type="Type">TEdit</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">151</prop><prop prop-type="Type">TEdit</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:EllenQ.Connection" resname="O:GongyoloegekF.O:EllenQ.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">152</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">152</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:EllenQ.SQL.Strings[0]" resname="O:GongyoloegekF.O:EllenQ.SQL.Strings[0]">
         <source>'select vkod from termek'</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">153</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-          <prop prop-type="Open">(</prop>
-          <prop prop-type="Close">)</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">153</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:EllenQ.Left" resname="O:GongyoloegekF.O:EllenQ.Left">
         <source>560</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">154</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">154</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:GongyoloegekF.O:EllenQ.Top" resname="O:GongyoloegekF.O:EllenQ.Top">
         <source>8</source>
         <prop-group name="ITEFieldProp">
-          <prop prop-type="Created">46106.4016963194</prop>
-          <prop prop-type="Status">0</prop>
-          <prop prop-type="Order">155</prop>
-          <prop prop-type="Type">TFDQuery</prop>
-          <prop prop-type="Localize">1</prop>
-        </prop-group>
+        <prop prop-type="Created">46106.4016963194</prop><prop prop-type="Status">0</prop><prop prop-type="Order">155</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

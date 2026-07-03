@@ -33,7 +33,6 @@ object KepekF: TKepekF
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 689
     object btnKilepes: TButton
       Left = 48
       Top = 13

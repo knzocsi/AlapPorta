@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.4040740741</prop>
-        <prop prop-type="OrigDateTime">44943.6053472222</prop>
-        <prop prop-type="XlatDateTime">44943.6053472222</prop>
+        <prop prop-type="SelfDateTime">46202.617962963</prop>
+        <prop prop-type="OrigDateTime">46200.6297453704</prop>
+        <prop prop-type="XlatDateTime">46201.9206481481</prop>
         <prop prop-type="Translated">0</prop>
-        <prop prop-type="UnTranslated">62</prop>
+        <prop prop-type="UnTranslated">59</prop>
       </prop-group>
     </header>
     <body>
@@ -158,170 +158,155 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:Ekaer_hibakF.O:Button1.ExplicitLeft" resname="O:Ekaer_hibakF.O:Button1.ExplicitLeft">
-        <source>304</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:Ekaer_hibakF.O:Button1.ExplicitTop" resname="O:Ekaer_hibakF.O:Button1.ExplicitTop">
-        <source>216</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
-      <trans-unit id="O:Ekaer_hibakF.O:Button1.ExplicitWidth" resname="O:Ekaer_hibakF.O:Button1.ExplicitWidth">
-        <source>75</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Left" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Left">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Top" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Top">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Width" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Width">
         <source>1076</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Height" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Height">
         <source>238</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Align" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Align">
         <source>alClient</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.DataSource" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.DataSource">
         <source>DmEkaer.memhibakDs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TabOrder" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Charset" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Charset">
         <source>DEFAULT_CHARSET</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Color" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Color">
         <source>clWindowText</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.398168125</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Height" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Height">
         <source>-11</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Name" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Name">
         <source>'Tahoma'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Style" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleFont.Style">
         <source>[]</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.Caption">
         <source>'Select columns'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.OK">
         <source>'&amp;OK'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.SelectColumnsDialogStrings.NoSelectionWarning">
         <source>'At least one column must be visible!'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.EditControls" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.EditControls">
         <source>&lt;&gt;</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.RowsHeight" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.RowsHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleRowHeight" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.TitleRowHeight">
         <source>17</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Expanded" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">&lt;item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].FieldName" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].FieldName">
         <source>'funcCode'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Title.Caption" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Title.Caption">
         <source>'Funkció kód'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">49</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Visible" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[0].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Expanded" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].FieldName" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].FieldName">
         <source>'reasoncode'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Title.Caption" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Title.Caption">
         <source>'Hiba kód'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">53</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Visible" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[1].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">54</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Expanded" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Expanded">
         <source>False</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">55</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].FieldName" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].FieldName">
         <source>'msg'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">56</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Title.Caption" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Title.Caption">
         <source>'Hiba üzenet'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">57</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Visible" resname="O:Ekaer_hibakF.O:JvDBUltimGrid1.Columns[2].Visible">
         <source>True</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">61</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
+        <prop prop-type="Created">46106.3981681366</prop><prop prop-type="Status">0</prop><prop prop-type="Order">58</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Close">end&gt;</prop></prop-group>
       </trans-unit>
     </body>
   </file>

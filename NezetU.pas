@@ -143,6 +143,10 @@ begin
       TfrxMemoView(FindObject('mempartnerneve')).Text:=Mjegy_nyom_rec.Partner1_nev;
     if TfrxMemoView(FindObject('mempartnercime'))<>nil then
       TfrxMemoView(FindObject('mempartnercime')).Text:=Mjegy_nyom_rec.Partner1_cim;
+    if TfrxMemoView(FindObject('mempartnertel'))<>nil then
+      TfrxMemoView(FindObject('mempartnertel')).Text:=Mjegy_nyom_rec.Partner1_tel;
+    if TfrxMemoView(FindObject('mempartneradosz'))<>nil then
+      TfrxMemoView(FindObject('mempartneradosz')).Text:=Mjegy_nyom_rec.Partner1_adosz;
     if not Clean_Way then
      if TfrxMemoView(FindObject('mempartner2'))<>nil then
       TfrxMemoView(FindObject('mempartner2')).Text:=Mjegy_nyom_rec.Partner2_felirat;
@@ -150,6 +154,8 @@ begin
       TfrxMemoView(FindObject('mempartnerneve2')).Text:=Mjegy_nyom_rec.Partner2_nev;
     if TfrxMemoView(FindObject('mempartnercime2'))<>nil then
       TfrxMemoView(FindObject('mempartnercime2')).Text:=Mjegy_nyom_rec.Partner2_cim;
+    if TfrxMemoView(FindObject('mempartner2adosz'))<>nil then
+      TfrxMemoView(FindObject('mempartner2adosz')).Text:=Mjegy_nyom_rec.Partner2_adosz;
     //fuvarozó
     if TfrxMemoView(FindObject('mempartnerneve3'))<>nil then
       TfrxMemoView(FindObject('mempartnerneve3')).Text:=Mjegy_nyom_rec.Partner3_nev;
@@ -200,6 +206,11 @@ begin
       begin
        TfrxMemoView(FindObject('memmasodikido')).Text:='';
       end;
+     //román
+    if TfrxMemoView(FindObject('memdatumok'))<>nil then
+      TfrxMemoView(FindObject('memdatumok')).text:= DateToStr(Mjegy_nyom_rec.Erkdatum)+'/'+DateToStr(Mjegy_nyom_rec.Tavdatum);
+    if TfrxMemoView(FindObject('memidok'))<>nil then
+      TfrxMemoView(FindObject('memidok')).Text:=TimeToStr(Mjegy_nyom_rec.Erkido)+'/'+ TimeToStr(Mjegy_nyom_rec.Tavido);
     //termék adatok
     //ewc  ÚGY TUDOM NEM HASZNÁLJÁK
     if TfrxMemoView(FindObject('memewc'))<>nil then
@@ -312,18 +323,18 @@ begin
      else
       begin
        case Mjegy_nyom_rec.Irany[1] of
-        'B','T':begin
+        'B','T','R':begin
+                     if TfrxMemoView(FindObject('membrutto'))<>nil then
+                      TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+                     if TfrxMemoView(FindObject('memtara'))<>nil then
+                      TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+                    end;
+        'K','L':begin
                  if TfrxMemoView(FindObject('membrutto'))<>nil then
-                  TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Brutto;
+                  TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Tara;
                  if TfrxMemoView(FindObject('memtara'))<>nil then
-                  TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Tara;
+                  TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Brutto;
                 end;
-        'K':begin
-             if TfrxMemoView(FindObject('membrutto'))<>nil then
-              TfrxMemoView(FindObject('membrutto')).Text:=Mjegy_nyom_rec.Tara;
-             if TfrxMemoView(FindObject('memtara'))<>nil then
-              TfrxMemoView(FindObject('memtara')).Text:=Mjegy_nyom_rec.Brutto;
-            end;
        end;
       end;
      if TfrxMemoView(FindObject('memnetto'))<>nil then
@@ -364,6 +375,14 @@ begin
       TfrxPictureView(FindObject('qr_kep')).Visible:=
       (Mjegy_nyom_rec.Termek_nev='Tégla darálék') or (Mjegy_nyom_rec.Termek_nev='Beton darálék');
 
+      if sofor_merlegjegyen then//azért mert ez csak a románban van
+      if TfrxMemoView(FindObject('memmerlegkezelo'))<>nil then
+      TfrxMemoView(FindObject('memmerlegkezelo')).Text:='Operator: '+Mjegy_nyom_rec.Merlegkezelo;
+
+      if sofor_merlegjegyen then
+      if TfrxMemoView(FindObject('memsofor'))<>nil then
+      TfrxMemoView(FindObject('memsofor')).Text:=  'Sofer: '+Mjegy_nyom_rec.sofor;
+      //ShowMessage(Mjegy_nyom_rec.Merlegkezelo);
      //csak azon állítsa ami valóban duplex, a szimplám más a neve/példányszámok miatt fontos
      if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then
       TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy or gongyolegek_latszanak;

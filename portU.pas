@@ -269,7 +269,7 @@ begin
                           begin
                             memEredmeny.Text:='�rt�k vj: '+ertek+'(h:'+inttostr(Length(ertek))+' hex: '+hexaszov(ertek)+')'+#13#10+memEredmeny.text;
                           end;
-
+                          stabil_tomeg:= ertek[1]<>'?';
                           mertekek[merlegszam]:='';
                           kilep:=true ;
                           ertek:=ertek_tisztitas(ertek);

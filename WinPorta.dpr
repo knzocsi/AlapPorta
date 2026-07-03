@@ -79,7 +79,8 @@ uses
   GongyCsatU in 'GongyCsatU.pas' {GongyCsatF},
   KartyakU in 'KartyakU.pas' {KartyakF},
   MozgasokTesztU in 'MozgasokTesztU.pas' {MozgasokTesztF},
-  MozgasokListajaU in 'MozgasokListajaU.pas' {MozgasokListajaF};
+  MozgasokListajaU in 'MozgasokListajaU.pas' {MozgasokListajaF},
+  NagyTomegU in 'NagyTomegU.pas' {NagyTomegF};
 
 {$R *.res}
 
@@ -148,5 +149,6 @@ begin
   Application.CreateForm(TKartyakF, KartyakF);
   Application.CreateForm(TMozgasokTesztF, MozgasokTesztF);
   Application.CreateForm(TMozgasokListajaF, MozgasokListajaF);
+  Application.CreateForm(TNagyTomegF, NagyTomegF);
   Application.Run;
 end.

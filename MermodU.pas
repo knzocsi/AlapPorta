@@ -1,4 +1,4 @@
-unit MermodU;
+Ôªøunit MermodU;
 
 interface
 
@@ -171,6 +171,8 @@ type
     spsiker: TJvSpinEdit;
     Label16: TLabel;
     termeklistb_siker: TBooleanField;
+    edsofor: TEdit;
+    lblsofor: TLabel;
     procedure cbxiranyChange(Sender: TObject);
     procedure btnTaramegadasClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);
@@ -315,12 +317,12 @@ var sorsz,pcime,egyedi,paramok:String;
 procedure elokeszit;
    begin
     try
-     if not Clean_way then AF.merlegjegy_tipus_betoltese//azÈrt kell mindig betˆlteni hogy a cÌm jÛ legyen (ha esetleg stornÛztak)
+     if not Clean_way then AF.merlegjegy_tipus_betoltese//az√©rt kell mindig bet√∂lteni hogy a c√≠m j√≥ legyen (ha esetleg storn√≥ztak)
      else AF.merlegjegy_tipus_betoltese_clean(UpperCase(Copy(cbxIrany.Text,1,2)));
     finally
-      af.merlegjegy_mezgaz;//mezıgazdas·gi
-      AF.merlegjegy_tomeglevonas;// tˆmeg levon·s
-      Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //¸resre teszem mindig
+      af.merlegjegy_mezgaz;//mez≈ëgazdas√°gi
+      AF.merlegjegy_tomeglevonas;// t√∂meg levon√°s
+      Mjegy_nyom_rec.mjegy_rec_nyom_ures;  //√ºresre teszem mindig
     end;
      while Mjegy_nyom_rec=nil do Sleep(200);
 
@@ -342,7 +344,7 @@ procedure elokeszit;
        Partner2_felirat:=lblpartner2.Caption;
        Partner2_nev:=Partnerlist2.FieldByName('nev').AsString;
        Partner2_cim:=Partnerlist2.FieldByName('cim').AsString;;
-       Partner3_felirat:='FuvarozÛ';
+       Partner3_felirat:='Fuvaroz√≥';
        Partner3_nev:=Partnerlist3.FieldByName('nev').AsString;
        Partner3_cim:=Partnerlist3.FieldByName('cim').AsString;
        Ekaer:=edekaer.Text;
@@ -376,7 +378,7 @@ procedure elokeszit;
                  end;
           end;
         end;
-       Merlegkezelo:='';
+       Merlegkezelo:=kezelolookup.DisplayValue;
        Nedvesseg_latszik:=spnedv.Visible;
        Alapnedv:=spalapnedv.Value.ToString+' %';
        Nedv:=spnedv.Value.ToString+' %';
@@ -400,16 +402,31 @@ procedure elokeszit;
        Siker:=spSiker.Value.ToString+' %';
        Tisztitasi_dij_rec:=IntToStr(Round(akt_tiszt_dij))+' -Ft';
        Szaritasi_dij_rec:=IntToStr(Round(akt_szar_dij))+' -Ft';
+       if Merlegjegy_tipus=9 then
+       begin
+          case cbxIrany.Text[1] of
+           'B' : begin
+                  Irany:='Recep»õionare';
+                 end;
+           'K' : begin
+                  Irany:='Livrare';
+                 end;
+          end;
+       end;
+       Partner1_tel:=Partnelist.FieldByName('telefon').AsString;
+       Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
+       Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
+       Sofor:=edsofor.text;
       end;
 
 //     with aF.frxmerleg do
 //       begin
-//         TfrxMemoView(FindObject('frxpsz')).Text:='1. pÈld·ny';
-//         if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. pÈld·ny';
+//         TfrxMemoView(FindObject('frxpsz')).Text:='1. p√©ld√°ny';
+//         if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:='2. p√©ld√°ny';
 //         if edekaer.Text<>'' then
 //          begin
 //           TfrxMemoView(FindObject('frxekaer')).Text:=edekaer.Text;
-//           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EK¡ER:';
+//           TfrxMemoView(FindObject('frxekaerlbl')).Text:='EK√ÅER:';
 //          end
 //          else
 //          begin
@@ -528,7 +545,7 @@ procedure elokeszit;
 //         TfrxMemoView(FindObject('memegysar')).Text:=termeklist.FieldByName('ar').AsString+' Ft';
 //         TfrxMemoView(FindObject('memtomlevon')).Text:=Sp_tomeg_levon.Value.ToString+' kg';
 //         TfrxMemoView(FindObject('memtomlevon_szoveg')).Text:=levonlookup.DisplayValue;
-//         //csak azon ·llÌtsa ami valÛban duplex, a szimpl·m m·s a neve/pÈld·nysz·mok miatt fontos
+//         //csak azon √°ll√≠tsa ami val√≥ban duplex, a szimpl√°m m√°s a neve/p√©ld√°nysz√°mok miatt fontos
 //         if TfrxReportSummary(FindObject('ReportSummary1'))<>nil then TfrxReportSummary(FindObject('ReportSummary1')).Visible:=duplex_mjegy;
 //         NezetF.rep_valaszt(aF.frxmerleg,1);
 //       end;
@@ -684,7 +701,7 @@ begin
     end;
 
   egyedi:=TempQ.FieldByName('eazon').AsString;//nem kell
-  with TempQ do //paramÈterek
+  with TempQ do //param√©terek
     for j := 1 to Fields.Count-3 do paramok:=paramok+fields[j].FieldName+'=:'+fields[j].FieldName+',';
    paramok:=paramok+TempQ.fields[j].FieldName+'=:'+TempQ.fields[j].FieldName+','+TempQ.fields[j+1].FieldName+'=:'+TempQ.fields[j+1].FieldName;
   //ShowMessage(paramok);
@@ -764,7 +781,7 @@ begin
       ParamByName('kerekites').AsBoolean:=chkkerekites.Checked;
       ParamByName('kukorica').AsBoolean:=chkkuk.checked;
       ParamByName('buzaminoseg').AsString:=cbxbuzaminoseg.Text;
-      //mennyisÈg kisz·mit·sa mÈg kell
+      //mennyis√©g kisz√°mit√°sa m√©g kell
       keszmenny:=0;
       tort_keszmenny:=0;
       if spEgysegtomeg.Value=1 then
@@ -869,20 +886,20 @@ begin
           ParamByName('kitarolasi_dij').AsFloat:=0;
           ParamByName('szallitasi_dij').AsFloat:=0;
         end;
-
+        ParamByName('sofor').AsString:=edsofor.text;
      // SQL.SaveToFile(ExtractFileDir(ExtractFilePath(application.exename))+'\sqltext.txt');
       ExecSQL;
       //keszletezes
       case cbxirany.Text[1] of
        'B':begin
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,0,keszmenny);
-            //tˆrt szemek kÈszletezÈse
+            //t√∂rt szemek k√©szletez√©se
             if sptort.Value>0 then
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup2.KeyValue,1,ttom);
            end;
        'K':begin
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,0,-1* keszmenny);
-            //tˆrt szemek kÈszletezÈse
+            //t√∂rt szemek k√©szletez√©se
             if sptort.Value>0 then
             aF.keszletez(termeklookup.KeyValue,taroloklookup.KeyValue,partnerlookup.KeyValue,1,-1*ttom);
            end;
@@ -897,8 +914,8 @@ begin
             TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
             for p := 1 to PrintOptions.Copies do
              begin
-               TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. pÈld·ny';
-               if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. pÈld·ny';
+               TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. p√©ld√°ny';
+               if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. p√©ld√°ny';
                PrepareReport(true);
                Print;
                if duplex_mjegy then Inc(psz)
@@ -927,7 +944,7 @@ end;
 procedure TMermodF.cbxiranyChange(Sender: TObject);
 begin
 case cbxirany.ItemIndex of
- 0:begin //nincs kiv·lasztva
+ 0:begin //nincs kiv√°lasztva
     lblpartner.Caption:='Partner:';
     partnerlookup.KeyValue:='!';
     partnerlookup.Enabled:=false;
@@ -936,7 +953,7 @@ case cbxirany.ItemIndex of
     partnerlookup2.Enabled:=false;
     btnekaer.Enabled:=false;
    end;
- 1:begin //besz·llÌt·s
+ 1:begin //besz√°ll√≠t√°s
     lblpartner.Caption:=rsAtado;
     partnerlookup.Enabled:=True;
     lblpartner2.Caption:=rsAtvevo;
@@ -945,7 +962,7 @@ case cbxirany.ItemIndex of
     partnerlookup.keyvalue:='!';
     if alap_atvevo<>0 then  partnerlookup2.keyvalue:=alap_atvevo;
    end;
- 2:begin //kisz·llÌt·s
+ 2:begin //kisz√°ll√≠t√°s
     lblpartner.Caption:=rsElado;
     partnerlookup.Enabled:=true;
     lblpartner2.Caption:=rsVevo;
@@ -1032,7 +1049,7 @@ try
    end
  else
   begin
-     if tulajT.RecordCount=0 then //ha nincs mÈg tulaj
+     if tulajT.RecordCount=0 then //ha nincs m√©g tulaj
       begin
        tulajlookup.KeyValue:='!';
        tulajlookup.visible:=false;
@@ -1058,6 +1075,9 @@ try
   lblszar.Visible:=szarmazasi_hely_latszik;
   cbxszar.Visible:=szarmazasi_hely_latszik;
   szarcb_feltoltese;
+  lblsofor.visible:=sofor_merlegjegyen;
+  edsofor.Visible:=sofor_merlegjegyen;
+  edsofor.Clear;
 finally
  lblsorszam.Caption:=TempQ.FieldByName('sorszam').AsString;
 
@@ -1107,6 +1127,7 @@ finally
  cbxszar.Text:=TempQ.FieldByName('szarmazasi_hely').AsString;
  spsiker.Value:=TempQ.FieldByName('siker').Value;
  regi_ar:=TempQ.FieldByName('termek_ar').Value;
+ edsofor.Text:=TempQ.FieldByName('sofor').AsString;
  ShowModal
 end;
 end;

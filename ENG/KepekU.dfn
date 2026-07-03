@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.407962963</prop>
-        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="SelfDateTime">46202.6216666667</prop>
+        <prop prop-type="OrigDateTime">46201.9206481481</prop>
         <prop prop-type="XlatDateTime">45581.337037037</prop>
         <prop prop-type="Translated">3</prop>
-        <prop prop-type="UnTranslated">46</prop>
+        <prop prop-type="UnTranslated">45</prop>
       </prop-group>
     </header>
     <body>
@@ -169,97 +169,92 @@
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
-      <trans-unit id="O:KepekF.O:Panel1.ExplicitWidth" resname="O:KepekF.O:Panel1.ExplicitWidth">
-        <source>689</source>
-        <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TPanel</prop><prop prop-type="Localize">1</prop></prop-group>
-      </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.Left" resname="O:KepekF.O:Panel1.O:btnKilepes.Left">
         <source>48</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.Top" resname="O:KepekF.O:Panel1.O:btnKilepes.Top">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.Width" resname="O:KepekF.O:Panel1.O:btnKilepes.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.Height" resname="O:KepekF.O:Panel1.O:btnKilepes.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.Caption" resname="O:KepekF.O:Panel1.O:btnKilepes.Caption">
         <source>'Kilépés'</source>
         <target>'Exit'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">1</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">1</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.TabOrder" resname="O:KepekF.O:Panel1.O:btnKilepes.TabOrder">
         <source>0</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">36</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btnKilepes.OnClick" resname="O:KepekF.O:Panel1.O:btnKilepes.OnClick">
         <source>btnKilepesClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">37</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.Left" resname="O:KepekF.O:Panel1.O:btbKereses.Left">
         <source>168</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">38</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.Top" resname="O:KepekF.O:Panel1.O:btbKereses.Top">
         <source>13</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">39</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.Width" resname="O:KepekF.O:Panel1.O:btbKereses.Width">
         <source>75</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">40</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.Height" resname="O:KepekF.O:Panel1.O:btbKereses.Height">
         <source>25</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">41</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.Caption" resname="O:KepekF.O:Panel1.O:btbKereses.Caption">
         <source>'Keresés'</source>
         <target>'Searching'</target>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">1</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">1</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.TabOrder" resname="O:KepekF.O:Panel1.O:btbKereses.TabOrder">
         <source>1</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:Panel1.O:btbKereses.OnClick" resname="O:KepekF.O:Panel1.O:btbKereses.OnClick">
         <source>btbKeresesClick</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TButton</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:OpenPictureDialog1.Filter" resname="O:KepekF.O:OpenPictureDialog1.Filter">
         <source>'All (*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.tiff)|*.gif;*.png;*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf;*.tif;*.tiff|GIF Image (*.gif)|*.gif|Portable Network Graphics (*.png)|*.png|JPEG Image File (*.jpg)|*.jpg|JPEG Image File (*.jpeg)|*.jpeg|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf|TIFF Images (*.tif)|*.tif|TIFF Images (*.tiff)|*.tiff'</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">45</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:OpenPictureDialog1.Left" resname="O:KepekF.O:OpenPictureDialog1.Left">
         <source>32</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">46</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:KepekF.O:OpenPictureDialog1.Top" resname="O:KepekF.O:OpenPictureDialog1.Top">
         <source>72</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">48</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">45531.6420067014</prop><prop prop-type="Status">0</prop><prop prop-type="Order">47</prop><prop prop-type="Type">TOpenPictureDialog</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

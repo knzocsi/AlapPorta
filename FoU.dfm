@@ -55,6 +55,7 @@ object FoF: TFoF
       item
         Width = 50
       end>
+    OnClick = StatusBar1Click
   end
   object pnlBaloldal: TPanel
     Left = 0
@@ -75,80 +76,83 @@ object FoF: TFoF
       object tbIdeiglenes: TTabSheet
         Caption = 'Ideiglenes'
         ImageIndex = 1
-        object dbgNyitbe: TDBGrid
+        object dbgNyitbe: TJvDBUltimGrid
           Left = 0
           Top = 0
           Width = 790
           Height = 258
           Align = alClient
-          Color = clDefault
           DataSource = AF.NyitbeDS
-          FixedColor = clSilver
-          GradientEndColor = clSilver
-          GradientStartColor = clSilver
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
-          OnCellClick = dbgNyitbeCellClick
           OnDrawColumnCell = dbgNyitbeDrawColumnCell
+          SelectColumnsDialogStrings.Caption = 'Select columns'
+          SelectColumnsDialogStrings.OK = '&OK'
+          SelectColumnsDialogStrings.NoSelectionWarning = 'At least one column must be visible!'
+          EditControls = <>
+          RowsHeight = 17
+          TitleRowHeight = 17
           Columns = <
             item
               Expanded = False
               FieldName = 'Hivo_sorszam'
+              Title.Caption = 'Sorsz'#225'm'
+              Width = 80
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
               FieldName = 'Rendszam'
-              Width = 70
+              Title.Caption = 'Rendsz'#225'm'
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
               FieldName = 'Rendszam2'
-              Width = 70
+              Title.Caption = 'Rendsz'#225'm 2'
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
-              FieldName = 'P_Nev'
+              FieldName = 'P_nev'
+              Title.Caption = 'Partner 1'
               Width = 120
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
-              FieldName = 'P2_Nev'
+              FieldName = 'P2_nev'
+              Title.Caption = 'Partner 2'
               Width = 120
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
               FieldName = 'Erkdatum'
+              Title.Caption = #201'rk.d'#225'tum'
+              Width = 100
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Erkido'
+              Title.Caption = #201'rk.id'#337
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
               FieldName = 'Netto'
+              Title.Caption = 'Nett'#243
               Visible = True
             end
             item
-              Color = clLime
               Expanded = False
               FieldName = 'irany'
+              Title.Caption = 'Ir'#225'ny'
               Visible = True
             end
             item
@@ -187,7 +191,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495600
+            Time = 0.773554583327495500
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end

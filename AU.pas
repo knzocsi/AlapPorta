@@ -129,9 +129,12 @@ type
      Fs_Partner1_felirat: string;
      Fs_Partner1_nev: string;
      Fs_Partner1_cim: string;
+     Fs_Partner1_adosz: string;
+     Fs_Partner1_tel: string;
      Fs_Partner2_felirat: string;
      Fs_Partner2_nev: string;
      Fs_Partner2_cim: string;
+     Fs_Partner2_adosz: string;
      Fs_Partner3_felirat: string;
      Fs_Partner3_nev: string;
      Fs_Partner3_cim: string;
@@ -192,6 +195,8 @@ type
 
      Fs_elso_gongy_tomeg:string;
      Fs_masodik_gongy_tomeg:string;
+
+     Fs_Sofor:string;
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -322,9 +327,15 @@ type
         write Fs_elso_gongy_tomeg;
     property masodik_gongy_tomeg: string read Fs_masodik_gongy_tomeg
         write Fs_masodik_gongy_tomeg;
-        {     Fs_elso_gongy_tomeg:string;
-     Fs_masodik_gongy_tomeg:string;}
 
+    property Partner1_adosz: string read Fs_Partner1_adosz
+        write Fs_Partner1_adosz;
+    property Partner1_tel: string read Fs_Partner1_tel
+        write Fs_Partner1_tel;
+    property Partner2_adosz: string read Fs_Partner2_adosz
+        write Fs_Partner2_adosz;
+    property Sofor: string read Fs_Sofor
+        write Fs_Sofor;
   end;
 
   TAF = class(TDataModule)
@@ -639,6 +650,10 @@ var
   beszallito_beszallitaskor:Boolean=False;
 
   kartyak_hasznalata:Boolean=False;
+
+  nagy_tomeg_kijelzes:Boolean=False;
+
+  sofor_merlegjegyen:Boolean=False;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -1613,6 +1628,12 @@ begin
 
   kartyak_hasznalata :=cfg_kezel('Kártyák használata sorompó nyitáshoz',
    'ALAP','Kártyák használata','Boolean',kartyak_hasznalata);
+
+  nagy_tomeg_kijelzes:=cfg_kezel('Tömeg mutatása nagyban',
+   'ALAP','Tömeg nagyban','Boolean',nagy_tomeg_kijelzes);
+
+  sofor_merlegjegyen:=cfg_kezel('Sofõr mérlegjegyen',
+   'ALAP','Sofõr mérlegjegyen','Boolean',sofor_merlegjegyen);
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -3157,6 +3178,12 @@ begin
 
      elso_gongy_tomeg:='0';
      masodik_gongy_tomeg:='0';
+
+     Partner1_tel:='';
+     Partner1_adosz:='';
+     Partner2_adosz:='';
+
+     Sofor:='';
     end;
 end;
 

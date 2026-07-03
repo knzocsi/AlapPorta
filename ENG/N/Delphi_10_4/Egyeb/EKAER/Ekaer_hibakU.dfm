@@ -29,9 +29,6 @@ object Ekaer_hibakF: TEkaer_hibakF
     ParentFont = False
     TabOrder = 0
     OnClick = Button1Click
-    ExplicitLeft = 304
-    ExplicitTop = 216
-    ExplicitWidth = 75
   end
   object JvDBUltimGrid1: TJvDBUltimGrid
     Left = 0

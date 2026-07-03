@@ -5,8 +5,8 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.4080787037</prop>
-        <prop prop-type="OrigDateTime">44983.6349768518</prop>
+        <prop prop-type="SelfDateTime">46202.6217592593</prop>
+        <prop prop-type="OrigDateTime">46201.9206481481</prop>
         <prop prop-type="XlatDateTime">45581.337037037</prop>
         <prop prop-type="Translated">4</prop>
         <prop prop-type="UnTranslated">93</prop>
@@ -233,12 +233,12 @@
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">42</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ParositottF.O:Panel1.O:piKezdoDatum.Date" resname="O:ParositottF.O:Panel1.O:piKezdoDatum.Date">
-        <source>43587.7735545833</source>
+        <source>43587</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">43</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ParositottF.O:Panel1.O:piKezdoDatum.Time" resname="O:ParositottF.O:Panel1.O:piKezdoDatum.Time">
-        <source>43587.7735545833</source>
+        <source>0.773554583327496</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">44</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -273,12 +273,12 @@
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">50</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ParositottF.O:Panel1.O:piBefejezoDatum.Date" resname="O:ParositottF.O:Panel1.O:piBefejezoDatum.Date">
-        <source>43587.7741821991</source>
+        <source>43587</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">51</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ParositottF.O:Panel1.O:piBefejezoDatum.Time" resname="O:ParositottF.O:Panel1.O:piBefejezoDatum.Time">
-        <source>43587.7741821991</source>
+        <source>0.77418219907122</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">52</prop><prop prop-type="Type">TDateTimePicker</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -318,7 +318,7 @@
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">59</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:ParositottF.O:DBGrid1.DataSource" resname="O:ParositottF.O:DBGrid1.DataSource">
-        <source>aF.ParositottDS</source>
+        <source>AF.ParositottDS</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45531.6422235532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">60</prop><prop prop-type="Type">TDBGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>

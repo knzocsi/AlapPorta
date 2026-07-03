@@ -5,11 +5,11 @@
     <header>
       <prop-group name="ITEHeaderProp">
         <prop prop-type="Version">9.0</prop>
-        <prop prop-type="SelfDateTime">46197.4079861111</prop>
-        <prop prop-type="OrigDateTime">46106.7736805556</prop>
-        <prop prop-type="XlatDateTime">45581.337037037</prop>
+        <prop prop-type="SelfDateTime">46206.6141898148</prop>
+        <prop prop-type="OrigDateTime">46206.612962963</prop>
+        <prop prop-type="XlatDateTime">46201.9206481481</prop>
         <prop prop-type="Translated">109</prop>
-        <prop prop-type="UnTranslated">1905</prop>
+        <prop prop-type="UnTranslated">1909</prop>
       </prop-group>
     </header>
     <body>
@@ -3634,7 +3634,7 @@
         <prop prop-type="Created">45573.4726256713</prop><prop prop-type="Status">0</prop><prop prop-type="Order">707</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">item</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:Panel4.O:mlistaGrid.Columns[25].FieldName" resname="O:MjegyekF.O:Panel4.O:mlistaGrid.Columns[25].FieldName">
-        <source>'irany'</source>
+        <source>'irany_kiiras'</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45573.4726256713</prop><prop prop-type="Status">0</prop><prop prop-type="Order">708</prop><prop prop-type="Type">C:TJvDBUltimGrid</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
@@ -4953,7 +4953,7 @@
       <trans-unit id="O:MjegyekF.O:mjegyekQ.Connection" resname="O:MjegyekF.O:mjegyekQ.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">966</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664312731</prop><prop prop-type="Status">0</prop><prop prop-type="Order">966</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:mjegyekQ.SQL.Strings[0]" resname="O:MjegyekF.O:mjegyekQ.SQL.Strings[0]">
         <source>''</source>
@@ -4988,7 +4988,7 @@
       <trans-unit id="O:MjegyekF.O:termeklist.Connection" resname="O:MjegyekF.O:termeklist.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">973</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664312847</prop><prop prop-type="Status">0</prop><prop prop-type="Order">973</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:termeklist.SQL.Strings[0]" resname="O:MjegyekF.O:termeklist.SQL.Strings[0]">
         <source>'select * from termek ORDER By NEV ASC;'</source>
@@ -5023,7 +5023,7 @@
       <trans-unit id="O:MjegyekF.O:Partnelist.Connection" resname="O:MjegyekF.O:Partnelist.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291551</prop><prop prop-type="Status">0</prop><prop prop-type="Order">980</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664312963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">980</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:Partnelist.SQL.Strings[0]" resname="O:MjegyekF.O:Partnelist.SQL.Strings[0]">
         <source>'SELECT * from partner ORDER BY Nev ASC;'</source>
@@ -5058,7 +5058,7 @@
       <trans-unit id="O:MjegyekF.O:Partnelist2.Connection" resname="O:MjegyekF.O:Partnelist2.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291667</prop><prop prop-type="Status">0</prop><prop prop-type="Order">987</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664312963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">987</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:Partnelist2.SQL.Strings[0]" resname="O:MjegyekF.O:Partnelist2.SQL.Strings[0]">
         <source>'SELECT * from partner ORDER BY Nev ASC;'</source>
@@ -5098,7 +5098,7 @@
       <trans-unit id="O:MjegyekF.O:tulajT.Connection" resname="O:MjegyekF.O:tulajT.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291667</prop><prop prop-type="Status">0</prop><prop prop-type="Order">995</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664312963</prop><prop prop-type="Status">0</prop><prop prop-type="Order">995</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:tulajT.TableName" resname="O:MjegyekF.O:tulajT.TableName">
         <source>'tulajok'</source>
@@ -5503,7 +5503,7 @@
       <trans-unit id="O:MjegyekF.O:TarolokT.Connection" resname="O:MjegyekF.O:TarolokT.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4141291782</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1076</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664313079</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1076</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:TarolokT.SQL.Strings[0]" resname="O:MjegyekF.O:TarolokT.SQL.Strings[0]">
         <source>'SELECT * FROM tarolok ORDER BY nev ASC'</source>
@@ -10173,7 +10173,7 @@
       <trans-unit id="O:MjegyekF.O:FDTable1.Connection" resname="O:MjegyekF.O:FDTable1.Connection">
         <source>AF.Kapcs</source>
         <prop-group name="ITEFieldProp">
-        <prop prop-type="Created">45573.4726265509</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2010</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+        <prop prop-type="Created">46206.3664313542</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2010</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
       <trans-unit id="O:MjegyekF.O:FDTable1.TableName" resname="O:MjegyekF.O:FDTable1.TableName">
         <source>'merlegjegy'</source>
@@ -10189,6 +10189,26 @@
         <source>225</source>
         <prop-group name="ITEFieldProp">
         <prop prop-type="Created">45573.4726265509</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2013</prop><prop prop-type="Type">TFDTable</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MjegyekF.O:plq.Connection" resname="O:MjegyekF.O:plq.Connection">
+        <source>AF.Kapcs</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3664313542</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2014</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MjegyekF.O:plq.SQL.Strings[0]" resname="O:MjegyekF.O:plq.SQL.Strings[0]">
+        <source>'SELECT * from partner_combo ORDER BY Nev ASC;'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46204.6152708218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2015</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop><prop prop-type="Open">(</prop><prop prop-type="Close">)</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MjegyekF.O:plq.Left" resname="O:MjegyekF.O:plq.Left">
+        <source>360</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46204.6152708218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2016</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:MjegyekF.O:plq.Top" resname="O:MjegyekF.O:plq.Top">
+        <source>280</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46204.6152708218</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2017</prop><prop prop-type="Type">TFDQuery</prop><prop prop-type="Localize">1</prop></prop-group>
       </trans-unit>
     </body>
   </file>

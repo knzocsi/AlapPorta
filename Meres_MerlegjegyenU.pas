@@ -116,9 +116,11 @@ begin
   chkKezimeres.Enabled:=  aF.van_joga('j8') ;  //kezi meres
   spTomeg.Enabled:=chkKezimeres.Checked;
   try
-    tomeg :=StrToInt(mertertekek[rgMerlegszama.itemindex+1]);
-    if tomeg < 0 then
-      tomeg := 0;
+   if TryStrToInt(mertertekek[rgMerlegszama.itemindex+1],tomeg) then
+    begin
+     if tomeg < 0 then tomeg := 0;
+    end
+    else tomeg:=0;
   except
     tomeg := 0;
   end;

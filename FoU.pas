@@ -14,7 +14,7 @@ uses
   Vcl.Imaging.pngimage, System.inifiles, System.Contnrs, Winapi.ShellAPI,
   ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons, JvExControls,
   JvLED, AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
-  System.StrUtils;
+  System.StrUtils, JvExDBGrids, JvDBGrid, JvDBUltimGrid;
 
 type
   PCKommunikacio_thread = class(TThread)
@@ -163,7 +163,6 @@ type
     btnMeres: TButton;
     DBGrid1: TDBGrid;
     tbIdeiglenes: TTabSheet;
-    dbgNyitbe: TDBGrid;
     Hardverbelltsok1: TMenuItem;
     Alaphardveresbelltsok1: TMenuItem;
     PLCsorosportbellts1: TMenuItem;
@@ -234,6 +233,7 @@ type
     Gngylegek1: TMenuItem;
     kartyak_m: TMenuItem;
     mozgasok_m: TMenuItem;
+    dbgNyitbe: TJvDBUltimGrid;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -338,6 +338,7 @@ type
     procedure kartyak_mClick(Sender: TObject);
     procedure mozgas_mentese(ksz:string;kozp_szam,iranya:Integer);
     procedure mozgasok_mClick(Sender: TObject);
+    procedure StatusBar1Click(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -417,7 +418,7 @@ uses
   tesztU, levon_szovegekU, demotomegU, nagykepU, szoftver_alapU, Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU, DMSoapU, DijakU, dijszabU, ftpDlU,
   LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU,GongyoloegekFU,
-  KartyakU,MozgasokTesztU,MozgasokListajaU;
+  KartyakU,MozgasokTesztU,MozgasokListajaU,NagyTomegU;
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
 
@@ -846,8 +847,7 @@ end;
 
 procedure TFoF.dbgNyitbeDrawColumnCell(Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
-  if AF.NyitbeQ.RecordCount = 0 then
-    exit;
+  if AF.NyitbeQ.RecordCount = 0 then  exit;
   if (AF.NyitbeQ.FieldByName('Tara').AsFloat = 0) and (AF.NyitbeQ.FieldByName('Brutto').AsFloat = 0) then
   begin
     if AF.NyitbeQ.FieldByName('irany').AsString <> '' then
@@ -2848,6 +2848,11 @@ begin
   end;
 end;
 
+procedure TFoF.StatusBar1Click(Sender: TObject);
+begin
+if nagy_tomeg_kijelzes then NagyTomegF.Show
+end;
+
 procedure TFoF.sbtnSorszamhivasClick(Sender: TObject);
 begin
   if sbtnSorszamhivas.Caption <> '0' then
@@ -3145,6 +3150,7 @@ begin
     end;
     StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont + ' ' + nyugalmi_szoveg + szamlalo_szoveg + ':' + nyomtatas_szamlalo.ToString + PLC_Lekerdezes_szamlalo.ToString;
     lblIrany.caption := meresirany;
+    NagyTomegF.lblnagytomeg.Caption:=tomeg_szoveg;
     try
       if TryStrToInt(mertertekek[1], trint) then
         tomeg := trint

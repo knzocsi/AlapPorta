@@ -22,7 +22,6 @@ object szoftver_alapF: Tszoftver_alapF
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 710
     object Label1: TLabel
       Left = 320
       Top = 0

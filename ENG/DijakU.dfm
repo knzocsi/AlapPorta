@@ -23,7 +23,6 @@ object DijakF: TDijakF
     Height = 89
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 638
     object Label1: TLabel
       Left = 144
       Top = 8

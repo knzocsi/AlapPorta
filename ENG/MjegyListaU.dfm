@@ -933,7 +933,7 @@ object MjegyekF: TMjegyekF
         end
         item
           Expanded = False
-          FieldName = 'irany'
+          FieldName = 'irany_kiiras'
           Title.Caption = 'Direction'
           Width = 65
           Visible = True
@@ -2704,5 +2704,12 @@ object MjegyekF: TMjegyekF
     TableName = 'merlegjegy'
     Left = 80
     Top = 225
+  end
+  object plq: TFDQuery
+    Connection = AF.Kapcs
+    SQL.Strings = (
+      'SELECT * from partner_combo ORDER BY Nev ASC;')
+    Left = 360
+    Top = 280
   end
 end

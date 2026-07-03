@@ -1549,14 +1549,12 @@ object EkaerF: TEkaerF
             Expanded = False
             FieldName = 'TradeReasonText'
             Title.Caption = 'Fuvarozas oka'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'productVtsz'
             Title.Caption = 'VTSZ'
-            Width = 64
             Visible = True
           end
           item
@@ -1577,7 +1575,6 @@ object EkaerF: TEkaerF
             Expanded = False
             FieldName = 'transportLicence'
             Title.Caption = 'Enged'#233'lysz'#225'm'
-            Width = 64
             Visible = True
           end
           item
@@ -1602,7 +1599,6 @@ object EkaerF: TEkaerF
             Expanded = False
             FieldName = 'vatRateAssuranceExemption'
             Title.Caption = 'Biztos'#237't'#233'k mentes (5%)'
-            Width = 64
             Visible = True
           end
           item
@@ -1631,14 +1627,12 @@ object EkaerF: TEkaerF
             Expanded = False
             FieldName = 'expirationDate'
             Title.Caption = 'Szavatoss'#225'g'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'batchNumber'
             Title.Caption = 'Gy'#225'rt'#225'si azon.'
-            Width = 64
             Visible = True
           end
           item
