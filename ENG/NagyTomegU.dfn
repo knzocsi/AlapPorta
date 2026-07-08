@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file original="N:\Delphi_10_4\Merleges\Alap\NagyTomegU.dfm" source-language="hu-HU" target-language="en-GB" datatype="delphiform" tool="ETM v10.0" ts="N:\Delphi_10_4\Merleges\Alap\NagyTomegU.dfm">
+    <header>
+      <prop-group name="ITEHeaderProp">
+        <prop prop-type="Version">9.0</prop>
+        <prop prop-type="SelfDateTime">46206.3736111111</prop>
+        <prop prop-type="OrigDateTime">46206.3731481481</prop>
+        <prop prop-type="XlatDateTime">46206.3498148148</prop>
+        <prop prop-type="Translated">0</prop>
+        <prop prop-type="UnTranslated">36</prop>
+      </prop-group>
+    </header>
+    <body>
+      <trans-unit id="O:NagyTomegF.Left" resname="O:NagyTomegF.Left">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.352149919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">0</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Top" resname="O:NagyTomegF.Top">
+        <source>0</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.352149919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">1</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.ClientHeight" resname="O:NagyTomegF.ClientHeight">
+        <source>546</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.352149919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">2</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.ClientWidth" resname="O:NagyTomegF.ClientWidth">
+        <source>1400</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.352149919</prop><prop prop-type="Status">0</prop><prop prop-type="Order">3</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Color" resname="O:NagyTomegF.Color">
+        <source>clBtnFace</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">4</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Font.Charset" resname="O:NagyTomegF.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">5</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Font.Color" resname="O:NagyTomegF.Font.Color">
+        <source>clWindowText</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">6</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Font.Height" resname="O:NagyTomegF.Font.Height">
+        <source>-11</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499306</prop><prop prop-type="Status">0</prop><prop prop-type="Order">7</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Font.Name" resname="O:NagyTomegF.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">8</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Font.Style" resname="O:NagyTomegF.Font.Style">
+        <source>[]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">9</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.FormStyle" resname="O:NagyTomegF.FormStyle">
+        <source>fsStayOnTop</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">10</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.OldCreateOrder" resname="O:NagyTomegF.OldCreateOrder">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">11</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.Position" resname="O:NagyTomegF.Position">
+        <source>poOwnerFormCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">12</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.WindowState" resname="O:NagyTomegF.WindowState">
+        <source>wsMaximized</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3640227199</prop><prop prop-type="Status">0</prop><prop prop-type="Order">13</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.PixelsPerInch" resname="O:NagyTomegF.PixelsPerInch">
+        <source>96</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">14</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.TextHeight" resname="O:NagyTomegF.TextHeight">
+        <source>13</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">15</prop><prop prop-type="Type">TNagyTomegF</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.AlignWithMargins" resname="O:NagyTomegF.O:lblnagytomeg.AlignWithMargins">
+        <source>True</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3705385532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">16</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Left" resname="O:NagyTomegF.O:lblnagytomeg.Left">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">17</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Top" resname="O:NagyTomegF.O:lblnagytomeg.Top">
+        <source>3</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">18</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Width" resname="O:NagyTomegF.O:lblnagytomeg.Width">
+        <source>1394</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">19</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Height" resname="O:NagyTomegF.O:lblnagytomeg.Height">
+        <source>540</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">20</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Align" resname="O:NagyTomegF.O:lblnagytomeg.Align">
+        <source>alClient</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">21</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.AutoSize" resname="O:NagyTomegF.O:lblnagytomeg.AutoSize">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3685236574</prop><prop prop-type="Status">0</prop><prop prop-type="Order">22</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.BiDiMode" resname="O:NagyTomegF.O:lblnagytomeg.BiDiMode">
+        <source>bdLeftToRight</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3705385532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">23</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Caption" resname="O:NagyTomegF.O:lblnagytomeg.Caption">
+        <source>'lblnagytomeg'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499421</prop><prop prop-type="Status">0</prop><prop prop-type="Order">24</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Font.Charset" resname="O:NagyTomegF.O:lblnagytomeg.Font.Charset">
+        <source>DEFAULT_CHARSET</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">25</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Font.Color" resname="O:NagyTomegF.O:lblnagytomeg.Font.Color">
+        <source>clRed</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">26</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Font.Height" resname="O:NagyTomegF.O:lblnagytomeg.Font.Height">
+        <source>-360</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">27</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Font.Name" resname="O:NagyTomegF.O:lblnagytomeg.Font.Name">
+        <source>'Tahoma'</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">28</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Font.Style" resname="O:NagyTomegF.O:lblnagytomeg.Font.Style">
+        <source>[fsBold]</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">29</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.ParentBiDiMode" resname="O:NagyTomegF.O:lblnagytomeg.ParentBiDiMode">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3705385532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">30</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.ParentFont" resname="O:NagyTomegF.O:lblnagytomeg.ParentFont">
+        <source>False</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">31</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.Layout" resname="O:NagyTomegF.O:lblnagytomeg.Layout">
+        <source>tlCenter</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3685236574</prop><prop prop-type="Status">0</prop><prop prop-type="Order">32</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.OnClick" resname="O:NagyTomegF.O:lblnagytomeg.OnClick">
+        <source>lblnagytomegClick</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3521499537</prop><prop prop-type="Status">0</prop><prop prop-type="Order">33</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.ExplicitLeft" resname="O:NagyTomegF.O:lblnagytomeg.ExplicitLeft">
+        <source>267</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3705385532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">34</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+      <trans-unit id="O:NagyTomegF.O:lblnagytomeg.ExplicitTop" resname="O:NagyTomegF.O:lblnagytomeg.ExplicitTop">
+        <source>19</source>
+        <prop-group name="ITEFieldProp">
+        <prop prop-type="Created">46206.3705385532</prop><prop prop-type="Status">0</prop><prop prop-type="Order">35</prop><prop prop-type="Type">TLabel</prop><prop prop-type="Localize">1</prop></prop-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
