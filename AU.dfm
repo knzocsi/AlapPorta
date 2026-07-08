@@ -16322,8 +16322,8 @@ object AF: TAF
   end
   object CsatGongyQ: TFDQuery
     Connection = Kapcs
-    Left = 1008
-    Top = 504
+    Left = 984
+    Top = 344
   end
   object mtPLC_Feladat: TJvMemoryData
     FieldDefs = <
@@ -16395,19 +16395,19 @@ object AF: TAF
     Connection = Kapcs
     SQL.Strings = (
       'select * from gongyoleg ORDER BY nev ASC')
-    Left = 920
-    Top = 408
+    Left = 912
+    Top = 344
   end
   object gongyQDs: TDataSource
     DataSet = gongyQ
-    Left = 920
-    Top = 464
+    Left = 912
+    Top = 408
   end
   object mem_csatgongy: TJvMemoryData
     FieldDefs = <>
     OnCalcFields = mem_csatgongyCalcFields
-    Left = 920
-    Top = 512
+    Left = 912
+    Top = 480
     object mem_csatgongyg_id: TIntegerField
       FieldName = 'g_id'
     end
@@ -16432,13 +16432,13 @@ object AF: TAF
   end
   object mem_csatgongyDs: TDataSource
     DataSet = mem_csatgongy
-    Left = 920
-    Top = 560
+    Left = 912
+    Top = 536
   end
   object mam_csovon: TJvMemoryData
     FieldDefs = <>
     OnCalcFields = mem_csatgongyCalcFields
-    Left = 832
+    Left = 816
     Top = 536
     object IntegerField3: TIntegerField
       FieldName = 'g_id'
