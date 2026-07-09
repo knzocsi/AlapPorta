@@ -1,6 +1,5 @@
 
 [Captions]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TAF.fdgxscrptdlg1=FireDAC Processing~!@#$~!@#$~!@#$
 TAF.ModScriptDialog=FireDAC Processing~!@#$~!@#$~!@#$
 TBelepF.Button1=Kilépés~!@#$~!@#$~!@#$
@@ -449,7 +448,6 @@ TTermekekF.tbReszlet=Részletek~!@#$~!@#$~!@#$
 TTermekekF.TTermekekF=Termékek~!@#$~!@#$~!@#$
 
 [CharSets]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TBelepF.DBLookupListBox1=DEFAULT_CHARSET~!@#$~!@#$~!@#$
 TBelepF.TBelepF=DEFAULT_CHARSET~!@#$~!@#$~!@#$
 TDemotomegF.sptomeg=DEFAULT_CHARSET~!@#$~!@#$~!@#$
@@ -511,7 +509,6 @@ TRak_szallF.TRak_szallF=DEFAULT_CHARSET~!@#$~!@#$~!@#$
 TTermekekF.TTermekekF=DEFAULT_CHARSET~!@#$~!@#$~!@#$
 
 [Collections]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TDijakF.JvDBUltimGrid1.Columns-0+.Title.Caption=Díj neve~!@#$~!@#$~!@#$
 TDijakF.JvDBUltimGrid1.Columns-1+.Title.Caption=Ár~!@#$~!@#$~!@#$
 Tdijszab_termekF.dijakgrid.Columns-0+.Title.Caption=Sorsz.~!@#$~!@#$~!@#$
@@ -756,7 +753,6 @@ TTermekekF.termekgrid.Columns-8+.Title.Caption=alapnedv~!@#$~!@#$~!@#$
 TTermekekF.termekgrid.Columns-9+.Title.Caption=kerekites~!@#$~!@#$~!@#$
 
 [Dialogs]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TFoF.Abort=Megszakítás~!@#$&Abort~!@#$~!@#$
 TFoF.All=&Mind~!@#$&All~!@#$~!@#$
 TFoF.Cancel=Mégsem~!@#$Cancel~!@#$~!@#$
@@ -774,7 +770,6 @@ TFoF.Yes=&Igen~!@#$&Yes~!@#$~!@#$
 TFoF.Yes To All=Igen &mindenre~!@#$Yes to &All~!@#$~!@#$
 
 [DisplayLabels]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TAF.AutoIncField1=Sorszam~!@#$~!@#$~!@#$
 TAF.felhasznalok_jogaif_id=f_id~!@#$~!@#$~!@#$
 TAF.felhasznalok_jogaiID=ID~!@#$~!@#$~!@#$
@@ -1076,7 +1071,6 @@ TTermekekF.TermekTNev=Nev~!@#$~!@#$~!@#$
 TTermekekF.TermekTtipus_id=tipus_id~!@#$~!@#$~!@#$
 
 [Fonts]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TBelepF.DBLookupListBox1=Tahoma~!@#$~!@#$~!@#$
 TBelepF.TBelepF=Tahoma~!@#$~!@#$~!@#$
 TDemotomegF.sptomeg=Tahoma~!@#$~!@#$~!@#$
@@ -1138,7 +1132,6 @@ TRak_szallF.TRak_szallF=Tahoma~!@#$~!@#$~!@#$
 TTermekekF.TTermekekF=Tahoma~!@#$~!@#$~!@#$
 
 [Hints]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TFoF.JvLED1=Dupla katttintással válthat~!@#$~!@#$~!@#$
 TFoF.JvLED2=Dupla katttintással válthat~!@#$~!@#$~!@#$
 TFoF.JvLED3=Dupla katttintással válthat~!@#$~!@#$~!@#$
@@ -1160,7 +1153,6 @@ Language_2=English
 Language_3=Romanian
 
 [Multilines]
-=~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$~!@#$
 TAF.Auto_mjegy_kapcs.Params=Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap~!@#$~!@#$~!@#$
 TAF.DBFrxmjegyList.FieldAliases=ID=ID,Sorszam=Sorszam,Ev_ssz=Ev_ssz,Eazon=Eazon,Storno=Storno,Rendszam=rendszam,Rendszam2=rendszam2,P_ID=P_id,P_Kod=p_kod,P_Nev=p_nev,P_Cim=p_cim,Termek_ID=termek_id,Termek_Kod=termek_kod,Termek_Nev=termek_nev,Termek_afa=Termek_afa,termek_ar=termek_ar,Szallitolev=szallitolev,Megjegyzes=megjegyzes,Tomegbe=tomegbe,Tomegki=tomegki,Erkdatum=erkdatum,Erkido=erkido,Tavdatum=tavdatum,Tavido=tavido,Felhasznalo=felhasznalo,irany=irany,Brutto=brutto,Tara=tara,Netto=netto,SzNetto=sznetto,merlegelo=merlegelo,kuj=kuj,ktj=ktj,ekaer=ekaer,psz=psz,alapnedv=alapnedv,nedv=nedv,tisztasag=tisztasag,tortszaz=tortszaz,feherje=feherje,olaj=olaj,esesszam=esesszam,hekto=hekto,egysegtomeg=egysegtomeg,kerekites=kerekites,kukorica=kukorica,buzaminoseg=buzaminoseg,mennyiseg=mennyiseg,tarolasi_dij=tarolasi_dij,szaritasi_dij=szaritasi_dij,tisztitasi_dij=tisztitasi_dij,tarolo_id=tarolo_id,tarolo=tarolo,elso_kezi=elso_kezi,masodik_kezi=masodik_kezi,tul_id=tul_id,tul_nev=tul_nev,tul_cim=tul_cim,tul_adoszam=tul_adoszam,tul_kuj=tul_kuj,tul_ktj=tul_ktj,tul_elotag=tul_elotag,P2_ID=P2_ID,P2_Kod=P2_Kod,P2_Nev=P2_Nev,P2_Cim=P2_Cim,P2_kuj=P2_kuj,P2_ktj=P2_ktj,levon_szoveg=levon_szoveg,levon_tomeg=levon_tomeg,ewc=ewc,tul_cjsz=tul_cjsz,szaraz_tort_szemek=szaraz_tort_szemek~!@#$~!@#$~!@#$
 TAF.frxDBDKeszlet.FieldAliases=Term_id=Term_id,Term_kod=Term_kod,Term_nev=Term_nev,Tarolo_id=Tarolo_id,Tarolo_nev=Tarolo_nev,partner_id=partner_id,Partner_kod=Partner_kod,Partner_nev=Partner_nev,felhasznalo_id=felhasznalo_id,Felhasznalo_nev=Felhasznalo_nev,menny=menny,modositva=modositva,tort=tort~!@#$~!@#$~!@#$
@@ -1200,7 +1192,6 @@ Trak_szall_listF.frxrakszall_lista.ScriptText=begin,,end.~!@#$~!@#$~!@#$
 TTermekekF.DBNavigator1.Hints="First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"~!@#$~!@#$~!@#$
 
 [OPTIONS]
-CommentsFile=
 Delimiter=~!@#$
 IsUTF8File=0
 
@@ -1701,6 +1692,4 @@ TTermekekF.TermekTkukorica.Origin=kukorica~!@#$~!@#$~!@#$
 TTermekekF.TermekTme.Origin=me~!@#$~!@#$~!@#$
 TTermekekF.TermekTNev.Origin=Nev~!@#$~!@#$~!@#$
 TTermekekF.TermekTtipus_id.Origin=tipus_id~!@#$~!@#$~!@#$
-
-[Strings]
 
