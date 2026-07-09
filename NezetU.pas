@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, JvExControls,
   JvBitmapButton, System.ImageList, Vcl.ImgList, Vcl.ToolWin, Vcl.ComCtrls,
   JvExComCtrls, JvToolBar, frxClass, frxCtrls,Vcl.Printers,
-  Vcl.Mask, JvExMask, JvSpin, frxPreview;
+  Vcl.Mask, JvExMask, JvSpin, frxPreview, siComp, siLngLnk;
 
 type
   TNezetF = class(TForm)
@@ -23,6 +23,7 @@ type
     Button5: TButton;
     Button4: TButton;
     frxNezet: TfrxPreview;
+    siLangLinked_NezetF: TsiLangLinked;
     procedure btNyomtvalasztClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);

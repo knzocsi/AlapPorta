@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid,
-  JvDBUltimGrid, Vcl.Mask, Vcl.DBCtrls;
+  JvDBUltimGrid, Vcl.Mask, Vcl.DBCtrls, siComp, siLngLnk;
 
 type
   TdijszabF = class(TForm)
@@ -35,6 +35,7 @@ type
     Label6: TLabel;
     Label7: TLabel;
     btndijsza_termek: TButton;
+    siLangLinked_dijszabF: TsiLangLinked;
     procedure btnkilepClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

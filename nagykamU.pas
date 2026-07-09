@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, JvComponentBase,
-  JvFormPlacement, JvAppStorage, JvAppIniStorage;
+  JvFormPlacement, JvAppStorage, JvAppIniStorage, siComp, siLngLnk;
 
 type
   TNagykamF = class(TForm)
@@ -18,6 +18,7 @@ type
     cam9: TTabSheet;
     cam10: TTabSheet;
     cam11: TTabSheet;
+    siLangLinked_NagykamF: TsiLangLinked;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormHide(Sender: TObject);

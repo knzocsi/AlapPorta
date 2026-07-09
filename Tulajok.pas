@@ -8,7 +8,8 @@ uses
   Vcl.DBCtrls, JvExMask, JvSpin, JvDBSpinEdit, Vcl.Mask, Vcl.Grids, Vcl.DBGrids,
   Vcl.ComCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  siComp, siLngLnk;
 
 type
   TTulajokF = class(TForm)
@@ -84,6 +85,7 @@ type
     dbedttelefon: TDBEdit;
     dbedcjsz: TDBEdit;
     Button2: TButton;
+    siLangLinked_TulajokF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

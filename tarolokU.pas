@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.DBCtrls,
   Vcl.StdCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.ExtCtrls;
+  FireDAC.Comp.Client, Vcl.ExtCtrls, siComp, siLngLnk;
 
 type
   TTarolokF = class(TForm)
@@ -22,6 +22,7 @@ type
     TarolokTid: TFDAutoIncField;
     TarolokTnev: TWideStringField;
     Label1: TLabel;
+    siLangLinked_TarolokF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure TarolokTBeforePost(DataSet: TDataSet);
     procedure FormActivate(Sender: TObject);

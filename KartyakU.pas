@@ -8,7 +8,8 @@ uses
   Vcl.Mask, Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid,
   JvDBUltimGrid, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  siComp, siLngLnk;
 
 type
   TKartyakF = class(TForm)
@@ -27,6 +28,7 @@ type
     KartyakT: TFDTable;
     DBEdit1: TDBEdit;
     Label4: TLabel;
+    siLangLinked_KartyakF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

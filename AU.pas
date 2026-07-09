@@ -21,7 +21,7 @@ uses
   frxExportPDF,System.strUtils, FireDAC.VCLUI.Script, FireDAC.Comp.UI,TlHelp32,
   Xml.XMLDoc,System.ioUtils,Vcl.StdCtrls, frxExportBaseDialog,System.DateUtils,
   Winapi.ShellAPI,System.Types,System.Win.ComObj,Excel2000, System.Actions,
-  Vcl.ActnList, Vcl.StdActns,reinit,DmDbMentU;
+  Vcl.ActnList, Vcl.StdActns,reinit,DmDbMentU, siComp, siLngLnk;
 
  
   const ini_nev='porta_beallit.ini';
@@ -476,6 +476,7 @@ type
     mam_csovong_menny_2: TFloatField;
     mam_csovonossztomeg_2: TFloatField;
     frxDBmam_csovon: TfrxDBDataset;
+    siLangLinked_AF: TsiLangLinked;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

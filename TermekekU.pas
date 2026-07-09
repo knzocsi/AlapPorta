@@ -9,7 +9,8 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Vcl.Mask, FireDAC.Comp.DataSet, FireDAC.Comp.Client,System.Win.ComObj,
-  JvExMask, JvSpin, JvDBSpinEdit, JvExControls, JvDBLookup, Vcl.Buttons;
+  JvExMask, JvSpin, JvDBSpinEdit, JvExControls, JvDBLookup, Vcl.Buttons, siComp,
+  siLngLnk;
 
 type
   TTermekekF = class(TForm)
@@ -82,6 +83,7 @@ type
     edTipus_id: TDBEdit;
     DBChksiker: TDBCheckBox;
     TermekTb_siker: TBooleanField;
+    siLangLinked_TermekekF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);

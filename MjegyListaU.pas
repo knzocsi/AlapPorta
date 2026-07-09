@@ -12,7 +12,7 @@ uses
   frxClass, Vcl.Samples.Spin, JvExControls, JvDBLookup, JvMemoryDataset,
   JvExExtCtrls, JvExtComponent, JvRollOut, frxDBSet, Vcl.Mask, JvExMask, JvSpin,
   JvSplitter, JvSplit, FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
-  FireDAC.Phys, FireDAC.VCLUI.Wait, JvToolEdit;
+  FireDAC.Phys, FireDAC.VCLUI.Wait, JvToolEdit, siComp, siLngLnk;
 
 type
   TMjegyekF = class(TForm)
@@ -140,6 +140,7 @@ type
     piBefejezoDatum: TJvDateEdit;
     Button4: TButton;
     plq: TFDQuery;
+    siLangLinked_MjegyekF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure btnListanyomtatasClick(Sender: TObject);
     procedure btnUjranyomtatasClick(Sender: TObject);

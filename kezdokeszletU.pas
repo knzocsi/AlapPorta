@@ -8,7 +8,7 @@ uses
   Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, Vcl.Mask, JvExMask, JvSpin;
+  FireDAC.Comp.Client, Vcl.Mask, JvExMask, JvSpin, siComp, siLngLnk;
 
 type
   TkezdokeszletF = class(TForm)
@@ -27,6 +27,7 @@ type
     Label7: TLabel;
     spakeszlet: TJvSpinEdit;
     spbkeszlet: TJvSpinEdit;
+    siLangLinked_kezdokeszletF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Button1Click(Sender: TObject);

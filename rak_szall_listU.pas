@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid,
-  JvDBUltimGrid,frxClass, frxDBSet;
+  JvDBUltimGrid,frxClass, frxDBSet, siComp, siLngLnk;
 
 type
   Trak_szall_listF = class(TForm)
@@ -78,6 +78,7 @@ type
     TermekekQnev: TWideStringField;
     frxDBDRakszall: TfrxDBDataset;
     frxrakszall_lista: TfrxReport;
+    siLangLinked_rak_szall_listF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure piKezdoDatumChange(Sender: TObject);
     procedure btnnzomtatasClick(Sender: TObject);

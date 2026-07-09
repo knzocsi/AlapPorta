@@ -12,7 +12,7 @@ uses
   Vcl.DBGrids, FireDAC.Comp.DataSet, Vcl.StdCtrls, FireDAC.VCLUI.Login,
   FireDAC.Comp.UI, Vcl.ExtCtrls,System.iniFiles, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.VCLUI.Error,
-  FireDAC.VCLUI.Script, FireDAC.Phys.SQLiteWrapper.Stat;
+  FireDAC.VCLUI.Script, FireDAC.Phys.SQLiteWrapper.Stat, siComp, siLngLnk;
 
 type
   TMySQLF = class(TForm)
@@ -33,6 +33,7 @@ type
     exportQ: TFDQuery;
     importQ: TFDQuery;
     export2Q: TFDQuery;
+    siLangLinked_MySQLF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button2Click(Sender: TObject);

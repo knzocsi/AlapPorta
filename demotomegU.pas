@@ -5,12 +5,13 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, JvExMask,
-  JvSpin, JvExControls, JvxSlider;
+  JvSpin, JvExControls, JvxSlider, siComp, siLngLnk;
 
 type
   TDemotomegF = class(TForm)
     sltomeg: TJvxSlider;
     sptomeg: TJvSpinEdit;
+    siLangLinked_DemotomegF: TsiLangLinked;
     procedure sltomegChange(Sender: TObject);
     procedure sptomegChange(Sender: TObject);
   private

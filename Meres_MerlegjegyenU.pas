@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Samples.Spin, System.Actions, Vcl.ActnList, Vcl.StdActns;
+  Vcl.Samples.Spin, System.Actions, Vcl.ActnList, Vcl.StdActns, siComp, siLngLnk;
 
 type
   TMeres_MerlegjegyenF = class(TForm)
@@ -29,6 +29,7 @@ type
     Label6: TLabel;
     chkKezimeres: TCheckBox;
     btnelfogadas: TButton;
+    siLangLinked_Meres_MerlegjegyenF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnelfogadasClick(Sender: TObject);

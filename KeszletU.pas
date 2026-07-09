@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.Grids,
   Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, JvExControls,
-  JvDBLookup, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls;
+  JvDBLookup, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls, siComp,
+  siLngLnk;
 
 type
   TKeszletF = class(TForm)
@@ -34,6 +35,7 @@ type
     chknullas: TCheckBox;
     Panel2: TPanel;
     btnkeszlet_torol: TButton;
+    siLangLinked_KeszletF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnNyomtatasClick(Sender: TObject);

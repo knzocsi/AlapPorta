@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
   Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.Mask,
-  JvExMask, JvSpin, JvExControls, JvDBLookup;
+  JvExMask, JvSpin, JvExControls, JvDBLookup, siComp, siLngLnk;
 
 type
   TGongyCsatF = class(TForm)
@@ -23,6 +23,7 @@ type
     spegystomeg: TJvSpinEdit;
     chkkezi: TCheckBox;
     Label3: TLabel;
+    siLangLinked_GongyCsatF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure btnfelveszClick(Sender: TObject);
     procedure spmennyKeyPress(Sender: TObject; var Key: Char);

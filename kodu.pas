@@ -4,11 +4,12 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls;
+  StdCtrls, siComp, siLngLnk;
 
 type
   TkodF = class(TForm)
     kodE: TEdit;
+    siLangLinked_kodF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure kodEKeyPress(Sender: TObject; var Key: Char);
   private

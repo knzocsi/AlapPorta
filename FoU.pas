@@ -14,7 +14,7 @@ uses
   Vcl.Imaging.pngimage, System.inifiles, System.Contnrs, Winapi.ShellAPI,
   ModbusTypes, IdRawBase, IdRawClient, IdIcmpClient, Vcl.Buttons, JvExControls,
   JvLED, AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
-  System.StrUtils, JvExDBGrids, JvDBGrid, JvDBUltimGrid;
+  System.StrUtils, JvExDBGrids, JvDBGrid, JvDBUltimGrid, siComp, siLangCombo;
 
 type
   PCKommunikacio_thread = class(TThread)
@@ -234,6 +234,9 @@ type
     kartyak_m: TMenuItem;
     mozgasok_m: TMenuItem;
     dbgNyitbe: TJvDBUltimGrid;
+    siLangDispatcher1: TsiLangDispatcher;
+    siLang_FoF: TsiLang;
+    siLangCombo1: TsiLangCombo;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;

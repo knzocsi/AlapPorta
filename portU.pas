@@ -6,7 +6,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   CPort, StdCtrls, ExtCtrls, CPortCtl, IdBaseComponent, IdComponent,
-  IdTCPConnection, System.inifiles,IdTCPClient,AU;
+  IdTCPConnection, System.inifiles,IdTCPClient,AU, siComp, siLngLnk;
 
 type
   TPortF = class(TForm)
@@ -45,6 +45,7 @@ type
     Client_Timer3: TTimer;
     lblTomeg3: TLabel;
     lblKapcsolat3: TLabel;
+    siLangLinked_PortF: TsiLangLinked;
     procedure ComPort1RxChar(Sender: TObject; Count: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);

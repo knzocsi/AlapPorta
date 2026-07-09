@@ -4,12 +4,14 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,vcl.Imaging.jpeg;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,vcl.Imaging.jpeg,
+  siComp, siLngLnk;
 
 type
   TNagykepF = class(TForm)
     Button1: TButton;
     imgnagy: TImage;
+    siLangLinked_NagykepF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);

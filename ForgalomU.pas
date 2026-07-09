@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, JvExControls, JvDBLookup,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, JvExDBGrids, JvDBGrid,
-  JvDBUltimGrid, Vcl.Mask, JvExMask, JvToolEdit;
+  JvDBUltimGrid, Vcl.Mask, JvExMask, JvToolEdit, siComp, siLngLnk;
 
 type
   TForgalomF = class(TForm)
@@ -28,6 +28,7 @@ type
     Button2: TButton;
     piBefejezoDatum: TJvDateEdit;
     piKezdoDatum: TJvDateEdit;
+    siLangLinked_ForgalomF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure szures;

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Samples.Spin,
-  Vcl.ExtCtrls,Cport;
+  Vcl.ExtCtrls,Cport, siComp, siLngLnk;
 
 type
   ThLekerdezes  = class(TThread)
@@ -33,6 +33,7 @@ type
     lblKommunikacio: TLabel;
     ComPort_RTU: TComPort;
     tmrModbusTimeout: TTimer;
+    siLangLinked_PLC_COMF: TsiLangLinked;
     procedure btnStartStopClick(Sender: TObject);
     procedure ComPort_RTUAfterClose(Sender: TObject);
     procedure ComPort_RTUAfterOpen(Sender: TObject);

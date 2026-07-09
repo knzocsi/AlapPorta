@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.StdCtrls, Vcl.ExtCtrls, siComp, siLngLnk;
 
 type
   TMerlegkezelokF = class(TForm)
@@ -14,6 +14,7 @@ type
     Button2: TButton;
     Button3: TButton;
     DBGrid1: TDBGrid;
+    siLangLinked_MerlegkezelokF: TsiLangLinked;
     procedure Button2Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Button3Click(Sender: TObject);

@@ -8,7 +8,7 @@ uses
   Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  Vcl.StdCtrls, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Vcl.StdCtrls, FireDAC.Comp.DataSet, FireDAC.Comp.Client, siComp, siLngLnk;
 
 type
   TMermodlistF = class(TForm)
@@ -18,6 +18,7 @@ type
     mjegyekQDs: TDataSource;
     btnkilepes: TButton;
     lblsorszam: TLabel;
+    siLangLinked_MermodlistF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure mlistaGridMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);

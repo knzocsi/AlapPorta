@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Samples.Spin;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Samples.Spin, siComp,
+  siLngLnk;
 
 type
   TMeresF = class(TForm)
@@ -21,6 +22,7 @@ type
     btnMeres2: TButton;
     btnMeres3: TButton;
     btnMeres4: TButton;
+    siLangLinked_MeresF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure btnMentesClick(Sender: TObject);

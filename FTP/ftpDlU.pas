@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IdComponent, Vcl.StdCtrls, Vcl.ExtCtrls,
   IdBaseComponent, IdTCPConnection, IdTCPClient, IdExplicitTLSClientServerBase,
-  IdFTP,System.types,Winapi.ShellAPI,System.IOUtils,System.inifiles;
+  IdFTP,System.types,Winapi.ShellAPI,System.IOUtils,System.inifiles, siComp,
+  siLngLnk;
 
 type
   TftpF = class(TForm)
@@ -15,6 +16,7 @@ type
     memLog: TMemo;
     Button1: TButton;
     Button2: TButton;
+    siLangLinked_ftpF: TsiLangLinked;
     procedure IdFTP1Status(ASender: TObject; const AStatus: TIdStatus;
       const AStatusText: string);
     procedure Button1Click(Sender: TObject);

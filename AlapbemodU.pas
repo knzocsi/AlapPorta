@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, siComp,
+  siLngLnk;
 
 type
   TAlapbemodF = class(TForm)
@@ -20,6 +21,7 @@ type
     edtulajdonsag: TEdit;
     btnok: TButton;
     Button2: TButton;
+    siLangLinked_AlapbemodF: TsiLangLinked;
     procedure rgtipusClick(Sender: TObject);
     procedure btnokClick(Sender: TObject);
   private

@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ComCtrls,
-  Data.DB, Vcl.DBCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage;
+  Data.DB, Vcl.DBCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage,
+  siComp, siLngLnk;
 
 type
   THardver_beallF = class(TForm)
@@ -56,6 +57,7 @@ type
     dchkAlaphelyzet: TDBCheckBox;
     Label17: TLabel;
     dbeHiba_kimenet: TDBEdit;
+    siLangLinked_Hardver_beallF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);

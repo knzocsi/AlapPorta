@@ -10,7 +10,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, JvExControls, JvDBLookup,
   Vcl.ComCtrls, Vcl.Mask, JvExMask, JvSpin, Vcl.ExtCtrls, JvMemoryDataset,
-  frxclass, frxDBSet;
+  frxclass, frxDBSet, siComp, siLngLnk;
 
 type
   TRak_szallF = class(TForm)
@@ -54,6 +54,7 @@ type
     TermekekQDs: TDataSource;
     Panel3: TPanel;
     Button2: TButton;
+    siLangLinked_Rak_szallF: TsiLangLinked;
     procedure k_partnerlookupChange(Sender: TObject);
     procedure btnkilepesClick(Sender: TObject);
     procedure btnfelveszClick(Sender: TObject);

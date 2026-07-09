@@ -4,11 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, siComp,
+  siLngLnk;
 
 type
   TMeresTipusValasztasF = class(TForm)
     RadioGroup1: TRadioGroup;
+    siLangLinked_MeresTipusValasztasF: TsiLangLinked;
     procedure RadioGroup1Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
   private

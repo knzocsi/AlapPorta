@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtDlgs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  JvImageListViewer, JvExForms, JvCustomItemViewer, JvImagesViewer;
+  JvImageListViewer, JvExForms, JvCustomItemViewer, JvImagesViewer, siComp,
+  siLngLnk;
 
 type
   TKepekF = class(TForm)
@@ -14,6 +15,7 @@ type
     btnKilepes: TButton;
     imgKep: TImage;
     btbKereses: TButton;
+    siLangLinked_KepekF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure btbKeresesClick(Sender: TObject);
   private

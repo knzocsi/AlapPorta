@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, frxClass;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, frxClass, siComp, siLngLnk;
 
 type
   TTesztF = class(TForm)
@@ -14,6 +14,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Label1: TLabel;
+    siLangLinked_tesztF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);

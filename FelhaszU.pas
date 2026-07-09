@@ -8,7 +8,8 @@ uses
   JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.StdCtrls, Vcl.ExtCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  siComp, siLngLnk;
 
 type
   TFelhaszF = class(TForm)
@@ -21,6 +22,7 @@ type
     JvDBUltimGrid2: TJvDBUltimGrid;
     ajogQ: TFDQuery;
     Button5: TButton;
+    siLangLinked_FelhaszF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure JvDBUltimGrid1CellClick(Column: TColumn);

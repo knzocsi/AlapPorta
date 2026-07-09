@@ -9,7 +9,7 @@ uses
   JvExDBGrids, JvDBGrid, JvMemoryDataset,UHojaCalc,System.StrUtils,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, siComp, siLngLnk;
 
 type
   TLibreExcelF = class(TForm)
@@ -32,6 +32,7 @@ type
     cfg_exportT: TFDTable;
     cfg_export_mezokT: TFDTable;
     TQ: TFDQuery;
+    siLangLinked_LibreExcelF: TsiLangLinked;
     procedure kilepbtnClick(Sender: TObject);
     procedure ExportbtnClick(Sender: TObject);
     procedure btnbeall_mentClick(Sender: TObject);

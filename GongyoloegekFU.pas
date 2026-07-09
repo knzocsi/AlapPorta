@@ -9,7 +9,7 @@ uses
   JvExMask, JvSpin, JvExExtCtrls, JvExtComponent, JvRollOut, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, siComp, siLngLnk;
 
 type
   TGongyoloegekF = class(TForm)
@@ -28,6 +28,7 @@ type
     edvkod: TEdit;
     Label3: TLabel;
     EllenQ: TFDQuery;
+    siLangLinked_GongyoloegekF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

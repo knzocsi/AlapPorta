@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.Grids,
-  Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client, siComp, siLngLnk;
 
 type
   TTipusokF = class(TForm)
@@ -18,6 +18,7 @@ type
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     DBEdnev: TDBEdit;
+    siLangLinked_TipusokF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure tipusQBeforePost(DataSet: TDataSet);

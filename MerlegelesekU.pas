@@ -4,13 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, siComp,
+  siLngLnk;
 
 type
   TMerlegelesekF = class(TForm)
     Panel1: TPanel;
     Memo1: TMemo;
     btnKilepes: TButton;
+    siLangLinked_MerlegelesekF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

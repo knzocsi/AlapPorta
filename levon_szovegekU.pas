@@ -9,7 +9,7 @@ uses
   Vcl.ComCtrls, Vcl.ExtCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, siComp, siLngLnk;
 
 type
   Tlevon_szovegekF = class(TForm)
@@ -26,6 +26,7 @@ type
     levon_szovegDs: TDataSource;
     levon_szovegTID: TFDAutoIncField;
     levon_szovegTSzoveg: TWideStringField;
+    siLangLinked_levon_szovegekF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

@@ -10,7 +10,8 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, FireDAC.UI.Intf, FireDAC.Comp.ScriptCommands,
-  FireDAC.Stan.Util, FireDAC.Comp.Script,frxClass,System.DateUtils;
+  FireDAC.Stan.Util, FireDAC.Comp.Script,frxClass,System.DateUtils, siComp,
+  siLngLnk;
 
 type
   TMermodF = class(TForm)
@@ -173,6 +174,7 @@ type
     termeklistb_siker: TBooleanField;
     edsofor: TEdit;
     lblsofor: TLabel;
+    siLangLinked_MermodF: TsiLangLinked;
     procedure cbxiranyChange(Sender: TObject);
     procedure btnTaramegadasClick(Sender: TObject);
     procedure btn1Click(Sender: TObject);

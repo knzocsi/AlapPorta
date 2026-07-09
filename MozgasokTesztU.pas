@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, siComp,
+  siLngLnk;
 
 type
   TMozgasokTesztF = class(TForm)
@@ -12,6 +13,7 @@ type
     Label1: TLabel;
     Edit1: TEdit;
     Button1: TButton;
+    siLangLinked_MozgasokTesztF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

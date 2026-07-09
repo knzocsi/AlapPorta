@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls, siComp, siLngLnk;
 
 type
   TParositottF = class(TForm)
@@ -20,6 +20,7 @@ type
     img1: TImage;
     pnl2: TPanel;
     dbnvgr1: TDBNavigator;
+    siLangLinked_ParositottF: TsiLangLinked;
     procedure szures;
 
     procedure btnKilepesClick(Sender: TObject);

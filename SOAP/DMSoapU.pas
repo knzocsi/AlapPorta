@@ -10,7 +10,8 @@ uses
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client,System.NetEncoding, FireDAC.UI.Intf,
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait,
-  FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef,winapi.Ole2,System.DateUtils,VCL.Dialogs;
+  FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef,winapi.Ole2,System.DateUtils,VCL.Dialogs,
+  siComp, siLngLnk;
 
 type
   ThSOAP  = class(TThread)
@@ -30,6 +31,7 @@ type
     InupQ_tread: TFDQuery;
     Soap_tread_kapcs: TFDConnection;
     Soap_tread_transaction: TFDTransaction;
+    siLangLinked_DMSoapF: TsiLangLinked;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

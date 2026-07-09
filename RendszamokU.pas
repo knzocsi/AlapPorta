@@ -9,7 +9,7 @@ uses
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Mask,
   Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ExtCtrls, JvExMask,
-  JvSpin, JvDBSpinEdit;
+  JvSpin, JvDBSpinEdit, siComp, siLngLnk;
 
 type
   TRendszamokF = class(TForm)
@@ -31,6 +31,7 @@ type
     dbspeTara: TJvDBSpinEdit;
     DBLookupComboBox1: TDBLookupComboBox;
     btnMeres: TButton;
+    siLangLinked_RendszamokF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure tbReszletShow(Sender: TObject);

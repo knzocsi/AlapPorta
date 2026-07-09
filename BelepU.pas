@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, JvExControls, JvDBLookup,
   Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, JvExDBGrids,
-  JvDBGrid, JvDBUltimGrid;
+  JvDBGrid, JvDBUltimGrid, siComp, siLngLnk;
 
 type
   TBelepF = class(TForm)
@@ -14,6 +14,7 @@ type
     edjelszo: TEdit;
     Button1: TButton;
     DBLookupListBox1: TDBLookupListBox;
+    siLangLinked_BelepF: TsiLangLinked;
     procedure FormCreate(Sender: TObject);
     procedure edjelszoKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);

@@ -10,7 +10,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, JvExControls, JvDBLookup,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Mask, JvExMask, JvToolEdit,
-  JvMaskEdit, JvDBFindEdit;
+  JvMaskEdit, JvDBFindEdit, siComp, siLngLnk;
 
 type
   Tszoftver_alapF = class(TForm)
@@ -27,6 +27,7 @@ type
     csopQDs: TDataSource;
     cbcsopszur: TJvDBLookupCombo;
     JvDBFindEdit1: TJvDBFindEdit;
+    siLangLinked_szoftver_alapF: TsiLangLinked;
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);

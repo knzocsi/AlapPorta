@@ -11,7 +11,8 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, JvExControls,
   JvDBLookup, Vcl.ExtCtrls, JvExExtCtrls, JvExtComponent, JvRollOut,
   Vcl.Samples.Spin,frxClass, Vcl.Mask, JvExMask, JvSpin,vcl.Imaging.jpeg,
-  Vcl.ComCtrls, Vcl.Buttons,Vcl.Imaging.pngimage, System.StrUtils,System.IOUtils;
+  Vcl.ComCtrls, Vcl.Buttons,Vcl.Imaging.pngimage, System.StrUtils,System.IOUtils,
+  siComp, siLngLnk;
 
 type
 
@@ -220,6 +221,7 @@ type
     btngongy: TButton;
     lblsofor: TLabel;
     edsofor: TEdit;
+    siLangLinked_MjegyF: TsiLangLinked;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);

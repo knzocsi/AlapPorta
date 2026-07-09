@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
   Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, Vcl.DBCtrls,
-  JvExMask, JvSpin, JvDBSpinEdit, Vcl.Mask;
+  JvExMask, JvSpin, JvDBSpinEdit, Vcl.Mask, siComp, siLngLnk;
 
 type
   TDijakF = class(TForm)
@@ -18,6 +18,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     JvDBUltimGrid1: TJvDBUltimGrid;
+    siLangLinked_DijakF: TsiLangLinked;
     procedure btnkilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

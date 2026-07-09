@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  JvExControls, JvDBLookup;
+  JvExControls, JvDBLookup, siComp, siLngLnk;
 
 type
   TPartnerekF = class(TForm)
@@ -79,6 +79,7 @@ type
     dijkatT: TFDTable;
     dijkatDs: TDataSource;
     btndijszab: TButton;
+    siLangLinked_PartnerekF: TsiLangLinked;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure PartnerTBeforeDelete(DataSet: TDataSet);

@@ -8,7 +8,7 @@ uses
   Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid;
+  Vcl.Grids, Vcl.DBGrids, JvExDBGrids, JvDBGrid, JvDBUltimGrid, siComp, siLngLnk;
 
 type
   TMozgasokListajaF = class(TForm)
@@ -30,6 +30,7 @@ type
     ListaQ: TFDQuery;
     ListaQDs: TDataSource;
     fpanel: TPanel;
+    siLangLinked_MozgasokListajaF: TsiLangLinked;
     procedure FormCreate(Sender: TObject);
     procedure ktChange(Sender: TObject);
     procedure btChange(Sender: TObject);

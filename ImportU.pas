@@ -14,7 +14,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
   FireDAC.Phys, FireDAC.Phys.MySQL, FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait,
   JvExDBGrids, JvDBGrid,
-  System.StrUtils, System.RegularExpressions;
+  System.StrUtils, System.RegularExpressions, siComp, siLngLnk;
 
    //ImportF
  resourcestring rsTablatMegKellAdni= 'A táblát meg kell adni!';
@@ -54,6 +54,7 @@ type
     Q1: TFDQuery;
     Kapcs: TFDConnection;
     chkCimbontas: TCheckBox;
+    siLangLinked_ImportF: TsiLangLinked;
     procedure btnKilepesClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure cbTablaChange(Sender: TObject);
