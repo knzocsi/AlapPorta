@@ -657,7 +657,7 @@ var
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
-     DMSoapU, UzenetekU,DmEKAERU;
+     DMSoapU, DmEKAERU;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 

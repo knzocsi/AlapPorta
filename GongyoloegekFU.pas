@@ -51,7 +51,7 @@ var
   GongyoloegekF: TGongyoloegekF;
 
 implementation
-  uses AU,UzenetekU;
+  uses AU,FoU;
 {$R *.dfm}
 
 procedure TGongyoloegekF.beolvas;

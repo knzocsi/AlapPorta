@@ -185,7 +185,7 @@ var
   ttom:Real;
   nyomtat:Boolean;
 implementation
-  uses AU, NezetU,LibreExcelU, MermodU, MermodlistU, UzenetekU;
+  uses AU, NezetU,LibreExcelU, MermodU, MermodlistU, FoU;
 {$R *.dfm}
 
 { TMjegyekF }

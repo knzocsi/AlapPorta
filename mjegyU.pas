@@ -287,7 +287,7 @@ var
 
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
-  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, UzenetekU,FoU,DmEKAERU,
+  tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, FoU,DmEKAERU,
   MeresTipusValasztasU,GongyCsatU;
 {$R *.dfm}
 
@@ -1439,7 +1439,6 @@ var sorsz,pcime,tablaneve:String;
 
 
 begin
-
   if tulajlookup.KeyValue='!' then
   begin
     ShowMessage(rsBizonylatKibocsjtotMegKellAdni);
@@ -1862,8 +1861,8 @@ begin
             TfrxMemoView(FindObject('membizszam')).Text:=sorsz;
             for p := 1 to PrintOptions.Copies do
              begin
-               TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
-               if duplex_mjegy then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
+               if FindObject('frxpsz')<>nil then  TfrxMemoView(FindObject('frxpsz')).Text:=IntToStr(p+psz)+'. példány';
+               if (duplex_mjegy) and (FindObject('frxpsz2')<>nil) then TfrxMemoView(FindObject('frxpsz2')).Text:=IntToStr(p+1+psz)+'. példány';
                PrepareReport(true);
                Print;
                if duplex_mjegy then Inc(psz)

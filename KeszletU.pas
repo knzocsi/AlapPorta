@@ -55,7 +55,7 @@ var
   KeszletF: TKeszletF;
   nyomtat:Boolean=False;
 implementation
-  uses AU,NezetU, LibreExcelU, UzenetekU;
+  uses AU,NezetU, LibreExcelU, FoU;
 {$R *.dfm}
 
 procedure TKeszletF.btnkeszlet_torolClick(Sender: TObject);

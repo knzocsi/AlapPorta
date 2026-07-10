@@ -110,7 +110,7 @@ var
 implementation
 
 uses
-  AU, DijakU, dijszabU,UzenetekU;
+  AU, DijakU, dijszabU,FoU;
 
 {$R *.dfm}
 

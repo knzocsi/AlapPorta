@@ -49,7 +49,7 @@ var
   FelhaszF: TFelhaszF;
 
 implementation
-  uses AU, UzenetekU;
+  uses AU, FoU;
 {$R *.dfm}
 
 { TFelhaszF }

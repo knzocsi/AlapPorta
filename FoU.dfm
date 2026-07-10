@@ -1966,8 +1966,8 @@ object FoF: TFoF
     GlobalExclusionList.Strings = (
       '!TVirtualImageListItem.CollectionName'
       '!TVirtualImageList.DisabledSuffix')
-    Left = 496
-    Top = 336
+    Left = 128
+    Top = 136
   end
   object siLang_FoF: TsiLang
     Version = '7.9.10.1'
@@ -2015,8 +2015,8 @@ object FoF: TFoF
       'DataField'
       'KeyField'
       'ListField')
-    Left = 576
-    Top = 328
+    Left = 40
+    Top = 136
     TranslationData = {
       73007400430061007000740069006F006E0073005F0055006E00690063006F00
       640065000D000A00540046006F0046000100570069006E0070006F0072007400

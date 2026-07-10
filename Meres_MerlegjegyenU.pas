@@ -46,7 +46,7 @@ var
   Meres_MerlegjegyenF: TMeres_MerlegjegyenF;
 
 implementation
-uses au,PortU,FoU, UzenetekU;
+uses au,PortU,FoU;
 
 {$R *.dfm}
 

@@ -44,7 +44,7 @@ var
   kezdokeszletF: TkezdokeszletF;
 
 implementation
-  uses AU, UzenetekU;
+  uses AU, FoU;
 {$R *.dfm}
 
 procedure TkezdokeszletF.Button1Click(Sender: TObject);

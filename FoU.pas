@@ -16,6 +16,146 @@ uses
   JvLED, AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
   System.StrUtils, JvExDBGrids, JvDBGrid, JvDBUltimGrid, siComp, siLangCombo;
 
+const
+    rsBejelentkezve = 'Bejelentkezve: ';
+  rsFrissites = 'A program frissítés miatt újraindul';
+  rsHiba = 'Hiba';
+  rsHibasJelszo = 'Hibás jelszó';
+  rsEzaTermekmerszerepeldijszabkat = 'Ez a termék már szerepel ebben a díjszabás kategóriában!';
+  rsHibastermekVTSZ = 'Hibás a termék VTSZ száma!';
+  rsSzalliotMegKellAdni = 'A szállítót meg kell adni!';
+  rsSzallitoAdoszamaHibas = 'Hibás a szállító adószáma';
+  rsSzallitoOrszagatMegKellAdni = 'A szállító országát meg kell adni!';
+  rsSzallitoCimetMegKellAdni = 'A szállító címét meg kell adni!';
+  rsVevotMegKellAdni = 'A vevõt meg kell adni!';
+  rsVevoAdoszamaHibas = 'Hiás a vevõ adószáma!';
+  rsVevoOrszagatMegKellAdni = 'A vevõ országát meg kell adni!';
+  rsVevoCimetMegKellAdni = 'A vevõ címét meg kell adni!';
+  rsFelrakCegetegKellAdni = 'A felrakodási céget meg kell adni!';
+  rsFelrakIrszHibas = 'Hibás a felrakodási cég irányítószáma!';
+  rsFelrakOrszagatMegKellAdni = 'A felrakodási cég országát meg kell adni!';
+  rsFelrakAdoszamaHibas = 'Hibás a felrakodási cég adószáma!';
+  rsFelrakVarosHibas = 'Hibás a felrakodási cég városa';
+  rsLerakCegetMegKellAdni = 'A lerakodási céget meg kell adni!';
+  rsLerakAdoszamaHibas = 'Hibás a lerakodási cég adószáma!';
+  rsLerakOrszagatMegKellAdni = 'A lerakodási cég országát meg kell adni!';
+  rsLerakIrszHibas = 'Hibás a lerakodási cég irányítószáma!';
+  rsLerakVarosHibas = 'Hibás a lerakodási cég városa!';
+  rsNincsJogosultsaga = 'Ehhez nincs jogosultsága';
+  rsUjFelhasznaloFelvitele = 'Új felhasználó felvitele';
+  rsAdjaMegANevet = 'Adja meg a nevet:';
+  rsFelhasznaloMarLetezik = 'Ilyen felhasználó már létezik!';
+  rsFelhasznaloLetrehozva = 'Felhasználó létrehozva. Jelszó: proba';
+  rsFelhasznaloModositas = 'Felhasználó módosítása';
+  rsFelhasznaloTorlese = 'Biztosan törli ezt a felhasználót?';
+  rsEbbolAMeresbolMarKeszultMjegy = 'Ebbõl a mérésbõl már készült mérlegjegy!';
+  rsCsatlakoztatva = 'Csatlakoztatva: ';
+  rsKliensHiba = 'Kliens hiba: ';
+  rsElokep1Folyamatos = 'Élõkép(1) FOLYAMATOS';
+  rsElokep1Szunetel = 'Élõkép(1) SZÜNETEL';
+  rsElokep2Folyamatos = 'Élõkép(2) FOLYAMATOS';
+  rsElokep2Szunetel = 'Élõkép(2) SZÜNETEL';
+  rsKamerakepBetolteseSikertelen = 'Kamerakép betöltése sikertelen!';
+  rsKartya = 'Kártya';
+  rsNemTalalhato = ' nem található';
+  rsAKijelzoPortNincsBeallitva = 'A kijelzõ port nincs beállítva!';
+  rsAHivoszamKijelzoPortNincsBeallitva = 'A hívószám kijelzõ port nincs beállítva!';
+  rsRendszamLampaIndul = 'RendszamLampa indul';
+  rsPluginMappaHianyzik = 'Plugin mappa hiányzik az IP kamerához!';
+  rsKilepesFolyamatban = 'kilépés folyamatban...';
+  rsAdjaMegAJelenlegiJelszavat = 'Adja meg a jelenlegi jelszavát ';
+  rsAdjaMegAzUjJelszavat = 'Adja meg az új jelszavát';
+  rsJelszo = 'Jelszó';
+  rsErositseMegAzUjJelszavat = 'Erõsítse meg az új jelszavát';
+  rsIOKapcsolatiHiba = 'IO kapcsolati hiba!';
+  rsAKetJelszoNemEgyezik = 'A két megadott jelszó nem egyezik!';
+  rsJelszoModositva = 'A jelszó módosítva.';
+  rsKamerNemElerheto = 'Kamera nem elérhetõ!';
+  rsPLCKapcsolatiHiba = 'PLC kapcsolati hiba!(R)';
+  rsPLCPingHiba = 'PLC ping hiba!(P)';
+  rsIrtCim = 'Írt cím';
+  rsPingTeszt = 'Ping teszt';
+  rsPLCTeszt = 'PLC teszt';
+  rsPLCOlvasasiHiba = 'PLC olvasási hiba!';
+  rsErtek = 'Érték: ';
+  rsPLCIrasiiHiba = 'PLC írási hiba!';
+  rsIOIrasiHiba = 'IO írási hiba!';
+  rsOlvasottCim = 'Olvasott cím:';
+  rsRendszamLekerM = 'Renszamleker m:';
+  rsFelulIrAKeszlet = 'Felülírja az "A" készletet?';
+  rsFelulIrBKeszlet = 'Felülírja a "B" készletet?';
+  rsBeallitasokMentve = 'Beállítások mentve!';
+  rsJarmuNincsAMerlegen = 'Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!';
+  rsMeresEredmenyeNulla = 'A mérés eredménye nem lehet 0!';
+  rsUjMerlegkezeloFelvitele = 'Új mérlegkezelõ felvitele';
+  rsMerlegkezeloMarLetezik = 'Ilyen mérlegkezelõ már létezik!';
+  rsMerlegkezeloTorlese = 'Biztosan törli ezt a mérlegkezelõt?';
+  rsBizonylatKibocsjtotMegKellAdni = 'A bizonylat kibocsájtót meg kell adni!';
+  rsAz = 'A(z) ';
+  rsMegKellAdni = ' meg kell adni!';
+  rsTermeketMegKellAdni = 'A terméket meg kell adni!';
+  rsMeresIranyatMegKellAdni = 'A mérés irányát meg kell adni!';
+  rsRendszamotMegKellAdni = 'A rendszámot meg kell adni!';
+  rsNincsKivalasztvaKetMeres = 'Nincs kiválasztva két mérés vagy nincs tára röhzített mérésnél!';
+  rsMerlegkezelotMegKellAdni = 'A mérlegkezelõt meg kell adni!';
+  rsTarolotMegKellAdni = 'A tárolót meg kell adni!';
+  rsLevonandoTomegetMegKellAdni = 'Adja meg a levonandó tömeget!';
+  rsAtvevo = 'Átvevõ:';
+  rsVevo = 'Vevõ:';
+  rsElado = 'Eladó:';
+  rsAtado = 'Átadó:';
+  rsSzallito = 'Szállító:';
+  rsFuvarozo = 'Fuvarozó:';
+  rsMegrendelo = 'Megrendelõ:';
+  rsErtekesito = 'Értékesítõ:';
+  rsBeszallito = 'Beszállító:';
+  rsTermekEgysegaraValtozott = 'A termék egységára megváltozott. Módosítja a mérlegjegyen?';
+  rsStornozza = 'Biztosan sztornózza?';
+  rsBiztosanTorliElszamolasbol = 'Biztisan törli az elszámolásból?';
+  rsMerlegjegySzerepelAzElszamolasban = 'Ez a mérlegjegy már szerepel ebben az elszámolásban!';
+  rsElaszolasbanegyPartner = 'Egy elszámolásban csak egy partner szerepelhet!';
+  rsElaszolasbanegyTermek = 'Egy elszámolásban csak egy termék szerepelhet!';
+  rsNemVoltMentes = 'Nem volt mentés! Biztosan kilép?';
+  rsMarKiVanJelolveKetJarmu = 'Már ki van jelölve két jármû vagy folytatásban van!';
+  rsAdjaMegAFuvarozot = 'Adja meg a fuvarozót!';
+  rsRendszamokElternek = 'A rendszámok eltérnek! Folytatja?';
+  rsPotkocsiRendszamatMegKellAdni = 'A pótkocsi rendszámot meg kell adni!';
+  rsKezi = 'Kézi';
+  rsHibasPeldanyszam = 'Hibás példányszám!';
+  rsTablaZarolva = 'Tábla zárolva!';
+  rsTablaNincsZarolva = 'Tábla NINCS zárolva!';
+  rsIgen = 'Igen';
+  rsNem = 'Nem';
+  rsMegsem = 'Mégsem';
+  rsBiztosanTorli = 'Biztosan törli?';
+  rsHibasAdoszam = 'Hibás adószám!';
+  rsNevetMegKellAdni = 'Adja meg a nevet!';
+  rsIrszetMegKellAdni = 'Adja meg az irányítószámot!';
+  rsTelepulestMegKellAdni = 'Adja meg a települést!';
+  rsEzAKodMarFoglalt = 'Ez a kód már foglalt!';
+  rsEzANevMarFoglalt = 'Ez a név már foglalt!';
+  rsEloszorTeteltVigyenFel = 'Elõször vigyen fel tételeket!';
+  rsKiadoPartnertMegKellAdni = 'Válassza ki a kiadó partnert!';
+  rsKiadoTarolotMegKellAdni = 'Válassza ki a kiadó tárolót!';
+  rsFogadoPartnertMegKellAdni = 'Válassza ki a fogadó partnert!';
+  rsFogadoTarolotMegKellAdni = 'Válassza ki a fogadó tárolót!';
+  rsKiadoPartnerKeszlete = 'A kiadó partner készlete kevesebb, mint a kiadandó mennyiség. Folytatja?';
+  rsAdjaMegAMennyisege = 'Adja meg a mennyiséget!';
+  rsEztATermeketMarFelvette = 'Ezt a terméket már felvitte a tételek közé!';
+  rsFolytatja = 'Folytatja?';
+  rsKod = 'Kód';
+  rsKodotMegKellAdni = 'Adja meg a kódot!';
+  rsAdjaMegME = 'Adja meg a mértékegységet!';
+  rsFeltolt = 'Szeretné most feltölteni a mérlegjegyeket?';
+  rsMoxaTeszt = 'Mérleg IP teszt';
+  rsMoxaHiba = 'Mérleg IP hiba!';
+  rsMoxaOlvasasiHiba = 'Mérleg IP olvasási hiba!';
+  rsMoxaOK = 'Mérleg IP OK';
+  rsNagyitott_nezet = ' NAGYÍTOTT NÉZETE';
+  rsFelvesz ='Felvesz';
+  rsModosit ='Módosít';
+
+
 type
   PCKommunikacio_thread = class(TThread)
     procedure kijelez;
@@ -421,7 +561,7 @@ uses
   tipusokU, tarolokU, Rak_szallU, rak_szall_listU, MeresU, Tulajok, Ping2U,
   tesztU, levon_szovegekU, demotomegU, nagykepU, szoftver_alapU, Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU, DMSoapU, DijakU, dijszabU, ftpDlU,
-  LibreExcelU, NzelvvalaszTU, reinit, UzenetekU, DmDbMentU,GongyoloegekFU,
+  LibreExcelU, NzelvvalaszTU, reinit,  DmDbMentU,GongyoloegekFU,
   KartyakU,MozgasokTesztU,MozgasokListajaU,NagyTomegU;
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';

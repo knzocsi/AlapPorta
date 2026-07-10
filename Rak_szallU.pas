@@ -73,7 +73,7 @@ var
   Rak_szallF: TRak_szallF;
   indul:Boolean;
 implementation
-  uses AU,NezetU, UzenetekU;
+  uses AU,NezetU, FoU;
 {$R *.dfm}
 
 procedure TRak_szallF.btnkilepesClick(Sender: TObject);

@@ -74,7 +74,7 @@ var
   dijszab_termekF: Tdijszab_termekF;
 
 implementation
-  uses AU,dijszabU,UzenetekU;
+  uses AU,dijszabU,FoU;
 {$R *.dfm}
 
 procedure Tdijszab_termekF.btnkilepClick(Sender: TObject);

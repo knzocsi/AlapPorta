@@ -32,7 +32,7 @@ var
   TipusokF: TTipusokF;
 
 implementation
-  uses AU, UzenetekU;
+  uses AU, FoU;
 {$R *.dfm}
 
 procedure TTipusokF.FormActivate(Sender: TObject);

@@ -32,7 +32,7 @@ var
   BelepF: TBelepF;
 
 implementation
-  uses au, UzenetekU;
+  uses au, FoU;
 {$R *.dfm}
 
 procedure TBelepF.Button1Click(Sender: TObject);

@@ -30,7 +30,7 @@ var
   MerlegkezelokF: TMerlegkezelokF;
 
 implementation
-  uses au,UzenetekU;
+  uses au,FoU;
 {$R *.dfm}
 
 procedure TMerlegkezelokF.Button1Click(Sender: TObject);

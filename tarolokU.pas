@@ -37,7 +37,7 @@ var
   TarolokF: TTarolokF;
 
 implementation
-  uses AU,UzenetekU;
+  uses AU,FoU;
 {$R *.dfm}
 
 procedure TTarolokF.btnkilepesClick(Sender: TObject);

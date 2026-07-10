@@ -110,7 +110,7 @@ var
   col_neve,col_felirat:String;
 implementation
 uses
-  kezdokeszletU,UzenetekU, AU;
+  kezdokeszletU,FoU, AU;
 
 {$R *.dfm}
 

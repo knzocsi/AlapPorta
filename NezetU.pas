@@ -46,7 +46,7 @@ var
   NezetF: TNezetF;
 
 implementation
-  Uses NyomtatokU,AU,UzenetekU;
+  Uses NyomtatokU,AU,FoU;
 {$R *.dfm}
 
 
