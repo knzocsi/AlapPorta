@@ -64,6 +64,7 @@ object DMSoapF: TDMSoapF
       'TIB_STRINGLIST'
       'TSTRINGLIST'
       'TWIDESTRINGS')
+    StoreAsUTF8 = True
     NumOfLanguages = 3
     LangDispatcher = FoF.siLangDispatcher1
     LangDelim = 1

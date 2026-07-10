@@ -476,7 +476,6 @@ type
     mam_csovong_menny_2: TFloatField;
     mam_csovonossztomeg_2: TFloatField;
     frxDBmam_csovon: TfrxDBDataset;
-    siLangLinked_AF: TsiLangLinked;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);

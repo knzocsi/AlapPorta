@@ -342,6 +342,7 @@ type
     procedure mozgas_mentese(ksz:string;kozp_szam,iranya:Integer);
     procedure mozgasok_mClick(Sender: TObject);
     procedure StatusBar1Click(Sender: TObject);
+    procedure siLangCombo1Change(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -2570,6 +2571,11 @@ begin
     end;
 
   end;
+end;
+
+procedure TFoF.siLangCombo1Change(Sender: TObject);
+begin
+  exit;
 end;
 
 function TFoF.snapshot(p: string): string;
