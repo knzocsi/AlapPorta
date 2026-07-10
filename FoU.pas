@@ -16,144 +16,6 @@ uses
   JvLED, AU, JvAppStorage, JvAppIniStorage, JvComponentBase, JvFormPlacement,
   System.StrUtils, JvExDBGrids, JvDBGrid, JvDBUltimGrid, siComp, siLangCombo;
 
-const
-    rsBejelentkezve = 'Bejelentkezve: ';
-  rsFrissites = 'A program frissítés miatt újraindul';
-  rsHiba = 'Hiba';
-  rsHibasJelszo = 'Hibás jelszó';
-  rsEzaTermekmerszerepeldijszabkat = 'Ez a termék már szerepel ebben a díjszabás kategóriában!';
-  rsHibastermekVTSZ = 'Hibás a termék VTSZ száma!';
-  rsSzalliotMegKellAdni = 'A szállítót meg kell adni!';
-  rsSzallitoAdoszamaHibas = 'Hibás a szállító adószáma';
-  rsSzallitoOrszagatMegKellAdni = 'A szállító országát meg kell adni!';
-  rsSzallitoCimetMegKellAdni = 'A szállító címét meg kell adni!';
-  rsVevotMegKellAdni = 'A vevõt meg kell adni!';
-  rsVevoAdoszamaHibas = 'Hiás a vevõ adószáma!';
-  rsVevoOrszagatMegKellAdni = 'A vevõ országát meg kell adni!';
-  rsVevoCimetMegKellAdni = 'A vevõ címét meg kell adni!';
-  rsFelrakCegetegKellAdni = 'A felrakodási céget meg kell adni!';
-  rsFelrakIrszHibas = 'Hibás a felrakodási cég irányítószáma!';
-  rsFelrakOrszagatMegKellAdni = 'A felrakodási cég országát meg kell adni!';
-  rsFelrakAdoszamaHibas = 'Hibás a felrakodási cég adószáma!';
-  rsFelrakVarosHibas = 'Hibás a felrakodási cég városa';
-  rsLerakCegetMegKellAdni = 'A lerakodási céget meg kell adni!';
-  rsLerakAdoszamaHibas = 'Hibás a lerakodási cég adószáma!';
-  rsLerakOrszagatMegKellAdni = 'A lerakodási cég országát meg kell adni!';
-  rsLerakIrszHibas = 'Hibás a lerakodási cég irányítószáma!';
-  rsLerakVarosHibas = 'Hibás a lerakodási cég városa!';
-  rsNincsJogosultsaga = 'Ehhez nincs jogosultsága';
-  rsUjFelhasznaloFelvitele = 'Új felhasználó felvitele';
-  rsAdjaMegANevet = 'Adja meg a nevet:';
-  rsFelhasznaloMarLetezik = 'Ilyen felhasználó már létezik!';
-  rsFelhasznaloLetrehozva = 'Felhasználó létrehozva. Jelszó: proba';
-  rsFelhasznaloModositas = 'Felhasználó módosítása';
-  rsFelhasznaloTorlese = 'Biztosan törli ezt a felhasználót?';
-  rsEbbolAMeresbolMarKeszultMjegy = 'Ebbõl a mérésbõl már készült mérlegjegy!';
-  rsCsatlakoztatva = 'Csatlakoztatva: ';
-  rsKliensHiba = 'Kliens hiba: ';
-  rsElokep1Folyamatos = 'Élõkép(1) FOLYAMATOS';
-  rsElokep1Szunetel = 'Élõkép(1) SZÜNETEL';
-  rsElokep2Folyamatos = 'Élõkép(2) FOLYAMATOS';
-  rsElokep2Szunetel = 'Élõkép(2) SZÜNETEL';
-  rsKamerakepBetolteseSikertelen = 'Kamerakép betöltése sikertelen!';
-  rsKartya = 'Kártya';
-  rsNemTalalhato = ' nem található';
-  rsAKijelzoPortNincsBeallitva = 'A kijelzõ port nincs beállítva!';
-  rsAHivoszamKijelzoPortNincsBeallitva = 'A hívószám kijelzõ port nincs beállítva!';
-  rsRendszamLampaIndul = 'RendszamLampa indul';
-  rsPluginMappaHianyzik = 'Plugin mappa hiányzik az IP kamerához!';
-  rsKilepesFolyamatban = 'kilépés folyamatban...';
-  rsAdjaMegAJelenlegiJelszavat = 'Adja meg a jelenlegi jelszavát ';
-  rsAdjaMegAzUjJelszavat = 'Adja meg az új jelszavát';
-  rsJelszo = 'Jelszó';
-  rsErositseMegAzUjJelszavat = 'Erõsítse meg az új jelszavát';
-  rsIOKapcsolatiHiba = 'IO kapcsolati hiba!';
-  rsAKetJelszoNemEgyezik = 'A két megadott jelszó nem egyezik!';
-  rsJelszoModositva = 'A jelszó módosítva.';
-  rsKamerNemElerheto = 'Kamera nem elérhetõ!';
-  rsPLCKapcsolatiHiba = 'PLC kapcsolati hiba!(R)';
-  rsPLCPingHiba = 'PLC ping hiba!(P)';
-  rsIrtCim = 'Írt cím';
-  rsPingTeszt = 'Ping teszt';
-  rsPLCTeszt = 'PLC teszt';
-  rsPLCOlvasasiHiba = 'PLC olvasási hiba!';
-  rsErtek = 'Érték: ';
-  rsPLCIrasiiHiba = 'PLC írási hiba!';
-  rsIOIrasiHiba = 'IO írási hiba!';
-  rsOlvasottCim = 'Olvasott cím:';
-  rsRendszamLekerM = 'Renszamleker m:';
-  rsFelulIrAKeszlet = 'Felülírja az "A" készletet?';
-  rsFelulIrBKeszlet = 'Felülírja a "B" készletet?';
-  rsBeallitasokMentve = 'Beállítások mentve!';
-  rsJarmuNincsAMerlegen = 'Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!';
-  rsMeresEredmenyeNulla = 'A mérés eredménye nem lehet 0!';
-  rsUjMerlegkezeloFelvitele = 'Új mérlegkezelõ felvitele';
-  rsMerlegkezeloMarLetezik = 'Ilyen mérlegkezelõ már létezik!';
-  rsMerlegkezeloTorlese = 'Biztosan törli ezt a mérlegkezelõt?';
-  rsBizonylatKibocsjtotMegKellAdni = 'A bizonylat kibocsájtót meg kell adni!';
-  rsAz = 'A(z) ';
-  rsMegKellAdni = ' meg kell adni!';
-  rsTermeketMegKellAdni = 'A terméket meg kell adni!';
-  rsMeresIranyatMegKellAdni = 'A mérés irányát meg kell adni!';
-  rsRendszamotMegKellAdni = 'A rendszámot meg kell adni!';
-  rsNincsKivalasztvaKetMeres = 'Nincs kiválasztva két mérés vagy nincs tára röhzített mérésnél!';
-  rsMerlegkezelotMegKellAdni = 'A mérlegkezelõt meg kell adni!';
-  rsTarolotMegKellAdni = 'A tárolót meg kell adni!';
-  rsLevonandoTomegetMegKellAdni = 'Adja meg a levonandó tömeget!';
-  rsAtvevo = 'Átvevõ:';
-  rsVevo = 'Vevõ:';
-  rsElado = 'Eladó:';
-  rsAtado = 'Átadó:';
-  rsSzallito = 'Szállító:';
-  rsFuvarozo = 'Fuvarozó:';
-  rsMegrendelo = 'Megrendelõ:';
-  rsErtekesito = 'Értékesítõ:';
-  rsBeszallito = 'Beszállító:';
-  rsTermekEgysegaraValtozott = 'A termék egységára megváltozott. Módosítja a mérlegjegyen?';
-  rsStornozza = 'Biztosan sztornózza?';
-  rsBiztosanTorliElszamolasbol = 'Biztisan törli az elszámolásból?';
-  rsMerlegjegySzerepelAzElszamolasban = 'Ez a mérlegjegy már szerepel ebben az elszámolásban!';
-  rsElaszolasbanegyPartner = 'Egy elszámolásban csak egy partner szerepelhet!';
-  rsElaszolasbanegyTermek = 'Egy elszámolásban csak egy termék szerepelhet!';
-  rsNemVoltMentes = 'Nem volt mentés! Biztosan kilép?';
-  rsMarKiVanJelolveKetJarmu = 'Már ki van jelölve két jármû vagy folytatásban van!';
-  rsAdjaMegAFuvarozot = 'Adja meg a fuvarozót!';
-  rsRendszamokElternek = 'A rendszámok eltérnek! Folytatja?';
-  rsPotkocsiRendszamatMegKellAdni = 'A pótkocsi rendszámot meg kell adni!';
-  rsKezi = 'Kézi';
-  rsHibasPeldanyszam = 'Hibás példányszám!';
-  rsTablaZarolva = 'Tábla zárolva!';
-  rsTablaNincsZarolva = 'Tábla NINCS zárolva!';
-  rsIgen = 'Igen';
-  rsNem = 'Nem';
-  rsMegsem = 'Mégsem';
-  rsBiztosanTorli = 'Biztosan törli?';
-  rsHibasAdoszam = 'Hibás adószám!';
-  rsNevetMegKellAdni = 'Adja meg a nevet!';
-  rsIrszetMegKellAdni = 'Adja meg az irányítószámot!';
-  rsTelepulestMegKellAdni = 'Adja meg a települést!';
-  rsEzAKodMarFoglalt = 'Ez a kód már foglalt!';
-  rsEzANevMarFoglalt = 'Ez a név már foglalt!';
-  rsEloszorTeteltVigyenFel = 'Elõször vigyen fel tételeket!';
-  rsKiadoPartnertMegKellAdni = 'Válassza ki a kiadó partnert!';
-  rsKiadoTarolotMegKellAdni = 'Válassza ki a kiadó tárolót!';
-  rsFogadoPartnertMegKellAdni = 'Válassza ki a fogadó partnert!';
-  rsFogadoTarolotMegKellAdni = 'Válassza ki a fogadó tárolót!';
-  rsKiadoPartnerKeszlete = 'A kiadó partner készlete kevesebb, mint a kiadandó mennyiség. Folytatja?';
-  rsAdjaMegAMennyisege = 'Adja meg a mennyiséget!';
-  rsEztATermeketMarFelvette = 'Ezt a terméket már felvitte a tételek közé!';
-  rsFolytatja = 'Folytatja?';
-  rsKod = 'Kód';
-  rsKodotMegKellAdni = 'Adja meg a kódot!';
-  rsAdjaMegME = 'Adja meg a mértékegységet!';
-  rsFeltolt = 'Szeretné most feltölteni a mérlegjegyeket?';
-  rsMoxaTeszt = 'Mérleg IP teszt';
-  rsMoxaHiba = 'Mérleg IP hiba!';
-  rsMoxaOlvasasiHiba = 'Mérleg IP olvasási hiba!';
-  rsMoxaOK = 'Mérleg IP OK';
-  rsNagyitott_nezet = ' NAGYÍTOTT NÉZETE';
-  rsFelvesz ='Felvesz';
-  rsModosit ='Módosít';
 
 
 type
@@ -482,7 +344,8 @@ type
     procedure mozgas_mentese(ksz:string;kozp_szam,iranya:Integer);
     procedure mozgasok_mClick(Sender: TObject);
     procedure StatusBar1Click(Sender: TObject);
-    procedure siLangCombo1Change(Sender: TObject);
+    procedure UpdateStrings;
+    procedure siLangDispatcher1LanguageChanged(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -500,6 +363,146 @@ type
   plibvlc_media_player_t = type Pointer;
 
   plibvlc_media_t = type Pointer;
+
+var
+	rsBejelentkezve: string = 'Bejelentkezve: '; // TSI: Localized (Don't modify!)
+	rsFrissites: string = 'A program frissítés miatt újraindul'; // TSI: Localized (Don't modify!)
+	rsHiba: string = 'Hiba'; // TSI: Localized (Don't modify!)
+	rsHibasJelszo: string = 'Hibás jelszó'; // TSI: Localized (Don't modify!)
+	rsEzaTermekmerszerepeldijszabkat: string = 'Ez a termék már szerepel ebben a díjszabás kategóriában!'; // TSI: Localized (Don't modify!)
+	rsHibastermekVTSZ: string = 'Hibás a termék VTSZ száma!'; // TSI: Localized (Don't modify!)
+	rsSzalliotMegKellAdni: string = 'A szállítót meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsSzallitoAdoszamaHibas: string = 'Hibás a szállító adószáma'; // TSI: Localized (Don't modify!)
+	rsSzallitoOrszagatMegKellAdni: string = 'A szállító országát meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsSzallitoCimetMegKellAdni: string = 'A szállító címét meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsVevotMegKellAdni: string = 'A vevõt meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsVevoAdoszamaHibas: string = 'Hiás a vevõ adószáma!'; // TSI: Localized (Don't modify!)
+	rsVevoOrszagatMegKellAdni: string = 'A vevõ országát meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsVevoCimetMegKellAdni: string = 'A vevõ címét meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsFelrakCegetegKellAdni: string = 'A felrakodási céget meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsFelrakIrszHibas: string = 'Hibás a felrakodási cég irányítószáma!'; // TSI: Localized (Don't modify!)
+	rsFelrakOrszagatMegKellAdni: string = 'A felrakodási cég országát meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsFelrakAdoszamaHibas: string = 'Hibás a felrakodási cég adószáma!'; // TSI: Localized (Don't modify!)
+	rsFelrakVarosHibas: string = 'Hibás a felrakodási cég városa'; // TSI: Localized (Don't modify!)
+	rsLerakCegetMegKellAdni: string = 'A lerakodási céget meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsLerakAdoszamaHibas: string = 'Hibás a lerakodási cég adószáma!'; // TSI: Localized (Don't modify!)
+	rsLerakOrszagatMegKellAdni: string = 'A lerakodási cég országát meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsLerakIrszHibas: string = 'Hibás a lerakodási cég irányítószáma!'; // TSI: Localized (Don't modify!)
+	rsLerakVarosHibas: string = 'Hibás a lerakodási cég városa!'; // TSI: Localized (Don't modify!)
+	rsNincsJogosultsaga: string = 'Ehhez nincs jogosultsága'; // TSI: Localized (Don't modify!)
+	rsUjFelhasznaloFelvitele: string = 'Új felhasználó felvitele'; // TSI: Localized (Don't modify!)
+	rsAdjaMegANevet: string = 'Adja meg a nevet:'; // TSI: Localized (Don't modify!)
+	rsFelhasznaloMarLetezik: string = 'Ilyen felhasználó már létezik!'; // TSI: Localized (Don't modify!)
+	rsFelhasznaloLetrehozva: string = 'Felhasználó létrehozva. Jelszó: proba'; // TSI: Localized (Don't modify!)
+	rsFelhasznaloModositas: string = 'Felhasználó módosítása'; // TSI: Localized (Don't modify!)
+	rsFelhasznaloTorlese: string = 'Biztosan törli ezt a felhasználót?'; // TSI: Localized (Don't modify!)
+	rsEbbolAMeresbolMarKeszultMjegy: string = 'Ebbõl a mérésbõl már készült mérlegjegy!'; // TSI: Localized (Don't modify!)
+	rsCsatlakoztatva: string = 'Csatlakoztatva: '; // TSI: Localized (Don't modify!)
+	rsKliensHiba: string = 'Kliens hiba: '; // TSI: Localized (Don't modify!)
+	rsElokep1Folyamatos: string = 'Élõkép(1) FOLYAMATOS'; // TSI: Localized (Don't modify!)
+	rsElokep1Szunetel: string = 'Élõkép(1) SZÜNETEL'; // TSI: Localized (Don't modify!)
+	rsElokep2Folyamatos: string = 'Élõkép(2) FOLYAMATOS'; // TSI: Localized (Don't modify!)
+	rsElokep2Szunetel: string = 'Élõkép(2) SZÜNETEL'; // TSI: Localized (Don't modify!)
+	rsKamerakepBetolteseSikertelen: string = 'Kamerakép betöltése sikertelen!'; // TSI: Localized (Don't modify!)
+	rsKartya: string = 'Kártya'; // TSI: Localized (Don't modify!)
+	rsNemTalalhato: string = ' nem található'; // TSI: Localized (Don't modify!)
+	rsAKijelzoPortNincsBeallitva: string = 'A kijelzõ port nincs beállítva!'; // TSI: Localized (Don't modify!)
+	rsAHivoszamKijelzoPortNincsBeallitva: string = 'A hívószám kijelzõ port nincs beállítva!'; // TSI: Localized (Don't modify!)
+	rsRendszamLampaIndul: string = 'RendszamLampa indul'; // TSI: Localized (Don't modify!)
+	rsPluginMappaHianyzik: string = 'Plugin mappa hiányzik az IP kamerához!'; // TSI: Localized (Don't modify!)
+	rsKilepesFolyamatban: string = 'kilépés folyamatban...'; // TSI: Localized (Don't modify!)
+	rsAdjaMegAJelenlegiJelszavat: string = 'Adja meg a jelenlegi jelszavát '; // TSI: Localized (Don't modify!)
+	rsAdjaMegAzUjJelszavat: string = 'Adja meg az új jelszavát'; // TSI: Localized (Don't modify!)
+	rsJelszo: string = 'Jelszó'; // TSI: Localized (Don't modify!)
+	rsErositseMegAzUjJelszavat: string = 'Erõsítse meg az új jelszavát'; // TSI: Localized (Don't modify!)
+	rsIOKapcsolatiHiba: string = 'IO kapcsolati hiba!'; // TSI: Localized (Don't modify!)
+	rsAKetJelszoNemEgyezik: string = 'A két megadott jelszó nem egyezik!'; // TSI: Localized (Don't modify!)
+	rsJelszoModositva: string = 'A jelszó módosítva.'; // TSI: Localized (Don't modify!)
+	rsKamerNemElerheto: string = 'Kamera nem elérhetõ!'; // TSI: Localized (Don't modify!)
+	rsPLCKapcsolatiHiba: string = 'PLC kapcsolati hiba!(R)'; // TSI: Localized (Don't modify!)
+	rsPLCPingHiba: string = 'PLC ping hiba!(P)'; // TSI: Localized (Don't modify!)
+	rsIrtCim: string = 'Írt cím'; // TSI: Localized (Don't modify!)
+	rsPingTeszt: string = 'Ping teszt'; // TSI: Localized (Don't modify!)
+	rsPLCTeszt: string = 'PLC teszt'; // TSI: Localized (Don't modify!)
+	rsPLCOlvasasiHiba: string = 'PLC olvasási hiba!'; // TSI: Localized (Don't modify!)
+	rsErtek: string = 'Érték: '; // TSI: Localized (Don't modify!)
+	rsPLCIrasiiHiba: string = 'PLC írási hiba!'; // TSI: Localized (Don't modify!)
+	rsIOIrasiHiba: string = 'IO írási hiba!'; // TSI: Localized (Don't modify!)
+	rsOlvasottCim: string = 'Olvasott cím:'; // TSI: Localized (Don't modify!)
+	rsRendszamLekerM: string = 'Renszamleker m:'; // TSI: Localized (Don't modify!)
+	rsFelulIrAKeszlet: string = 'Felülírja az "A" készletet?'; // TSI: Localized (Don't modify!)
+	rsFelulIrBKeszlet: string = 'Felülírja a "B" készletet?'; // TSI: Localized (Don't modify!)
+	rsBeallitasokMentve: string = 'Beállítások mentve!'; // TSI: Localized (Don't modify!)
+	rsJarmuNincsAMerlegen: string = 'Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!'; // TSI: Localized (Don't modify!)
+	rsMeresEredmenyeNulla: string = 'A mérés eredménye nem lehet 0!'; // TSI: Localized (Don't modify!)
+	rsUjMerlegkezeloFelvitele: string = 'Új mérlegkezelõ felvitele'; // TSI: Localized (Don't modify!)
+	rsMerlegkezeloMarLetezik: string = 'Ilyen mérlegkezelõ már létezik!'; // TSI: Localized (Don't modify!)
+	rsMerlegkezeloTorlese: string = 'Biztosan törli ezt a mérlegkezelõt?'; // TSI: Localized (Don't modify!)
+	rsBizonylatKibocsjtotMegKellAdni: string = 'A bizonylat kibocsájtót meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsAz: string = 'A(z) '; // TSI: Localized (Don't modify!)
+	rsMegKellAdni: string = ' meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsTermeketMegKellAdni: string = 'A terméket meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsMeresIranyatMegKellAdni: string = 'A mérés irányát meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsRendszamotMegKellAdni: string = 'A rendszámot meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsNincsKivalasztvaKetMeres: string = 'Nincs kiválasztva két mérés vagy nincs tára röhzített mérésnél!'; // TSI: Localized (Don't modify!)
+	rsMerlegkezelotMegKellAdni: string = 'A mérlegkezelõt meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsTarolotMegKellAdni: string = 'A tárolót meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsLevonandoTomegetMegKellAdni: string = 'Adja meg a levonandó tömeget!'; // TSI: Localized (Don't modify!)
+	rsAtvevo: string = 'Átvevõ:'; // TSI: Localized (Don't modify!)
+	rsVevo: string = 'Vevõ:'; // TSI: Localized (Don't modify!)
+	rsElado: string = 'Eladó:'; // TSI: Localized (Don't modify!)
+	rsAtado: string = 'Átadó:'; // TSI: Localized (Don't modify!)
+	rsSzallito: string = 'Szállító:'; // TSI: Localized (Don't modify!)
+	rsFuvarozo: string = 'Fuvarozó:'; // TSI: Localized (Don't modify!)
+	rsMegrendelo: string = 'Megrendelõ:'; // TSI: Localized (Don't modify!)
+	rsErtekesito: string = 'Értékesítõ:'; // TSI: Localized (Don't modify!)
+	rsBeszallito: string = 'Beszállító:'; // TSI: Localized (Don't modify!)
+	rsTermekEgysegaraValtozott: string = 'A termék egységára megváltozott. Módosítja a mérlegjegyen?'; // TSI: Localized (Don't modify!)
+	rsStornozza: string = 'Biztosan sztornózza?'; // TSI: Localized (Don't modify!)
+	rsBiztosanTorliElszamolasbol: string = 'Biztisan törli az elszámolásból?'; // TSI: Localized (Don't modify!)
+	rsMerlegjegySzerepelAzElszamolasban: string = 'Ez a mérlegjegy már szerepel ebben az elszámolásban!'; // TSI: Localized (Don't modify!)
+	rsElaszolasbanegyPartner: string = 'Egy elszámolásban csak egy partner szerepelhet!'; // TSI: Localized (Don't modify!)
+	rsElaszolasbanegyTermek: string = 'Egy elszámolásban csak egy termék szerepelhet!'; // TSI: Localized (Don't modify!)
+	rsNemVoltMentes: string = 'Nem volt mentés! Biztosan kilép?'; // TSI: Localized (Don't modify!)
+	rsMarKiVanJelolveKetJarmu: string = 'Már ki van jelölve két jármû vagy folytatásban van!'; // TSI: Localized (Don't modify!)
+	rsAdjaMegAFuvarozot: string = 'Adja meg a fuvarozót!'; // TSI: Localized (Don't modify!)
+	rsRendszamokElternek: string = 'A rendszámok eltérnek! Folytatja?'; // TSI: Localized (Don't modify!)
+	rsPotkocsiRendszamatMegKellAdni: string = 'A pótkocsi rendszámot meg kell adni!'; // TSI: Localized (Don't modify!)
+	rsKezi: string = 'Kézi'; // TSI: Localized (Don't modify!)
+	rsHibasPeldanyszam: string = 'Hibás példányszám!'; // TSI: Localized (Don't modify!)
+	rsTablaZarolva: string = 'Tábla zárolva!'; // TSI: Localized (Don't modify!)
+	rsTablaNincsZarolva: string = 'Tábla NINCS zárolva!'; // TSI: Localized (Don't modify!)
+	rsIgen: string = 'Igen'; // TSI: Localized (Don't modify!)
+	rsNem: string = 'Nem'; // TSI: Localized (Don't modify!)
+	rsMegsem: string = 'Mégsem'; // TSI: Localized (Don't modify!)
+	rsBiztosanTorli: string = 'Biztosan törli?'; // TSI: Localized (Don't modify!)
+	rsHibasAdoszam: string = 'Hibás adószám!'; // TSI: Localized (Don't modify!)
+	rsNevetMegKellAdni: string = 'Adja meg a nevet!'; // TSI: Localized (Don't modify!)
+	rsIrszetMegKellAdni: string = 'Adja meg az irányítószámot!'; // TSI: Localized (Don't modify!)
+	rsTelepulestMegKellAdni: string = 'Adja meg a települést!'; // TSI: Localized (Don't modify!)
+	rsEzAKodMarFoglalt: string = 'Ez a kód már foglalt!'; // TSI: Localized (Don't modify!)
+	rsEzANevMarFoglalt: string = 'Ez a név már foglalt!'; // TSI: Localized (Don't modify!)
+	rsEloszorTeteltVigyenFel: string = 'Elõször vigyen fel tételeket!'; // TSI: Localized (Don't modify!)
+	rsKiadoPartnertMegKellAdni: string = 'Válassza ki a kiadó partnert!'; // TSI: Localized (Don't modify!)
+	rsKiadoTarolotMegKellAdni: string = 'Válassza ki a kiadó tárolót!'; // TSI: Localized (Don't modify!)
+	rsFogadoPartnertMegKellAdni: string = 'Válassza ki a fogadó partnert!'; // TSI: Localized (Don't modify!)
+	rsFogadoTarolotMegKellAdni: string = 'Válassza ki a fogadó tárolót!'; // TSI: Localized (Don't modify!)
+	rsKiadoPartnerKeszlete: string = 'A kiadó partner készlete kevesebb, mint a kiadandó mennyiség. Folytatja?'; // TSI: Localized (Don't modify!)
+	rsAdjaMegAMennyisege: string = 'Adja meg a mennyiséget!'; // TSI: Localized (Don't modify!)
+	rsEztATermeketMarFelvette: string = 'Ezt a terméket már felvitte a tételek közé!'; // TSI: Localized (Don't modify!)
+	rsFolytatja: string = 'Folytatja?'; // TSI: Localized (Don't modify!)
+	rsKod: string = 'Kód'; // TSI: Localized (Don't modify!)
+	rsKodotMegKellAdni: string = 'Adja meg a kódot!'; // TSI: Localized (Don't modify!)
+	rsAdjaMegME: string = 'Adja meg a mértékegységet!'; // TSI: Localized (Don't modify!)
+	rsFeltolt: string = 'Szeretné most feltölteni a mérlegjegyeket?'; // TSI: Localized (Don't modify!)
+	rsMoxaTeszt: string = 'Mérleg IP teszt'; // TSI: Localized (Don't modify!)
+	rsMoxaHiba: string = 'Mérleg IP hiba!'; // TSI: Localized (Don't modify!)
+	rsMoxaOlvasasiHiba: string = 'Mérleg IP olvasási hiba!'; // TSI: Localized (Don't modify!)
+	rsMoxaOK: string = 'Mérleg IP OK'; // TSI: Localized (Don't modify!)
+	rsNagyitott_nezet: string = ' NAGYÍTOTT NÉZETE'; // TSI: Localized (Don't modify!)
+	rsFelvesz: string = 'Felvesz'; // TSI: Localized (Don't modify!)
+	rsModosit: string = 'Módosít'; // TSI: Localized (Don't modify!)
+
 
 var
   libvlc_media_new_path: function(p_instance: Plibvlc_instance_t; path: PAnsiChar): Plibvlc_media_t; cdecl;
@@ -1841,6 +1844,7 @@ var
   sL: TStringList;
   dir: string;
 begin
+  UpdateStrings;
   dir := ExtractFileDir(Application.Exename) + '\';
   IniFile.FileName := dir + 'form_beallitas.ini';
   kepernyo_kezel;
@@ -2713,9 +2717,9 @@ begin
   end;
 end;
 
-procedure TFoF.siLangCombo1Change(Sender: TObject);
+procedure TFoF.siLangDispatcher1LanguageChanged(Sender: TObject);
 begin
-  exit;
+  UpdateStrings;
 end;
 
 function TFoF.snapshot(p: string): string;
@@ -2829,6 +2833,7 @@ begin
       Result := 'Pillanat felvétel sikertelen';
     end;
   end;
+  UpdateStrings;
 end;
 
 procedure TFoF.SOAPAllapottmrTimer(Sender: TObject);
@@ -3373,6 +3378,148 @@ begin
   if InputBox('Adja meg jelszót', #31'Jelszó:', 'aaaaaaaaa') <> 'csoki' then
     exit;
   TulajokF.ShowModal
+end;
+
+procedure TFoF.UpdateStrings;
+begin
+  rsModosit := siLang_FoF.GetTextOrDefault('strrsModosit' (* 'Módosít' *) );
+  rsFelvesz := siLang_FoF.GetTextOrDefault('strrsFelvesz' (* 'Felvesz' *) );
+  rsNagyitott_nezet := siLang_FoF.GetTextOrDefault('strrsNagyitott_nezet' (* ' NAGYÍTOTT NÉZETE' *) );
+  rsMoxaOK := siLang_FoF.GetTextOrDefault('strrsMoxaOK' (* 'Mérleg IP OK' *) );
+  rsMoxaOlvasasiHiba := siLang_FoF.GetTextOrDefault('strrsMoxaOlvasasiHiba' (* 'Mérleg IP olvasási hiba!' *) );
+  rsMoxaHiba := siLang_FoF.GetTextOrDefault('strrsMoxaHiba' (* 'Mérleg IP hiba!' *) );
+  rsMoxaTeszt := siLang_FoF.GetTextOrDefault('strrsMoxaTeszt' (* 'Mérleg IP teszt' *) );
+  rsFeltolt := siLang_FoF.GetTextOrDefault('strrsFeltolt' (* 'Szeretné most feltölteni a mérlegjegyeket?' *) );
+  rsAdjaMegME := siLang_FoF.GetTextOrDefault('strrsAdjaMegME' (* 'Adja meg a mértékegységet!' *) );
+  rsKodotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsKodotMegKellAdni' (* 'Adja meg a kódot!' *) );
+  rsKod := siLang_FoF.GetTextOrDefault('strrsKod' (* 'Kód' *) );
+  rsFolytatja := siLang_FoF.GetTextOrDefault('strrsFolytatja' (* 'Folytatja?' *) );
+  rsEztATermeketMarFelvette := siLang_FoF.GetTextOrDefault('strrsEztATermeketMarFelvette' (* 'Ezt a terméket már felvitte a tételek közé!' *) );
+  rsAdjaMegAMennyisege := siLang_FoF.GetTextOrDefault('strrsAdjaMegAMennyisege' (* 'Adja meg a mennyiséget!' *) );
+  rsKiadoPartnerKeszlete := siLang_FoF.GetTextOrDefault('strrsKiadoPartnerKeszlete' (* 'A kiadó partner készlete kevesebb, mint a kiadandó mennyiség. Folytatja?' *) );
+  rsFogadoTarolotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsFogadoTarolotMegKellAdni' (* 'Válassza ki a fogadó tárolót!' *) );
+  rsFogadoPartnertMegKellAdni := siLang_FoF.GetTextOrDefault('strrsFogadoPartnertMegKellAdni' (* 'Válassza ki a fogadó partnert!' *) );
+  rsKiadoTarolotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsKiadoTarolotMegKellAdni' (* 'Válassza ki a kiadó tárolót!' *) );
+  rsKiadoPartnertMegKellAdni := siLang_FoF.GetTextOrDefault('strrsKiadoPartnertMegKellAdni' (* 'Válassza ki a kiadó partnert!' *) );
+  rsEloszorTeteltVigyenFel := siLang_FoF.GetTextOrDefault('strrsEloszorTeteltVigyenFel' (* 'Elõször vigyen fel tételeket!' *) );
+  rsEzANevMarFoglalt := siLang_FoF.GetTextOrDefault('strrsEzANevMarFoglalt' (* 'Ez a név már foglalt!' *) );
+  rsEzAKodMarFoglalt := siLang_FoF.GetTextOrDefault('strrsEzAKodMarFoglalt' (* 'Ez a kód már foglalt!' *) );
+  rsTelepulestMegKellAdni := siLang_FoF.GetTextOrDefault('strrsTelepulestMegKellAdni' (* 'Adja meg a települést!' *) );
+  rsIrszetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsIrszetMegKellAdni' (* 'Adja meg az irányítószámot!' *) );
+  rsNevetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsNevetMegKellAdni' (* 'Adja meg a nevet!' *) );
+  rsHibasAdoszam := siLang_FoF.GetTextOrDefault('strrsHibasAdoszam' (* 'Hibás adószám!' *) );
+  rsBiztosanTorli := siLang_FoF.GetTextOrDefault('strrsBiztosanTorli' (* 'Biztosan törli?' *) );
+  rsMegsem := siLang_FoF.GetTextOrDefault('strrsMegsem' (* 'Mégsem' *) );
+  rsNem := siLang_FoF.GetTextOrDefault('strrsNem' (* 'Nem' *) );
+  rsIgen := siLang_FoF.GetTextOrDefault('strrsIgen' (* 'Igen' *) );
+  rsTablaNincsZarolva := siLang_FoF.GetTextOrDefault('strrsTablaNincsZarolva' (* 'Tábla NINCS zárolva!' *) );
+  rsTablaZarolva := siLang_FoF.GetTextOrDefault('strrsTablaZarolva' (* 'Tábla zárolva!' *) );
+  rsHibasPeldanyszam := siLang_FoF.GetTextOrDefault('strrsHibasPeldanyszam' (* 'Hibás példányszám!' *) );
+  rsKezi := siLang_FoF.GetTextOrDefault('strrsKezi' (* 'Kézi' *) );
+  rsPotkocsiRendszamatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsPotkocsiRendszamatMegKellAdni' (* 'A pótkocsi rendszámot meg kell adni!' *) );
+  rsRendszamokElternek := siLang_FoF.GetTextOrDefault('strrsRendszamokElternek' (* 'A rendszámok eltérnek! Folytatja?' *) );
+  rsAdjaMegAFuvarozot := siLang_FoF.GetTextOrDefault('strrsAdjaMegAFuvarozot' (* 'Adja meg a fuvarozót!' *) );
+  rsMarKiVanJelolveKetJarmu := siLang_FoF.GetTextOrDefault('strrsMarKiVanJelolveKetJarmu' (* 'Már ki van jelölve két jármû vagy folytatásban van!' *) );
+  rsNemVoltMentes := siLang_FoF.GetTextOrDefault('strrsNemVoltMentes' (* 'Nem volt mentés! Biztosan kilép?' *) );
+  rsElaszolasbanegyTermek := siLang_FoF.GetTextOrDefault('strrsElaszolasbanegyTermek' (* 'Egy elszámolásban csak egy termék szerepelhet!' *) );
+  rsElaszolasbanegyPartner := siLang_FoF.GetTextOrDefault('strrsElaszolasbanegyPartner' (* 'Egy elszámolásban csak egy partner szerepelhet!' *) );
+  rsMerlegjegySzerepelAzElszamolasban := siLang_FoF.GetTextOrDefault('strrsMerlegjegySzerepelAzElszamolasban' (* 'Ez a mérlegjegy már szerepel ebben az elszámolásban!' *) );
+  rsBiztosanTorliElszamolasbol := siLang_FoF.GetTextOrDefault('strrsBiztosanTorliElszamolasbol' (* 'Biztisan törli az elszámolásból?' *) );
+  rsStornozza := siLang_FoF.GetTextOrDefault('strrsStornozza' (* 'Biztosan sztornózza?' *) );
+  rsTermekEgysegaraValtozott := siLang_FoF.GetTextOrDefault('strrsTermekEgysegaraValtozott' (* 'A termék egységára megváltozott. Módosítja a mérlegjegyen?' *) );
+  rsBeszallito := siLang_FoF.GetTextOrDefault('strrsBeszallito' (* 'Beszállító:' *) );
+  rsErtekesito := siLang_FoF.GetTextOrDefault('strrsErtekesito' (* 'Értékesítõ:' *) );
+  rsMegrendelo := siLang_FoF.GetTextOrDefault('strrsMegrendelo' (* 'Megrendelõ:' *) );
+  rsFuvarozo := siLang_FoF.GetTextOrDefault('strrsFuvarozo' (* 'Fuvarozó:' *) );
+  rsSzallito := siLang_FoF.GetTextOrDefault('strrsSzallito' (* 'Szállító:' *) );
+  rsAtado := siLang_FoF.GetTextOrDefault('strrsAtado' (* 'Átadó:' *) );
+  rsElado := siLang_FoF.GetTextOrDefault('strrsElado' (* 'Eladó:' *) );
+  rsVevo := siLang_FoF.GetTextOrDefault('strrsVevo' (* 'Vevõ:' *) );
+  rsAtvevo := siLang_FoF.GetTextOrDefault('strrsAtvevo' (* 'Átvevõ:' *) );
+  rsLevonandoTomegetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsLevonandoTomegetMegKellAdni' (* 'Adja meg a levonandó tömeget!' *) );
+  rsTarolotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsTarolotMegKellAdni' (* 'A tárolót meg kell adni!' *) );
+  rsMerlegkezelotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsMerlegkezelotMegKellAdni' (* 'A mérlegkezelõt meg kell adni!' *) );
+  rsNincsKivalasztvaKetMeres := siLang_FoF.GetTextOrDefault('strrsNincsKivalasztvaKetMeres' (* 'Nincs kiválasztva két mérés vagy nincs tára röhzített mérésnél!' *) );
+  rsRendszamotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsRendszamotMegKellAdni' (* 'A rendszámot meg kell adni!' *) );
+  rsMeresIranyatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsMeresIranyatMegKellAdni' (* 'A mérés irányát meg kell adni!' *) );
+  rsTermeketMegKellAdni := siLang_FoF.GetTextOrDefault('strrsTermeketMegKellAdni' (* 'A terméket meg kell adni!' *) );
+  rsMegKellAdni := siLang_FoF.GetTextOrDefault('strrsMegKellAdni' (* ' meg kell adni!' *) );
+  rsAz := siLang_FoF.GetTextOrDefault('strrsAz' (* 'A(z) ' *) );
+  rsBizonylatKibocsjtotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsBizonylatKibocsjtotMegKellAdni' (* 'A bizonylat kibocsájtót meg kell adni!' *) );
+  rsMerlegkezeloTorlese := siLang_FoF.GetTextOrDefault('strrsMerlegkezeloTorlese' (* 'Biztosan törli ezt a mérlegkezelõt?' *) );
+  rsMerlegkezeloMarLetezik := siLang_FoF.GetTextOrDefault('strrsMerlegkezeloMarLetezik' (* 'Ilyen mérlegkezelõ már létezik!' *) );
+  rsUjMerlegkezeloFelvitele := siLang_FoF.GetTextOrDefault('strrsUjMerlegkezeloFelvitele' (* 'Új mérlegkezelõ felvitele' *) );
+  rsMeresEredmenyeNulla := siLang_FoF.GetTextOrDefault('strrsMeresEredmenyeNulla' (* 'A mérés eredménye nem lehet 0!' *) );
+  rsJarmuNincsAMerlegen := siLang_FoF.GetTextOrDefault('strrsJarmuNincsAMerlegen' (* 'Az érzékelõk szerint a jármû nincs a mérlegen teljesen! A mérés nem engedélyezett!' *) );
+  rsBeallitasokMentve := siLang_FoF.GetTextOrDefault('strrsBeallitasokMentve' (* 'Beállítások mentve!' *) );
+  rsFelulIrBKeszlet := siLang_FoF.GetTextOrDefault('strrsFelulIrBKeszlet' (* 'Felülírja a "B" készletet?' *) );
+  rsFelulIrAKeszlet := siLang_FoF.GetTextOrDefault('strrsFelulIrAKeszlet' (* 'Felülírja az "A" készletet?' *) );
+  rsRendszamLekerM := siLang_FoF.GetTextOrDefault('strrsRendszamLekerM' (* 'Renszamleker m:' *) );
+  rsOlvasottCim := siLang_FoF.GetTextOrDefault('strrsOlvasottCim' (* 'Olvasott cím:' *) );
+  rsIOIrasiHiba := siLang_FoF.GetTextOrDefault('strrsIOIrasiHiba' (* 'IO írási hiba!' *) );
+  rsPLCIrasiiHiba := siLang_FoF.GetTextOrDefault('strrsPLCIrasiiHiba' (* 'PLC írási hiba!' *) );
+  rsErtek := siLang_FoF.GetTextOrDefault('strrsErtek' (* 'Érték: ' *) );
+  rsPLCOlvasasiHiba := siLang_FoF.GetTextOrDefault('strrsPLCOlvasasiHiba' (* 'PLC olvasási hiba!' *) );
+  rsPLCTeszt := siLang_FoF.GetTextOrDefault('strrsPLCTeszt' (* 'PLC teszt' *) );
+  rsPingTeszt := siLang_FoF.GetTextOrDefault('strrsPingTeszt' (* 'Ping teszt' *) );
+  rsIrtCim := siLang_FoF.GetTextOrDefault('strrsIrtCim' (* 'Írt cím' *) );
+  rsPLCPingHiba := siLang_FoF.GetTextOrDefault('strrsPLCPingHiba' (* 'PLC ping hiba!(P)' *) );
+  rsPLCKapcsolatiHiba := siLang_FoF.GetTextOrDefault('strrsPLCKapcsolatiHiba' (* 'PLC kapcsolati hiba!(R)' *) );
+  rsKamerNemElerheto := siLang_FoF.GetTextOrDefault('strrsKamerNemElerheto' (* 'Kamera nem elérhetõ!' *) );
+  rsJelszoModositva := siLang_FoF.GetTextOrDefault('strrsJelszoModositva' (* 'A jelszó módosítva.' *) );
+  rsAKetJelszoNemEgyezik := siLang_FoF.GetTextOrDefault('strrsAKetJelszoNemEgyezik' (* 'A két megadott jelszó nem egyezik!' *) );
+  rsIOKapcsolatiHiba := siLang_FoF.GetTextOrDefault('strrsIOKapcsolatiHiba' (* 'IO kapcsolati hiba!' *) );
+  rsErositseMegAzUjJelszavat := siLang_FoF.GetTextOrDefault('strrsErositseMegAzUjJelszavat' (* 'Erõsítse meg az új jelszavát' *) );
+  rsJelszo := siLang_FoF.GetTextOrDefault('strrsJelszo' (* 'Jelszó' *) );
+  rsAdjaMegAzUjJelszavat := siLang_FoF.GetTextOrDefault('strrsAdjaMegAzUjJelszavat' (* 'Adja meg az új jelszavát' *) );
+  rsAdjaMegAJelenlegiJelszavat := siLang_FoF.GetTextOrDefault('strrsAdjaMegAJelenlegiJelszavat' (* 'Adja meg a jelenlegi jelszavát ' *) );
+  rsKilepesFolyamatban := siLang_FoF.GetTextOrDefault('strrsKilepesFolyamatban' (* 'kilépés folyamatban...' *) );
+  rsPluginMappaHianyzik := siLang_FoF.GetTextOrDefault('strrsPluginMappaHianyzik' (* 'Plugin mappa hiányzik az IP kamerához!' *) );
+  rsRendszamLampaIndul := siLang_FoF.GetTextOrDefault('strrsRendszamLampaIndul' (* 'RendszamLampa indul' *) );
+  rsAHivoszamKijelzoPortNincsBeallitva := siLang_FoF.GetTextOrDefault('strrsAHivoszamKijelzoPortNincsBeallitva' (* 'A hívószám kijelzõ port nincs beállítva!' *) );
+  rsAKijelzoPortNincsBeallitva := siLang_FoF.GetTextOrDefault('strrsAKijelzoPortNincsBeallitva' (* 'A kijelzõ port nincs beállítva!' *) );
+  rsNemTalalhato := siLang_FoF.GetTextOrDefault('strrsNemTalalhato' (* ' nem található' *) );
+  rsKartya := siLang_FoF.GetTextOrDefault('strrsKartya' (* 'Kártya' *) );
+  rsKamerakepBetolteseSikertelen := siLang_FoF.GetTextOrDefault('strrsKamerakepBetolteseSikertelen' (* 'Kamerakép betöltése sikertelen!' *) );
+  rsElokep2Szunetel := siLang_FoF.GetTextOrDefault('strrsElokep2Szunetel' (* 'Élõkép(2) SZÜNETEL' *) );
+  rsElokep2Folyamatos := siLang_FoF.GetTextOrDefault('strrsElokep2Folyamatos' (* 'Élõkép(2) FOLYAMATOS' *) );
+  rsElokep1Szunetel := siLang_FoF.GetTextOrDefault('strrsElokep1Szunetel' (* 'Élõkép(1) SZÜNETEL' *) );
+  rsElokep1Folyamatos := siLang_FoF.GetTextOrDefault('strrsElokep1Folyamatos' (* 'Élõkép(1) FOLYAMATOS' *) );
+  rsKliensHiba := siLang_FoF.GetTextOrDefault('strrsKliensHiba' (* 'Kliens hiba: ' *) );
+  rsCsatlakoztatva := siLang_FoF.GetTextOrDefault('strrsCsatlakoztatva' (* 'Csatlakoztatva: ' *) );
+  rsEbbolAMeresbolMarKeszultMjegy := siLang_FoF.GetTextOrDefault('strrsEbbolAMeresbolMarKeszultMjegy' (* 'Ebbõl a mérésbõl már készült mérlegjegy!' *) );
+  rsFelhasznaloTorlese := siLang_FoF.GetTextOrDefault('strrsFelhasznaloTorlese' (* 'Biztosan törli ezt a felhasználót?' *) );
+  rsFelhasznaloModositas := siLang_FoF.GetTextOrDefault('strrsFelhasznaloModositas' (* 'Felhasználó módosítása' *) );
+  rsFelhasznaloLetrehozva := siLang_FoF.GetTextOrDefault('strrsFelhasznaloLetrehozva' (* 'Felhasználó létrehozva. Jelszó: proba' *) );
+  rsFelhasznaloMarLetezik := siLang_FoF.GetTextOrDefault('strrsFelhasznaloMarLetezik' (* 'Ilyen felhasználó már létezik!' *) );
+  rsAdjaMegANevet := siLang_FoF.GetTextOrDefault('strrsAdjaMegANevet' (* 'Adja meg a nevet:' *) );
+  rsUjFelhasznaloFelvitele := siLang_FoF.GetTextOrDefault('strrsUjFelhasznaloFelvitele' (* 'Új felhasználó felvitele' *) );
+  rsNincsJogosultsaga := siLang_FoF.GetTextOrDefault('strrsNincsJogosultsaga' (* 'Ehhez nincs jogosultsága' *) );
+  rsLerakVarosHibas := siLang_FoF.GetTextOrDefault('strrsLerakVarosHibas' (* 'Hibás a lerakodási cég városa!' *) );
+  rsLerakIrszHibas := siLang_FoF.GetTextOrDefault('strrsLerakIrszHibas' (* 'Hibás a lerakodási cég irányítószáma!' *) );
+  rsLerakOrszagatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsLerakOrszagatMegKellAdni' (* 'A lerakodási cég országát meg kell adni!' *) );
+  rsLerakAdoszamaHibas := siLang_FoF.GetTextOrDefault('strrsLerakAdoszamaHibas' (* 'Hibás a lerakodási cég adószáma!' *) );
+  rsLerakCegetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsLerakCegetMegKellAdni' (* 'A lerakodási céget meg kell adni!' *) );
+  rsFelrakVarosHibas := siLang_FoF.GetTextOrDefault('strrsFelrakVarosHibas' (* 'Hibás a felrakodási cég városa' *) );
+  rsFelrakAdoszamaHibas := siLang_FoF.GetTextOrDefault('strrsFelrakAdoszamaHibas' (* 'Hibás a felrakodási cég adószáma!' *) );
+  rsFelrakOrszagatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsFelrakOrszagatMegKellAdni' (* 'A felrakodási cég országát meg kell adni!' *) );
+  rsFelrakIrszHibas := siLang_FoF.GetTextOrDefault('strrsFelrakIrszHibas' (* 'Hibás a felrakodási cég irányítószáma!' *) );
+  rsFelrakCegetegKellAdni := siLang_FoF.GetTextOrDefault('strrsFelrakCegetegKellAdni' (* 'A felrakodási céget meg kell adni!' *) );
+  rsVevoCimetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsVevoCimetMegKellAdni' (* 'A vevõ címét meg kell adni!' *) );
+  rsVevoOrszagatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsVevoOrszagatMegKellAdni' (* 'A vevõ országát meg kell adni!' *) );
+  rsVevoAdoszamaHibas := siLang_FoF.GetTextOrDefault('strrsVevoAdoszamaHibas' (* 'Hiás a vevõ adószáma!' *) );
+  rsVevotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsVevotMegKellAdni' (* 'A vevõt meg kell adni!' *) );
+  rsSzallitoCimetMegKellAdni := siLang_FoF.GetTextOrDefault('strrsSzallitoCimetMegKellAdni' (* 'A szállító címét meg kell adni!' *) );
+  rsSzallitoOrszagatMegKellAdni := siLang_FoF.GetTextOrDefault('strrsSzallitoOrszagatMegKellAdni' (* 'A szállító országát meg kell adni!' *) );
+  rsSzallitoAdoszamaHibas := siLang_FoF.GetTextOrDefault('strrsSzallitoAdoszamaHibas' (* 'Hibás a szállító adószáma' *) );
+  rsSzalliotMegKellAdni := siLang_FoF.GetTextOrDefault('strrsSzalliotMegKellAdni' (* 'A szállítót meg kell adni!' *) );
+  rsHibastermekVTSZ := siLang_FoF.GetTextOrDefault('strrsHibastermekVTSZ' (* 'Hibás a termék VTSZ száma!' *) );
+  rsEzaTermekmerszerepeldijszabkat := siLang_FoF.GetTextOrDefault('strrsEzaTermekmerszerepeldijszabkat' (* 'Ez a termék már szerepel ebben a díjszabás kategóriában!' *) );
+  rsHibasJelszo := siLang_FoF.GetTextOrDefault('strrsHibasJelszo' (* 'Hibás jelszó' *) );
+  rsHiba := siLang_FoF.GetTextOrDefault('strrsHiba' (* 'Hiba' *) );
+  rsFrissites := siLang_FoF.GetTextOrDefault('strrsFrissites' (* 'A program frissítés miatt újraindul' *) );
+  rsBejelentkezve := siLang_FoF.GetTextOrDefault('strrsBejelentkezve' (* 'Bejelentkezve: ' *) );
+
 end;
 
 procedure TFoF.Lampakapcs(Melyik, Mire: integer);
@@ -4397,7 +4544,7 @@ begin
             FoF.lampakapcs(3, Lampa_Zold);
           if FoF.bemenet_lekerdezes('M' + thmerleg.ToString, 'LAMPA4') = Lampa_Piros then
             FoF.lampakapcs(4, Lampa_Zold);
-           
+
         end;
 
       end
@@ -4810,4 +4957,5 @@ begin
 end;
 
 end.
+
 
