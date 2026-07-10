@@ -1,0 +1,1695 @@
+﻿
+[Captions]
+"String ID:",Hungarian,English,Romanian
+TAF.fdgxscrptdlg1,"FireDAC Processing","FireDAC Processing","FireDAC Processing"
+TAF.ModScriptDialog,"FireDAC Processing","FireDAC Processing","FireDAC Processing"
+TBelepF.Button1,Kilépés,Exit,Ieșire
+TBelepF.TBelepF,Belépés,Login,Autentificare
+TDemotomegF.TDemotomegF,"Demó tömeg","Demo weight","Greutate demo"
+TDijakF.btnkilepes,Kilépés,Exit,Ieșire
+TDijakF.Label1,"Díj neve:","Fee name:","Denumire tarif:"
+TDijakF.Label2,Ár:,Price:,Preț:
+TDijakF.TDijakF,Dijak,Fees,Tarife
+Tdijszab_termekF.btnkilep,Kilépés,Exit,Ieșire
+Tdijszab_termekF.Label1,Megnevezés:,Description:,Denumire:
+Tdijszab_termekF.Label2,"Tárolási díj:","Storage fee:","Tarif depozitare:"
+Tdijszab_termekF.Label3,"Betárolási díj:","Intake fee:","Tarif intrare:"
+Tdijszab_termekF.Label4,"Kitárolási díj:","Outtake fee:","Tarif ieșire:"
+Tdijszab_termekF.Label5,"Szárítási díj:","Drying fee:","Tarif uscare:"
+Tdijszab_termekF.Label6,"Tisztítási díj:","Cleaning fee:","Tarif curățare:"
+Tdijszab_termekF.Label7,"Szállítási díj:","Transport fee:","Tarif transport:"
+Tdijszab_termekF.Tdijszab_termekF,"Kategóriához tartozó termék díjszabások","Product fee rates for the category","Tarifele produselor din categorie"
+TdijszabF.btndijsza_termek,"Kategóriához tartozó termékek díjszabásai","Fee rates of products in the category","Tarifele produselor din categorie"
+TdijszabF.btnkilep,Kilépés,Exit,Ieșire
+TdijszabF.Label1,Katergória:,Category:,Categorie:
+TdijszabF.Label2,"Tárolási díj:","Storage fee:","Tarif depozitare:"
+TdijszabF.Label3,"Betárolási díj:","Intake fee:","Tarif intrare:"
+TdijszabF.Label4,"Kitárolási díj:","Outtake fee:","Tarif ieșire:"
+TdijszabF.Label5,"Szárítási díj:","Drying fee:","Tarif uscare:"
+TdijszabF.Label6,"Tisztítási díj:","Cleaning fee:","Tarif curățare:"
+TdijszabF.Label7,"Szállítási díj:","Transport fee:","Tarif transport:"
+TdijszabF.TdijszabF,"Díjszabási kategóriák","Pricing categories","Categorii de tarifare"
+TDmEkaer.ScriptDialogMySQL,"MySQL adatbázis létrehozása","Create MySQL database","Creare bază de date MySQL"
+TFelhaszF.Button1,Kilépés,Exit,Ieșire
+TFelhaszF.Button2,Új,New,Nou
+TFelhaszF.Button3,Módosít,Modify,Modificare
+TFelhaszF.Button4,Töröl,Delete,Ștergere
+TFelhaszF.Button5,"Jelszó módosítása","Change password","Schimbare parolă"
+TFelhaszF.Panel1,Panel1,Panel1,Panel1
+TFelhaszF.TFelhaszF,Felhasználók,Users,Utilizatori
+TFoF.alapbe_m,"Alap beállítások","Basic settings","Setări de bază"
+TFoF.Alaphardveresbelltsok1,"Alap hardveres beállítások","Basic hardware settings","Setări hardware de bază"
+TFoF.Antheratrzsimport1,"Anthera törzs import","Anthera master data import","Import date de bază Anthera"
+TFoF.Anyagok1,Termékek,Products,Produse
+TFoF.Belltsok1,Beállítások,Settings,Setări
+TFoF.btn1,btn1,btn1,btn1
+TFoF.btn2,btn2,btn2,btn2
+TFoF.btn3,btn3,btn3,btn3
+TFoF.btn4,btn4,btn4,btn4
+TFoF.btnElso,"Első gomb","First button","Primul buton"
+TFoF.btnKamerakep,"Kamera kép","Camera image","Imagine cameră"
+TFoF.btnMeres,Mérés,Weighing,Cântărire
+TFoF.btnMeresmodositas,"Mérés módosítás","Modify weighing","Modificare cântărire"
+TFoF.btnnagykamkep,"NAGYÍTOTT NÉZET","ZOOMED VIEW","VEDERE MĂRITĂ"
+TFoF.btnTorles,Törlés,Delete,Ștergere
+TFoF.btnnyelv,Nyelv/Language,Language,Limbă
+TFoF.cam0,"Kamera 1","Camera 1","Camera 1"
+TFoF.cam1,"Kamera 2","Camera 2","Camera 2"
+TFoF.cam2,"Kamera 3","Camera 3","Camera 3"
+TFoF.cam3,"Kamera 4","Camera 4","Camera 4"
+TFoF.cam4,"Kamera 5","Camera 5","Camera 5"
+TFoF.cam5,"Kamera 6","Camera 6","Camera 6"
+TFoF.chkToroltek_mutatasa,"Töröltek mutatása","Show deleted","Afișare șterse"
+TFoF.Djak1,"Alap díjak","Basic fees","Tarife de bază"
+TFoF.Djszabsikategrik1,"Díjszabási kategóriák","Pricing categories","Categorii de tarifare"
+TFoF.Felhasznlk1,Felhasználók,Users,Utilizatori
+TFoF.Felhasznlkkarbantartsa1,"Felhasználók karbantartása","User maintenance","Întreținere utilizatori"
+TFoF.Felhasznlvlts1,"Felhasználó váltás","Switch user","Schimbare utilizator"
+TFoF.Forgalom1,Forgalom,Traffic,Trafic
+TFoF.Gngylegek1,Göngyölegek,Packagings,Ambalaje
+TFoF.Hardverbelltsok1,"Hardver beállítások","Hardware settings","Setări hardware"
+TFoF.Import1,Import,Import,Import
+TFoF.ipcamPanel,"Kamera nem elérhető","Camera not available","Camera nu este disponibilă"
+TFoF.j1,Új,New,Nou
+TFoF.kartyak_m,Kártyák,Cards,Carduri
+TFoF.Keress1,Keresés,Search,Căutare
+TFoF.Kilps1,Kilépés,Exit,Ieșire
+TFoF.KISorompnyitinfrahiba1,"KI Sorompó nyitó infra hiba","OUT barrier opening infra error","Eroare infraroșu deschidere barieră IEȘIRE"
+TFoF.Kpek1,Képek,Images,Imagini
+TFoF.Kszlet1,Készlet,Stock,Stoc
+TFoF.Label1,"Kezdő dátum:","Start date:","Data de început:"
+TFoF.Label2,"Befejező dátum:","End date:","Data de sfârșit:"
+TFoF.lbl1,"Első rendszám:","Front plate number:","Nr. înmatriculare față:"
+TFoF.lbl2,"Hátsó rendszám:","Rear plate number:","Nr. înmatriculare spate:"
+TFoF.lbl3,Lámpa:,Light:,Lampă:
+TFoF.lblFelirat1,lblFelirat1,lblFelirat1,lblFelirat1
+TFoF.lblFelirat2,lblFelirat2,lblFelirat2,lblFelirat2
+TFoF.lblFelirat3,lblFelirat3,lblFelirat3,lblFelirat3
+TFoF.lblFelirat4,lblFelirat4,lblFelirat4,lblFelirat4
+TFoF.lblFelirat5,lblFelirat5,lblFelirat5,lblFelirat5
+TFoF.lblFelirat6,lblFelirat6,lblFelirat6,lblFelirat6
+TFoF.lblFelirat7,lblFelirat7,lblFelirat7,lblFelirat7
+TFoF.lblFelirat8,lblFelirat8,lblFelirat8,lblFelirat8
+TFoF.lblKep1,"Nincs kép","No image","Fără imagine"
+TFoF.lblKep2,"Nincs kép","No image","Fără imagine"
+TFoF.lblRendszam_elso,lblRendszam_elso,lblRendszam_elso,lblRendszam_elso
+TFoF.lblRendszam_hatso,lblRendszam_hatso,lblRendszam_hatso,lblRendszam_hatso
+TFoF.lblThElo1,lblThElo1,lblThElo1,lblThElo1
+TFoF.lblThElo2,lblThElo2,lblThElo2,lblThElo2
+TFoF.lblThElo3,lblThElo3,lblThElo3,lblThElo3
+TFoF.lblThElo4,lblThElo4,lblThElo4,lblThElo4
+TFoF.lblThRendszam1,lblThRendszam1,lblThRendszam1,lblThRendszam1
+TFoF.lblThRendszam2,lblThRendszam2,lblThRendszam2,lblThRendszam2
+TFoF.Lista1,Lista,List,Listă
+TFoF.Listk1,Listák,Lists,Liste
+TFoF.mnSzablyosmrlegentartozkodsfigyels1,"Szabályosmérlegen tartozkodás figyelés (INFRA5,INFRA6)","Monitoring of proper position on the scale (INFRA5,INFRA6)","Monitorizare poziționare corectă pe cântar (INFRA5,INFRA6)"
+TFoF.mozgasok_m,"Mozgások listája","List of movements","Lista mișcărilor"
+TFoF.Mrlegelseklistja1,"Mérlegelések listája","List of weighings","Lista cântăririlor"
+TFoF.Mrlegjegyeklistja1,"Mérlegjegyek listája","List of weighing tickets","Lista bonurilor de cântar"
+TFoF.Mrlegkezelk1,Mérlegkezelők,"Scale operators","Operatori cântar"
+TFoF.Panel3,Panel3,Panel3,Panel3
+TFoF.Partnerek1,Partnerek,Partners,Parteneri
+TFoF.PLCsorosportbellts1,"PLC soros port beállítás","PLC serial port settings","Setări port serial PLC"
+TFoF.Prostottmrsek1,"Párosított mérések","Paired weighings","Cântăriri asociate"
+TFoF.pusok1,Típusok,Types,Tipuri
+TFoF.Raktrkziszlltlevl1,"Raktárközi szállítólevél","Inter-warehouse delivery note","Aviz de transfer între depozite"
+TFoF.Rendszmok1,Rendszámok,"Plate numbers","Numere de înmatriculare"
+TFoF.rolk1,Tárolók,Storages,Depozite
+TFoF.rzsadatok1,Törzsadatok,"Master data","Date de bază"
+TFoF.Sajtjelszmdostsa1,"Saját jelszó módosítása","Change my password","Schimbarea parolei proprii"
+TFoF.sbtnFolytatas,"Mérlegjegy folytatása","Continue weighing ticket","Continuare bon de cântar"
+TFoF.sbtnLista,"Mérések listája","List of weighings","Lista cântăririlor"
+TFoF.sbtnUjmerlegjegy,"Új mérlegjegy","New weighing ticket","Bon de cântar nou"
+TFoF.Sorompnyitinfrahiba1,"BE Sorompó nyitó infra hiba","IN barrier opening infra error","Eroare infraroșu deschidere barieră INTRARE"
+TFoF.Sorosportbellts1,"Soros port beállítás","Serial port settings","Setări port serial"
+TFoF.Szoftverbelltsok1,"Szoftver beállítások","Software settings","Setări software"
+TFoF.tbForgalom,Forgalom,Traffic,Trafic
+TFoF.tbIdeiglenes,Ideiglenes,Temporary,Temporar
+TFoF.teszt_m,Teszt,Test,Test
+TFoF.TFoF,Winporta,Winporta,Winporta
+TFoF.tomeg_levon_szovegek_m,"Tömeg levonási szövegek","Weight deduction texts","Texte de scădere a greutății"
+TFoF.tulaj_m,Tulajdonosok,Owners,Proprietari
+TForgalomF.btnKilepes,Kilépés,Exit,Ieșire
+TForgalomF.Button1,"Mérlegjegy készítés","Create weighing ticket","Creare bon de cântar"
+TForgalomF.Button2,Export,Export,Export
+TForgalomF.Label1,"Kezdő dátum:","Start date:","Data de început:"
+TForgalomF.Label2,"Befejező dátum:","End date:","Data de sfârșit:"
+TForgalomF.TForgalomF,Forgalom,Traffic,Trafic
+TKeszletF.btnexport,Export,Export,Export
+TKeszletF.btnkeszlet_torol,"Készlet törlése","Delete stock","Ștergere stoc"
+TKeszletF.btnKilepes,Kilépés,Exit,Ieșire
+TKeszletF.btnNyomtatas,Nyomtatás,Print,Tipărire
+TKeszletF.chknullas,"Nullás és negatív készlet elrejtése","Hide zero and negative stock","Ascundere stoc zero și negativ"
+TKeszletF.chkpartnercsop,"Partnerre csoportosít","Group by partner","Grupare după partener"
+TKeszletF.chktort,"Tört szemek","Broken kernels","Boabe sparte"
+TKeszletF.Label1,Tároló:,Storage:,Depozit:
+TKeszletF.Label3,Termék:,Product:,Produs:
+TKeszletF.Label5,Partner:,Partner:,Partener:
+TKeszletF.Panel2,Panel2,Panel2,Panel2
+TKeszletF.TKeszletF,Készlet,Stock,Stoc
+TMeres_MerlegjegyenF.btnelfogadas,Elfogadás,Accept,Acceptare
+TMeres_MerlegjegyenF.btnKilepes,Kilépés,Exit,Ieșire
+TMeres_MerlegjegyenF.btnMeres,Mérés,Weighing,Cântărire
+TMeres_MerlegjegyenF.chkelso_kezi,Kézi,Manual,Manual
+TMeres_MerlegjegyenF.chkKezimeres,"Kézi mérés","Manual weighing","Cântărire manuală"
+TMeres_MerlegjegyenF.chkmasodik_kezi,Kézi,Manual,Manual
+TMeres_MerlegjegyenF.Label12,"Második mérés:","Second weighing:","A doua cântărire:"
+TMeres_MerlegjegyenF.Label2,"Első mérés:","First weighing:","Prima cântărire:"
+TMeres_MerlegjegyenF.Label4,kg,kg,kg
+TMeres_MerlegjegyenF.Label5,kg,kg,kg
+TMeres_MerlegjegyenF.Label6,Tömeg:,Weight:,Greutate:
+TMeres_MerlegjegyenF.lblelsodat,lblElsodat,lblElsodat,lblElsodat
+TMeres_MerlegjegyenF.lblelsoido,lblElsoido,lblElsoido,lblElsoido
+TMeres_MerlegjegyenF.lblmasdat,lblMasdat,lblMasdat,lblMasdat
+TMeres_MerlegjegyenF.lblmasido,lblMasido,lblMasido,lblMasido
+TMeres_MerlegjegyenF.rgMeresszama,"Mérés száma","Weighing number","Numărul cântăririi"
+TMeres_MerlegjegyenF.rgMerlegszama,"Mérleg száma","Scale number","Numărul cântarului"
+TMeres_MerlegjegyenF.TMeres_MerlegjegyenF,"Mérés a mérlegjegyen","Weighing on the weighing ticket","Cântărire pe bonul de cântar"
+TMeresF.btnKilepes,Kilépés,Exit,Ieșire
+TMeresF.btnMentes,Mentés,Save,Salvare
+TMeresF.btnMeres1,"Mérés 1. mérleg","Weighing - scale 1","Cântărire - cântar 1"
+TMeresF.btnMeres2,"Mérés 2. mérleg","Weighing - scale 2","Cântărire - cântar 2"
+TMeresF.btnMeres3,"Mérés 3. mérleg","Weighing - scale 3","Cântărire - cântar 3"
+TMeresF.btnMeres4,"Mérés 4. mérleg","Weighing - scale 4","Cântărire - cântar 4"
+TMeresF.chkkezi,"Kézi mérés","Manual weighing","Cântărire manuală"
+TMeresF.Label6,Rendszám:,"Plate number:","Nr. înmatriculare:"
+TMeresF.Label7,"Rendszám 2:","Plate number 2:","Nr. înmatriculare 2:"
+TMeresF.Label9,Tömeg:,Weight:,Greutate:
+TMeresF.TMeresF,Mérés,Weighing,Cântărire
+TMerlegelesekF.btnKilepes,Kilépés,Exit,Ieșire
+TMerlegelesekF.TMerlegelesekF,MerlegelesekF,MerlegelesekF,MerlegelesekF
+TMermodF.btn1,"Termékek listája","List of products","Lista produselor"
+TMermodF.btnekaer,"EKÁER kérés","EKAER request","Cerere EKAER"
+TMermodF.btnlevon_szoveg,"Levonási szövegek","Deduction texts","Texte de scădere"
+TMermodF.btnMentes,Mentés,Save,Salvare
+TMermodF.btnTaramegadas,"Tára megadása","Enter tare","Introducere tară"
+TMermodF.btnNyomtatas,Nyomtatás,Print,Tipărire
+TMermodF.Button1,"Partnerek listája","List of partners","Lista partenerilor"
+TMermodF.Button2,"Mérlegkezelők listája","List of scale operators","Lista operatorilor de cântar"
+TMermodF.Button3,Tárolók,Storages,Depozite
+TMermodF.Button4,Mégsem,Cancel,Anulare
+TMermodF.chkelso_kezi,Kézi,Manual,Manual
+TMermodF.chkkerekites,Kerekítés,Rounding,Rotunjire
+TMermodF.chkkuk,"kukorica számítások alkalmazása","apply corn calculations","aplicare calcule porumb"
+TMermodF.chkmasodik_kezi,Kézi,Manual,Manual
+TMermodF.chknincspot,"Nincs pótkocsi","No trailer","Fără remorcă"
+TMermodF.chkpartnerekegy,"A két partner megegyező","The two partners are the same","Cei doi parteneri sunt identici"
+TMermodF.chkrogzitett,"Rögzített tárás","Fixed tare","Tară fixă"
+TMermodF.Label1,Termék:,Product:,Produs:
+TMermodF.Label10,Tára:,Tare:,Tară:
+TMermodF.Label11,Nettó:,Net:,Net:
+TMermodF.Label12,"Második mérés:","Second weighing:","A doua cântărire:"
+TMermodF.Label13,Mérlegkezelő,"Scale operator","Operator cântar"
+TMermodF.Label16,Sikér:,Gluten:,Gluten:
+TMermodF.Label17,"Alap nedv.:","Base moist.:","Umid. bază:"
+TMermodF.Label18,Nedv.:,Moist.:,Umid.:
+TMermodF.Label19,Olaj:,Oil:,Ulei:
+TMermodF.Label2,"Első mérés:","First weighing:","Prima cântărire:"
+TMermodF.Label20,Tisztaság:,Purity:,Puritate:
+TMermodF.Label21,Hektól.:,Hectol.:,Hectol.:
+TMermodF.Label22,Fehérje:,Protein:,Proteine:
+TMermodF.Label23,Esésszám:,"Falling number:","Indice de cădere:"
+TMermodF.Label24,"Tört szemek:","Broken kernels:","Boabe sparte:"
+TMermodF.Label26,"Búza minőség","Wheat quality","Calitate grâu"
+TMermodF.Label27,Tároló:,Storage:,Depozit:
+TMermodF.Label3,Irány:,Direction:,Direcție:
+TMermodF.Label4,Szállítólevél:,"Delivery note:","Aviz de însoțire:"
+TMermodF.Label6,Rendszám:,"Plate number:","Nr. înmatriculare:"
+TMermodF.Label7,"Rendszám 2:","Plate number 2:","Nr. înmatriculare 2:"
+TMermodF.Label8,Megjegyzés:,Note:,Observație:
+TMermodF.Label9,Brutto:,Gross:,Brut:
+TMermodF.lbl_tomeg_levon,"Tömeg levonás:","Weight deduction:","Scădere greutate:"
+TMermodF.lblegysegtomeg,"Egységtömeg: ","Unit weight: ","Greutate unitară: "
+TMermodF.lblekaer,"EKÁER: ","EKAER: ","EKAER: "
+TMermodF.lblelsodat,lblelsodat,lblelsodat,lblelsodat
+TMermodF.lblelsoido,lblelsoido,lblelsoido,lblelsoido
+TMermodF.lblfuvarozo,Fuvarozó:,Carrier:,Transportator:
+TMermodF.lblkepnev1,lblkepnev1,lblkepnev1,lblkepnev1
+TMermodF.lblkepnev2,lblkepnev2,lblkepnev2,lblkepnev2
+TMermodF.lblkepnev3,lblkepnev3,lblkepnev3,lblkepnev3
+TMermodF.lblkepnev4,lblkepnev4,lblkepnev4,lblkepnev4
+TMermodF.lbllevonszoveg,"Tömeg levonási szöveg:","Weight deduction text:","Text scădere greutate:"
+TMermodF.lblmasdat,lblmasdat,lblmasdat,lblmasdat
+TMermodF.lblmasido,lblmasido,lblmasido,lblmasido
+TMermodF.lblMintaID,"Minta ID","Sample ID","ID probă"
+TMermodF.lblpartner,Partner:,Partner:,Partener:
+TMermodF.lblpartner2,"Partner 2:","Partner 2:","Partener 2:"
+TMermodF.lblsofor,Sofőr:,Driver:,Șofer:
+TMermodF.lblsorszam,lblsorszam,lblsorszam,lblsorszam
+TMermodF.lblszabalyos,lblszabalyos,lblszabalyos,lblszabalyos
+TMermodF.lblszar,"Szárzmazási hely:","Place of origin:","Loc de origine:"
+TMermodF.lblsznetto,Sz.Nettó:,"Calc. net:","Net calculat:"
+TMermodF.TMermodF,"Mérlegjegy módosítása","Modify weighing ticket","Modificare bon de cântar"
+TMjegyekF.btnelozmenyek,"Mérlegjegy előzményei","Weighing ticket history","Istoricul bonului de cântar"
+TMjegyekF.btnKilepes,Kilépés,Exit,Ieșire
+TMjegyekF.btnListanyomtatas,"Lista nyomtatás","Print list","Tipărire listă"
+TMjegyekF.btnModositas,Módosítás,Modify,Modificare
+TMjegyekF.btnStorno,Storno,Storno,Storno
+TMjegyekF.btntermenyszaritas,"Terményszárítás elszámolása","Grain drying settlement","Decontarea uscării cerealelor"
+TMjegyekF.btnUjranyomtatas,Újranyomtatás,Reprint,Retipărire
+TMjegyekF.Button1,"Elszámolás készítése","Create settlement","Creare decont"
+TMjegyekF.Button2,Mégsem,Cancel,Anulare
+TMjegyekF.Button4,Export,Export,Export
+TMjegyekF.Button6,"Mérlegjegy törlése az elszámolásból","Remove weighing ticket from settlement","Ștergere bon de cântar din decont"
+TMjegyekF.chkKepek,"Képek megjelenítése","Show images","Afișare imagini"
+TMjegyekF.chkstorno,"Stornó is látszik","Show cancelled too","Afișare și stornate"
+TMjegyekF.Label1,"Kezdő dátum:","Start date:","Data de început:"
+TMjegyekF.Label10,"Tisztítási díj:","Cleaning fee:","Tarif curățare:"
+TMjegyekF.Label11,"Szárítási díj:","Drying fee:","Tarif uscare:"
+TMjegyekF.Label12,"Tárolási díj:","Storage fee:","Tarif depozitare:"
+TMjegyekF.Label13,"Betárolási díj:","Intake fee:","Tarif intrare:"
+TMjegyekF.Label14,"Szállítási díj:","Transport fee:","Tarif transport:"
+TMjegyekF.Label15,"Kitárolási díj:","Outtake fee:","Tarif ieșire:"
+TMjegyekF.Label16,"Megjegyzés részletre szűrés:","Filter by note text:","Filtrare după textul observației:"
+TMjegyekF.Label2,"Befejező dátum:","End date:","Data de sfârșit:"
+TMjegyekF.Label27,Tároló:,Storage:,Depozit:
+TMjegyekF.Label3,Termék:,Product:,Produs:
+TMjegyekF.Label4,Be:,In:,Intrare:
+TMjegyekF.Label5,Partner:,Partner:,Partener:
+TMjegyekF.Label6,Ki:,Out:,Ieșire:
+TMjegyekF.Label7,Irány:,Direction:,Direcție:
+TMjegyekF.Label8,Rendszámok:,"Plate numbers:","Numere de înmatriculare:"
+TMjegyekF.Label9,"Partner 2:","Partner 2:","Partener 2:"
+TMjegyekF.lblbizki,"Bizonylat kibocsájtó:","Document issuer:","Emitent document:"
+TMjegyekF.lblKep1,"Nincs kép","No image","Fără imagine"
+TMjegyekF.lblKep2,"Nincs kép","No image","Fără imagine"
+TMjegyekF.Panel4,Panel4,Panel4,Panel4
+TMjegyekF.tabKep1,"Kép 1","Image 1","Imagine 1"
+TMjegyekF.tabKep2,"Kép 2","Image 2","Imagine 2"
+TMjegyekF.tabKep3,"Kép 3","Image 3","Imagine 3"
+TMjegyekF.tabKep4,"Kép 4","Image 4","Imagine 4"
+TMjegyekF.termenyszaritasroll,"Terményszárítás elszámolása","Grain drying settlement","Decontarea uscării cerealelor"
+TMjegyekF.TMjegyekF,"Mérlegjegyek listája","List of weighing tickets","Lista bonurilor de cântar"
+TMjegyF.btn1,"Termékek listája","List of products","Lista produselor"
+TMjegyF.btnekaer,"EKÁER kérés","EKAER request","Cerere EKAER"
+TMjegyF.btnFolytatasos_mentes,"Mérlegjegy folytatása","Continue weighing ticket","Continuare bon de cântar"
+TMjegyF.btngongy,Göngyölegek,Packagings,Ambalaje
+TMjegyF.btnlevon_szoveg,"Levonási szövegek","Deduction texts","Texte de scădere"
+TMjegyF.btnMentes,"Mentés és lezárás","Save and close","Salvare și închidere"
+TMjegyF.btnMeres,Mérés,Weighing,Cântărire
+TMjegyF.btnMerlegkezelok_listaja,"Mérlegkezelők listája","List of scale operators","Lista operatorilor de cântar"
+TMjegyF.btnPartnerek_listaja,"Partnerek listája","List of partners","Lista partenerilor"
+TMjegyF.btnTaramegadas,"Tára megadása","Enter tare","Introducere tară"
+TMjegyF.btnTarolok_listaja,Tárolók,Storages,Depozite
+TMjegyF.btnNyomtatas,Nyomtatás,Print,Tipărire
+TMjegyF.chkelso_kezi,Kézi,Manual,Manual
+TMjegyF.chkidegen,"IDEGEN MÉRÉS","EXTERNAL WEIGHING","CÂNTĂRIRE EXTERNĂ"
+TMjegyF.chkkerekites,Kerekítés,Rounding,Rotunjire
+TMjegyF.chkkuk,"kukorica számítások alkalmazása","apply corn calculations","aplicare calcule porumb"
+TMjegyF.chkmasodik_kezi,Kézi,Manual,Manual
+TMjegyF.chknincspot,"Nincs pótkocsi","No trailer","Fără remorcă"
+TMjegyF.chkpartnerekegy,"A két partner megegyező","The two partners are the same","Cei doi parteneri sunt identici"
+TMjegyF.chkRogzitett,"Rögzített tárás","Fixed tare","Tară fixă"
+TMjegyF.Label1,Termék:,Product:,Produs:
+TMjegyF.Label10,Tára:,Tare:,Tară:
+TMjegyF.Label11,Nettó:,Net:,Net:
+TMjegyF.Label12,"Második mérés:","Second weighing:","A doua cântărire:"
+TMjegyF.Label13,Mérlegkezelő,"Scale operator","Operator cântar"
+TMjegyF.Label14,kg,kg,kg
+TMjegyF.Label15,kg,kg,kg
+TMjegyF.Label16,Sikér:,Gluten:,Gluten:
+TMjegyF.Label17,"Alap nedv.:","Base moist.:","Umid. bază:"
+TMjegyF.Label18,Nedv.:,Moist.:,Umid.:
+TMjegyF.Label19,Olaj:,Oil:,Ulei:
+TMjegyF.Label2,"Első mérés:","First weighing:","Prima cântărire:"
+TMjegyF.Label20,Tisztaság:,Purity:,Puritate:
+TMjegyF.Label21,Hektól.:,Hectol.:,Hectol.:
+TMjegyF.Label22,Fehérje:,Protein:,Proteine:
+TMjegyF.Label23,Esésszám:,"Falling number:","Indice de cădere:"
+TMjegyF.Label24,"Tört szemek:","Broken kernels:","Boabe sparte:"
+TMjegyF.Label26,"Búza minőség","Wheat quality","Calitate grâu"
+TMjegyF.Label27,Tároló:,Storage:,Depozit:
+TMjegyF.Label3,Irány:,Direction:,Direcție:
+TMjegyF.Label4,Szállítólevél/Számla:,"Delivery note/Invoice:",Aviz/Factură:
+TMjegyF.Label5,Tipus:,Type:,Tip:
+TMjegyF.Label6,Rendszám:,"Plate number:","Nr. înmatriculare:"
+TMjegyF.Label7,"Rendszám 2:","Plate number 2:","Nr. înmatriculare 2:"
+TMjegyF.Label8,Megjegyzés:,Note:,Observație:
+TMjegyF.Label9,Brutto:,Gross:,Brut:
+TMjegyF.lbl_tomeg_levon,"Tömeg levonás:","Weight deduction:","Scădere greutate:"
+TMjegyF.lblegysegtomeg,"Egységtömeg: ","Unit weight: ","Greutate unitară: "
+TMjegyF.lblekaer,"EKÁER: ","EKAER: ","EKAER: "
+TMjegyF.lblelsodat,lblElsodat,lblElsodat,lblElsodat
+TMjegyF.lblelsoido,lblElsoido,lblElsoido,lblElsoido
+TMjegyF.lblfuvarozo,Fuvarozó:,Carrier:,Transportator:
+TMjegyF.lblKep1,"Nincs kép","No image","Fără imagine"
+TMjegyF.lblKep2,"Nincs kép","No image","Fără imagine"
+TMjegyF.lblKep3,"Nincs kép","No image","Fără imagine"
+TMjegyF.lblKep4,"Nincs kép","No image","Fără imagine"
+TMjegyF.lbllevonszoveg,"Tömeg levonási szöveg:","Weight deduction text:","Text scădere greutate:"
+TMjegyF.lblmasdat,lblMasdat,lblMasdat,lblMasdat
+TMjegyF.lblmasido,lblMasido,lblMasido,lblMasido
+TMjegyF.lblMintaID,"Minta ID","Sample ID","ID probă"
+TMjegyF.lblpartner,Partner:,Partner:,Partener:
+TMjegyF.lblpartner2,"Partner 2:","Partner 2:","Partener 2:"
+TMjegyF.lblsofor,Sofőr:,Driver:,Șofer:
+TMjegyF.lblSorszam,Sorszám:,"Serial number:","Nr. de ordine:"
+TMjegyF.lblszar,"Szárzmazási hely:","Place of origin:","Loc de origine:"
+TMjegyF.lblsznetto,Sz.Nettó:,"Calc. net:","Net calculat:"
+TMjegyF.TMjegyF,"Mérlegjegy készítés","Create weighing ticket","Creare bon de cântar"
+TMjegyF.tsKep1,"Kép 1","Image 1","Imagine 1"
+TMjegyF.tsKep2,"Kép 2","Image 2","Imagine 2"
+TMjegyF.tsKep3,"Kép 3","Image 3","Imagine 3"
+TMjegyF.tsKep4,"Kép 4","Image 4","Imagine 4"
+TMjegyF.tsOsszeskep,"Összes kép","All images","Toate imaginile"
+TNezetF.TNezetF,Előnézet,Preview,Previzualizare
+TNezetF.ToolButton1,ToolButton1,ToolButton1,ToolButton1
+TNezetF.ToolButton2,ToolButton2,ToolButton2,ToolButton2
+TNyomtatokF.TNyomtatokF,Nyomtatók,Printers,Imprimante
+TPartnerekF.bdchkMagansz,Magánszemély,"Private individual","Persoană fizică"
+TPartnerekF.btndijszab,"Dijszabás kategóriák","Pricing categories","Categorii de tarifare"
+TPartnerekF.btnKilepes,Kilépés,Exit,Ieșire
+TPartnerekF.Button1,Lezár,Lock,Blocare
+TPartnerekF.Button2,Ellenőrzés,Check,Verificare
+TPartnerekF.Button3,Felold,Unlock,Deblocare
+TPartnerekF.Label1,KÜJ:,KÜJ:,KÜJ:
+TPartnerekF.Label10,Adó.m.kód:,"Tax county code:","Cod județ fiscal:"
+TPartnerekF.Label2,KTJ:,KTJ:,KTJ:
+TPartnerekF.Label3,Épület:,Building:,Clădire:
+TPartnerekF.Label4,E-mail:,E-mail:,E-mail:
+TPartnerekF.Label5,Telefon:,Phone:,Telefon:
+TPartnerekF.Label6,"Helyrajzi szám:","Lot number:","Nr. topografic:"
+TPartnerekF.Label7,"Szűrés: ","Filter: ","Filtrare: "
+TPartnerekF.Label8,Adó.azon.jel:,"Tax ID:","Cod fiscal personal:"
+TPartnerekF.Label9,"Adó kód:","VAT code:","Cod TVA:"
+TPartnerekF.lbl1,Kód:,Code:,Cod:
+TPartnerekF.lbl10,Emelet:,Floor:,Etaj:
+TPartnerekF.lbl11,Ajtó:,Door:,Ușă:
+TPartnerekF.lbl12,"EU adószám:","EU VAT number:","Cod TVA UE:"
+TPartnerekF.lbl2,Név:,Name:,Nume:
+TPartnerekF.lbl3,Irányítószám:,"Postal code:","Cod poștal:"
+TPartnerekF.lbl4,Település:,City:,Localitate:
+TPartnerekF.lbl5,Kerület:,District:,District:
+TPartnerekF.lbl6,"Közterület neve:","Street name:","Nume stradă:"
+TPartnerekF.lbl7,"Közterület jellege:","Street type:","Tip stradă:"
+TPartnerekF.lbl8,Házszám:,"House number:","Număr casă:"
+TPartnerekF.lbl9,Lépcsőház:,Staircase:,Scară:
+TPartnerekF.lbldijszab,"Díjszabás kategória:","Pricing category:","Categorie de tarifare:"
+TPartnerekF.lblmire,Kód,Code,Cod
+TPartnerekF.tbLista,Lista,List,Listă
+TPartnerekF.tbReszlet,Részletek,Details,Detalii
+TPartnerekF.TPartnerekF,Partnerek,Partners,Parteneri
+Trak_szall_listF.btnkilepes,Kilépés,Exit,Ieșire
+Trak_szall_listF.btnnzomtatas,Újranyomtatás,Reprint,Retipărire
+Trak_szall_listF.btnstorno,Storno,Storno,Storno
+Trak_szall_listF.Button2,"Lista nyomtatás","Print list","Tipărire listă"
+Trak_szall_listF.chktort,"Tört szem","Broken kernels","Boabe sparte"
+Trak_szall_listF.Label1,"Kezdő dátum:","Start date:","Data de început:"
+Trak_szall_listF.Label10,Termék:,Product:,Produs:
+Trak_szall_listF.Label2,"Befejező dátum:","End date:","Data de sfârșit:"
+Trak_szall_listF.Label3,"Kiadó partner:","Issuing partner:","Partener expeditor:"
+Trak_szall_listF.Label4,"Kiadó tároló:","Issuing storage:","Depozit expeditor:"
+Trak_szall_listF.Label5,"Fogadó partner:","Receiving partner:","Partener destinatar:"
+Trak_szall_listF.Label6,"Fogadó tároló:","Receiving storage:","Depozit destinatar:"
+Trak_szall_listF.Trak_szall_listF,"Raktárközi szállítólevelek listája","List of inter-warehouse delivery notes","Lista avizelor de transfer între depozite"
+TRak_szallF.btnfelvesz,Felvesz,Add,Adăugare
+TRak_szallF.btnkilepes,Kilépés,Exit,Ieșire
+TRak_szallF.btnmentes,Mentés,Save,Salvare
+TRak_szallF.btnnyomtatas,Nyomtatás,Print,Tipărire
+TRak_szallF.Button2,"Tétel törlése","Delete item","Ștergere articol"
+TRak_szallF.chktort,"Tört szem","Broken kernels","Boabe sparte"
+TRak_szallF.Label1,"Példány szám:",Copies:,"Nr. de exemplare:"
+TRak_szallF.Label10,Termék:,Product:,Produs:
+TRak_szallF.Label2,Dátum:,Date:,Data:
+TRak_szallF.Label3,"Kiadó partner:","Issuing partner:","Partener expeditor:"
+TRak_szallF.Label4,"Kiadó tároló:","Issuing storage:","Depozit expeditor:"
+TRak_szallF.Label5,"Fogadó partner:","Receiving partner:","Partener destinatar:"
+TRak_szallF.Label6,"Fogadó tároló:","Receiving storage:","Depozit destinatar:"
+TRak_szallF.Label7,"Kiadó készlete","Issuer's stock","Stocul expeditorului"
+TRak_szallF.Label8,"Fogadó készlete:","Receiver's stock:","Stocul destinatarului:"
+TRak_szallF.Label9,Mennyiség:,Quantity:,Cantitate:
+TRak_szallF.TRak_szallF,"Raktárközi szállítólevél","Inter-warehouse delivery note","Aviz de transfer între depozite"
+TTermekekF.btnImport,Import,Import,Import
+TTermekekF.btnKilepes,Kilépés,Exit,Ieșire
+TTermekekF.DBCheckBox3,"Búza minőség","Wheat quality","Calitate grâu"
+TTermekekF.DBCheckBox5,"Esés szám","Falling number","Indice de cădere"
+TTermekekF.DBChkfeherje,Fehérje,Protein,Proteine
+TTermekekF.DBChkhekto,Hektó,Hectoliter,Hectolitru
+TTermekekF.dbchkkerekites,Kerekítés,Rounding,Rotunjire
+TTermekekF.DBChkKukorica,"Kukorica számítás","Corn calculation","Calcul porumb"
+TTermekekF.DBChknedv,Nedvesség,Moisture,Umiditate
+TTermekekF.DBChkolaj,Olaj,Oil,Ulei
+TTermekekF.DBChksiker,Sikér,Gluten,Gluten
+TTermekekF.DBChktisztasag,Tisztaság,Purity,Puritate
+TTermekekF.DBChktort,"Tört szemek","Broken kernels","Boabe sparte"
+TTermekekF.Label1,Itj/VTSZ:,Itj/VTSZ:,Itj/VTSZ:
+TTermekekF.Label2,Me.:,Unit:,U.M.:
+TTermekekF.Label3,Ár:,Price:,Preț:
+TTermekekF.Label4,Áfa:,VAT:,TVA:
+TTermekekF.Label5,"Egység tömeg:","Unit weight:","Greutate unitară:"
+TTermekekF.Label6,EWC/HAK:,EWC/HAK:,EWC/HAK:
+TTermekekF.Label7,"Szűrés: ","Filter: ","Filtrare: "
+TTermekekF.Label8,Tipus:,Type:,Tip:
+TTermekekF.lbl1,Kód:,Code:,Cod:
+TTermekekF.lbl2,Nev,Name,Nume
+TTermekekF.lblalapnedv,Alapnedvesség:,"Base moisture:","Umiditate de bază:"
+TTermekekF.lblmire,Kód,Code,Cod
+TTermekekF.tbLista,Lista,List,Listă
+TTermekekF.tbReszlet,Részletek,Details,Detalii
+TTermekekF.TTermekekF,Termékek,Products,Produse
+
+[CharSets]
+"String ID:",Hungarian,English,Romanian
+TBelepF.DBLookupListBox1,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TBelepF.TBelepF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TDemotomegF.sptomeg,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TDemotomegF.TDemotomegF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TDijakF.TDijakF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+Tdijszab_termekF.DBTKategoria,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+Tdijszab_termekF.Tdijszab_termekF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TdijszabF.TdijszabF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFelhaszF.TFelhaszF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.btnnagykamkep,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.lblRendszam_elso,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.lblRendszam_hatso,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.sbtnLista,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.sbtnSorszamhivas,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.StatusBar1,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TFoF.TFoF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TForgalomF.TForgalomF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TKeszletF.Panel2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TKeszletF.TKeszletF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.btnMeres,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.Label12,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.Label2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblelsodat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblelsoido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblmasdat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblmasido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblTomeg1,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.lblTomeg2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.spTomeg,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeres_MerlegjegyenF.TMeres_MerlegjegyenF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMeresF.TMeresF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMerlegelesekF.TMerlegelesekF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.Label12,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.Label2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.lblelsodat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.lblelsoido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.lblmasdat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.lblmasido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.lblsorszam,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMermodF.TMermodF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyekF.TMjegyekF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.btnFolytatasos_mentes,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.Label12,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.Label2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblelsodat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblelsoido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblmasdat,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblmasido,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblTomeg1,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.lblTomeg2,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.speSorszam,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TMjegyF.TMjegyF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TNezetF.jvpsz,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TNezetF.TNezetF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TNyomtatokF.TNyomtatokF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TPartnerekF.TPartnerekF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+Trak_szall_listF.Trak_szall_listF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TRak_szallF.TRak_szallF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+TTermekekF.TTermekekF,DEFAULT_CHARSET,DEFAULT_CHARSET,DEFAULT_CHARSET
+
+[Collections]
+"String ID:",Hungarian,English,Romanian
+TDijakF.JvDBUltimGrid1.Columns[0].Title.Caption,"Díj neve","Fee name","Denumire tarif"
+TDijakF.JvDBUltimGrid1.Columns[1].Title.Caption,Ár,Price,Preț
+Tdijszab_termekF.dijakgrid.Columns[0].Title.Caption,Sorsz.,No.,Nr.
+Tdijszab_termekF.dijakgrid.Columns[1].Title.Caption,Megnevezés,Description,Denumire
+Tdijszab_termekF.dijakgrid.Columns[2].Title.Caption,"Tárolási díj","Storage fee","Tarif depozitare"
+Tdijszab_termekF.dijakgrid.Columns[3].Title.Caption,"Betárolási díj","Intake fee","Tarif intrare"
+Tdijszab_termekF.dijakgrid.Columns[4].Title.Caption,"Kitárolási díj","Outtake fee","Tarif ieșire"
+Tdijszab_termekF.dijakgrid.Columns[5].Title.Caption,"Szárítási díj","Drying fee","Tarif uscare"
+Tdijszab_termekF.dijakgrid.Columns[6].Title.Caption,"Tisztítási díj","Cleaning fee","Tarif curățare"
+Tdijszab_termekF.dijakgrid.Columns[7].Title.Caption,"Szállítási díj","Transport fee","Tarif transport"
+TdijszabF.dijakgrid.Columns[0].Title.Caption,Sorsz.,No.,Nr.
+TdijszabF.dijakgrid.Columns[1].Title.Caption,Kategória,Category,Categorie
+TdijszabF.dijakgrid.Columns[2].Title.Caption,"Tárolási díj","Storage fee","Tarif depozitare"
+TdijszabF.dijakgrid.Columns[3].Title.Caption,"Betárolási díj","Intake fee","Tarif intrare"
+TdijszabF.dijakgrid.Columns[4].Title.Caption,"Kitárolási díj","Outtake fee","Tarif ieșire"
+TdijszabF.dijakgrid.Columns[5].Title.Caption,"Szárítási díj","Drying fee","Tarif uscare"
+TdijszabF.dijakgrid.Columns[6].Title.Caption,"Tisztítási díj","Cleaning fee","Tarif curățare"
+TdijszabF.dijakgrid.Columns[7].Title.Caption,"Szállítási díj","Transport fee","Tarif transport"
+TFelhaszF.JvDBUltimGrid1.Columns[0].Title.Caption,Felhasználó,User,Utilizator
+TFelhaszF.JvDBUltimGrid2.Columns[0].Title.Caption,Jogosultság,Permission,"Drept de acces"
+TFelhaszF.JvDBUltimGrid2.Columns[1].Title.Caption,Engedélyezve,Enabled,Activat
+TFoF.dbgNyitbe.Columns[0].Title.Caption,Sorszám,"Serial number","Nr. de ordine"
+TFoF.dbgNyitbe.Columns[1].Title.Caption,Rendszám,"Plate number","Nr. înmatriculare"
+TFoF.dbgNyitbe.Columns[2].Title.Caption,"Rendszám 2","Plate number 2","Nr. înmatriculare 2"
+TFoF.dbgNyitbe.Columns[3].Title.Caption,"Partner 1","Partner 1","Partener 1"
+TFoF.dbgNyitbe.Columns[4].Title.Caption,"Partner 2","Partner 2","Partener 2"
+TFoF.dbgNyitbe.Columns[5].Title.Caption,Érk.dátum,"Arr. date","Data sosirii"
+TFoF.dbgNyitbe.Columns[6].Title.Caption,Érk.idő,"Arr. time","Ora sosirii"
+TFoF.dbgNyitbe.Columns[7].Title.Caption,Nettó,Net,Net
+TFoF.dbgNyitbe.Columns[8].Title.Caption,Irány,Direction,Direcție
+TFoF.dbgNyitbe.Columns[9].Title.Caption,Megjegyzes,Note,Observație
+TFoF.DBGrid1.Columns[0].Title.Caption,Dátum,Date,Data
+TFoF.DBGrid1.Columns[1].Title.Caption,Idő,Time,Ora
+TFoF.DBGrid1.Columns[2].Title.Caption,Rendszám,"Plate number","Nr. înmatriculare"
+TFoF.DBGrid1.Columns[3].Title.Caption,Irány,Direction,Direcție
+TFoF.DBGrid1.Columns[4].Title.Caption,Tömeg,Weight,Greutate
+TFoF.DBGrid1.Columns[5].Title.Caption,"Rendszám 2","Plate number 2","Nr. înmatriculare 2"
+TFoF.DBGrid1.Columns[6].Title.Caption,Szállítólev,"Delivery note",Aviz
+TFoF.DBGrid1.Columns[7].Title.Caption,Kód,Code,Cod
+TFoF.DBGrid1.Columns[8].Title.Caption,Mérlegjegy,"Weighing ticket","Bon de cântar"
+TFoF.DBGrid1.Columns[9].Title.Caption,Soap,Soap,Soap
+TFoF.siLangCombo1.LanguageInfos[0].FontName,"Segoe UI","Segoe UI","Segoe UI"
+TFoF.siLangCombo1.LanguageInfos[1].FontName,"Segoe UI","Segoe UI","Segoe UI"
+TFoF.siLangCombo1.LanguageInfos[2].FontName,"Segoe UI","Segoe UI","Segoe UI"
+TFoF.StatusBar1.Panels[0].Text,"Ver.: 1.0","Ver.: 1.0","Ver.: 1.0"
+TFoF.StatusBar1.Panels[1].Text,Rendszám,"Plate number","Nr. înmatriculare"
+TFoF.StatusBar1.Panels[4].Text,"Tömeg: ","Weight: ","Greutate: "
+TFoF.StatusBar1.Panels[5].Text,Élőkép(1):,"Live view(1):","Imagine live(1):"
+TFoF.StatusBar1.Panels[6].Text,Élőkép(2):,"Live view(2):","Imagine live(2):"
+TForgalomF.JvDBUltimGrid1.Columns[0].Title.Caption,ID,ID,ID
+TForgalomF.JvDBUltimGrid1.Columns[1].Title.Caption,Párja,Pair,Pereche
+TForgalomF.JvDBUltimGrid1.Columns[2].Title.Caption,Irány,Direction,Direcție
+TForgalomF.JvDBUltimGrid1.Columns[3].Title.Caption,Mérlegjegy,"Weighing ticket","Bon de cântar"
+TForgalomF.JvDBUltimGrid1.Columns[4].Title.Caption,Dátum,Date,Data
+TForgalomF.JvDBUltimGrid1.Columns[5].Title.Caption,Idő,Time,Ora
+TForgalomF.JvDBUltimGrid1.Columns[6].Title.Caption,Tömeg,Weight,Greutate
+TForgalomF.JvDBUltimGrid1.Columns[7].Title.Caption,Rendszám,"Plate number","Nr. înmatriculare"
+TForgalomF.JvDBUltimGrid1.Columns[8].Title.Caption,"Rendszám 2","Plate number 2","Nr. înmatriculare 2"
+TKeszletF.keszletGrid.Columns[0].Title.Caption,Tároló,Storage,Depozit
+TKeszletF.keszletGrid.Columns[1].Title.Caption,Term.kód,"Prod. code","Cod prod."
+TKeszletF.keszletGrid.Columns[2].Title.Caption,Term.név,"Prod. name","Nume prod."
+TKeszletF.keszletGrid.Columns[3].Title.Caption,Part.kód,"Part. code","Cod part."
+TKeszletF.keszletGrid.Columns[4].Title.Caption,Part.név,"Part. name","Nume part."
+TKeszletF.keszletGrid.Columns[5].Title.Caption,Mennyiség,Quantity,Cantitate
+TKeszletF.keszletGrid.Columns[6].Title.Caption,"Tört szem","Broken kernels","Boabe sparte"
+TKeszletF.keszletGrid.Columns[7].Title.Caption,Felhasználó,User,Utilizator
+TKeszletF.keszletGrid.Columns[8].Title.Caption,Módosítva,Modified,Modificat
+TMjegyekF.JvDBUltimGrid1.Columns[0].Title.Caption,Sorsz.,No.,Nr.
+TMjegyekF.JvDBUltimGrid1.Columns[1].Title.Caption,Partner,Partner,Partener
+TMjegyekF.JvDBUltimGrid1.Columns[10].Title.Caption,"Nyers term.víz %","Raw grain moist. %","Umid. cereale brute %"
+TMjegyekF.JvDBUltimGrid1.Columns[11].Title.Caption,"Szár.term.víz %","Dried grain moist. %","Umid. cereale uscate %"
+TMjegyekF.JvDBUltimGrid1.Columns[12].Title.Caption,Szár.term.menny,"Dried grain qty","Cant. cereale uscate"
+TMjegyekF.JvDBUltimGrid1.Columns[13].Title.Caption,Nedv.levon.,"Moist. deduction","Scădere umid."
+TMjegyekF.JvDBUltimGrid1.Columns[14].Title.Caption,Tört.%,"Broken %","Sparte %"
+TMjegyekF.JvDBUltimGrid1.Columns[15].Title.Caption,Tört.levon.,"Broken deduction","Scădere sparte"
+TMjegyekF.JvDBUltimGrid1.Columns[16].Title.Caption,Dátum,Date,Data
+TMjegyekF.JvDBUltimGrid1.Columns[2].Title.Caption,p_cim,p_cim,p_cim
+TMjegyekF.JvDBUltimGrid1.Columns[3].Title.Caption,Termény,Grain,Cereale
+TMjegyekF.JvDBUltimGrid1.Columns[4].Title.Caption,"Nyers term.menny","Raw grain qty","Cant. cereale brute"
+TMjegyekF.JvDBUltimGrid1.Columns[5].Title.Caption,Szár.fok,"Drying temp.","Temp. uscare"
+TMjegyekF.JvDBUltimGrid1.Columns[6].Title.Caption,"Szállítás km","Transport km","Transport km"
+TMjegyekF.JvDBUltimGrid1.Columns[7].Title.Caption,"Szemét %","Impurities %","Impurități %"
+TMjegyekF.JvDBUltimGrid1.Columns[8].Title.Caption,"Szemét kg","Impurities kg","Impurități kg"
+TMjegyekF.JvDBUltimGrid1.Columns[9].Title.Caption,Szár.kiad.menny,"Issued for drying","Predat la uscare"
+TMjegyekF.mlistaGrid.Columns[0].Title.Caption,ID,ID,ID
+TMjegyekF.mlistaGrid.Columns[1].Title.Caption,Sorszám,"Serial number","Nr. de ordine"
+TMjegyekF.mlistaGrid.Columns[10].Title.Caption,P_Cim,P_Cim,P_Cim
+TMjegyekF.mlistaGrid.Columns[11].Title.Caption,Termek_ID,Termek_ID,Termek_ID
+TMjegyekF.mlistaGrid.Columns[12].Title.Caption,"Termék kód","Product code","Cod produs"
+TMjegyekF.mlistaGrid.Columns[13].Title.Caption,"Termék név","Product name","Nume produs"
+TMjegyekF.mlistaGrid.Columns[14].Title.Caption,Termek_afa,Termek_afa,Termek_afa
+TMjegyekF.mlistaGrid.Columns[15].Title.Caption,"Termék ár","Product price","Preț produs"
+TMjegyekF.mlistaGrid.Columns[16].Title.Caption,Szállítólevél,"Delivery note","Aviz de însoțire"
+TMjegyekF.mlistaGrid.Columns[17].Title.Caption,Megjegyzés,Note,Observație
+TMjegyekF.mlistaGrid.Columns[18].Title.Caption,"Tömeg be","Weight in","Greutate intrare"
+TMjegyekF.mlistaGrid.Columns[19].Title.Caption,"Tömeg ki","Weight out","Greutate ieșire"
+TMjegyekF.mlistaGrid.Columns[2].Title.Caption,Ev_ssz,Ev_ssz,Ev_ssz
+TMjegyekF.mlistaGrid.Columns[20].Title.Caption,Érk.dátum,"Arr. date","Data sosirii"
+TMjegyekF.mlistaGrid.Columns[21].Title.Caption,Érk.idő,"Arr. time","Ora sosirii"
+TMjegyekF.mlistaGrid.Columns[22].Title.Caption,Táv.datum,"Dep. date","Data plecării"
+TMjegyekF.mlistaGrid.Columns[23].Title.Caption,Táv.idő,"Dep. time","Ora plecării"
+TMjegyekF.mlistaGrid.Columns[24].Title.Caption,Felhasználó,User,Utilizator
+TMjegyekF.mlistaGrid.Columns[25].Title.Caption,Irány,Direction,Direcție
+TMjegyekF.mlistaGrid.Columns[26].Title.Caption,Bruttó,Gross,Brut
+TMjegyekF.mlistaGrid.Columns[27].Title.Caption,Tára,Tare,Tară
+TMjegyekF.mlistaGrid.Columns[28].Title.Caption,Nettó,Net,Net
+TMjegyekF.mlistaGrid.Columns[29].Title.Caption,Sz.Nettó,"Calc. net","Net calculat"
+TMjegyekF.mlistaGrid.Columns[3].Title.Caption,Eazon,Eazon,Eazon
+TMjegyekF.mlistaGrid.Columns[30].Title.Caption,Mérlegelő,Weigher,Cântăritor
+TMjegyekF.mlistaGrid.Columns[31].Title.Caption,KÜJ,KÜJ,KÜJ
+TMjegyekF.mlistaGrid.Columns[32].Title.Caption,KTJ,KTJ,KTJ
+TMjegyekF.mlistaGrid.Columns[33].Title.Caption,EKÁER,EKAER,EKAER
+TMjegyekF.mlistaGrid.Columns[34].Title.Caption,psz,psz,psz
+TMjegyekF.mlistaGrid.Columns[35].Title.Caption,Alapnedv,"Base moist.","Umid. bază"
+TMjegyekF.mlistaGrid.Columns[36].Title.Caption,Nedv.,Moist.,Umid.
+TMjegyekF.mlistaGrid.Columns[37].Title.Caption,Tisztaság,Purity,Puritate
+TMjegyekF.mlistaGrid.Columns[38].Title.Caption,Tört%,Broken%,Sparte%
+TMjegyekF.mlistaGrid.Columns[39].Title.Caption,Fehérje%,Protein%,Proteine%
+TMjegyekF.mlistaGrid.Columns[4].Title.Caption,Storno,Storno,Storno
+TMjegyekF.mlistaGrid.Columns[40].Title.Caption,Olaj%,Oil%,Ulei%
+TMjegyekF.mlistaGrid.Columns[41].Title.Caption,Eséssz,"Falling no.","Ind. cădere"
+TMjegyekF.mlistaGrid.Columns[42].Title.Caption,Hektó,Hectoliter,Hectolitru
+TMjegyekF.mlistaGrid.Columns[43].Title.Caption,egysegtomeg,egysegtomeg,egysegtomeg
+TMjegyekF.mlistaGrid.Columns[44].Title.Caption,kerekites,kerekites,kerekites
+TMjegyekF.mlistaGrid.Columns[45].Title.Caption,kukorica,kukorica,kukorica
+TMjegyekF.mlistaGrid.Columns[46].Title.Caption,Búzaminőség,"Wheat quality","Calitate grâu"
+TMjegyekF.mlistaGrid.Columns[47].Title.Caption,mennyiseg,mennyiseg,mennyiseg
+TMjegyekF.mlistaGrid.Columns[48].Title.Caption,"Tárolási díj","Storage fee","Tarif depozitare"
+TMjegyekF.mlistaGrid.Columns[49].Title.Caption,"Szárítási díj","Drying fee","Tarif uscare"
+TMjegyekF.mlistaGrid.Columns[5].Title.Caption,Rendszám,"Plate number","Nr. înmatriculare"
+TMjegyekF.mlistaGrid.Columns[50].Title.Caption,"Tisztítási díj","Cleaning fee","Tarif curățare"
+TMjegyekF.mlistaGrid.Columns[51].Title.Caption,tarolo_id,tarolo_id,tarolo_id
+TMjegyekF.mlistaGrid.Columns[52].Title.Caption,Tároló,Storage,Depozit
+TMjegyekF.mlistaGrid.Columns[53].Title.Caption,elso_kezi,elso_kezi,elso_kezi
+TMjegyekF.mlistaGrid.Columns[54].Title.Caption,masodik_kezi,masodik_kezi,masodik_kezi
+TMjegyekF.mlistaGrid.Columns[55].Title.Caption,tul_id,tul_id,tul_id
+TMjegyekF.mlistaGrid.Columns[56].Title.Caption,tul_nev,tul_nev,tul_nev
+TMjegyekF.mlistaGrid.Columns[57].Title.Caption,tul_cim,tul_cim,tul_cim
+TMjegyekF.mlistaGrid.Columns[58].Title.Caption,tul_adoszam,tul_adoszam,tul_adoszam
+TMjegyekF.mlistaGrid.Columns[59].Title.Caption,tul_kuj,tul_kuj,tul_kuj
+TMjegyekF.mlistaGrid.Columns[6].Title.Caption,"Rendszám 2","Plate number 2","Nr. înmatriculare 2"
+TMjegyekF.mlistaGrid.Columns[60].Title.Caption,tul_ktj,tul_ktj,tul_ktj
+TMjegyekF.mlistaGrid.Columns[61].Title.Caption,tul_elotag,tul_elotag,tul_elotag
+TMjegyekF.mlistaGrid.Columns[62].Title.Caption,P2_ID,P2_ID,P2_ID
+TMjegyekF.mlistaGrid.Columns[63].Title.Caption,Part.kód2,"Part. code 2","Cod part. 2"
+TMjegyekF.mlistaGrid.Columns[64].Title.Caption,Part.név2,"Part. name 2","Nume part. 2"
+TMjegyekF.mlistaGrid.Columns[65].Title.Caption,P2_Cim,P2_Cim,P2_Cim
+TMjegyekF.mlistaGrid.Columns[66].Title.Caption,P2_kuj,P2_kuj,P2_kuj
+TMjegyekF.mlistaGrid.Columns[67].Title.Caption,P2_ktj,P2_ktj,P2_ktj
+TMjegyekF.mlistaGrid.Columns[68].Title.Caption,levon_szoveg,levon_szoveg,levon_szoveg
+TMjegyekF.mlistaGrid.Columns[69].Title.Caption,levon_tomeg,levon_tomeg,levon_tomeg
+TMjegyekF.mlistaGrid.Columns[7].Title.Caption,P_ID,P_ID,P_ID
+TMjegyekF.mlistaGrid.Columns[70].Title.Caption,ewc,ewc,ewc
+TMjegyekF.mlistaGrid.Columns[71].Title.Caption,tul_cjsz,tul_cjsz,tul_cjsz
+TMjegyekF.mlistaGrid.Columns[72].Title.Caption,szaraz_tort_szemek,szaraz_tort_szemek,szaraz_tort_szemek
+TMjegyekF.mlistaGrid.Columns[73].Title.Caption,Szabalyos_meres,Szabalyos_meres,Szabalyos_meres
+TMjegyekF.mlistaGrid.Columns[74].Title.Caption,Kepnev1,Kepnev1,Kepnev1
+TMjegyekF.mlistaGrid.Columns[75].Title.Caption,Kepnev2,Kepnev2,Kepnev2
+TMjegyekF.mlistaGrid.Columns[76].Title.Caption,Kepnev3,Kepnev3,Kepnev3
+TMjegyekF.mlistaGrid.Columns[77].Title.Caption,Kepnev4,Kepnev4,Kepnev4
+TMjegyekF.mlistaGrid.Columns[78].Title.Caption,"Betárolási díj","Intake fee","Tarif intrare"
+TMjegyekF.mlistaGrid.Columns[79].Title.Caption,"Kitárolási díj","Outtake fee","Tarif ieșire"
+TMjegyekF.mlistaGrid.Columns[8].Title.Caption,Part.kód,"Part. code","Cod part."
+TMjegyekF.mlistaGrid.Columns[80].Title.Caption,"Szállítási díj","Transport fee","Tarif transport"
+TMjegyekF.mlistaGrid.Columns[81].Title.Caption,P3_ID,P3_ID,P3_ID
+TMjegyekF.mlistaGrid.Columns[82].Title.Caption,Part.kód3,"Part. code 3","Cod part. 3"
+TMjegyekF.mlistaGrid.Columns[83].Title.Caption,Part.név3,"Part. name 3","Nume part. 3"
+TMjegyekF.mlistaGrid.Columns[84].Title.Caption,P3_Cim,P3_Cim,P3_Cim
+TMjegyekF.mlistaGrid.Columns[85].Title.Caption,P3_kuj,P3_kuj,P3_kuj
+TMjegyekF.mlistaGrid.Columns[86].Title.Caption,P3_ktj,P3_ktj,P3_ktj
+TMjegyekF.mlistaGrid.Columns[87].Title.Caption,VTSZ/ITJ,VTSZ/ITJ,VTSZ/ITJ
+TMjegyekF.mlistaGrid.Columns[88].Title.Caption,"Származási hely","Place of origin","Loc de origine"
+TMjegyekF.mlistaGrid.Columns[89].Title.Caption,Sikér,Gluten,Gluten
+TMjegyekF.mlistaGrid.Columns[9].Title.Caption,Part.név,"Part. name","Nume part."
+TMjegyF.JvDBUltimGrid1.Columns[0].Title.Caption,ID,ID,ID
+TMjegyF.JvDBUltimGrid1.Columns[1].Title.Caption,Dátum,Date,Data
+TMjegyF.JvDBUltimGrid1.Columns[2].Title.Caption,Idő,Time,Ora
+TMjegyF.JvDBUltimGrid1.Columns[3].Title.Caption,Tömeg,Weight,Greutate
+TMjegyF.JvDBUltimGrid1.Columns[4].Title.Caption,Kézi,Manual,Manual
+TMjegyF.JvDBUltimGrid1.Columns[5].Title.Caption,Rendszám,"Plate number","Nr. înmatriculare"
+TMjegyF.JvDBUltimGrid1.Columns[6].Title.Caption,"Rendszám 2","Plate number 2","Nr. înmatriculare 2"
+TMjegyF.JvDBUltimGrid1.Columns[7].Title.Caption,Irany,Direction,Direcție
+TMjegyF.JvDBUltimGrid1.Columns[8].Title.Caption,Párosít,Pair,Asociere
+TPartnerekF.PartnerGrid.Columns[0].Title.Caption,Kód,Code,Cod
+TPartnerekF.PartnerGrid.Columns[1].Title.Caption,Név,Name,Nume
+TPartnerekF.PartnerGrid.Columns[10].Title.Caption,Ajtó,Door,Ușă
+TPartnerekF.PartnerGrid.Columns[11].Title.Caption,H.R.SZ.,"Lot no.","Nr. top."
+TPartnerekF.PartnerGrid.Columns[12].Title.Caption,Telefon,Phone,Telefon
+TPartnerekF.PartnerGrid.Columns[13].Title.Caption,E-mail,E-mail,E-mail
+TPartnerekF.PartnerGrid.Columns[14].Title.Caption,Adó.azon,"Tax ID","Cod fiscal"
+TPartnerekF.PartnerGrid.Columns[15].Title.Caption,"Adó kód","VAT code","Cod TVA"
+TPartnerekF.PartnerGrid.Columns[16].Title.Caption,Adó.M.kód,"Tax county code","Cod județ fiscal"
+TPartnerekF.PartnerGrid.Columns[17].Title.Caption,KÜJ,KÜJ,KÜJ
+TPartnerekF.PartnerGrid.Columns[18].Title.Caption,KTJ,KTJ,KTJ
+TPartnerekF.PartnerGrid.Columns[19].Title.Caption,"EU adoszam","EU VAT no.","Cod TVA UE"
+TPartnerekF.PartnerGrid.Columns[2].Title.Caption,Irányítószám,"Postal code","Cod poștal"
+TPartnerekF.PartnerGrid.Columns[3].Title.Caption,Település,City,Localitate
+TPartnerekF.PartnerGrid.Columns[4].Title.Caption,"Közterület neve","Street name","Nume stradă"
+TPartnerekF.PartnerGrid.Columns[5].Title.Caption,Közt.jellege,"Street type","Tip stradă"
+TPartnerekF.PartnerGrid.Columns[6].Title.Caption,Házszám,"House number","Număr casă"
+TPartnerekF.PartnerGrid.Columns[7].Title.Caption,Épület,Building,Clădire
+TPartnerekF.PartnerGrid.Columns[8].Title.Caption,Lph.,Stairc.,Sc.
+TPartnerekF.PartnerGrid.Columns[9].Title.Caption,Em.,Fl.,Et.
+Trak_szall_listF.JvDBUltimGrid1.Columns[0].Title.Caption,Sorszam,"Serial number","Nr. de ordine"
+Trak_szall_listF.JvDBUltimGrid1.Columns[1].Title.Caption,Dátum,Date,Data
+Trak_szall_listF.JvDBUltimGrid1.Columns[10].Title.Caption,Term.név,"Prod. name","Nume prod."
+Trak_szall_listF.JvDBUltimGrid1.Columns[11].Title.Caption,Menny,Qty,Cant.
+Trak_szall_listF.JvDBUltimGrid1.Columns[12].Title.Caption,"Tört szem","Broken kernels","Boabe sparte"
+Trak_szall_listF.JvDBUltimGrid1.Columns[13].Title.Caption,Felhasználó,User,Utilizator
+Trak_szall_listF.JvDBUltimGrid1.Columns[2].Title.Caption,Storno,Storno,Storno
+Trak_szall_listF.JvDBUltimGrid1.Columns[3].Title.Caption,"K.Partner kód","Iss. partner code","Cod partener exp."
+Trak_szall_listF.JvDBUltimGrid1.Columns[4].Title.Caption,"K.Partner név","Iss. partner name","Nume partener exp."
+Trak_szall_listF.JvDBUltimGrid1.Columns[5].Title.Caption,K.Tároló,"Iss. storage","Depozit exp."
+Trak_szall_listF.JvDBUltimGrid1.Columns[6].Title.Caption,"F.Partner kód","Rec. partner code","Cod partener dest."
+Trak_szall_listF.JvDBUltimGrid1.Columns[7].Title.Caption,"F.Partner név","Rec. partner name","Nume partener dest."
+Trak_szall_listF.JvDBUltimGrid1.Columns[8].Title.Caption,F.Tároló,"Rec. storage","Depozit dest."
+Trak_szall_listF.JvDBUltimGrid1.Columns[9].Title.Caption,Term.kód,"Prod. code","Cod prod."
+TRak_szallF.JvDBUltimGrid1.Columns[0].Title.Caption,termek_id,termek_id,termek_id
+TRak_szallF.JvDBUltimGrid1.Columns[1].Title.Caption,"Termék kód","Product code","Cod produs"
+TRak_szallF.JvDBUltimGrid1.Columns[2].Title.Caption,"Termék név","Product name","Nume produs"
+TRak_szallF.JvDBUltimGrid1.Columns[3].Title.Caption,Mennyiség,Quantity,Cantitate
+TRak_szallF.JvDBUltimGrid1.Columns[4].Title.Caption,"Tört szem","Broken kernels","Boabe sparte"
+TTermekekF.termekgrid.Columns[0].Title.Caption,ID,ID,ID
+TTermekekF.termekgrid.Columns[1].Title.Caption,Kód,Code,Cod
+TTermekekF.termekgrid.Columns[10].Title.Caption,kukorica,kukorica,kukorica
+TTermekekF.termekgrid.Columns[11].Title.Caption,b_nedv,b_nedv,b_nedv
+TTermekekF.termekgrid.Columns[12].Title.Caption,b_feherje,b_feherje,b_feherje
+TTermekekF.termekgrid.Columns[13].Title.Caption,b_eses,b_eses,b_eses
+TTermekekF.termekgrid.Columns[14].Title.Caption,b_tisztasag,b_tisztasag,b_tisztasag
+TTermekekF.termekgrid.Columns[15].Title.Caption,b_tort,b_tort,b_tort
+TTermekekF.termekgrid.Columns[16].Title.Caption,b_olaj,b_olaj,b_olaj
+TTermekekF.termekgrid.Columns[17].Title.Caption,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TTermekekF.termekgrid.Columns[18].Title.Caption,b_hekto,b_hekto,b_hekto
+TTermekekF.termekgrid.Columns[19].Title.Caption,tipus_id,tipus_id,tipus_id
+TTermekekF.termekgrid.Columns[2].Title.Caption,Név,Name,Nume
+TTermekekF.termekgrid.Columns[3].Title.Caption,itj,itj,itj
+TTermekekF.termekgrid.Columns[4].Title.Caption,me,me,me
+TTermekekF.termekgrid.Columns[5].Title.Caption,ar,ar,ar
+TTermekekF.termekgrid.Columns[6].Title.Caption,afa,afa,afa
+TTermekekF.termekgrid.Columns[7].Title.Caption,egysegtomeg,egysegtomeg,egysegtomeg
+TTermekekF.termekgrid.Columns[8].Title.Caption,alapnedv,alapnedv,alapnedv
+TTermekekF.termekgrid.Columns[9].Title.Caption,kerekites,kerekites,kerekites
+
+[Dialogs]
+"String ID:",Hungarian,English,Romanian
+TFoF.Abort,Megszakítás,&Abort,Abandonare
+TFoF.All,&Mind,&All,&Toate
+TFoF.Cancel,Mégsem,Cancel,Anulare
+TFoF.Confirm,Megerősítés,Confirm,Confirmare
+TFoF.Error,Hiba,Error,Eroare
+TFoF.Help,&Segítség,&Help,&Ajutor
+TFoF.Ignore,&Megszakítás,&Ignore,&Ignorare
+TFoF.Information,Információ,Information,Informație
+TFoF.No,&Nem,&No,&Nu
+"TFoF.No To All","N&em mindenre","N&o to All","N&u la toate"
+TFoF.OK,OK,OK,OK
+TFoF.Retry,&Újra,&Retry,&Reîncercare
+TFoF.Warning,Figyelmeztetés,Warning,Avertisment
+TFoF.Yes,&Igen,&Yes,&Da
+"TFoF.Yes To All","Igen &mindenre","Yes to &All","Da la &toate"
+
+[DisplayLabels]
+"String ID:",Hungarian,English,Romanian
+TAF.AutoIncField1,Sorszam,Sorszam,Sorszam
+TAF.felhasznalok_jogaif_id,f_id,f_id,f_id
+TAF.felhasznalok_jogaiID,ID,ID,ID
+TAF.felhasznalok_jogaijog,jog,jog,jog
+TAF.felhasznalok_jogaijog_neve,jog_neve,jog_neve,jog_neve
+TAF.felhasznalok_jogaijszam,jszam,jszam,jszam
+TAF.FloatField1,g_tomeg,g_tomeg,g_tomeg
+TAF.IntegerField1,Port,Port,Port
+TAF.IntegerField2,IO,IO,IO
+TAF.IntegerField3,g_id,g_id,g_id
+TAF.mam_csovong_menny_1,g_menny_1,g_menny_1,g_menny_1
+TAF.mam_csovong_menny_2,g_menny_2,g_menny_2,g_menny_2
+TAF.mam_csovonossztomeg_1,ossztomeg_1,ossztomeg_1,ossztomeg_1
+TAF.mam_csovonossztomeg_2,ossztomeg_2,ossztomeg_2,ossztomeg_2
+TAF.mem_csatgongyelso,elso,elso,elso
+TAF.mem_csatgongyg_id,g_id,g_id,g_id
+TAF.mem_csatgongyg_menny,g_menny,g_menny,g_menny
+TAF.mem_csatgongyg_nev,g_nev,g_nev,g_nev
+TAF.mem_csatgongyg_tomeg,g_tomeg,g_tomeg,g_tomeg
+TAF.mem_csatgongyossztomeg,ossztomeg,ossztomeg,ossztomeg
+TAF.mtPLC_FeladatErtek,Ertek,Ertek,Ertek
+TAF.mtPLC_FeladatIO,IO,IO,IO
+TAF.mtPLC_FeladatIPCim,IPCim,IPCim,IPCim
+TAF.mtPLC_FeladatMuvelet,Muvelet,Muvelet,Muvelet
+TAF.mtPLC_FeladatPort,Port,Port,Port
+TAF.mtPLC_FeladatSorszam,Sorszam,Sorszam,Sorszam
+TAF.mtPLC_FeladatTipus,Tipus,Tipus,Tipus
+TAF.rktetmmenny,menny,menny,menny
+TAF.rktetmtermek_id,termek_id,termek_id,termek_id
+TAF.rktetmtermek_kod,termek_kod,termek_kod,termek_kod
+TAF.rktetmtermek_nev,termek_nev,termek_nev,termek_nev
+TAF.rktetmtort,tort,tort,tort
+TAF.SmallintField1,Ertek,Ertek,Ertek
+TAF.StringField1,IPCim,IPCim,IPCim
+TAF.StringField2,Tipus,Tipus,Tipus
+TAF.StringField3,Muvelet,Muvelet,Muvelet
+TAF.StringField4,g_nev,g_nev,g_nev
+TAF.TermekTafa,afa,afa,afa
+TAF.TermekTalapnedv,alapnedv,alapnedv,alapnedv
+TAF.TermekTar,ar,ar,ar
+TAF.TermekTb_buzaminoseg,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TAF.TermekTb_eses,b_eses,b_eses,b_eses
+TAF.TermekTb_feherje,b_feherje,b_feherje,b_feherje
+TAF.TermekTb_hekto,b_hekto,b_hekto,b_hekto
+TAF.TermekTb_nedv,b_nedv,b_nedv,b_nedv
+TAF.TermekTb_olaj,b_olaj,b_olaj,b_olaj
+TAF.TermekTb_tisztasag,b_tisztasag,b_tisztasag,b_tisztasag
+TAF.TermekTb_tort,b_tort,b_tort,b_tort
+TAF.TermekTegysegtomeg,egysegtomeg,egysegtomeg,egysegtomeg
+TAF.TermekTewc,ewc,ewc,ewc
+TAF.TermekTID,ID,ID,ID
+TAF.TermekTitj,itj,itj,itj
+TAF.TermekTkerekites,kerekites,kerekites,kerekites
+TAF.TermekTKod,Kod,Kod,Kod
+TAF.TermekTkukorica,kukorica,kukorica,kukorica
+TAF.TermekTme,me,me,me
+TAF.TermekTNev,Nev,Nev,Nev
+TAF.TermekTtipus_id,tipus_id,tipus_id,tipus_id
+TAF.tipusQid,id,id,id
+TAF.tipusQnev,nev,nev,nev
+Tdijszab_termekF.TermekTafa,afa,afa,afa
+Tdijszab_termekF.TermekTalapnedv,alapnedv,alapnedv,alapnedv
+Tdijszab_termekF.TermekTar,ar,ar,ar
+Tdijszab_termekF.TermekTb_buzaminoseg,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+Tdijszab_termekF.TermekTb_eses,b_eses,b_eses,b_eses
+Tdijszab_termekF.TermekTb_feherje,b_feherje,b_feherje,b_feherje
+Tdijszab_termekF.TermekTb_hekto,b_hekto,b_hekto,b_hekto
+Tdijszab_termekF.TermekTb_nedv,b_nedv,b_nedv,b_nedv
+Tdijszab_termekF.TermekTb_olaj,b_olaj,b_olaj,b_olaj
+Tdijszab_termekF.TermekTb_tisztasag,b_tisztasag,b_tisztasag,b_tisztasag
+Tdijszab_termekF.TermekTb_tort,b_tort,b_tort,b_tort
+Tdijszab_termekF.TermekTegysegtomeg,egysegtomeg,egysegtomeg,egysegtomeg
+Tdijszab_termekF.TermekTewc,ewc,ewc,ewc
+Tdijszab_termekF.TermekTID,ID,ID,ID
+Tdijszab_termekF.TermekTitj,itj,itj,itj
+Tdijszab_termekF.TermekTkerekites,kerekites,kerekites,kerekites
+Tdijszab_termekF.TermekTKod,Kod,Kod,Kod
+Tdijszab_termekF.TermekTkukorica,kukorica,kukorica,kukorica
+Tdijszab_termekF.TermekTme,me,me,me
+Tdijszab_termekF.TermekTNev,Nev,Nev,Nev
+Tdijszab_termekF.TermekTtipus_id,tipus_id,tipus_id,tipus_id
+TDmEkaer.memhibakfuncCode,funcCode,funcCode,funcCode
+TDmEkaer.memhibakmsg,msg,msg,msg
+TDmEkaer.memhibakreasoncode,reasoncode,reasoncode,reasoncode
+TDmEkaer.memtetadrNumber,adrNumber,adrNumber,adrNumber
+TDmEkaer.memtetbatchNumber,batchNumber,batchNumber,batchNumber
+TDmEkaer.memtetdeliveryPlan_id,deliveryPlan_id,deliveryPlan_id,deliveryPlan_id
+TDmEkaer.memtetexpirationDate,expirationDate,expirationDate,expirationDate
+TDmEkaer.memtetfactoryItemNumber,factoryItemNumber,factoryItemNumber,factoryItemNumber
+TDmEkaer.memtetid,id,id,id
+TDmEkaer.memtetimporterItemNumber,importerItemNumber,importerItemNumber,importerItemNumber
+TDmEkaer.memtetinsDate,insDate,insDate,insDate
+TDmEkaer.memtetinsUser,insUser,insUser,insUser
+TDmEkaer.memtetitemExternalId,itemExternalId,itemExternalId,itemExternalId
+TDmEkaer.memtetitemOperation,itemOperation,itemOperation,itemOperation
+TDmEkaer.memtetmodDate,modDate,modDate,modDate
+TDmEkaer.memtetmodUser,modUser,modUser,modUser
+TDmEkaer.memtetnetto_weight,netto_weight,netto_weight,netto_weight
+TDmEkaer.memtetproductModReasonText,productModReasonText,productModReasonText,productModReasonText
+TDmEkaer.memtetproductName,productName,productName,productName
+TDmEkaer.memtetproductVtsz,productVtsz,productVtsz,productVtsz
+TDmEkaer.memtetstatusModReasonText,statusModReasonText,statusModReasonText,statusModReasonText
+TDmEkaer.memtettradeReason,tradeReason,tradeReason,tradeReason
+TDmEkaer.memtetTradeReasonText,TradeReasonText,TradeReasonText,TradeReasonText
+TDmEkaer.memtettransportLicence,transportLicence,transportLicence,transportLicence
+TDmEkaer.memtetvalue,value,value,value
+TDmEkaer.memtetvalueModReasonText,valueModReasontext,valueModReasontext,valueModReasontext
+TDmEkaer.memtetvatRateAssuranceExemption,vatRateAssuranceExemption,vatRateAssuranceExemption,vatRateAssuranceExemption
+TDmEkaer.memtetweight,weight,weight,weight
+TDmEkaer.memtetweightModReasonText,weightModReasonText,weightModReasonText,weightModReasonText
+TMermodF.levon_szovegTID,ID,ID,ID
+TMermodF.levon_szovegTSzoveg,Szoveg,Szoveg,Szoveg
+TMermodF.termeklistafa,afa,afa,afa
+TMermodF.termeklistalapnedv,alapnedv,alapnedv,alapnedv
+TMermodF.termeklistar,ar,ar,ar
+TMermodF.termeklistb_buzaminoseg,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TMermodF.termeklistb_eses,b_eses,b_eses,b_eses
+TMermodF.termeklistb_feherje,b_feherje,b_feherje,b_feherje
+TMermodF.termeklistb_hekto,b_hekto,b_hekto,b_hekto
+TMermodF.termeklistb_nedv,b_nedv,b_nedv,b_nedv
+TMermodF.termeklistb_olaj,b_olaj,b_olaj,b_olaj
+TMermodF.termeklistb_siker,b_siker,b_siker,b_siker
+TMermodF.termeklistb_tisztasag,b_tisztasag,b_tisztasag,b_tisztasag
+TMermodF.termeklistb_tort,b_tort,b_tort,b_tort
+TMermodF.termeklistegysegtomeg,egysegtomeg,egysegtomeg,egysegtomeg
+TMermodF.termeklistewc,ewc,ewc,ewc
+TMermodF.termeklistID,ID,ID,ID
+TMermodF.termeklistitj,itj,itj,itj
+TMermodF.termeklistkerekites,kerekites,kerekites,kerekites
+TMermodF.termeklistKod,Kod,Kod,Kod
+TMermodF.termeklistkukorica,kukorica,kukorica,kukorica
+TMermodF.termeklistme,me,me,me
+TMermodF.termeklistNev,Nev,Nev,Nev
+TMermodF.termeklisttipus_id,tipus_id,tipus_id,tipus_id
+TMermodF.tulajTAdoszam,Adoszam,Adoszam,Adoszam
+TMermodF.tulajTAjto,Ajto,Ajto,Ajto
+TMermodF.tulajTCim,Cim,Cim,Cim
+TMermodF.tulajTcjsz,cjsz,cjsz,cjsz
+TMermodF.tulajTElotag,Elotag,Elotag,Elotag
+TMermodF.tulajTEmail,Email,Email,Email
+TMermodF.tulajTEmelet,Emelet,Emelet,Emelet
+TMermodF.tulajTEpulet,Epulet,Epulet,Epulet
+TMermodF.tulajTHazszam,Hazszam,Hazszam,Hazszam
+TMermodF.tulajTHrsz,Hrsz,Hrsz,Hrsz
+TMermodF.tulajTID,ID,ID,ID
+TMermodF.tulajTIrsz,Irsz,Irsz,Irsz
+TMermodF.tulajTKerulet,Kerulet,Kerulet,Kerulet
+TMermodF.tulajTKozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMermodF.tulajTKozterulet,Kozterulet,Kozterulet,Kozterulet
+TMermodF.tulajTktj,ktj,ktj,ktj
+TMermodF.tulajTkuj,kuj,kuj,kuj
+TMermodF.tulajTLepcsohaz,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMermodF.tulajTNev,Nev,Nev,Nev
+TMermodF.tulajTTelefon,Telefon,Telefon,Telefon
+TMermodF.tulajTTelepules,Telepules,Telepules,Telepules
+TMjegyekF.memszamolalapnedv,alapnedv,alapnedv,alapnedv
+TMjegyekF.memszamolnedv,nedv,nedv,nedv
+TMjegyekF.memszamolnedvlevon,nedvlevon,nedvlevon,nedvlevon
+TMjegyekF.memszamolNetto,Netto,Netto,Netto
+TMjegyekF.memszamolp_cim,p_cim,p_cim,p_cim
+TMjegyekF.memszamolp_nev,p_nev,p_nev,p_nev
+TMjegyekF.memszamolsorsz,sorsz,sorsz,sorsz
+TMjegyekF.memszamolszall_km,szall_km,szall_km,szall_km
+TMjegyekF.memszamolszar_hofok,szar_hofok,szar_hofok,szar_hofok
+TMjegyekF.memszamolszaritasra_kiad,szaritasra_kiad,szaritasra_kiad,szaritasra_kiad
+TMjegyekF.memszamolszart_tort,szart_tort,szart_tort,szart_tort
+TMjegyekF.memszamolszNetto,szNetto,szNetto,szNetto
+TMjegyekF.memszamoltavdat,tavdat,tavdat,tavdat
+TMjegyekF.memszamoltermek_nev,termek_nev,termek_nev,termek_nev
+TMjegyekF.memszamoltisztasag,tisztasag,tisztasag,tisztasag
+TMjegyekF.memszamoltisztasaglevon,tisztasaglevon,tisztasaglevon,tisztasaglevon
+TMjegyekF.memszamoltortszaz,tortszaz,tortszaz,tortszaz
+TMjegyekF.tulajTAdoszam,Adoszam,Adoszam,Adoszam
+TMjegyekF.tulajTAjto,Ajto,Ajto,Ajto
+TMjegyekF.tulajTCim,Cim,Cim,Cim
+TMjegyekF.tulajTcjsz,cjsz,cjsz,cjsz
+TMjegyekF.tulajTElotag,Elotag,Elotag,Elotag
+TMjegyekF.tulajTEmail,Email,Email,Email
+TMjegyekF.tulajTEmelet,Emelet,Emelet,Emelet
+TMjegyekF.tulajTEpulet,Epulet,Epulet,Epulet
+TMjegyekF.tulajTHazszam,Hazszam,Hazszam,Hazszam
+TMjegyekF.tulajTHrsz,Hrsz,Hrsz,Hrsz
+TMjegyekF.tulajTID,ID,ID,ID
+TMjegyekF.tulajTIrsz,Irsz,Irsz,Irsz
+TMjegyekF.tulajTKerulet,Kerulet,Kerulet,Kerulet
+TMjegyekF.tulajTKozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMjegyekF.tulajTKozterulet,Kozterulet,Kozterulet,Kozterulet
+TMjegyekF.tulajTktj,ktj,ktj,ktj
+TMjegyekF.tulajTkuj,kuj,kuj,kuj
+TMjegyekF.tulajTLepcsohaz,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMjegyekF.tulajTNev,Nev,Nev,Nev
+TMjegyekF.tulajTTelefon,Telefon,Telefon,Telefon
+TMjegyekF.tulajTTelepules,Telepules,Telepules,Telepules
+TMjegyF.jvmemparosdatum,datum,datum,datum
+TMjegyF.jvmemparosid,id,id,id
+TMjegyF.jvmemparosido,ido,ido,ido
+TMjegyF.jvmemparoskepnev1,kepnev1,kepnev1,kepnev1
+TMjegyF.jvmemparoskepnev2,kepnev2,kepnev2,kepnev2
+TMjegyF.jvmemparoskezi,kezi,kezi,kezi
+TMjegyF.jvmemparosparosit,parosit,parosit,parosit
+TMjegyF.jvmemparosrendszam,rendszam,rendszam,rendszam
+TMjegyF.jvmemparosrendszam2,rendszam2,rendszam2,rendszam2
+TMjegyF.jvmemparostomeg,tomeg,tomeg,tomeg
+TMjegyF.levon_szovegTID,ID,ID,ID
+TMjegyF.levon_szovegTSzoveg,Szoveg,Szoveg,Szoveg
+TMjegyF.termeklistafa,afa,afa,afa
+TMjegyF.termeklistalapnedv,alapnedv,alapnedv,alapnedv
+TMjegyF.termeklistar,ar,ar,ar
+TMjegyF.termeklistb_buzaminoseg,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TMjegyF.termeklistb_eses,b_eses,b_eses,b_eses
+TMjegyF.termeklistb_feherje,b_feherje,b_feherje,b_feherje
+TMjegyF.termeklistb_hekto,b_hekto,b_hekto,b_hekto
+TMjegyF.termeklistb_nedv,b_nedv,b_nedv,b_nedv
+TMjegyF.termeklistb_olaj,b_olaj,b_olaj,b_olaj
+TMjegyF.termeklistb_siker,b_siker,b_siker,b_siker
+TMjegyF.termeklistb_tisztasag,b_tisztasag,b_tisztasag,b_tisztasag
+TMjegyF.termeklistb_tort,b_tort,b_tort,b_tort
+TMjegyF.termeklistegysegtomeg,egysegtomeg,egysegtomeg,egysegtomeg
+TMjegyF.termeklistewc,ewc,ewc,ewc
+TMjegyF.termeklistID,ID,ID,ID
+TMjegyF.termeklistitj,itj,itj,itj
+TMjegyF.termeklistkerekites,kerekites,kerekites,kerekites
+TMjegyF.termeklistKod,Kod,Kod,Kod
+TMjegyF.termeklistkukorica,kukorica,kukorica,kukorica
+TMjegyF.termeklistme,me,me,me
+TMjegyF.termeklistNev,Nev,Nev,Nev
+TMjegyF.termeklisttipus_id,tipus_id,tipus_id,tipus_id
+TMjegyF.tulajTAdoszam,Adoszam,Adoszam,Adoszam
+TMjegyF.tulajTAjto,Ajto,Ajto,Ajto
+TMjegyF.tulajTCim,Cim,Cim,Cim
+TMjegyF.tulajTcjsz,cjsz,cjsz,cjsz
+TMjegyF.tulajTElotag,Elotag,Elotag,Elotag
+TMjegyF.tulajTEmail,Email,Email,Email
+TMjegyF.tulajTEmelet,Emelet,Emelet,Emelet
+TMjegyF.tulajTEpulet,Epulet,Epulet,Epulet
+TMjegyF.tulajTHazszam,Hazszam,Hazszam,Hazszam
+TMjegyF.tulajTHrsz,Hrsz,Hrsz,Hrsz
+TMjegyF.tulajTID,ID,ID,ID
+TMjegyF.tulajTIrsz,Irsz,Irsz,Irsz
+TMjegyF.tulajTKerulet,Kerulet,Kerulet,Kerulet
+TMjegyF.tulajTKozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMjegyF.tulajTKozterulet,Kozterulet,Kozterulet,Kozterulet
+TMjegyF.tulajTktj,ktj,ktj,ktj
+TMjegyF.tulajTkuj,kuj,kuj,kuj
+TMjegyF.tulajTLepcsohaz,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMjegyF.tulajTNev,Nev,Nev,Nev
+TMjegyF.tulajTTelefon,Telefon,Telefon,Telefon
+TMjegyF.tulajTTelepules,Telepules,Telepules,Telepules
+Trak_szall_listF.rakszallQdatum,datum,datum,datum
+Trak_szall_listF.rakszallQEazon,Eazon,Eazon,Eazon
+Trak_szall_listF.rakszallQEv_ssz,Ev_ssz,Ev_ssz,Ev_ssz
+Trak_szall_listF.rakszallQFelhasznalo,Felhasznalo,Felhasznalo,Felhasznalo
+Trak_szall_listF.rakszallQID,ID,ID,ID
+Trak_szall_listF.rakszallQK_Cim,K_Cim,K_Cim,K_Cim
+Trak_szall_listF.rakszallQK_ID,K_ID,K_ID,K_ID
+Trak_szall_listF.rakszallQK_Kod,K_Kod,K_Kod,K_Kod
+Trak_szall_listF.rakszallQK_Nev,K_Nev,K_Nev,K_Nev
+Trak_szall_listF.rakszallQk_tarolo_id,k_tarolo_id,k_tarolo_id,k_tarolo_id
+Trak_szall_listF.rakszallQk_tarolo_nev,k_tarolo_nev,k_tarolo_nev,k_tarolo_nev
+Trak_szall_listF.rakszallQmegjegyzes,megjegyzes,megjegyzes,megjegyzes
+Trak_szall_listF.rakszallQmennyiseg,mennyiseg,mennyiseg,mennyiseg
+Trak_szall_listF.rakszallQrt_id,rt_id,rt_id,rt_id
+Trak_szall_listF.rakszallQSorszam,Sorszam,Sorszam,Sorszam
+Trak_szall_listF.rakszallQStorno,Storno,Storno,Storno
+Trak_szall_listF.rakszallQtermek_id,termek_id,termek_id,termek_id
+Trak_szall_listF.rakszallQtermek_kod,termek_kod,termek_kod,termek_kod
+Trak_szall_listF.rakszallQtermek_nev,termek_nev,termek_nev,termek_nev
+Trak_szall_listF.rakszallQtort,tort,tort,tort
+Trak_szall_listF.rakszallQV_Cim,V_Cim,V_Cim,V_Cim
+Trak_szall_listF.rakszallQV_ID,V_ID,V_ID,V_ID
+Trak_szall_listF.rakszallQV_Kod,V_Kod,V_Kod,V_Kod
+Trak_szall_listF.rakszallQV_Nev,V_Nev,V_Nev,V_Nev
+Trak_szall_listF.rakszallQv_tarolo_id,v_tarolo_id,v_tarolo_id,v_tarolo_id
+Trak_szall_listF.rakszallQv_tarolo_nev,v_tarolo_nev,v_tarolo_nev,v_tarolo_nev
+Trak_szall_listF.TermekekQid,id,id,id
+Trak_szall_listF.TermekekQkod,kod,kod,kod
+Trak_szall_listF.TermekekQnev,nev,nev,nev
+TTermekekF.TermekTafa,afa,afa,afa
+TTermekekF.TermekTalapnedv,alapnedv,alapnedv,alapnedv
+TTermekekF.TermekTar,ar,ar,ar
+TTermekekF.TermekTb_buzaminoseg,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TTermekekF.TermekTb_eses,b_eses,b_eses,b_eses
+TTermekekF.TermekTb_feherje,b_feherje,b_feherje,b_feherje
+TTermekekF.TermekTb_hekto,b_hekto,b_hekto,b_hekto
+TTermekekF.TermekTb_nedv,b_nedv,b_nedv,b_nedv
+TTermekekF.TermekTb_olaj,b_olaj,b_olaj,b_olaj
+TTermekekF.TermekTb_siker,b_siker,b_siker,b_siker
+TTermekekF.TermekTb_tisztasag,b_tisztasag,b_tisztasag,b_tisztasag
+TTermekekF.TermekTb_tort,b_tort,b_tort,b_tort
+TTermekekF.TermekTegysegtomeg,egysegtomeg,egysegtomeg,egysegtomeg
+TTermekekF.TermekTewc,ewc,ewc,ewc
+TTermekekF.TermekTID,ID,ID,ID
+TTermekekF.TermekTitj,itj,itj,itj
+TTermekekF.TermekTkerekites,kerekites,kerekites,kerekites
+TTermekekF.TermekTKod,Kod,Kod,Kod
+TTermekekF.TermekTkukorica,kukorica,kukorica,kukorica
+TTermekekF.TermekTme,me,me,me
+TTermekekF.TermekTNev,Nev,Nev,Nev
+TTermekekF.TermekTtipus_id,tipus_id,tipus_id,tipus_id
+
+[Fonts]
+"String ID:",Hungarian,English,Romanian
+TBelepF.DBLookupListBox1,Tahoma,Tahoma,Tahoma
+TBelepF.TBelepF,Tahoma,Tahoma,Tahoma
+TDemotomegF.sptomeg,Tahoma,Tahoma,Tahoma
+TDemotomegF.TDemotomegF,Tahoma,Tahoma,Tahoma
+TDijakF.TDijakF,Tahoma,Tahoma,Tahoma
+Tdijszab_termekF.DBTKategoria,Tahoma,Tahoma,Tahoma
+Tdijszab_termekF.Tdijszab_termekF,Tahoma,Tahoma,Tahoma
+TdijszabF.TdijszabF,Tahoma,Tahoma,Tahoma
+TFelhaszF.TFelhaszF,Tahoma,Tahoma,Tahoma
+TFoF.btnnagykamkep,Tahoma,"Segoe UI","Segoe UI"
+TFoF.lblRendszam_elso,"Times New Roman","Segoe UI","Segoe UI"
+TFoF.lblRendszam_hatso,"Times New Roman","Segoe UI","Segoe UI"
+TFoF.sbtnLista,Tahoma,"Segoe UI","Segoe UI"
+TFoF.sbtnSorszamhivas,Tahoma,"Segoe UI","Segoe UI"
+TFoF.StatusBar1,"Segoe UI","Segoe UI","Segoe UI"
+TFoF.TFoF,Tahoma,"Segoe UI","Segoe UI"
+TForgalomF.TForgalomF,Tahoma,Tahoma,Tahoma
+TKeszletF.Panel2,Tahoma,Tahoma,Tahoma
+TKeszletF.TKeszletF,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.btnMeres,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.Label12,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.Label2,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblelsodat,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblelsoido,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblmasdat,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblmasido,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblTomeg1,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.lblTomeg2,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.spTomeg,Tahoma,Tahoma,Tahoma
+TMeres_MerlegjegyenF.TMeres_MerlegjegyenF,Tahoma,Tahoma,Tahoma
+TMeresF.TMeresF,Tahoma,Tahoma,Tahoma
+TMerlegelesekF.TMerlegelesekF,Tahoma,Tahoma,Tahoma
+TMermodF.Label12,Tahoma,Tahoma,Tahoma
+TMermodF.Label2,Tahoma,Tahoma,Tahoma
+TMermodF.lblelsodat,Tahoma,Tahoma,Tahoma
+TMermodF.lblelsoido,Tahoma,Tahoma,Tahoma
+TMermodF.lblmasdat,Tahoma,Tahoma,Tahoma
+TMermodF.lblmasido,Tahoma,Tahoma,Tahoma
+TMermodF.lblsorszam,Tahoma,Tahoma,Tahoma
+TMermodF.TMermodF,Tahoma,Tahoma,Tahoma
+TMjegyekF.TMjegyekF,Tahoma,Tahoma,Tahoma
+TMjegyF.btnFolytatasos_mentes,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.Label12,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.Label2,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblelsodat,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblelsoido,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblmasdat,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblmasido,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblTomeg1,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.lblTomeg2,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.speSorszam,Tahoma,"Segoe UI","Segoe UI"
+TMjegyF.TMjegyF,Tahoma,"Segoe UI","Segoe UI"
+TNezetF.jvpsz,Tahoma,Tahoma,Tahoma
+TNezetF.TNezetF,Tahoma,Tahoma,Tahoma
+TNyomtatokF.TNyomtatokF,Tahoma,Tahoma,Tahoma
+TPartnerekF.TPartnerekF,Tahoma,Tahoma,Tahoma
+Trak_szall_listF.Trak_szall_listF,Tahoma,Tahoma,Tahoma
+TRak_szallF.TRak_szallF,Tahoma,Tahoma,Tahoma
+TTermekekF.TTermekekF,Tahoma,Tahoma,Tahoma
+
+[Hints]
+"String ID:",Hungarian,English,Romanian
+TFoF.JvLED1,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED2,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED3,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED4,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED5,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED6,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED7,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TFoF.JvLED8,"Dupla katttintással válthat","Double-click to switch","Dublu clic pentru a comuta"
+TMeres_MerlegjegyenF.btnKilepes,Close,Close,Închidere
+TMermodF.chkkuk,Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség),Sznetto=net*(1-Purity)*(1-Moisture)/(1-BaseMoisture),Sznetto=net*(1-Puritate)*(1-Umiditate)/(1-UmiditateBază)
+TMjegyekF.mlistaGrid,"Sorbarendezéshez kattintson jobb egérfüllel az oszlop fejlécére","To sort, right-click the column header","Pentru sortare, clic dreapta pe antetul coloanei"
+TMjegyF.chkkuk,Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség),Sznetto=net*(1-Purity)*(1-Moisture)/(1-BaseMoisture),Sznetto=net*(1-Puritate)*(1-Umiditate)/(1-UmiditateBază)
+TNyomtatokF.lbNyomtatok,"Válasszon nyomtatót. ESC-kilépés","Select a printer. ESC to exit","Selectați imprimanta. ESC - ieșire"
+TTermekekF.DBChkKukorica,Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség),Sznetto=net*(1-Purity)*(1-Moisture)/(1-BaseMoisture),Sznetto=net*(1-Puritate)*(1-Umiditate)/(1-UmiditateBază)
+
+[Multilines]
+"String ID:",Hungarian,English,Romanian
+TAF.Auto_mjegy_kapcs.Params,"Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap"
+TAF.DBFrxmjegyList.FieldAliases,"ID=ID,Sorszam=Sorszam,Ev_ssz=Ev_ssz,Eazon=Eazon,Storno=Storno,Rendszam=rendszam,Rendszam2=rendszam2,P_ID=P_id,P_Kod=p_kod,P_Nev=p_nev,P_Cim=p_cim,Termek_ID=termek_id,Termek_Kod=termek_kod,Termek_Nev=termek_nev,Termek_afa=Termek_afa,termek_ar=termek_ar,Szallitolev=szallitolev,Megjegyzes=megjegyzes,Tomegbe=tomegbe,Tomegki=tomegki,Erkdatum=erkdatum,Erkido=erkido,Tavdatum=tavdatum,Tavido=tavido,Felhasznalo=felhasznalo,irany=irany,Brutto=brutto,Tara=tara,Netto=netto,SzNetto=sznetto,merlegelo=merlegelo,kuj=kuj,ktj=ktj,ekaer=ekaer,psz=psz,alapnedv=alapnedv,nedv=nedv,tisztasag=tisztasag,tortszaz=tortszaz,feherje=feherje,olaj=olaj,esesszam=esesszam,hekto=hekto,egysegtomeg=egysegtomeg,kerekites=kerekites,kukorica=kukorica,buzaminoseg=buzaminoseg,mennyiseg=mennyiseg,tarolasi_dij=tarolasi_dij,szaritasi_dij=szaritasi_dij,tisztitasi_dij=tisztitasi_dij,tarolo_id=tarolo_id,tarolo=tarolo,elso_kezi=elso_kezi,masodik_kezi=masodik_kezi,tul_id=tul_id,tul_nev=tul_nev,tul_cim=tul_cim,tul_adoszam=tul_adoszam,tul_kuj=tul_kuj,tul_ktj=tul_ktj,tul_elotag=tul_elotag,P2_ID=P2_ID,P2_Kod=P2_Kod,P2_Nev=P2_Nev,P2_Cim=P2_Cim,P2_kuj=P2_kuj,P2_ktj=P2_ktj,levon_szoveg=levon_szoveg,levon_tomeg=levon_tomeg,ewc=ewc,tul_cjsz=tul_cjsz,szaraz_tort_szemek=szaraz_tort_szemek","ID=ID,Sorszam=Sorszam,Ev_ssz=Ev_ssz,Eazon=Eazon,Storno=Storno,Rendszam=rendszam,Rendszam2=rendszam2,P_ID=P_id,P_Kod=p_kod,P_Nev=p_nev,P_Cim=p_cim,Termek_ID=termek_id,Termek_Kod=termek_kod,Termek_Nev=termek_nev,Termek_afa=Termek_afa,termek_ar=termek_ar,Szallitolev=szallitolev,Megjegyzes=megjegyzes,Tomegbe=tomegbe,Tomegki=tomegki,Erkdatum=erkdatum,Erkido=erkido,Tavdatum=tavdatum,Tavido=tavido,Felhasznalo=felhasznalo,irany=irany,Brutto=brutto,Tara=tara,Netto=netto,SzNetto=sznetto,merlegelo=merlegelo,kuj=kuj,ktj=ktj,ekaer=ekaer,psz=psz,alapnedv=alapnedv,nedv=nedv,tisztasag=tisztasag,tortszaz=tortszaz,feherje=feherje,olaj=olaj,esesszam=esesszam,hekto=hekto,egysegtomeg=egysegtomeg,kerekites=kerekites,kukorica=kukorica,buzaminoseg=buzaminoseg,mennyiseg=mennyiseg,tarolasi_dij=tarolasi_dij,szaritasi_dij=szaritasi_dij,tisztitasi_dij=tisztitasi_dij,tarolo_id=tarolo_id,tarolo=tarolo,elso_kezi=elso_kezi,masodik_kezi=masodik_kezi,tul_id=tul_id,tul_nev=tul_nev,tul_cim=tul_cim,tul_adoszam=tul_adoszam,tul_kuj=tul_kuj,tul_ktj=tul_ktj,tul_elotag=tul_elotag,P2_ID=P2_ID,P2_Kod=P2_Kod,P2_Nev=P2_Nev,P2_Cim=P2_Cim,P2_kuj=P2_kuj,P2_ktj=P2_ktj,levon_szoveg=levon_szoveg,levon_tomeg=levon_tomeg,ewc=ewc,tul_cjsz=tul_cjsz,szaraz_tort_szemek=szaraz_tort_szemek","ID=ID,Sorszam=Sorszam,Ev_ssz=Ev_ssz,Eazon=Eazon,Storno=Storno,Rendszam=rendszam,Rendszam2=rendszam2,P_ID=P_id,P_Kod=p_kod,P_Nev=p_nev,P_Cim=p_cim,Termek_ID=termek_id,Termek_Kod=termek_kod,Termek_Nev=termek_nev,Termek_afa=Termek_afa,termek_ar=termek_ar,Szallitolev=szallitolev,Megjegyzes=megjegyzes,Tomegbe=tomegbe,Tomegki=tomegki,Erkdatum=erkdatum,Erkido=erkido,Tavdatum=tavdatum,Tavido=tavido,Felhasznalo=felhasznalo,irany=irany,Brutto=brutto,Tara=tara,Netto=netto,SzNetto=sznetto,merlegelo=merlegelo,kuj=kuj,ktj=ktj,ekaer=ekaer,psz=psz,alapnedv=alapnedv,nedv=nedv,tisztasag=tisztasag,tortszaz=tortszaz,feherje=feherje,olaj=olaj,esesszam=esesszam,hekto=hekto,egysegtomeg=egysegtomeg,kerekites=kerekites,kukorica=kukorica,buzaminoseg=buzaminoseg,mennyiseg=mennyiseg,tarolasi_dij=tarolasi_dij,szaritasi_dij=szaritasi_dij,tisztitasi_dij=tisztitasi_dij,tarolo_id=tarolo_id,tarolo=tarolo,elso_kezi=elso_kezi,masodik_kezi=masodik_kezi,tul_id=tul_id,tul_nev=tul_nev,tul_cim=tul_cim,tul_adoszam=tul_adoszam,tul_kuj=tul_kuj,tul_ktj=tul_ktj,tul_elotag=tul_elotag,P2_ID=P2_ID,P2_Kod=P2_Kod,P2_Nev=P2_Nev,P2_Cim=P2_Cim,P2_kuj=P2_kuj,P2_ktj=P2_ktj,levon_szoveg=levon_szoveg,levon_tomeg=levon_tomeg,ewc=ewc,tul_cjsz=tul_cjsz,szaraz_tort_szemek=szaraz_tort_szemek"
+TAF.frxDBDKeszlet.FieldAliases,"Term_id=Term_id,Term_kod=Term_kod,Term_nev=Term_nev,Tarolo_id=Tarolo_id,Tarolo_nev=Tarolo_nev,partner_id=partner_id,Partner_kod=Partner_kod,Partner_nev=Partner_nev,felhasznalo_id=felhasznalo_id,Felhasznalo_nev=Felhasznalo_nev,menny=menny,modositva=modositva,tort=tort","Term_id=Term_id,Term_kod=Term_kod,Term_nev=Term_nev,Tarolo_id=Tarolo_id,Tarolo_nev=Tarolo_nev,partner_id=partner_id,Partner_kod=Partner_kod,Partner_nev=Partner_nev,felhasznalo_id=felhasznalo_id,Felhasznalo_nev=Felhasznalo_nev,menny=menny,modositva=modositva,tort=tort","Term_id=Term_id,Term_kod=Term_kod,Term_nev=Term_nev,Tarolo_id=Tarolo_id,Tarolo_nev=Tarolo_nev,partner_id=partner_id,Partner_kod=Partner_kod,Partner_nev=Partner_nev,felhasznalo_id=felhasznalo_id,Felhasznalo_nev=Felhasznalo_nev,menny=menny,modositva=modositva,tort=tort"
+TAF.frxDBDrakszall.FieldAliases,"termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,menny=menny,tort=tort","termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,menny=menny,tort=tort","termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,menny=menny,tort=tort"
+TAF.frxKeszlet.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TAF.frxmerleg.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TAF.FrxmjegyList.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TAF.frxrakszall.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TAF.frxtesztrep.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TAF.HWKapcs.Params,"Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap"
+TAF.Kapcs.Params,"Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap"
+TAF.MentesKapcs.Params,"Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap","Server=127.0.0.1,Password=MaTt2019,DriverID=MySQL,CharacterSet=utf8,User_Name=knz,Port=3307,Database=alap"
+TAF.Sample_Kapcs.Params,"Server=127.0.0.1,Password=adminKNZ1234,DriverID=MySQL,CharacterSet=utf8,User_Name=wregknz,Port=3306,Database=samplereg","Server=127.0.0.1,Password=adminKNZ1234,DriverID=MySQL,CharacterSet=utf8,User_Name=wregknz,Port=3306,Database=samplereg","Server=127.0.0.1,Password=adminKNZ1234,DriverID=MySQL,CharacterSet=utf8,User_Name=wregknz,Port=3306,Database=samplereg"
+TDijakF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+Tdijszab_termekF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+TdijszabF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+TDmEkaer.EKAERKapcs.Params,"DriverID=MySQL,LockingMode=Normal,DateTimeFormat=String,StringFormat=Unicode,CharacterSet=Utf8mb4,Database=szamlazo,Port=3307,Server=192.168.56.1","DriverID=MySQL,LockingMode=Normal,DateTimeFormat=String,StringFormat=Unicode,CharacterSet=Utf8mb4,Database=szamlazo,Port=3307,Server=192.168.56.1","DriverID=MySQL,LockingMode=Normal,DateTimeFormat=String,StringFormat=Unicode,CharacterSet=Utf8mb4,Database=szamlazo,Port=3307,Server=192.168.56.1"
+TDmEkaer.frxBejel_lap.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TDmEkaer.frxDBDBejel.FieldAliases,"deliveryPlan_id=deliveryPlan_id,id=id,itemExternalId=itemExternalId,itemOperation=itemOperation,tradeReason=tradeReason,TradeReasonText=TradeReasonText,productVtsz=productVtsz,productName=productName,adrNumber=adrNumber,transportLicence=transportLicence,netto_weight=netto_weight,weight=weight,value=value,valueModReasontext=valueModReasontext,weightModReasonText=weightModReasonText,factoryItemNumber=factoryItemNumber,importerItemNumber=importerItemNumber,expirationDate=expirationDate,batchNumber=batchNumber,statusModReasonText=statusModReasonText,productModReasonText=productModReasonText,vatRateAssuranceExemption=vatRateAssuranceExemption,insUser=insUser,insDate=insDate,modUser=modUser,modDate=modDate","deliveryPlan_id=deliveryPlan_id,id=id,itemExternalId=itemExternalId,itemOperation=itemOperation,tradeReason=tradeReason,TradeReasonText=TradeReasonText,productVtsz=productVtsz,productName=productName,adrNumber=adrNumber,transportLicence=transportLicence,netto_weight=netto_weight,weight=weight,value=value,valueModReasontext=valueModReasontext,weightModReasonText=weightModReasonText,factoryItemNumber=factoryItemNumber,importerItemNumber=importerItemNumber,expirationDate=expirationDate,batchNumber=batchNumber,statusModReasonText=statusModReasonText,productModReasonText=productModReasonText,vatRateAssuranceExemption=vatRateAssuranceExemption,insUser=insUser,insDate=insDate,modUser=modUser,modDate=modDate","deliveryPlan_id=deliveryPlan_id,id=id,itemExternalId=itemExternalId,itemOperation=itemOperation,tradeReason=tradeReason,TradeReasonText=TradeReasonText,productVtsz=productVtsz,productName=productName,adrNumber=adrNumber,transportLicence=transportLicence,netto_weight=netto_weight,weight=weight,value=value,valueModReasontext=valueModReasontext,weightModReasonText=weightModReasonText,factoryItemNumber=factoryItemNumber,importerItemNumber=importerItemNumber,expirationDate=expirationDate,batchNumber=batchNumber,statusModReasonText=statusModReasonText,productModReasonText=productModReasonText,vatRateAssuranceExemption=vatRateAssuranceExemption,insUser=insUser,insDate=insDate,modUser=modUser,modDate=modDate"
+TFoF.memLog.Lines,memLog,memLog,memLog
+TForgalomF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+TMeres_MerlegjegyenF.rgMeresszama.Items,"""1. mérés","2. mérés"","""1. weighing","2. weighing"","""1. cântărire","2. cântărire""
+TMeres_MerlegjegyenF.rgMerlegszama.Items,"""1. mérleg","2. mérleg","3. mérleg"","""1. scale","2. scale","3. scale"","""1. cântar","2. cântar","3. cântar""
+TMerlegelesekF.Memo1.Lines,Memo1,Memo1,Memo1
+TMermodF.cbxbuzaminoseg.Items,"Takarmány,Euró,Malmi","Feed,Euro,Milling","Furajer,Euro,Morărit"
+TMermodF.cbxirany.Items,"""---Nincs megadva----",Beszállítás,Kiszállítás,"Idegen mérés"","""---Not specified----",Inbound,Outbound,"External weighing"","""---Nespecificat----",Intrare,Ieșire,"Cântărire externă""
+TMermodF.cbxktip.Items,"a,b","a,b","a,b"
+TMjegyekF.cbxirany.Items,"""*Nincs szűrve*",Beszállítás,Kiszállítás","""*No filter*",Inbound,Outbound","""*Nefiltrat*",Intrare,Ieșire"
+TMjegyekF.frxTerm_szaritas.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TMjegyF.cbxbuzaminoseg.Items,"Takarmány,Euró,Malmi","Feed,Euro,Milling","Furajer,Euro,Morărit"
+TMjegyF.cbxIrany.Items,"""---Nincs megadva----",Beszállítás,Kiszállítás,"Idegen mérés","Tömeg mérés"","""---Not specified----",Inbound,Outbound,"External weighing","Weight measurement"","""---Nespecificat----",Intrare,Ieșire,"Cântărire externă","Cântărire greutate""
+TMjegyF.cbxktip.Items,"a,b","a,b","a,b"
+TMjegyF.edszallev.Lines,edszallev,edszallev,edszallev
+TPartnerekF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+Trak_szall_listF.frxDBDRakszall.FieldAliases,"ID=ID,Sorszam=Sorszam,-Ev_ssz=Ev_ssz,-Eazon=Eazon,Storno=Storno,-K_ID=K_ID,K_Kod=K_Kod,K_Nev=K_Nev,K_Cim=K_Cim,-k_tarolo_id=k_tarolo_id,k_tarolo_nev=k_tarolo_nev,-V_ID=V_ID,V_Kod=V_Kod,V_Nev=V_Nev,V_Cim=V_Cim,-v_tarolo_id=v_tarolo_id,v_tarolo_nev=v_tarolo_nev,datum=datum,Felhasznalo=Felhasznalo,-megjegyzes=megjegyzes,-rt_id=rt_id,termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,mennyiseg=mennyiseg,tort=tort","ID=ID,Sorszam=Sorszam,-Ev_ssz=Ev_ssz,-Eazon=Eazon,Storno=Storno,-K_ID=K_ID,K_Kod=K_Kod,K_Nev=K_Nev,K_Cim=K_Cim,-k_tarolo_id=k_tarolo_id,k_tarolo_nev=k_tarolo_nev,-V_ID=V_ID,V_Kod=V_Kod,V_Nev=V_Nev,V_Cim=V_Cim,-v_tarolo_id=v_tarolo_id,v_tarolo_nev=v_tarolo_nev,datum=datum,Felhasznalo=Felhasznalo,-megjegyzes=megjegyzes,-rt_id=rt_id,termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,mennyiseg=mennyiseg,tort=tort","ID=ID,Sorszam=Sorszam,-Ev_ssz=Ev_ssz,-Eazon=Eazon,Storno=Storno,-K_ID=K_ID,K_Kod=K_Kod,K_Nev=K_Nev,K_Cim=K_Cim,-k_tarolo_id=k_tarolo_id,k_tarolo_nev=k_tarolo_nev,-V_ID=V_ID,V_Kod=V_Kod,V_Nev=V_Nev,V_Cim=V_Cim,-v_tarolo_id=v_tarolo_id,v_tarolo_nev=v_tarolo_nev,datum=datum,Felhasznalo=Felhasznalo,-megjegyzes=megjegyzes,-rt_id=rt_id,termek_id=termek_id,termek_kod=termek_kod,termek_nev=termek_nev,mennyiseg=mennyiseg,tort=tort"
+Trak_szall_listF.frxrakszall_lista.ScriptText,"begin,,end.","begin,,end.","begin,,end."
+TTermekekF.DBNavigator1.Hints,"""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"","""First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates""
+
+[Other]
+"String ID:",Hungarian,English,Romanian
+TAF.Auto_mjegy_kapcs.ConnectionName,Auto_mjegy_kapcs,Auto_mjegy_kapcs,Auto_mjegy_kapcs
+TAF.Auto_mjegy_kapcs.DriverName,MySQL,MySQL,MySQL
+TAF.Auto_mjegyINUPQ.ConnectionName,Auto_mjegy_kapcs,Auto_mjegy_kapcs,Auto_mjegy_kapcs
+TAF.Auto_mjegyQ.ConnectionName,Auto_mjegy_kapcs,Auto_mjegy_kapcs,Auto_mjegy_kapcs
+TAF.CfgT.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.CfgT.IndexFieldNames,csoport:A,csoport:A,csoport:A
+TAF.CsatGongyQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.DBFrxmjegyList.UserName,frxDBDataset1,frxDBDataset1,frxDBDataset1
+TAF.dijkatQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.fdgxscrptdlg1.Provider,Forms,Forms,Forms
+TAF.FelhaszQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.FoglaltQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ForgalomQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ForgTimQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ForgTimT.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.frxDBDKeszlet.UserName,frxDBDKeszlet,frxDBDKeszlet,frxDBDKeszlet
+TAF.frxDBDrakszall.UserName,frxDBDrakszall,frxDBDrakszall,frxDBDrakszall
+TAF.frxDBmam_csovon.UserName,frxDBmam_csovon,frxDBmam_csovon,frxDBmam_csovon
+TAF.frxKeszlet.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TAF.frxKeszlet.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TAF.frxmerleg.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TAF.frxmerleg.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TAF.FrxmjegyList.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TAF.FrxmjegyList.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TAF.frxPDFTeszthez.Author,FastReport,FastReport,FastReport
+TAF.frxPDFTeszthez.Subject,"FastReport PDF export","FastReport PDF export","FastReport PDF export"
+TAF.frxrakszall.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TAF.frxrakszall.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TAF.frxtesztrep.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TAF.frxtesztrep.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TAF.gongyQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.HardverQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.HWKapcs.ConnectionName,HWKapcs,HWKapcs,HWKapcs
+TAF.HWKapcs.DriverName,MySQL,MySQL,MySQL
+TAF.irszQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.Kapcs.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.Kapcs.DriverName,MySQL,MySQL,MySQL
+TAF.KeszletezesProc.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.KeszletezesProc.StoredProcName,keszletezes,keszletezes,keszletezes
+TAF.KeszletQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.MentesKapcs.ConnectionName,MentesKapcs,MentesKapcs,MentesKapcs
+TAF.MentesKapcs.DriverName,MySQL,MySQL,MySQL
+TAF.merlegkezQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ModScriptDialog.Provider,Forms,Forms,Forms
+TAF.NyitbeQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ParositottQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ParositottT.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.Partner_keszleteQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.PartnerT.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.PDFExportmjegy.Author,FastReport,FastReport,FastReport
+TAF.PDFExportmjegy.Subject,"FastReport PDF export","FastReport PDF export","FastReport PDF export"
+TAF.Q1.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.Q2.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.rszQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.Sample_Kapcs.ConnectionName,Sample_Kapcs,Sample_Kapcs,Sample_Kapcs
+TAF.Sample_Kapcs.DriverName,MySQL,MySQL,MySQL
+TAF.SampleQ1.ConnectionName,Sample_Kapcs,Sample_Kapcs,Sample_Kapcs
+TAF.SszQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.taraQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.TermekT.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.TermekT.IndexFieldNames,ID,ID,ID
+TAF.TermekTafa.Origin,afa,afa,afa
+TAF.TermekTalapnedv.Origin,alapnedv,alapnedv,alapnedv
+TAF.TermekTar.Origin,ar,ar,ar
+TAF.TermekTb_buzaminoseg.Origin,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TAF.TermekTb_eses.Origin,b_eses,b_eses,b_eses
+TAF.TermekTb_feherje.Origin,b_feherje,b_feherje,b_feherje
+TAF.TermekTb_hekto.Origin,b_hekto,b_hekto,b_hekto
+TAF.TermekTb_nedv.Origin,b_nedv,b_nedv,b_nedv
+TAF.TermekTb_olaj.Origin,b_olaj,b_olaj,b_olaj
+TAF.TermekTb_tisztasag.Origin,b_tisztasag,b_tisztasag,b_tisztasag
+TAF.TermekTb_tort.Origin,b_tort,b_tort,b_tort
+TAF.TermekTegysegtomeg.Origin,egysegtomeg,egysegtomeg,egysegtomeg
+TAF.TermekTID.Origin,ID,ID,ID
+TAF.TermekTitj.Origin,itj,itj,itj
+TAF.TermekTkerekites.Origin,kerekites,kerekites,kerekites
+TAF.TermekTKod.Origin,Kod,Kod,Kod
+TAF.TermekTkukorica.Origin,kukorica,kukorica,kukorica
+TAF.TermekTme.Origin,me,me,me
+TAF.TermekTNev.Origin,Nev,Nev,Nev
+TAF.TermekTtipus_id.Origin,tipus_id,tipus_id,tipus_id
+TAF.tipusQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ZarolQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TAF.ZarolvaQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Tdijszab_termekF.dijak_termekT.ConnectionName,Kapcs,Kapcs,Kapcs
+Tdijszab_termekF.dijak_termekT.IndexFieldNames,d_id,d_id,d_id
+Tdijszab_termekF.EllenQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Tdijszab_termekF.TermekT.ConnectionName,Kapcs,Kapcs,Kapcs
+Tdijszab_termekF.TermekT.IndexFieldNames,ID,ID,ID
+Tdijszab_termekF.TermekTafa.Origin,afa,afa,afa
+Tdijszab_termekF.TermekTalapnedv.Origin,alapnedv,alapnedv,alapnedv
+Tdijszab_termekF.TermekTar.Origin,ar,ar,ar
+Tdijszab_termekF.TermekTb_buzaminoseg.Origin,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+Tdijszab_termekF.TermekTb_eses.Origin,b_eses,b_eses,b_eses
+Tdijszab_termekF.TermekTb_feherje.Origin,b_feherje,b_feherje,b_feherje
+Tdijszab_termekF.TermekTb_hekto.Origin,b_hekto,b_hekto,b_hekto
+Tdijszab_termekF.TermekTb_nedv.Origin,b_nedv,b_nedv,b_nedv
+Tdijszab_termekF.TermekTb_olaj.Origin,b_olaj,b_olaj,b_olaj
+Tdijszab_termekF.TermekTb_tisztasag.Origin,b_tisztasag,b_tisztasag,b_tisztasag
+Tdijszab_termekF.TermekTb_tort.Origin,b_tort,b_tort,b_tort
+Tdijszab_termekF.TermekTegysegtomeg.Origin,egysegtomeg,egysegtomeg,egysegtomeg
+Tdijszab_termekF.TermekTID.Origin,ID,ID,ID
+Tdijszab_termekF.TermekTitj.Origin,itj,itj,itj
+Tdijszab_termekF.TermekTkerekites.Origin,kerekites,kerekites,kerekites
+Tdijszab_termekF.TermekTKod.Origin,Kod,Kod,Kod
+Tdijszab_termekF.TermekTkukorica.Origin,kukorica,kukorica,kukorica
+Tdijszab_termekF.TermekTme.Origin,me,me,me
+Tdijszab_termekF.TermekTNev.Origin,Nev,Nev,Nev
+Tdijszab_termekF.TermekTtipus_id.Origin,tipus_id,tipus_id,tipus_id
+TdijszabF.dijkatT.ConnectionName,Kapcs,Kapcs,Kapcs
+TDmEkaer.arfoly_ekaerQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TDmEkaer.EKAERKapcs.ConnectionName,Kapcs,Kapcs,Kapcs
+TDmEkaer.EKAERKapcs.DriverName,MySQL,MySQL,MySQL
+TDmEkaer.frxBejel_lap.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TDmEkaer.frxBejel_lap.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TDmEkaer.frxDBDBejel.UserName,frxDBDBejel,frxDBDBejel,frxDBDBejel
+TDmEkaer.inupQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TDmEkaer.NetHTTPClient1.Accept,"application/xml ","application/xml ","application/xml "
+TDmEkaer.NetHTTPClient1.AcceptCharSet,UTF-8,UTF-8,UTF-8
+TDmEkaer.NetHTTPClient1.ContentType,"application/xml ","application/xml ","application/xml "
+TDmEkaer.NetHTTPClient1.UserAgent,"Embarcadero URI Client/1.0","Embarcadero URI Client/1.0","Embarcadero URI Client/1.0"
+TDmEkaer.NetHTTPRequest1.Accept,"application/xml ","application/xml ","application/xml "
+TDmEkaer.NetHTTPRequest1.AcceptCharSet,UTF-8,UTF-8,UTF-8
+TDmEkaer.ScriptDialogMySQL.Provider,Forms,Forms,Forms
+TFelhaszF.ajogQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TFoF.JvFormStorage1.AppStoragePath,%FORM_NAME%\,%FORM_NAME%\,%FORM_NAME%\
+TForgalomF.piBefejezoDatum.DateFormat,YYYY.MM.DD.,YYYY.MM.DD.,YYYY.MM.DD.
+TForgalomF.piBefejezoDatum.DialogTitle,"Válasszon dátumot","Select a date","Selectați data"
+TForgalomF.piKezdoDatum.DateFormat,YYYY.MM.DD.,YYYY.MM.DD.,YYYY.MM.DD.
+TForgalomF.piKezdoDatum.DialogTitle,"Válasszon dátumot","Select a date","Selectați data"
+TKeszletF.Partnelist.ConnectionName,Kapcs,Kapcs,Kapcs
+TKeszletF.partnerlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TKeszletF.partnerlookup.LookupDisplay,nev,nev,nev
+TKeszletF.partnerlookup.LookupField,ID,ID,ID
+TKeszletF.TarolokT.ConnectionName,Kapcs,Kapcs,Kapcs
+TKeszletF.tarololookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TKeszletF.tarololookup.LookupDisplay,nev,nev,nev
+TKeszletF.tarololookup.LookupField,id,id,id
+TKeszletF.termeklist.ConnectionName,Kapcs,Kapcs,Kapcs
+TKeszletF.termeklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TKeszletF.termeklookup.LookupDisplay,Nev,Nev,Nev
+TKeszletF.termeklookup.LookupField,ID,ID,ID
+TMeresF.cbxrendszam1.Text,CBXRENDSZAM1,CBXRENDSZAM1,CBXRENDSZAM1
+TMeresF.cbxrendszam2.Text,CBXRENDSZAM2,CBXRENDSZAM2,CBXRENDSZAM2
+TMermodF.cbfuvarozo.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.cbfuvarozo.LookupDisplay,combo;cim;,combo;cim;,combo;cim;
+TMermodF.cbfuvarozo.LookupField,ID,ID,ID
+TMermodF.cbxktip.Text,a,a,a
+TMermodF.cbxrendszam1.Text,CBXRENDSZAM1,CBXRENDSZAM1,CBXRENDSZAM1
+TMermodF.cbxrendszam2.Text,CBXRENDSZAM2,CBXRENDSZAM2,CBXRENDSZAM2
+TMermodF.cbxszar.Text,cbxszar,cbxszar,cbxszar
+TMermodF.edekaer.Text,EdEkaer,EdEkaer,EdEkaer
+TMermodF.edmegjegy.Text,edmegjegy,edmegjegy,edmegjegy
+TMermodF.edSample.Text,edSample,edSample,edSample
+TMermodF.edsofor.Text,edsofor,edsofor,edsofor
+TMermodF.edszallev.Text,edszallev,edszallev,edszallev
+TMermodF.kezelolookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.kezelolookup.LookupDisplay,nev;,nev;,nev;
+TMermodF.kezelolookup.LookupField,nev,nev,nev
+TMermodF.levon_szovegT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.levon_szovegT.IndexFieldNames,ID,ID,ID
+TMermodF.levon_szovegTID.Origin,ID,ID,ID
+TMermodF.levon_szovegTSzoveg.Origin,Szoveg,Szoveg,Szoveg
+TMermodF.levonlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.levonlookup.LookupDisplay,Szoveg,Szoveg,Szoveg
+TMermodF.levonlookup.LookupField,id,id,id
+TMermodF.Partnelist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.Partnerlist2.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.Partnerlist3.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.partnerlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.partnerlookup.LookupDisplay,combo;cim;,combo;cim;,combo;cim;
+TMermodF.partnerlookup.LookupField,ID,ID,ID
+TMermodF.partnerlookup2.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.partnerlookup2.LookupDisplay,combo;cim;,combo;cim;,combo;cim;
+TMermodF.partnerlookup2.LookupField,ID,ID,ID
+TMermodF.szarQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.taroloklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.taroloklookup.LookupDisplay,nev,nev,nev
+TMermodF.taroloklookup.LookupField,id,id,id
+TMermodF.TarolokT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.TempQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.termeklist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.termeklistafa.Origin,afa,afa,afa
+TMermodF.termeklistalapnedv.Origin,alapnedv,alapnedv,alapnedv
+TMermodF.termeklistar.Origin,ar,ar,ar
+TMermodF.termeklistb_buzaminoseg.Origin,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TMermodF.termeklistb_eses.Origin,b_eses,b_eses,b_eses
+TMermodF.termeklistb_feherje.Origin,b_feherje,b_feherje,b_feherje
+TMermodF.termeklistb_hekto.Origin,b_hekto,b_hekto,b_hekto
+TMermodF.termeklistb_nedv.Origin,b_nedv,b_nedv,b_nedv
+TMermodF.termeklistb_olaj.Origin,b_olaj,b_olaj,b_olaj
+TMermodF.termeklistb_tisztasag.Origin,b_tisztasag,b_tisztasag,b_tisztasag
+TMermodF.termeklistb_tort.Origin,b_tort,b_tort,b_tort
+TMermodF.termeklistegysegtomeg.Origin,egysegtomeg,egysegtomeg,egysegtomeg
+TMermodF.termeklistID.Origin,ID,ID,ID
+TMermodF.termeklistitj.Origin,itj,itj,itj
+TMermodF.termeklistkerekites.Origin,kerekites,kerekites,kerekites
+TMermodF.termeklistKod.Origin,Kod,Kod,Kod
+TMermodF.termeklistkukorica.Origin,kukorica,kukorica,kukorica
+TMermodF.termeklistme.Origin,me,me,me
+TMermodF.termeklistNev.Origin,Nev,Nev,Nev
+TMermodF.termeklisttipus_id.Origin,tipus_id,tipus_id,tipus_id
+TMermodF.termeklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMermodF.termeklookup.LookupDisplay,Nev;kod;,Nev;kod;,Nev;kod;
+TMermodF.termeklookup.LookupField,ID,ID,ID
+TMermodF.tulajlookup.DisplayEmpty,"---Válasszon bizonylat kibocsájtót---","---Select document issuer---","---Selectați emitentul documentului---"
+TMermodF.tulajlookup.LookupDisplay,Nev,Nev,Nev
+TMermodF.tulajlookup.LookupField,Id,Id,Id
+TMermodF.tulajT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMermodF.tulajT.IndexFieldNames,ID,ID,ID
+TMermodF.tulajTAdoszam.Origin,Adoszam,Adoszam,Adoszam
+TMermodF.tulajTCim.Origin,Cim,Cim,Cim
+TMermodF.tulajTElotag.Origin,Elotag,Elotag,Elotag
+TMermodF.tulajTEmail.Origin,Email,Email,Email
+TMermodF.tulajTEmelet.Origin,Emelet,Emelet,Emelet
+TMermodF.tulajTEpulet.Origin,Epulet,Epulet,Epulet
+TMermodF.tulajTHazszam.Origin,Hazszam,Hazszam,Hazszam
+TMermodF.tulajTHrsz.Origin,Hrsz,Hrsz,Hrsz
+TMermodF.tulajTID.Origin,ID,ID,ID
+TMermodF.tulajTIrsz.Origin,Irsz,Irsz,Irsz
+TMermodF.tulajTKerulet.Origin,Kerulet,Kerulet,Kerulet
+TMermodF.tulajTKozt_Jelleg.Origin,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMermodF.tulajTKozterulet.Origin,Kozterulet,Kozterulet,Kozterulet
+TMermodF.tulajTktj.Origin,ktj,ktj,ktj
+TMermodF.tulajTkuj.Origin,kuj,kuj,kuj
+TMermodF.tulajTLepcsohaz.Origin,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMermodF.tulajTNev.Origin,Nev,Nev,Nev
+TMermodF.tulajTTelefon.Origin,Telefon,Telefon,Telefon
+TMermodF.tulajTTelepules.Origin,Telepules,Telepules,Telepules
+TMjegyekF.cbxirany.Text,"*Nincs szűrve*","*No filter*",*Nefiltrat*
+TMjegyekF.cbxrendsz.Text,cbxrendsz,cbxrendsz,cbxrendsz
+TMjegyekF.FDTable1.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.FDTable1.IndexFieldNames,ID,ID,ID
+TMjegyekF.frxTerm_szaritas.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+TMjegyekF.frxTerm_szaritas.ScriptLanguage,PascalScript,PascalScript,PascalScript
+TMjegyekF.mjegyekQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.Partnelist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.Partnelist2.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.partnerlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyekF.partnerlookup.LookupDisplay,Nev;Kod;,Nev;Kod;,Nev;Kod;
+TMjegyekF.partnerlookup.LookupField,ID,ID,ID
+TMjegyekF.partnerlookup2.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyekF.partnerlookup2.LookupDisplay,Nev;Kod;,Nev;Kod;,Nev;Kod;
+TMjegyekF.partnerlookup2.LookupField,ID,ID,ID
+TMjegyekF.piBefejezoDatum.DateFormat,YYYY.MM.DD.,YYYY.MM.DD.,YYYY.MM.DD.
+TMjegyekF.piBefejezoDatum.DialogTitle,"Válasszon dátumot","Select a date","Selectați data"
+TMjegyekF.piKezdoDatum.DateFormat,YYYY.MM.DD.,YYYY.MM.DD.,YYYY.MM.DD.
+TMjegyekF.piKezdoDatum.DialogTitle,"Válasszon dátumot","Select a date","Selectați data"
+TMjegyekF.plq.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.taroloklookup.DisplayEmpty,"**Nincs szűrve**","**No filter**",**Nefiltrat**
+TMjegyekF.taroloklookup.LookupDisplay,nev,nev,nev
+TMjegyekF.taroloklookup.LookupField,id,id,id
+TMjegyekF.TarolokT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.termeklist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.termeklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyekF.termeklookup.LookupDisplay,Nev;Kod;,Nev;Kod;,Nev;Kod;
+TMjegyekF.termeklookup.LookupField,ID,ID,ID
+TMjegyekF.tulajlookup.LookupDisplay,Nev,Nev,Nev
+TMjegyekF.tulajlookup.LookupField,Id,Id,Id
+TMjegyekF.tulajT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyekF.tulajT.IndexFieldNames,ID,ID,ID
+TMjegyekF.tulajTAdoszam.Origin,Adoszam,Adoszam,Adoszam
+TMjegyekF.tulajTCim.Origin,Cim,Cim,Cim
+TMjegyekF.tulajTElotag.Origin,Elotag,Elotag,Elotag
+TMjegyekF.tulajTEmail.Origin,Email,Email,Email
+TMjegyekF.tulajTEmelet.Origin,Emelet,Emelet,Emelet
+TMjegyekF.tulajTEpulet.Origin,Epulet,Epulet,Epulet
+TMjegyekF.tulajTHazszam.Origin,Hazszam,Hazszam,Hazszam
+TMjegyekF.tulajTHrsz.Origin,Hrsz,Hrsz,Hrsz
+TMjegyekF.tulajTID.Origin,ID,ID,ID
+TMjegyekF.tulajTIrsz.Origin,Irsz,Irsz,Irsz
+TMjegyekF.tulajTKerulet.Origin,Kerulet,Kerulet,Kerulet
+TMjegyekF.tulajTKozt_Jelleg.Origin,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMjegyekF.tulajTKozterulet.Origin,Kozterulet,Kozterulet,Kozterulet
+TMjegyekF.tulajTktj.Origin,ktj,ktj,ktj
+TMjegyekF.tulajTkuj.Origin,kuj,kuj,kuj
+TMjegyekF.tulajTLepcsohaz.Origin,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMjegyekF.tulajTNev.Origin,Nev,Nev,Nev
+TMjegyekF.tulajTTelefon.Origin,Telefon,Telefon,Telefon
+TMjegyekF.tulajTTelepules.Origin,Telepules,Telepules,Telepules
+TMjegyF.cbfuvarozo.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.cbfuvarozo.LookupDisplay,nev;cim;,nev;cim;,nev;cim;
+TMjegyF.cbfuvarozo.LookupField,ID,ID,ID
+TMjegyF.cbxktip.Text,a,a,a
+TMjegyF.cbxRendszam1.Text,CBXRENDSZAM1,CBXRENDSZAM1,CBXRENDSZAM1
+TMjegyF.cbxRendszam2.Text,CBXRENDSZAM2,CBXRENDSZAM2,CBXRENDSZAM2
+TMjegyF.cbxszar.Text,cbxszar,cbxszar,cbxszar
+TMjegyF.edekaer.Text,EdEkaer,EdEkaer,EdEkaer
+TMjegyF.edmegjegy.Text,edmegjegy,edmegjegy,edmegjegy
+TMjegyF.edSample.Text,edSample,edSample,edSample
+TMjegyF.edsofor.Text,edsofor,edsofor,edsofor
+TMjegyF.kezelolookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.kezelolookup.LookupDisplay,nev;,nev;,nev;
+TMjegyF.kezelolookup.LookupField,id,id,id
+TMjegyF.levon_szovegT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.levon_szovegT.IndexFieldNames,ID,ID,ID
+TMjegyF.levon_szovegTID.Origin,ID,ID,ID
+TMjegyF.levon_szovegTSzoveg.Origin,Szoveg,Szoveg,Szoveg
+TMjegyF.levonlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.levonlookup.LookupDisplay,Szoveg,Szoveg,Szoveg
+TMjegyF.levonlookup.LookupField,id,id,id
+TMjegyF.lucTipus.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.lucTipus.LookupDisplay,nev,nev,nev
+TMjegyF.lucTipus.LookupField,ID,ID,ID
+TMjegyF.masolQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.Partnelist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.Partnerlist2.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.Partnerlist3.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.partnerlookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.partnerlookup.LookupDisplay,nev;cim;,nev;cim;,nev;cim;
+TMjegyF.partnerlookup.LookupField,ID,ID,ID
+TMjegyF.partnerlookup2.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.partnerlookup2.LookupDisplay,nev;cim;,nev;cim;,nev;cim;
+TMjegyF.partnerlookup2.LookupField,ID,ID,ID
+TMjegyF.szarQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.taroloklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.taroloklookup.LookupDisplay,nev,nev,nev
+TMjegyF.taroloklookup.LookupField,id,id,id
+TMjegyF.TarolokT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.termeklist.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.termeklistafa.Origin,afa,afa,afa
+TMjegyF.termeklistalapnedv.Origin,alapnedv,alapnedv,alapnedv
+TMjegyF.termeklistar.Origin,ar,ar,ar
+TMjegyF.termeklistb_buzaminoseg.Origin,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TMjegyF.termeklistb_eses.Origin,b_eses,b_eses,b_eses
+TMjegyF.termeklistb_feherje.Origin,b_feherje,b_feherje,b_feherje
+TMjegyF.termeklistb_hekto.Origin,b_hekto,b_hekto,b_hekto
+TMjegyF.termeklistb_nedv.Origin,b_nedv,b_nedv,b_nedv
+TMjegyF.termeklistb_olaj.Origin,b_olaj,b_olaj,b_olaj
+TMjegyF.termeklistb_tisztasag.Origin,b_tisztasag,b_tisztasag,b_tisztasag
+TMjegyF.termeklistb_tort.Origin,b_tort,b_tort,b_tort
+TMjegyF.termeklistegysegtomeg.Origin,egysegtomeg,egysegtomeg,egysegtomeg
+TMjegyF.termeklistID.Origin,ID,ID,ID
+TMjegyF.termeklistitj.Origin,itj,itj,itj
+TMjegyF.termeklistkerekites.Origin,kerekites,kerekites,kerekites
+TMjegyF.termeklistKod.Origin,Kod,Kod,Kod
+TMjegyF.termeklistkukorica.Origin,kukorica,kukorica,kukorica
+TMjegyF.termeklistme.Origin,me,me,me
+TMjegyF.termeklistNev.Origin,Nev,Nev,Nev
+TMjegyF.termeklisttipus_id.Origin,tipus_id,tipus_id,tipus_id
+TMjegyF.termeklookup.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TMjegyF.termeklookup.LookupDisplay,Nev;kod;,Nev;kod;,Nev;kod;
+TMjegyF.termeklookup.LookupField,ID,ID,ID
+TMjegyF.tulajlookup.DisplayEmpty,"---Válasszon bizonylat kibocsájtót---","---Select document issuer---","---Selectați emitentul documentului---"
+TMjegyF.tulajlookup.LookupDisplay,Nev,Nev,Nev
+TMjegyF.tulajlookup.LookupField,Id,Id,Id
+TMjegyF.tulajT.ConnectionName,Kapcs,Kapcs,Kapcs
+TMjegyF.tulajT.IndexFieldNames,ID,ID,ID
+TMjegyF.tulajTAdoszam.Origin,Adoszam,Adoszam,Adoszam
+TMjegyF.tulajTCim.Origin,Cim,Cim,Cim
+TMjegyF.tulajTElotag.Origin,Elotag,Elotag,Elotag
+TMjegyF.tulajTEmail.Origin,Email,Email,Email
+TMjegyF.tulajTEmelet.Origin,Emelet,Emelet,Emelet
+TMjegyF.tulajTEpulet.Origin,Epulet,Epulet,Epulet
+TMjegyF.tulajTHazszam.Origin,Hazszam,Hazszam,Hazszam
+TMjegyF.tulajTHrsz.Origin,Hrsz,Hrsz,Hrsz
+TMjegyF.tulajTID.Origin,ID,ID,ID
+TMjegyF.tulajTIrsz.Origin,Irsz,Irsz,Irsz
+TMjegyF.tulajTKerulet.Origin,Kerulet,Kerulet,Kerulet
+TMjegyF.tulajTKozt_Jelleg.Origin,Kozt_Jelleg,Kozt_Jelleg,Kozt_Jelleg
+TMjegyF.tulajTKozterulet.Origin,Kozterulet,Kozterulet,Kozterulet
+TMjegyF.tulajTktj.Origin,ktj,ktj,ktj
+TMjegyF.tulajTkuj.Origin,kuj,kuj,kuj
+TMjegyF.tulajTLepcsohaz.Origin,Lepcsohaz,Lepcsohaz,Lepcsohaz
+TMjegyF.tulajTNev.Origin,Nev,Nev,Nev
+TMjegyF.tulajTTelefon.Origin,Telefon,Telefon,Telefon
+TMjegyF.tulajTTelepules.Origin,Telepules,Telepules,Telepules
+TPartnerekF.bdchkMagansz.ValueChecked,True,True,True
+TPartnerekF.bdchkMagansz.ValueUnchecked,False,False,False
+TPartnerekF.cbdijkat.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TPartnerekF.cbdijkat.LookupDisplay,nev,nev,nev
+TPartnerekF.cbdijkat.LookupField,id,id,id
+TPartnerekF.dijkatT.ConnectionName,Kapcs,Kapcs,Kapcs
+TPartnerekF.PartnerT.ConnectionName,Kapcs,Kapcs,Kapcs
+TPartnerekF.PartnerT.IndexFieldNames,ID,ID,ID
+Trak_szall_listF.f_partnerlookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+Trak_szall_listF.f_partnerlookup.LookupDisplay,combo,combo,combo
+Trak_szall_listF.f_partnerlookup.LookupField,id,id,id
+Trak_szall_listF.f_partnerQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.f_tarololookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+Trak_szall_listF.f_tarololookup.LookupDisplay,nev,nev,nev
+Trak_szall_listF.f_tarololookup.LookupField,id,id,id
+Trak_szall_listF.f_taroloQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.frxDBDRakszall.UserName,frxDBDRakszall,frxDBDRakszall,frxDBDRakszall
+Trak_szall_listF.frxrakszall_lista.IniFile,"\Software\Fast Reports","\Software\Fast Reports","\Software\Fast Reports"
+Trak_szall_listF.frxrakszall_lista.ScriptLanguage,PascalScript,PascalScript,PascalScript
+Trak_szall_listF.k_partnerlookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+Trak_szall_listF.k_partnerlookup.LookupDisplay,combo,combo,combo
+Trak_szall_listF.k_partnerlookup.LookupField,id,id,id
+Trak_szall_listF.k_partnerQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.k_tarololookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+Trak_szall_listF.k_tarololookup.LookupDisplay,nev,nev,nev
+Trak_szall_listF.k_tarololookup.LookupField,id,id,id
+Trak_szall_listF.k_taroloQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.rakszallQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.rakszallQdatum.Origin,datum,datum,datum
+Trak_szall_listF.rakszallQEazon.Origin,Eazon,Eazon,Eazon
+Trak_szall_listF.rakszallQEv_ssz.Origin,Ev_ssz,Ev_ssz,Ev_ssz
+Trak_szall_listF.rakszallQFelhasznalo.Origin,Felhasznalo,Felhasznalo,Felhasznalo
+Trak_szall_listF.rakszallQID.Origin,ID,ID,ID
+Trak_szall_listF.rakszallQK_Cim.Origin,K_Cim,K_Cim,K_Cim
+Trak_szall_listF.rakszallQK_ID.Origin,K_ID,K_ID,K_ID
+Trak_szall_listF.rakszallQK_Kod.Origin,K_Kod,K_Kod,K_Kod
+Trak_szall_listF.rakszallQK_Nev.Origin,K_Nev,K_Nev,K_Nev
+Trak_szall_listF.rakszallQk_tarolo_id.Origin,k_tarolo_id,k_tarolo_id,k_tarolo_id
+Trak_szall_listF.rakszallQk_tarolo_nev.Origin,k_tarolo_nev,k_tarolo_nev,k_tarolo_nev
+Trak_szall_listF.rakszallQmegjegyzes.Origin,megjegyzes,megjegyzes,megjegyzes
+Trak_szall_listF.rakszallQmennyiseg.Origin,mennyiseg,mennyiseg,mennyiseg
+Trak_szall_listF.rakszallQrt_id.Origin,rt_id,rt_id,rt_id
+Trak_szall_listF.rakszallQSorszam.Origin,Sorszam,Sorszam,Sorszam
+Trak_szall_listF.rakszallQStorno.Origin,Storno,Storno,Storno
+Trak_szall_listF.rakszallQtermek_id.Origin,termek_id,termek_id,termek_id
+Trak_szall_listF.rakszallQtermek_kod.Origin,termek_kod,termek_kod,termek_kod
+Trak_szall_listF.rakszallQtermek_nev.Origin,termek_nev,termek_nev,termek_nev
+Trak_szall_listF.rakszallQtort.Origin,tort,tort,tort
+Trak_szall_listF.rakszallQV_Cim.Origin,V_Cim,V_Cim,V_Cim
+Trak_szall_listF.rakszallQV_ID.Origin,V_ID,V_ID,V_ID
+Trak_szall_listF.rakszallQV_Kod.Origin,V_Kod,V_Kod,V_Kod
+Trak_szall_listF.rakszallQV_Nev.Origin,V_Nev,V_Nev,V_Nev
+Trak_szall_listF.rakszallQv_tarolo_id.Origin,v_tarolo_id,v_tarolo_id,v_tarolo_id
+Trak_szall_listF.rakszallQv_tarolo_nev.Origin,v_tarolo_nev,v_tarolo_nev,v_tarolo_nev
+Trak_szall_listF.TermekekQ.ConnectionName,Kapcs,Kapcs,Kapcs
+Trak_szall_listF.TermekekQid.Origin,ID,ID,ID
+Trak_szall_listF.TermekekQkod.Origin,Kod,Kod,Kod
+Trak_szall_listF.TermekekQnev.Origin,Nev,Nev,Nev
+Trak_szall_listF.termeklookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+Trak_szall_listF.termeklookup.LookupDisplay,kod;nev;,kod;nev;,kod;nev;
+Trak_szall_listF.termeklookup.LookupField,id,id,id
+TRak_szallF.f_partnerlookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TRak_szallF.f_partnerlookup.LookupDisplay,combo,combo,combo
+TRak_szallF.f_partnerlookup.LookupField,id,id,id
+TRak_szallF.f_partnerQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TRak_szallF.f_tarololookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TRak_szallF.f_tarololookup.LookupDisplay,nev,nev,nev
+TRak_szallF.f_tarololookup.LookupField,id,id,id
+TRak_szallF.f_taroloQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TRak_szallF.k_partnerlookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TRak_szallF.k_partnerlookup.LookupDisplay,combo,combo,combo
+TRak_szallF.k_partnerlookup.LookupField,id,id,id
+TRak_szallF.k_partnerQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TRak_szallF.k_tarololookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TRak_szallF.k_tarololookup.LookupDisplay,nev,nev,nev
+TRak_szallF.k_tarololookup.LookupField,id,id,id
+TRak_szallF.k_taroloQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TRak_szallF.TermekekQ.ConnectionName,Kapcs,Kapcs,Kapcs
+TRak_szallF.termeklookup.DisplayEmpty,"---Nincs kiválasztva---","---Not selected---",---Neselectat---
+TRak_szallF.termeklookup.LookupDisplay,kod;nev;,kod;nev;,kod;nev;
+TRak_szallF.termeklookup.LookupField,id,id,id
+TTermekekF.DBCheckBox3.ValueChecked,True,True,True
+TTermekekF.DBCheckBox3.ValueUnchecked,False,False,False
+TTermekekF.DBCheckBox5.ValueChecked,True,True,True
+TTermekekF.DBCheckBox5.ValueUnchecked,False,False,False
+TTermekekF.DBChkfeherje.ValueChecked,True,True,True
+TTermekekF.DBChkfeherje.ValueUnchecked,False,False,False
+TTermekekF.DBChkhekto.ValueChecked,True,True,True
+TTermekekF.DBChkhekto.ValueUnchecked,False,False,False
+TTermekekF.dbchkkerekites.ValueChecked,True,True,True
+TTermekekF.dbchkkerekites.ValueUnchecked,False,False,False
+TTermekekF.DBChkKukorica.ValueChecked,True,True,True
+TTermekekF.DBChkKukorica.ValueUnchecked,False,False,False
+TTermekekF.DBChknedv.ValueChecked,True,True,True
+TTermekekF.DBChknedv.ValueUnchecked,False,False,False
+TTermekekF.DBChkolaj.ValueChecked,True,True,True
+TTermekekF.DBChkolaj.ValueUnchecked,False,False,False
+TTermekekF.DBChksiker.ValueChecked,True,True,True
+TTermekekF.DBChksiker.ValueUnchecked,False,False,False
+TTermekekF.DBChktisztasag.ValueChecked,True,True,True
+TTermekekF.DBChktisztasag.ValueUnchecked,False,False,False
+TTermekekF.DBChktort.ValueChecked,True,True,True
+TTermekekF.DBChktort.ValueUnchecked,False,False,False
+TTermekekF.excelO.Filter,*.XLS;*.XLSX;,*.XLS;*.XLSX;,*.XLS;*.XLSX;
+TTermekekF.lucTipus.DisplayEmpty,"----Nincs kiválasztva----","----Not selected----",----Neselectat----
+TTermekekF.lucTipus.LookupDisplay,nev,nev,nev
+TTermekekF.lucTipus.LookupField,ID,ID,ID
+TTermekekF.TermekT.ConnectionName,Kapcs,Kapcs,Kapcs
+TTermekekF.TermekT.IndexFieldNames,ID,ID,ID
+TTermekekF.TermekTafa.Origin,afa,afa,afa
+TTermekekF.TermekTalapnedv.Origin,alapnedv,alapnedv,alapnedv
+TTermekekF.TermekTar.Origin,ar,ar,ar
+TTermekekF.TermekTb_buzaminoseg.Origin,b_buzaminoseg,b_buzaminoseg,b_buzaminoseg
+TTermekekF.TermekTb_eses.Origin,b_eses,b_eses,b_eses
+TTermekekF.TermekTb_feherje.Origin,b_feherje,b_feherje,b_feherje
+TTermekekF.TermekTb_hekto.Origin,b_hekto,b_hekto,b_hekto
+TTermekekF.TermekTb_nedv.Origin,b_nedv,b_nedv,b_nedv
+TTermekekF.TermekTb_olaj.Origin,b_olaj,b_olaj,b_olaj
+TTermekekF.TermekTb_tisztasag.Origin,b_tisztasag,b_tisztasag,b_tisztasag
+TTermekekF.TermekTb_tort.Origin,b_tort,b_tort,b_tort
+TTermekekF.TermekTegysegtomeg.Origin,egysegtomeg,egysegtomeg,egysegtomeg
+TTermekekF.TermekTID.Origin,ID,ID,ID
+TTermekekF.TermekTitj.Origin,itj,itj,itj
+TTermekekF.TermekTkerekites.Origin,kerekites,kerekites,kerekites
+TTermekekF.TermekTKod.Origin,Kod,Kod,Kod
+TTermekekF.TermekTkukorica.Origin,kukorica,kukorica,kukorica
+TTermekekF.TermekTme.Origin,me,me,me
+TTermekekF.TermekTNev.Origin,Nev,Nev,Nev
+TTermekekF.TermekTtipus_id.Origin,tipus_id,tipus_id,tipus_id
+
