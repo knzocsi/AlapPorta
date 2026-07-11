@@ -544,7 +544,7 @@ type
     procedure torzs_import_xlsx;
     procedure torzs_import_csv;
     procedure import_log(S:string);
-    function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant):Variant;
+    function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant;modosit:boolean=False):Variant;
     procedure fo_szazalek(brutto,tara,szemet_szazalek,akt_nedvesseg_szazalek,alap_nedvesseg_szazalek,
                           tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
     procedure nyitbe_torles(id,torles:integer);
@@ -628,8 +628,8 @@ var
   Automata_Ftp_feltoltes: Boolean=False;
   Ftp_tavoli_mappa: string;
   nyomtatas_szamlalo:Integer=2;
-  //0-hun, 1-eng
-  nyelv_index:Integer=0;
+  //1:hun, 2:eng  3:román -1: nincs megadva
+  nyelv_index:Integer=-1;
 
   db_mentes_inditaskor: Boolean=False;
   db_tavoli_mappa: string;
@@ -747,21 +747,7 @@ procedure TAF.DataModuleCreate(Sender: TObject);
    irszQ.Close;
   end;
 
-  procedure nyelv_valasztas;
-  var    h:THandle;
-  const
-    ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
-  begin
-   if nyelv_index=0 then exit;
-   try
-    //FordF:=FordF.Create(Application);
-   finally
-    case nyelv_index of
-     0: if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
-     1: if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
-    end;
-   end;
-  end;
+  
 begin
   bit:=9;
   kapcs_ini_kezel;
@@ -815,7 +801,7 @@ begin
   modok_vegrehajt;//  SQL_text unitba kell
   if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
   ini_kezel;
-  nyelv_valasztas;
+
   if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
   FormatSettings.DateSeparator := '.';
   FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
@@ -1604,7 +1590,7 @@ begin
   Ftp_tavoli_mappa:=cfg_kezel('FTP feltöltéshez mappa','FTP','Ftp_tavoli_mappa','String', 'HU1265634700000093');
   automata_Ftp_feltoltes:= cfg_kezel('Automatikus feltöltés az FTP szerverre','FTP','Automata_Ftp_feltoltes','Boolean', Automata_Ftp_feltoltes);
 
-  nyelv_index:=cfg_kezel('0-magyat; 1-angol','ALAP','Nyelv','Integer',nyelv_index);
+  nyelv_index:=cfg_kezel('1: magyar; 2: angol 3: román -1: nincs használatban','ALAP','Nyelv','Integer',nyelv_index);
 
   db_mentes_inditaskor:= cfg_kezel('Automatikus adatbázis mentés a program indításakor','DB','db_mentes_inditaskor','Boolean', db_mentes_inditaskor);
   db_tavoli_mappa:=cfg_kezel('Adatbázis mentéshez távoli mappa','DB','db_tavoli_mappa','String', db_tavoli_mappa);
@@ -1634,6 +1620,8 @@ begin
 
   sofor_merlegjegyen:=cfg_kezel('Sofõr mérlegjegyen',
    'ALAP','Sofõr mérlegjegyen','Boolean',sofor_merlegjegyen);
+
+
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -2099,31 +2087,43 @@ procedure TAF.camlog(S: string);
  var tf : TextFile;
     m:string;
 begin
- m:=ExtractFileDir(application.exename);
+  m:=ExtractFileDir(application.exename);
 // ForceDirectories(m);
- AssignFile(tf,m+'\cam_log.txt');
- if not FileExists(m+'\cam_log.txt') then ReWrite(tf)
- else Append(tf);
- WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
- Writeln(tf,'*****************************************************************************************************************');
- CloseFile(tf);
+  AssignFile(tf,m+'\cam_log.txt');
+  if not FileExists(m+'\cam_log.txt') then ReWrite(tf)
+  else Append(tf);
+  WriteLn(tf, s+' : '+Datetimetostr(Now)+'');
+  Writeln(tf,'*****************************************************************************************************************');
+  CloseFile(tf);
 end;
 
 function TAF.cfg_kezel(magyarazat,csoport, tulajdonsag, tipus: String;
-  ertek: Variant): Variant;
+  ertek: Variant;modosit: boolean): Variant;
 begin
- with CfgT do
+  with CfgT do
   begin
     open;
     if Locate('csoport;tulajdonsag',VarArrayOf([csoport,tulajdonsag]),[] ) then
-     begin
-       case tipus[1] of
-        'S':Result:=CfgT.FieldByName('ertek') .AsString;
-        'I':Result:=CfgT.FieldByName('ertek') .AsInteger;
-        'B':Result:=CfgT.FieldByName('ertek') .AsBoolean;
-        'F':Result:=CfgT.FieldByName('ertek') .AsFloat;
-       end;
-     end
+    begin
+      if not modosit then
+        case tipus[1] of
+          'S':  Result:=CfgT.FieldByName('ertek').AsString;
+          'I':  Result:=CfgT.FieldByName('ertek').AsInteger;
+          'B':  Result:=CfgT.FieldByName('ertek').AsBoolean;
+          'F':  Result:=CfgT.FieldByName('ertek').AsFloat;
+        end
+      else
+        begin
+          edit;
+          case tipus[1] of
+            'S':  CfgT.FieldByName('ertek').AsString:=ertek;
+            'I':  CfgT.FieldByName('ertek').AsInteger:=ertek;
+            'B':  CfgT.FieldByName('ertek').AsBoolean:=ertek;
+            'F':  CfgT.FieldByName('ertek').AsFloat:=ertek;
+          end;
+          post;
+        end;
+    end
     else
      begin
        edit;

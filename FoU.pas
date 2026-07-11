@@ -230,7 +230,6 @@ type
     sbtnFolytatas: TSpeedButton;
     sbtnLista: TSpeedButton;
     sbtnSorszamhivas: TSpeedButton;
-    btnnyelv: TButton;
     csRelayDroid: TClientSocket;
     Gngylegek1: TMenuItem;
     kartyak_m: TMenuItem;
@@ -331,7 +330,6 @@ type
     procedure sorompo_kezeles(merleg, sorompo: Integer; nyit: boolean);
     procedure Djszabsikategrik1Click(Sender: TObject);
     procedure tmrForgalom_frissitesTimer(Sender: TObject);
-    procedure btnnyelvClick(Sender: TObject);
     procedure PLC_feladatok(IPCim: string; Port, IO: integer; Tipus, Muvelet: string; Ertek: integer);
     procedure RD_feladatok(IPCim: string; Port, IO: integer; Tipus, Muvelet: string; Ertek: integer);
     function Ping_teszt_moxa(IP: string): boolean;
@@ -346,6 +344,7 @@ type
     procedure StatusBar1Click(Sender: TObject);
     procedure UpdateStrings;
     procedure siLangDispatcher1LanguageChanged(Sender: TObject);
+    procedure siLangCombo1Change(Sender: TObject);
   private
     { Private declarations }
     procedure socketconnect;
@@ -794,48 +793,6 @@ begin
   NagykamF.fo(campagc.ActivePageIndex);
 end;
 
-procedure TFoF.btnnyelvClick(Sender: TObject);
-var
-  m: Integer;
-  h: THandle;
-  AppName: PChar;
-const
-  ENGLISH = (SUBLANG_ENGLISH_UK shl 10) or LANG_ENGLISH;
-begin
-  try
-    nyelvF := TNyelvF.Create(Self);
-    NyelvF.Position := poScreenCenter;
-    if NyelvF.ShowModal = mrOk then
-      nyelv_index := nyelvF.cbxnyelv.itemindex
-    else
-      nyelv_index := 0;
-   //ShowMessage(nyelv_index.ToString)
-  finally
-    nyelvF.free;
-  //portf.portclose;
-//      case nyelv_index of
-//        0:if SetResourceHInstance(HInstance){LoadNewResourceModule(14)}<>0 then ReinitializeForms;
-//        1:if LoadNewResourceModule(ENGLISH)<>0 then ReinitializeForms;
-//      end;
-
-    with af.CfgT do
-    begin
-      open;
-      if Locate('tulajdonsag', 'Nyelv', []) then
-      begin
-        edit;
-        FieldByName('ertek').AsInteger := nyelv_index;
-        post;
-      end;
-      close
-    end;
-    AppName := PChar(Application.ExeName);
-    ShellExecute(Handle, 'open', AppName, nil, nil, SW_SHOWNORMAL);
-    Application.Terminate;
-  end;
-  nyelvvalaszt := false;
-end;
-
 procedure TFoF.cam1Show(Sender: TObject);
 begin
   btnnagykamkep.Caption := UpperCase((Sender as TTabSheet).Caption) + rsNagyitott_nezet;
@@ -1202,6 +1159,8 @@ begin
     StatusBar1.panels[2].text := rsBejelentkezve + felhnev;
     alapbe_m.Enabled := felhnev = 'Programozó';
     Hardverbelltsok1.Visible := felhnev = 'Programozó';
+    mnSzablyosmrlegentartozkodsfigyels1.Visible := felhnev = 'Programozó';
+    siLangCombo1.Visible := (felhnev ='Programozó') and (nyelv_index > -1);
     sbtnUjmerlegjegy.Enabled := true;
     sbtnFolytatas.Enabled := true;
     sbtnLista.Enabled := true;
@@ -1467,6 +1426,13 @@ var
 
 begin
   onActivate := nil;
+  if nyelv_index>-1 then
+  begin
+    siLangCombo1.ItemIndex:=nyelv_index-1;
+    siLangDispatcher1.ActiveLanguage:= nyelv_index;
+    siLangDispatcher1.DefaultLanguage:= nyelv_index;
+    UpdateStrings;
+  end;
  // AF.auto_teszt;
   if not Regi_hardver_beallitas then
     af.HardverQ.Open
@@ -1694,19 +1660,7 @@ begin
     begin
       ShellExecute(Handle, 'open', PChar(konyvtar + 'Ftp_fel.exe'), '/BEZAR', nil, SW_HIDE);
       Af.Regiek_torlese;
-      with af.CfgT do
-      begin
-        open;
-        if locate('tulajdonsag', 'Utolso_futtatas', []) then
-        begin
-          edit;
-          FieldByName('ertek').AsString := esemeny.evs + esemeny.hos + esemeny.naps;
-          post;
-          close;
-        end
-        else
-          af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást', 'ALAP', 'Utolso_futtatas', 'String', esemeny.evs + esemeny.hos + esemeny.naps);
-      end;
+      af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást', 'ALAP', 'Utolso_futtatas', 'String', esemeny.evs + esemeny.hos + esemeny.naps,True);
     end
   end;
 
@@ -1844,7 +1798,8 @@ var
   sL: TStringList;
   dir: string;
 begin
-  UpdateStrings;
+
+
   dir := ExtractFileDir(Application.Exename) + '\';
   IniFile.FileName := dir + 'form_beallitas.ini';
   kepernyo_kezel;
@@ -2715,6 +2670,12 @@ begin
     end;
 
   end;
+end;
+
+procedure TFoF.siLangCombo1Change(Sender: TObject);
+begin
+  nyelv_index:=siLangCombo1.ItemIndex+1;
+  af.cfg_kezel('1: magyar; 2: angol 3: román -1: nincs használatban','ALAP','Nyelv','Integer',nyelv_index,True);
 end;
 
 procedure TFoF.siLangDispatcher1LanguageChanged(Sender: TObject);
@@ -3683,23 +3644,7 @@ procedure TFoF.mnSzablyosmrlegentartozkodsfigyels1Click(Sender: TObject);
 begin
   mnSzablyosmrlegentartozkodsfigyels1.Checked := not mnSzablyosmrlegentartozkodsfigyels1.Checked;
   szabalyos_merlegen_tartozkodas_figyeles := mnSzablyosmrlegentartozkodsfigyels1.Checked;
-  with af.CfgT do
-  begin
-    open;
-    if locate('tulajdonsag', 'Szabályos mérlegen tartozkodás figyelése', []) then
-    begin
-      edit;
-      FieldByName('ertek').AsBoolean := mnSzablyosmrlegentartozkodsfigyels1.Checked;
-      post;
-
-    end
-    else
-    begin
-      close;
-      af.cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni', 'ALAP', 'Szabályos mérlegen tartozkodás figyelése', 'Boolean', mnSzablyosmrlegentartozkodsfigyels1.Checked);
-    end;
-  end;
-
+  af.cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni', 'ALAP', 'Szabályos mérlegen tartozkodás figyelése', 'Boolean', mnSzablyosmrlegentartozkodsfigyels1.Checked,True);
 end;
 
 procedure TFoF.moxaTeszttmrTimer(Sender: TObject);
