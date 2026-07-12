@@ -16272,13 +16272,13 @@ object AF: TAF
   end
   object Auto_mjegy_Trans: TFDTransaction
     Connection = Auto_mjegy_kapcs
-    Left = 272
-    Top = 96
+    Left = 312
+    Top = 104
   end
   object Auto_mjegyQ: TFDQuery
     Connection = Auto_mjegy_kapcs
     Transaction = Auto_mjegy_Trans
-    Left = 272
+    Left = 312
     Top = 160
   end
   object Auto_mjegyINUPQ: TFDQuery
@@ -16470,5 +16470,17 @@ object AF: TAF
     BCDToCurrency = False
     Left = 640
     Top = 408
+  end
+  object SoforokQ: TFDQuery
+    Connection = Kapcs
+    SQL.Strings = (
+      'select * from soforok ORDER BY sofor ASC;')
+    Left = 208
+    Top = 96
+  end
+  object SoforokQDS: TDataSource
+    DataSet = SoforokQ
+    Left = 208
+    Top = 144
   end
 end

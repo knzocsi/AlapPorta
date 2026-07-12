@@ -80,7 +80,8 @@ uses
   KartyakU in 'KartyakU.pas' {KartyakF},
   MozgasokTesztU in 'MozgasokTesztU.pas' {MozgasokTesztF},
   MozgasokListajaU in 'MozgasokListajaU.pas' {MozgasokListajaF},
-  NagyTomegU in 'NagyTomegU.pas' {NagyTomegF};
+  NagyTomegU in 'NagyTomegU.pas' {NagyTomegF},
+  soforU in 'soforU.pas' {SoforF};
 
 {$R *.res}
 
@@ -150,5 +151,6 @@ begin
   Application.CreateForm(TMozgasokTesztF, MozgasokTesztF);
   Application.CreateForm(TMozgasokListajaF, MozgasokListajaF);
   Application.CreateForm(TNagyTomegF, NagyTomegF);
+  Application.CreateForm(TSoforF, SoforF);
   Application.Run;
 end.

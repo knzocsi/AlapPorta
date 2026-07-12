@@ -1153,7 +1153,6 @@ var
   h: Integer;
 begin
   try
-
     BelepF.ShowModal;
   finally
     StatusBar1.panels[2].text := rsBejelentkezve + felhnev;
@@ -1660,7 +1659,7 @@ begin
     begin
       ShellExecute(Handle, 'open', PChar(konyvtar + 'Ftp_fel.exe'), '/BEZAR', nil, SW_HIDE);
       Af.Regiek_torlese;
-      af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást', 'ALAP', 'Utolso_futtatas', 'String', esemeny.evs + esemeny.hos + esemeny.naps,True);
+      af.cfg_kezel('A dátum amikor futtatta a mentést és a töröltbe írást', 'ALAP', 'Utolso_futtatas', 'String', esemeny.evs + esemeny.hos + esemeny.naps,cfgModosit);
     end
   end;
 
@@ -2675,7 +2674,7 @@ end;
 procedure TFoF.siLangCombo1Change(Sender: TObject);
 begin
   nyelv_index:=siLangCombo1.ItemIndex+1;
-  af.cfg_kezel('1: magyar; 2: angol 3: román -1: nincs használatban','ALAP','Nyelv','Integer',nyelv_index,True);
+  af.cfg_kezel('1: magyar; 2: angol 3: román -1: nincs használatban','ALAP','Nyelv','Integer',nyelv_index,cfgModosit);
 end;
 
 procedure TFoF.siLangDispatcher1LanguageChanged(Sender: TObject);
@@ -3644,7 +3643,7 @@ procedure TFoF.mnSzablyosmrlegentartozkodsfigyels1Click(Sender: TObject);
 begin
   mnSzablyosmrlegentartozkodsfigyels1.Checked := not mnSzablyosmrlegentartozkodsfigyels1.Checked;
   szabalyos_merlegen_tartozkodas_figyeles := mnSzablyosmrlegentartozkodsfigyels1.Checked;
-  af.cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni', 'ALAP', 'Szabályos mérlegen tartozkodás figyelése', 'Boolean', mnSzablyosmrlegentartozkodsfigyels1.Checked,True);
+  af.cfg_kezel('Ha be van kapcsolva és az Infra5 vagy Infra6 jelez, nem enged mérni', 'ALAP', 'Szabályos mérlegen tartozkodás figyelése', 'Boolean', mnSzablyosmrlegentartozkodsfigyels1.Checked,cfgModosit);
 end;
 
 procedure TFoF.moxaTeszttmrTimer(Sender: TObject);

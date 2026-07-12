@@ -1974,7 +1974,7 @@ object FoF: TFoF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     ExcludedProperties.Strings = (
       'Category'
       'SecondaryShortCuts'

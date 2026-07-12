@@ -41,7 +41,9 @@ uses
 
   MeresTipusNormal=0;
   MeresTipusRogzitett=1;
-
+  cfgModosit=1;
+  cfgTorol=2;
+  cfgNemValtoztat=0;
 
 type
    esemeny_rec=record
@@ -476,6 +478,8 @@ type
     mam_csovong_menny_2: TFloatField;
     mam_csovonossztomeg_2: TFloatField;
     frxDBmam_csovon: TfrxDBDataset;
+    SoforokQ: TFDQuery;
+    SoforokQDS: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure Forgalom_TimerTimer(Sender: TObject);
     procedure felhasznalok_jogaijogChange(Sender: TField);
@@ -544,7 +548,7 @@ type
     procedure torzs_import_xlsx;
     procedure torzs_import_csv;
     procedure import_log(S:string);
-    function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant;modosit:boolean=False):Variant;
+    function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant;modosit:integer=0):Variant;
     procedure fo_szazalek(brutto,tara,szemet_szazalek,akt_nedvesseg_szazalek,alap_nedvesseg_szazalek,
                           tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
     procedure nyitbe_torles(id,torles:integer);
@@ -2098,14 +2102,14 @@ begin
 end;
 
 function TAF.cfg_kezel(magyarazat,csoport, tulajdonsag, tipus: String;
-  ertek: Variant;modosit: boolean): Variant;
+  ertek: Variant;modosit: Integer): Variant;
 begin
   with CfgT do
   begin
     open;
     if Locate('csoport;tulajdonsag',VarArrayOf([csoport,tulajdonsag]),[] ) then
     begin
-      if not modosit then
+      if modosit=cfgNemValtoztat then
         case tipus[1] of
           'S':  Result:=CfgT.FieldByName('ertek').AsString;
           'I':  Result:=CfgT.FieldByName('ertek').AsInteger;
@@ -2113,6 +2117,7 @@ begin
           'F':  Result:=CfgT.FieldByName('ertek').AsFloat;
         end
       else
+        if modosit=cfgModosit then
         begin
           edit;
           case tipus[1] of
@@ -2122,7 +2127,17 @@ begin
             'F':  CfgT.FieldByName('ertek').AsFloat:=ertek;
           end;
           post;
-        end;
+        end
+        else
+          if modosit=cfgTorol then
+          begin
+            case tipus[1] of
+              'S':  if CfgT.FieldByName('ertek').AsString='' then CfgT.Delete;
+              'I':  if CfgT.FieldByName('ertek').AsInteger=0 then CfgT.Delete;
+              'B':  if CfgT.FieldByName('ertek').AsBoolean=False then CfgT.Delete;
+              'F':  if CfgT.FieldByName('ertek').AsFloat=0 then CfgT.Delete;
+            end;
+          end;
     end
     else
      begin

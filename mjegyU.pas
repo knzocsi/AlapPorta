@@ -116,7 +116,6 @@ type
     btn1: TButton;
     kezelolookup: TJvDBLookupCombo;
     btnMerlegkezelok_listaja: TButton;
-    cbxktip: TComboBox;
     chknincspot: TCheckBox;
     edekaer: TEdit;
     cbxRendszam1: TComboBox;
@@ -220,8 +219,9 @@ type
     chkidegen: TCheckBox;
     btngongy: TButton;
     lblsofor: TLabel;
-    edsofor: TEdit;
     siLangLinked_MjegyF: TsiLangLinked;
+    cbxSoforok: TJvDBLookupCombo;
+    btnSoforok: TButton;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -256,6 +256,7 @@ type
     procedure lucTipusChange(Sender: TObject);
     procedure tsOsszeskepResize(Sender: TObject);
     procedure btngongyClick(Sender: TObject);
+    procedure btnSoforokClick(Sender: TObject);
 
 
   private
@@ -288,7 +289,7 @@ var
 implementation
   uses AU,TermekekU,PartnerekU, NezetU, MerlegkezelokU,nagykepU, RendszamokU,
   tarolokU, EkaerU, levon_szovegekU,Meres_MerlegjegyenU, FoU,DmEKAERU,
-  MeresTipusValasztasU,GongyCsatU;
+  MeresTipusValasztasU,GongyCsatU, soforU;
 {$R *.dfm}
 
 { TmjegyF }
@@ -338,6 +339,16 @@ begin
    TarolokT.Close;
    TarolokT.Open();
  end;
+end;
+
+procedure TMjegyF.btnSoforokClick(Sender: TObject);
+begin
+  try
+    SoforF.Showmodal;
+  finally
+    af.SoforokQ.close;
+    af.SoforokQ.Open;
+  end;
 end;
 
 procedure TMjegyF.cbxiranyChange(Sender: TObject);
@@ -456,7 +467,6 @@ procedure TMjegyF.FormActivate(Sender: TObject);
         spbrutto.top:=238;
         sptara.top:=238;
         spnetto.top:=238;
-        cbxktip.top:=238;
         pnlAlso.Height:=280;
       end
       else
@@ -471,7 +481,6 @@ procedure TMjegyF.FormActivate(Sender: TObject);
         spbrutto.top:=189;
         sptara.top:=189;
         spnetto.top:=189;
-        cbxktip.top:=189;
         pnlAlso.Height:=240;
       end;
    end;
@@ -537,8 +546,8 @@ begin
   lblSorszam.Visible:=Hivoszamhasznalat;
   speSorszam.Value:=0;
   lblsofor.visible:=sofor_merlegjegyen;
-  edsofor.Visible:=sofor_merlegjegyen;
-  edsofor.Clear;
+  cbxSoforok.Visible:=sofor_merlegjegyen;
+
  // magassagok;
   af.tipusQ.Open;
   lucTipus.KeyValue:='!';
@@ -656,7 +665,8 @@ begin
 //        end;
 //    end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
-    edsofor.Text:=FieldByName('sofor').AsString;
+    af.SoforokQ.locate('sofor',FieldByName('sofor').AsString,[]);
+    cbxSoforok.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
     af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
   end;
   if (taramegadas) and (forgalom_latszik) then
@@ -677,6 +687,7 @@ begin
   Partnelist.Close;
   termeklist.Close;
   aF.merlegkezQ.Close;
+  AF.SoforokQ.close;
   tulajT.close;
   Partnerlist2.close;
   Partnerlist3.close;
@@ -1096,6 +1107,7 @@ begin
   Partnerlist3.Open;
   termeklist.Open;
   aF.merlegkezQ.Open;
+  AF.SoforokQ.Open;
   TarolokT.Open;
   levon_szovegT.Open;
   uresre;
@@ -1412,7 +1424,7 @@ var sorsz,pcime,tablaneve:String;
        Partner1_tel:=Partnelist.FieldByName('telefon').AsString;
        Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
        Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
-       Sofor:=edsofor.text;
+       Sofor:=cbxSoforok.text;
       end;
 
    end;
@@ -1813,7 +1825,7 @@ begin
        ParamByName('szarmazasi_hely').AsString:=cbxszar.Text;
        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
        ParamByName('siker').value:=spsiker.Value;
-       ParamByName('sofor').AsString:=edsofor.text;
+       ParamByName('sofor').AsString:=cbxSoforok.text;
        //ParamByName('idegen_meres').AsBoolean:=chkidegen.Checked;
       ExecSQL;
 
@@ -1890,7 +1902,7 @@ begin
          Next;
        end;
      end;
-     //if cbxktip.ItemIndex=0 then aF.soapXML_letrehozasa(ujid);
+
      if Sender =btnFolytatasos_mentes then Close;
 
      aF.ForgalomQ.Refresh;

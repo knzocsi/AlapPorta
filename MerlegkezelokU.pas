@@ -35,7 +35,7 @@ implementation
 
 procedure TMerlegkezelokF.Button1Click(Sender: TObject);
 begin
-Close
+  Close;
 end;
 
 procedure TMerlegkezelokF.Button2Click(Sender: TObject);

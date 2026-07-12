@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=35;
+      maxSQL=36;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1122,6 +1122,14 @@ interface
         ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
         ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
         ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '//+ #13#10 +
+        ,
+        'CREATE TABLE IF NOT EXISTS `soforok` (' + #13#10 +
+        '`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
+        '`sofor` VARCHAR(30) NOT NULL DEFAULT '''' ,' + #13#10 +
+        'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        '' + #13#10 +
+        ''
         //modositott_merlegjegyek
     );
 
