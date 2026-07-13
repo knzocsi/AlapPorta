@@ -44,7 +44,7 @@ var ujnev:string;
 begin
  ujnev:=InputBox('Sofõr felvitele','Sofõr','');
  if ujnev='' then Exit;
- if aF.SoforokQ.Locate('nev',ujnev,[locaseinsensitive]) then
+ if aF.SoforokQ.Locate('sofor',ujnev,[locaseinsensitive]) then
   begin
     ShowMessage('Ilyen sofõr már van!');
     exit;

@@ -90,7 +90,7 @@ end;
 
 procedure TNezetF.btNyomtvalasztClick(Sender: TObject);
 begin
- with NyomtatokF do
+  with NyomtatokF do
   begin
     Left:=btNyomtvalaszt.Left;
     Top:=btNyomtvalaszt.Top+btnyomtvalaszt.Height;
@@ -100,14 +100,14 @@ begin
 end;
 procedure TNezetF.Button5Click(Sender: TObject);
 begin
- nyomtatva:=False;
- NyomtatokF.Close;
- Close
+  nyomtatva:=False;
+  NyomtatokF.Close;
+  Close
 end;
 
 procedure TNezetF.merlegjegy_elokeszitese;
 begin
- with valasztott do
+  with valasztott do
   begin
     if Mjegy_nyom_rec.Storno then TfrxMemoView(FindObject('memcim')).Text:='Storno '+ LowerCase(TfrxMemoView(FindObject('memcim')).Text);
     TfrxMemoView(FindObject('membizszam')).Text:=Mjegy_nyom_rec.Mjegysorszam;
@@ -407,6 +407,19 @@ begin
       TfrxMemoView(FindObject('memkezdogongykg')).text:=Mjegy_nyom_rec.elso_gongy_tomeg;
      if TfrxMemoView(FindObject('memzarogongykg'))<>nil then
       TfrxMemoView(FindObject('memzarogongykg')).text:=Mjegy_nyom_rec.masodik_gongy_tomeg;
+
+     if TfrxMemoView(FindObject('memsofor'))<>nil then
+      TfrxMemoView(FindObject('memsofor')).Text:=  'Sofer: '+Mjegy_nyom_rec.sofor;
+
+     if TfrxMemoView(FindObject('memSuruseg'))<>nil then
+      TfrxMemoView(FindObject('memSuruseg')).Text:= Mjegy_nyom_rec.Suruseg;
+
+     if TfrxMemoView(FindObject('memHomerseklet'))<>nil then
+      TfrxMemoView(FindObject('memHomerseklet')).Text:= Mjegy_nyom_rec.Homerseklet;
+
+     if TfrxMemoView(FindObject('memKeveresiArany'))<>nil then
+      TfrxMemoView(FindObject('memKeveresiArany')).Text:= Mjegy_nyom_rec.KeveresiArany;
+
   end;
 end;
 

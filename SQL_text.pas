@@ -1129,8 +1129,21 @@ interface
         'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
         ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
         '' + #13#10 +
+        'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `suruseg` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `keveresi_arany` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `homerseklet` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
+
+        'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `suruseg` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `suruseg` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `suruseg` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
+        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10+
         ''
-        //modositott_merlegjegyek
+
     );
 
 

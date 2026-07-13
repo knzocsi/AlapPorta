@@ -199,6 +199,9 @@ type
      Fs_masodik_gongy_tomeg:string;
 
      Fs_Sofor:string;
+     Fs_Suruseg:string;
+     Fs_Homerseklet:string;
+     Fs_KevereseiArany:string;
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -338,6 +341,14 @@ type
         write Fs_Partner2_adosz;
     property Sofor: string read Fs_Sofor
         write Fs_Sofor;
+
+    property Suruseg: string read Fs_Suruseg
+        write Fs_Suruseg;
+    property Homerseklet: string read Fs_Homerseklet
+        write Fs_Homerseklet;
+    property KeveresiArany: string read Fs_KevereseiArany
+        write Fs_KevereseiArany;
+
   end;
 
   TAF = class(TDataModule)

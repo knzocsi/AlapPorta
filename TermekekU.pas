@@ -84,6 +84,12 @@ type
     DBChksiker: TDBCheckBox;
     TermekTb_siker: TBooleanField;
     siLangLinked_TermekekF: TsiLangLinked;
+    DBCheckBox1: TDBCheckBox;
+    DBCheckBox2: TDBCheckBox;
+    DBCheckBox4: TDBCheckBox;
+    TermekTsuruseg: TBooleanField;
+    TermekThomerseklet: TBooleanField;
+    TermekTkeveresi_arany: TBooleanField;
     procedure FormActivate(Sender: TObject);
     procedure btnKilepesClick(Sender: TObject);
     procedure TermekTAfterInsert(DataSet: TDataSet);

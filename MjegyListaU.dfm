@@ -2727,7 +2727,7 @@ object MjegyekF: TMjegyekF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'

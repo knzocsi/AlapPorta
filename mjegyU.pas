@@ -222,6 +222,15 @@ type
     siLangLinked_MjegyF: TsiLangLinked;
     cbxSoforok: TJvDBLookupCombo;
     btnSoforok: TButton;
+    lblSuruseg: TLabel;
+    speSuruseg: TJvSpinEdit;
+    speHomerseklet: TJvSpinEdit;
+    lblHomerseklet: TLabel;
+    lblKeveresiArany: TLabel;
+    edKeveresiArany: TEdit;
+    termeklistsuruseg: TBooleanField;
+    termeklisthomerseklet: TBooleanField;
+    termeklistkeveresi_arany: TBooleanField;
     procedure JvDBUltimGrid1Exit(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnMentesClick(Sender: TObject);
@@ -668,6 +677,9 @@ begin
     af.SoforokQ.locate('sofor',FieldByName('sofor').AsString,[]);
     cbxSoforok.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
     af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
+    speSuruseg.Value:=FieldByName('suruseg').Value;
+    speHomerseklet.Value:=FieldByName('homerseklet').Value;
+    edKeveresiArany.Text:=FieldByName('keveresi_arany').AsString;
   end;
   if (taramegadas) and (forgalom_latszik) then
   begin
@@ -1425,6 +1437,9 @@ var sorsz,pcime,tablaneve:String;
        Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
        Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
        Sofor:=cbxSoforok.text;
+       Suruseg:=speSuruseg.Text;
+       Homerseklet:=speHomerseklet.Text;
+       KeveresiArany:=edKeveresiArany.Text;
       end;
 
    end;
@@ -1602,7 +1617,8 @@ begin
       SQL.Add(' ewc,tul_cjsz,szaraz_tort_szemek,kepnev1,kepnev2,kepnev3,kepnev4  ');
       if (Hivoszamhasznalat) and (tablaneve='nyitbe') then  SQL.Add(',Hivo_sorszam ');
       SQL.Add(',betarolasi_dij,kitarolasi_dij,szallitasi_dij,');
-      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj,siker,sofor');
+      SQL.Add('p3_id,p3_kod,p3_nev,p3_cim,p3_kuj,p3_ktj,szarmazasi_hely,itj,siker,sofor,');
+      SQL.Add('suruseg,homerseklet,keveresi_arany');
       SQL.Add(')');
       SQL.Add('VALUES(:storno,:rendszam,:rendszam2,:p_id,:p_kod,:p_nev,:p_cim,');
       SQL.Add(':termek_id,:termek_kod,:termek_nev,:Termek_afa,:termek_ar,');
@@ -1622,7 +1638,8 @@ begin
         ParamByName('Hivo_sorszam').AsString:=speSorszam.Text;
       end;
       SQL.Add(',:betarolasi_dij,:kitarolasi_dij,:szallitasi_dij,');
-      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj,:siker,:sofor');
+      SQL.Add(':p3_id,:p3_kod,:p3_nev,:p3_cim,:p3_kuj,:p3_ktj,:szarmazasi_hely,:itj,:siker,:sofor,');
+      SQL.Add(':suruseg,:homerseklet,:keveresi_arany');
       SQL.Add(');');
       {ParamByName('betarolasi_dij').value:=spszNetto.Value*be_tarolasi_dij;
         ParamByName('kitarolasi_dij').value:=spszNetto.Value*ki_tarolasi_dij;
@@ -1826,6 +1843,9 @@ begin
        ParamByName('itj').AsString:=termeklist.Fields[3].AsString;
        ParamByName('siker').value:=spsiker.Value;
        ParamByName('sofor').AsString:=cbxSoforok.text;
+       ParamByName('suruseg').AsFloat:=speSuruseg.Value;
+       ParamByName('homerseklet').AsFloat:=speHomerseklet.Value;
+       ParamByName('keveresi_arany').AsString:=edKeveresiArany.text;
        //ParamByName('idegen_meres').AsBoolean:=chkidegen.Checked;
       ExecSQL;
 
@@ -2344,7 +2364,13 @@ begin
   chkkuk.Visible:=chkkuk.Checked;
   chkkerekites.Checked:=termeklistkerekites.AsBoolean;
   chkkerekites.Visible:=chkkerekites.Checked;
-  szazalek
+  speSuruseg.Visible:=termeklistsuruseg.AsBoolean;
+  lblSuruseg.Visible:=termeklistsuruseg.AsBoolean;
+  speHomerseklet.Visible:=termeklisthomerseklet.AsBoolean;
+  lblHomerseklet.Visible:=termeklisthomerseklet.AsBoolean;
+  edKeveresiArany.Visible:=termeklistkeveresi_arany.AsBoolean;
+  lblKeveresiArany.Visible:=termeklistkeveresi_arany.AsBoolean;
+  szazalek;
 end;
 
 procedure TMjegyF.tsOsszeskepResize(Sender: TObject);
@@ -2423,6 +2449,10 @@ begin
   levonlookup.KeyValue:='!';
   levonlookupChange(self);
   af.csat_gongy_ures;
+  cbxSoforok.KeyValue:='!';
+  speSuruseg.Value:=0;
+  speHomerseklet.Value:=0;
+  edKeveresiArany.Text:='';
 end;
 
 end.

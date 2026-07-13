@@ -6494,6 +6494,7 @@ object NezetF: TNezetF
       'TIB_STRINGLIST'
       'TSTRINGLIST'
       'TWIDESTRINGS')
+    DefaultLanguage = 2
     StoreAsUTF8 = True
     NumOfLanguages = 3
     LangDispatcher = FoF.siLangDispatcher1
@@ -6502,7 +6503,7 @@ object NezetF: TNezetF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'

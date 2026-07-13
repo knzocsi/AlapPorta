@@ -674,6 +674,9 @@ begin
        plq.Close;
        Irany:=mjegyekQ.FieldByName('irany_kiiras').AsString;
        Sofor:=mjegyekQ.FieldByName('sofor').AsString;
+       Suruseg:=mjegyekQ.FieldByName('suruseg').AsString;
+       Homerseklet:=mjegyekQ.FieldByName('homerseklet').AsString;
+       KeveresiArany:=mjegyekQ.FieldByName('keveresi_arany').AsString;
       end;
 
 //     NezetF.rep_valaszt(aF.frxmerleg,1);
