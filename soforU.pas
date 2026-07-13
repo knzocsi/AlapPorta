@@ -42,11 +42,11 @@ var ujnev:string;
     i:Integer;
     sqlsz:string;
 begin
- ujnev:=InputBox('Sofõr felvitele','Sofõr','');
+ ujnev:=InputBox(siLangLinked1.GetTextOrDefault('IDS_0' (* 'Sofõr felvitele' *) ),siLangLinked1.GetTextOrDefault('IDS_1' (* 'Sofõr' *) ),'');
  if ujnev='' then Exit;
  if aF.SoforokQ.Locate('sofor',ujnev,[locaseinsensitive]) then
   begin
-    ShowMessage('Ilyen sofõr már van!');
+    ShowMessage(siLangLinked1.GetTextOrDefault('IDS_3' (* 'Ilyen sofõr már van!' *) ));
     exit;
   end;
 
@@ -64,7 +64,7 @@ end;
 
 procedure TSoforF.Button3Click(Sender: TObject);
 begin
-  if MessageDlg('Bizos törli a sofõrt?',mtConfirmation,mbYesNo,0)=6 then
+  if MessageDlg(siLangLinked1.GetTextOrDefault('IDS_6' (* 'Bizos törli a sofõrt?' *) ),mtConfirmation,mbYesNo,0)=6 then
    begin
     with aF.Q1 do
     begin

@@ -3262,7 +3262,7 @@ begin
       end;
 
     end;
-    StatusBar1.panels[4].text := 'Tömeg: ' + tomeg_szoveg + pont + ' ' + nyugalmi_szoveg + szamlalo_szoveg + ':' + nyomtatas_szamlalo.ToString + PLC_Lekerdezes_szamlalo.ToString;
+    StatusBar1.panels[4].text := siLang_FoF.GetTextOrDefault('IDS_417' (* 'Tömeg: ' *) ) + tomeg_szoveg + pont + ' ' + nyugalmi_szoveg + szamlalo_szoveg + ':' + nyomtatas_szamlalo.ToString + PLC_Lekerdezes_szamlalo.ToString;
     lblIrany.caption := meresirany;
     NagyTomegF.lblnagytomeg.Caption:=tomeg_szoveg;
     try
