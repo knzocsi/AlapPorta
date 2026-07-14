@@ -106,11 +106,25 @@ begin
 end;
 
 procedure TNezetF.merlegjegy_elokeszitese;
+
+  function sorszam_megforditasa(besorsz:string):string;
+  begin
+   if not sorszam_megforditasa_merlegjegyen then
+    begin
+      Result:=besorsz;
+      Exit;
+    end
+    else
+    begin
+      Result:=Copy(besorsz,Pos('/',besorsz)+1,6)
+      +'/'+Copy(besorsz,1,Length(besorsz)-7)
+    end;
+  end;
 begin
   with valasztott do
   begin
     if Mjegy_nyom_rec.Storno then TfrxMemoView(FindObject('memcim')).Text:='Storno '+ LowerCase(TfrxMemoView(FindObject('memcim')).Text);
-    TfrxMemoView(FindObject('membizszam')).Text:=Mjegy_nyom_rec.Mjegysorszam;
+    TfrxMemoView(FindObject('membizszam')).Text:=sorszam_megforditasa(Mjegy_nyom_rec.Mjegysorszam);
     //van a mérlegjegyen példányszám
     if TfrxMemoView(FindObject('frxpsz'))<>nil then
      begin
@@ -155,6 +169,8 @@ begin
       TfrxMemoView(FindObject('mempartnerneve2')).Text:=Mjegy_nyom_rec.Partner2_nev;
     if TfrxMemoView(FindObject('mempartnercime2'))<>nil then
       TfrxMemoView(FindObject('mempartnercime2')).Text:=Mjegy_nyom_rec.Partner2_cim;
+        if TfrxMemoView(FindObject('mempartnertel2'))<>nil then
+    TfrxMemoView(FindObject('mempartnertel2')).Text:=Mjegy_nyom_rec.Partner2_tel;
     if TfrxMemoView(FindObject('mempartner2adosz'))<>nil then
       TfrxMemoView(FindObject('mempartner2adosz')).Text:=Mjegy_nyom_rec.Partner2_adosz;
     //fuvarozó
@@ -209,7 +225,11 @@ begin
       end;
      //román
     if TfrxMemoView(FindObject('memdatumok'))<>nil then
-      TfrxMemoView(FindObject('memdatumok')).text:= DateToStr(Mjegy_nyom_rec.Erkdatum)+'/'+DateToStr(Mjegy_nyom_rec.Tavdatum);
+     begin
+      if Mjegy_nyom_rec.Erkdatum<>Mjegy_nyom_rec.Tavdatum then
+        TfrxMemoView(FindObject('memdatumok')).text:= DateToStr(Mjegy_nyom_rec.Erkdatum)+'/'+DateToStr(Mjegy_nyom_rec.Tavdatum)
+      else TfrxMemoView(FindObject('memdatumok')).text:= DateToStr(Mjegy_nyom_rec.Erkdatum);
+     end;
     if TfrxMemoView(FindObject('memidok'))<>nil then
       TfrxMemoView(FindObject('memidok')).Text:=TimeToStr(Mjegy_nyom_rec.Erkido)+'/'+ TimeToStr(Mjegy_nyom_rec.Tavido);
     //termék adatok

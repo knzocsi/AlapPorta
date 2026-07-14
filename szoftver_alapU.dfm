@@ -110,7 +110,6 @@ object szoftver_alapF: Tszoftver_alapF
     Top = 41
     Width = 978
     Height = 461
-    Align = alClient
     DataSource = AF.CfgTDs
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -183,6 +182,7 @@ object szoftver_alapF: Tszoftver_alapF
       'TIB_STRINGLIST'
       'TSTRINGLIST'
       'TWIDESTRINGS')
+    DefaultLanguage = 2
     StoreAsUTF8 = True
     NumOfLanguages = 3
     LangDispatcher = FoF.siLangDispatcher1
@@ -191,7 +191,7 @@ object szoftver_alapF: Tszoftver_alapF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'

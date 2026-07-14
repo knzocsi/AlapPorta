@@ -137,6 +137,7 @@ type
      Fs_Partner2_nev: string;
      Fs_Partner2_cim: string;
      Fs_Partner2_adosz: string;
+     Fs_Partner2_tel: string;
      Fs_Partner3_felirat: string;
      Fs_Partner3_nev: string;
      Fs_Partner3_cim: string;
@@ -339,6 +340,9 @@ type
         write Fs_Partner1_tel;
     property Partner2_adosz: string read Fs_Partner2_adosz
         write Fs_Partner2_adosz;
+    property Partner2_tel: string read Fs_Partner2_tel
+        write Fs_Partner2_tel;
+
     property Sofor: string read Fs_Sofor
         write Fs_Sofor;
 
@@ -574,6 +578,7 @@ type
     function gongy_osszead(hanyadik:string):Extended;
     procedure gongy_osszevon_nyom;
     function kartyaszam_foglalt(ide: Integer; neve, tbl: String): Boolean;
+
     { Public declarations }
   end;
 
@@ -669,6 +674,12 @@ var
   nagy_tomeg_kijelzes:Boolean=False;
 
   sofor_merlegjegyen:Boolean=False;
+
+  datum_formatum:string='yyyy.MM.dd';
+
+  datum_elvalaszto:string='.';
+
+  sorszam_megforditasa_merlegjegyen:Boolean=False;
 
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
@@ -818,8 +829,8 @@ begin
   ini_kezel;
 
   if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
-  FormatSettings.DateSeparator := '.';
-  FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
+  FormatSettings.DateSeparator := datum_elvalaszto[1];
+  FormatSettings.ShortDateFormat := datum_formatum;
   FormatSettings.DecimalSeparator:=',';
   irsz_feltoltes;
   Kapcs.ResourceOptions.AutoReconnect:=True;
@@ -1636,6 +1647,10 @@ begin
   sofor_merlegjegyen:=cfg_kezel('Sofõr mérlegjegyen',
    'ALAP','Sofõr mérlegjegyen','Boolean',sofor_merlegjegyen);
 
+  datum_formatum:=cfg_kezel('Dátum formátum','Dátum','Dátum formátum','String',datum_formatum);
+  datum_elvalaszto:=cfg_kezel('Dátum elválasztó','Dátum','Dátum elválasztó','String',datum_elvalaszto);
+  sorszam_megforditasa_merlegjegyen:=cfg_kezel('Sorszám megfordítása mérlegjegyen',
+   'NYOMTATÁS','Sorszám megfordítása mérlegjegyen','Boolean',sorszam_megforditasa_merlegjegyen);
 
 
   ForceDirectories(soapXML);
@@ -3208,6 +3223,7 @@ begin
      Partner1_tel:='';
      Partner1_adosz:='';
      Partner2_adosz:='';
+     Partner2_tel:='';
 
      Sofor:='';
     end;

@@ -25,8 +25,6 @@ object MjegyF: TMjegyF
     Align = alBottom
     TabOrder = 0
     OnClick = pnlAlsoClick
-    ExplicitLeft = 16
-    ExplicitTop = 442
     object lblpartner: TLabel
       Left = 7
       Top = 71
@@ -1221,7 +1219,6 @@ object MjegyF: TMjegyF
     Height = 432
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 469
     object pnlFelsoBal: TPanel
       Left = 1
       Top = 1
@@ -1229,7 +1226,6 @@ object MjegyF: TMjegyF
       Height = 430
       Align = alLeft
       TabOrder = 0
-      ExplicitHeight = 454
       object JvDBUltimGrid1: TJvDBUltimGrid
         Left = 1
         Top = 1
@@ -1327,7 +1323,6 @@ object MjegyF: TMjegyF
       Height = 430
       Align = alClient
       TabOrder = 1
-      ExplicitHeight = 454
       object pgKepek: TPageControl
         Left = 1
         Top = 1
@@ -1336,7 +1331,6 @@ object MjegyF: TMjegyF
         ActivePage = tsOsszeskep
         Align = alClient
         TabOrder = 0
-        ExplicitHeight = 452
         object tsOsszeskep: TTabSheet
           Caption = #214'sszes k'#233'p'
           ImageIndex = 2
@@ -1348,7 +1342,6 @@ object MjegyF: TMjegyF
             Height = 400
             Align = alLeft
             TabOrder = 0
-            ExplicitHeight = 424
             object pnlKepBalFelso: TPanel
               Left = 1
               Top = 1
@@ -1372,7 +1365,6 @@ object MjegyF: TMjegyF
               Height = 190
               Align = alClient
               TabOrder = 1
-              ExplicitHeight = 214
               object OKep2: TImage
                 Tag = 2
                 Left = 0
@@ -6660,7 +6652,6 @@ object MjegyF: TMjegyF
             Height = 400
             Align = alClient
             TabOrder = 1
-            ExplicitHeight = 424
             object pnlKepJobbFelso: TPanel
               Left = 1
               Top = 1
@@ -6684,7 +6675,6 @@ object MjegyF: TMjegyF
               Height = 190
               Align = alClient
               TabOrder = 1
-              ExplicitHeight = 214
               object OKep4: TImage
                 Left = 4
                 Top = 6
@@ -7210,7 +7200,7 @@ object MjegyF: TMjegyF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'

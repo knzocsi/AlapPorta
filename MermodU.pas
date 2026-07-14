@@ -418,6 +418,7 @@ procedure elokeszit;
        Partner1_tel:=Partnelist.FieldByName('telefon').AsString;
        Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
        Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
+       Partner2_tel:=Partnerlist2.FieldByName('telefon').AsString;
        Sofor:=edsofor.text;
       end;
 

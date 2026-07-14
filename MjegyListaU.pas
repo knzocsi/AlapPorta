@@ -670,7 +670,8 @@ begin
        Partner1_tel:=plq.FieldByName('Telefon').AsString;
        Partner1_adosz:=plq.FieldByName('kozadosz').AsString;;
        plq.locate('id', mjegyekQ.FieldByName('P2_ID').AsInteger,[]);
-       Partner2_adosz:=plq.FieldByName('kozadosz').AsString;;
+       Partner2_adosz:=plq.FieldByName('kozadosz').AsString;
+       Partner2_tel:=plq.FieldByName('telefon').AsString;
        plq.Close;
        Irany:=mjegyekQ.FieldByName('irany_kiiras').AsString;
        Sofor:=mjegyekQ.FieldByName('sofor').AsString;

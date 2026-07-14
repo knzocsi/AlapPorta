@@ -1436,6 +1436,7 @@ var sorsz,pcime,tablaneve:String;
        Partner1_tel:=Partnelist.FieldByName('telefon').AsString;
        Partner1_adosz:=Partnelist.FieldByName('kozadosz').AsString;;
        Partner2_adosz:=Partnerlist2.FieldByName('kozadosz').AsString;;
+       Partner2_tel:=Partnerlist2.FieldByName('telefon').AsString;
        Sofor:=cbxSoforok.text;
        Suruseg:=speSuruseg.Text;
        Homerseklet:=speHomerseklet.Text;
