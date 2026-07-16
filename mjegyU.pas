@@ -622,26 +622,20 @@ begin
     edmegjegy.text:=FieldByName('megjegyzes').AsString;
     edekaer.Text:=FieldByName('ekaer').AsString;
 
+    spbrutto.Value:=FieldByName('brutto').AsInteger;
+    sptara.Value:=FieldByName('tara').AsInteger;
+    spnetto.Value:=FieldByName('netto').AsInteger;
+    if not gongyolegek_latszanak then
+       sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
+     spsznetto.Value:=FieldByName('sznetto').AsInteger;
     case cbxIrany.Itemindex of
     1:begin
-       spbrutto.Value:=FieldByName('brutto').AsInteger;
-       sptara.Value:=FieldByName('tara').AsInteger;
        lblTomeg1.Caption:=spBrutto.Text;
        lblTomeg2.Caption:=spTara.Text;
-       spnetto.Value:=FieldByName('netto').AsInteger;
-       if not gongyolegek_latszanak then
-         sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
-       spsznetto.Value:=0;
       end;
     2:begin
-       spbrutto.Value:=FieldByName('tara').AsInteger;
-       sptara.Value:=FieldByName('brutto').AsInteger;
        lblTomeg1.Caption:=sptara.Text;
        lblTomeg2.Caption:=spbrutto.Text;
-       spnetto.Value:=0;
-       if not gongyolegek_latszanak then
-        sp_tomeg_levon.Value:=FieldByName('levon_tomeg').AsInteger;
-       spsznetto.Value:=0;
       end;
     end;
     edszallev.text:=FieldByName('szallitolev').AsString;
@@ -659,23 +653,9 @@ begin
     jpeg_betoltese(kepek_tomb[3],kep3,okep3);
     kepek_tomb[4]:=FieldByName('kepnev4').AsString;
     jpeg_betoltese(kepek_tomb[4],kep4,okep4);
-    //ÖCSI 26.03.23
-
-//    case cbxIrany.Itemindex of // EZT NEM ÉRTEM, ATTÓl AZ 1. MÉRÉS MÉG AZ ELSŐ
-//      1 :                      //ELÉG LENNE CSAK SZÁMOLÁSKOR MEGCSERÉLNI
-//        begin
-//          lblTomeg1.Caption:=spBrutto.Text;
-//          lblTomeg2.Caption:=spTara.Text;
-//        end;
-//      2 :
-//        begin
-//          lblTomeg2.Caption:=spBrutto.Text;
-//          lblTomeg1.Caption:=spTara.Text;
-//        end;
-//    end;
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
     af.SoforokQ.locate('sofor',FieldByName('sofor').AsString,[]);
-    cbxSoforok.KeyValue:= aF.merlegkezQ.FieldByName('Id').AsInteger;
+    cbxSoforok.KeyValue:= aF.SoforokQ.FieldByName('Id').AsInteger;
     af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
     speSuruseg.Value:=FieldByName('suruseg').Value;
     speHomerseklet.Value:=FieldByName('homerseklet').Value;
@@ -1424,12 +1404,12 @@ var sorsz,pcime,tablaneve:String;
        -(akt_tiszt_dij+akt_szar_dij)))+' -Ft';
        if Merlegjegy_tipus=9 then
        begin
-          case cbxIrany.Text[1] of
+          case cbxIrany.Text[1] of   //B_
            'B' : begin
-                  Irany:='Recepționare';
+                  Irany:='Intrare';
                  end;
            'K' : begin
-                  Irany:='Livrare';
+                  Irany:='Ieșire';
                  end;
           end;
        end;
@@ -1720,7 +1700,7 @@ begin
        end;
 
       ParamByName('felhasznalo').AsString:=felhnev;
-      ParamByName('irany').AsString:=cbxirany.Text;
+      ParamByName('irany').AsWideString:=cbxirany.Text;
       ParamByName('kuj').AsString:=Partnelist.FieldByName('kuj').AsString;
       ParamByName('ktj').AsString:=Partnelist.FieldByName('ktj').AsString;
       ParamByName('eazon').AsString:=egyedi_azonosito;
@@ -2161,8 +2141,8 @@ begin
       0 :
           begin
             lblTomeg1.Caption:=IntToStr( Meres_MerlegjegyenF.Mert_eredmeny);
-            FormatSettings.DateSeparator := '.';
-            FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
+            FormatSettings.DateSeparator := datum_elvalaszto[1];
+            FormatSettings.ShortDateFormat := datum_formatum;
             lblelsodat.Caption:=DateToStr(Date);
             lblelsoido.Caption:=TimeToStr(Time);
             chkelso_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
@@ -2178,13 +2158,19 @@ begin
       1 :
           begin
             lblTomeg2.Caption:=IntToStr( Meres_MerlegjegyenF.Mert_eredmeny);
-            FormatSettings.DateSeparator := '.';
-            FormatSettings.ShortDateFormat := 'yyyy.MM.dd';
+            FormatSettings.DateSeparator := datum_elvalaszto[1];
+            FormatSettings.ShortDateFormat := datum_formatum;
             lblmasdat.Caption:=DateToStr(Date);
             lblmasido.Caption:=TimeToStr(Time);
             chkmasodik_kezi.Checked:= Meres_MerlegjegyenF.chkKezimeres.Checked;
             if cbxirany.ItemIndex in [1,3] then spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny
             else if cbxirany.ItemIndex=2 then  spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
+            if sptara.Value>spBrutto.Value then
+             begin
+               e:=sptara.Value;
+               spTara.Value:=spBrutto.Value;
+               spBrutto.Value:=e;
+             end;
           end;
     end;
     snapshot;
@@ -2201,12 +2187,7 @@ begin
     Append(tf);
     Writeln(tf,DateToStr(Date)+#9+TimeToStr(Time)+#9+cbxRendszam1.Text+#9+IntToStr( Meres_MerlegjegyenF.Mert_eredmeny)+#9+cbxRendszam2.Text+#9+kezi);
     CloseFile(tf);
-    if sptara.Value>spBrutto.Value then
-     begin
-       e:=sptara.Value;
-       spTara.Value:=spBrutto.Value;
-       spBrutto.Value:=e;
-     end;
+    //if spBrutto.Value>0 then
     spnetto.Value:=spBrutto.Value-spTara.Value;
     szazalek;
   end;

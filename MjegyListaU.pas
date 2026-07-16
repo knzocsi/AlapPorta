@@ -999,7 +999,7 @@ begin
     Close;
     SQL.Clear;
     SQL.Add(' select m.*, ');
-    if Merlegjegy_tipus=9 then SQL.Add(' if(SUBSTRING(irany,1)=''K'',''Livrare'',''Recepționare'') AS irany_kiiras' )
+    if Merlegjegy_tipus=9 then SQL.Add(' if(SUBSTRING(irany,1,1)=''K'',''Ieșire'',''Intrare'') AS irany_kiiras' )
     else SQL.Add('irany as irany_kiiras ');
     SQL.Add(' from merlegjegy m');
     SQL.Add(' where (Date(tavdatum)>=:p0 and Date(tavdatum)<=:p1) and tul_id=:p2 ');

@@ -132,7 +132,7 @@ begin
      end;
      First;
      EnableControls;
-     Panel2.Caption:='Összesen: ' + FloatToStr(ossz);
+     Panel2.Caption:=siLangLinked_KeszletF.GetTextOrDefault('IDS_3' (* 'Összesen: ' *) ) + FloatToStr(ossz);
   end;
 end;
 

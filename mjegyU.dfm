@@ -753,7 +753,7 @@ object MjegyF: TMjegyF
       object lblSuruseg: TLabel
         Tag = 11
         Left = 12
-        Top = 65
+        Top = 61
         Width = 43
         Height = 13
         Caption = 'S'#369'r'#369's'#233'g:'
@@ -761,7 +761,7 @@ object MjegyF: TMjegyF
       object lblHomerseklet: TLabel
         Tag = 11
         Left = 92
-        Top = 65
+        Top = 61
         Width = 63
         Height = 13
         Caption = 'H'#243'm'#233'rs'#233'klet:'
@@ -769,7 +769,7 @@ object MjegyF: TMjegyF
       object lblKeveresiArany: TLabel
         Tag = 11
         Left = 168
-        Top = 65
+        Top = 61
         Width = 76
         Height = 13
         Caption = 'Kever'#233'si ar'#225'ny:'
@@ -921,7 +921,7 @@ object MjegyF: TMjegyF
       object speSuruseg: TJvSpinEdit
         Tag = 11
         Left = 12
-        Top = 78
+        Top = 75
         Width = 65
         Height = 21
         CheckOptions = [coCheckOnExit]
@@ -932,7 +932,7 @@ object MjegyF: TMjegyF
       object speHomerseklet: TJvSpinEdit
         Tag = 11
         Left = 89
-        Top = 79
+        Top = 76
         Width = 65
         Height = 21
         CheckOptions = [coCheckOnExit]
@@ -941,7 +941,7 @@ object MjegyF: TMjegyF
       end
       object edKeveresiArany: TEdit
         Left = 168
-        Top = 79
+        Top = 75
         Width = 121
         Height = 21
         TabOrder = 16
@@ -7200,7 +7200,7 @@ object MjegyF: TMjegyF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'English'
+    Language = 'Hungarian'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'
@@ -7304,7 +7304,7 @@ object MjegyF: TMjegyF
       01000D000A006C0062006C004B00650076006500720065007300690041007200
       61006E00790001004B006500760065007200E90073006900200061007200E100
       6E0079003A0001004D006900780069006E006700200072006100740069006F00
-      3A00010041006D00650073007400650063002000700072006F00640069007300
+      3A00010041006D00650073007400650063002000700072006F00640075007300
       3A0001000D000A004C006100620065006C003100340001006B00670001006B00
       670001006B00670001000D000A004C006100620065006C003100350001006B00
       670001006B00670001006B00670001000D000A00630068006B006B0075006B00

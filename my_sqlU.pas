@@ -34,6 +34,8 @@ type
     importQ: TFDQuery;
     export2Q: TFDQuery;
     siLangLinked_MySQLF: TsiLangLinked;
+    Label6: TLabel;
+    edkodtabla: TEdit;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -72,6 +74,7 @@ procedure adatbazis_letrehozasa;
           Add('User_Name='+user);
           Add('Password='+passwd);
           Add('CharacterSet= Utf8mb4');
+          Add('Collation='+szerver_karakter_kodtabla);
         end;
        Open;
        Connected:=False;
@@ -79,6 +82,8 @@ procedure adatbazis_letrehozasa;
           Memo1.Lines.Add('Adatbázis létrehozása');
 
           af.DB_Create.SQLScripts[0].SQL.Text:=StringReplace(modSQL[1],':adatbazis',adatbazis,[rfreplaceall]);
+          af.DB_Create.SQLScripts[0].SQL.Text:=StringReplace(af.DB_Create.SQLScripts[0].SQL.Text,':kodolas',' COLLATE '+szerver_karakter_kodtabla,[rfreplaceall]);
+          //szerver_karakter_kodtabla
           if aF.DB_Create.ValidateAll then  //ha sikerült kapcsolódni megpróbáljuk létrehzni az adatbázist
             begin
              aF.DB_Create.ExecuteAll;
@@ -108,6 +113,7 @@ procedure adatbazis_letrehozasa;
           Add('User_Name='+user);
           Add('Password='+passwd);
           Add('CharacterSet= Utf8mb4');
+          Add('Collation='+szerver_karakter_kodtabla);
         end;
         try
           open
@@ -130,6 +136,7 @@ begin
  adatbazis:=Edit5.Text;
  user:=Edit2.Text;
  passwd:=Edit3.Text;
+ szerver_karakter_kodtabla:=edkodtabla.Text;
  with aF.Kapcs do
   begin
    Close;
@@ -142,6 +149,7 @@ begin
       Add('User_Name='+user);
       Add('Password='+passwd);
       Add('CharacterSet= Utf8mb4');
+      Add('Collation='+szerver_karakter_kodtabla);
     end;
   // Memo1.Lines.Add('Szerver kapcsolódás paraméterei : '+Params.Text);
    try
@@ -162,6 +170,7 @@ begin
         Add('User_Name='+user);
         Add('Password='+passwd);
         Add('CharacterSet= Utf8mb4');
+        Add('Collation='+szerver_karakter_kodtabla);
       end;
       Memo1.Lines.Add('Kapcsolódási kisérlet az adatbázishoz');
       Application.ProcessMessages;
@@ -191,6 +200,7 @@ begin
        i.WriteString('ALAP','Szerver',szerver);
        i.WriteString('ALAP','Adatbazis',adatbazis);
        i.WriteString('ALAP','Port',port);
+       i.writeString('ALAP','Szerver_karakter_kodtabla',szerver_karakter_kodtabla);
        i.UpdateFile;
        i.Free;
        Button2.Caption:='Folytatás';
@@ -216,6 +226,7 @@ begin
  Edit2.Text:=user;
  Edit3.Text:=passwd;
  Edit4.Text:=port;
+ edkodtabla.Text:=szerver_karakter_kodtabla;
 end;
 
 procedure TMySQLF.importQError(ASender, AInitiator: TObject;

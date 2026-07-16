@@ -681,6 +681,8 @@ var
 
   sorszam_megforditasa_merlegjegyen:Boolean=False;
 
+  szerver_karakter_kodtabla:string='utf8mb4_general_ci';
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
      DMSoapU, DmEKAERU;
@@ -809,6 +811,7 @@ begin
       Add('User_Name='+user);
       Add('Password='+passwd);
       Add('CharacterSet= Utf8mb4');
+      Add('Collation='+szerver_karakter_kodtabla);
       try
        open;
       except
@@ -829,9 +832,11 @@ begin
   ini_kezel;
 
   if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
+
   FormatSettings.DateSeparator := datum_elvalaszto[1];
   FormatSettings.ShortDateFormat := datum_formatum;
   FormatSettings.DecimalSeparator:=',';
+
   irsz_feltoltes;
   Kapcs.ResourceOptions.AutoReconnect:=True;
   jogmod:=False;
@@ -1739,7 +1744,8 @@ begin
   i.writeString('ALAP','Port',port);
   Kozponti_prg:=i.ReadBool('ALAP','Kozponti_prg',False);
   i.WriteBool('ALAP','Kozponti_prg',Kozponti_prg);
-
+  szerver_karakter_kodtabla:=i.ReadString('ALAP','Szerver_karakter_kodtabla','utf8mb4_general_ci');
+  i.writeString('ALAP','Szerver_karakter_kodtabla',szerver_karakter_kodtabla);
   i.UpdateFile;
   i.Free;
 end;
@@ -1905,7 +1911,8 @@ begin
  for I :=2 {utolso_sql+1} to maxSQL do
  with ModScript do
   begin
-    SQLScripts[0].SQL.Text:=modSQL[i];
+
+    SQLScripts[0].SQL.Text:= StringReplace(modSQL[i],':kodolas',' COLLATE '+szerver_karakter_kodtabla,[rfreplaceall]);
     if ValidateAll then
      begin
        ExecuteAll;

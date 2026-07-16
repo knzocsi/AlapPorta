@@ -212,7 +212,7 @@ object AF: TAF
       'Server=127.0.0.1'
       'Password=MaTt2019'
       'DriverID=MySQL'
-      'CharacterSet=utf8'
+      'CharacterSet=utf8mb4'
       'User_Name=knz'
       'Port=3307'
       'Database=alap')

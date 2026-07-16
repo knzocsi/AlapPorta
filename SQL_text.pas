@@ -17,9 +17,11 @@ interface
       '/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;' + #13#10 +
       '/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=''NO_AUTO_VALUE_ON_ZERO'' */;' + #13#10 +
       '' + #13#10 +
-      'CREATE DATABASE IF NOT EXISTS `:adatbazis` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;' + #13#10 +
+      'CREATE DATABASE IF NOT EXISTS `:adatbazis` /*!40100 DEFAULT CHARACTER SET utf8mb4 */' + #13#10 +
+      'CHARACTER SET utf8mb4' + #13#10 +
+      ':kodolas;'+ #13#10 +
       'USE `:adatbazis`;' + #13#10 +
-      '' + #13#10 +
+
     ''+#13#10+
     'CREATE TABLE IF NOT EXISTS `cfg` (' + #13#10 +
     '`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
@@ -34,7 +36,7 @@ interface
 
     'CREATE TABLE IF NOT EXISTS `felhasz` (' + #13#10 +
     '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`nev` varchar(50) DEFAULT NULL,' + #13#10 +
+    '`nev` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
     '`jelszo` varchar(32) DEFAULT NULL,' + #13#10 +
     '`aktiv` int(11) DEFAULT 1,' + #13#10 +
     'PRIMARY KEY (`id`),' + #13#10 +
@@ -45,23 +47,23 @@ interface
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`Datum` date DEFAULT curdate(),' + #13#10 +
     '`Ido` time DEFAULT curtime(),' + #13#10 +
-    '`Rendszam` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Rendszam2` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Irany` varchar(2) DEFAULT NULL,' + #13#10 +
-    '`Kod` varchar(10) DEFAULT NULL,' + #13#10 +
-    '`Nev` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`Szallitolev` varchar(20) DEFAULT NULL,' + #13#10 +
+    '`Rendszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Rendszam2` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Irany` varchar(2) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kod` varchar(10) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Nev` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Szallitolev` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
     '`Tomeg` int(11) DEFAULT NULL,' + #13#10 +
-    '`Kepnev1` varchar(180) DEFAULT NULL,' + #13#10 +
-    '`Kepnev2` varchar(180) DEFAULT NULL,' + #13#10 +
+    '`Kepnev1` varchar(180) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kepnev2` varchar(180) DEFAULT NULL :kodolas,' + #13#10 +
     '`Parositott` tinyint(4) DEFAULT 0,' + #13#10 +
     '`Nem_Kell` tinyint(4) DEFAULT 0,' + #13#10 +
     '`P_ID` int(11) DEFAULT 0,' + #13#10 +
-    '`P_KOD` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`P_NEV` varchar(80) DEFAULT NULL,' + #13#10 +
-    '`P_cim1` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`p_cim2` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`mjegy` varchar(20) DEFAULT '''',' + #13#10 +
+    '`P_KOD` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`P_NEV` varchar(80) DEFAULT NULL :kodolas,' + #13#10 +
+    '`P_cim1` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`p_cim2` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`mjegy` varchar(20) DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`ID`),' + #13#10 +
     'UNIQUE KEY `ID_UNIQUE` (`ID`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
@@ -108,9 +110,9 @@ interface
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `irsz` (' + #13#10 +
     '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`irsz` varchar(10) NOT NULL DEFAULT '''',' + #13#10 +
-    '`megye` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
-    '`varos` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`irsz` varchar(10) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`megye` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`varos` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`id`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
@@ -151,46 +153,46 @@ interface
 //    '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `merlegelok` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Nev` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`Nev` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`ID`),' + #13#10 +
     'UNIQUE KEY `Nev` (`Nev`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `merlegjegy` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Sorszam` varchar(20) DEFAULT NULL,' + #13#10 +
+    '`Sorszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
     '`Ev_ssz` int(11) DEFAULT NULL,' + #13#10 +
-    '`Eazon` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Storno` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`Rendszam` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Rendszam2` varchar(20) DEFAULT NULL,' + #13#10 +
+    '`Eazon` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Storno` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Rendszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Rendszam2` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
     '`P_ID` int(11) DEFAULT NULL,' + #13#10 +
-    '`P_Kod` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`P_Nev` varchar(80) DEFAULT NULL,' + #13#10 +
-    '`P_Cim` varchar(100) DEFAULT NULL,' + #13#10 +
+    '`P_Kod` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`P_Nev` varchar(80) DEFAULT NULL :kodolas,' + #13#10 +
+    '`P_Cim` varchar(100) DEFAULT NULL :kodolas,' + #13#10 +
     '`Termek_ID` int(11) DEFAULT NULL,' + #13#10 +
-    '`Termek_Kod` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Termek_Nev` varchar(100) DEFAULT NULL,' + #13#10 +
+    '`Termek_Kod` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Termek_Nev` varchar(100) DEFAULT NULL :kodolas,' + #13#10 +
     '`Termek_afa` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`termek_ar` decimal(12,2) DEFAULT 0.00,' + #13#10 +
-    '`Szallitolev` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Megjegyzes` varchar(200) DEFAULT NULL,' + #13#10 +
-    '`Tomegbe` int(11) DEFAULT NULL,' + #13#10 +
-    '`Tomegki` int(11) DEFAULT NULL,' + #13#10 +
+    '`Szallitolev` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Megjegyzes` varchar(200) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Tomegbe` int(11) DEFAULT NULL ,' + #13#10 +
+    '`Tomegki` int(11) DEFAULT NULL ,' + #13#10 +
     '`Erkdatum` date DEFAULT NULL,' + #13#10 +
     '`Erkido` time DEFAULT NULL,' + #13#10 +
     '`Tavdatum` date DEFAULT NULL,' + #13#10 +
     '`Tavido` time DEFAULT NULL,' + #13#10 +
-    '`Felhasznalo` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`irany` varchar(30) DEFAULT NULL,' + #13#10 +
+    '`Felhasznalo` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`irany` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
     '`Brutto` int(11) DEFAULT NULL,' + #13#10 +
     '`Tara` int(11) DEFAULT NULL,' + #13#10 +
     '`Netto` int(11) DEFAULT NULL,' + #13#10 +
     '`SzNetto` int(11) DEFAULT NULL,' + #13#10 +
-    '`merlegelo` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`kuj` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
-    '`ktj` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
-    '`ekaer` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
+    '`merlegelo` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`kuj` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`ktj` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`ekaer` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '`psz` int(11) DEFAULT 0,' + #13#10 +
     '`alapnedv` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`nedv` decimal(12,2) DEFAULT 0.00,' + #13#10 +
@@ -203,51 +205,51 @@ interface
     '`egysegtomeg` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`kerekites` tinyint(1) DEFAULT 0,' + #13#10 +
     '`kukorica` tinyint(1) DEFAULT 0,' + #13#10 +
-    '`buzaminoseg` varchar(50) DEFAULT '''',' + #13#10 +
+    '`buzaminoseg` varchar(50) DEFAULT '''' :kodolas,' + #13#10 +
     '`mennyiseg` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`tarolasi_dij` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`szaritasi_dij` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`tisztitasi_dij` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`tarolo_id` int(11) DEFAULT 0,' + #13#10 +
-    '`tarolo` varchar(50) DEFAULT '''''''''''',' + #13#10 +
+    '`tarolo` varchar(50) DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`ID`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
      'CREATE TABLE IF NOT EXISTS `modositott_merlegjegyek` (' + #13#10 +
     '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Ev_ssz` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Storno` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+    '	`Storno` VARCHAR(15) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`P_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas ,' + #13#10 +
     '	`Termek_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Termek_afa` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`termek_ar` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
-    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL :kodolas ,' + #13#10 +
     '	`Tomegbe` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Tomegki` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Erkdatum` DATE NULL DEFAULT NULL,' + #13#10 +
     '	`Erkido` TIME NULL DEFAULT NULL,' + #13#10 +
     '	`Tavdatum` DATE NULL DEFAULT NULL,' + #13#10 +
     '	`Tavido` TIME NULL DEFAULT NULL,' + #13#10 +
-    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`irany` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Brutto` INT(11) NULL DEFAULT NULL,' + #13#10 +
+    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`irany` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Brutto` INT(11) NULL DEFAULT NULL ,' + #13#10 +
     '	`Tara` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Netto` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`SzNetto` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas ,' + #13#10 +
+    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`psz` INT(11) NULL DEFAULT ''0'',' + #13#10 +
     '	`alapnedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`nedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
@@ -260,32 +262,32 @@ interface
     '	`egysegtomeg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`kerekites` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
     '	`kukorica` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
-    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' :kodolas ,' + #13#10 +
     '	`mennyiseg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tarolasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`szaritasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tisztitasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tarolo_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`tarolo` VARCHAR(50) NULL DEFAULT ''\''\'''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tarolo` VARCHAR(50) NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`elso_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
     '	`masodik_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
     '	`tul_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`P2_ID` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas ,' + #13#10 +
+    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`levon_tomeg` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`ewc` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ewc` VARCHAR(20) NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`mod_idobelyeg` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' + #13#10 +
     'PRIMARY KEY (`ID`)'+#13#10+
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'+ #13#10 +
@@ -296,13 +298,13 @@ interface
     '`Erkido` time DEFAULT NULL,' + #13#10 +
     '`Tavdatum` date DEFAULT NULL,' + #13#10 +
     '`Tavido` time DEFAULT NULL,' + #13#10 +
-    '`Rendszam` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Kod` varchar(10) DEFAULT NULL,' + #13#10 +
-    '`Szallitolev` varchar(20) DEFAULT NULL,' + #13#10 +
+    '`Rendszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kod` varchar(10) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Szallitolev` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
     '`Betomeg` int(11) DEFAULT NULL,' + #13#10 +
     '`Kitomeg` int(11) DEFAULT NULL,' + #13#10 +
     '`Netto` int(11) DEFAULT NULL,' + #13#10 +
-    '`Mjegysorszam` varchar(10) DEFAULT NULL,' + #13#10 +
+    '`Mjegysorszam` varchar(10) DEFAULT NULL :kodolas,' + #13#10 +
     '`Forgalom_be_ID` int(11) DEFAULT NULL,' + #13#10 +
     '`Forgalom_ki_ID` int(11) DEFAULT NULL,' + #13#10 +
     'PRIMARY KEY (`ID`)' + #13#10 +
@@ -310,21 +312,21 @@ interface
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `partner` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Kod` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`Nev` varchar(80) DEFAULT NULL,' + #13#10 +
-    '`Irsz` varchar(10) DEFAULT NULL,' + #13#10 +
-    '`Telepules` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Kerulet` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Kozterulet` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Kozt_Jelleg` varchar(10) DEFAULT NULL,' + #13#10 +
-    '`Hazszam` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Epulet` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Lepcsohaz` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Emelet` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Ajto` varchar(5) DEFAULT NULL,' + #13#10 +
-    '`Adoszam` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`kuj` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
-    '`ktj` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
+    '`Kod` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Nev` varchar(80) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Irsz` varchar(10) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Telepules` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kerulet` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kozterulet` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Kozt_Jelleg` varchar(10) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Hazszam` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Epulet` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Lepcsohaz` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Emelet` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Ajto` varchar(5) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Adoszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`kuj` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`ktj` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`ID`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
@@ -352,25 +354,25 @@ interface
       '' + #13#10 +
       'CREATE TABLE IF NOT EXISTS `rak_szall` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Sorszam` varchar(20) DEFAULT NULL,' + #13#10 +
-    '`Ev_ssz` int(11) DEFAULT NULL,' + #13#10 +
-    '`Eazon` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Storno` varchar(15) DEFAULT NULL,' + #13#10 +
+    '`Sorszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Ev_ssz` int(11) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Eazon` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Storno` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
     '`K_ID` int(11) DEFAULT NULL,' + #13#10 +
-    '`K_Kod` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`K_Nev` varchar(80) DEFAULT NULL,' + #13#10 +
-    '`K_Cim` varchar(100) DEFAULT NULL,' + #13#10 +
-    '`k_tarolo_id` int(11) DEFAULT NULL,' + #13#10 +
-    '`k_tarolo_nev` varchar(50) DEFAULT NULL,' + #13#10 +
+    '`K_Kod` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`K_Nev` varchar(80) DEFAULT NULL :kodolas,' + #13#10 +
+    '`K_Cim` varchar(100) DEFAULT NULL :kodolas,' + #13#10 +
+    '`k_tarolo_id` int(11) DEFAULT NULL ,' + #13#10 +
+    '`k_tarolo_nev` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
     '`V_ID` int(11) DEFAULT NULL,' + #13#10 +
-    '`V_Kod` varchar(15) DEFAULT NULL,' + #13#10 +
-    '`V_Nev` varchar(80) DEFAULT NULL,' + #13#10 +
-    '`V_Cim` varchar(100) DEFAULT NULL,' + #13#10 +
+    '`V_Kod` varchar(15) DEFAULT NULL :kodolas,' + #13#10 +
+    '`V_Nev` varchar(80) DEFAULT NULL :kodolas,' + #13#10 +
+    '`V_Cim` varchar(100) DEFAULT NULL :kodolas,' + #13#10 +
     '`v_tarolo_id` int(11) DEFAULT NULL,' + #13#10 +
-    '`v_tarolo_nev` varchar(50) DEFAULT NULL,' + #13#10 +
+    '`v_tarolo_nev` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
     '`datum` date DEFAULT NULL,' + #13#10 +
-    '`Felhasznalo` varchar(50) DEFAULT NULL,' + #13#10 +
-    '`megjegyzes` varchar(200) DEFAULT NULL,' + #13#10 +
+    '`Felhasznalo` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+    '`megjegyzes` varchar(200) DEFAULT NULL :kodolas,' + #13#10 +
     'PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
@@ -407,8 +409,8 @@ interface
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
     '`RK_ID` int(11) DEFAULT NULL,' + #13#10 +
     '`Termek_ID` int(11) DEFAULT NULL,' + #13#10 +
-    '`Termek_Kod` varchar(30) DEFAULT NULL,' + #13#10 +
-    '`Termek_Nev` varchar(100) DEFAULT NULL,' + #13#10 +
+    '`Termek_Kod` varchar(30) DEFAULT NULL :kodolas,' + #13#10 +
+    '`Termek_Nev` varchar(100) DEFAULT NULL :kodolas,' + #13#10 +
     '`mennyiseg` decimal(12,2) DEFAULT 0.00,' + #13#10 +
     '`tort` tinyint(1) DEFAULT 0,' + #13#10 +
     'PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
@@ -416,7 +418,7 @@ interface
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `rendszam` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Rendszam` varchar(20) DEFAULT NULL,' + #13#10 +
+    '`Rendszam` varchar(20) DEFAULT NULL :kodolas,' + #13#10 +
     '`Partner_ID` int(11) DEFAULT NULL,' + #13#10 +
     '`tara` int(11) DEFAULT 0,' + #13#10 +
     'PRIMARY KEY (`ID`)' + #13#10 +
@@ -424,16 +426,16 @@ interface
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `tarolok` (' + #13#10 +
     '`id` int(10) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`nev` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '''',' + #13#10 +
+    '`nev` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `termek` (' + #13#10 +
     '`ID` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`Kod` varchar(30) NOT NULL DEFAULT '''',' + #13#10 +
-    '`Nev` varchar(100) NOT NULL DEFAULT '''',' + #13#10 +
-    '`itj` varchar(20) NOT NULL DEFAULT '''',' + #13#10 +
-    '`me` varchar(20) NOT NULL DEFAULT '''',' + #13#10 +
+    '`Kod` varchar(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`Nev` varchar(100) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`itj` varchar(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`me` varchar(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '`ar` decimal(12,2) NOT NULL DEFAULT 0.00,' + #13#10 +
     '`afa` decimal(12,2) NOT NULL DEFAULT 0.00,' + #13#10 +
     '`egysegtomeg` decimal(12,2) NOT NULL DEFAULT 1.00,' + #13#10 +
@@ -456,7 +458,7 @@ interface
     '' + #13#10 +
     'CREATE TABLE IF NOT EXISTS `tipus` (' + #13#10 +
     '`id` int(10) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`nev` varchar(30) DEFAULT '''',' + #13#10 +
+    '`nev` varchar(30) DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`id`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8;' + #13#10 +
     '' + #13#10 +
@@ -504,7 +506,8 @@ interface
     '' + #13#10 +
     '/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '''') */;' + #13#10 +
     '/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;' + #13#10 +
-    '/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;' ,
+    '/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;'
+    ,
     //2
     'ALTER TABLE forgalom ADD COLUMN IF NOT EXISTS kezi  boolean ' ,
     //3
@@ -516,23 +519,23 @@ interface
     //tulajok tabla
     'CREATE TABLE IF NOT EXISTS `tulajok` (' + #13#10 +
      '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-     '	`Nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
-     '	`Cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
-     '	`Adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
-     '	`kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
-     '	`ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
-     '	`Elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+     '	`Nev` VARCHAR(80) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+     '	`Cim` VARCHAR(200) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+     '	`Adoszam` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+     '	`kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+     '	`ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+     '	`Elotag` VARCHAR(2) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
      '	PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
      ');'+ #13#10 +
     ''+ #13#10 +
     // Merlegjegy
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_id` INT(11) DEFAULT 0; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' :kodolas ; ' + #13#10 +
     //trigger létrehozása:merlegjegy_before_insert
      ' SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='+#39+'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'+#39+';'+#13#10+
      ' DELIMITER //' +#13#10+
@@ -544,11 +547,11 @@ interface
      ' SET SQL_MODE=@OLDTMP_SQL_MODE;',
      //mérlegjegy partner 2
      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas ;' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
      //partner combo
      // 'DROP TABLE IF EXISTS `partner_combo`;' + #13#10 +
       'ALTER ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,adoszam,kuj,ktj,' + #13#10 +
@@ -560,24 +563,24 @@ interface
       'from partner ;',
       //7
       //tulajok mod
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Irsz` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telepules` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kerulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozterulet` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hazszam` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Epulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Emelet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hrsz` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Ajto` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Irsz` VARCHAR(10) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telepules` VARCHAR(30) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kerulet` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozterulet` VARCHAR(30) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hazszam` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Epulet` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Emelet` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Hrsz` VARCHAR(20) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+      'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `Ajto` VARCHAR(5) NULL DEFAULT NULL :kodolas;' + #13#10 +
       //partner mod
       ''+ #13#10 +
-      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS	`Hrsz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS	`Hrsz` VARCHAR(5) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Email` VARCHAR(20) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS `Telefon` VARCHAR(20) NULL DEFAULT NULL :kodolas;'+ #13#10 +
 
       //partner combo
       ''+ #13#10 +
@@ -594,18 +597,18 @@ interface
       'CREATE TABLE IF NOT EXISTS `felrakodasi_cimek` (' + #13#10 +
       '	`ID` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,' + #13#10 +
       '	`Tul_id` INT(11) NOT NULL,' + #13#10 +
-      '	`Irsz` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Telepules` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Kozterulet` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Hazszam` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Epulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Emelet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Ajto` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Hrsz` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'');'+ #13#10 +
+      '	`Irsz` VARCHAR(10) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Telepules` VARCHAR(30) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+      '	`Kozterulet` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+      '	`Hazszam` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Epulet` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Emelet` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Ajto` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Hrsz` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Email` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Telefon` VARCHAR(20) NULL DEFAULT NULL );'+ #13#10 +
       ''+ #13#10 +
       //felrakodasi_cimek_nezet
       ' CREATE OR REPLACE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `felrakodasi_cimek_nezet`'+ #13#10 +
@@ -620,15 +623,15 @@ interface
 
       'CREATE TABLE IF NOT EXISTS `levonas_szovegek` (' + #13#10 +
      '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-     '	`Szoveg` VARCHAR(100) NOT NULL DEFAULT '''' COLLATE ''utf8_general_ci'',' + #13#10 +
+     '	`Szoveg` VARCHAR(100) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
      '	PRIMARY KEY (`ID`) USING BTREE' + #13#10 +
      ');'+ #13#10 +
     ''+ #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_szoveg` VARCHAR(100) NULL DEFAULT NULL :kodolas;' + #13#10 +
     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `levon_tomeg` INT(11) NULL DEFAULT 0;',
     //ewc
-    'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
+    'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' NULL :kodolas ;' + #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `ewc` VARCHAR(20) NULL DEFAULT '''' :kodolas;'+ #13#10 +
     //partner combo
       ''+ #13#10 +
       'ALTER ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `partner_combo` AS SELECT id,kod,nev,adoszam,kuj,ktj,' + #13#10 +
@@ -640,26 +643,26 @@ interface
       'if(ajto<>'''',CONCAT('' '',ajto),''''),if(hrsz<>'''',CONCAT('' '',hrsz),'''')) AS cim' + #13#10 +
       'from partner ;'+ #13#10 +
     //tulajok cegjegyzek szam
-    'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_cjsz` VARCHAR(20) NULL DEFAULT '''' NULL COLLATE ''utf8mb4_general_ci'';'{+ #13#10 +}
+    'ALTER TABLE tulajok ADD COLUMN IF NOT EXISTS `cjsz` VARCHAR(20) NULL DEFAULT '''' :kodolas;'+ #13#10 +
+    'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `tul_cjsz` VARCHAR(20) NULL DEFAULT '''' NULL :kodolas;'{+ #13#10 +}
     ,
     //10
     //lerakodasi cimek tabla
       'CREATE TABLE IF NOT EXISTS `lerakodasi_cimek` (' + #13#10 +
       '	`ID` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,' + #13#10 +
       '	`Tul_id` INT(11) NOT NULL,' + #13#10 +
-      '	`Irsz` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Telepules` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Kozterulet` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Hazszam` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Epulet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Emelet` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Ajto` VARCHAR(5) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Hrsz` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Email` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-      '	`Telefon` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'');'+ #13#10 +
+      '	`Irsz` VARCHAR(10) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+      '	`Telepules` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Kozterulet` VARCHAR(30) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+      '	`Kozt_Jelleg` VARCHAR(10) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Hazszam` VARCHAR(5) NULL DEFAULT NULL  :kodolas,' + #13#10 +
+      '	`Epulet` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Lepcsohaz` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Emelet` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Ajto` VARCHAR(5) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Hrsz` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Email` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+      '	`Telefon` VARCHAR(20) NULL DEFAULT NULL :kodolas );'+ #13#10 +
       ''+ #13#10 +
       //lerakodasi_cimek_nezet
       'DROP TABLE IF EXISTS lerakodasi_cimek_nezet;'+ #13#10 +
@@ -677,39 +680,39 @@ interface
       //nyitbe tábla
       'CREATE TABLE IF NOT EXISTS `nyitbe` ('+#13#10+
       '`ID` int(11) NOT NULL AUTO_INCREMENT,'+#13#10+
-      '`Sorszam` varchar(20) DEFAULT NULL,'+#13#10+
+      '`Sorszam` varchar(20) DEFAULT NULL :kodolas,'+#13#10+
       '`Ev_ssz` int(11) DEFAULT NULL,'+#13#10+
-      '`Eazon` varchar(30) DEFAULT NULL,'+#13#10+
-      '`Storno` varchar(15) DEFAULT NULL,'+#13#10+
-      '`Rendszam` varchar(20) DEFAULT NULL,'+#13#10+
-      '`Rendszam2` varchar(20) DEFAULT NULL,'+#13#10+
+      '`Eazon` varchar(30) DEFAULT NULL :kodolas,'+#13#10+
+      '`Storno` varchar(15) DEFAULT NULL :kodolas,'+#13#10+
+      '`Rendszam` varchar(20) DEFAULT NULL :kodolas,'+#13#10+
+      '`Rendszam2` varchar(20) DEFAULT NULL :kodolas,'+#13#10+
       '`P_ID` int(11) DEFAULT NULL,'+#13#10+
-      '`P_Kod` varchar(15) DEFAULT NULL,'+#13#10+
-      '`P_Nev` varchar(80) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
-      '`P_Cim` varchar(100) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`P_Kod` varchar(15) DEFAULT NULL :kodolas,'+#13#10+
+      '`P_Nev` varchar(80) DEFAULT NULL :kodolas,'+#13#10+
+      '`P_Cim` varchar(100) DEFAULT NULL :kodolas ,'+#13#10+
       '`Termek_ID` int(11) DEFAULT NULL,'+#13#10+
-      '`Termek_Kod` varchar(30) DEFAULT NULL,'+#13#10+
-      '`Termek_Nev` varchar(100) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`Termek_Kod` varchar(30) DEFAULT NULL :kodolas,'+#13#10+
+      '`Termek_Nev` varchar(100) DEFAULT NULL :kodolas,'+#13#10+
       '`Termek_afa` decimal(12,2) DEFAULT 0.00,'+#13#10+
       '`termek_ar` decimal(12,2) DEFAULT 0.00,'+#13#10+
-      '`Szallitolev` varchar(20) DEFAULT NULL,'+#13#10+
-      '`Megjegyzes` varchar(200) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
+      '`Szallitolev` varchar(20) DEFAULT NULL :kodolas,'+#13#10+
+      '`Megjegyzes` varchar(200) DEFAULT NULL :kodolas,'+#13#10+
       '`Tomegbe` int(11) DEFAULT NULL,'+#13#10+
       '`Tomegki` int(11) DEFAULT NULL,'+#13#10+
       '`Erkdatum` date DEFAULT NULL,'+#13#10+
       '`Erkido` time DEFAULT NULL,'+#13#10+
       '`Tavdatum` date DEFAULT NULL,'+#13#10+
       '`Tavido` time DEFAULT NULL,'+#13#10+
-      '`Felhasznalo` varchar(50) DEFAULT NULL COLLATE ''utf8mb4_general_ci'','+#13#10+
-      '`irany` varchar(30) DEFAULT NULL,'+#13#10+
+      '`Felhasznalo` varchar(50) DEFAULT NULL :kodolas,'+#13#10+
+      '`irany` varchar(30) DEFAULT NULL :kodolas,'+#13#10+
       '`Brutto` int(11) DEFAULT NULL,'+#13#10+
       '`Tara` int(11) DEFAULT NULL,'+#13#10+
       '`Netto` int(11) DEFAULT NULL,'+#13#10+
       '`SzNetto` int(11) DEFAULT NULL,'+#13#10+
-      '`merlegelo` varchar(50) DEFAULT NULL,'+#13#10+
-      '`kuj` varchar(30) NOT NULL DEFAULT '''','+#13#10+
-      '`ktj` varchar(30) NOT NULL DEFAULT '''','+#13#10+
-      '`ekaer` varchar(30) NOT NULL DEFAULT '''','+#13#10+
+      '`merlegelo` varchar(50) DEFAULT NULL :kodolas,'+#13#10+
+      '`kuj` varchar(30) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`ktj` varchar(30) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`ekaer` varchar(30) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
       '`psz` int(11) DEFAULT 0,'+#13#10+
       '`alapnedv` decimal(12,2) DEFAULT 0.00,'+#13#10+
       '`nedv` decimal(12,2) DEFAULT 0.00,'+#13#10+
@@ -722,7 +725,7 @@ interface
       '`egysegtomeg` decimal(12,2) DEFAULT 0.00,'+#13#10+
       '`kerekites` tinyint(1) DEFAULT 0,'+#13#10+
       '`kukorica` tinyint(1) DEFAULT 0,'+#13#10+
-      '`buzaminoseg` varchar(50) DEFAULT '''','+#13#10+
+      '`buzaminoseg` varchar(50) DEFAULT '''' :kodolas,'+#13#10+
       '`mennyiseg` decimal(12,2) DEFAULT 0.00,'+#13#10+
       '`tarolasi_dij` decimal(12,2) DEFAULT 0.00,'+#13#10+
       '`szaritasi_dij` decimal(12,2) DEFAULT 0.00,'+#13#10+
@@ -732,22 +735,22 @@ interface
       '`elso_kezi` tinyint(1) DEFAULT NULL,'+#13#10+
       '`masodik_kezi` tinyint(1) DEFAULT NULL,'+#13#10+
       '`tul_id` int(11) DEFAULT 0,'+#13#10+
-      '`tul_nev` varchar(80) NOT NULL DEFAULT '''','+#13#10+
-      '`tul_cim` varchar(200) NOT NULL DEFAULT '''','+#13#10+
-      '`tul_adoszam` varchar(20) NOT NULL DEFAULT '''','+#13#10+
-      '`tul_kuj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
-      '`tul_ktj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
-      '`tul_elotag` varchar(2) NOT NULL DEFAULT '''','+#13#10+
+      '`tul_nev` varchar(80) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_cim` varchar(200) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_adoszam` varchar(20) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_kuj` varchar(20) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_ktj` varchar(20) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_elotag` varchar(2) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
       '`P2_ID` int(11) DEFAULT 0,'+#13#10+
-      '`P2_Kod` varchar(15) DEFAULT NULL,'+#13#10+
-      '`P2_Nev` varchar(80) DEFAULT NULL,'+#13#10+
-      '`P2_Cim` varchar(100) DEFAULT NULL,'+#13#10+
-      '`P2_kuj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
-      '`P2_ktj` varchar(20) NOT NULL DEFAULT '''','+#13#10+
-      '`levon_szoveg` varchar(100) DEFAULT NULL,'+#13#10+
+      '`P2_Kod` varchar(15) DEFAULT NULL :kodolas,'+#13#10+
+      '`P2_Nev` varchar(80) DEFAULT NULL :kodolas,'+#13#10+
+      '`P2_Cim` varchar(100) DEFAULT NULL :kodolas,'+#13#10+
+      '`P2_kuj` varchar(20) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`P2_ktj` varchar(20) NOT NULL DEFAULT '''' :kodolas,'+#13#10+
+      '`levon_szoveg` varchar(100) DEFAULT NULL :kodolas,'+#13#10+
       '`levon_tomeg` int(11) DEFAULT 0,'+#13#10+
-      '`ewc` varchar(20) DEFAULT '''','+#13#10+
-      '`tul_cjsz` varchar(20) DEFAULT '''','+#13#10+
+      '`ewc` varchar(20) DEFAULT '''' :kodolas,'+#13#10+
+      '`tul_cjsz` varchar(20) DEFAULT '''' :kodolas,'+#13#10+
       'PRIMARY KEY (`ID`)'+#13#10+
       ') ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;'
 
@@ -760,39 +763,39 @@ interface
 
     'CREATE TABLE IF NOT EXISTS `modositott_merlegjegyek` (' + #13#10 +
     '	`ID` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Sorszam` VARCHAR(20) NULL DEFAULT NULL :kodolas ,' + #13#10 +
     '	`Ev_ssz` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Storno` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Eazon` VARCHAR(30) NULL DEFAULT NULL :kodolas ,' + #13#10 +
+    '	`Storno` VARCHAR(15) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Rendszam` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Rendszam2` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`P_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Termek_ID` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Termek_Kod` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Termek_Nev` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Termek_afa` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`termek_ar` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
-    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Szallitolev` VARCHAR(20) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`Megjegyzes` VARCHAR(200) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Tomegbe` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Tomegki` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Erkdatum` DATE NULL DEFAULT NULL,' + #13#10 +
     '	`Erkido` TIME NULL DEFAULT NULL,' + #13#10 +
     '	`Tavdatum` DATE NULL DEFAULT NULL,' + #13#10 +
     '	`Tavido` TIME NULL DEFAULT NULL,' + #13#10 +
-    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`irany` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Felhasznalo` VARCHAR(50) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`irany` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`Brutto` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Tara` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`Netto` INT(11) NULL DEFAULT NULL,' + #13#10 +
     '	`SzNetto` INT(11) NULL DEFAULT NULL,' + #13#10 +
-    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`merlegelo` VARCHAR(50) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`kuj` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`ktj` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`ekaer` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`psz` INT(11) NULL DEFAULT ''0'',' + #13#10 +
     '	`alapnedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`nedv` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
@@ -805,32 +808,32 @@ interface
     '	`egysegtomeg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`kerekites` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
     '	`kukorica` TINYINT(1) NULL DEFAULT ''0'',' + #13#10 +
-    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`buzaminoseg` VARCHAR(50) NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`mennyiseg` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tarolasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`szaritasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tisztitasi_dij` DECIMAL(12,2) NULL DEFAULT ''0.00'',' + #13#10 +
     '	`tarolo_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`tarolo` VARCHAR(50) NULL DEFAULT ''\''\'''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tarolo` VARCHAR(50) NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`elso_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
     '	`masodik_kezi` TINYINT(1) NULL DEFAULT NULL,' + #13#10 +
     '	`tul_id` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`tul_nev` VARCHAR(80) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_cim` VARCHAR(200) NOT NULL DEFAULT '''' :kodolas ,' + #13#10 +
+    '	`tul_adoszam` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_elotag` VARCHAR(2) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`P2_ID` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`P2_Kod` VARCHAR(15) NULL DEFAULT NULL ,' + #13#10 +
+    '	`P2_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P2_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
+    '	`P2_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`P2_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`levon_szoveg` VARCHAR(100) NULL DEFAULT NULL :kodolas,' + #13#10 +
     '	`levon_tomeg` INT(11) NULL DEFAULT ''0'',' + #13#10 +
-    '	`ewc` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`ewc` VARCHAR(20) NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '	`tul_cjsz` VARCHAR(20) NULL DEFAULT '''' :kodolas,' + #13#10 +
     '	`mod_idobelyeg` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' + #13#10 +
     'PRIMARY KEY (`ID`)'+#13#10+
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
@@ -847,9 +850,9 @@ interface
     ,
     'CREATE TABLE IF NOT EXISTS `irsz` (' + #13#10 +
     '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`irsz` varchar(10) NOT NULL DEFAULT '''',' + #13#10 +
-    '`megye` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
-    '`varos` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
+    '`irsz` varchar(10) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`megye` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
+    '`varos` varchar(50) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     'PRIMARY KEY (`id`)' + #13#10 +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
     '' //+ #13#10 +
@@ -873,49 +876,49 @@ interface
       //Hardver beallitasok
     'CREATE TABLE IF NOT EXISTS `hardver_beallitasok` (' + #13#10 +
     '	`ID` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,' + #13#10 +
-    '	`Leiras` VARCHAR(30) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Eszkoznev` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Merleg` VARCHAR(10) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Szamitogep` VARCHAR(40) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Tipus` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Egyedi_azon` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
-    '	`Port_v_IP_Cim` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Leiras` VARCHAR(30) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Eszkoznev` VARCHAR(20) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Merleg` VARCHAR(10) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Szamitogep` VARCHAR(40) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Tipus` VARCHAR(15) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Egyedi_azon` VARCHAR(15) NULL DEFAULT NULL ,' + #13#10 +
+    '	`Port_v_IP_Cim` VARCHAR(20) NULL DEFAULT NULL ,' + #13#10 +
     '	`IP_port` INT(11) DEFAULT 0,' + #13#10 +
     '	`Bekapcs_Kimenet_szam` INT(11) DEFAULT 0,' + #13#10 +
     '	`Kikapcs_Kimenet_szam` INT(11) DEFAULT 0,' + #13#10 +
     ' `Aktiv` int(11) DEFAULT 0,' + #13#10 +
     ' `Hibas` int(11) DEFAULT 0,' + #13#10 +
     ' `Alaphelyzet` int(11) DEFAULT 0,' + #13#10 +
-    '	`Gomb_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Gomb_szoveg` VARCHAR(20) NULL DEFAULT NULL ,' + #13#10 +
     ' `Gomb_szam` int(11) DEFAULT 0,' + #13#10 +
-    '	`Felirat_szoveg` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+    '	`Felirat_szoveg` VARCHAR(20) NULL DEFAULT NULL ,' + #13#10 +
     ' `Felirat_szam` int(11) DEFAULT 0,' + #13#10 +
     ' `Varakozas_ms` int(11) DEFAULT 0,' + #13#10 +
-    '	`Rtsp` VARCHAR(180) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'' ' +
+    '	`Rtsp` VARCHAR(180) NULL DEFAULT NULL  ' +
     ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10
     ,  //19
      //Ha a PLC program használja, hogy hibás, erre a címre kell írni (Regi sorompo hiba)
     'ALTER TABLE hardver_beallitasok ADD COLUMN IF NOT EXISTS Hiba_kimenet_szam INT(11) DEFAULT 0;'
      ,//20
-     'ALTER TABLE `nyitbe`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL  AFTER `termek_ar`;'+#13#10 +
-     'ALTER TABLE `merlegjegy`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL  AFTER `termek_ar`;'  +#13#10
+     'ALTER TABLE `nyitbe`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL :kodolas AFTER `termek_ar`;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	CHANGE COLUMN `Szallitolev` `Szallitolev` VARCHAR(200) NULL DEFAULT NULL :kodolas  AFTER `termek_ar`;'  +#13#10
      ,//21
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;'  +#13#10 +
-     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL ;' // +#13#10
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL :kodolas;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL :kodolas ;'  +#13#10 +
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Szabalyos_meres`  VARCHAR(20) NULL DEFAULT NULL :kodolas ;' // +#13#10
      , //22
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'+#13#10 +
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL ;'  +#13#10+
-     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL ;' // +#13#10
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL :kodolas ;'+#13#10 +
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'+#13#10 +
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'+#13#10 +
+     'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'+#13#10 +
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `merlegjegy`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev1`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev2`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev3`  VARCHAR(180) NULL DEFAULT NULL :kodolas;'  +#13#10+
+     'ALTER TABLE `modositott_merlegjegyek`	ADD COLUMN IF NOT EXISTS `Kepnev4`  VARCHAR(180) NULL DEFAULT NULL :kodolas;' // +#13#10
      , //23
      'ALTER TABLE `nyitbe`	ADD COLUMN IF NOT EXISTS `Torolve`  INT(11) DEFAULT 0 ;' // +#13#10
      ,//24 forgalom tábla módosítása SOAP miatt
@@ -938,9 +941,9 @@ interface
       'ALTER TABLE `forgalom`	MODIFY COLUMN  `Parositott`  INT(11) NULL DEFAULT 0 ;' // +#13#10+
      ,// magansz a partnerbe
      'ALTER TABLE partner ADD COLUMN IF NOT EXISTS magansz TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
-     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_azon VARCHAR(8) NOT NULL DEFAULT '''';' + #13#10 +
-     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_kod VARCHAR(1) NOT NULL DEFAULT '''';' + #13#10 +
-     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_megye_kod VARCHAR(2) NOT NULL DEFAULT '''';'// + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_azon VARCHAR(8) NOT NULL DEFAULT '''' :kodolas;' + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_kod VARCHAR(1) NOT NULL DEFAULT '''' :kodolas;' + #13#10 +
+     'ALTER TABLE partner ADD COLUMN IF NOT EXISTS ado_megye_kod VARCHAR(2) NOT NULL DEFAULT '''' :kodolas;'// + #13#10 +
 
       ,
       '' + #13#10 +
@@ -956,7 +959,7 @@ interface
      ,//dijszab kategóriák
      'CREATE TABLE IF NOT EXISTS `dijaszab_kategoriak` (' + #13#10 +
     '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-    '`nev` varchar(20) NOT NULL DEFAULT '''',' + #13#10 +
+    '`nev` varchar(20) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
     '`tarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
     '`betarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
     '`kitarolasi` DECIMAL(20,6) NOT NULL DEFAULT 0,' + #13#10 +
@@ -979,36 +982,36 @@ interface
       'd_id, Adoszam as kozadosz from partner ;'
       ,//partner 3 fuvarozó
      'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
      'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
      'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_ID` INT(11) NULL DEFAULT 0;'+ #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';'+ #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; ' + #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_Kod` VARCHAR(15) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Nev` VARCHAR(80) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS	`P3_Cim` VARCHAR(100) NULL DEFAULT NULL :kodolas;'+ #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_kuj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; ' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `P3_ktj` VARCHAR(20) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
      //
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
-     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL COLLATE ''utf8mb4_general_ci'';' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL :kodolas ;' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `itj` VARCHAR(20) NULL DEFAULT NULL :kodolas;' + #13#10 +
+     'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `szarmazasi_hely` VARCHAR(100) NULL DEFAULT NULL :kodolas;' + #13#10 +
       '' + #13#10 +
       'CREATE TABLE IF NOT EXISTS `dijaszab_kategoriak_termek` (' + #13#10 +
       '	`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
       '	`d_id` INT(11) NOT NULL DEFAULT ''0'',' + #13#10 +
       '	`t_id` INT(11) NOT NULL DEFAULT ''0'',' + #13#10 +
-      '	`t_nev` VARCHAR(100) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci'',' + #13#10 +
+      '	`t_nev` VARCHAR(100) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
       '	`tarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
       '	`betarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
       '	`kitarolasi` DECIMAL(20,6) NOT NULL DEFAULT ''0.000000'',' + #13#10 +
@@ -1025,14 +1028,14 @@ interface
       '`excel` tinyint(1) DEFAULT 0,' + #13#10 +
       '`feltoltes_ftp` tinyint(1) DEFAULT 0,' + #13#10 +
       'PRIMARY KEY (`id`)' + #13#10 +
-      ') ENGINE=InnoDB DEFAULT CHARSET=utf8;' + #13#10 +
+      ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
       '' + #13#10 +
       'CREATE TABLE IF NOT EXISTS `cfg_export_mezok` (' + #13#10 +
       '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
       '`c_id` int(11) NOT NULL DEFAULT 0,' + #13#10 +
       '`mezo` varchar(50) NOT NULL DEFAULT '''',' + #13#10 +
       'PRIMARY KEY (`id`)' + #13#10 +
-      ') ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+      ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'
       ,
       //sikér
       'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `b_siker` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
@@ -1049,36 +1052,36 @@ interface
       ''+ #13#10 +
       'CREATE TABLE IF NOT EXISTS `gongyoleg` (' + #13#10 +
       '	`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-      '	`nev` VARCHAR(30) NULL DEFAULT NULL ,' + #13#10 +
+      '	`nev` VARCHAR(30) NULL DEFAULT NULL :kodolas,' + #13#10 +
       '	`tomeg` DOUBLE(22,6) NOT NULL DEFAULT 0,' + #13#10 +
-      '	`v_kod` VARCHAR(13) NULL DEFAULT NULL ,' + #13#10 +
+      '	`v_kod` VARCHAR(13) NULL DEFAULT NULL :kodolas,' + #13#10 +
       '	PRIMARY KEY (`id`) USING BTREE' + #13#10 +
       ')' + #13#10 +
-      'ENGINE=InnoDB DEFAULT CHARSET=utf8;'+#13#10 +
+      'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'+#13#10 +
       ''+ #13#10 +
       'CREATE TABLE IF NOT EXISTS `nyitbe_gongyoleg` (' + #13#10 +
       '	`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
       '	`m_id` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
       '	`g_id` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
-      '	`g_nev` VARCHAR(30) NOT NULL DEFAULT '''' ,' + #13#10 +
+      '	`g_nev` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
       '	`g_tomeg` DOUBLE(22,6) NOT NULL DEFAULT 0,' + #13#10 +
       '	`g_menny` DOUBLE(22,6) NOT NULL DEFAULT 0,' + #13#10 +
       '	`elso` TINYINT(1) NOT NULL DEFAULT 0 ,' + #13#10 +
       '	PRIMARY KEY (`id`) USING BTREE' + #13#10 +
       ')' + #13#10 +
-      'ENGINE=InnoDB DEFAULT CHARSET=utf8;'+#13#10 +
+      'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'+#13#10 +
       ''+ #13#10 +
       'CREATE TABLE IF NOT EXISTS `merlegjegy_gongyoleg` (' + #13#10 +
       '	`id` INT(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
       '	`m_id` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
       '	`g_id` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
-      '	`g_nev` VARCHAR(30) NOT NULL DEFAULT '''' ,' + #13#10 +
+      '	`g_nev` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
       '	`g_tomeg` DOUBLE(22,6) NOT NULL DEFAULT 0,' + #13#10 +
       '	`g_menny` DOUBLE(22,6) NOT NULL DEFAULT 0,' + #13#10 +
       '	`elso` TINYINT(1) NOT NULL DEFAULT 0 ,' + #13#10 +
       '	PRIMARY KEY (`id`) USING BTREE' + #13#10 +
       ')' + #13#10 +
-      'ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+      'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'
       ,
       '/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;' + #13#10 +
       '/*!40101 SET NAMES utf8 */;' + #13#10 +
@@ -1088,23 +1091,23 @@ interface
       '' + #13#10 +
       'CREATE TABLE IF NOT EXISTS `kartyak` (' + #13#10 +
         '`id` int(11) NOT NULL AUTO_INCREMENT,' + #13#10 +
-        '`kartyaszam` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
-        '`nev` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
-        '`ceg_nev` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
-        '`extra` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,' + #13#10 +
-        '`aktiv` TINYINT(1) NOT NULL DEFAULT 1,' + #13#10 +
+        '`kartyaszam` varchar(15)  DEFAULT NULL :kodolas,' + #13#10 +
+        '`nev` VARCHAR(150) DEFAULT NULL :kodolas,' + #13#10 +
+        '`ceg_nev` VARCHAR(150) DEFAULT NULL :kodolas,' + #13#10 +
+        '`extra` varchar(50) DEFAULT NULL :kodolas,' + #13#10 +
+        '`aktiv` TINYINT(1) NOT NULL DEFAULT 1 :kodolas,' + #13#10 +
         'PRIMARY KEY (`id`) USING BTREE,' + #13#10 +
         'UNIQUE KEY `ID_UNIQUE` (`id`) USING BTREE' + #13#10 +
-        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
         '' + #13#10 +
         'CREATE TABLE IF NOT EXISTS `mozgasok` (' + #13#10 +
         '`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
         '`kozp_szam` INT(11) NOT NULL,' + #13#10 +
-        '`kartya_szam` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,' + #13#10 +
+        '`kartya_szam` varchar(15) NOT NULL :kodolas,' + #13#10 +
         '`idobelyeg` timestamp NOT NULL DEFAULT current_timestamp(),' + #13#10 +
         '`irany` INT(11) NOT NULL DEFAULT 0,' + #13#10 +
         'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
-        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
         '' + #13#10 +
         '/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;' + #13#10 +
         '/*!40101 SET NAMES utf8 */;' + #13#10 +
@@ -1119,15 +1122,15 @@ interface
          'ifnull(`k`.`ceg_nev`,'''') AS `ceg_nev`,ifnull(`k`.`extra`,'''') AS `extra`' + #13#10 +
          'from (`mozgasok` `m` left join `kartyak` `k` on(`k`.`kartyaszam` = `m`.`kartya_szam`));' + #13#10 +
          ''+ #13#10 +
-        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
-        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
-        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '//+ #13#10 +
+        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
+        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' :kodolas ; '+ #13#10 +
+        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `sofor` VARCHAR(50) NOT NULL DEFAULT '''' :kodolas; '//+ #13#10 +
         ,
         'CREATE TABLE IF NOT EXISTS `soforok` (' + #13#10 +
         '`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,' + #13#10 +
-        '`sofor` VARCHAR(30) NOT NULL DEFAULT '''' ,' + #13#10 +
+        '`sofor` VARCHAR(30) NOT NULL DEFAULT '''' :kodolas,' + #13#10 +
         'PRIMARY KEY (`id`) USING BTREE' + #13#10 +
-        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;' + #13#10 +
         '' + #13#10 +
         'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `suruseg` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
         'ALTER TABLE termek ADD COLUMN IF NOT EXISTS `keveresi_arany` TINYINT(1) NOT NULL DEFAULT 0;' + #13#10 +
@@ -1139,10 +1142,11 @@ interface
         'ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
         'ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
         'ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `homerseklet` DECIMAL(12,2) NOT NULL DEFAULT 0;' + #13#10 +
-        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
-        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10 +
-        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' COLLATE ''utf8mb4_general_ci''; '+ #13#10+
-        ''
+        ' ALTER TABLE merlegjegy ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
+        ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
+        ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' :kodolas; '+ #13#10+
+        '' // A :kodolas tartalmazza teljesen a COLLATE stb...
+
 
     );
 

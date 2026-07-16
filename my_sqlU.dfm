@@ -2,7 +2,7 @@ object MySQLF: TMySQLF
   Left = 0
   Top = 0
   Caption = 'Kapcsolat be'#225'll'#237't'#225'sa'
-  ClientHeight = 297
+  ClientHeight = 343
   ClientWidth = 698
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -52,6 +52,13 @@ object MySQLF: TMySQLF
     Height = 13
     Caption = 'Db'
   end
+  object Label6: TLabel
+    Left = 16
+    Top = 202
+    Width = 46
+    Height = 13
+    Caption = 'K'#243'dt'#225'bla:'
+  end
   object Edit1: TEdit
     Left = 16
     Top = 17
@@ -86,8 +93,8 @@ object MySQLF: TMySQLF
     Text = '3306'
   end
   object Button1: TButton
-    Left = 16
-    Top = 202
+    Left = 20
+    Top = 258
     Width = 185
     Height = 25
     Caption = 'Teszt'
@@ -106,7 +113,7 @@ object MySQLF: TMySQLF
     Left = 224
     Top = 8
     Width = 457
-    Height = 281
+    Height = 327
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -118,8 +125,8 @@ object MySQLF: TMySQLF
     TabOrder = 6
   end
   object Button2: TButton
-    Left = 16
-    Top = 248
+    Left = 20
+    Top = 304
     Width = 185
     Height = 25
     Caption = 'Kil'#233'p'#233's'
@@ -131,6 +138,14 @@ object MySQLF: TMySQLF
     ParentFont = False
     TabOrder = 7
     OnClick = Button2Click
+  end
+  object edkodtabla: TEdit
+    Left = 16
+    Top = 216
+    Width = 121
+    Height = 21
+    TabOrder = 8
+    Text = 'edkodtabla'
   end
   object sqliteImportKapcs: TFDConnection
     ConnectionName = 'sqliteKapcs'
@@ -170,6 +185,7 @@ object MySQLF: TMySQLF
       'TIB_STRINGLIST'
       'TSTRINGLIST'
       'TWIDESTRINGS')
+    DefaultLanguage = 2
     StoreAsUTF8 = True
     NumOfLanguages = 3
     LangDispatcher = FoF.siLangDispatcher1
@@ -178,7 +194,7 @@ object MySQLF: TMySQLF
       'Hungarian'
       'English'
       'Romanian')
-    Language = 'Hungarian'
+    Language = 'English'
     CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'
