@@ -1065,40 +1065,40 @@ procedure TAF.fo_szazalek(brutto, tara, szemet_szazalek,akt_nedvesseg_szazalek,
   kukorica: Boolean);
 Var  alap_nedv,akt_nedv:Extended;
 begin
- szemet_tomeg:=0;
- nedvesseg_szazalek:=0;
- nedvesseg_vesztes_tomege:=0;
- nyers_tort_szemek_tomege:=0;
- tisztitott_nyers_netto_tomege_tortel:=0;
- tisztitott_nyers_netto_tomege:=0;
- nyers_netto_tomege:=0;
- szaritott_tort_szemek_tomege:=0;
- szaritott_netto_tomege:=0;
- akt_szar_dij:=0;
- akt_tiszt_dij:=0;
+  szemet_tomeg:=0;
+  nedvesseg_szazalek:=0;
+  nedvesseg_vesztes_tomege:=0;
+  nyers_tort_szemek_tomege:=0;
+  tisztitott_nyers_netto_tomege_tortel:=0;
+  tisztitott_nyers_netto_tomege:=0;
+  nyers_netto_tomege:=0;
+  szaritott_tort_szemek_tomege:=0;
+  szaritott_netto_tomege:=0;
+  akt_szar_dij:=0;
+  akt_tiszt_dij:=0;
 
- nyers_netto_tomege:=brutto-tara;
- szemet_tomeg:=nyers_netto_tomege*(szemet_szazalek/100.0);
- if akt_nedvesseg_szazalek>alap_nedvesseg_szazalek then
- begin
-  alap_nedv:=alap_nedvesseg_szazalek;
-  akt_nedv:=akt_nedvesseg_szazalek;
-  akt_szar_dij:=(((nyers_netto_tomege-szemet_tomeg) *(akt_nedv-alap_nedv))/1000)*szaritasi_dij;//szárítási díj csak akkor ha nedv>alapnedv
- end
- else
- begin
-  alap_nedv:=alap_nedvesseg_szazalek;
-  akt_nedv:=alap_nedvesseg_szazalek
- end;
- akt_tiszt_dij:=(nyers_netto_tomege/1000)*tisztitasi_dij;
+  nyers_netto_tomege:=brutto-tara;
+  szemet_tomeg:=nyers_netto_tomege*(szemet_szazalek/100.0);
+  if akt_nedvesseg_szazalek>alap_nedvesseg_szazalek then
+  begin
+    alap_nedv:=alap_nedvesseg_szazalek;
+    akt_nedv:=akt_nedvesseg_szazalek;
+   akt_szar_dij:=(((nyers_netto_tomege-szemet_tomeg) *(akt_nedv-alap_nedv))/1000)*szaritasi_dij;//szárítási díj csak akkor ha nedv>alapnedv
+  end
+  else
+  begin
+    alap_nedv:=alap_nedvesseg_szazalek;
+    akt_nedv:=alap_nedvesseg_szazalek
+  end;
+  akt_tiszt_dij:=(nyers_netto_tomege/1000)*tisztitasi_dij;
 
 
- nyers_tort_szemek_tomege:=(nyers_netto_tomege*(tort_szemek_szazalek/100.0));
+  nyers_tort_szemek_tomege:=(nyers_netto_tomege*(tort_szemek_szazalek/100.0));
 
- tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;
- tisztitott_nyers_netto_tomege:= nyers_netto_tomege-szemet_tomeg-nyers_tort_szemek_tomege;
- szaritott_netto_tomege := tisztitott_nyers_netto_tomege;
- if kukorica then
+  tisztitott_nyers_netto_tomege_tortel:= nyers_netto_tomege-szemet_tomeg;
+  tisztitott_nyers_netto_tomege:= nyers_netto_tomege-szemet_tomeg-nyers_tort_szemek_tomege;
+  szaritott_netto_tomege := tisztitott_nyers_netto_tomege;
+  if kukorica then
   begin
     //Sznetto=nettó*(1-Tisztaság)*(1-Nedvesség)/(1-Alapnedvesség)
     szaritott_netto_tomege :=Round(tisztitott_nyers_netto_tomege*(1-akt_nedv/100)/(1-alap_nedv/100))-levonando_tomeg;
@@ -1110,7 +1110,7 @@ begin
   end
   else
   begin //MÉG ÁT KELL ÍRNI
-   szaritott_netto_tomege :=Round(tisztitott_nyers_netto_tomege-(tisztitott_nyers_netto_tomege*(akt_nedv-alap_nedv))/100.0)-levonando_tomeg;//*(1-akt_nedv/100)/(1-alap_nedv/100))-levonando_tomeg;
+    szaritott_netto_tomege :=Round(tisztitott_nyers_netto_tomege-(tisztitott_nyers_netto_tomege*(akt_nedv-alap_nedv))/100.0)-levonando_tomeg;//*(1-akt_nedv/100)/(1-alap_nedv/100))-levonando_tomeg;
     nedvesseg_vesztes_tomege:=(Round(tisztitott_nyers_netto_tomege-szaritott_netto_tomege));
     szaritott_tort_szemek_tomege:= Round(nyers_tort_szemek_tomege*(1-akt_nedv/100)/(1-alap_nedv/100));
    // Spsznetto.Value := round(tisztitott_tomeg-(tisztitott_tomeg*(ned-aned))/100.0)-sp_tomeg_levon.Value;

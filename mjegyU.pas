@@ -2250,13 +2250,18 @@ end;
 
 procedure TMjegyF.szazalek;
 var tisztitott_tomeg,sze,szu,levsz,tortszem_szazalek,tortszem_tomeg:Extended;
+    irany:integer;
 begin
- try
-  AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
-                 SpAlapnedv.Value, Sptort.Value,sp_tomeg_levon.Value,chkkuk.Checked);
- finally
-  spSznetto.Value:=Round(szaritott_netto_tomege);//-sp_tomeg_levon.Value;
- end;
+  try
+    // A gongyolegeknel kiszalltásnál megfordul a levonás
+    if cbxIrany.ItemIndex=1 then irany:=1 else irany:=-1;
+
+
+    AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
+                 SpAlapnedv.Value, Sptort.Value,irany*sp_tomeg_levon.Value,chkkuk.Checked);
+  finally
+    spSznetto.Value:=Round(szaritott_netto_tomege);//-sp_tomeg_levon.Value;
+  end;
 
   exit;
  { nedvesseg:='0';
