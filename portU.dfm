@@ -375,14 +375,12 @@ object PortF: TPortF
       'TWIDESTRINGS')
     StoreAsUTF8 = True
     NumOfLanguages = 3
-    LangDispatcher = FoF.siLangDispatcher1
     LangDelim = 1
     LangNames.Strings = (
       'Hungarian'
       'English'
       'Romanian')
     Language = 'Hungarian'
-    CommonContainer = FoF.siLang_FoF
     ExcludedProperties.Strings = (
       'Category'
       'SecondaryShortCuts'

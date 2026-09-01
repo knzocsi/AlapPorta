@@ -573,7 +573,7 @@ type
     procedure dijak_lekerese(pid,tid:Integer);
     procedure merlegjegy_lista_tipus_betoltese;
     procedure csat_gongy_ures;
-    procedure csat_gongy_betolt(honnan:string;azon:Integer);
+    function csat_gongy_betolt(honnan: string; azon: Integer):extended;
     procedure csat_gongy_ment(hova: string; azon: Integer);
     function gongy_osszead(hanyadik:string):Extended;
     procedure gongy_osszevon_nyom;
@@ -1595,11 +1595,11 @@ begin
   Soap_aktiv:=cfg_kezel('SOAP beküldés aktiv e','SOAP','Soap_aktiv','Boolean', False);
   soap_kepet_kuld:=cfg_kezel('SOAP rendszerbe küldjön e képet','SOAP','Soap_kep_kuldes','Boolean', False);
   soap_xml_teszt:=cfg_kezel('SOAP teszt xmlt hozza csak létre, de nem küldi be','SOAP','Soap_xml_teszt','Boolean', False);
-  soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String','' {'merlegtestelek'});
-  soap_passhash:=cfg_kezel('SOAP password hash','SOAP','Soap_passHash','String','' {'S@Pmerlego$$ze'});
+  soap_login:=cfg_kezel('SOAP felhasználó(login)','SOAP','Soap_felhasznalo','String','' {'});
+  soap_passhash:=cfg_kezel('SOAP password hash','SOAP','Soap_passHash','String','' {''});
   soap_alakulcs:=cfg_kezel('SOAP XML aláíró kulcs','SOAP','Soap_alairo_kulcs','String', 'Al@|rashoz szükséges_kulcs');
-  soap_szapcim:=cfg_kezel('SOAP végpont elérési címe','SOAP','Soap_cim','String', ''{'http://192.168.16.15:40080/test/merleg/?'});
-  soap_ip:=cfg_kezel('SOAP végpont ip címe','SOAP','Soap_ip','String','' {'192.168.16.06'});
+  soap_szapcim:=cfg_kezel('SOAP végpont elérési címe','SOAP','Soap_cim','String', ''{''});
+  soap_ip:=cfg_kezel('SOAP végpont ip címe','SOAP','Soap_ip','String','' {''});
   soap_kapcs_idokorlat:=cfg_kezel('SOAP szerverhez kapcsolódási idõkorlát(ms)','SOAP','Soap_kapcs_idokorlat','Integer', 300000);
   soap_valaszadasi_idokorlat:=cfg_kezel('SOAP szerver válaszadási idõkorlát(ms)','SOAP','Soap_szerver_idokorlat','Integer', 300000);
   soap_kuldes_gyakorisaga:=cfg_kezel('SOAP küldés gyakorisága, ennyi sleepet teszek a szálba(ms)','SOAP','Soap_kuldes_gyak','Integer', 5000);
@@ -2189,11 +2189,17 @@ begin
 
 end;
 
-procedure TAF.csat_gongy_betolt(honnan: string; azon: Integer);
+function TAF.csat_gongy_betolt(honnan: string; azon: Integer):extended;
 var i:Integer;
+  glevon,egyes,kettes:Extended;
+  emeres:Boolean;
+
 begin
- csat_gongy_ures;
- with CsatGongyQ do
+  egyes:=0;
+  kettes:=0;
+  glevon:=0;
+  csat_gongy_ures;
+  with CsatGongyQ do
   begin
     Close;
     SQL.Clear;
@@ -2203,15 +2209,18 @@ begin
     csatgongy_masol:=True;
     while not Eof do
     begin
-     mem_csatgongy.Append;
-     for I := 0 to FieldCount-1 do mem_csatgongy.Fields[i].Value:=fields[i].Value;
-     mem_csatgongy.Post;
-     Next;
+      mem_csatgongy.Append;
+      for I := 0 to FieldCount-1 do mem_csatgongy.Fields[i].Value:=fields[i].Value;
+      mem_csatgongy.Post;
+      if mem_csatgongy.FieldByName('elso').AsBoolean then egyes:=egyes+mem_csatgongy.fieldbyName('g_tomeg').AsFloat*mem_csatgongy.fieldbyName('g_menny').AsFloat
+      else kettes:=kettes+mem_csatgongy.fieldbyName('g_tomeg').AsFloat*mem_csatgongy.fieldbyName('g_menny').AsFloat;
+      Next;
     end;
     csatgongy_masol:=False;
     mem_csatgongy.Refresh;
     Close;
   end;
+  Result:=egyes-kettes;
 end;
 
 procedure TAF.csat_gongy_ment(hova: string; azon: Integer);
@@ -2247,9 +2256,9 @@ end;
 
 procedure TAF.csat_gongy_ures;
 begin
- mem_csatgongy.Active:=False;
- mem_csatgongy.EmptyTable;
- mem_csatgongy.Active:=True;
+  mem_csatgongy.Active:=False;
+  mem_csatgongy.EmptyTable;
+  mem_csatgongy.Active:=True;
 end;
 
 function TAF.partner_kesz(tid, tarid, pid: Integer; tort: ShortInt): Extended;

@@ -275,7 +275,7 @@ type
     procedure uresre;
     procedure jeloles;
     procedure rendszam_combok;
-    procedure szazalek;
+    procedure szazalek(csere:Integer=1);
   public
     { Public declarations }
     Folytatas:boolean;
@@ -656,7 +656,7 @@ begin
     cbxszar.Text:=FieldByName('szarmazasi_hely').AsString;
     af.SoforokQ.locate('sofor',FieldByName('sofor').AsString,[]);
     cbxSoforok.KeyValue:= aF.SoforokQ.FieldByName('Id').AsInteger;
-    af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger);
+    sp_tomeg_levon.Value:=Round( af.csat_gongy_betolt('nyitbe',FieldByName('ID').AsInteger));
     speSuruseg.Value:=FieldByName('suruseg').Value;
     speHomerseklet.Value:=FieldByName('homerseklet').Value;
     edKeveresiArany.Text:=FieldByName('keveresi_arany').AsString;
@@ -1924,7 +1924,7 @@ end;
 procedure TMjegyF.btnMeresClick(Sender: TObject);
 var tf:textfile;
     fnev,kezi:string;
-    e:integer;
+    e,csere:integer;
 
 
  procedure kep_konvertalasa(keputja: string);
@@ -2042,6 +2042,7 @@ var tf:textfile;
 
 
   begin
+
     if (not van_plugin)or(not lejatszas) then exit;
     //eredmeny := 'Pillanat felvétel sikertelen';
     try
@@ -2135,6 +2136,7 @@ begin
   Meres_MerlegjegyenF.lblTomeg1.Caption:=lblTomeg1.Caption;
   Meres_MerlegjegyenF.lblTomeg2.Caption:=lblTomeg2.Caption;
   Meres_MerlegjegyenF.ShowModal;
+  csere:=1;
   if Meres_MerlegjegyenF.Mert_eredmeny>0 then
   begin
     case Meres_MerlegjegyenF.rgMeresszama.ItemIndex of
@@ -2166,15 +2168,15 @@ begin
             if cbxirany.ItemIndex in [1,3] then spTara.Value:=Meres_MerlegjegyenF.Mert_eredmeny
             else if cbxirany.ItemIndex=2 then  spBrutto.Value:=Meres_MerlegjegyenF.Mert_eredmeny;
             if sptara.Value>spBrutto.Value then
-             begin
-               e:=sptara.Value;
-               spTara.Value:=spBrutto.Value;
-               spBrutto.Value:=e;
-             end;
+            begin
+              e:=sptara.Value;
+              spTara.Value:=spBrutto.Value;
+              spBrutto.Value:=e;
+              csere:=-1;
+            end;
           end;
     end;
     snapshot;
-
     fnev:=ExtractFileDir(ExtractFilePath(application.exename))+'\LOG\m'+af.datum_szoveg(Now,false)+'.txt';
     Assignfile(tf,fnev);
     if not FileExists(fnev) then
@@ -2189,7 +2191,7 @@ begin
     CloseFile(tf);
     //if spBrutto.Value>0 then
     spnetto.Value:=spBrutto.Value-spTara.Value;
-    szazalek;
+    szazalek(csere);
   end;
 end;
 
@@ -2254,9 +2256,9 @@ var tisztitott_tomeg,sze,szu,levsz,tortszem_szazalek,tortszem_tomeg:Extended;
 begin
   try
     // A gongyolegeknel kiszalltásnál megfordul a levonás
-    if cbxIrany.ItemIndex=1 then irany:=1 else irany:=-1;
-
-
+    if cbxIrany.ItemIndex in [1,4] then irany:=1 else irany:=-1;
+    //Ha a tárát fel kell cserélni a bruttóval, akkor megint korrigálni kell
+    irany:=csere*irany;
     AF.fo_szazalek(SpBrutto.Value, Sptara.value,Sptisztasag.Value,SpNedv.Value,
                  SpAlapnedv.Value, Sptort.Value,irany*sp_tomeg_levon.Value,chkkuk.Checked);
   finally

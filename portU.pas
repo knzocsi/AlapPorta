@@ -119,7 +119,7 @@ var
 
 
 implementation
-uses  foU;
+
 
 {$R *.DFM}
 
