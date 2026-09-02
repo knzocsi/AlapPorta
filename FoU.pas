@@ -1711,23 +1711,27 @@ procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
 var
   i: integer;
 begin
-  programvege := true;
-  soap_programvege := true;
-  StatusBar1.panels[1].Bevel := pbRaised;
-  StatusBar1.panels[1].Text := rsKilepesFolyamatban;
-  Tomeg_Timer.Enabled := false;
-  if af.mtPLC_Feladat.Active then
-    af.mtPLC_Feladat.close;
-  if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1]) <> 'N') and (felhnev <> '') then
-  begin
-    PortF.portclose;
-    PortF.port2close;
-    PortF.pc_komm_port_close;
-  end;
-  for i := 1 to 100 do
-  begin
-    Application.ProcessMessages();
-    Sleep(10);
+  try
+    programvege := true;
+    soap_programvege := true;
+    StatusBar1.panels[1].Bevel := pbRaised;
+    StatusBar1.panels[1].Text := rsKilepesFolyamatban;
+    Tomeg_Timer.Enabled := false;
+    if af.mtPLC_Feladat.Active then
+      af.mtPLC_Feladat.close;
+    if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1]) <> 'N') and (felhnev <> '') then
+    begin
+      PortF.portclose;
+      PortF.port2close;
+      PortF.pc_komm_port_close;
+    end;
+    for i := 1 to 200 do
+    begin
+      Application.ProcessMessages();
+      Sleep(5);
+    end;
+  finally
+
   end;
 end;
 
