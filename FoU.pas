@@ -1712,6 +1712,7 @@ var
   i: integer;
 begin
   try
+
     programvege := true;
     soap_programvege := true;
     StatusBar1.panels[1].Bevel := pbRaised;
@@ -1728,7 +1729,7 @@ begin
     for i := 1 to 200 do
     begin
       Application.ProcessMessages();
-      Sleep(5);
+      Sleep(10);
     end;
   finally
 

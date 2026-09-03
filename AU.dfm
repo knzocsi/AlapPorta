@@ -238,7 +238,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 46267.833297766210000000
+    ReportOptions.LastChange = 46268.419403437500000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -741,20 +741,6 @@ object AF: TAF
           Frame.Typ = []
           Memo.UTF8W = (
             'HAK k'#243'd:')
-          ParentFont = False
-        end
-        object memtermkod: TfrxMemoView
-          AllowVectorExport = True
-          Left = 102.047310000000000000
-          Top = 402.858287240000300000
-          Width = 80.472480000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          Frame.Typ = []
           ParentFont = False
         end
         object Memo16: TfrxMemoView
