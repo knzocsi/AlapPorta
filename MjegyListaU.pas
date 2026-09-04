@@ -587,6 +587,7 @@ begin
        Rendszam:=mjegyekQ.FieldByName('Rendszam').AsString+' '+mjegyekQ.FieldByName('Rendszam2').AsString;
        Erkdatum:=mjegyekQ.FieldByName('Erkdatum').AsDateTime;
        Erkido:=mjegyekQ.FieldByName('Erkido').AsDateTime;
+       EWC:=mjegyekQ.FieldByName('ewc').AsString;
        if mjegyekQ.FieldByName('tavdatum').AsString<>'' then
         begin
          Tavdatum:=mjegyekQ.FieldByName('Tavdatum').AsDateTime;

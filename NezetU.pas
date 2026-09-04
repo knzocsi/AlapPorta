@@ -236,8 +236,8 @@ begin
     //ewc  ÚGY TUDOM NEM HASZNÁLJÁK
     if TfrxMemoView(FindObject('memewc'))<>nil then
      begin
-      TfrxMemoView(FindObject('memewc')).Text:='';
-      TfrxMemoView(FindObject('memewclbl')).Text:='';
+      TfrxMemoView(FindObject('memewc')).Text:=Mjegy_nyom_rec.EWC;
+      TfrxMemoView(FindObject('memewclbl')).Text:='HAK kód:';
      end;
     //termék kód
      if TfrxMemoView(FindObject('memtermkod'))<>nil then

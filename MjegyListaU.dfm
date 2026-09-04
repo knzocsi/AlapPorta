@@ -2718,6 +2718,7 @@ object MjegyekF: TMjegyekF
       'TIB_STRINGLIST'
       'TSTRINGLIST'
       'TWIDESTRINGS')
+    DefaultLanguage = 2
     StoreAsUTF8 = True
     NumOfLanguages = 3
     LangDispatcher = FoF.siLangDispatcher1

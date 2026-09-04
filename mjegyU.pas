@@ -1328,7 +1328,7 @@ var sorsz,pcime,tablaneve:String;
          Tavido:=StrToTime(lblmasido.Caption);
         end;
        Irany:=cbxIrany.Text;
-
+       EWC:=termeklist.FieldByName('ewc').AsString;
        if (not Clean_way) or (cbxIrany.ItemIndex=0) then
         begin
           Termek_kod:=termeklist.FieldByName('kod').AsString;

@@ -203,6 +203,7 @@ type
      Fs_Suruseg:string;
      Fs_Homerseklet:string;
      Fs_KevereseiArany:string;
+     Fs_EWC:string;
   public
 //     procedure mjegy_rec_betoltese_nyomtatasa(Parositva:Boolean);
      procedure mjegy_rec_nyom_ures;
@@ -352,7 +353,8 @@ type
         write Fs_Homerseklet;
     property KeveresiArany: string read Fs_KevereseiArany
         write Fs_KevereseiArany;
-
+    property EWC: string read Fs_EWC
+        write Fs_EWC;
   end;
 
   TAF = class(TDataModule)
