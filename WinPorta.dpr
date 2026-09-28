@@ -81,7 +81,9 @@ uses
   MozgasokTesztU in 'MozgasokTesztU.pas' {MozgasokTesztF},
   MozgasokListajaU in 'MozgasokListajaU.pas' {MozgasokListajaF},
   NagyTomegU in 'NagyTomegU.pas' {NagyTomegF},
-  soforU in 'soforU.pas' {SoforF};
+  soforU in 'soforU.pas' {SoforF},
+  CfgCsoportU in 'CfgCsoportU.pas' {CfgCsoportF},
+  CfgNemHasznaltU in 'CfgNemHasznaltU.pas' {CfgNemHasznaltF};
 
 {$R *.res}
 

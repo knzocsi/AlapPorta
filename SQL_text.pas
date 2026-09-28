@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=36;
+      maxSQL=37;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1146,6 +1146,14 @@ interface
         ' ALTER TABLE modositott_merlegjegyek ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' :kodolas; '+ #13#10 +
         ' ALTER TABLE nyitbe ADD COLUMN IF NOT EXISTS `keveresi_arany` VARCHAR(10) NOT NULL DEFAULT '''' :kodolas; '+ #13#10+
         '' // A :kodolas tartalmazza teljesen a COLLATE stb...
+        ,
+        //37
+        //A cfg csoportjai: aktiv=0 esetén a cfg_kezel nem hozza létre a csoport sorait
+        'CREATE TABLE IF NOT EXISTS `cfg_csoport` (' + #13#10 +
+        '`csoport` VARCHAR(50) NOT NULL :kodolas,' + #13#10 +
+        '`aktiv` TINYINT(1) NOT NULL DEFAULT 1,' + #13#10 +
+        'PRIMARY KEY (`csoport`)' + #13#10 +
+        ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'
 
 
     );

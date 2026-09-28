@@ -104,6 +104,24 @@ object szoftver_alapF: Tszoftver_alapF
       DataField = 'tulajdonsag'
       DataSource = AF.CfgTDs
     end
+    object btncsoportok: TButton
+      Left = 612
+      Top = 8
+      Width = 80
+      Height = 25
+      Caption = 'Csoportok...'
+      TabOrder = 7
+      OnClick = btncsoportokClick
+    end
+    object btnnemhasznalt: TButton
+      Left = 872
+      Top = 8
+      Width = 100
+      Height = 25
+      Caption = 'Nem haszn'#225'lt...'
+      TabOrder = 8
+      OnClick = btnnemhasznaltClick
+    end
   end
   object JvDBUltimGrid1: TJvDBUltimGrid
     Left = 0

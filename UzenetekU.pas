@@ -139,6 +139,15 @@ interface
  resourcestring rsNagyitott_nezet = ' NAGYÍTOTT NÉZETE';
  resourcestring rsFelvesz ='Felvesz';
  resourcestring rsModosit ='Módosít';
+ resourcestring rsCfgCsoportElsoInditas = 'Válassza ki, mely beállítási csoportok kellenek ezen a telephelyen. A ki nem választottak nem kerülnek a beállítások közé, késõbb a Szoftver alapbeállításainál a Csoportok gombbal bekapcsolhatók.';
+ resourcestring rsCfgCsoportModosit = 'A bekapcsolt csoportok hiányzó beállításai a program újraindításakor kerülnek be. A kikapcsolás a meglévõ értékeket nem törli.';
+ resourcestring rsCfgCsoportUjraindit = 'A változás a program újraindítása után lép érvénybe (Módosítások alkalmazása).';
+ resourcestring rsCfgNemHasznaltInfo = 'Az alábbi beállításokat ez a programverzió nem kérte le. Ha az adatbázist több gép használja eltérõ programverzióval, a másik gép a törölt sort újra létrehozhatja.';
+ resourcestring rsCfgNincsKijelolve = 'Nincs kijelölt sor!';
+ resourcestring rsCfgTorlesMegerosites = 'Biztosan törli a kijelölt %d beállítást?';
+ resourcestring rsCfgNincsNemHasznalt = 'Nincs nem használt beállítás.';
+ resourcestring rsCfgCsoportSorokTorlese = 'A kikapcsolt csoportoknak már vannak beállításai: %s'#13#10#13#10+
+   'Törli ezeket is? Nem esetén megmaradnak és érvényesek, csak újak nem jönnek létre.';
 implementation
 
 end.

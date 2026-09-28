@@ -46,6 +46,29 @@ uses
   cfgNemValtoztat=0;
 
 type
+  TCfgCsoport=record
+    nev: string;
+    leiras: string;
+    kotelezo: Boolean;
+  end;
+
+const
+  // A cfg tábla csoportjai. A kötelezõk nem kapcsolhatók ki (CfgCsoportU).
+  // Új csoport használatakor ide is fel kell venni.
+  cfg_csoportok: array[1..10] of TCfgCsoport=(
+    (nev:'ALAP';      leiras:'Alapbeállítások';                              kotelezo:True),
+    (nev:'Dátum';     leiras:'Dátum formátum';                               kotelezo:True),
+    (nev:'MAPPAK';    leiras:'Mappák (PDF, képek, Libre, SoapXML, törzsimport)'; kotelezo:False),
+    (nev:'PLC_USB';   leiras:'PLC / USB vezérlés (lámpák, sorompók, infrák)'; kotelezo:False),
+    (nev:'NYOMTATÁS'; leiras:'Nyomtatás';                                    kotelezo:False),
+    (nev:'DÍJAK';     leiras:'Díjak, díjszabás';                             kotelezo:False),
+    (nev:'SOAP';      leiras:'SOAP adatküldés';                              kotelezo:False),
+    (nev:'EKÁER';     leiras:'EKÁER';                                        kotelezo:False),
+    (nev:'FTP';       leiras:'FTP feltöltés';                                kotelezo:False),
+    (nev:'DB';        leiras:'Adatbázis mentés';                             kotelezo:False)
+  );
+
+type
    esemeny_rec=record
     ev:word;
     ho:word;
@@ -566,6 +589,11 @@ type
     procedure torzs_import_csv;
     procedure import_log(S:string);
     function cfg_kezel(magyarazat,csoport,tulajdonsag,tipus:String;ertek:Variant;modosit:integer=0):Variant;
+    procedure cfg_csoportok_inditas;
+    procedure cfg_csoportok_betolt;
+    procedure cfg_csoport_ment(const csoport: string; aktiv: Boolean);
+    function cfg_csoport_aktiv(const csoport: string): Boolean;
+    function cfg_hasznalt_e(const csoport, tulajdonsag: string): Boolean;
     procedure fo_szazalek(brutto,tara,szemet_szazalek,akt_nedvesseg_szazalek,alap_nedvesseg_szazalek,
                           tort_szemek_szazalek,levonando_tomeg:Extended; kukorica:Boolean);
     procedure nyitbe_torles(id,torles:integer);
@@ -685,9 +713,48 @@ var
 
   szerver_karakter_kodtabla:string='utf8mb4_general_ci';
 
+  //Glabs
+  Glabs_Host:string;
+  Glabs_ClientID:string;
+  Glabs_ClientSecret:string;
+  Glabs_Scope:string;
+  Glabs_ProfilID:string;
+
+
+function cfg_norm(const s: string): string;
+function cfg_ismert_csoport(const csoport: string): Integer;
+
 implementation
 uses my_sqlU,MjegyListaU,NezetU,SQL_text,LibreExcelU,VarakozasU, FoU,PortU,
-     DMSoapU, DmEKAERU;
+     DMSoapU, DmEKAERU, CfgCsoportU;
+
+var
+  cfg_hasznalt: TStringList; // a futás közben cfg_kezel-lel lekért csoport/tulajdonság párok
+  cfg_tiltott: TStringList;  // a cfg_csoport táblában kikapcsolt csoportok
+
+// A MySQL collation (utf8mb4_general_ci) kis/nagybetû és ékezet érzéketlen, pl. MAPPAK = MAPPÁK.
+// Az összehasonlításokat ehhez igazítjuk.
+function cfg_norm(const s: string): string;
+const ekezetes='ÁÉÍÓÖÕÚÜÛ';
+      ekezetlen='AEIOOOUUU';
+var i,p: Integer;
+begin
+  Result:=AnsiUpperCase(Trim(s));
+  for i := 1 to Length(Result) do
+  begin
+    p:=Pos(Result[i],ekezetes);
+    if p>0 then Result[i]:=ekezetlen[p];
+  end;
+end;
+
+// A cfg_csoportok tömbbeli indexe, 0 ha nem ismert
+function cfg_ismert_csoport(const csoport: string): Integer;
+var i: Integer;
+begin
+  Result:=0;
+  for i := Low(cfg_csoportok) to High(cfg_csoportok) do
+    if cfg_norm(cfg_csoportok[i].nev)=cfg_norm(csoport) then exit(i);
+end;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -831,6 +898,7 @@ begin
   else ModScript.ScriptDialog:=nil;
   modok_vegrehajt;//  SQL_text unitba kell
   if ParamStr(1)='/SC' then showmessage(modSQL[maxSQL]);
+  cfg_csoportok_inditas;
   ini_kezel;
 
   if Masolas_utvonala<>'' then  af.frissites(Masolas_utvonala);
@@ -1659,6 +1727,10 @@ begin
   sorszam_megforditasa_merlegjegyen:=cfg_kezel('Sorszám megfordítása mérlegjegyen',
    'NYOMTATÁS','Sorszám megfordítása mérlegjegyen','Boolean',sorszam_megforditasa_merlegjegyen);
 
+  Glabs_Host:= cfg_kezel('Glabs rendszer hostja','GLABS','Host','String','');
+  Glabs_ClientID:= cfg_kezel('Glabs rendszer Client ID','GLABS','ID','String','');
+  Glabs_ClientSecret:= cfg_kezel('Glabs rendszer Client Secret','GLABS','Secret','String','');
+
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);
@@ -2139,6 +2211,7 @@ end;
 function TAF.cfg_kezel(magyarazat,csoport, tulajdonsag, tipus: String;
   ertek: Variant;modosit: Integer): Variant;
 begin
+  cfg_hasznalt.Add(cfg_norm(csoport)+#9+cfg_norm(tulajdonsag));
   with CfgT do
   begin
     open;
@@ -2175,6 +2248,8 @@ begin
           end;
     end
     else
+     if cfg_tiltott.IndexOf(cfg_norm(csoport))>=0 then Result:=ertek // kikapcsolt csoport: nem kerül a cfg-be, a kódbeli alapérték él
+     else
      begin
        edit;
        Append;
@@ -2189,6 +2264,70 @@ begin
      close
   end;
 
+end;
+
+procedure TAF.cfg_csoportok_inditas;
+var i: Integer;
+begin
+  try
+    if Kapcs.ExecSQLScalar('SELECT COUNT(*) FROM cfg_csoport')=0 then
+    begin
+      if Kapcs.ExecSQLScalar('SELECT COUNT(*) FROM cfg')>0 then
+      begin
+        // meglévõ telepítés: minden eddigi csoport aktív marad, nem kérdezünk
+        for i := Low(cfg_csoportok) to High(cfg_csoportok) do cfg_csoport_ment(cfg_csoportok[i].nev,True);
+        Kapcs.ExecSQL('INSERT IGNORE INTO cfg_csoport (csoport,aktiv) SELECT DISTINCT csoport,1 FROM cfg');
+      end
+      else
+        with TCfgCsoportF.Create(Application) do
+        try
+          elso_inditas;
+        finally
+          Free;
+        end;
+    end;
+    cfg_csoportok_betolt;
+  except
+    on E: Exception do
+    begin
+      cfg_tiltott.Clear; // hiba esetén minden csoport aktív, mint korábban
+      script_log('cfg_csoport betöltése sikertelen: '+E.Message);
+    end;
+  end;
+end;
+
+procedure TAF.cfg_csoportok_betolt;
+var q: TFDQuery;
+begin
+  cfg_tiltott.Clear;
+  q:=TFDQuery.Create(nil);
+  try
+    q.Connection:=Kapcs;
+    q.Open('SELECT csoport FROM cfg_csoport WHERE aktiv=0');
+    while not q.Eof do
+    begin
+      cfg_tiltott.Add(cfg_norm(q.Fields[0].AsString));
+      q.Next;
+    end;
+  finally
+    q.Free;
+  end;
+end;
+
+procedure TAF.cfg_csoport_ment(const csoport: string; aktiv: Boolean);
+begin
+  Kapcs.ExecSQL('INSERT INTO cfg_csoport (csoport,aktiv) VALUES (:csoport,:aktiv)'+
+                ' ON DUPLICATE KEY UPDATE aktiv=VALUES(aktiv)',[csoport,Ord(aktiv)]);
+end;
+
+function TAF.cfg_csoport_aktiv(const csoport: string): Boolean;
+begin
+  Result:=cfg_tiltott.IndexOf(cfg_norm(csoport))<0;
+end;
+
+function TAF.cfg_hasznalt_e(const csoport, tulajdonsag: string): Boolean;
+begin
+  Result:=cfg_hasznalt.IndexOf(cfg_norm(csoport)+#9+cfg_norm(tulajdonsag))>=0;
 end;
 
 function TAF.csat_gongy_betolt(honnan: string; azon: Integer):extended;
@@ -3244,5 +3383,13 @@ begin
      Sofor:='';
     end;
 end;
+
+initialization
+  cfg_hasznalt:=TStringList.Create(dupIgnore,True,False);
+  cfg_tiltott:=TStringList.Create(dupIgnore,True,False);
+
+finalization
+  cfg_hasznalt.Free;
+  cfg_tiltott.Free;
 
 end.

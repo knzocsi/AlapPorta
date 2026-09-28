@@ -28,11 +28,15 @@ type
     cbcsopszur: TJvDBLookupCombo;
     JvDBFindEdit1: TJvDBFindEdit;
     siLangLinked_szoftver_alapF: TsiLangLinked;
+    btncsoportok: TButton;
+    btnnemhasznalt: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure cbcsopszurChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btncsoportokClick(Sender: TObject);
+    procedure btnnemhasznaltClick(Sender: TObject);
   private
     { Private declarations }
     procedure csop_combo_tolt;
@@ -45,7 +49,7 @@ var
   szoftver_alapF: Tszoftver_alapF;
 
 implementation
-  uses  AU, AlapbemodU;
+  uses  AU, AlapbemodU, CfgCsoportU, CfgNemHasznaltU, UzenetekU;
 {$R *.dfm}
 
 procedure Tszoftver_alapF.Button1Click(Sender: TObject);
@@ -65,6 +69,32 @@ end;
 procedure Tszoftver_alapF.Button4Click(Sender: TObject);
 begin
  AlapbemodF.fo(af.CfgT.FieldByName('id').AsInteger);
+end;
+
+procedure Tszoftver_alapF.btncsoportokClick(Sender: TObject);
+begin
+ with TCfgCsoportF.Create(Application) do
+  try
+    if modosit then ShowMessage(rsCfgCsoportUjraindit);
+  finally
+    Free;
+  end;
+ AF.CfgT.Close;
+ af.CfgT.Open;
+ csop_combo_tolt;
+end;
+
+procedure Tszoftver_alapF.btnnemhasznaltClick(Sender: TObject);
+begin
+ with TCfgNemHasznaltF.Create(Application) do
+  try
+    fo;
+  finally
+    Free;
+  end;
+ AF.CfgT.Close;
+ af.CfgT.Open;
+ csop_combo_tolt;
 end;
 
 procedure Tszoftver_alapF.csop_combo_tolt;
