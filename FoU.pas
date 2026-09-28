@@ -1708,11 +1708,24 @@ begin
 end;
 
 procedure TFoF.FormClose(Sender: TObject; var Action: TCloseAction);
-var
-  i: integer;
+ var tf : TextFile;
+     m:string;
+     i: integer;
+
+  procedure log(Uzenet:string);
+  begin
+    m:=ExtractFileDir(application.exename)+'';
+    ForceDirectories(m);
+    AssignFile(tf,m+'\exit_log.txt');
+    if not FileExists(m+'\exit_log.txt') then ReWrite(tf)
+    else Append(tf);
+    WriteLn(tf, uzenet+' ('+Datetimetostr(Now)+')');
+    CloseFile(tf);
+  end;
+
 begin
   try
-
+    log('Kezdes');
     programvege := true;
     soap_programvege := true;
     StatusBar1.panels[1].Bevel := pbRaised;
@@ -1720,17 +1733,20 @@ begin
     Tomeg_Timer.Enabled := false;
     if af.mtPLC_Feladat.Active then
       af.mtPLC_Feladat.close;
+    log('Port bezar kezd');
     if (UpperCase(ParamStr(1)) <> '/D') and (UpperCase(Merleg_tipus[1]) <> 'N') and (felhnev <> '') then
     begin
       PortF.portclose;
       PortF.port2close;
       PortF.pc_komm_port_close;
     end;
-    for i := 1 to 200 do
+    log('Port_bezar vege');
+    for i := 1 to 400 do
     begin
       Application.ProcessMessages();
       Sleep(10);
     end;
+    log('Kesz');
   finally
 
   end;

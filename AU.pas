@@ -2413,7 +2413,6 @@ begin
  if not FileExists(m+'\rastart_log.txt') then ReWrite(tf)
  else Append(tf);
  WriteLn(tf, 'A szoftver sikeresen újraindult:  '+Datetimetostr(Now)+'');
- Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
 end;
 
@@ -2427,7 +2426,6 @@ begin
  if not FileExists(m+'\script_log.txt') then ReWrite(tf)
  else Append(tf);
  WriteLn(tf, uzenet+' ('+Datetimetostr(Now)+')');
- Writeln(tf,'*****************************************************************************************************************');
  CloseFile(tf);
 end;
 

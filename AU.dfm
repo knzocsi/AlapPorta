@@ -238,7 +238,7 @@ object AF: TAF
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 44089.561261585700000000
-    ReportOptions.LastChange = 46269.379625625000000000
+    ReportOptions.LastChange = 46269.403059502320000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -914,7 +914,7 @@ object AF: TAF
         object mempartnercime2: TfrxMemoView
           AllowVectorExport = True
           Left = 419.527830000000000000
-          Top = 204.756029999999900000
+          Top = 204.756030000000000000
           Width = 291.023810000000000000
           Height = 45.354360000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -1049,7 +1049,7 @@ object AF: TAF
             'Neve')
           ParentFont = False
         end
-        object Memo20: TfrxMemoView
+        object mempartnercime3: TfrxMemoView
           AllowVectorExport = True
           Left = 419.527830000000000000
           Top = 258.236240000000000000
