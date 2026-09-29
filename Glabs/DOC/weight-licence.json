@@ -1,0 +1,11 @@
+
+{
+  "data": {
+    "type": "truckWeightMeasurements",
+    "attributes": {
+        "weight": 100,			//mért súlyadat
+        "cause": "arrival",		//mérés típusa, érkezés = arrival, távozás = dispatch, egyéb = other
+        "plateNumber": "AAA111"		//rendszám
+    }
+  }
+}

@@ -69,7 +69,7 @@ object FoF: TFoF
       Top = 1
       Width = 798
       Height = 286
-      ActivePage = tbIdeiglenes
+      ActivePage = tbForgalom
       Align = alClient
       MultiLine = True
       TabOrder = 0
@@ -191,7 +191,7 @@ object FoF: TFoF
             Width = 113
             Height = 21
             Date = 43587.000000000000000000
-            Time = 0.773554583327495500
+            Time = 0.773554583327495600
             TabOrder = 0
             OnChange = piKezdoDatumChange
           end
@@ -224,6 +224,15 @@ object FoF: TFoF
             TabOrder = 3
             Visible = False
             OnClick = btnMeresClick
+          end
+          object btnGlabsBekuldes: TButton
+            Left = 305
+            Top = 49
+            Width = 96
+            Height = 25
+            Caption = 'Glabs bek'#252'ld'#233's'
+            TabOrder = 4
+            OnClick = btnGlabsBekuldesClick
           end
         end
         object DBGrid1: TDBGrid
@@ -1652,8 +1661,8 @@ object FoF: TFoF
   end
   object MainMenu1: TMainMenu
     Tag = 100
-    Left = 400
-    Top = 104
+    Left = 552
+    Top = 80
     object rzsadatok1: TMenuItem
       Caption = 'T'#246'rzsadatok'
       object Anyagok1: TMenuItem
@@ -1956,8 +1965,8 @@ object FoF: TFoF
     GlobalExclusionList.Strings = (
       '!TVirtualImageListItem.CollectionName'
       '!TVirtualImageList.DisabledSuffix')
-    Left = 136
-    Top = 136
+    Left = 184
+    Top = 272
   end
   object siLang_FoF: TsiLang
     Version = '7.9.10.1'
@@ -2007,8 +2016,8 @@ object FoF: TFoF
       'KeyField'
       'ListField'
       'AppStoragePath')
-    Left = 40
-    Top = 136
+    Left = 96
+    Top = 256
     TranslationData = {
       73007400430061007000740069006F006E0073005F0055006E00690063006F00
       640065000D000A00540046006F0046000100570069006E0070006F0072007400

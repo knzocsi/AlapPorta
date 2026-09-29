@@ -55,7 +55,7 @@ type
 const
   // A cfg tábla csoportjai. A kötelezõk nem kapcsolhatók ki (CfgCsoportU).
   // Új csoport használatakor ide is fel kell venni.
-  cfg_csoportok: array[1..10] of TCfgCsoport=(
+  cfg_csoportok: array[1..11] of TCfgCsoport=(
     (nev:'ALAP';      leiras:'Alapbeállítások';                              kotelezo:True),
     (nev:'Dátum';     leiras:'Dátum formátum';                               kotelezo:True),
     (nev:'MAPPAK';    leiras:'Mappák (PDF, képek, Libre, SoapXML, törzsimport)'; kotelezo:False),
@@ -65,7 +65,8 @@ const
     (nev:'SOAP';      leiras:'SOAP adatküldés';                              kotelezo:False),
     (nev:'EKÁER';     leiras:'EKÁER';                                        kotelezo:False),
     (nev:'FTP';       leiras:'FTP feltöltés';                                kotelezo:False),
-    (nev:'DB';        leiras:'Adatbázis mentés';                             kotelezo:False)
+    (nev:'DB';        leiras:'Adatbázis mentés';                             kotelezo:False),
+    (nev:'GLABS';     leiras:'Glabs (ACPS) mérlegadat küldés';               kotelezo:False)
   );
 
 type
@@ -718,7 +719,8 @@ var
   Glabs_ClientID:string;
   Glabs_ClientSecret:string;
   Glabs_Scope:string;
-  Glabs_ProfilID:string;
+  Glabs_ProfileID:string;
+  Glabs_StationID:string;
 
 
 function cfg_norm(const s: string): string;
@@ -1730,7 +1732,9 @@ begin
   Glabs_Host:= cfg_kezel('Glabs rendszer hostja','GLABS','Host','String','');
   Glabs_ClientID:= cfg_kezel('Glabs rendszer Client ID','GLABS','ID','String','');
   Glabs_ClientSecret:= cfg_kezel('Glabs rendszer Client Secret','GLABS','Secret','String','');
-
+  Glabs_Scope:= cfg_kezel('Glabs rendszer scope','GLABS','Scope','String','shipments');
+  Glabs_ProfileID:= cfg_kezel('Glabs rendszer Profile ID (üres: az elsõ profil)','GLABS','ProfileID','String','');
+  Glabs_StationID:= cfg_kezel('Glabs állomás ID (üres: rendszám alapján)','GLABS','StationID','String','');
 
   ForceDirectories(soapXML);
   ForceDirectories(kepmappa);

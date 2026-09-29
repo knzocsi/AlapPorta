@@ -146,8 +146,16 @@ interface
  resourcestring rsCfgNincsKijelolve = 'Nincs kijelölt sor!';
  resourcestring rsCfgTorlesMegerosites = 'Biztosan törli a kijelölt %d beállítást?';
  resourcestring rsCfgNincsNemHasznalt = 'Nincs nem használt beállítás.';
+ resourcestring rsCfgCsakKozpontiGepen = 'Csak a központi gépen érhetõ el (porta_beallit.ini: [ALAP] Kozponti_prg=1)';
  resourcestring rsCfgCsoportSorokTorlese = 'A kikapcsolt csoportoknak már vannak beállításai: %s'#13#10#13#10+
    'Törli ezeket is? Nem esetén megmaradnak és érvényesek, csak újak nem jönnek létre.';
+ resourcestring rsGlabsNincsSor = 'Nincs kijelölt mérés!';
+ resourcestring rsGlabsRendszamKell = 'Adja meg a rendszámot!';
+ resourcestring rsGlabsTomegKell = 'Adjon meg érvényes, pozitív egész tömeget (kg)!';
+ resourcestring rsGlabsNincsProfil = 'A Glabs rendszerben nem található profil.';
+ resourcestring rsGlabsSikeres = 'A mérés beküldése sikeres.';
+ resourcestring rsGlabsSikertelen = 'A mérés beküldése sikertelen (HTTP %d). A részletek a naplóban.';
+ resourcestring rsGlabsHiba = 'Hiba a Glabs beküldés közben:';
 implementation
 
 end.

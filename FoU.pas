@@ -238,6 +238,7 @@ type
     siLangDispatcher1: TsiLangDispatcher;
     siLang_FoF: TsiLang;
     siLangCombo1: TsiLangCombo;
+    btnGlabsBekuldes: TButton;
     function GetVLCLibPath: string;
     function LoadVLCLibrary(APath: string): integer;
     function GetAProcAddress(handle: integer; var addr: Pointer; procName: string; failedList: TStringList): integer;
@@ -297,6 +298,7 @@ type
     procedure j1Click(Sender: TObject);
     procedure Lista1Click(Sender: TObject);
     procedure btnMeresClick(Sender: TObject);
+    procedure btnGlabsBekuldesClick(Sender: TObject);
     procedure mcIOmodulResponseError(const FunctionCode, ErrorCode: Byte; const ResponseBuffer: TModBusResponseBuffer);
     procedure tulaj_mClick(Sender: TObject);
     procedure teszt_mClick(Sender: TObject);
@@ -564,7 +566,7 @@ uses
   tesztU, levon_szovegekU, demotomegU, nagykepU, szoftver_alapU, Hardver_beallU,
   PLC_COMU, ImportU, MerlegelesekU, DMSoapU, DijakU, dijszabU, ftpDlU,
   LibreExcelU, NzelvvalaszTU, reinit,  DmDbMentU,GongyoloegekFU,
-  KartyakU,MozgasokTesztU,MozgasokListajaU,NagyTomegU;
+  KartyakU,MozgasokTesztU,MozgasokListajaU,NagyTomegU,GlabsBekuldesU,UzenetekU;
 
 function SetCurrentDevice(CardAddress: integer): integer; stdcall; external 'K8055d.dll';
 
@@ -668,6 +670,25 @@ for i := 0 to 1 do Play_panel_letrehozasa('cam' + i.ToString, 'Cam_kepe' + i.ToS
     end;
   finally
     nagykamF.showmodal;
+  end;
+end;
+
+procedure TFoF.btnGlabsBekuldesClick(Sender: TObject);
+var q: TDataSet;
+begin
+  q:=AF.ForgalomQ;
+  if (not q.Active) or q.IsEmpty then
+  begin
+    MessageDlg(rsGlabsNincsSor, mtWarning, [mbOK], 0);
+    Exit;
+  end;
+  with TGlabsBekuldesF.Create(Application) do
+  try
+    fo(q.FieldByName('Rendszam').AsString, q.FieldByName('Irany').AsString,
+       q.FieldByName('mjegy').AsString, q.FieldByName('Datum').AsString,
+       q.FieldByName('Ido').AsString, Round(q.FieldByName('Tomeg').AsFloat));
+  finally
+    Free;
   end;
 end;
 
@@ -1451,7 +1472,7 @@ begin
   sbtnFolytatas.Visible := ideiglenes_latszik;
   kartyak_m.Visible:=kartyak_hasznalata;
   mozgasok_m.Visible:=kartyak_hasznalata;
-
+  btnGlabsBekuldes.Visible:=Glabs_Host<>'';
   if ideiglenes_latszik then
     pcTablak.ActivePageIndex := 0;
   for i := 0 to 15 do

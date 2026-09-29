@@ -83,7 +83,10 @@ uses
   NagyTomegU in 'NagyTomegU.pas' {NagyTomegF},
   soforU in 'soforU.pas' {SoforF},
   CfgCsoportU in 'CfgCsoportU.pas' {CfgCsoportF},
-  CfgNemHasznaltU in 'CfgNemHasznaltU.pas' {CfgNemHasznaltF};
+  CfgNemHasznaltU in 'CfgNemHasznaltU.pas' {CfgNemHasznaltF},
+  GlabsBekuldesU in 'GlabsBekuldesU.pas' {GlabsBekuldesF},
+  uGlabsConfig in 'Glabs\DelphiClient\uGlabsConfig.pas',
+  uGlabsApiClient in 'Glabs\DelphiClient\uGlabsApiClient.pas';
 
 {$R *.res}
 

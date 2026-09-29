@@ -114,6 +114,19 @@ begin
  AF.CfgT.Close;
  af.CfgT.Open;
  csop_combo_tolt;
+ // csoportok és cfg törlés csak a központi gépen (az mindig a legfrissebb verzió, a kliensek róla frissülnek)
+ btncsoportok.Enabled:=kozponti_prg;
+ btnnemhasznalt.Enabled:=kozponti_prg;
+ if kozponti_prg then
+ begin
+   btncsoportok.Hint:='';
+   btnnemhasznalt.Hint:='';
+ end
+ else
+ begin
+   btncsoportok.Hint:=rsCfgCsakKozpontiGepen;
+   btnnemhasznalt.Hint:=rsCfgCsakKozpontiGepen;
+ end;
  ShowModal;
 end;
 

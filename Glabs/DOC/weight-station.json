@@ -1,0 +1,16 @@
+
+{
+  "data": {
+    "type": "truckWeightMeasurements",
+    "attributes": {
+        "weight": 100,			//mért súlyadat, 0-nál nagyobbnak kell lennie
+        "cause": "arrival",		//mérés típusa, érkezés = arrival, távozás = dispatch, egyéb = other
+        "plateNumber": "AAA111"		//rendszám, rakodáshoz küldés esetén opcionális
+    },
+    "relationships": {
+        "station": {
+            "data": {"type": "shipmentStations", "id": "ST1-HF"}	//a rakodás GLABs ID-je
+        }
+    }
+  }
+}

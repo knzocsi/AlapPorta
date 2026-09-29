@@ -1,0 +1,343 @@
+{
+    "data": {
+        "type": "shipmentStations",
+        "id": "FE176-HA",
+        "attributes": {
+            "booking": {
+                "start": 1748603700,
+                "end": 1748606400
+            },
+            "category": null,
+            "checkin": null,
+            "closed": null,
+            "confirmation": {
+                "current": {
+                    "name": "accepted",
+                    "reason": null,
+                    "time": 1748603320
+                }
+            },
+            "depotOperator": null,
+            "lastModification": {
+                "time": 1748603474
+            },
+            "specials": {
+                "cargoGrouping": false
+            },
+            "timeSlot": {
+                "startTime": null,
+                "endTime": null
+            },
+            "plateNumbersLastModified": null,
+            "plateNumbers": null,
+            "plateNumberCountryCode": null,
+            "transportId": null,
+            "sealNumbers": null,
+            "crossing": {
+                "current": null
+            },
+            "driverRecognition": {
+                "status": "not_registered",
+                "createdAt": 1748603474
+            },
+            "driver": null,
+            "depot": {
+                "finalQuantity": null,
+                "depotComment": null
+            },
+            "picking": {
+                "current": null,
+                "required": false,
+                "open": true
+            },
+            "priority": null,
+            "shipmentRule": {
+                "name": "12-22 Palett",
+                "groupName": "Export - 11 Paletta +",
+                "direction": "out",
+                "loadingTime": 45,
+                "driverPlateNumberChangingAllowed": false,
+                "modificationBoundary": null,
+                "rolesForEnableClosing": [],
+                "freezingTime": null
+            },
+            "enableCheckout": true,
+            "stage": {
+                "current": null
+            }
+        },
+        "relationships": {
+            "currentBooking": {
+                "data": {
+                    "type": "stationBookings",
+                    "id": "711a60a8-3d46-11f0-8924-d1fc9010b768"
+                }
+            },
+            "call": {
+                "data": null
+            },
+            "currentCalls": {
+                "data": []
+            },
+            "location": {
+                "data": {
+                    "type": "partners",
+                    "id": "4adaaae2-0ee8-11f0-b3c6-67036dfad2bd"
+                }
+            },
+            "shipment": {
+                "data": {
+                    "type": "shipments",
+                    "id": "FE176"
+                }
+            },
+            "cargoOperations": {
+                "data": [
+                    {
+                        "type": "cargoOperations",
+                        "id": "5032e018-3d46-11f0-af5d-ffe14612f411"
+                    }
+                ]
+            },
+            "incomingCargos": {
+                "data": []
+            },
+            "outgoingCargos": {
+                "data": [
+                    {
+                        "type": "shipmentCargos",
+                        "id": "FE176#001"
+                    }
+                ]
+            },
+            "depotOperator": {
+                "data": null
+            },
+            "conditions": {
+                "data": []
+            },
+            "documentationStatus": {
+                "data": null
+            },
+            "finalQuantityUnit": {
+                "data": null
+            },
+            "pickingLocations": {
+                "data": []
+            },
+            "currentPickingStatus": {
+                "data": null
+            },
+            "currentPickingWork": {
+                "data": null
+            },
+            "pickingWorks": {
+                "data": []
+            },
+            "priority": {
+                "data": null
+            },
+            "shipmentRuleOrigin": {
+                "data": {
+                    "type": "shipmentRules",
+                    "id": "6cac14a0-0efa-11f0-9708-d50072f9ec4f"
+                }
+            },
+            "currentStage": {
+                "data": null
+            },
+            "stages": {
+                "data": []
+            },
+            "tasks": {
+                "data": []
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "cargoOperations",
+            "id": "5032e018-3d46-11f0-af5d-ffe14612f411",
+            "attributes": {
+                "partner": {
+                    "name": "Teszt partner",
+                    "address": {
+                        "countryCode": "HU",
+                        "county": "Budapest",
+                        "city": "Budapest",
+                        "street": "Teszt utca 72.",
+                        "postCode": "1111"
+                    }
+                },
+                "direction": "out",
+                "number": null,
+                "colli": null,
+                "comment": null,
+                "ekaerCode": null,
+                "totalWeight": null,
+                "referenceNumber": null,
+                "contactName": null,
+                "contactPhone": null,
+                "readyForLoading": null,
+                "loadingStatus": null,
+                "loadingQuantityMismatch": null,
+                "pickingStatus": null,
+                "loadingOrder": null,
+                "estimatedArrival": null,
+                "pickingRequired": false
+            },
+            "relationships": {
+                "cargo": {
+                    "data": {
+                        "type": "shipmentCargos",
+                        "id": "FE176#001"
+                    }
+                },
+                "station": {
+                    "data": {
+                        "type": "shipmentStations",
+                        "id": "FE176-HA"
+                    }
+                },
+                "partnerOrigin": {
+                    "data": {
+                        "type": "partners",
+                        "id": "6bdef58c-0efb-11f0-98f4-aba2b6ddcd9b"
+                    }
+                },
+                "borderCrossingPoint": {
+                    "data": null
+                },
+                "pickingLocations": {
+                    "data": []
+                },
+                "items": {
+                    "data": []
+                },
+                "metadata": {
+                    "data": {
+                        "type": "cargoOperationMetadata",
+                        "id": "5032e018-3d46-11f0-af5d-ffe14612f411-metadata"
+                    }
+                }
+            }
+        },
+        {
+            "type": "shipmentCargos",
+            "id": "FE176#001",
+            "attributes": {
+                "createdAt": 1748603265,
+                "number": null,
+                "colli": null,
+                "comment": "MEGJEGYZESASZALLITMANYHOZ",
+                "ekaerCode": "EKAER\/BIREG",
+                "totalWeight": null,
+                "sourcePartner": {
+                    "name": "F\u00c9MALK Zrt. - Csepel (Budapest)",
+                    "address": {
+                        "countryCode": "HU",
+                        "county": "Budapest",
+                        "city": "Budapest",
+                        "street": "\u00d6nt\u00f6de u. 2-12.",
+                        "postCode": "1211"
+                    }
+                },
+                "destinationPartner": {
+                    "name": "Teszt partner",
+                    "address": {
+                        "countryCode": "HU",
+                        "county": "Budapest",
+                        "city": "Budapest",
+                        "street": "Teszt utca 72.",
+                        "postCode": "1111"
+                    }
+                },
+                "referenceNumber": null,
+                "contactName": null,
+                "contactPhone": null
+            },
+            "relationships": {
+                "creatorActor": {
+                    "data": {
+                        "type": "profileUsers",
+                        "id": "6469881a-1155-11f0-85bd-cb6afa80cc0d"
+                    }
+                },
+                "shipment": {
+                    "data": {
+                        "type": "shipments",
+                        "id": "FE176"
+                    }
+                },
+                "sourceStation": {
+                    "data": {
+                        "type": "shipmentStations",
+                        "id": "FE176-HA"
+                    }
+                },
+                "sourceOperation": {
+                    "data": {
+                        "type": "cargoOperations",
+                        "id": "5032e018-3d46-11f0-af5d-ffe14612f411"
+                    }
+                },
+                "sourcePartnerOrigin": {
+                    "data": {
+                        "type": "partners",
+                        "id": "4adaaae2-0ee8-11f0-b3c6-67036dfad2bd"
+                    }
+                },
+                "destinationStation": {
+                    "data": null
+                },
+                "destinationPartnerOrigin": {
+                    "data": {
+                        "type": "partners",
+                        "id": "6bdef58c-0efb-11f0-98f4-aba2b6ddcd9b"
+                    }
+                },
+                "documents": {
+                    "data": []
+                },
+                "sourceDocumentTypes": {
+                    "data": [
+                        {
+                            "type": "documentTypes",
+                            "id": "990471ca-0ef8-11f0-afa9-6db327d5a5b1"
+                        }
+                    ]
+                },
+                "sourceRequiredDocumentTypes": {
+                    "data": []
+                },
+                "destinationDocumentTypes": {
+                    "data": []
+                },
+                "destinationRequiredDocumentTypes": {
+                    "data": []
+                },
+                "destinationOperation": {
+                    "data": null
+                },
+                "cargoOrder": {
+                    "data": null
+                },
+                "sourcePartnerLoading": {
+                    "data": null
+                },
+                "destinationPartnerLoading": {
+                    "data": null
+                },
+                "borderCrossingPoint": {
+                    "data": null
+                },
+                "metadata": {
+                    "data": {
+                        "type": "cargoMetadata",
+                        "id": "FE176#001-metadata"
+                    }
+                }
+            }
+        }
+    ]
+}

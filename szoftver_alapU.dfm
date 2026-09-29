@@ -111,6 +111,8 @@ object szoftver_alapF: Tszoftver_alapF
       Height = 25
       Caption = 'Csoportok...'
       TabOrder = 7
+      ParentShowHint = False
+      ShowHint = True
       OnClick = btncsoportokClick
     end
     object btnnemhasznalt: TButton
@@ -120,6 +122,8 @@ object szoftver_alapF: Tszoftver_alapF
       Height = 25
       Caption = 'Nem haszn'#225'lt...'
       TabOrder = 8
+      ParentShowHint = False
+      ShowHint = True
       OnClick = btnnemhasznaltClick
     end
   end
