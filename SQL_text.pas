@@ -6,7 +6,7 @@ interface
 
     const
       // A mérlegjegyen történő módosításkor  módosítani kell a nyitbe és a modositott_melegjegy tablakat is
-      maxSQL=37;
+      maxSQL=38;
       modSQL :array[1..maxSQL] of string =
 
       (
@@ -1154,6 +1154,11 @@ interface
         '`aktiv` TINYINT(1) NOT NULL DEFAULT 1,' + #13#10 +
         'PRIMARY KEY (`csoport`)' + #13#10 +
         ') ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;'
+        ,
+        //38
+        //Glabs beküldés: mikor lett beküldve a forgalom sora és a Glabs mérés azonosítója
+        'ALTER TABLE `forgalom` ADD COLUMN IF NOT EXISTS `glabs_kuldve` DATETIME NULL DEFAULT NULL;' + #13#10 +
+        'ALTER TABLE `forgalom` ADD COLUMN IF NOT EXISTS `glabs_id` VARCHAR(50) NULL DEFAULT '''' :kodolas;'
 
 
     );

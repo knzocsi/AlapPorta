@@ -156,6 +156,7 @@ interface
  resourcestring rsGlabsSikeres = 'A mérés beküldése sikeres.';
  resourcestring rsGlabsSikertelen = 'A mérés beküldése sikertelen (HTTP %d). A részletek a naplóban.';
  resourcestring rsGlabsHiba = 'Hiba a Glabs beküldés közben:';
+ resourcestring rsGlabsMarBekuldve = 'Már be lett küldve: %s';
 implementation
 
 end.

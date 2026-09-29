@@ -69,7 +69,7 @@ object FoF: TFoF
       Top = 1
       Width = 798
       Height = 286
-      ActivePage = tbForgalom
+      ActivePage = tbIdeiglenes
       Align = alClient
       MultiLine = True
       TabOrder = 0
@@ -249,6 +249,7 @@ object FoF: TFoF
           TitleFont.Height = -11
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
+          OnDrawColumnCell = DBGrid1DrawColumnCell
           OnKeyUp = DBGrid1KeyUp
           OnMouseUp = DBGrid1MouseUp
           OnMouseWheel = DBGrid1MouseWheel
@@ -396,7 +397,7 @@ object FoF: TFoF
         end
       end
     end
-    object Panel2: TPanel
+    object pnlTorles: TPanel
       Left = 1
       Top = 287
       Width = 798
@@ -404,7 +405,7 @@ object FoF: TFoF
       Align = alBottom
       TabOrder = 2
       object btnTorles: TButton
-        Left = 32
+        Left = 36
         Top = 6
         Width = 75
         Height = 25

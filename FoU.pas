@@ -201,7 +201,7 @@ type
     Mrlegelseklistja1: TMenuItem;
     tmrKep_Masolas: TTimer;
     tmrKijelzo_Torles: TTimer;
-    Panel2: TPanel;
+    pnlTorles: TPanel;
     btnTorles: TButton;
     chkToroltek_mutatasa: TCheckBox;
     lblKep1: TLabel;
@@ -299,6 +299,7 @@ type
     procedure Lista1Click(Sender: TObject);
     procedure btnMeresClick(Sender: TObject);
     procedure btnGlabsBekuldesClick(Sender: TObject);
+    procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure mcIOmodulResponseError(const FunctionCode, ErrorCode: Byte; const ResponseBuffer: TModBusResponseBuffer);
     procedure tulaj_mClick(Sender: TObject);
     procedure teszt_mClick(Sender: TObject);
@@ -684,11 +685,27 @@ begin
   end;
   with TGlabsBekuldesF.Create(Application) do
   try
-    fo(q.FieldByName('Rendszam').AsString, q.FieldByName('Irany').AsString,
+    fo(q.FieldByName('ID').AsInteger,
+       q.FieldByName('Rendszam').AsString, q.FieldByName('Irany').AsString,
        q.FieldByName('mjegy').AsString, q.FieldByName('Datum').AsString,
-       q.FieldByName('Ido').AsString, Round(q.FieldByName('Tomeg').AsFloat));
+       q.FieldByName('Ido').AsString, q.FieldByName('glabs_kuldve').AsString,
+       Round(q.FieldByName('Tomeg').AsFloat));
+    if ModalResult=mrOk then
+      szures;
   finally
     Free;
+  end;
+end;
+
+procedure TFoF.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+var f: TField;
+begin
+  // a Glabs-ba már beküldött sorok más színûek
+  f:=AF.ForgalomQ.FindField('glabs_kuldve');
+  if (f<>nil) and not f.IsNull and not (gdSelected in State) then
+  begin
+    DBGrid1.Canvas.Brush.Color:=clSkyBlue;
+    DBGrid1.DefaultDrawColumnCell(Rect, DataCol, Column, State);
   end;
 end;
 
@@ -1467,6 +1484,7 @@ begin
   btnElso.Visible := Elso_Gomb_Szoveg <> '';
   btnElso.Caption := Elso_Gomb_Szoveg;
   tbIdeiglenes.TabVisible := ideiglenes_latszik;
+  pnlTorles.Visible:=ideiglenes_latszik;
   btnMeres.Visible := meresgomb_kell;
   btnMeresmodositas.Visible := meresgomb_kell;
   sbtnFolytatas.Visible := ideiglenes_latszik;
